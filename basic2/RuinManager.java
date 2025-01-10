@@ -13,6 +13,29 @@ public class RuinManager {
         };
     }
 
+    static void drawPatternEnhanced(MapLocation ruinLoc, int pattern) throws GameActionException {
+        if (!rc.isActionReady()) return;
+        MapLocation myLoc = rc.getLocation();
+        if (myLoc.distanceSquaredTo(ruinLoc) > 8){
+            drawPattern(ruinLoc, pattern);
+            return;
+        }
+        PaintType p = rc.senseMapInfo(myLoc).getPaint();
+        if (p == PaintType.EMPTY && rc.canAttack(rc.getLocation())) {
+            int dx = myLoc.x - ruinLoc.x + 2;
+            int dy = myLoc.y - ruinLoc.y + 2;
+            int b = dx*5 + dy;
+            int pt = switch (pattern) {
+                case PAINT -> 18157905;
+                case MONEY -> 15583086;
+                default -> 4685252;
+            };
+            rc.attack(myLoc, ((pt >>> b)&1) > 0);
+            return;
+        }
+        drawPattern(ruinLoc, pattern);
+    }
+
     static final long codePaint = 657947488577110L;
     static final long codeMoney = 468008181590441L;
     static final long codeDefense = 392982706955621L;

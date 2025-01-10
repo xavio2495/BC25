@@ -1,6 +1,7 @@
 package basic2;
 
 import battlecode.common.*;
+import battlecode.schema.RobotType;
 
 public abstract class Unit extends MyRobot {
 
@@ -46,5 +47,28 @@ public abstract class Unit extends MyRobot {
         if (r.getType().isTowerType()){
             closestRuin = null;
         }
+    }
+
+    void tryWithdraw() throws GameActionException {
+        if (!rc.isActionReady()) return;
+        if (TowerManager.closestPaintTower == null) return;
+        if (rc.getLocation().distanceSquaredTo(TowerManager.closestPaintTower) > GameConstants.PAINT_TRANSFER_RADIUS_SQUARED) return;
+        RobotInfo r = rc.senseRobotAtLocation(TowerManager.closestPaintTower);
+        if (r == null) return;
+        if (r.getTeam() != rc.getTeam()) return;
+        switch(r.getType()){
+            case LEVEL_ONE_PAINT_TOWER:
+            case LEVEL_TWO_PAINT_TOWER:
+            case LEVEL_THREE_PAINT_TOWER:
+                break;
+            default:
+                return;
+        }
+        int neededPaint = rc.getType().paintCapacity - rc.getPaint();
+        if (neededPaint <= Constants.MIN_TRANSFER_PAINT) return;
+        int maxPaint = r.getPaintAmount();
+        if (maxPaint == 0) return;
+        if (neededPaint > maxPaint) neededPaint = maxPaint;
+        rc.transferPaint(r.getLocation(), -neededPaint);
     }
 }

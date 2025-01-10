@@ -7,10 +7,12 @@ public abstract class MyRobot {
 
     static RobotController rc;
     static int H, W;
+    int creationTurn;
 
     MyRobot(RobotController rc){
         MyRobot.rc = rc;
         H = rc.getMapHeight(); W = rc.getMapWidth();
+        creationTurn = rc.getRoundNum();
     }
 
     abstract void startTurn() throws GameActionException;
