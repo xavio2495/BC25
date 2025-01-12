@@ -1,4 +1,4 @@
-package basic2;
+package rush;
 
 import battlecode.common.*;
 
@@ -40,9 +40,11 @@ public class Tower extends MyRobot {
     }
 
     boolean shouldSpawnSoldier(){
-        if (creationTurn < 5 && soldiersSpawned == 0) return true;
+        /*if (creationTurn < 5 && soldiersSpawned == 0) return true;
         if (Util.towerMax()) return true;
-        return rc.getChips() >= UnitType.LEVEL_ONE_PAINT_TOWER.moneyCost + UnitType.SOLDIER.moneyCost;
+        return rc.getChips() >= UnitType.LEVEL_ONE_PAINT_TOWER.moneyCost + UnitType.SOLDIER.moneyCost;*/
+        //if (rc.getType() == UnitType.LEVEL_ONE_MONEY_TOWER) return false;
+        return true;
     }
 
     void spawn(UnitType type, MapLocation target){

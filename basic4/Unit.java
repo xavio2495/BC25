@@ -1,14 +1,14 @@
-package basic2;
+package basic4;
 
 import battlecode.common.*;
-import battlecode.schema.RobotType;
 
 public abstract class Unit extends MyRobot {
 
-    Explore explore;
-    Pathfinding pathfinding;
+    static Explore explore;
+    static Pathfinding pathfinding;
 
-    MapLocation closestRuin = null;
+    static MapLocation closestRuin = null;
+    static int closestRuinDist = 0;
 
     Unit(RobotController rc) throws GameActionException {
         super(rc);
@@ -22,15 +22,18 @@ public abstract class Unit extends MyRobot {
 
     abstract void endTurn() throws GameActionException;
 
-    void updateClosestRuin() throws GameActionException {
+    static void updateClosestRuin() throws GameActionException {
         checkCurrentRuin();
         MapLocation myLoc = rc.getLocation();
         int bestDist = -1;
         if (closestRuin != null) bestDist = myLoc.distanceSquaredTo(closestRuin);
         MapLocation[] ruins = rc.senseNearbyRuins(GameConstants.VISION_RADIUS_SQUARED);
         for (MapLocation loc : ruins){
-            RobotInfo r = rc.senseRobotAtLocation(loc);
-            if (r != null && r.getType().isTowerType()) continue;
+            if (Map.invalidTarget(loc)){
+                continue;
+            }
+            //RobotInfo r = rc.senseRobotAtLocation(loc);
+            //if (r != null && r.getType().isTowerType()) continue;
             int d = myLoc.distanceSquaredTo(loc);
             if (bestDist < 0 || d < bestDist){
                 bestDist = d;
@@ -39,37 +42,14 @@ public abstract class Unit extends MyRobot {
         }
     }
 
-    void checkCurrentRuin() throws GameActionException{
+    static void checkCurrentRuin() throws GameActionException{
         if (closestRuin == null) return;
         if (!rc.canSenseLocation(closestRuin)) return;
-        RobotInfo r = rc.senseRobotAtLocation(closestRuin);
-        if (r == null) return;
-        if (r.getType().isTowerType()){
-            closestRuin = null;
-        }
+        if (Map.invalidTarget(closestRuin)) closestRuin = null;
     }
 
     void tryWithdraw() throws GameActionException {
         if (!rc.isActionReady()) return;
-        /*if (TowerManager.closestPaintTower == null) return;
-        if (rc.getLocation().distanceSquaredTo(TowerManager.closestPaintTower) > GameConstants.PAINT_TRANSFER_RADIUS_SQUARED) return;
-        RobotInfo r = rc.senseRobotAtLocation(TowerManager.closestPaintTower);
-        if (r == null) return;
-        if (r.getTeam() != rc.getTeam()) return;
-        switch(r.getType()){
-            case LEVEL_ONE_PAINT_TOWER:
-            case LEVEL_TWO_PAINT_TOWER:
-            case LEVEL_THREE_PAINT_TOWER:
-                break;
-            default:
-                return;
-        }
-        int neededPaint = rc.getType().paintCapacity - rc.getPaint();
-        if (neededPaint <= Constants.MIN_TRANSFER_PAINT) return;
-        int maxPaint = r.getPaintAmount();
-        if (maxPaint == 0) return;
-        if (neededPaint > maxPaint) neededPaint = maxPaint;
-        rc.transferPaint(r.getLocation(), -neededPaint);*/
         RobotInfo[] robots = rc.senseNearbyRobots(GameConstants.PAINT_TRANSFER_RADIUS_SQUARED, rc.getTeam());
         for (RobotInfo r : robots){
             if (r.getType().isTowerType()){

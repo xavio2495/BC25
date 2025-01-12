@@ -42,9 +42,12 @@ public class Main {
 
         static final int PAINT = 0, MONEY = 1, DEFENSE = 2;
         static final int UNSEEN = 3;
+        static final int ENEMY_PAINT = 4;
         static final int WRONG = -1;
 
         static final int[] OgCodes = new int[]{18157905, 15583086, 4685252};
+
+        static final String[] Names = new String[]{"Paint", "Money", "Defense"};
 
         static final String[] varNames = new String[]{"codePaint", "codeMoney", "codeDefense"};
 
@@ -92,6 +95,11 @@ public class Main {
             }
         }
 
+        String getPaintType(int x){
+            if (x == 1) return "ALLY_SECONDARY";
+            return "ALLY_PRIMARY";
+        }
+
         int encode (int dx, int dy){
             return (dx+4)*9 + (dy+4);
         }
@@ -136,6 +144,9 @@ public class Main {
             write("");
             write("static RobotController rc;");
             write("");
+
+
+            /* ================================== CHECK PATTERN =============================== */
             write("static int checkPattern (MapLocation ruinLoc) throws GameActionException {");
             ++tabs;
             write("");
@@ -161,9 +172,9 @@ public class Main {
 
             for (int i = 0; i < 81; ++i){
                 if (used[i]) continue;
-                vals.add(i);
                 int dx = (i/9) - 4, dy = (i%9) - 4;
                 if (dx*dx + dy*dy > VISION_RANGE_SQ) continue;
+                vals.add(i);
                 int vision = getVision(dx,dy);
                 for (int j = 0; j < 81; ++j){
                     int dxj = (j/9) - 4, dyj = (j%9) - 4;
@@ -221,6 +232,7 @@ public class Main {
                 write("long c = 0;");
                 write("int ans = 0;");
                 write("long colorBit;");
+                write("boolean enemyPaint = false;");
 
 
 
@@ -231,20 +243,44 @@ public class Main {
                         unseen = true;
                         continue;
                     }
-                    write("colorBit = switch(" + ruinLocs[j].getMapInfoName() + ".getPaint()) {");
+                    write("switch(" + ruinLocs[j].getMapInfoName() + ".getPaint()) {");
+                    ++tabs;
+                    write("case ALLY_PRIMARY:");
+                    ++tabs;
+                    write("colorBit = 1;");
+                    write("break;");
+                    --tabs;
+                    write("case ALLY_SECONDARY:");
+                    ++tabs;
+                    write("colorBit = 2;");
+                    write("break;");
+                    --tabs;
+                    write("case EMPTY:");
+                    ++tabs;
+                    write("colorBit = 0;");
+                    write("break;");
+                    --tabs;
+                    write("default:");
+                    ++tabs;
+                    write("colorBit = 3;");
+                    write("enemyPaint = true;");
+                    write("break;");
+                    --tabs;
+                    /*write("colorBit = switch(" + ruinLocs[j].getMapInfoName() + ".getPaint()) {");
                     ++tabs;
                     write("case ALLY_PRIMARY -> 1;");
                     write("case ALLY_SECONDARY -> 2;");
                     write ("case EMPTY -> 0;");
-                    write ("default -> 3;");
+                    write ("default -> 3;");*/
                     --tabs;
-                    write("};");
+                    write("}");
                     write("c = (c | (colorBit << " + 2*ind + "));");
                 }
                 for (int k = 0; k < 3; ++k){
                     write ("if ((c | " + getLongLong(newCodes[k]) + ") == " + getLongLong(newCodes[k]) + ") ans |= " + (1 << k) + ";");
                 }
                 if (unseen) write ("ans |= " + (1 << UNSEEN) + ";");
+                write("if (enemyPaint) ans |= " + (1 << ENEMY_PAINT) + ";");
                 write("return ans;");
                 --tabs;
                 write("}");
@@ -252,13 +288,121 @@ public class Main {
                 write ("");
             }
 
+            write("static void drawPattern (MapLocation ruinLoc, int pattern) throws GameActionException {");
+            ++tabs;
+            for (int i = 0; i < 24; ++i){
+                write(ruinLocs[i].getName() + " = ruinLoc.translate(" + ruinLocs[i].dx + "," + ruinLocs[i].dy + ");");
+                write("if (rc.canSenseLocation(" + ruinLocs[i].getName() + ")) " + ruinLocs[i].getMapInfoName() + " = " + "rc.senseMapInfo(" + ruinLocs[i].getName() + ");");
+            }
+            write("switch (pattern) {");
+            ++tabs;
+            write("case PAINT:");
+            ++tabs;
+            write("drawPattern" + Names[0] + "(ruinLoc);");
+            write("break;");
+            --tabs;
+            write("case MONEY:");
+            ++tabs;
+            write("drawPattern" + Names[1] + "(ruinLoc);");
+            write("break;");
+            --tabs;
+            write("case DEFENSE:");
+            ++tabs;
+            write("drawPattern" + Names[2] + "(ruinLoc);");
+            write("break;");
+            --tabs;
+            --tabs;
+            write("}");
+            --tabs;
+            write("}");
+
+            write ("");
+            write ("");
+            write ("");
 
 
 
+            /* =============================== DRAW ========================================*/
 
-            write("");
-            write("");
-            write("");
+            for(int t = 0; t < 3; ++t) {
+                write("");
+                write("");
+                write("");
+
+                write("static void drawPattern" + Names[t] + " (MapLocation ruinLoc) throws GameActionException {");
+                ++tabs;
+                write("");
+
+                write("if (rc.getPaint() <= Constants.MIN_SOLDIER_MOVEMENT) return;");
+
+                write("if (!rc.isActionReady()) return;");
+
+                write("");
+
+
+                write("MapLocation myLoc = rc.getLocation();");
+                write("int dx = myLoc.x - ruinLoc.x, dy = myLoc.y - ruinLoc.y;");
+                write("int dencode = (dx+4)*9 + (dy+4);");
+
+            /*write("int pt = switch(pattern){");
+            ++tabs;
+            write("case PAINT -> " + OgCodes[PAINT] + ";");
+            write("case MONEY -> " + OgCodes[MONEY]+ ";");
+            write("default -> " + OgCodes[DEFENSE]+ ";");
+            --tabs;
+            write("};");*/
+
+                write("switch(dencode){");
+                ++tabs;
+
+                used = new boolean[81];
+
+                for (int i = 0; i < 81; ++i) {
+                    if (used[i]) continue;
+                    int dx = (i / 9) - 4, dy = (i % 9) - 4;
+                    if (dx * dx + dy * dy > VISION_RANGE_SQ) continue;
+                    int attack = getAttack(dx, dy);
+                    for (int j = 0; j < 81; ++j) {
+                        int dxj = (j / 9) - 4, dyj = (j % 9) - 4;
+                        if (dxj * dxj + dyj * dyj > VISION_RANGE_SQ) continue;
+                        if (getAttack(dxj, dyj) == attack) {
+                            write("case " + j + ":");
+                            used[j] = true;
+                        }
+                    }
+                    ++tabs;
+
+                    for (int j = 0; j < 24; ++j) {
+                        int ind = ruinLocs[j].index;
+                        if (((attack >>> ind) & 1) == 0) {
+                            continue;
+                        }
+
+
+                        write("if(" + ruinLocs[j].getMapInfoName() + ".getPaint() != PaintType." + getPaintType((OgCodes[t] >>> ruinLocs[j].index) & 1) + ") {");
+                        ++tabs;
+                        //write("case EMPTY:");
+                        //++tabs;
+
+                        write("rc.attack(" + ruinLocs[j].getName() + ", " + (((OgCodes[t] >>> ruinLocs[j].index) & 1) > 0) + ");");
+                        write("return;");
+                        //--tabs;
+                        --tabs;
+                        write("}");
+                    }
+                    write("break;");
+                    --tabs;
+
+                }
+                --tabs;
+                write("}");
+                --tabs;
+                write("}");
+            }
+
+
+            /*
+
 
             write("static void drawPattern (MapLocation ruinLoc, int pattern) throws GameActionException {");
             ++tabs;
@@ -328,9 +472,8 @@ public class Main {
 
             }
             --tabs;
-            write("}");
-            --tabs;
-            write("}");
+            write("}");*/
+
 
 
 

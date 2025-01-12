@@ -1,7 +1,6 @@
-package basic2;
+package basic3;
 
 import battlecode.common.*;
-import battlecode.schema.RobotType;
 
 public abstract class Unit extends MyRobot {
 

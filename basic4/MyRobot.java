@@ -1,4 +1,4 @@
-package basic2;
+package basic4;
 
 import battlecode.common.Direction;
 import battlecode.common.GameActionException;
@@ -20,6 +20,9 @@ public abstract class MyRobot {
     static RobotController rc;
     static int H, W;
     int creationTurn;
+
+
+    //static String debugLine;
 
     MyRobot(RobotController rc){
         MyRobot.rc = rc;

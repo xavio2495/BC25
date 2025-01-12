@@ -1,4 +1,4 @@
-package basic2;
+package rush;
 
 import battlecode.common.Direction;
 import battlecode.common.GameActionException;
