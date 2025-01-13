@@ -60,12 +60,13 @@ public class Soldier extends Unit {
         if (rc.canCompleteResourcePattern(pLoc)) rc.completeResourcePattern(pLoc);
     }
 
-    boolean doMicro() throws GameActionException {
-        RobotInfo[] robots = rc.senseNearbyRobots(GameConstants.VISION_RADIUS_SQUARED, rc.getTeam().opponent());
+    void attackTowers() throws GameActionException {
+        if (!rc.isActionReady()) return;
+        RobotInfo[] robots = rc.senseNearbyRobots(rc.getType().actionRadiusSquared, rc.getTeam().opponent());
         for (RobotInfo r : robots){
-
+            if (!r.getType().isTowerType()) continue;
+            if (rc.canAttack(r.getLocation())) rc.attack(r.getLocation());
         }
-        return false;
     }
 
 }

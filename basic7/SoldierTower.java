@@ -23,15 +23,22 @@ public class SoldierTower extends Soldier {
     }
 
     void runTurn() throws GameActionException {
+        attackTowers();
         completePatterns();
         tryWithdraw();
         if (shouldRecover()) recovering = true;
         if (rc.getPaint() >= UnitType.SOLDIER.paintCapacity - Constants.MIN_TRANSFER_PAINT) recovering = false;
-        MapLocation target = getTarget();
-        pathfinding.moveTo(target);
+        move();
         paint();
         tryWithdraw();
         completePatterns();
+    }
+
+    void move() throws GameActionException {
+        if (!rc.isMovementReady()) return;
+        if (MicroManagerSoldier.doMicro()) return;
+        MapLocation target = getTarget();
+        pathfinding.moveTo(target);
     }
 
     MapLocation getTarget() throws GameActionException{
@@ -45,6 +52,7 @@ public class SoldierTower extends Soldier {
 
 
     void paint() throws GameActionException {
+        attackTowers();
         if (closestRuin == null || rc.getLocation().distanceSquaredTo(closestRuin) > 8 || Util.towerMax()){
             paintSelf();
             return;

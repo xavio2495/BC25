@@ -22,17 +22,23 @@ public class Mopper extends Unit {
 
     void runTurn() throws GameActionException {
         tryWithdraw();
+        tryAttackEnemy();
         if (shouldRecover()) recovering = true;
         if (rc.getPaint() >= UnitType.MOPPER.paintCapacity - Constants.MIN_TRANSFER_PAINT) recovering = false;
-        MapLocation target = getTarget();
-        tryAttackEnemy();
-        pathfinding.moveTo(target);
+        move();
         tryAttackEnemy();
         tryAttackTile();
         tryWithdraw();
     }
 
     void endTurn(){
+    }
+
+    void move() throws GameActionException {
+        if (!rc.isMovementReady()) return;
+        if (MicroManagerMopper.doMicro()) return;
+        MapLocation target = getTarget();
+        pathfinding.moveTo(target);
     }
 
     MapLocation getTarget() throws GameActionException {

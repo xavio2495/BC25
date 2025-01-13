@@ -8,6 +8,7 @@ import battlecode.common.UnitType;
 public class SoldierResource extends Soldier {
 
     boolean recovering = false;
+    boolean attackTowers = false;
 
     SoldierResource(RobotController rc) throws GameActionException {
         super(rc);
@@ -32,11 +33,17 @@ public class SoldierResource extends Soldier {
         tryWithdraw();
         if (shouldRecover()) recovering = true;
         if (rc.getPaint() >= UnitType.SOLDIER.paintCapacity - Constants.MIN_TRANSFER_PAINT) recovering = false;
-        MapLocation target = getTarget();
-        pathfinding.moveTo(target);
+        move();
         paint();
         tryWithdraw();
         completePatterns();
+    }
+
+    void move() throws GameActionException {
+        if (!rc.isMovementReady()) return;
+        if (MicroManagerSoldier.doMicro()) return;
+        MapLocation target = getTarget();
+        pathfinding.moveTo(target);
     }
 
     MapLocation getTarget() throws GameActionException{
@@ -53,6 +60,7 @@ public class SoldierResource extends Soldier {
     }
 
     void paint() throws GameActionException {
+        attackTowers();
         paintSelf();
     }
 
