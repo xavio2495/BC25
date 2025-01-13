@@ -25,6 +25,7 @@ public class Soldier extends Unit {
     void paintSelf() throws GameActionException {
         if (!rc.canAttack(rc.getLocation())) return;
         MapLocation myLoc = rc.getLocation();
+        if (!Util.towerMax() && Map.isNearRuin(myLoc)) return;
         int dx = myLoc.x % GameConstants.PATTERN_SIZE;
         int dy = myLoc.y % GameConstants.PATTERN_SIZE;
         int d = dx*GameConstants.PATTERN_SIZE + dy;

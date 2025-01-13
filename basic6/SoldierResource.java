@@ -20,10 +20,11 @@ public class SoldierResource extends Soldier {
     }
 
     boolean shouldRecover(){
-        return (rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER);
+        return (rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER_RESOURCE);
     }
 
     void runTurn() throws GameActionException {
+        paint();
         completePatterns();
         tryWithdraw();
         if (shouldRecover()) recovering = true;
@@ -37,23 +38,47 @@ public class SoldierResource extends Soldier {
 
     MapLocation getTarget() throws GameActionException{
         if (recovering && TowerManager.closestPaintTower != null) return TowerManager.closestPaintTower;
-        MapLocation target = rc.getClosestMisPainted();
-        if (target != null) return target;
+        if (rc.getRoundNum() > creationTurn) {
+            MapLocation target = ResourcePatternManager.getBestTarget();
+            //MapLocation target = null;
+            if (target != null) return target;
+        }
         return explore.getExplore3Target();
     }
 
-    void paint(){
-
+    void paint() throws GameActionException {
+        paintSelf();
     }
 
-    MapLocation getClosestMisPainted(){
+    /*TODO: can be optimized with codegen*/
+    /*MapLocation getClosestMisPainted() throws GameActionException{
         MapLocation ans = null;
+        int bestDist = 0;
         MapInfo[] infos = rc.senseNearbyMapInfos();
+        int d;
+        PaintType p;
+        MapLocation loc;
+        boolean maxT = Util.towerMax();
+        boolean ready = rc.isActionReady() && rc.getPaint() > 10;
         for (MapInfo m : infos){
-            switch(m.getPaint()){
-
+            loc = m.getMapLocation();
+            if (m.hasRuin() || m.isWall() || (Map.isNearRuin(loc) && !maxT) || m.getPaint().isEnemy()) continue;
+            d = (loc.x%5)*5 + (loc.y%5);
+            p = (((GameConstants.RESOURCE_PATTERN >>> d) & 1) != 0) ? PaintType.ALLY_SECONDARY : PaintType.ALLY_PRIMARY;
+            if (m.getPaint() != p){
+                int dist = rc.getLocation().distanceSquaredTo(loc);
+                if (ready && dist <= 4){
+                    rc.attack(loc, (((GameConstants.RESOURCE_PATTERN >>> d) & 1) != 0));
+                    ready = false;
+                    continue;
+                }
+                if (ans == null || dist < bestDist){
+                    ans = loc;
+                    bestDist = dist;
+                }
             }
         }
-    }
+        return ans;
+    }*/
 
 }

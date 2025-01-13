@@ -19,7 +19,7 @@ public class SoldierTower extends Soldier {
     }
 
     boolean shouldRecover(){
-        return ((closestRuin == null || rc.getLocation().distanceSquaredTo(closestRuin) > 2 ||  Util.towerMax()) && rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER);
+        return ((closestRuin == null || rc.getLocation().distanceSquaredTo(closestRuin) > 2 ||  Util.towerMax()) && rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER_TOWER);
     }
 
     void runTurn() throws GameActionException {

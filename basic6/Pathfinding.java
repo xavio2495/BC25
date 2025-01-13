@@ -13,6 +13,7 @@ public class Pathfinding {
         }
 
         void moveTo(MapLocation target){
+            if (target != null) MyRobot.rc.setIndicatorString("Going to " + target);
             bugNav.moveTo(target);
         }
 }

@@ -36,7 +36,7 @@ public class Mopper extends Unit {
     }
 
     MapLocation getTarget() throws GameActionException {
-        if (recovering) return TowerManager.closestPaintTower;
+        if (recovering && TowerManager.closestPaintTower != null) return TowerManager.closestPaintTower;
         MapLocation target = getClosestEnemy();
         if (target == null) target = getClosestEnemyPaint();
         if (target == null) target = explore.getExplore3Target();

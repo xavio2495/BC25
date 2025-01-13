@@ -152,14 +152,20 @@ public class Map {
 
     static boolean enemyPainted(MapLocation loc){
         int c = map[loc.x][loc.y];
-        return ((c >>> ROUND_ENEMY_PAINT_SHIFT) & 0xFFF) <= MyRobot.rc.getRoundNum();
+        return ((c >>> ROUND_ENEMY_PAINT_SHIFT) & 0x7FF) <= MyRobot.rc.getRoundNum();
     }
 
     static boolean invalidTarget(MapLocation loc){
         int c = map[loc.x][loc.y];
         //MyRobot.debugLine += ("Code at " + loc + " is " + c + ".   ");
         //rc.setIndicatorString(MyRobot.debugLine);
-        if (((c >>> ROUND_ENEMY_PAINT_SHIFT) & 0xFFF) > MyRobot.rc.getRoundNum()) return true;
+        if (((c >>> ROUND_ENEMY_PAINT_SHIFT) & 0x7FF) > MyRobot.rc.getRoundNum()) return true;
         return (c & 12) > 0;
     }
+
+    static boolean isNearRuin(MapLocation loc){
+        int c = map[loc.x][loc.y];
+        return (((c >>> ROUND_RUIN_SHIFT) & 0x7FF) > MyRobot.rc.getRoundNum());
+    }
+
 }

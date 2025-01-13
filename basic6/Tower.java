@@ -81,6 +81,9 @@ public class Tower extends MyRobot {
             if (bestLoc != null){
                 rc.buildRobot(type, bestLoc);
                 ++unitsSpawnedByType[type.ordinal()];
+                if (unitsSpawnedByType[type.ordinal()]%2 == 0){
+                    rc.sendMessage(bestLoc, 1);
+                }
             }
         } catch (GameActionException e){
             e.printStackTrace();
