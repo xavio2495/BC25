@@ -38,7 +38,6 @@ public class SoldierResource extends Soldier {
 
     MapLocation getTarget() throws GameActionException{
         if (recovering && TowerManager.closestPaintTower != null) return TowerManager.closestPaintTower;
-
         if (closestRuin != null && !Util.towerMax()) return closestRuin;
         else if (rc.getNumberTowers() < GameConstants.MAX_NUMBER_OF_TOWERS) return explore.getExplore3Target();
         MapLocation loc = getClosestEmptyTile();

@@ -58,36 +58,6 @@ public class Map {
                     map[x][y] |= ALLY_TOWER;
                     map[x][y] &= ENEMY_TOWER_C;
                     TowerManager.update(r);
-                    
-                    map[x-2][y-2] &= ROUND_RUIN_C;
-                    map[x-2][y-1] &= ROUND_RUIN_C;
-                    map[x-2][y] &= ROUND_RUIN_C;
-                    map[x-2][y+1] &= ROUND_RUIN_C;
-                    map[x-2][y+2] &= ROUND_RUIN_C;
-
-                    map[x-1][y-2] &= ROUND_RUIN_C;
-                    map[x-1][y-1] &= ROUND_RUIN_C;
-                    map[x-1][y] &= ROUND_RUIN_C;
-                    map[x-1][y+1] &= ROUND_RUIN_C;
-                    map[x-1][y+2] &= ROUND_RUIN_C;
-
-                    map[x][y-2] &= ROUND_RUIN_C;
-                    map[x][y-1] &= ROUND_RUIN_C;
-                    map[x][y] &= ROUND_RUIN_C;
-                    map[x][y+1] &= ROUND_RUIN_C;
-                    map[x][y+2] &= ROUND_RUIN_C;
-
-                    map[x+1][y-2] &= ROUND_RUIN_C;
-                    map[x+1][y-1] &= ROUND_RUIN_C;
-                    map[x+1][y] &= ROUND_RUIN_C;
-                    map[x+1][y+1] &= ROUND_RUIN_C;
-                    map[x+1][y+2] &= ROUND_RUIN_C;
-
-                    map[x+2][y-2] &= ROUND_RUIN_C;
-                    map[x+2][y-1] &= ROUND_RUIN_C;
-                    map[x+2][y] &= ROUND_RUIN_C;
-                    map[x+2][y+1] &= ROUND_RUIN_C;
-                    map[x+2][y+2] &= ROUND_RUIN_C;
                 }
                 else{
                     map[x][y] |= ENEMY_TOWER;
@@ -110,36 +80,6 @@ public class Map {
                 map[x][y] = c;
 
                 int rd = (rc.getRoundNum() + MIN_ROUNDS_RUIN) << ROUND_RUIN_SHIFT;
-
-                map[x-2][y-2] |= rd;
-                map[x-2][y-1] |= rd;
-                map[x-2][y] |= rd;
-                map[x-2][y+1] |= rd;
-                map[x-2][y+2] |= rd;
-
-                map[x-1][y-2] |= rd;
-                map[x-1][y-1] |= rd;
-                map[x-1][y] |= rd;
-                map[x-1][y+1] |= rd;
-                map[x-1][y+2] |= rd;
-
-                map[x][y-2] |= rd;
-                map[x][y-1] |= rd;
-                map[x][y] |= rd;
-                map[x][y+1] |= rd;
-                map[x][y+2] |= rd;
-
-                map[x+1][y-2] |= rd;
-                map[x+1][y-1] |= rd;
-                map[x+1][y] |= rd;
-                map[x+1][y+1] |= rd;
-                map[x+1][y+2] |= rd;
-
-                map[x+2][y-2] |= rd;
-                map[x+2][y-1] |= rd;
-                map[x+2][y] |= rd;
-                map[x+2][y+1] |= rd;
-                map[x+2][y+2] |= rd;
 
 
             }
