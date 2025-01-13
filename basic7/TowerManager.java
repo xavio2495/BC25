@@ -62,12 +62,28 @@ public class TowerManager {
         }
     }
 
-    static int getNextBuild(){
-        return switch (MyRobot.rc.getNumberTowers()) {
-            case 0, 1, 2, 3, 4, 5, 6, 7 -> MONEY;
-            case 8, 9, 10, 11 -> PAINT;
-            default -> DEFENSE;
-        };
+    static int ruinCountGuess;
+    static int[] buildPlan;
+
+    static int[] buildPlanSmall = { MONEY, MONEY, MONEY, PAINT, MONEY, PAINT, PAINT, DEFENSE };
+    static int[] buildPlanBig = { MONEY, MONEY, MONEY, MONEY, MONEY, MONEY, MONEY, MONEY, PAINT, PAINT, PAINT, PAINT,
+            DEFENSE };
+
+    static void init() {
+        int cells = MyRobot.rc.getMapWidth() * MyRobot.rc.getMapHeight();
+        ruinCountGuess = cells / 40;
+        if (ruinCountGuess < 16)
+            buildPlan = buildPlanSmall;
+        else
+            buildPlan = buildPlanBig;
+    }
+
+    static int getNextBuild() {
+        int i = MyRobot.rc.getNumberTowers();
+        if (i >= buildPlan.length) {
+            i = buildPlan.length - 1;
+        }
+        return buildPlan[i];
     }
 
 }

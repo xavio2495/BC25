@@ -4,10 +4,36 @@ import battlecode.common.*;
 
 public class Tower extends MyRobot {
 
-    int[] unitsSpawnedByType = new int[20];
+    UnitType[] spawnPlan;
+    int spawnPlanPos;
+
+    static final UnitType[] spawnPlanInitialPaint = {
+            UnitType.SOLDIER,
+            UnitType.SOLDIER,
+            UnitType.SOLDIER,
+    };
+    static final UnitType[] spawnPlanInitialMoney = {
+            UnitType.SOLDIER,
+            UnitType.SOLDIER,
+            UnitType.SOLDIER,
+    };
+    static final UnitType[] spawnPlanDefault = {
+            UnitType.SOLDIER,
+            UnitType.MOPPER,
+    };
 
     Tower(RobotController rc){
         super(rc);
+
+        if (rc.getRoundNum() < 4) {
+            spawnPlan = switch (rc.getType()) {
+                case LEVEL_ONE_PAINT_TOWER -> spawnPlanInitialMoney;
+                case LEVEL_ONE_DEFENSE_TOWER -> spawnPlanInitialMoney;
+                default -> spawnPlanDefault;
+            };
+        } else {
+            spawnPlan = spawnPlanDefault;
+        }
     }
 
     void startTurn() throws GameActionException {
@@ -48,9 +74,8 @@ public class Tower extends MyRobot {
         return rc.getChips() >= UnitType.LEVEL_ONE_PAINT_TOWER.moneyCost + UnitType.SOLDIER.moneyCost;
     }*/
 
-    UnitType getNextSpawn(){
-        if (unitsSpawnedByType[UnitType.SOLDIER.ordinal()] <= unitsSpawnedByType[UnitType.MOPPER.ordinal()] + 1) return UnitType.SOLDIER;
-        return UnitType.MOPPER;
+    UnitType getNextSpawn() {
+        return spawnPlan[spawnPlanPos];
     }
 
     boolean shouldSpawn(UnitType t){
@@ -80,9 +105,11 @@ public class Tower extends MyRobot {
         try {
             if (bestLoc != null){
                 rc.buildRobot(type, bestLoc);
-                ++unitsSpawnedByType[type.ordinal()];
-                if (unitsSpawnedByType[type.ordinal()]%2 == 0){
-                    rc.sendMessage(bestLoc, 1);
+
+                spawnPlanPos++;
+                if (spawnPlanPos >= spawnPlan.length) {
+                    spawnPlanPos = 0;
+                    spawnPlan = spawnPlanDefault;
                 }
             }
         } catch (GameActionException e){
