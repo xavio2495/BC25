@@ -50,7 +50,7 @@ public class SoldierTower extends Soldier {
             return;
         }
         int ruinType = Map.getPattern(closestRuin);
-        System.out.println("ruinType: " + ruinType);
+        //System.out.println("ruinType: " + ruinType);
         int trueType = RuinManager.getType(ruinType);
         switch(trueType){
             case -1 -> chooseWisely(ruinType);
@@ -60,7 +60,7 @@ public class SoldierTower extends Soldier {
                     case RuinManager.MONEY -> UnitType.LEVEL_ONE_MONEY_TOWER;
                     default -> UnitType.LEVEL_ONE_DEFENSE_TOWER;
                 };
-                System.out.println("Trying to complete tower of type " + t);
+                //System.out.println("Trying to complete tower of type " + t);
                 if (rc.canCompleteTowerPattern(t, closestRuin)){
                     rc.completeTowerPattern(t, closestRuin);
                     return;
@@ -76,8 +76,8 @@ public class SoldierTower extends Soldier {
             RuinManager.drawPatternEnhanced(closestRuin, TowerManager.getNextBuild());
         } catch(GameActionException e){
             e.printStackTrace();
-            System.out.println("My Location " + rc.getLocation());
-            System.out.println("Ruin Location " + closestRuin);
+            //System.out.println("My Location " + rc.getLocation());
+            //System.out.println("Ruin Location " + closestRuin);
         }
     }
 

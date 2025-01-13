@@ -16,7 +16,7 @@ public class Main {
                 int a = f(i) - i;
                 if (a > cont) {
                     cont = a;
-                    System.out.println(i + ",");
+                    //System.out.println(i + ",");
                 }
             }
         }

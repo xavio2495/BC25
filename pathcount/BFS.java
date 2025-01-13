@@ -29,7 +29,7 @@ public class BFS {
         queue.add(root);
         while (!queue.isEmpty()){
             Node n = queue.poll();
-            //System.out.println(n.loc);
+            ////System.out.println(n.loc);
             boolean leaf = true;
             for (Direction dir : directions){
                 Location newLoc = n.loc.add(dir);
@@ -46,13 +46,13 @@ public class BFS {
                 n.print();
                 printed = true;
             }
-            //System.out.println(count);
+            ////System.out.println(count);
         }
     }
 
     void run(){
         buildGraph();
-        System.out.println(count);
+        //System.out.println(count);
     }
 
     class Node{
@@ -78,7 +78,7 @@ public class BFS {
         }
 
         void print(){
-            System.out.println(loc);
+            //System.out.println(loc);
             if (parent != null) parent.print();
         }
     }
