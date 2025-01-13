@@ -27,8 +27,8 @@ public class Tower extends MyRobot {
 
         if (rc.getRoundNum() < 4) {
             spawnPlan = switch (rc.getType()) {
-                case LEVEL_ONE_PAINT_TOWER -> spawnPlanInitialMoney;
-                case LEVEL_ONE_DEFENSE_TOWER -> spawnPlanInitialMoney;
+                case LEVEL_ONE_PAINT_TOWER -> spawnPlanInitialPaint;
+                case LEVEL_ONE_MONEY_TOWER -> spawnPlanInitialMoney;
                 default -> spawnPlanDefault;
             };
         } else {
