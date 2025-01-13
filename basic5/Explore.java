@@ -82,7 +82,7 @@ public class Explore {
 
         int randomDir = (int)(Math.random()*cont);
 
-        assignExplore3Dir(directions[randomDir]);
+        assignExplore3Dir(possibleDirs[randomDir]);
 
     }
 
