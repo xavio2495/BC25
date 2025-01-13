@@ -32,7 +32,7 @@ public class MicroManagerMopper {
         microInfos[7] = new MicroInfo(Direction.NORTHWEST);
         microInfos[8] = new MicroInfo(Direction.CENTER);
 
-        boolean enemyNearby = false;
+        //boolean enemyNearby = false;
 
         RobotInfo[] units = rc.senseNearbyRobots();
         for (RobotInfo r : units) {
@@ -41,7 +41,7 @@ public class MicroManagerMopper {
                     case SPLASHER:
                     case SOLDIER:
                         if (rc.getLocation().distanceSquaredTo(r.getLocation()) <= 8) {
-                            enemyNearby = true;
+                            //enemyNearby = true;
                             unit = r;
                             unitLoc = r.getLocation();
                             microInfos[0].updateEnemy();
@@ -57,7 +57,7 @@ public class MicroManagerMopper {
                         break;
                     case MOPPER:
                         if (rc.getLocation().distanceSquaredTo(r.getLocation()) <= 8) {
-                            enemyNearby = true;
+                            //enemyNearby = true;
                             unit = r;
                             unitLoc = r.getLocation();
                             microInfos[0].updateMopper();
@@ -116,7 +116,21 @@ public class MicroManagerMopper {
             }
         }
 
-        if (!enemyNearby) return false;
+        //if (!enemyNearby) return false;
+
+        boolean shouldMicro = false;
+
+        if (microInfos[0].isAccessible && microInfos[0].inAttackRange) shouldMicro = true;
+        if (microInfos[1].isAccessible && microInfos[1].inAttackRange) shouldMicro = true;
+        if (microInfos[2].isAccessible && microInfos[2].inAttackRange) shouldMicro = true;
+        if (microInfos[3].isAccessible && microInfos[3].inAttackRange) shouldMicro = true;
+        if (microInfos[4].isAccessible && microInfos[4].inAttackRange) shouldMicro = true;
+        if (microInfos[5].isAccessible && microInfos[5].inAttackRange) shouldMicro = true;
+        if (microInfos[6].isAccessible && microInfos[6].inAttackRange) shouldMicro = true;
+        if (microInfos[7].isAccessible && microInfos[7].inAttackRange) shouldMicro = true;
+        if (microInfos[8].isAccessible && microInfos[8].inAttackRange) shouldMicro = true;
+
+        if (!shouldMicro) return false;
 
         MicroInfo bestMicro = microInfos[8];
         if (microInfos[0].isBetterThan(bestMicro)) bestMicro = microInfos[0];

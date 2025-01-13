@@ -1,46 +1,25 @@
-package basic7;
+package basic8;
 
 import battlecode.common.*;
 
-public class MicroManagerSoldier {
+public class MicroManagerMopper {
 
     static Direction[] directions = Direction.values();
 
     //static int extraCd = 0; // in cds
     static boolean canAttack;
-    static boolean canMoveNextTurn;
+    //static boolean canMoveNextTurn;
     static RobotController rc;
 
     static int myRange;
 
     static MicroInfo[] microInfos;
-    static MicroInfo bestMicro;
-    static boolean roundNice;
 
     static boolean doMicro() throws GameActionException {
         rc = MyRobot.rc;
         if (!rc.isMovementReady()) return false;
 
         myRange = rc.getType().actionRadiusSquared;
-
-        int myPaint = rc.getPaint();
-        roundNice = rc.getRoundNum()%2 == 0;
-
-        /*int frac = (200*myPaint) / rc.getType().paintCapacity;
-        extraCd = 100 - frac;
-        if (extraCd < 0) extraCd = 0;*/
-
-        canAttack = rc.isActionReady() && rc.getPaint() > 10;
-
-        myPaint -= 15;
-        int cdAdd = 10;
-        int paintPercentage = (int) Math.round(myPaint * 100.0/ rc.getType().paintCapacity);
-        if (paintPercentage < GameConstants.INCREASED_COOLDOWN_THRESHOLD) {
-            cdAdd += (int) Math.round(cdAdd
-                    * (GameConstants.INCREASED_COOLDOWN_INTERCEPT + GameConstants.INCREASED_COOLDOWN_SLOPE * paintPercentage) / 100.0);
-        }
-
-        canMoveNextTurn = (cdAdd + rc.getActionCooldownTurns() - GameConstants.COOLDOWNS_PER_TURN < GameConstants.COOLDOWN_LIMIT);
 
         microInfos = new MicroInfo[9];
         microInfos[0] = new MicroInfo(Direction.NORTH);
@@ -53,25 +32,44 @@ public class MicroManagerSoldier {
         microInfos[7] = new MicroInfo(Direction.NORTHWEST);
         microInfos[8] = new MicroInfo(Direction.CENTER);
 
+        //boolean enemyNearby = false;
+
         RobotInfo[] units = rc.senseNearbyRobots();
         for (RobotInfo r : units) {
             if (r.getTeam() != rc.getTeam()) {
                 switch (r.getType()) {
                     case SPLASHER:
                     case SOLDIER:
+                        if (rc.getLocation().distanceSquaredTo(r.getLocation()) <= 8) {
+                            //enemyNearby = true;
+                            unit = r;
+                            unitLoc = r.getLocation();
+                            microInfos[0].updateEnemy();
+                            microInfos[1].updateEnemy();
+                            microInfos[2].updateEnemy();
+                            microInfos[3].updateEnemy();
+                            microInfos[4].updateEnemy();
+                            microInfos[5].updateEnemy();
+                            microInfos[6].updateEnemy();
+                            microInfos[7].updateEnemy();
+                            microInfos[8].updateEnemy();
+                        }
                         break;
                     case MOPPER:
-                        unit = r;
-                        unitLoc = r.getLocation();
-                        microInfos[0].updateMopper();
-                        microInfos[1].updateMopper();
-                        microInfos[2].updateMopper();
-                        microInfos[3].updateMopper();
-                        microInfos[4].updateMopper();
-                        microInfos[5].updateMopper();
-                        microInfos[6].updateMopper();
-                        microInfos[7].updateMopper();
-                        microInfos[8].updateMopper();
+                        if (rc.getLocation().distanceSquaredTo(r.getLocation()) <= 8) {
+                            //enemyNearby = true;
+                            unit = r;
+                            unitLoc = r.getLocation();
+                            microInfos[0].updateMopper();
+                            microInfos[1].updateMopper();
+                            microInfos[2].updateMopper();
+                            microInfos[3].updateMopper();
+                            microInfos[4].updateMopper();
+                            microInfos[5].updateMopper();
+                            microInfos[6].updateMopper();
+                            microInfos[7].updateMopper();
+                            microInfos[8].updateMopper();
+                        }
                         break;
                     default:
                         unit = r;
@@ -102,10 +100,23 @@ public class MicroManagerSoldier {
                         microInfos[8].updateAllyMopper();
                         break;
                     default:
+                        unit = r;
+                        unitLoc = r.getLocation();
+                        microInfos[0].updateAlly();
+                        microInfos[1].updateAlly();
+                        microInfos[2].updateAlly();
+                        microInfos[3].updateAlly();
+                        microInfos[4].updateAlly();
+                        microInfos[5].updateAlly();
+                        microInfos[6].updateAlly();
+                        microInfos[7].updateAlly();
+                        microInfos[8].updateAlly();
                         break;
                 }
             }
         }
+
+        //if (!enemyNearby) return false;
 
         boolean shouldMicro = false;
 
@@ -121,7 +132,7 @@ public class MicroManagerSoldier {
 
         if (!shouldMicro) return false;
 
-        bestMicro = microInfos[8];
+        MicroInfo bestMicro = microInfos[8];
         if (microInfos[0].isBetterThan(bestMicro)) bestMicro = microInfos[0];
         if (microInfos[1].isBetterThan(bestMicro)) bestMicro = microInfos[1];
         if (microInfos[2].isBetterThan(bestMicro)) bestMicro = microInfos[2];
@@ -172,16 +183,17 @@ public class MicroManagerSoldier {
             if (!isAccessible) return;
             int dist = unitLoc.distanceSquaredTo(loc);
             if (dist <= unit.getType().actionRadiusSquared) ++towersInRange;
-            if (dist <= myRange) inAttackRange = true;
-            if (dist < closestDistEnemy) closestDistEnemy = dist;
+            //if (dist <= myRange && !mopper) inAttackRange = true; //TODO fix
         }
 
         void updateMopper(){
             if (!isAccessible) return;
             int dist = unitLoc.distanceSquaredTo(loc);
             if (dist <= UnitType.MOPPER.actionRadiusSquared) ++moppersInRange;
-            if (dist <= 8) ++moppersInMoveRange;
+            //if (dist <= 8) ++moppersInMoveRange;
             if (dist < closestDistMopper) closestDistMopper = dist;
+            if (dist <= myRange) inAttackRange = true;
+            if (dist < closestDistEnemy) closestDistEnemy = dist;
         }
 
         void updateAllyMopper(){
@@ -191,29 +203,55 @@ public class MicroManagerSoldier {
             if (dist <= 2) ++adjAllies;
         }
 
-        /*void updateAlly(){
+        void updateAlly(){
             if (!isAccessible) return;
             int dist = unitLoc.distanceSquaredTo(loc);
             if (dist <= 2) ++adjAllies;
-        }*/
+        }
+
+        void updateEnemy(){
+            if (!isAccessible) return;
+            int dist = unitLoc.distanceSquaredTo(loc);
+            if (dist <= myRange) inAttackRange = true;
+            if (dist < closestDistEnemy) closestDistEnemy = dist;
+        }
+
+        int paintLost(){
+            int ptk = 0;
+            if (canAttack && inAttackRange) ptk = GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + GameConstants.MOPPER_ATTACK_PAINT_ADDITION;
+            return switch (p) {
+                case ENEMY_PRIMARY, ENEMY_SECONDARY ->
+                        2 * (GameConstants.PENALTY_ENEMY_TERRITORY * (adjAllies)) + (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3 - ptk;
+                case EMPTY ->
+                        2 * GameConstants.PENALTY_NEUTRAL_TERRITORY + (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3 - ptk;
+                default -> (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3 - ptk;
+            };
+        }
 
         boolean isBetterThan(MicroInfo M){
             if (!isAccessible) return false;
             if (!M.isAccessible) return true;
 
 
-            if (canAttack && canMoveNextTurn && roundNice){
+            if (towersInRange > M.towersInRange) return false;
+            if (M.towersInRange > towersInRange) return true;
+
+
+            int p = paintLost(), mp = M.paintLost();
+            if (p > mp) return false;
+            if (mp > p) return true;
+
+            if (canAttack){
                 if (inAttackRange && !M.inAttackRange) return true;
                 if (M.inAttackRange && !inAttackRange) return false;
             }
-            else {
-                if (towersInRange > M.towersInRange) return false;
-                if (M.towersInRange > towersInRange) return true;
+
+            if (!inAttackRange && !M.inAttackRange){
+                return closestDistEnemy < M.closestDistEnemy;
             }
 
-            if (towersInRange == 0 && M.towersInRange == 0) return closestDistEnemy < M.closestDistEnemy;
-
             return false;
+
         }
     }
 }

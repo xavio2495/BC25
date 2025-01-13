@@ -44,8 +44,8 @@ public class Main {
         }
 
         public int compareTo(CustomLoc c){
-            if (!isOtherQuadrant() && c.isOtherQuadrant()) return -1;
-            if (isOtherQuadrant() && !c.isOtherQuadrant()) return 1;
+            //if (!isOtherQuadrant() && c.isOtherQuadrant()) return -1;
+            //if (isOtherQuadrant() && !c.isOtherQuadrant()) return 1;
             return Integer.compare(dist(0, 0), c.dist(0, 0));
         }
 
