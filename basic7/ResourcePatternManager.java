@@ -1,5 +1,4 @@
-package basic6;
-
+package basic7;
 import battlecode.common.*;
 
 public class ResourcePatternManager {
@@ -354,7 +353,7 @@ public class ResourcePatternManager {
 
     static MapLocation process0() throws GameActionException { // (0,0)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l40;
@@ -364,7 +363,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l41;
@@ -374,7 +373,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l49;
@@ -384,7 +383,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l50;
@@ -394,7 +393,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l42;
@@ -404,7 +403,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l58;
@@ -414,7 +413,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l51;
@@ -424,7 +423,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l59;
@@ -434,7 +433,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l60;
@@ -444,7 +443,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l43;
@@ -454,7 +453,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l67;
@@ -464,395 +463,395 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l52;
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l68;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l61;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l69;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l44;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l76;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l53;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l77;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l70;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l62;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l78;
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l31;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l39;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l30;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l32;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l48;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l22;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l38;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l21;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l23;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l29;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l33;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l47;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l57;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l24;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l56;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l37;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l34;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l46;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l66;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l55;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l65;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l18;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l26;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l54;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l74;
@@ -865,7 +864,7 @@ public class ResourcePatternManager {
 
     static MapLocation process1() throws GameActionException { // (0,1)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l40;
@@ -875,7 +874,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l41;
@@ -885,7 +884,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l49;
@@ -895,7 +894,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l39;
@@ -905,7 +904,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l50;
@@ -915,7 +914,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l48;
@@ -925,7 +924,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l42;
@@ -935,7 +934,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l58;
@@ -945,7 +944,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l51;
@@ -955,7 +954,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l59;
@@ -965,7 +964,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l57;
@@ -975,7 +974,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l60;
@@ -985,7 +984,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l43;
@@ -995,7 +994,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l67;
@@ -1005,375 +1004,375 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l52;
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l68;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l66;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l61;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l69;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l76;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l77;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l75;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l70;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l78;
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l31;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l30;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l32;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l22;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l38;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l21;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l23;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l29;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l33;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l47;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l24;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l56;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l37;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l34;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l46;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l55;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l65;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l18;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l26;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l54;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l74;
@@ -1386,7 +1385,7 @@ public class ResourcePatternManager {
 
     static MapLocation process2() throws GameActionException { // (0,2)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l40;
@@ -1396,7 +1395,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l41;
@@ -1406,7 +1405,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l49;
@@ -1416,7 +1415,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l39;
@@ -1426,7 +1425,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l50;
@@ -1436,7 +1435,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l48;
@@ -1446,7 +1445,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l42;
@@ -1456,7 +1455,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l58;
@@ -1466,7 +1465,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l38;
@@ -1476,7 +1475,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l51;
@@ -1486,7 +1485,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l59;
@@ -1496,7 +1495,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l57;
@@ -1506,7 +1505,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l47;
@@ -1516,7 +1515,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l60;
@@ -1526,7 +1525,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l56;
@@ -1536,7 +1535,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l67;
@@ -1546,362 +1545,362 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l68;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l66;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l69;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l65;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l76;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l77;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l75;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l78;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l74;
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l31;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l30;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l32;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l22;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l21;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l23;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l29;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l33;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l24;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l43;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l37;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l52;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l34;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l46;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l61;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l55;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l18;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l26;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l54;
@@ -1914,7 +1913,7 @@ public class ResourcePatternManager {
 
     static MapLocation process3() throws GameActionException { // (0,3)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l40;
@@ -1924,7 +1923,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l41;
@@ -1934,7 +1933,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l49;
@@ -1944,7 +1943,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l39;
@@ -1954,7 +1953,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l50;
@@ -1964,7 +1963,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l48;
@@ -1974,7 +1973,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l58;
@@ -1984,7 +1983,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l38;
@@ -1994,7 +1993,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l59;
@@ -2004,7 +2003,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l57;
@@ -2014,7 +2013,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l47;
@@ -2024,7 +2023,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l56;
@@ -2034,7 +2033,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l67;
@@ -2044,7 +2043,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l37;
@@ -2054,375 +2053,375 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l68;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l66;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l46;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l65;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l55;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l76;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l77;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l75;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l64;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l74;
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l31;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l30;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l32;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l42;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l22;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l51;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l21;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l23;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l29;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l33;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l60;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l24;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l43;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l52;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l34;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l69;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l61;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l18;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l26;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l54;
@@ -2435,7 +2434,7 @@ public class ResourcePatternManager {
 
     static MapLocation process4() throws GameActionException { // (0,4)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l40;
@@ -2445,7 +2444,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l49;
@@ -2455,7 +2454,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l39;
@@ -2465,7 +2464,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l48;
@@ -2475,7 +2474,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l58;
@@ -2485,7 +2484,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l38;
@@ -2495,7 +2494,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l57;
@@ -2505,7 +2504,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l47;
@@ -2515,7 +2514,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l56;
@@ -2525,7 +2524,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l67;
@@ -2535,7 +2534,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l37;
@@ -2545,395 +2544,395 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l66;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l46;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l65;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l55;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l76;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l36;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l75;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l45;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l64;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l74;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l54;
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l41;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l31;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l50;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l30;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l32;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l42;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l22;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l59;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l51;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l21;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l23;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l29;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l33;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l60;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l24;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l43;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l68;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l52;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l34;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l69;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l61;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l18;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l26;
@@ -2946,7 +2945,7 @@ public class ResourcePatternManager {
 
     static MapLocation process5() throws GameActionException { // (1,0)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l40;
@@ -2956,7 +2955,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l49;
@@ -2966,7 +2965,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l41;
@@ -2976,7 +2975,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l31;
@@ -2986,7 +2985,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l50;
@@ -2996,7 +2995,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l32;
@@ -3006,7 +3005,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l58;
@@ -3016,7 +3015,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l42;
@@ -3026,7 +3025,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l59;
@@ -3036,7 +3035,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l51;
@@ -3046,7 +3045,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l33;
@@ -3056,7 +3055,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l60;
@@ -3066,7 +3065,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l67;
@@ -3076,7 +3075,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l43;
@@ -3086,375 +3085,375 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l68;
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l52;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l34;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l69;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l61;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l44;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l53;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l35;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l70;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l62;
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l39;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l48;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l30;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l38;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l22;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l57;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l47;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l21;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l23;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l29;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l56;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l24;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l37;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l66;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l46;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l65;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l55;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l76;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l74;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l54;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l18;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l26;
@@ -3467,7 +3466,7 @@ public class ResourcePatternManager {
 
     static MapLocation process6() throws GameActionException { // (1,1)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l40;
@@ -3477,7 +3476,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l49;
@@ -3487,7 +3486,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l41;
@@ -3497,7 +3496,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l31;
@@ -3507,7 +3506,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l39;
@@ -3517,7 +3516,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l50;
@@ -3527,7 +3526,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l32;
@@ -3537,7 +3536,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l48;
@@ -3547,7 +3546,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l30;
@@ -3557,7 +3556,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l58;
@@ -3567,7 +3566,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l42;
@@ -3577,7 +3576,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l59;
@@ -3587,7 +3586,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l51;
@@ -3597,7 +3596,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l33;
@@ -3607,7 +3606,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l57;
@@ -3617,7 +3616,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l60;
@@ -3627,7 +3626,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l67;
@@ -3637,7 +3636,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l43;
@@ -3647,350 +3646,350 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l68;
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l52;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l34;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l66;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l69;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l61;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l70;
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l38;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l22;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l47;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l21;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l23;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l29;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l56;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l24;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l37;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l46;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l65;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l55;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l76;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l74;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l54;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l18;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l26;
@@ -4003,7 +4002,7 @@ public class ResourcePatternManager {
 
     static MapLocation process7() throws GameActionException { // (1,2)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l40;
@@ -4013,7 +4012,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l49;
@@ -4023,7 +4022,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l41;
@@ -4033,7 +4032,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l31;
@@ -4043,7 +4042,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l39;
@@ -4053,7 +4052,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l50;
@@ -4063,7 +4062,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l32;
@@ -4073,7 +4072,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l48;
@@ -4083,7 +4082,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l30;
@@ -4093,7 +4092,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l58;
@@ -4103,7 +4102,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l42;
@@ -4113,7 +4112,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l38;
@@ -4123,7 +4122,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l59;
@@ -4133,7 +4132,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l51;
@@ -4143,7 +4142,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l33;
@@ -4153,7 +4152,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l57;
@@ -4163,7 +4162,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l47;
@@ -4173,7 +4172,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l29;
@@ -4183,7 +4182,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l60;
@@ -4193,7 +4192,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l56;
@@ -4203,7 +4202,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l67;
@@ -4213,332 +4212,332 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l68;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l66;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l69;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l65;
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l22;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l21;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l23;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l24;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l43;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l37;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l52;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l34;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l46;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l61;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l55;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l76;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l74;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l54;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l18;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l26;
@@ -4551,7 +4550,7 @@ public class ResourcePatternManager {
 
     static MapLocation process8() throws GameActionException { // (1,3)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l40;
@@ -4561,7 +4560,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l49;
@@ -4571,7 +4570,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l41;
@@ -4581,7 +4580,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l31;
@@ -4591,7 +4590,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l39;
@@ -4601,7 +4600,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l50;
@@ -4611,7 +4610,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l32;
@@ -4621,7 +4620,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l48;
@@ -4631,7 +4630,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l30;
@@ -4641,7 +4640,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l58;
@@ -4651,7 +4650,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l38;
@@ -4661,7 +4660,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l59;
@@ -4671,7 +4670,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l57;
@@ -4681,7 +4680,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l47;
@@ -4691,7 +4690,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l29;
@@ -4701,7 +4700,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l56;
@@ -4711,7 +4710,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l67;
@@ -4721,7 +4720,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l37;
@@ -4731,350 +4730,350 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l68;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l66;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l46;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l28;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l65;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l55;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l64;
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l42;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l22;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l51;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l33;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l21;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l23;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l60;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l24;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l43;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l52;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l34;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l69;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l61;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l76;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l74;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l54;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l18;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l26;
@@ -5087,7 +5086,7 @@ public class ResourcePatternManager {
 
     static MapLocation process9() throws GameActionException { // (1,4)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l40;
@@ -5097,7 +5096,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l49;
@@ -5107,7 +5106,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l31;
@@ -5117,7 +5116,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l39;
@@ -5127,7 +5126,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l48;
@@ -5137,7 +5136,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l30;
@@ -5147,7 +5146,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l58;
@@ -5157,7 +5156,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l38;
@@ -5167,7 +5166,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l57;
@@ -5177,7 +5176,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l47;
@@ -5187,7 +5186,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l29;
@@ -5197,7 +5196,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l56;
@@ -5207,7 +5206,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l67;
@@ -5217,7 +5216,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l37;
@@ -5227,375 +5226,375 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l66;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l46;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l28;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l65;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l55;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l36;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l45;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l27;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l64;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l54;
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l41;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l50;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l32;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l42;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l22;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l59;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l51;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l33;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l21;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l23;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l60;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l24;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l43;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l68;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l52;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l34;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l69;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l61;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l76;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l74;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l18;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l26;
@@ -5608,7 +5607,7 @@ public class ResourcePatternManager {
 
     static MapLocation process10() throws GameActionException { // (2,0)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l40;
@@ -5618,7 +5617,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l49;
@@ -5628,7 +5627,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l31;
@@ -5638,7 +5637,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l41;
@@ -5648,7 +5647,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l50;
@@ -5658,7 +5657,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l32;
@@ -5668,7 +5667,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l58;
@@ -5678,7 +5677,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l42;
@@ -5688,7 +5687,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l22;
@@ -5698,7 +5697,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l59;
@@ -5708,7 +5707,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l51;
@@ -5718,7 +5717,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l33;
@@ -5728,7 +5727,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l23;
@@ -5738,7 +5737,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l60;
@@ -5748,7 +5747,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l24;
@@ -5758,7 +5757,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l43;
@@ -5768,362 +5767,362 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l52;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l34;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l61;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l25;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l44;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l53;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l35;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l62;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l26;
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l39;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l48;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l30;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l38;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l57;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l47;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l29;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l21;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l56;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l67;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l37;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l66;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l46;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l68;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l65;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l55;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l69;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l76;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l54;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l74;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l18;
@@ -6136,7 +6135,7 @@ public class ResourcePatternManager {
 
     static MapLocation process11() throws GameActionException { // (2,1)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l40;
@@ -6146,7 +6145,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l49;
@@ -6156,7 +6155,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l31;
@@ -6166,7 +6165,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l41;
@@ -6176,7 +6175,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l39;
@@ -6186,7 +6185,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l50;
@@ -6196,7 +6195,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l32;
@@ -6206,7 +6205,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l48;
@@ -6216,7 +6215,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l30;
@@ -6226,7 +6225,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l58;
@@ -6236,7 +6235,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l42;
@@ -6246,7 +6245,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l22;
@@ -6256,7 +6255,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l59;
@@ -6266,7 +6265,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l51;
@@ -6276,7 +6275,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l33;
@@ -6286,7 +6285,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l23;
@@ -6296,7 +6295,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l57;
@@ -6306,7 +6305,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l21;
@@ -6316,7 +6315,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l60;
@@ -6326,7 +6325,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l24;
@@ -6336,7 +6335,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l43;
@@ -6346,332 +6345,332 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l52;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l34;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l61;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l25;
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l38;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l47;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l29;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l56;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l67;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l37;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l66;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l46;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l68;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l65;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l55;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l69;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l76;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l26;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l54;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l74;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l18;
@@ -6684,7 +6683,7 @@ public class ResourcePatternManager {
 
     static MapLocation process12() throws GameActionException { // (2,2)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l40;
@@ -6694,7 +6693,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l49;
@@ -6704,7 +6703,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l31;
@@ -6714,7 +6713,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l41;
@@ -6724,7 +6723,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l39;
@@ -6734,7 +6733,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l50;
@@ -6744,7 +6743,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l32;
@@ -6754,7 +6753,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l48;
@@ -6764,7 +6763,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l30;
@@ -6774,7 +6773,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l58;
@@ -6784,7 +6783,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l42;
@@ -6794,7 +6793,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l22;
@@ -6804,7 +6803,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l38;
@@ -6814,7 +6813,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l59;
@@ -6824,7 +6823,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l51;
@@ -6834,7 +6833,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l33;
@@ -6844,7 +6843,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l23;
@@ -6854,7 +6853,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l57;
@@ -6864,7 +6863,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l21;
@@ -6874,7 +6873,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l47;
@@ -6884,7 +6883,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l29;
@@ -6894,7 +6893,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l60;
@@ -6904,7 +6903,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l24;
@@ -6914,7 +6913,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l56;
@@ -6924,7 +6923,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l20;
@@ -6934,308 +6933,308 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l43;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l67;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l37;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l52;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l34;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l66;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l46;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l68;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l61;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l65;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l55;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l69;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l76;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l26;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l54;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l74;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l18;
@@ -7248,7 +7247,7 @@ public class ResourcePatternManager {
 
     static MapLocation process13() throws GameActionException { // (2,3)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l40;
@@ -7258,7 +7257,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l49;
@@ -7268,7 +7267,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l31;
@@ -7278,7 +7277,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l41;
@@ -7288,7 +7287,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l39;
@@ -7298,7 +7297,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l50;
@@ -7308,7 +7307,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l32;
@@ -7318,7 +7317,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l48;
@@ -7328,7 +7327,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l30;
@@ -7338,7 +7337,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l58;
@@ -7348,7 +7347,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l22;
@@ -7358,7 +7357,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l38;
@@ -7368,7 +7367,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l59;
@@ -7378,7 +7377,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l23;
@@ -7388,7 +7387,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l57;
@@ -7398,7 +7397,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l21;
@@ -7408,7 +7407,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l47;
@@ -7418,7 +7417,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l29;
@@ -7428,7 +7427,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l56;
@@ -7438,7 +7437,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l20;
@@ -7448,7 +7447,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l37;
@@ -7458,332 +7457,332 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l46;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l28;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l55;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l19;
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l42;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l51;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l33;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l60;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l24;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l43;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l67;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l52;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l34;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l66;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l68;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l61;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l65;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l69;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l76;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l26;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l54;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l74;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l6;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l18;
@@ -7796,7 +7795,7 @@ public class ResourcePatternManager {
 
     static MapLocation process14() throws GameActionException { // (2,4)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l40;
@@ -7806,7 +7805,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l49;
@@ -7816,7 +7815,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l31;
@@ -7826,7 +7825,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l39;
@@ -7836,7 +7835,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l48;
@@ -7846,7 +7845,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l30;
@@ -7856,7 +7855,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l58;
@@ -7866,7 +7865,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l22;
@@ -7876,7 +7875,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l38;
@@ -7886,7 +7885,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l57;
@@ -7896,7 +7895,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l21;
@@ -7906,7 +7905,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l47;
@@ -7916,7 +7915,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l29;
@@ -7926,7 +7925,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l56;
@@ -7936,7 +7935,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l20;
@@ -7946,7 +7945,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l37;
@@ -7956,362 +7955,362 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l46;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l28;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l55;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l19;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l36;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l45;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l27;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l54;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l18;
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l41;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l50;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l32;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l42;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l59;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l23;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l51;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l33;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l60;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l24;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l43;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l67;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l13;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l52;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l34;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l66;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l68;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l14;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l61;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l25;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l65;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l69;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l15;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l76;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l16;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l26;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l74;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l6;
@@ -8324,7 +8323,7 @@ public class ResourcePatternManager {
 
     static MapLocation process15() throws GameActionException { // (3,0)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l40;
@@ -8334,7 +8333,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l49;
@@ -8344,7 +8343,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l31;
@@ -8354,7 +8353,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l41;
@@ -8364,7 +8363,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l50;
@@ -8374,7 +8373,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l32;
@@ -8384,7 +8383,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l22;
@@ -8394,7 +8393,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l42;
@@ -8404,7 +8403,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l23;
@@ -8414,7 +8413,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l51;
@@ -8424,7 +8423,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l33;
@@ -8434,7 +8433,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l24;
@@ -8444,7 +8443,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l43;
@@ -8454,7 +8453,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l13;
@@ -8464,375 +8463,375 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l52;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l34;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l14;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l25;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l15;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l44;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l53;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l35;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l16;
             }
         }
-        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !Map.isNearRuin(l26))){ // (-2,4)
+        if (rc.onTheMap(l26) && !m26.isWall() && !m26.hasRuin() && (maxT || !basic7.Map.isNearRuin(l26))){ // (-2,4)
             PaintType p = m26.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l26;
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l39;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l48;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l30;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l58;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l38;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l57;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l21;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l47;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l29;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l59;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l56;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l60;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l37;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l67;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l46;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l66;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l68;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l12;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l55;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l61;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l65;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l69;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l76;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l10;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !Map.isNearRuin(l54))){ // (2,-4)
+        if (rc.onTheMap(l54) && !m54.isWall() && !m54.hasRuin() && (maxT || !basic7.Map.isNearRuin(l54))){ // (2,-4)
             PaintType p = m54.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l54;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !Map.isNearRuin(l18))){ // (-2,-4)
+        if (rc.onTheMap(l18) && !m18.isWall() && !m18.hasRuin() && (maxT || !basic7.Map.isNearRuin(l18))){ // (-2,-4)
             PaintType p = m18.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l18;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !Map.isNearRuin(l62))){ // (2,4)
+        if (rc.onTheMap(l62) && !m62.isWall() && !m62.hasRuin() && (maxT || !basic7.Map.isNearRuin(l62))){ // (2,4)
             PaintType p = m62.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l62;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !Map.isNearRuin(l74))){ // (4,-2)
+        if (rc.onTheMap(l74) && !m74.isWall() && !m74.hasRuin() && (maxT || !basic7.Map.isNearRuin(l74))){ // (4,-2)
             PaintType p = m74.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l74;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !Map.isNearRuin(l78))){ // (4,2)
+        if (rc.onTheMap(l78) && !m78.isWall() && !m78.hasRuin() && (maxT || !basic7.Map.isNearRuin(l78))){ // (4,2)
             PaintType p = m78.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l78;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !Map.isNearRuin(l2))){ // (-4,-2)
+        if (rc.onTheMap(l2) && !m2.isWall() && !m2.hasRuin() && (maxT || !basic7.Map.isNearRuin(l2))){ // (-4,-2)
             PaintType p = m2.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l2;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !Map.isNearRuin(l6))){ // (-4,2)
+        if (rc.onTheMap(l6) && !m6.isWall() && !m6.hasRuin() && (maxT || !basic7.Map.isNearRuin(l6))){ // (-4,2)
             PaintType p = m6.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l6;
@@ -8845,7 +8844,7 @@ public class ResourcePatternManager {
 
     static MapLocation process16() throws GameActionException { // (3,1)
         MapLocation ans = null;
-        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !Map.isNearRuin(l40))){ // (0,0)
+        if (rc.onTheMap(l40) && !m40.isWall() && !m40.hasRuin() && (maxT || !basic7.Map.isNearRuin(l40))){ // (0,0)
             PaintType p = m40.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l40;
@@ -8855,7 +8854,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !Map.isNearRuin(l49))){ // (1,0)
+        if (rc.onTheMap(l49) && !m49.isWall() && !m49.hasRuin() && (maxT || !basic7.Map.isNearRuin(l49))){ // (1,0)
             PaintType p = m49.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l49;
@@ -8865,7 +8864,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !Map.isNearRuin(l31))){ // (-1,0)
+        if (rc.onTheMap(l31) && !m31.isWall() && !m31.hasRuin() && (maxT || !basic7.Map.isNearRuin(l31))){ // (-1,0)
             PaintType p = m31.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l31;
@@ -8875,7 +8874,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !Map.isNearRuin(l41))){ // (0,1)
+        if (rc.onTheMap(l41) && !m41.isWall() && !m41.hasRuin() && (maxT || !basic7.Map.isNearRuin(l41))){ // (0,1)
             PaintType p = m41.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l41;
@@ -8885,7 +8884,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !Map.isNearRuin(l39))){ // (0,-1)
+        if (rc.onTheMap(l39) && !m39.isWall() && !m39.hasRuin() && (maxT || !basic7.Map.isNearRuin(l39))){ // (0,-1)
             PaintType p = m39.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l39;
@@ -8895,7 +8894,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !Map.isNearRuin(l50))){ // (1,1)
+        if (rc.onTheMap(l50) && !m50.isWall() && !m50.hasRuin() && (maxT || !basic7.Map.isNearRuin(l50))){ // (1,1)
             PaintType p = m50.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l50;
@@ -8905,7 +8904,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !Map.isNearRuin(l32))){ // (-1,1)
+        if (rc.onTheMap(l32) && !m32.isWall() && !m32.hasRuin() && (maxT || !basic7.Map.isNearRuin(l32))){ // (-1,1)
             PaintType p = m32.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l32;
@@ -8915,7 +8914,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !Map.isNearRuin(l48))){ // (1,-1)
+        if (rc.onTheMap(l48) && !m48.isWall() && !m48.hasRuin() && (maxT || !basic7.Map.isNearRuin(l48))){ // (1,-1)
             PaintType p = m48.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l48;
@@ -8925,7 +8924,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !Map.isNearRuin(l30))){ // (-1,-1)
+        if (rc.onTheMap(l30) && !m30.isWall() && !m30.hasRuin() && (maxT || !basic7.Map.isNearRuin(l30))){ // (-1,-1)
             PaintType p = m30.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l30;
@@ -8935,7 +8934,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !Map.isNearRuin(l22))){ // (-2,0)
+        if (rc.onTheMap(l22) && !m22.isWall() && !m22.hasRuin() && (maxT || !basic7.Map.isNearRuin(l22))){ // (-2,0)
             PaintType p = m22.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l22;
@@ -8945,7 +8944,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !Map.isNearRuin(l42))){ // (0,2)
+        if (rc.onTheMap(l42) && !m42.isWall() && !m42.hasRuin() && (maxT || !basic7.Map.isNearRuin(l42))){ // (0,2)
             PaintType p = m42.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l42;
@@ -8955,7 +8954,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !Map.isNearRuin(l23))){ // (-2,1)
+        if (rc.onTheMap(l23) && !m23.isWall() && !m23.hasRuin() && (maxT || !basic7.Map.isNearRuin(l23))){ // (-2,1)
             PaintType p = m23.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l23;
@@ -8965,7 +8964,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !Map.isNearRuin(l51))){ // (1,2)
+        if (rc.onTheMap(l51) && !m51.isWall() && !m51.hasRuin() && (maxT || !basic7.Map.isNearRuin(l51))){ // (1,2)
             PaintType p = m51.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l51;
@@ -8975,7 +8974,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !Map.isNearRuin(l33))){ // (-1,2)
+        if (rc.onTheMap(l33) && !m33.isWall() && !m33.hasRuin() && (maxT || !basic7.Map.isNearRuin(l33))){ // (-1,2)
             PaintType p = m33.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l33;
@@ -8985,7 +8984,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !Map.isNearRuin(l21))){ // (-2,-1)
+        if (rc.onTheMap(l21) && !m21.isWall() && !m21.hasRuin() && (maxT || !basic7.Map.isNearRuin(l21))){ // (-2,-1)
             PaintType p = m21.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l21;
@@ -8995,7 +8994,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !Map.isNearRuin(l24))){ // (-2,2)
+        if (rc.onTheMap(l24) && !m24.isWall() && !m24.hasRuin() && (maxT || !basic7.Map.isNearRuin(l24))){ // (-2,2)
             PaintType p = m24.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l24;
@@ -9005,7 +9004,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !Map.isNearRuin(l43))){ // (0,3)
+        if (rc.onTheMap(l43) && !m43.isWall() && !m43.hasRuin() && (maxT || !basic7.Map.isNearRuin(l43))){ // (0,3)
             PaintType p = m43.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l43;
@@ -9015,7 +9014,7 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !Map.isNearRuin(l13))){ // (-3,0)
+        if (rc.onTheMap(l13) && !m13.isWall() && !m13.hasRuin() && (maxT || !basic7.Map.isNearRuin(l13))){ // (-3,0)
             PaintType p = m13.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l13;
@@ -9025,294 +9024,294 @@ public class ResourcePatternManager {
                 }
             }
         }
-        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !Map.isNearRuin(l52))){ // (1,3)
+        if (rc.onTheMap(l52) && !m52.isWall() && !m52.hasRuin() && (maxT || !basic7.Map.isNearRuin(l52))){ // (1,3)
             PaintType p = m52.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l52;
             }
         }
-        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !Map.isNearRuin(l34))){ // (-1,3)
+        if (rc.onTheMap(l34) && !m34.isWall() && !m34.hasRuin() && (maxT || !basic7.Map.isNearRuin(l34))){ // (-1,3)
             PaintType p = m34.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l34;
             }
         }
-        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !Map.isNearRuin(l14))){ // (-3,1)
+        if (rc.onTheMap(l14) && !m14.isWall() && !m14.hasRuin() && (maxT || !basic7.Map.isNearRuin(l14))){ // (-3,1)
             PaintType p = m14.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l14;
             }
         }
-        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !Map.isNearRuin(l12))){ // (-3,-1)
+        if (rc.onTheMap(l12) && !m12.isWall() && !m12.hasRuin() && (maxT || !basic7.Map.isNearRuin(l12))){ // (-3,-1)
             PaintType p = m12.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l12;
             }
         }
-        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !Map.isNearRuin(l25))){ // (-2,3)
+        if (rc.onTheMap(l25) && !m25.isWall() && !m25.hasRuin() && (maxT || !basic7.Map.isNearRuin(l25))){ // (-2,3)
             PaintType p = m25.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l25;
             }
         }
-        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !Map.isNearRuin(l15))){ // (-3,2)
+        if (rc.onTheMap(l15) && !m15.isWall() && !m15.hasRuin() && (maxT || !basic7.Map.isNearRuin(l15))){ // (-3,2)
             PaintType p = m15.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l15;
             }
         }
-        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !Map.isNearRuin(l16))){ // (-3,3)
+        if (rc.onTheMap(l16) && !m16.isWall() && !m16.hasRuin() && (maxT || !basic7.Map.isNearRuin(l16))){ // (-3,3)
             PaintType p = m16.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l16;
             }
         }
-        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !Map.isNearRuin(l58))){ // (2,0)
+        if (rc.onTheMap(l58) && !m58.isWall() && !m58.hasRuin() && (maxT || !basic7.Map.isNearRuin(l58))){ // (2,0)
             PaintType p = m58.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l58;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !Map.isNearRuin(l38))){ // (0,-2)
+        if (rc.onTheMap(l38) && !m38.isWall() && !m38.hasRuin() && (maxT || !basic7.Map.isNearRuin(l38))){ // (0,-2)
             PaintType p = m38.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l38;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !Map.isNearRuin(l57))){ // (2,-1)
+        if (rc.onTheMap(l57) && !m57.isWall() && !m57.hasRuin() && (maxT || !basic7.Map.isNearRuin(l57))){ // (2,-1)
             PaintType p = m57.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l57;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !Map.isNearRuin(l47))){ // (1,-2)
+        if (rc.onTheMap(l47) && !m47.isWall() && !m47.hasRuin() && (maxT || !basic7.Map.isNearRuin(l47))){ // (1,-2)
             PaintType p = m47.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l47;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !Map.isNearRuin(l29))){ // (-1,-2)
+        if (rc.onTheMap(l29) && !m29.isWall() && !m29.hasRuin() && (maxT || !basic7.Map.isNearRuin(l29))){ // (-1,-2)
             PaintType p = m29.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l29;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !Map.isNearRuin(l59))){ // (2,1)
+        if (rc.onTheMap(l59) && !m59.isWall() && !m59.hasRuin() && (maxT || !basic7.Map.isNearRuin(l59))){ // (2,1)
             PaintType p = m59.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l59;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !Map.isNearRuin(l56))){ // (2,-2)
+        if (rc.onTheMap(l56) && !m56.isWall() && !m56.hasRuin() && (maxT || !basic7.Map.isNearRuin(l56))){ // (2,-2)
             PaintType p = m56.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l56;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !Map.isNearRuin(l20))){ // (-2,-2)
+        if (rc.onTheMap(l20) && !m20.isWall() && !m20.hasRuin() && (maxT || !basic7.Map.isNearRuin(l20))){ // (-2,-2)
             PaintType p = m20.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l20;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !Map.isNearRuin(l60))){ // (2,2)
+        if (rc.onTheMap(l60) && !m60.isWall() && !m60.hasRuin() && (maxT || !basic7.Map.isNearRuin(l60))){ // (2,2)
             PaintType p = m60.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l60;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !Map.isNearRuin(l37))){ // (0,-3)
+        if (rc.onTheMap(l37) && !m37.isWall() && !m37.hasRuin() && (maxT || !basic7.Map.isNearRuin(l37))){ // (0,-3)
             PaintType p = m37.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l37;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !Map.isNearRuin(l67))){ // (3,0)
+        if (rc.onTheMap(l67) && !m67.isWall() && !m67.hasRuin() && (maxT || !basic7.Map.isNearRuin(l67))){ // (3,0)
             PaintType p = m67.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l67;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !Map.isNearRuin(l46))){ // (1,-3)
+        if (rc.onTheMap(l46) && !m46.isWall() && !m46.hasRuin() && (maxT || !basic7.Map.isNearRuin(l46))){ // (1,-3)
             PaintType p = m46.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l46;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !Map.isNearRuin(l28))){ // (-1,-3)
+        if (rc.onTheMap(l28) && !m28.isWall() && !m28.hasRuin() && (maxT || !basic7.Map.isNearRuin(l28))){ // (-1,-3)
             PaintType p = m28.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l28;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !Map.isNearRuin(l66))){ // (3,-1)
+        if (rc.onTheMap(l66) && !m66.isWall() && !m66.hasRuin() && (maxT || !basic7.Map.isNearRuin(l66))){ // (3,-1)
             PaintType p = m66.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l66;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !Map.isNearRuin(l68))){ // (3,1)
+        if (rc.onTheMap(l68) && !m68.isWall() && !m68.hasRuin() && (maxT || !basic7.Map.isNearRuin(l68))){ // (3,1)
             PaintType p = m68.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l68;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !Map.isNearRuin(l55))){ // (2,-3)
+        if (rc.onTheMap(l55) && !m55.isWall() && !m55.hasRuin() && (maxT || !basic7.Map.isNearRuin(l55))){ // (2,-3)
             PaintType p = m55.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l55;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !Map.isNearRuin(l19))){ // (-2,-3)
+        if (rc.onTheMap(l19) && !m19.isWall() && !m19.hasRuin() && (maxT || !basic7.Map.isNearRuin(l19))){ // (-2,-3)
             PaintType p = m19.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l19;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !Map.isNearRuin(l61))){ // (2,3)
+        if (rc.onTheMap(l61) && !m61.isWall() && !m61.hasRuin() && (maxT || !basic7.Map.isNearRuin(l61))){ // (2,3)
             PaintType p = m61.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l61;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !Map.isNearRuin(l65))){ // (3,-2)
+        if (rc.onTheMap(l65) && !m65.isWall() && !m65.hasRuin() && (maxT || !basic7.Map.isNearRuin(l65))){ // (3,-2)
             PaintType p = m65.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l65;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !Map.isNearRuin(l69))){ // (3,2)
+        if (rc.onTheMap(l69) && !m69.isWall() && !m69.hasRuin() && (maxT || !basic7.Map.isNearRuin(l69))){ // (3,2)
             PaintType p = m69.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l69;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !Map.isNearRuin(l11))){ // (-3,-2)
+        if (rc.onTheMap(l11) && !m11.isWall() && !m11.hasRuin() && (maxT || !basic7.Map.isNearRuin(l11))){ // (-3,-2)
             PaintType p = m11.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l11;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !Map.isNearRuin(l44))){ // (0,4)
+        if (rc.onTheMap(l44) && !m44.isWall() && !m44.hasRuin() && (maxT || !basic7.Map.isNearRuin(l44))){ // (0,4)
             PaintType p = m44.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l44;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !Map.isNearRuin(l36))){ // (0,-4)
+        if (rc.onTheMap(l36) && !m36.isWall() && !m36.hasRuin() && (maxT || !basic7.Map.isNearRuin(l36))){ // (0,-4)
             PaintType p = m36.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l36;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !Map.isNearRuin(l76))){ // (4,0)
+        if (rc.onTheMap(l76) && !m76.isWall() && !m76.hasRuin() && (maxT || !basic7.Map.isNearRuin(l76))){ // (4,0)
             PaintType p = m76.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l76;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !Map.isNearRuin(l4))){ // (-4,0)
+        if (rc.onTheMap(l4) && !m4.isWall() && !m4.hasRuin() && (maxT || !basic7.Map.isNearRuin(l4))){ // (-4,0)
             PaintType p = m4.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l4;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !Map.isNearRuin(l53))){ // (1,4)
+        if (rc.onTheMap(l53) && !m53.isWall() && !m53.hasRuin() && (maxT || !basic7.Map.isNearRuin(l53))){ // (1,4)
             PaintType p = m53.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l53;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !Map.isNearRuin(l35))){ // (-1,4)
+        if (rc.onTheMap(l35) && !m35.isWall() && !m35.hasRuin() && (maxT || !basic7.Map.isNearRuin(l35))){ // (-1,4)
             PaintType p = m35.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l35;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !Map.isNearRuin(l45))){ // (1,-4)
+        if (rc.onTheMap(l45) && !m45.isWall() && !m45.hasRuin() && (maxT || !basic7.Map.isNearRuin(l45))){ // (1,-4)
             PaintType p = m45.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l45;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !Map.isNearRuin(l27))){ // (-1,-4)
+        if (rc.onTheMap(l27) && !m27.isWall() && !m27.hasRuin() && (maxT || !basic7.Map.isNearRuin(l27))){ // (-1,-4)
             PaintType p = m27.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l27;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !Map.isNearRuin(l75))){ // (4,-1)
+        if (rc.onTheMap(l75) && !m75.isWall() && !m75.hasRuin() && (maxT || !basic7.Map.isNearRuin(l75))){ // (4,-1)
             PaintType p = m75.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l75;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !Map.isNearRuin(l77))){ // (4,1)
+        if (rc.onTheMap(l77) && !m77.isWall() && !m77.hasRuin() && (maxT || !basic7.Map.isNearRuin(l77))){ // (4,1)
             PaintType p = m77.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l77;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !Map.isNearRuin(l3))){ // (-4,-1)
+        if (rc.onTheMap(l3) && !m3.isWall() && !m3.hasRuin() && (maxT || !basic7.Map.isNearRuin(l3))){ // (-4,-1)
             PaintType p = m3.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l3;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !Map.isNearRuin(l5))){ // (-4,1)
+        if (rc.onTheMap(l5) && !m5.isWall() && !m5.hasRuin() && (maxT || !basic7.Map.isNearRuin(l5))){ // (-4,1)
             PaintType p = m5.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l5;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !Map.isNearRuin(l64))){ // (3,-3)
+        if (rc.onTheMap(l64) && !m64.isWall() && !m64.hasRuin() && (maxT || !basic7.Map.isNearRuin(l64))){ // (3,-3)
             PaintType p = m64.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_SECONDARY){
                 if (ans == null) ans = l64;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !Map.isNearRuin(l70))){ // (3,3)
+        if (rc.onTheMap(l70) && !m70.isWall() && !m70.hasRuin() && (maxT || !basic7.Map.isNearRuin(l70))){ // (3,3)
             PaintType p = m70.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l70;
                 else return ans;
             }
         }
-        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !Map.isNearRuin(l10))){ // (-3,-3)
+        if (rc.onTheMap(l10) && !m10.isWall() && !m10.hasRuin() && (maxT || !basic7.Map.isNearRuin(l10))){ // (-3,-3)
             PaintType p = m10.getPaint();
             if (p.isEnemy() || p != PaintType.ALLY_PRIMARY){
                 if (ans == null) ans = l10;

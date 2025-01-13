@@ -1,6 +1,9 @@
-package basic6;
+package basic7;
 
-import battlecode.common.*;
+import battlecode.common.GameActionException;
+import battlecode.common.MapLocation;
+import battlecode.common.RobotController;
+import battlecode.common.UnitType;
 
 public class SoldierResource extends Soldier {
 

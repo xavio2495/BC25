@@ -57,7 +57,7 @@ public class Main {
 
         boolean isOtherQuadrant(){
             int cx = dx + Main.dx, cy = dy + Main.dy;
-            return (cx < 0 || cx >= 5 || cy < 0 || cy > 5);
+            return (cx < 0 || cx >= 5 || cy < 0 || cy >= 5);
         }
     }
 
@@ -110,10 +110,16 @@ public class Main {
             }
         }
 
+
         String getPaintType(int x){
             if (x == 1) return "ALLY_SECONDARY";
             return "ALLY_PRIMARY";
         }
+
+        String addComment(int x){
+            return " // (" + ruinLocs.get(x).dx + "," +  ruinLocs.get(x).dy + ")";
+        }
+
 
         int encode (int dx, int dy){
             return (dx+4)*9 + (dy+4);
@@ -170,7 +176,7 @@ public class Main {
             write("");
             write("rc = MyRobot.rc;");
             write("ready = rc.isActionReady() && rc.getPaint() > 10;");
-            write("maxT = maxT = Util.towerMax();");
+            write("maxT = Util.towerMax();");
             write("");
             write("MapLocation myLoc = rc.getLocation();");
             for (int i = 0; i < ruinLocs.size(); ++i){
@@ -209,7 +215,7 @@ public class Main {
                 Main.dy = i % 5;
                 Collections.sort(ruinLocs);
 
-                write("static MapLocation process" + i + "() throws GameActionException {");
+                write("static MapLocation process" + i + "() throws GameActionException {" + " // (" + Main.dx + "," + Main.dy + ")");
 
                 ++tabs;
                 write("MapLocation ans = null;");
@@ -217,7 +223,7 @@ public class Main {
                 for (int x = 0; x < ruinLocs.size(); ++x) {
                     write("if (rc.onTheMap(" + ruinLocs.get(x).getName() + ") && " + "!" + ruinLocs.get(x).getMapInfoName() + ".isWall()" + " && "
                             + "!" + ruinLocs.get(x).getMapInfoName() + ".hasRuin()" + " && "
-                            + "(maxT || !Map.isNearRuin(" + ruinLocs.get(x).getName() + "))){");
+                            + "(maxT || !Map.isNearRuin(" + ruinLocs.get(x).getName() + "))){" + addComment(x));
                     ++tabs;
 
                     write("PaintType p = " + ruinLocs.get(x).getMapInfoName() + ".getPaint();");
