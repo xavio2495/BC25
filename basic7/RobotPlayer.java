@@ -11,7 +11,7 @@ public class RobotPlayer {
     public static void run(RobotController rc) throws GameActionException {
         MyRobot myRobot = switch (rc.getType()) {
             case MOPPER -> new Mopper(rc);
-            case SOLDIER -> new SoldierTower(rc);
+            case SOLDIER -> new Soldier(rc);
             case SPLASHER -> new Splasher(rc);
             default -> new Tower(rc);
         };
