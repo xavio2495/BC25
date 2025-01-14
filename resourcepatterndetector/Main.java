@@ -49,10 +49,14 @@ public class Main {
             return Integer.compare(dist(0, 0), c.dist(0, 0));
         }
 
-        int getPaintBit(){
-            int cx = (dx + Main.dx + 5)%5, cy = (dy + Main.dy + 5)%5;
-            int c = cx*5 + cy;
-            return ((code >>> c)&1);
+        boolean getPaintBit(){
+            int cx = (dx + Main.dx + 10)%10, cy = (dy + Main.dy + 10)%10;
+            return !((cx+cy)%2 == 0 || (cx + cy*7)%10 == 1);
+        }
+
+        boolean isCenter(){
+            int cx = (dx + Main.dx + 10)%10, cy = (dy + Main.dy + 10)%10;
+            return ((cx + cy*7)%10 == 1);
         }
 
         boolean isOtherQuadrant(){
@@ -71,6 +75,7 @@ public class Main {
         static String newCodeName = "ResCodeExtended";
 
         static ArrayList<CustomLoc> ruinLocs = new ArrayList<>();
+        static ArrayList<CustomLoc> fiveByfive = new ArrayList<>();
 
         static int rlSize = 0;
 
@@ -108,11 +113,18 @@ public class Main {
                     ruinLocs.add(cl);
                 }
             }
+            for (int i = -2; i <= 2; ++i){
+                for (int j = -2; j <= 2; ++j){
+                    CustomLoc cl = new CustomLoc(i,j);
+                    //if (cl.dist(0,0) > VISION_RANGE_SQ) continue;
+                    fiveByfive.add(cl);
+                }
+            }
         }
 
 
-        String getPaintType(int x){
-            if (x == 1) return "ALLY_SECONDARY";
+        String getPaintType(boolean x){
+            if (x) return "ALLY_SECONDARY";
             return "ALLY_PRIMARY";
         }
 
@@ -145,6 +157,15 @@ public class Main {
             return ans;
         }
 
+        CustomLoc getBestCustomLoc(CustomLoc A, CustomLoc C){
+            CustomLoc bestLoc = A;
+            for (int i = 0; i < ruinLocs.size(); ++i){
+                CustomLoc cl = ruinLocs.get(i);
+                if (cl.dist(A.dx, A.dy) <= 4 && cl.dist(C.dx, C.dy) < bestLoc.dist(C.dx, C.dy)) bestLoc = cl;
+            }
+            return bestLoc;
+        }
+
         void run(){
             try {
                 writer = new PrintWriter(filename, "UTF-8");
@@ -168,6 +189,9 @@ public class Main {
 
             write("static boolean ready;");
             write("static boolean maxT;");
+            write("static MapLocation ans;");
+            write("static MapLocation myLoc;");
+            write("static PaintType p;");
 
 
             /* ================================== CHECK PATTERN =============================== */
@@ -178,7 +202,7 @@ public class Main {
             write("ready = rc.isActionReady() && rc.getPaint() > 10;");
             write("maxT = Util.towerMax();");
             write("");
-            write("MapLocation myLoc = rc.getLocation();");
+            write("myLoc = rc.getLocation();");
             for (int i = 0; i < ruinLocs.size(); ++i){
                 write(ruinLocs.get(i).getName() + " = myLoc.translate(" + ruinLocs.get(i).dx + "," + ruinLocs.get(i).dy + ");");
                 write("if (rc.canSenseLocation(" + ruinLocs.get(i).getName() + ")) " + ruinLocs.get(i).getMapInfoName() + " = " + "rc.senseMapInfo(" + ruinLocs.get(i).getName() + ");");
@@ -186,17 +210,33 @@ public class Main {
 
             write("");
 
-            write("int dx = myLoc.x%5, dy = myLoc.y%5;");
-            write("int dencode = dx*5 + dy;");
+            write("int dx = myLoc.x%10, dy = myLoc.y%10;");
+            write("int dencode = dx*10 + dy;");
+            write("ans = null;");
 
             write("switch(dencode){");
             ++tabs;
 
-            for (int i = 0; i < 25; ++i){
+            Collections.sort(ruinLocs);
+
+            ArrayList<Integer> methods = new ArrayList<>();
+
+            for (int i = 0; i < 100; ++i){
                 write("case " + i  + ":");
                 ++tabs;
+                Main.dx = i / 10;
+                Main.dy = i % 10;
+                for (int x = 0; x < ruinLocs.size(); ++x){
+                    if (ruinLocs.get(x).isCenter() && ruinLocs.get(x).dist(0,0) <= 8){
+                        //write("checkCenterAt(myLoc.translate(" + ruinLocs.get(x).dx + "," + ruinLocs.get(x).dy + ");");
+                        write("checkCenterAt" + i + "x" + x + "();");
+                        write("if (ans != null) return ans;");
+                        methods.add(x*100+i);
+                    }
+                }
+                write("break;");
 
-                write("return process" + i + "();");
+                //write("return process" + i + "();");
                 --tabs;
             }
             --tabs;
@@ -207,12 +247,58 @@ public class Main {
             write("");
             write("");
 
+            /*================================= CENTERS =================================*/
 
-             /*================================= CASES =============*/
+            for (int z = 0; z < methods.size(); ++z){
+                int code = methods.get(z);
+                int i = code %100;
+                Main.dx = i / 10;
+                Main.dy = i % 10;
+                int x = code /100;
+                CustomLoc center = ruinLocs.get(x);
+                write("static void checkCenterAt" + i + "x" + x + "() throws GameActionException {" + " // (" + center.dx + "," + center.dy + ")");
+                ++tabs;
+                write ("MapLocation center = myLoc.translate(" + center.dx + "," + center.dy + ");");
+                write ("if (Map.forbiddenCenter(center)) return;");
 
-            for (int i = 0; i < 25; ++i) {
-                Main.dx = i / 5;
-                Main.dy = i % 5;
+                for (int j = ruinLocs.size()-1; j >= 0; --j){
+                    CustomLoc cl = ruinLocs.get(j);
+                    if (cl.dist(center.dx, center.dy) > 8) continue;
+                    write("if ("  + cl.getMapInfoName() + ".isWall() || " + cl.getMapInfoName() + ".hasRuin()){ // (" + cl.dx + "," + cl.dy + ")");
+                    ++tabs;
+                    write("ans = null;");
+                    write("Map.markObstructed(" + cl.getName() + ");");
+                    write("return;");
+                    --tabs;
+                    write("}");
+                    write("p = " + cl.getMapInfoName() + ".getPaint();");
+                    write("if ( Map.isNearRuin("  + cl.getName() + ") && !maxT || p.isEnemy()){");
+                    ++tabs;
+                    write("Map.markCenterNearRuins(" + cl.getName() + ");");
+
+                    write("ans = null;");
+                    write("return;");
+                    --tabs;
+                    write("}");
+                    CustomLoc bc = getBestCustomLoc(cl, center);
+                    write("if (p != PaintType." + getPaintType(cl.getPaintBit()) + ") ans = " + bc.getName() + "; // (" + cl.dx + "," + cl.dy + ")");
+                    //++tabs;
+                    //write("ans = " + bc.getName() + "; // (" + bc.dx + "," + bc.dy + ")");
+                    //--tabs;
+                    //write("}");
+                }
+                --tabs;
+                write("}");
+                write("");
+            }
+
+
+
+             /*================================= CASES =================================*/
+
+            /*for (int i = 0; i < 100; ++i) {
+                Main.dx = i / 10;
+                Main.dy = i % 10;
                 Collections.sort(ruinLocs);
 
                 write("static MapLocation process" + i + "() throws GameActionException {" + " // (" + Main.dx + "," + Main.dy + ")");
@@ -227,20 +313,17 @@ public class Main {
                     ++tabs;
 
                     write("PaintType p = " + ruinLocs.get(x).getMapInfoName() + ".getPaint();");
-                    write("if (p.isEnemy() || p != PaintType." + getPaintType(ruinLocs.get(x).getPaintBit()) + "){");
+                    write("if (!p.isEnemy() && p != PaintType." + getPaintType(ruinLocs.get(x).getPaintBit()) + "){");
                     ++tabs;
-                    write("if (ans == null) ans = " + ruinLocs.get(x).getName() + ";");
-                    if (ruinLocs.get(x).isOtherQuadrant()){
-                        write("else return ans;");
-                    }
                     if (ruinLocs.get(x).dist(0, 0) <= ATTACK_RANGE_SQ && !ruinLocs.get(x).isOtherQuadrant()) {
                         write("if (ready){ ");
                         ++tabs;
-                        write("rc.attack(" + ruinLocs.get(x).getName() + ", " + (ruinLocs.get(x).getPaintBit() > 0 ? "true" : "false" )+ ");");
-                        write("ready = false;");
+                        write("rc.attack(" + ruinLocs.get(x).getName() + ", " + (ruinLocs.get(x).getPaintBit()  ? "true" : "false" )+ ");");
+                        //write("ready = false;");
                         --tabs;
                         write("}");
                     }
+                    write("return " + ruinLocs.get(x).getName() + ";");
 
                     --tabs;
                     write("}");
@@ -257,7 +340,7 @@ public class Main {
                 write("");
 
 
-            }
+            }*/
 
             writer.close();
 
