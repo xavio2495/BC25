@@ -146,6 +146,7 @@ public class Soldier extends Unit {
     }
 
     boolean shouldRecover(){
+        if (rc.getRoundNum() > Constants.NO_HEAL_ROUND) return false;
         return ((closestRuin == null || rc.getLocation().distanceSquaredTo(closestRuin) > 2 ||  Util.towerMax()) && rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER);
     }
 

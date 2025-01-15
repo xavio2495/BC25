@@ -24,6 +24,7 @@ public class Splasher extends Unit {
     }
 
     boolean shouldRecover() {
+        if (rc.getRoundNum() > Constants.NO_HEAL_ROUND) return false;
         return (rc.getPaint() < Constants.CRITICAL_PAINT_SPLASHER);
     }
 
