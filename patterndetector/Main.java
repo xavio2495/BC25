@@ -3,6 +3,8 @@ package patterndetector;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
 
@@ -13,7 +15,7 @@ public class Main {
     static final String filename = "PatternDetector.txt";
 
 
-    static class CustomLoc{
+    static class CustomLoc implements Comparable<CustomLoc> {
         int dx, dy;
         int index;
         static final String varName = "l";
@@ -36,6 +38,11 @@ public class Main {
             int ddx = x - dx, ddy = y - dy;
             return ddx*ddx + ddy*ddy;
         }
+
+        public int compareTo(CustomLoc c){
+            return Integer.compare(-dist(0, 0), -c.dist(0, 0));
+        }
+
     }
 
     static class PatternDetector{
@@ -324,6 +331,11 @@ public class Main {
 
             /* =============================== DRAW ========================================*/
 
+            ArrayList<CustomLoc> newRuinLocs = new ArrayList<>(Arrays.asList(ruinLocs));
+
+            Collections.sort(newRuinLocs);
+
+
             for(int t = 0; t < 3; ++t) {
                 write("");
                 write("");
@@ -373,18 +385,18 @@ public class Main {
                     ++tabs;
 
                     for (int j = 0; j < 24; ++j) {
-                        int ind = ruinLocs[j].index;
+                        int ind = newRuinLocs.get(j).index;
                         if (((attack >>> ind) & 1) == 0) {
                             continue;
                         }
 
 
-                        write("if(" + ruinLocs[j].getMapInfoName() + ".getPaint() != PaintType." + getPaintType((OgCodes[t] >>> ruinLocs[j].index) & 1) + ") {");
+                        write("if(" +  newRuinLocs.get(j).getMapInfoName() + ".getPaint() != PaintType." + getPaintType((OgCodes[t] >>>  newRuinLocs.get(j).index) & 1) + ") {");
                         ++tabs;
                         //write("case EMPTY:");
                         //++tabs;
 
-                        write("rc.attack(" + ruinLocs[j].getName() + ", " + (((OgCodes[t] >>> ruinLocs[j].index) & 1) > 0) + ");");
+                        write("rc.attack(" +  newRuinLocs.get(j).getName() + ", " + (((OgCodes[t] >>>  newRuinLocs.get(j).index) & 1) > 0) + ");");
                         write("return;");
                         //--tabs;
                         --tabs;

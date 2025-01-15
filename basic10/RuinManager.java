@@ -5,7 +5,7 @@ import battlecode.common.*;
 public class RuinManager {
 
     static int getType(int typeCode) {
-        return switch ((typeCode&15)) {
+        return switch ((typeCode & 15)) {
             case 1, 9 -> PAINT;
             case 2, 10 -> MONEY;
             case 4, 12 -> DEFENSE;
@@ -14524,8 +14524,6 @@ public class RuinManager {
 
 
     static void drawPattern (MapLocation ruinLoc, int pattern) throws GameActionException {
-
-
         l0 = ruinLoc.translate(-2,-2);
         if (rc.canSenseLocation(l0)) m0 = rc.senseMapInfo(l0);
         l1 = ruinLoc.translate(-2,-1);
@@ -14574,7 +14572,6 @@ public class RuinManager {
         if (rc.canSenseLocation(l23)) m23 = rc.senseMapInfo(l23);
         l24 = ruinLoc.translate(2,2);
         if (rc.canSenseLocation(l24)) m24 = rc.senseMapInfo(l24);
-
         switch (pattern) {
             case PAINT:
                 drawPatternPaint(ruinLoc);
@@ -14611,12 +14608,12 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 break;
@@ -14629,12 +14626,12 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -14647,20 +14644,20 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -14669,20 +14666,20 @@ public class RuinManager {
                 }
                 break;
             case 5:
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -14691,20 +14688,20 @@ public class RuinManager {
                 }
                 break;
             case 6:
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 break;
@@ -14735,12 +14732,16 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
+                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l5, false);
+                    return;
+                }
                 if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l2, false);
                     return;
                 }
-                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l5, false);
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -14749,10 +14750,6 @@ public class RuinManager {
                 }
                 if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l7, false);
-                    return;
-                }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
                     return;
                 }
                 break;
@@ -14765,10 +14762,6 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
@@ -14777,16 +14770,20 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
+                    return;
+                }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -14799,74 +14796,74 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
+                    return;
+                }
                 if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
-                    return;
-                }
-                break;
-            case 14:
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
                     return;
                 }
                 if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l2, false);
                     return;
                 }
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
-                    return;
-                }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                break;
+            case 14:
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
+                    return;
+                }
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -14875,50 +14872,50 @@ public class RuinManager {
                 }
                 break;
             case 15:
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l14, false);
                     return;
                 }
-                break;
-            case 16:
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                break;
+            case 16:
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
                     return;
                 }
                 break;
@@ -14949,20 +14946,20 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l10, false);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -14979,16 +14976,24 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -14999,16 +15004,8 @@ public class RuinManager {
                     rc.attack(l7, false);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
-                    return;
-                }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
                     return;
                 }
                 break;
@@ -15017,40 +15014,44 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -15059,10 +15060,6 @@ public class RuinManager {
                 }
                 if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l13, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
                     return;
                 }
                 break;
@@ -15071,44 +15068,48 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
-                    return;
-                }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
                     return;
                 }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
+                    return;
+                }
                 if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l10, false);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -15117,10 +15118,6 @@ public class RuinManager {
                 }
                 if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
                     return;
                 }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -15133,36 +15130,44 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -15173,94 +15178,86 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
                 break;
             case 24:
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
                     return;
                 }
-                break;
-            case 25:
                 if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l2, false);
-                    return;
-                }
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l14, false);
                     return;
                 }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
                 break;
-            case 26:
+            case 25:
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
+                    return;
+                }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                break;
+            case 26:
                 if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l4, true);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -15281,16 +15278,16 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l10, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 break;
@@ -15307,28 +15304,28 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l10, false);
                     return;
                 }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
                     return;
                 }
                 break;
@@ -15337,52 +15334,52 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l10, false);
                     return;
                 }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
                     return;
                 }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
                     return;
                 }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
@@ -15395,10 +15392,6 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
@@ -15407,24 +15400,44 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -15435,24 +15448,8 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
                     return;
                 }
                 break;
@@ -15461,118 +15458,68 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
-                    return;
-                }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
                     return;
                 }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
-                break;
-            case 32:
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
                     return;
                 }
                 if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l2, false);
                     return;
                 }
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
                     return;
                 }
-                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l5, false);
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -15583,20 +15530,30 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                break;
+            case 32:
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
+                    return;
+                }
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
+                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l5, false);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -15607,96 +15564,136 @@ public class RuinManager {
                     rc.attack(l23, false);
                     return;
                 }
-                break;
-            case 33:
                 if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l2, false);
                     return;
                 }
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
                     return;
                 }
                 if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
                     return;
                 }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
+                break;
+            case 33:
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
                     return;
                 }
                 if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l24, true);
                     return;
                 }
-                break;
-            case 34:
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
                     return;
                 }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l14, false);
                     return;
                 }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
                 if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l18, true);
                     return;
                 }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
+                    return;
+                }
+                break;
+            case 34:
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
+                    return;
+                }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
                     return;
                 }
                 break;
@@ -15705,20 +15702,20 @@ public class RuinManager {
                     rc.attack(l4, true);
                     return;
                 }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l14, false);
                     return;
                 }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
                     return;
                 }
                 break;
@@ -15727,8 +15724,16 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
+                    return;
+                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -15737,14 +15742,6 @@ public class RuinManager {
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
                     return;
                 }
                 break;
@@ -15753,6 +15750,10 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
+                    return;
+                }
                 if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l1, false);
                     return;
@@ -15761,32 +15762,28 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l10, false);
                     return;
                 }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
                     return;
                 }
                 break;
@@ -15795,28 +15792,48 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l10, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -15827,28 +15844,8 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
                     return;
                 }
                 break;
@@ -15857,12 +15854,12 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -15873,20 +15870,52 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -15897,40 +15926,8 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
                     return;
                 }
                 break;
@@ -15939,136 +15936,86 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
-                    return;
-                }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
-                    return;
-                }
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
-                    return;
-                }
                 if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l4, true);
-                    return;
-                }
-                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l5, false);
-                    return;
-                }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
-                    return;
-                }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
                     return;
                 }
                 if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l20, true);
                     return;
                 }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
                 if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l24, true);
                     return;
                 }
-                break;
-            case 41:
                 if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l1, false);
-                    return;
-                }
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
-                    return;
-                }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
+                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l5, false);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l10, false);
                     return;
                 }
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
                     return;
@@ -16077,20 +16024,30 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                break;
+            case 41:
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
+                    return;
+                }
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -16101,42 +16058,44 @@ public class RuinManager {
                     rc.attack(l21, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
-                    return;
-                }
-                break;
-            case 42:
                 if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l2, false);
                     return;
                 }
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -16147,62 +16106,88 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
+                break;
+            case 42:
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
                     return;
                 }
                 if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l24, true);
                     return;
                 }
-                break;
-            case 43:
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l4, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
                     return;
                 }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l14, false);
                     return;
                 }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
                 if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
+                    return;
+                }
+                break;
+            case 43:
+                if(m4.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l4, true);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -16213,8 +16198,20 @@ public class RuinManager {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
                     return;
                 }
                 break;
@@ -16223,84 +16220,84 @@ public class RuinManager {
                     rc.attack(l4, true);
                     return;
                 }
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
                     return;
                 }
                 break;
             case 45:
-                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l5, false);
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
+                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l5, false);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
                     return;
                 }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
+                    return;
+                }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
                     return;
                 }
+                break;
+            case 46:
                 if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l20, true);
                     return;
                 }
-                break;
-            case 46:
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
                     return;
                 }
                 break;
@@ -16309,56 +16306,60 @@ public class RuinManager {
                     rc.attack(l0, true);
                     return;
                 }
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
+                    return;
+                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
-                    return;
-                }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
                     return;
                 }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
                     return;
                 }
                 if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l22, false);
                     return;
                 }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
+                    return;
+                }
                 break;
             case 48:
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
+                    return;
+                }
                 if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l1, false);
                     return;
@@ -16367,20 +16368,48 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -16391,144 +16420,78 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
-                    return;
-                }
+                break;
+            case 49:
                 if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l20, true);
                     return;
                 }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
-                break;
-            case 49:
-                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l2, false);
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l2, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l10, false);
                     return;
                 }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
                 if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l14, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
                 if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l22, false);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
-                    return;
-                }
-                break;
-            case 50:
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -16539,24 +16502,26 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                break;
+            case 50:
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -16567,16 +16532,48 @@ public class RuinManager {
                     rc.attack(l21, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
@@ -16585,78 +16582,62 @@ public class RuinManager {
                     rc.attack(l4, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
                     return;
                 }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
                     return;
                 }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
             case 52:
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -16667,14 +16648,38 @@ public class RuinManager {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
             case 53:
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -16683,114 +16688,138 @@ public class RuinManager {
                 }
                 if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
                     return;
                 }
                 break;
             case 54:
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
                     return;
                 }
                 break;
             case 55:
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
                     return;
                 }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
                     return;
                 }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
+                    return;
+                }
                 if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l22, false);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
                     return;
                 }
                 break;
             case 56:
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
+                    return;
+                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
-                    return;
-                }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
                     return;
                 }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
                     return;
                 }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
+                    return;
+                }
                 if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l22, false);
                     return;
                 }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
             case 57:
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -16801,52 +16830,60 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
                     return;
                 }
                 break;
             case 58:
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l10, false);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
                 if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l7, false);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l10, false);
-                    return;
-                }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
                     return;
@@ -16855,56 +16892,52 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
                     return;
                 }
                 break;
             case 59:
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
                     return;
@@ -16913,68 +16946,20 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
                     return;
                 }
                 break;
             case 60:
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
                     return;
                 }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
                     return;
@@ -16983,52 +16968,64 @@ public class RuinManager {
                     rc.attack(l21, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
             case 61:
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
                     return;
                 }
                 break;
             case 62:
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -17039,36 +17036,48 @@ public class RuinManager {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
                     return;
                 }
                 break;
             case 64:
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l20, true);
                     return;
                 }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
                     return;
                 }
                 break;
             case 65:
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
                 if(m10.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l10, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
                     return;
                 }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -17077,116 +17086,92 @@ public class RuinManager {
                 }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
                     return;
                 }
                 break;
             case 66:
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
                     return;
                 }
                 break;
             case 67:
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
+                    return;
+                }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
-                    return;
-                }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
                     return;
                 }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
             case 68:
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -17197,52 +17182,64 @@ public class RuinManager {
                     rc.attack(l21, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
                     return;
                 }
-                break;
-            case 69:
-                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l14, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
                     return;
                 }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                break;
+            case 69:
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l14, false);
                     return;
                 }
                 if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l22, false);
                     return;
                 }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
             case 70:
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -17253,18 +17250,18 @@ public class RuinManager {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
                     return;
                 }
                 break;
             case 74:
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
                 if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l20, true);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -17277,90 +17274,90 @@ public class RuinManager {
                 }
                 break;
             case 75:
+                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l20, true);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
                     return;
                 }
+                break;
+            case 76:
                 if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l20, true);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
                     return;
                 }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                break;
-            case 76:
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
+                    return;
+                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l20, true);
+                break;
+            case 77:
+                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l24, true);
                     return;
                 }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
                     return;
                 }
-                break;
-            case 77:
                 if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l18, true);
                     return;
                 }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
+                break;
+            case 78:
                 if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l24, true);
                     return;
                 }
-                break;
-            case 78:
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l22, false);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l24, true);
+                if(m22.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l22, false);
                     return;
                 }
                 break;
@@ -17387,12 +17384,12 @@ public class RuinManager {
                     rc.attack(l1, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 break;
@@ -17405,12 +17402,12 @@ public class RuinManager {
                     rc.attack(l1, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -17423,20 +17420,20 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -17445,20 +17442,20 @@ public class RuinManager {
                 }
                 break;
             case 5:
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -17467,20 +17464,20 @@ public class RuinManager {
                 }
                 break;
             case 6:
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 break;
@@ -17511,12 +17508,16 @@ public class RuinManager {
                     rc.attack(l1, true);
                     return;
                 }
+                if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l5, true);
+                    return;
+                }
                 if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l2, true);
                     return;
                 }
-                if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l5, true);
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -17525,10 +17526,6 @@ public class RuinManager {
                 }
                 if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l7, false);
-                    return;
-                }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
                     return;
                 }
                 break;
@@ -17541,10 +17538,6 @@ public class RuinManager {
                     rc.attack(l1, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
@@ -17553,16 +17546,20 @@ public class RuinManager {
                     rc.attack(l5, true);
                     return;
                 }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -17575,74 +17572,74 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
                 if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l1, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
-                    return;
-                }
-                break;
-            case 14:
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
                     return;
                 }
                 if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l2, true);
                     return;
                 }
-                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l3, true);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                break;
+            case 14:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l3, true);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -17651,50 +17648,50 @@ public class RuinManager {
                 }
                 break;
             case 15:
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l14, true);
                     return;
                 }
-                break;
-            case 16:
-                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l3, true);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                break;
+            case 16:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l3, true);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
                     return;
                 }
                 break;
@@ -17725,20 +17722,20 @@ public class RuinManager {
                     rc.attack(l1, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -17755,16 +17752,24 @@ public class RuinManager {
                     rc.attack(l1, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -17775,16 +17780,8 @@ public class RuinManager {
                     rc.attack(l7, false);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
                     return;
                 }
                 break;
@@ -17793,40 +17790,44 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -17835,10 +17836,6 @@ public class RuinManager {
                 }
                 if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l13, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
                     return;
                 }
                 break;
@@ -17847,44 +17844,48 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
-                    return;
-                }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
                     return;
                 }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -17893,10 +17894,6 @@ public class RuinManager {
                 }
                 if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
                     return;
                 }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -17909,36 +17906,44 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
+                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l9, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l9, true);
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -17949,94 +17954,86 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
                 break;
             case 24:
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l19, true);
                     return;
                 }
-                break;
-            case 25:
                 if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l2, true);
-                    return;
-                }
-                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l3, true);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
-                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l9, true);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l14, true);
                     return;
                 }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
                 break;
-            case 26:
+            case 25:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
                 }
+                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l9, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                break;
+            case 26:
                 if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l4, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l3, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -18057,16 +18054,16 @@ public class RuinManager {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 break;
@@ -18083,28 +18080,28 @@ public class RuinManager {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
                     return;
                 }
                 break;
@@ -18113,52 +18110,52 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
                     return;
                 }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
                     return;
                 }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
@@ -18171,10 +18168,6 @@ public class RuinManager {
                     rc.attack(l1, true);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
@@ -18183,24 +18176,44 @@ public class RuinManager {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l9, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l9, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -18211,24 +18224,8 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
                     return;
                 }
                 break;
@@ -18237,118 +18234,68 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
-                    return;
-                }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l15, true);
                     return;
                 }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l19, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                break;
-            case 32:
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
                     return;
                 }
                 if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l2, true);
                     return;
                 }
-                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l3, true);
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
                     return;
                 }
-                if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l5, true);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l9, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -18359,20 +18306,30 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                break;
+            case 32:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l3, true);
+                    return;
+                }
+                if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l5, true);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l9, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -18383,96 +18340,136 @@ public class RuinManager {
                     rc.attack(l23, true);
                     return;
                 }
-                break;
-            case 33:
                 if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l2, true);
                     return;
                 }
-                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l3, true);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l9, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
                     return;
                 }
                 if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
                     return;
                 }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l19, true);
+                break;
+            case 33:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
                 if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l24, false);
                     return;
                 }
-                break;
-            case 34:
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
                     return;
                 }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
+                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l19, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l14, true);
                     return;
                 }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
                 if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l18, true);
                     return;
                 }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
+                    return;
+                }
+                break;
+            case 34:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l3, true);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l9, true);
+                    return;
+                }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l19, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
                     return;
                 }
                 break;
@@ -18481,20 +18478,20 @@ public class RuinManager {
                     rc.attack(l4, false);
                     return;
                 }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l19, true);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l14, true);
                     return;
                 }
-                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l19, true);
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
                     return;
                 }
                 break;
@@ -18503,8 +18500,16 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -18513,14 +18518,6 @@ public class RuinManager {
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
                     return;
                 }
                 break;
@@ -18529,6 +18526,10 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
                 if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l1, true);
                     return;
@@ -18537,32 +18538,28 @@ public class RuinManager {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
                     return;
                 }
                 break;
@@ -18571,28 +18568,48 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -18603,28 +18620,8 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
                     return;
                 }
                 break;
@@ -18633,12 +18630,12 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -18649,20 +18646,52 @@ public class RuinManager {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l23, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -18673,40 +18702,8 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l23, true);
                     return;
                 }
                 break;
@@ -18715,136 +18712,86 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l1, true);
-                    return;
-                }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
-                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l3, true);
-                    return;
-                }
                 if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l4, false);
-                    return;
-                }
-                if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l5, true);
-                    return;
-                }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
-                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l9, true);
-                    return;
-                }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l19, true);
                     return;
                 }
                 if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l20, false);
                     return;
                 }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l23, true);
-                    return;
-                }
                 if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l24, false);
                     return;
                 }
-                break;
-            case 41:
                 if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l1, true);
-                    return;
-                }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
+                if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l5, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l19, true);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l23, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
                     return;
@@ -18853,20 +18800,30 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                break;
+            case 41:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
+                if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l1, true);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l3, true);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l9, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -18877,42 +18834,44 @@ public class RuinManager {
                     rc.attack(l21, true);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
-                    return;
-                }
-                break;
-            case 42:
                 if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l2, true);
                     return;
                 }
-                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l3, true);
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l9, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -18923,62 +18882,88 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l19, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l23, true);
+                break;
+            case 42:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
                 if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l24, false);
                     return;
                 }
-                break;
-            case 43:
                 if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l3, true);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
                     return;
                 }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
+                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l19, true);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l23, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l14, true);
                     return;
                 }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
                 if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
+                    return;
+                }
+                break;
+            case 43:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l3, true);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l9, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -18989,8 +18974,20 @@ public class RuinManager {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
                     return;
                 }
                 break;
@@ -18999,84 +18996,84 @@ public class RuinManager {
                     rc.attack(l4, false);
                     return;
                 }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l19, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
                     return;
                 }
                 break;
             case 45:
-                if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l5, true);
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l5, true);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l15, true);
                     return;
                 }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
                     return;
                 }
+                break;
+            case 46:
                 if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l20, false);
                     return;
                 }
-                break;
-            case 46:
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
                     return;
                 }
                 break;
@@ -19085,56 +19082,60 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
-                    return;
-                }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l15, true);
                     return;
                 }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
                 if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l21, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
                 if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l22, true);
                     return;
                 }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
+                    return;
+                }
                 break;
             case 48:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
                 if(m1.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l1, true);
                     return;
@@ -19143,20 +19144,48 @@ public class RuinManager {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
+                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l19, true);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l23, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -19167,144 +19196,78 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l19, true);
-                    return;
-                }
+                break;
+            case 49:
                 if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l20, false);
                     return;
                 }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l23, true);
-                    return;
-                }
-                break;
-            case 49:
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l19, true);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l23, true);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l14, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l19, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
-                    return;
-                }
                 if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l23, true);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
-                    return;
-                }
-                break;
-            case 50:
-                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l3, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l9, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -19315,24 +19278,26 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                break;
+            case 50:
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l3, true);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l9, true);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -19343,16 +19308,48 @@ public class RuinManager {
                     rc.attack(l21, true);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
@@ -19361,78 +19358,62 @@ public class RuinManager {
                     rc.attack(l4, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l7, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
                     return;
                 }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l19, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
                     return;
                 }
                 if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l7, false);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
             case 52:
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -19443,14 +19424,38 @@ public class RuinManager {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
             case 53:
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l19, true);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -19459,114 +19464,138 @@ public class RuinManager {
                 }
                 if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l19, true);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
                     return;
                 }
                 break;
             case 54:
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l15, true);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
                 if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l21, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
                 break;
             case 55:
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l15, true);
                     return;
                 }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
                 if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l21, true);
                     return;
                 }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
                 if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l22, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
                     return;
                 }
                 break;
             case 56:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
                 if(m5.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l5, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l11, false);
-                    return;
-                }
                 if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
                     return;
                 }
                 if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l21, true);
                     return;
                 }
+                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l23, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
                 if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l22, true);
                     return;
                 }
-                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l23, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l11, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
             case 57:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l23, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -19577,52 +19606,60 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l23, true);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
                     return;
                 }
                 break;
             case 58:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l19, true);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l23, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
                 if(m7.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l7, false);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
                     return;
@@ -19631,56 +19668,52 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l19, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l23, true);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
                     return;
                 }
                 break;
             case 59:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l19, true);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l23, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
                     return;
@@ -19689,68 +19722,20 @@ public class RuinManager {
                     rc.attack(l13, false);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l19, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l23, true);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
                     return;
                 }
                 break;
             case 60:
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l9, true);
                     return;
                 }
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l19, true);
                     return;
@@ -19759,52 +19744,64 @@ public class RuinManager {
                     rc.attack(l21, true);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
             case 61:
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l19, true);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
                     return;
                 }
                 break;
             case 62:
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -19815,36 +19812,48 @@ public class RuinManager {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
                     return;
                 }
                 break;
             case 64:
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l20, false);
                     return;
                 }
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
+                    return;
+                }
                 if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l21, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
                     return;
                 }
                 break;
             case 65:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
                     return;
                 }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -19853,116 +19862,92 @@ public class RuinManager {
                 }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
                     return;
                 }
                 break;
             case 66:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l23, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
                 if(m11.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l11, false);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l23, true);
                     return;
                 }
                 break;
             case 67:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
                 if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l15, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l19, true);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
                 if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l21, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
                     return;
                 }
                 if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
             case 68:
-                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l13, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l17, false);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -19973,52 +19958,64 @@ public class RuinManager {
                     rc.attack(l21, true);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
                     return;
                 }
-                break;
-            case 69:
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l13, false);
                     return;
                 }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                break;
+            case 69:
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l19, true);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l23, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
                     return;
                 }
                 if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l22, true);
                     return;
                 }
-                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l23, true);
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l17, false);
                     return;
                 }
                 break;
             case 70:
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20029,18 +20026,18 @@ public class RuinManager {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
                     return;
                 }
                 break;
             case 74:
-                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l15, true);
-                    return;
-                }
                 if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l20, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l15, true);
                     return;
                 }
                 if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20053,90 +20050,90 @@ public class RuinManager {
                 }
                 break;
             case 75:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l21, true);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l23, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
                     return;
                 }
+                break;
+            case 76:
                 if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l20, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l21, true);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l23, true);
                     return;
                 }
-                break;
-            case 76:
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
                 if(m17.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l17, false);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
+                break;
+            case 77:
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l21, true);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
                     return;
                 }
-                break;
-            case 77:
                 if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l18, true);
                     return;
                 }
-                if(m21.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l21, true);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l23, true);
-                    return;
-                }
+                break;
+            case 78:
                 if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l24, false);
                     return;
                 }
-                break;
-            case 78:
                 if(m19.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l19, true);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l23, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
                     return;
                 }
                 break;
@@ -20163,12 +20160,12 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 break;
@@ -20181,12 +20178,12 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20199,20 +20196,20 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20221,20 +20218,20 @@ public class RuinManager {
                 }
                 break;
             case 5:
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20243,20 +20240,20 @@ public class RuinManager {
                 }
                 break;
             case 6:
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 break;
@@ -20287,12 +20284,16 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
+                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l5, false);
+                    return;
+                }
                 if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l2, true);
                     return;
                 }
-                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l5, false);
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20301,10 +20302,6 @@ public class RuinManager {
                 }
                 if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l7, true);
-                    return;
-                }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
                     return;
                 }
                 break;
@@ -20317,10 +20314,6 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
@@ -20329,16 +20322,20 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20351,74 +20348,74 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
                 if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
-                    return;
-                }
-                break;
-            case 14:
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
                     return;
                 }
                 if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l2, true);
                     return;
                 }
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
+                    return;
+                }
+                break;
+            case 14:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
                 if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20427,50 +20424,50 @@ public class RuinManager {
                 }
                 break;
             case 15:
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l14, true);
                     return;
                 }
-                break;
-            case 16:
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
+                    return;
+                }
+                break;
+            case 16:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
                     return;
                 }
                 break;
@@ -20501,20 +20498,20 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20531,16 +20528,24 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20551,16 +20556,8 @@ public class RuinManager {
                     rc.attack(l7, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l11, true);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
                     return;
                 }
                 break;
@@ -20569,40 +20566,44 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20611,10 +20612,6 @@ public class RuinManager {
                 }
                 if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l13, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
                     return;
                 }
                 break;
@@ -20623,44 +20620,48 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
-                    return;
-                }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
                     return;
                 }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20669,10 +20670,6 @@ public class RuinManager {
                 }
                 if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l13, true);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
                     return;
                 }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20685,36 +20682,44 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20725,94 +20730,86 @@ public class RuinManager {
                     rc.attack(l13, true);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
                 break;
             case 24:
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
                     return;
                 }
-                break;
-            case 25:
                 if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l2, true);
-                    return;
-                }
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l14, true);
                     return;
                 }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
+                    return;
+                }
                 break;
-            case 26:
+            case 25:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
+                    return;
+                }
+                break;
+            case 26:
                 if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l4, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -20833,16 +20830,16 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 break;
@@ -20859,28 +20856,28 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
-                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l11, true);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l11, true);
                     return;
                 }
                 break;
@@ -20889,52 +20886,52 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
-                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l11, true);
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
                     return;
                 }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
                     return;
                 }
-                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l17, true);
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
+                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l11, true);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l17, true);
                     return;
                 }
                 break;
@@ -20947,10 +20944,6 @@ public class RuinManager {
                     rc.attack(l1, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
@@ -20959,24 +20952,44 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -20987,24 +21000,8 @@ public class RuinManager {
                     rc.attack(l13, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
                     return;
                 }
                 break;
@@ -21013,118 +21010,68 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
-                    return;
-                }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l11, true);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
                     return;
                 }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                break;
-            case 32:
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
                     return;
                 }
                 if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l2, true);
                     return;
                 }
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
                     return;
                 }
-                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l5, false);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -21135,20 +21082,30 @@ public class RuinManager {
                     rc.attack(l13, true);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                break;
+            case 32:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
+                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l5, false);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -21159,96 +21116,136 @@ public class RuinManager {
                     rc.attack(l23, false);
                     return;
                 }
-                break;
-            case 33:
                 if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l2, true);
                     return;
                 }
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l11, true);
                     return;
                 }
                 if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l13, true);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
                     return;
                 }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
+                break;
+            case 33:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
                 if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l24, false);
                     return;
                 }
-                break;
-            case 34:
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
                     return;
                 }
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l14, true);
                     return;
                 }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
                 if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l18, true);
                     return;
                 }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l17, true);
+                    return;
+                }
+                break;
+            case 34:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
+                    return;
+                }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
                     return;
                 }
                 break;
@@ -21257,20 +21254,20 @@ public class RuinManager {
                     rc.attack(l4, false);
                     return;
                 }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l14, true);
                     return;
                 }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
                     return;
                 }
                 break;
@@ -21279,8 +21276,16 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -21289,14 +21294,6 @@ public class RuinManager {
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l11, true);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
                     return;
                 }
                 break;
@@ -21305,6 +21302,10 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
                 if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l1, false);
                     return;
@@ -21313,32 +21314,28 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
-                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l11, true);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
+                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l11, true);
                     return;
                 }
                 break;
@@ -21347,28 +21344,48 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -21379,28 +21396,8 @@ public class RuinManager {
                     rc.attack(l13, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
                     return;
                 }
                 break;
@@ -21409,12 +21406,12 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
                     return;
                 }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -21425,20 +21422,52 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -21449,40 +21478,8 @@ public class RuinManager {
                     rc.attack(l13, true);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
                     return;
                 }
                 break;
@@ -21491,136 +21488,86 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
-                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l1, false);
-                    return;
-                }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
-                    return;
-                }
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
-                    return;
-                }
                 if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l4, false);
-                    return;
-                }
-                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l5, false);
-                    return;
-                }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
-                    return;
-                }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l11, true);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
                     return;
                 }
                 if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l20, false);
                     return;
                 }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
                 if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l24, false);
                     return;
                 }
-                break;
-            case 41:
                 if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l1, false);
-                    return;
-                }
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
                     return;
                 }
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
+                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l5, false);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
+                    return;
+                }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l11, true);
                     return;
@@ -21629,20 +21576,30 @@ public class RuinManager {
                     rc.attack(l13, true);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                break;
+            case 41:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
+                if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l1, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -21653,42 +21610,44 @@ public class RuinManager {
                     rc.attack(l21, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
-                    return;
-                }
-                break;
-            case 42:
                 if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l2, true);
                     return;
                 }
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -21699,62 +21658,88 @@ public class RuinManager {
                     rc.attack(l13, true);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
+                break;
+            case 42:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
                     return;
                 }
                 if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l24, false);
                     return;
                 }
-                break;
-            case 43:
                 if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l3, false);
-                    return;
-                }
-                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l4, false);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
                     return;
                 }
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l14, true);
                     return;
                 }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
                 if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l11, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l17, true);
+                    return;
+                }
+                break;
+            case 43:
+                if(m4.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l4, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -21765,8 +21750,20 @@ public class RuinManager {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
                     return;
                 }
                 break;
@@ -21775,84 +21772,84 @@ public class RuinManager {
                     rc.attack(l4, false);
                     return;
                 }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
                     return;
                 }
                 break;
             case 45:
-                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l5, false);
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l5, false);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
                     return;
                 }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
                     return;
                 }
+                break;
+            case 46:
                 if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l20, false);
                     return;
                 }
-                break;
-            case 46:
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l11, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
                     return;
                 }
                 break;
@@ -21861,56 +21858,60 @@ public class RuinManager {
                     rc.attack(l0, false);
                     return;
                 }
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
-                    return;
-                }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l11, true);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
                     return;
                 }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
                 if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l22, true);
                     return;
                 }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l11, true);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l17, true);
+                    return;
+                }
                 break;
             case 48:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
                 if(m1.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l1, false);
                     return;
@@ -21919,20 +21920,48 @@ public class RuinManager {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
                     return;
                 }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -21943,144 +21972,78 @@ public class RuinManager {
                     rc.attack(l13, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
-                    return;
-                }
+                break;
+            case 49:
                 if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l20, false);
                     return;
                 }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
-                break;
-            case 49:
-                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l2, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l6, true);
-                    return;
-                }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
-                    return;
-                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m2.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l2, true);
                     return;
                 }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
-                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l11, true);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
-                    return;
-                }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l14, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
                 if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
-                    return;
-                }
-                break;
-            case 50:
-                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l3, false);
                     return;
                 }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
-                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l9, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -22091,24 +22054,26 @@ public class RuinManager {
                     rc.attack(l13, true);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                break;
+            case 50:
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
+                if(m3.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l3, false);
+                    return;
+                }
+                if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l9, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -22119,16 +22084,48 @@ public class RuinManager {
                     rc.attack(l21, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l6, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l11, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l17, true);
                     return;
                 }
                 break;
@@ -22137,78 +22134,62 @@ public class RuinManager {
                     rc.attack(l4, false);
                     return;
                 }
-                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l7, true);
-                    return;
-                }
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
                     return;
                 }
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
                     return;
                 }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l7, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l17, true);
                     return;
                 }
                 break;
             case 52:
-                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l8, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
-                    return;
-                }
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -22219,14 +22200,38 @@ public class RuinManager {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l8, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l17, true);
                     return;
                 }
                 break;
             case 53:
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
                     return;
                 }
                 if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -22235,114 +22240,138 @@ public class RuinManager {
                 }
                 if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
                     return;
                 }
                 break;
             case 54:
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
                     return;
                 }
                 break;
             case 55:
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l11, true);
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
                     return;
                 }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
                     return;
                 }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
                     return;
                 }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
                 if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l22, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l11, true);
                     return;
                 }
                 break;
             case 56:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
                 if(m5.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l5, false);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
-                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l11, true);
-                    return;
-                }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l17, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
                     return;
                 }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
                     return;
                 }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
                 if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l22, true);
                     return;
                 }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l11, true);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l17, true);
                     return;
                 }
                 break;
             case 57:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
                 if(m6.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l6, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
                     return;
                 }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -22353,52 +22382,60 @@ public class RuinManager {
                     rc.attack(l13, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
                     return;
                 }
                 break;
             case 58:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l10, true);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
                 if(m7.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l7, true);
                     return;
                 }
-                if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l10, true);
-                    return;
-                }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l11, true);
                     return;
@@ -22407,56 +22444,52 @@ public class RuinManager {
                     rc.attack(l13, true);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
                     return;
                 }
                 break;
             case 59:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
+                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l19, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
                 if(m8.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l8, true);
                     return;
                 }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l11, true);
                     return;
@@ -22465,68 +22498,20 @@ public class RuinManager {
                     rc.attack(l13, true);
                     return;
                 }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l19, false);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
                     return;
                 }
                 break;
             case 60:
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
                 if(m9.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l9, false);
                     return;
                 }
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
                     return;
@@ -22535,52 +22520,64 @@ public class RuinManager {
                     rc.attack(l21, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l17, true);
                     return;
                 }
                 break;
             case 61:
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
-                    return;
-                }
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
                     return;
                 }
                 break;
             case 62:
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -22591,36 +22588,48 @@ public class RuinManager {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
                     return;
                 }
                 break;
             case 64:
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l20, false);
                     return;
                 }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
                     return;
                 }
                 break;
             case 65:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
                 if(m10.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l10, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
                     return;
                 }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
@@ -22629,116 +22638,92 @@ public class RuinManager {
                 }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
                     return;
                 }
                 break;
             case 66:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
                 if(m11.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l11, true);
                     return;
                 }
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
-                    return;
-                }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
                     return;
                 }
                 break;
             case 67:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
+                    return;
+                }
                 if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l15, false);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
-                    return;
-                }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
                     return;
                 }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l17, true);
                     return;
                 }
                 break;
             case 68:
-                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l13, true);
-                    return;
-                }
-                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l16, true);
-                    return;
-                }
-                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l17, true);
-                    return;
-                }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -22749,52 +22734,64 @@ public class RuinManager {
                     rc.attack(l21, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
                     return;
                 }
-                break;
-            case 69:
-                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l14, true);
+                if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l16, true);
+                    return;
+                }
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
+                    return;
+                }
+                if(m13.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l13, true);
                     return;
                 }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
                     return;
                 }
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                break;
+            case 69:
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m14.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l14, true);
                     return;
                 }
                 if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l22, true);
                     return;
                 }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l17, true);
                     return;
                 }
                 break;
             case 70:
-                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l18, true);
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -22805,18 +22802,18 @@ public class RuinManager {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l18, true);
                     return;
                 }
                 break;
             case 74:
-                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l15, false);
-                    return;
-                }
                 if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l20, false);
+                    return;
+                }
+                if(m15.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l15, false);
                     return;
                 }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
@@ -22829,93 +22826,95 @@ public class RuinManager {
                 }
                 break;
             case 75:
+                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l20, false);
+                    return;
+                }
+                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l21, false);
+                    return;
+                }
+                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l23, false);
+                    return;
+                }
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
                 if(m16.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l16, true);
                     return;
                 }
+                break;
+            case 76:
                 if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l20, false);
+                    return;
+                }
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                break;
-            case 76:
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
+                    return;
+                }
                 if(m17.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l17, true);
                     return;
                 }
-                if(m20.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l20, false);
+                break;
+            case 77:
+                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
+                    rc.attack(l24, false);
                     return;
                 }
                 if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l21, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
                     return;
                 }
-                break;
-            case 77:
                 if(m18.getPaint() != PaintType.ALLY_SECONDARY) {
                     rc.attack(l18, true);
                     return;
                 }
-                if(m21.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l21, false);
-                    return;
-                }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
-                if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l23, false);
-                    return;
-                }
+                break;
+            case 78:
                 if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l24, false);
                     return;
                 }
-                break;
-            case 78:
                 if(m19.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l19, false);
                     return;
                 }
-                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
-                    rc.attack(l22, true);
-                    return;
-                }
                 if(m23.getPaint() != PaintType.ALLY_PRIMARY) {
                     rc.attack(l23, false);
                     return;
                 }
-                if(m24.getPaint() != PaintType.ALLY_PRIMARY) {
-                    rc.attack(l24, false);
+                if(m22.getPaint() != PaintType.ALLY_SECONDARY) {
+                    rc.attack(l22, true);
                     return;
                 }
                 break;
         }
     }
+
+
 }

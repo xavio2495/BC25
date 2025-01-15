@@ -26,6 +26,7 @@ public class Soldier extends Unit {
     void startTurn() throws GameActionException {
         Map.fill();
         updateClosestRuin();
+        ResourcePatternManager.attackLoc = null;
     }
 
     void endTurn(){
@@ -45,6 +46,7 @@ public class Soldier extends Unit {
 
     void paintNearby() throws GameActionException {
         if (rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER) return;
+        if (!rc.isActionReady()) return;
         /*MapLocation myLoc = rc.getLocation();
         if (!rc.isActionReady()) return;
         MapInfo[] infos = rc.senseNearbyMapInfos(4);
@@ -57,6 +59,7 @@ public class Soldier extends Unit {
         }*/
         MapLocation myLoc = rc.getLocation();
         tryPaint(myLoc);
+        if (ResourcePatternManager.attackLoc != null) tryPaint(ResourcePatternManager.attackLoc);
         if(tryPaint(myLoc.translate(1,0))) return;
         if(tryPaint(myLoc.translate(0,1))) return;
         if(tryPaint(myLoc.translate(-1,0))) return;
@@ -85,7 +88,7 @@ public class Soldier extends Unit {
     }*/
 
     boolean tryPaint(MapLocation loc) throws GameActionException {
-        if (!rc.onTheMap(loc)) return false;
+        if (!rc.canSenseLocation(loc)) return false;
         MapInfo m = rc.senseMapInfo(loc);
         if (m.isWall() || m.hasRuin()) return false;
         if (!Util.towerMax() && Map.isNearRuin(m.getMapLocation())) return false;
@@ -107,6 +110,7 @@ public class Soldier extends Unit {
         int bestDist = -1;
         for (MapInfo mi : infos){
             if (mi.getPaint() != PaintType.EMPTY) continue;
+            if (Map.isNearRuin(mi.getMapLocation())) continue;
             if (!mi.isPassable()) continue;
             int newD = rc.getLocation().distanceSquaredTo(mi.getMapLocation());
             if (bestDist < 0 || newD < bestDist){

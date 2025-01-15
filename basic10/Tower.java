@@ -9,6 +9,9 @@ public class Tower extends MyRobot {
 
     final int THRESHOLD = 10;
 
+    int[] soldierDirCount = new int[8];
+    double[] dists = new double[8];
+
     static final UnitType[] spawnPlanInitialPaint = {
             UnitType.SOLDIER,
             UnitType.SOLDIER,
@@ -42,6 +45,42 @@ public class Tower extends MyRobot {
         } else {
             spawnPlan = spawnPlanDefault;
         }
+        doDirs();
+    }
+
+    void doDirs(){
+        int dx, dy;
+        MapLocation myLoc = rc.getLocation();
+        dists[Direction.EAST.ordinal()] = W - myLoc.x - 1;;
+        dx = W - myLoc.x - 1;
+        dy = H - myLoc.y - 1;
+        dists[Direction.NORTHEAST.ordinal()] = Math.sqrt(2)*Math.min(dx,dy);
+        dists[Direction.NORTH.ordinal()] = H - myLoc.y - 1;
+        dx = W - myLoc.x - 1;
+        dy = myLoc.y;
+        dists[Direction.SOUTHEAST.ordinal()] = Math.sqrt(2)*Math.min(dx,dy);
+        dists[Direction.WEST.ordinal()] = myLoc.x;;
+        dx = myLoc.x;
+        dy = H - myLoc.y - 1;
+        dists[Direction.NORTHWEST.ordinal()] = Math.sqrt(2)*Math.min(dx,dy);
+        dx = myLoc.x;
+        dy = myLoc.y;
+        dists[Direction.SOUTHWEST.ordinal()] = Math.sqrt(2)*Math.min(dx,dy);
+        dists[Direction.SOUTH.ordinal()] = myLoc.y;
+    }
+
+    Direction getBestDirSoldier(){
+        Direction ans = null;
+        double dAns = -1;
+        for (Direction dir : directions){
+            if (!rc.canBuildRobot(UnitType.SOLDIER, rc.getLocation().add(dir))) continue;
+            double ndAns = dists[dir.ordinal()]/(soldierDirCount[dir.ordinal()]+1);
+            if (ndAns > dAns){
+                dAns = ndAns;
+                ans = dir;
+            }
+        }
+        return ans;
     }
 
     void startTurn() throws GameActionException {
@@ -102,10 +141,16 @@ public class Tower extends MyRobot {
         return rc.getChips() >= UnitType.LEVEL_ONE_PAINT_TOWER.moneyCost + t.moneyCost;
     }
 
-    void spawn(UnitType type, MapLocation target){
+    void spawn(UnitType type, MapLocation target) throws GameActionException {
+        if (type == UnitType.SOLDIER){
+            spawnSoldier();
+            return;
+        }
         MapLocation bestLoc = null;
         int bestDist = -1;
         Direction dir = directions[(int)(Math.random() * 8.0)];
+        //if (type == UnitType.SOLDIER) dir = getBestDirSoldier();
+        if (dir == null) return;
         for (int i = 0; i < 8; ++i){
             MapLocation loc = rc.adjacentLocation(dir);
             if (!rc.canBuildRobot(type, rc.adjacentLocation(dir))) continue;
@@ -123,6 +168,9 @@ public class Tower extends MyRobot {
         try {
             if (bestLoc != null){
                 rc.buildRobot(type, bestLoc);
+                /*if (type == UnitType.SOLDIER){
+                    soldierDirCount[rc.getLocation().directionTo(bestLoc).ordinal()]++;
+                }*/
 
                 spawnPlanPos++;
                 if (spawnPlanPos >= spawnPlan.length) {
@@ -132,6 +180,20 @@ public class Tower extends MyRobot {
             }
         } catch (GameActionException e){
             e.printStackTrace();
+        }
+    }
+
+    void spawnSoldier() throws GameActionException {
+        Direction dir = getBestDirSoldier();
+        if (dir == null) return;
+        if (rc.canBuildRobot(UnitType.SOLDIER, rc.getLocation().add(dir))){
+            rc.buildRobot(UnitType.SOLDIER, rc.getLocation().add(dir));
+            soldierDirCount[dir.ordinal()]++;
+            spawnPlanPos++;
+            if (spawnPlanPos >= spawnPlan.length) {
+                spawnPlanPos = 0;
+                spawnPlan = spawnPlanDefault;
+            }
         }
     }
 

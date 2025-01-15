@@ -46,7 +46,7 @@ public class Main {
         }
 
         public int compareTo(CustomLoc c){
-            return Integer.compare(dist(0, 0), c.dist(0, 0));
+            return Integer.compare(dist(center.dx, center.dy), c.dist(center.dx,center.dy));
         }
 
         boolean getPaintBit(){
@@ -223,6 +223,7 @@ public class Main {
             write("switch(dencode){");
             ++tabs;
 
+            center = new CustomLoc(0,0);
             Collections.sort(ruinLocs);
 
             //ArrayList<Integer> methods = new ArrayList<>();
@@ -252,22 +253,26 @@ public class Main {
             write("");
             write("");
 
+            ArrayList<CustomLoc> newRuins = new ArrayList<>(ruinLocs);
+
             /*================================= CENTERS =================================*/
 
             //for (int z = 0; z < methods.size(); ++z){
-            for (int z = 0; z < ruinLocs.size(); ++z){
+            for (int z = 0; z < newRuins.size(); ++z){
                 //int code = methods.get(z);
                 //int i = code %100;
                 //int x = code /100;
-                center = ruinLocs.get(z);
+                center = newRuins.get(z);
+                Collections.sort(ruinLocs);
                 //Main.DX = (6 - center.dx)%4;
                 //Main.DY = (6 - center.dy)%4;
                 write("static void checkCenterAt" + z + "() throws GameActionException {" + " // (" + center.dx + "," + center.dy + ")");
                 ++tabs;
                 write ("center = myLoc.translate(" + center.dx + "," + center.dy + ");");
+                write ("attackLoc = null;");
                 write ("if (Map.forbiddenCenter(center)) return;");
 
-                for (int j = ruinLocs.size()-1; j >= 0; --j){
+                for (int j = 0; j < ruinLocs.size(); ++j){
                     CustomLoc cl = ruinLocs.get(j);
                     if (cl.dist(center.dx, center.dy) > 8) continue;
                     write("if ("  + cl.getMapInfoName() + ".isWall() || " + cl.getMapInfoName() + ".hasRuin()){ // (" + cl.dx + "," + cl.dy + ")");
@@ -291,7 +296,6 @@ public class Main {
                     ++tabs;
                     write("ans = " + bc.getName() + "; // (" + bc.dx + "," + bc.dy + ")");
                     write("attackLoc = " + cl.getName() + ";");
-                    write("center = " + center.getName() + ";");
                     --tabs;
                     write("}");
                     write("");

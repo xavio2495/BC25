@@ -166,6 +166,7 @@ public class Map {
             default -> 0; //TODO this is alright, right?
         };
         return (code & 12) == 0 && (((code >>> ROUND_RUIN_SHIFT) & 0x7FF) > MyRobot.rc.getRoundNum());
+        //return (((c >>> ROUND_RUIN_SHIFT) & 0x7FF) > MyRobot.rc.getRoundNum());
     }
 
 
@@ -180,7 +181,7 @@ public class Map {
         if (loc.x <= 1 || loc.y <= 1 || loc.x >= MyRobot.W-2 || loc.y >= MyRobot.H-2) return true;
         int c = map[loc.x][loc.y];
         if ((c & 28) > 0) return true;
-        return (((c >>> ROUND_RUIN_SHIFT) & 0x7FF) > MyRobot.rc.getRoundNum());
+        return (c >>> ROUND_RUIN_SHIFT & 0x7FF) > MyRobot.rc.getRoundNum();
     }
 
     static void markObstructed(MapLocation loc){

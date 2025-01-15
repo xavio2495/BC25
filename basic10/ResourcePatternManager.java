@@ -479,418 +479,22 @@ public class ResourcePatternManager {
 
     static void checkCenterAt0() throws GameActionException { // (0,0)
         center = myLoc.translate(0,0);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (m40.isWall() || m40.hasRuin()){ // (0,0)
             ans = null;
             Map.markObstructed(l40);
             return;
         }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+        p = m40.getPaint();
+        if ( Map.isNearRuin(l40) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l40);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l60;
-            center = l40;
-        }
-
-
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l56;
-            center = l40;
-        }
-
-
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l24;
-            center = l40;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l20;
-            center = l40;
-        }
-
-
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l59;
-            center = l40;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l57;
-            center = l40;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l51;
-            center = l40;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l47;
-            center = l40;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l33;
-            center = l40;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l29;
-            center = l40;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l23;
-            center = l40;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l21;
-            center = l40;
-        }
-
-
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
             ans = l40; // (0,0)
-            attackLoc = l58;
-            center = l40;
-        }
-
-
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l40; // (0,0)
-            attackLoc = l42;
-            center = l40;
-        }
-
-
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l40; // (0,0)
-            attackLoc = l38;
-            center = l40;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l40; // (0,0)
-            attackLoc = l22;
-            center = l40;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l40; // (0,0)
-            attackLoc = l50;
-            center = l40;
-        }
-
-
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l40; // (0,0)
-            attackLoc = l48;
-            center = l40;
-        }
-
-
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l40; // (0,0)
-            attackLoc = l32;
-            center = l40;
-        }
-
-
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l40; // (0,0)
-            attackLoc = l30;
-            center = l40;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l40; // (0,0)
-            attackLoc = l49;
-            center = l40;
-        }
-
-
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l40; // (0,0)
-            attackLoc = l41;
-            center = l40;
-        }
-
-
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
-            ans = null;
-            Map.markObstructed(l40);
-            return;
-        }
-        p = m39.getPaint();
-        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l40);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l40; // (0,0)
-            attackLoc = l39;
-            center = l40;
+            attackLoc = l40;
         }
 
 
@@ -908,25 +512,397 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l40; // (0,0)
             attackLoc = l31;
-            center = l40;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
             ans = null;
             Map.markObstructed(l40);
             return;
         }
-        p = m40.getPaint();
-        if ( Map.isNearRuin(l40) && !maxT || p.isEnemy()){
+        p = m39.getPaint();
+        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l40; // (0,0)
+            attackLoc = l39;
+        }
+
+
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l40; // (0,0)
+            attackLoc = l41;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l40; // (0,0)
+            attackLoc = l49;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l40; // (0,0)
+            attackLoc = l30;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l40; // (0,0)
+            attackLoc = l32;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l40; // (0,0)
+            attackLoc = l48;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l40; // (0,0)
+            attackLoc = l50;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l40; // (0,0)
+            attackLoc = l22;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l40; // (0,0)
+            attackLoc = l38;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l40; // (0,0)
+            attackLoc = l42;
+        }
+
+
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l40; // (0,0)
+            attackLoc = l58;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l40);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l40;
-            center = l40;
+            ans = l31; // (-1,0)
+            attackLoc = l21;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l23;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l29;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l33;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l47;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l51;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l57;
+        }
+
+
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l59;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l20;
+        }
+
+
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l32; // (-1,1)
+            attackLoc = l24;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l56;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l40);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l40);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l60;
         }
 
 
@@ -934,421 +910,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt1() throws GameActionException { // (-1,0)
         center = myLoc.translate(-1,0);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l15;
-            center = l31;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l11;
-            center = l31;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l14;
-            center = l31;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l12;
-            center = l31;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l31; // (-1,0)
-            attackLoc = l13;
-            center = l31;
-        }
-
-
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l24;
-            center = l31;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l20;
-            center = l31;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l51;
-            center = l31;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l47;
-            center = l31;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l31; // (-1,0)
-            attackLoc = l33;
-            center = l31;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l31; // (-1,0)
-            attackLoc = l29;
-            center = l31;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l31; // (-1,0)
-            attackLoc = l23;
-            center = l31;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l31; // (-1,0)
-            attackLoc = l21;
-            center = l31;
-        }
-
-
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l42;
-            center = l31;
-        }
-
-
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l38;
-            center = l31;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l31; // (-1,0)
-            attackLoc = l22;
-            center = l31;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l50;
-            center = l31;
-        }
-
-
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l48;
-            center = l31;
-        }
-
-
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l31; // (-1,0)
-            attackLoc = l32;
-            center = l31;
-        }
-
-
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l31; // (-1,0)
-            attackLoc = l30;
-            center = l31;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l31; // (-1,0)
-            attackLoc = l49;
-            center = l31;
-        }
-
-
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l31; // (-1,0)
-            attackLoc = l41;
-            center = l31;
-        }
-
-
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
-            ans = null;
-            Map.markObstructed(l31);
-            return;
-        }
-        p = m39.getPaint();
-        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l31);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l31; // (-1,0)
-            attackLoc = l39;
-            center = l31;
-        }
-
-
         if (m31.isWall() || m31.hasRuin()){ // (-1,0)
             ans = null;
             Map.markObstructed(l31);
@@ -1363,7 +926,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
             attackLoc = l31;
-            center = l31;
         }
 
 
@@ -1381,7 +943,397 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l31; // (-1,0)
             attackLoc = l40;
-            center = l31;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l31; // (-1,0)
+            attackLoc = l30;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l31; // (-1,0)
+            attackLoc = l32;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l31; // (-1,0)
+            attackLoc = l22;
+        }
+
+
+        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m39.getPaint();
+        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l31; // (-1,0)
+            attackLoc = l39;
+        }
+
+
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l31; // (-1,0)
+            attackLoc = l41;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l31; // (-1,0)
+            attackLoc = l21;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l31; // (-1,0)
+            attackLoc = l23;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l31; // (-1,0)
+            attackLoc = l49;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l31; // (-1,0)
+            attackLoc = l29;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l31; // (-1,0)
+            attackLoc = l33;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l31; // (-1,0)
+            attackLoc = l13;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l48;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l50;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l38;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l42;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l20;
+        }
+
+
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l32; // (-1,1)
+            attackLoc = l24;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l12;
+        }
+
+
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l32; // (-1,1)
+            attackLoc = l14;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l47;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l51;
+        }
+
+
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l11;
+        }
+
+
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+            ans = null;
+            Map.markObstructed(l31);
+            return;
+        }
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l31);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l23; // (-2,1)
+            attackLoc = l15;
         }
 
 
@@ -1389,403 +1341,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt2() throws GameActionException { // (0,-1)
         center = myLoc.translate(0,-1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l55;
-            center = l39;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l19;
-            center = l39;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l46;
-            center = l39;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l28;
-            center = l39;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l39; // (0,-1)
-            attackLoc = l37;
-            center = l39;
-        }
-
-
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l56;
-            center = l39;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l20;
-            center = l39;
-        }
-
-
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l49; // (1,0)
-            attackLoc = l59;
-            center = l39;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l39; // (0,-1)
-            attackLoc = l57;
-            center = l39;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l39; // (0,-1)
-            attackLoc = l47;
-            center = l39;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l39; // (0,-1)
-            attackLoc = l29;
-            center = l39;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l23;
-            center = l39;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l39; // (0,-1)
-            attackLoc = l21;
-            center = l39;
-        }
-
-
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l58;
-            center = l39;
-        }
-
-
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l39; // (0,-1)
-            attackLoc = l38;
-            center = l39;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l22;
-            center = l39;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l50;
-            center = l39;
-        }
-
-
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l39; // (0,-1)
-            attackLoc = l48;
-            center = l39;
-        }
-
-
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l32;
-            center = l39;
-        }
-
-
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l39; // (0,-1)
-            attackLoc = l30;
-            center = l39;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l39; // (0,-1)
-            attackLoc = l49;
-            center = l39;
-        }
-
-
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l39; // (0,-1)
-            attackLoc = l41;
-            center = l39;
-        }
-
-
         if (m39.isWall() || m39.hasRuin()){ // (0,-1)
             ans = null;
             Map.markObstructed(l39);
@@ -1800,25 +1357,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l39; // (0,-1)
             attackLoc = l39;
-            center = l39;
-        }
-
-
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
-            ans = null;
-            Map.markObstructed(l39);
-            return;
-        }
-        p = m31.getPaint();
-        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l39);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l39; // (0,-1)
-            attackLoc = l31;
-            center = l39;
         }
 
 
@@ -1836,7 +1374,397 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l39; // (0,-1)
             attackLoc = l40;
-            center = l39;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l39; // (0,-1)
+            attackLoc = l30;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l39; // (0,-1)
+            attackLoc = l48;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l39; // (0,-1)
+            attackLoc = l38;
+        }
+
+
+        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m31.getPaint();
+        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l39; // (0,-1)
+            attackLoc = l31;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l39; // (0,-1)
+            attackLoc = l49;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l39; // (0,-1)
+            attackLoc = l29;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l39; // (0,-1)
+            attackLoc = l47;
+        }
+
+
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l39; // (0,-1)
+            attackLoc = l41;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l39; // (0,-1)
+            attackLoc = l21;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l39; // (0,-1)
+            attackLoc = l57;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l39; // (0,-1)
+            attackLoc = l37;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l32;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l22;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l50;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l20;
+        }
+
+
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l58;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l28;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l56;
+        }
+
+
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l46;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l23;
+        }
+
+
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l59;
+        }
+
+
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l19;
+        }
+
+
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+            ans = null;
+            Map.markObstructed(l39);
+            return;
+        }
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l39);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l55;
         }
 
 
@@ -1844,385 +1772,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt3() throws GameActionException { // (0,1)
         center = myLoc.translate(0,1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
-            attackLoc = l61;
-            center = l41;
-        }
-
-
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m25.getPaint();
-        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l33; // (-1,2)
-            attackLoc = l25;
-            center = l41;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l52;
-            center = l41;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l34;
-            center = l41;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l41; // (0,1)
-            attackLoc = l43;
-            center = l41;
-        }
-
-
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l60;
-            center = l41;
-        }
-
-
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l24;
-            center = l41;
-        }
-
-
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l41; // (0,1)
-            attackLoc = l59;
-            center = l41;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l49; // (1,0)
-            attackLoc = l57;
-            center = l41;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l41; // (0,1)
-            attackLoc = l51;
-            center = l41;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l41; // (0,1)
-            attackLoc = l33;
-            center = l41;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l41; // (0,1)
-            attackLoc = l23;
-            center = l41;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l21;
-            center = l41;
-        }
-
-
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l58;
-            center = l41;
-        }
-
-
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l41; // (0,1)
-            attackLoc = l42;
-            center = l41;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l22;
-            center = l41;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l41; // (0,1)
-            attackLoc = l50;
-            center = l41;
-        }
-
-
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l48;
-            center = l41;
-        }
-
-
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l41; // (0,1)
-            attackLoc = l32;
-            center = l41;
-        }
-
-
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l30;
-            center = l41;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l41; // (0,1)
-            attackLoc = l49;
-            center = l41;
-        }
-
-
         if (m41.isWall() || m41.hasRuin()){ // (0,1)
             ans = null;
             Map.markObstructed(l41);
@@ -2237,43 +1788,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l41; // (0,1)
             attackLoc = l41;
-            center = l41;
-        }
-
-
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m39.getPaint();
-        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l41; // (0,1)
-            attackLoc = l39;
-            center = l41;
-        }
-
-
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
-            ans = null;
-            Map.markObstructed(l41);
-            return;
-        }
-        p = m31.getPaint();
-        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l41);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l41; // (0,1)
-            attackLoc = l31;
-            center = l41;
         }
 
 
@@ -2291,7 +1805,397 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l41; // (0,1)
             attackLoc = l40;
-            center = l41;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l41; // (0,1)
+            attackLoc = l32;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l41; // (0,1)
+            attackLoc = l50;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l41; // (0,1)
+            attackLoc = l42;
+        }
+
+
+        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m31.getPaint();
+        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l41; // (0,1)
+            attackLoc = l31;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l41; // (0,1)
+            attackLoc = l49;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l41; // (0,1)
+            attackLoc = l33;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l41; // (0,1)
+            attackLoc = l51;
+        }
+
+
+        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m39.getPaint();
+        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l41; // (0,1)
+            attackLoc = l39;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l41; // (0,1)
+            attackLoc = l23;
+        }
+
+
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l41; // (0,1)
+            attackLoc = l59;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l41; // (0,1)
+            attackLoc = l43;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l30;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l48;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l22;
+        }
+
+
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l58;
+        }
+
+
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l32; // (-1,1)
+            attackLoc = l24;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l60;
+        }
+
+
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l32; // (-1,1)
+            attackLoc = l34;
+        }
+
+
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l52;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l21;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l57;
+        }
+
+
+        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m25.getPaint();
+        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l33; // (-1,2)
+            attackLoc = l25;
+        }
+
+
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+            ans = null;
+            Map.markObstructed(l41);
+            return;
+        }
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l41);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l51; // (1,2)
+            attackLoc = l61;
         }
 
 
@@ -2299,367 +2203,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt4() throws GameActionException { // (1,0)
         center = myLoc.translate(1,0);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l59; // (2,1)
-            attackLoc = l69;
-            center = l49;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l57; // (2,-1)
-            attackLoc = l65;
-            center = l49;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l68;
-            center = l49;
-        }
-
-
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l66;
-            center = l49;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l49; // (1,0)
-            attackLoc = l67;
-            center = l49;
-        }
-
-
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l60;
-            center = l49;
-        }
-
-
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l56;
-            center = l49;
-        }
-
-
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l49; // (1,0)
-            attackLoc = l59;
-            center = l49;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l49; // (1,0)
-            attackLoc = l57;
-            center = l49;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l49; // (1,0)
-            attackLoc = l51;
-            center = l49;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l49; // (1,0)
-            attackLoc = l47;
-            center = l49;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l33;
-            center = l49;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l29;
-            center = l49;
-        }
-
-
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l49; // (1,0)
-            attackLoc = l58;
-            center = l49;
-        }
-
-
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l42;
-            center = l49;
-        }
-
-
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l38;
-            center = l49;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l49; // (1,0)
-            attackLoc = l50;
-            center = l49;
-        }
-
-
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l49; // (1,0)
-            attackLoc = l48;
-            center = l49;
-        }
-
-
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l32;
-            center = l49;
-        }
-
-
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l30;
-            center = l49;
-        }
-
-
         if (m49.isWall() || m49.hasRuin()){ // (1,0)
             ans = null;
             Map.markObstructed(l49);
@@ -2674,61 +2219,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l49; // (1,0)
             attackLoc = l49;
-            center = l49;
-        }
-
-
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l49; // (1,0)
-            attackLoc = l41;
-            center = l49;
-        }
-
-
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m39.getPaint();
-        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l49; // (1,0)
-            attackLoc = l39;
-            center = l49;
-        }
-
-
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
-            ans = null;
-            Map.markObstructed(l49);
-            return;
-        }
-        p = m31.getPaint();
-        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l49);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l49; // (1,0)
-            attackLoc = l31;
-            center = l49;
         }
 
 
@@ -2746,7 +2236,397 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l49; // (1,0)
             attackLoc = l40;
-            center = l49;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l49; // (1,0)
+            attackLoc = l50;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l49; // (1,0)
+            attackLoc = l48;
+        }
+
+
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l49; // (1,0)
+            attackLoc = l58;
+        }
+
+
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l49; // (1,0)
+            attackLoc = l41;
+        }
+
+
+        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m39.getPaint();
+        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l49; // (1,0)
+            attackLoc = l39;
+        }
+
+
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l49; // (1,0)
+            attackLoc = l59;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l49; // (1,0)
+            attackLoc = l57;
+        }
+
+
+        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m31.getPaint();
+        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l49; // (1,0)
+            attackLoc = l31;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l49; // (1,0)
+            attackLoc = l51;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l49; // (1,0)
+            attackLoc = l47;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l49; // (1,0)
+            attackLoc = l67;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l32;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l42;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l30;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l60;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l38;
+        }
+
+
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l68;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l56;
+        }
+
+
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l66;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l33;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l29;
+        }
+
+
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l59; // (2,1)
+            attackLoc = l69;
+        }
+
+
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+            ans = null;
+            Map.markObstructed(l49);
+            return;
+        }
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l49);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l57; // (2,-1)
+            attackLoc = l65;
         }
 
 
@@ -2754,349 +2634,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt5() throws GameActionException { // (-1,-1)
         center = myLoc.translate(-1,-1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m10.getPaint();
-        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l10;
-            center = l30;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l19;
-            center = l30;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l11;
-            center = l30;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l38; // (0,-2)
-            attackLoc = l46;
-            center = l30;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l28;
-            center = l30;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l22; // (-2,0)
-            attackLoc = l14;
-            center = l30;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l12;
-            center = l30;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l37;
-            center = l30;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l13;
-            center = l30;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l20;
-            center = l30;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l47;
-            center = l30;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l29;
-            center = l30;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l23;
-            center = l30;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l21;
-            center = l30;
-        }
-
-
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l38;
-            center = l30;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l22;
-            center = l30;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l50;
-            center = l30;
-        }
-
-
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l48;
-            center = l30;
-        }
-
-
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l32;
-            center = l30;
-        }
-
-
         if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l30);
@@ -3111,43 +2650,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l30; // (-1,-1)
             attackLoc = l30;
-            center = l30;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l49;
-            center = l30;
-        }
-
-
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
-            ans = null;
-            Map.markObstructed(l30);
-            return;
-        }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l30);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l41;
-            center = l30;
         }
 
 
@@ -3165,7 +2667,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l30; // (-1,-1)
             attackLoc = l39;
-            center = l30;
         }
 
 
@@ -3183,7 +2684,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l30; // (-1,-1)
             attackLoc = l31;
-            center = l30;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l29;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l21;
         }
 
 
@@ -3201,7 +2735,329 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l30; // (-1,-1)
             attackLoc = l40;
-            center = l30;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l38;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l22;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l20;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l48;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l32;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l28;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l12;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l49;
+        }
+
+
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l41;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l47;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l23;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l37;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l13;
+        }
+
+
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l19;
+        }
+
+
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l11;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l50;
+        }
+
+
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l38; // (0,-2)
+            attackLoc = l46;
+        }
+
+
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l14;
+        }
+
+
+        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+            ans = null;
+            Map.markObstructed(l30);
+            return;
+        }
+        p = m10.getPaint();
+        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l30);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l10;
         }
 
 
@@ -3209,331 +3065,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt6() throws GameActionException { // (-1,1)
         center = myLoc.translate(-1,1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m16.getPaint();
-        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
-            attackLoc = l16;
-            center = l32;
-        }
-
-
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m25.getPaint();
-        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l25;
-            center = l32;
-        }
-
-
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l15;
-            center = l32;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l42; // (0,2)
-            attackLoc = l52;
-            center = l32;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l32; // (-1,1)
-            attackLoc = l34;
-            center = l32;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l32; // (-1,1)
-            attackLoc = l14;
-            center = l32;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l22; // (-2,0)
-            attackLoc = l12;
-            center = l32;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l43;
-            center = l32;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l13;
-            center = l32;
-        }
-
-
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l32; // (-1,1)
-            attackLoc = l24;
-            center = l32;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l51;
-            center = l32;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l32; // (-1,1)
-            attackLoc = l33;
-            center = l32;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l32; // (-1,1)
-            attackLoc = l23;
-            center = l32;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l21;
-            center = l32;
-        }
-
-
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l32; // (-1,1)
-            attackLoc = l42;
-            center = l32;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l32; // (-1,1)
-            attackLoc = l22;
-            center = l32;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l32; // (-1,1)
-            attackLoc = l50;
-            center = l32;
-        }
-
-
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l48;
-            center = l32;
-        }
-
-
         if (m32.isWall() || m32.hasRuin()){ // (-1,1)
             ans = null;
             Map.markObstructed(l32);
@@ -3548,79 +3081,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l32; // (-1,1)
             attackLoc = l32;
-            center = l32;
-        }
-
-
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l32; // (-1,1)
-            attackLoc = l30;
-            center = l32;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l49;
-            center = l32;
-        }
-
-
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l32; // (-1,1)
-            attackLoc = l41;
-            center = l32;
-        }
-
-
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
-            ans = null;
-            Map.markObstructed(l32);
-            return;
-        }
-        p = m39.getPaint();
-        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l32);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l39;
-            center = l32;
         }
 
 
@@ -3638,7 +3098,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l32; // (-1,1)
             attackLoc = l31;
-            center = l32;
+        }
+
+
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l32; // (-1,1)
+            attackLoc = l41;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l32; // (-1,1)
+            attackLoc = l23;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l32; // (-1,1)
+            attackLoc = l33;
         }
 
 
@@ -3656,7 +3166,329 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l32; // (-1,1)
             attackLoc = l40;
-            center = l32;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l32; // (-1,1)
+            attackLoc = l22;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l32; // (-1,1)
+            attackLoc = l42;
+        }
+
+
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l32; // (-1,1)
+            attackLoc = l24;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l32; // (-1,1)
+            attackLoc = l30;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l32; // (-1,1)
+            attackLoc = l50;
+        }
+
+
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l32; // (-1,1)
+            attackLoc = l14;
+        }
+
+
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l32; // (-1,1)
+            attackLoc = l34;
+        }
+
+
+        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m39.getPaint();
+        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l39;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l21;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l49;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l13;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l51;
+        }
+
+
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l23; // (-2,1)
+            attackLoc = l15;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l43;
+        }
+
+
+        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m25.getPaint();
+        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l23; // (-2,1)
+            attackLoc = l25;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l48;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l12;
+        }
+
+
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l42; // (0,2)
+            attackLoc = l52;
+        }
+
+
+        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+            ans = null;
+            Map.markObstructed(l32);
+            return;
+        }
+        p = m16.getPaint();
+        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l32);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l24; // (-2,2)
+            attackLoc = l16;
         }
 
 
@@ -3664,313 +3496,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt7() throws GameActionException { // (1,-1)
         center = myLoc.translate(1,-1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m64.getPaint();
-        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
-            attackLoc = l64;
-            center = l48;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l65;
-            center = l48;
-        }
-
-
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l55;
-            center = l48;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l58; // (2,0)
-            attackLoc = l68;
-            center = l48;
-        }
-
-
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l48; // (1,-1)
-            attackLoc = l66;
-            center = l48;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l48; // (1,-1)
-            attackLoc = l46;
-            center = l48;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l38; // (0,-2)
-            attackLoc = l28;
-            center = l48;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l49; // (1,0)
-            attackLoc = l67;
-            center = l48;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l37;
-            center = l48;
-        }
-
-
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l48; // (1,-1)
-            attackLoc = l56;
-            center = l48;
-        }
-
-
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l49; // (1,0)
-            attackLoc = l59;
-            center = l48;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l48; // (1,-1)
-            attackLoc = l57;
-            center = l48;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l48; // (1,-1)
-            attackLoc = l47;
-            center = l48;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l29;
-            center = l48;
-        }
-
-
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l48; // (1,-1)
-            attackLoc = l58;
-            center = l48;
-        }
-
-
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l48; // (1,-1)
-            attackLoc = l38;
-            center = l48;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l48; // (1,-1)
-            attackLoc = l50;
-            center = l48;
-        }
-
-
         if (m48.isWall() || m48.hasRuin()){ // (1,-1)
             ans = null;
             Map.markObstructed(l48);
@@ -3985,79 +3512,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l48; // (1,-1)
             attackLoc = l48;
-            center = l48;
-        }
-
-
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l40; // (0,0)
-            attackLoc = l32;
-            center = l48;
-        }
-
-
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l48; // (1,-1)
-            attackLoc = l30;
-            center = l48;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l48; // (1,-1)
-            attackLoc = l49;
-            center = l48;
-        }
-
-
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
-            ans = null;
-            Map.markObstructed(l48);
-            return;
-        }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l48);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l41;
-            center = l48;
         }
 
 
@@ -4075,25 +3529,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l48; // (1,-1)
             attackLoc = l39;
-            center = l48;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
             ans = null;
             Map.markObstructed(l48);
             return;
         }
-        p = m31.getPaint();
-        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l48);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l31;
-            center = l48;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l48; // (1,-1)
+            attackLoc = l49;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l48; // (1,-1)
+            attackLoc = l47;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l48; // (1,-1)
+            attackLoc = l57;
         }
 
 
@@ -4111,7 +3597,329 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l48; // (1,-1)
             attackLoc = l40;
-            center = l48;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l48; // (1,-1)
+            attackLoc = l38;
+        }
+
+
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l48; // (1,-1)
+            attackLoc = l58;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l48; // (1,-1)
+            attackLoc = l56;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l48; // (1,-1)
+            attackLoc = l30;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l48; // (1,-1)
+            attackLoc = l50;
+        }
+
+
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l48; // (1,-1)
+            attackLoc = l46;
+        }
+
+
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l48; // (1,-1)
+            attackLoc = l66;
+        }
+
+
+        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m31.getPaint();
+        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l31;
+        }
+
+
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l41;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l29;
+        }
+
+
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l59;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l37;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l67;
+        }
+
+
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l55;
+        }
+
+
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l65;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l40; // (0,0)
+            attackLoc = l32;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l38; // (0,-2)
+            attackLoc = l28;
+        }
+
+
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l58; // (2,0)
+            attackLoc = l68;
+        }
+
+
+        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+            ans = null;
+            Map.markObstructed(l48);
+            return;
+        }
+        p = m64.getPaint();
+        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l48);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l56; // (2,-2)
+            attackLoc = l64;
         }
 
 
@@ -4119,184 +3927,56 @@ public class ResourcePatternManager {
 
     static void checkCenterAt8() throws GameActionException { // (1,1)
         center = myLoc.translate(1,1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
             ans = null;
             Map.markObstructed(l50);
             return;
         }
-        p = m70.getPaint();
-        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l50);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
-            attackLoc = l70;
-            center = l50;
+            ans = l50; // (1,1)
+            attackLoc = l50;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
             ans = null;
             Map.markObstructed(l50);
             return;
         }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l50);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
-            attackLoc = l69;
-            center = l50;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l50);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l50);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
-            attackLoc = l61;
-            center = l50;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l50);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l50);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
-            attackLoc = l68;
-            center = l50;
+            attackLoc = l49;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
             ans = null;
             Map.markObstructed(l50);
             return;
         }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l50);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l58; // (2,0)
-            attackLoc = l66;
-            center = l50;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l50);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l50);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
-            attackLoc = l52;
-            center = l50;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l50);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l50);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l42; // (0,2)
-            attackLoc = l34;
-            center = l50;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l50);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l50);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l49; // (1,0)
-            attackLoc = l67;
-            center = l50;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l50);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l50);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l43;
-            center = l50;
-        }
-
-
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
-            ans = null;
-            Map.markObstructed(l50);
-            return;
-        }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l50);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l50; // (1,1)
-            attackLoc = l60;
-            center = l50;
+            attackLoc = l41;
         }
 
 
@@ -4314,25 +3994,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
             attackLoc = l59;
-            center = l50;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l50);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l50);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l49; // (1,0)
-            attackLoc = l57;
-            center = l50;
         }
 
 
@@ -4350,25 +4011,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
             attackLoc = l51;
-            center = l50;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (m40.isWall() || m40.hasRuin()){ // (0,0)
             ans = null;
             Map.markObstructed(l50);
             return;
         }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+        p = m40.getPaint();
+        if ( Map.isNearRuin(l40) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l50);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l33;
-            center = l50;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l50; // (1,1)
+            attackLoc = l40;
         }
 
 
@@ -4386,7 +4045,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
             attackLoc = l58;
-            center = l50;
         }
 
 
@@ -4404,25 +4062,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
             attackLoc = l42;
-            center = l50;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
             ans = null;
             Map.markObstructed(l50);
             return;
         }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l50);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
+        if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
-            attackLoc = l50;
-            center = l50;
+            attackLoc = l60;
         }
 
 
@@ -4440,7 +4096,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
             attackLoc = l48;
-            center = l50;
         }
 
 
@@ -4458,7 +4113,176 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
             attackLoc = l32;
-            center = l50;
+        }
+
+
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+            ans = null;
+            Map.markObstructed(l50);
+            return;
+        }
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l50);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l50; // (1,1)
+            attackLoc = l68;
+        }
+
+
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+            ans = null;
+            Map.markObstructed(l50);
+            return;
+        }
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l50);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l50; // (1,1)
+            attackLoc = l52;
+        }
+
+
+        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+            ans = null;
+            Map.markObstructed(l50);
+            return;
+        }
+        p = m39.getPaint();
+        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l50);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l39;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l50);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l50);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l57;
+        }
+
+
+        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+            ans = null;
+            Map.markObstructed(l50);
+            return;
+        }
+        p = m31.getPaint();
+        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l50);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l31;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l50);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l50);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l67;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l50);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l50);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l33;
+        }
+
+
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+            ans = null;
+            Map.markObstructed(l50);
+            return;
+        }
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l50);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l59; // (2,1)
+            attackLoc = l69;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l50);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l50);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l43;
+        }
+
+
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+            ans = null;
+            Map.markObstructed(l50);
+            return;
+        }
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l50);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l59; // (2,1)
+            attackLoc = l61;
         }
 
 
@@ -4476,97 +4300,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l40; // (0,0)
             attackLoc = l30;
-            center = l50;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
             ans = null;
             Map.markObstructed(l50);
             return;
         }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l50);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l50; // (1,1)
-            attackLoc = l49;
-            center = l50;
-        }
-
-
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
-            ans = null;
-            Map.markObstructed(l50);
-            return;
-        }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l50);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l50; // (1,1)
-            attackLoc = l41;
-            center = l50;
-        }
-
-
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
-            ans = null;
-            Map.markObstructed(l50);
-            return;
-        }
-        p = m39.getPaint();
-        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l50);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l39;
-            center = l50;
+            ans = l58; // (2,0)
+            attackLoc = l66;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
             ans = null;
             Map.markObstructed(l50);
             return;
         }
-        p = m31.getPaint();
-        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l50);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l31;
-            center = l50;
+            ans = l42; // (0,2)
+            attackLoc = l34;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (m70.isWall() || m70.hasRuin()){ // (3,3)
             ans = null;
             Map.markObstructed(l50);
             return;
         }
-        p = m40.getPaint();
-        if ( Map.isNearRuin(l40) && !maxT || p.isEnemy()){
+        p = m70.getPaint();
+        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l50);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l50; // (1,1)
-            attackLoc = l40;
-            center = l50;
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l60; // (2,2)
+            attackLoc = l70;
         }
 
 
@@ -4574,331 +4358,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt9() throws GameActionException { // (-2,0)
         center = myLoc.translate(-2,0);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m6.getPaint();
-        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l14; // (-3,1)
-            attackLoc = l6;
-            center = l22;
-        }
-
-
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m2.getPaint();
-        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l2;
-            center = l22;
-        }
-
-
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m5.getPaint();
-        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l5;
-            center = l22;
-        }
-
-
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m3.getPaint();
-        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l3;
-            center = l22;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l22; // (-2,0)
-            attackLoc = l4;
-            center = l22;
-        }
-
-
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l15;
-            center = l22;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l11;
-            center = l22;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l22; // (-2,0)
-            attackLoc = l14;
-            center = l22;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l22; // (-2,0)
-            attackLoc = l12;
-            center = l22;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l22; // (-2,0)
-            attackLoc = l13;
-            center = l22;
-        }
-
-
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l22; // (-2,0)
-            attackLoc = l24;
-            center = l22;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l22; // (-2,0)
-            attackLoc = l20;
-            center = l22;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l33;
-            center = l22;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l29;
-            center = l22;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l22; // (-2,0)
-            attackLoc = l23;
-            center = l22;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l22; // (-2,0)
-            attackLoc = l21;
-            center = l22;
-        }
-
-
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l42;
-            center = l22;
-        }
-
-
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l38;
-            center = l22;
-        }
-
-
         if (m22.isWall() || m22.hasRuin()){ // (-2,0)
             ans = null;
             Map.markObstructed(l22);
@@ -4913,79 +4374,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l22; // (-2,0)
             attackLoc = l22;
-            center = l22;
-        }
-
-
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l22; // (-2,0)
-            attackLoc = l32;
-            center = l22;
-        }
-
-
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l22; // (-2,0)
-            attackLoc = l30;
-            center = l22;
-        }
-
-
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l41;
-            center = l22;
-        }
-
-
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
-            ans = null;
-            Map.markObstructed(l22);
-            return;
-        }
-        p = m39.getPaint();
-        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l22);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l39;
-            center = l22;
         }
 
 
@@ -5003,7 +4391,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l22; // (-2,0)
             attackLoc = l31;
-            center = l22;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l22; // (-2,0)
+            attackLoc = l23;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l22; // (-2,0)
+            attackLoc = l21;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l22; // (-2,0)
+            attackLoc = l13;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l22; // (-2,0)
+            attackLoc = l32;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l22; // (-2,0)
+            attackLoc = l30;
+        }
+
+
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l22; // (-2,0)
+            attackLoc = l14;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l22; // (-2,0)
+            attackLoc = l12;
         }
 
 
@@ -5021,7 +4527,261 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l22; // (-2,0)
             attackLoc = l40;
-            center = l22;
+        }
+
+
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l22; // (-2,0)
+            attackLoc = l24;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l22; // (-2,0)
+            attackLoc = l20;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l22; // (-2,0)
+            attackLoc = l4;
+        }
+
+
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l41;
+        }
+
+
+        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m39.getPaint();
+        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l39;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l33;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l29;
+        }
+
+
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l23; // (-2,1)
+            attackLoc = l15;
+        }
+
+
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l11;
+        }
+
+
+        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m5.getPaint();
+        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l23; // (-2,1)
+            attackLoc = l5;
+        }
+
+
+        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m3.getPaint();
+        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l3;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l32; // (-1,1)
+            attackLoc = l42;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l38;
+        }
+
+
+        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m6.getPaint();
+        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l14; // (-3,1)
+            attackLoc = l6;
+        }
+
+
+        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+            ans = null;
+            Map.markObstructed(l22);
+            return;
+        }
+        p = m2.getPaint();
+        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l22);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l2;
         }
 
 
@@ -5029,313 +4789,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt10() throws GameActionException { // (0,-2)
         center = myLoc.translate(0,-2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m54.getPaint();
-        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l46; // (1,-3)
-            attackLoc = l54;
-            center = l38;
-        }
-
-
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m18.getPaint();
-        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l18;
-            center = l38;
-        }
-
-
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m45.getPaint();
-        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l45;
-            center = l38;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l27;
-            center = l38;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l38; // (0,-2)
-            attackLoc = l36;
-            center = l38;
-        }
-
-
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l55;
-            center = l38;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l19;
-            center = l38;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l38; // (0,-2)
-            attackLoc = l46;
-            center = l38;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l38; // (0,-2)
-            attackLoc = l28;
-            center = l38;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l38; // (0,-2)
-            attackLoc = l37;
-            center = l38;
-        }
-
-
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l38; // (0,-2)
-            attackLoc = l56;
-            center = l38;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l38; // (0,-2)
-            attackLoc = l20;
-            center = l38;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l57;
-            center = l38;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l38; // (0,-2)
-            attackLoc = l47;
-            center = l38;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l38; // (0,-2)
-            attackLoc = l29;
-            center = l38;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l21;
-            center = l38;
-        }
-
-
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l58;
-            center = l38;
-        }
-
-
         if (m38.isWall() || m38.hasRuin()){ // (0,-2)
             ans = null;
             Map.markObstructed(l38);
@@ -5350,79 +4805,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l38; // (0,-2)
             attackLoc = l38;
-            center = l38;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l22;
-            center = l38;
-        }
-
-
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l38; // (0,-2)
-            attackLoc = l48;
-            center = l38;
-        }
-
-
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l38; // (0,-2)
-            attackLoc = l30;
-            center = l38;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l38);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l38);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l49;
-            center = l38;
         }
 
 
@@ -5440,25 +4822,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l38; // (0,-2)
             attackLoc = l39;
-            center = l38;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l38);
             return;
         }
-        p = m31.getPaint();
-        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l38);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l31;
-            center = l38;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l38; // (0,-2)
+            attackLoc = l29;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l38; // (0,-2)
+            attackLoc = l47;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l38; // (0,-2)
+            attackLoc = l37;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l38; // (0,-2)
+            attackLoc = l30;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l38; // (0,-2)
+            attackLoc = l48;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l38; // (0,-2)
+            attackLoc = l28;
+        }
+
+
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l38; // (0,-2)
+            attackLoc = l46;
         }
 
 
@@ -5476,7 +4958,261 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l38; // (0,-2)
             attackLoc = l40;
-            center = l38;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l38; // (0,-2)
+            attackLoc = l20;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l38; // (0,-2)
+            attackLoc = l56;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l38; // (0,-2)
+            attackLoc = l36;
+        }
+
+
+        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m31.getPaint();
+        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l31;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l21;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l49;
+        }
+
+
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l19;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l57;
+        }
+
+
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l27;
+        }
+
+
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l55;
+        }
+
+
+        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m45.getPaint();
+        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l45;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l22;
+        }
+
+
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l58;
+        }
+
+
+        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m18.getPaint();
+        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l18;
+        }
+
+
+        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+            ans = null;
+            Map.markObstructed(l38);
+            return;
+        }
+        p = m54.getPaint();
+        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l38);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l46; // (1,-3)
+            attackLoc = l54;
         }
 
 
@@ -5484,313 +5220,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt11() throws GameActionException { // (0,2)
         center = myLoc.translate(0,2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m62.getPaint();
-        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l52; // (1,3)
-            attackLoc = l62;
-            center = l42;
-        }
-
-
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m26.getPaint();
-        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l34; // (-1,3)
-            attackLoc = l26;
-            center = l42;
-        }
-
-
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m53.getPaint();
-        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
-            attackLoc = l53;
-            center = l42;
-        }
-
-
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l33; // (-1,2)
-            attackLoc = l35;
-            center = l42;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l42; // (0,2)
-            attackLoc = l44;
-            center = l42;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
-            attackLoc = l61;
-            center = l42;
-        }
-
-
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m25.getPaint();
-        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l33; // (-1,2)
-            attackLoc = l25;
-            center = l42;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l42; // (0,2)
-            attackLoc = l52;
-            center = l42;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l42; // (0,2)
-            attackLoc = l34;
-            center = l42;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l42; // (0,2)
-            attackLoc = l43;
-            center = l42;
-        }
-
-
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l42; // (0,2)
-            attackLoc = l60;
-            center = l42;
-        }
-
-
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l42; // (0,2)
-            attackLoc = l24;
-            center = l42;
-        }
-
-
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l59;
-            center = l42;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l42; // (0,2)
-            attackLoc = l51;
-            center = l42;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l42; // (0,2)
-            attackLoc = l33;
-            center = l42;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l23;
-            center = l42;
-        }
-
-
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l58;
-            center = l42;
-        }
-
-
         if (m42.isWall() || m42.hasRuin()){ // (0,2)
             ans = null;
             Map.markObstructed(l42);
@@ -5805,79 +5236,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l42; // (0,2)
             attackLoc = l42;
-            center = l42;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l22;
-            center = l42;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l42; // (0,2)
-            attackLoc = l50;
-            center = l42;
-        }
-
-
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l42; // (0,2)
-            attackLoc = l32;
-            center = l42;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l42);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l42);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l49;
-            center = l42;
         }
 
 
@@ -5895,25 +5253,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l42; // (0,2)
             attackLoc = l41;
-            center = l42;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
             ans = null;
             Map.markObstructed(l42);
             return;
         }
-        p = m31.getPaint();
-        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l42);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l31;
-            center = l42;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l42; // (0,2)
+            attackLoc = l33;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l42; // (0,2)
+            attackLoc = l51;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l42; // (0,2)
+            attackLoc = l43;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l42; // (0,2)
+            attackLoc = l32;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l42; // (0,2)
+            attackLoc = l50;
+        }
+
+
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l42; // (0,2)
+            attackLoc = l34;
+        }
+
+
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l42; // (0,2)
+            attackLoc = l52;
         }
 
 
@@ -5931,7 +5389,261 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l42; // (0,2)
             attackLoc = l40;
-            center = l42;
+        }
+
+
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l42; // (0,2)
+            attackLoc = l24;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l42; // (0,2)
+            attackLoc = l60;
+        }
+
+
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l42; // (0,2)
+            attackLoc = l44;
+        }
+
+
+        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m31.getPaint();
+        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l31;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l49;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l23;
+        }
+
+
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l59;
+        }
+
+
+        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m25.getPaint();
+        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l33; // (-1,2)
+            attackLoc = l25;
+        }
+
+
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l51; // (1,2)
+            attackLoc = l61;
+        }
+
+
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l33; // (-1,2)
+            attackLoc = l35;
+        }
+
+
+        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m53.getPaint();
+        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l51; // (1,2)
+            attackLoc = l53;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l32; // (-1,1)
+            attackLoc = l22;
+        }
+
+
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l58;
+        }
+
+
+        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m26.getPaint();
+        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l34; // (-1,3)
+            attackLoc = l26;
+        }
+
+
+        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+            ans = null;
+            Map.markObstructed(l42);
+            return;
+        }
+        p = m62.getPaint();
+        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l42);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l52; // (1,3)
+            attackLoc = l62;
         }
 
 
@@ -5939,295 +5651,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt12() throws GameActionException { // (2,0)
         center = myLoc.translate(2,0);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m78.getPaint();
-        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l68; // (3,1)
-            attackLoc = l78;
-            center = l58;
-        }
-
-
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m74.getPaint();
-        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l66; // (3,-1)
-            attackLoc = l74;
-            center = l58;
-        }
-
-
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m77.getPaint();
-        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l59; // (2,1)
-            attackLoc = l77;
-            center = l58;
-        }
-
-
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m75.getPaint();
-        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l57; // (2,-1)
-            attackLoc = l75;
-            center = l58;
-        }
-
-
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m76.getPaint();
-        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l58; // (2,0)
-            attackLoc = l76;
-            center = l58;
-        }
-
-
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l59; // (2,1)
-            attackLoc = l69;
-            center = l58;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l57; // (2,-1)
-            attackLoc = l65;
-            center = l58;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l58; // (2,0)
-            attackLoc = l68;
-            center = l58;
-        }
-
-
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l58; // (2,0)
-            attackLoc = l66;
-            center = l58;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l58; // (2,0)
-            attackLoc = l67;
-            center = l58;
-        }
-
-
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l58; // (2,0)
-            attackLoc = l60;
-            center = l58;
-        }
-
-
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l58; // (2,0)
-            attackLoc = l56;
-            center = l58;
-        }
-
-
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l58; // (2,0)
-            attackLoc = l59;
-            center = l58;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l58; // (2,0)
-            attackLoc = l57;
-            center = l58;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l49; // (1,0)
-            attackLoc = l51;
-            center = l58;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l49; // (1,0)
-            attackLoc = l47;
-            center = l58;
-        }
-
-
         if (m58.isWall() || m58.hasRuin()){ // (2,0)
             ans = null;
             Map.markObstructed(l58);
@@ -6242,79 +5667,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l58; // (2,0)
             attackLoc = l58;
-            center = l58;
-        }
-
-
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l42;
-            center = l58;
-        }
-
-
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l38;
-            center = l58;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l58; // (2,0)
-            attackLoc = l50;
-            center = l58;
-        }
-
-
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
-            ans = null;
-            Map.markObstructed(l58);
-            return;
-        }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l58);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l58; // (2,0)
-            attackLoc = l48;
-            center = l58;
         }
 
 
@@ -6332,43 +5684,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l58; // (2,0)
             attackLoc = l49;
-            center = l58;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
             ans = null;
             Map.markObstructed(l58);
             return;
         }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l58);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l49; // (1,0)
-            attackLoc = l41;
-            center = l58;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l58; // (2,0)
+            attackLoc = l59;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
             ans = null;
             Map.markObstructed(l58);
             return;
         }
-        p = m39.getPaint();
-        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l58);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l49; // (1,0)
-            attackLoc = l39;
-            center = l58;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l58; // (2,0)
+            attackLoc = l57;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l58; // (2,0)
+            attackLoc = l67;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l58; // (2,0)
+            attackLoc = l50;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l58; // (2,0)
+            attackLoc = l48;
+        }
+
+
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l58; // (2,0)
+            attackLoc = l68;
+        }
+
+
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l58; // (2,0)
+            attackLoc = l66;
         }
 
 
@@ -6386,7 +5820,261 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l58; // (2,0)
             attackLoc = l40;
-            center = l58;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l58; // (2,0)
+            attackLoc = l60;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l58; // (2,0)
+            attackLoc = l56;
+        }
+
+
+        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m76.getPaint();
+        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l58; // (2,0)
+            attackLoc = l76;
+        }
+
+
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l41;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l51;
+        }
+
+
+        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m39.getPaint();
+        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l39;
+        }
+
+
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l59; // (2,1)
+            attackLoc = l69;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l47;
+        }
+
+
+        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m77.getPaint();
+        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l59; // (2,1)
+            attackLoc = l77;
+        }
+
+
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l57; // (2,-1)
+            attackLoc = l65;
+        }
+
+
+        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m75.getPaint();
+        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l57; // (2,-1)
+            attackLoc = l75;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l42;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l38;
+        }
+
+
+        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m78.getPaint();
+        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l68; // (3,1)
+            attackLoc = l78;
+        }
+
+
+        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+            ans = null;
+            Map.markObstructed(l58);
+            return;
+        }
+        p = m74.getPaint();
+        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l58);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l66; // (3,-1)
+            attackLoc = l74;
         }
 
 
@@ -6394,277 +6082,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt13() throws GameActionException { // (-2,-1)
         center = myLoc.translate(-2,-1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m2.getPaint();
-        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l2;
-            center = l21;
-        }
-
-
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m10.getPaint();
-        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l10;
-            center = l21;
-        }
-
-
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m5.getPaint();
-        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l13; // (-3,0)
-            attackLoc = l5;
-            center = l21;
-        }
-
-
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m3.getPaint();
-        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l3;
-            center = l21;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l22; // (-2,0)
-            attackLoc = l4;
-            center = l21;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l19;
-            center = l21;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l11;
-            center = l21;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l28;
-            center = l21;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l22; // (-2,0)
-            attackLoc = l14;
-            center = l21;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l12;
-            center = l21;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l37;
-            center = l21;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l13;
-            center = l21;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l20;
-            center = l21;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l29;
-            center = l21;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l23;
-            center = l21;
-        }
-
-
         if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l21);
@@ -6679,61 +6098,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
             attackLoc = l21;
-            center = l21;
-        }
-
-
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l38;
-            center = l21;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l22;
-            center = l21;
-        }
-
-
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l32;
-            center = l21;
         }
 
 
@@ -6751,43 +6115,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l21; // (-2,-1)
             attackLoc = l30;
-            center = l21;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
             ans = null;
             Map.markObstructed(l21);
             return;
         }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l21);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l31; // (-1,0)
-            attackLoc = l41;
-            center = l21;
-        }
-
-
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
-            ans = null;
-            Map.markObstructed(l21);
-            return;
-        }
-        p = m39.getPaint();
-        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l21);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l21; // (-2,-1)
-            attackLoc = l39;
-            center = l21;
+            attackLoc = l22;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l20;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l12;
         }
 
 
@@ -6805,7 +6183,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l21; // (-2,-1)
             attackLoc = l31;
-            center = l21;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l29;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l13;
+        }
+
+
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l11;
+        }
+
+
+        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m39.getPaint();
+        if ( Map.isNearRuin(l39) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l39;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l23;
+        }
+
+
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l19;
+        }
+
+
+        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m3.getPaint();
+        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l3;
         }
 
 
@@ -6823,7 +6319,176 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l30; // (-1,-1)
             attackLoc = l40;
-            center = l21;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l38;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l32;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l28;
+        }
+
+
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l14;
+        }
+
+
+        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m10.getPaint();
+        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l10;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l4;
+        }
+
+
+        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m2.getPaint();
+        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l2;
+        }
+
+
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l31; // (-1,0)
+            attackLoc = l41;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l37;
+        }
+
+
+        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+            ans = null;
+            Map.markObstructed(l21);
+            return;
+        }
+        p = m5.getPaint();
+        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l21);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l13; // (-3,0)
+            attackLoc = l5;
         }
 
 
@@ -6831,259 +6496,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt14() throws GameActionException { // (-2,1)
         center = myLoc.translate(-2,1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m6.getPaint();
-        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
-            attackLoc = l6;
-            center = l23;
-        }
-
-
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m16.getPaint();
-        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
-            attackLoc = l16;
-            center = l23;
-        }
-
-
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m5.getPaint();
-        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l23; // (-2,1)
-            attackLoc = l5;
-            center = l23;
-        }
-
-
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m3.getPaint();
-        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l13; // (-3,0)
-            attackLoc = l3;
-            center = l23;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l22; // (-2,0)
-            attackLoc = l4;
-            center = l23;
-        }
-
-
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m25.getPaint();
-        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l23; // (-2,1)
-            attackLoc = l25;
-            center = l23;
-        }
-
-
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l23; // (-2,1)
-            attackLoc = l15;
-            center = l23;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l34;
-            center = l23;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l23; // (-2,1)
-            attackLoc = l14;
-            center = l23;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l22; // (-2,0)
-            attackLoc = l12;
-            center = l23;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l33; // (-1,2)
-            attackLoc = l43;
-            center = l23;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l23; // (-2,1)
-            attackLoc = l13;
-            center = l23;
-        }
-
-
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l23; // (-2,1)
-            attackLoc = l24;
-            center = l23;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l23; // (-2,1)
-            attackLoc = l33;
-            center = l23;
-        }
-
-
         if (m23.isWall() || m23.hasRuin()){ // (-2,1)
             ans = null;
             Map.markObstructed(l23);
@@ -7098,43 +6512,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
             attackLoc = l23;
-            center = l23;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l23; // (-2,1)
-            attackLoc = l21;
-            center = l23;
-        }
-
-
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l42;
-            center = l23;
         }
 
 
@@ -7152,7 +6529,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l23; // (-2,1)
             attackLoc = l22;
-            center = l23;
         }
 
 
@@ -7170,25 +6546,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l23; // (-2,1)
             attackLoc = l32;
-            center = l23;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
             ans = null;
             Map.markObstructed(l23);
             return;
         }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l23);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l30;
-            center = l23;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l23; // (-2,1)
+            attackLoc = l14;
+        }
+
+
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l23; // (-2,1)
+            attackLoc = l24;
+        }
+
+
+        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m31.getPaint();
+        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l23; // (-2,1)
+            attackLoc = l31;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l23; // (-2,1)
+            attackLoc = l13;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l23; // (-2,1)
+            attackLoc = l33;
+        }
+
+
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l23; // (-2,1)
+            attackLoc = l15;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l23; // (-2,1)
+            attackLoc = l21;
         }
 
 
@@ -7206,7 +6682,176 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l23; // (-2,1)
             attackLoc = l41;
-            center = l23;
+        }
+
+
+        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m5.getPaint();
+        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l23; // (-2,1)
+            attackLoc = l5;
+        }
+
+
+        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m25.getPaint();
+        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l23; // (-2,1)
+            attackLoc = l25;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l30;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l12;
+        }
+
+
+        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m40.getPaint();
+        if ( Map.isNearRuin(l40) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l40;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l4;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l32; // (-1,1)
+            attackLoc = l42;
+        }
+
+
+        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m6.getPaint();
+        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l14; // (-3,1)
+            attackLoc = l6;
+        }
+
+
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l32; // (-1,1)
+            attackLoc = l34;
+        }
+
+
+        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m16.getPaint();
+        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l14; // (-3,1)
+            attackLoc = l16;
         }
 
 
@@ -7224,43 +6869,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
             attackLoc = l39;
-            center = l23;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l23);
             return;
         }
-        p = m31.getPaint();
-        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l23);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l23; // (-2,1)
-            attackLoc = l31;
-            center = l23;
-        }
-
-
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
-            ans = null;
-            Map.markObstructed(l23);
-            return;
-        }
-        p = m40.getPaint();
-        if ( Map.isNearRuin(l40) && !maxT || p.isEnemy()){
+        p = m3.getPaint();
+        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l23);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l40;
-            center = l23;
+            ans = l13; // (-3,0)
+            attackLoc = l3;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l23);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l23);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l33; // (-1,2)
+            attackLoc = l43;
         }
 
 
@@ -7268,259 +6910,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt15() throws GameActionException { // (-1,-2)
         center = myLoc.translate(-1,-2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m18.getPaint();
-        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l18;
-            center = l29;
-        }
-
-
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m10.getPaint();
-        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l10;
-            center = l29;
-        }
-
-
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m45.getPaint();
-        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l37; // (0,-3)
-            attackLoc = l45;
-            center = l29;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l27;
-            center = l29;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l38; // (0,-2)
-            attackLoc = l36;
-            center = l29;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l19;
-            center = l29;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l11;
-            center = l29;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l38; // (0,-2)
-            attackLoc = l46;
-            center = l29;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l28;
-            center = l29;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l12;
-            center = l29;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l37;
-            center = l29;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l13;
-            center = l29;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l20;
-            center = l29;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l47;
-            center = l29;
-        }
-
-
         if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l29);
@@ -7535,79 +6926,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
             attackLoc = l29;
-            center = l29;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l21;
-            center = l29;
-        }
-
-
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l38;
-            center = l29;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l22;
-            center = l29;
-        }
-
-
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
-            ans = null;
-            Map.markObstructed(l29);
-            return;
-        }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l29);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l30; // (-1,-1)
-            attackLoc = l48;
-            center = l29;
         }
 
 
@@ -7625,25 +6943,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l29; // (-1,-2)
             attackLoc = l30;
-            center = l29;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l29);
             return;
         }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l29);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l39; // (0,-1)
-            attackLoc = l49;
-            center = l29;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l20;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l38;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l28;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l21;
         }
 
 
@@ -7661,7 +7028,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l29; // (-1,-2)
             attackLoc = l39;
-            center = l29;
+        }
+
+
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l19;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l37;
         }
 
 
@@ -7679,7 +7079,91 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l29; // (-1,-2)
             attackLoc = l31;
-            center = l29;
+        }
+
+
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l11;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l47;
+        }
+
+
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l27;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l22;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l12;
         }
 
 
@@ -7697,7 +7181,142 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l30; // (-1,-1)
             attackLoc = l40;
-            center = l29;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l30; // (-1,-1)
+            attackLoc = l48;
+        }
+
+
+        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m10.getPaint();
+        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l10;
+        }
+
+
+        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m18.getPaint();
+        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l18;
+        }
+
+
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l38; // (0,-2)
+            attackLoc = l46;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l38; // (0,-2)
+            attackLoc = l36;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l13;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l39; // (0,-1)
+            attackLoc = l49;
+        }
+
+
+        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+            ans = null;
+            Map.markObstructed(l29);
+            return;
+        }
+        p = m45.getPaint();
+        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l29);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l37; // (0,-3)
+            attackLoc = l45;
         }
 
 
@@ -7705,259 +7324,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt16() throws GameActionException { // (-1,2)
         center = myLoc.translate(-1,2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m26.getPaint();
-        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
-            attackLoc = l26;
-            center = l33;
-        }
-
-
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m16.getPaint();
-        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
-            attackLoc = l16;
-            center = l33;
-        }
-
-
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m53.getPaint();
-        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l43; // (0,3)
-            attackLoc = l53;
-            center = l33;
-        }
-
-
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l33; // (-1,2)
-            attackLoc = l35;
-            center = l33;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l42; // (0,2)
-            attackLoc = l44;
-            center = l33;
-        }
-
-
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m25.getPaint();
-        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l33; // (-1,2)
-            attackLoc = l25;
-            center = l33;
-        }
-
-
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l33; // (-1,2)
-            attackLoc = l15;
-            center = l33;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l42; // (0,2)
-            attackLoc = l52;
-            center = l33;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l33; // (-1,2)
-            attackLoc = l34;
-            center = l33;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l14;
-            center = l33;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l33; // (-1,2)
-            attackLoc = l43;
-            center = l33;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l13;
-            center = l33;
-        }
-
-
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l33; // (-1,2)
-            attackLoc = l24;
-            center = l33;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l33; // (-1,2)
-            attackLoc = l51;
-            center = l33;
-        }
-
-
         if (m33.isWall() || m33.hasRuin()){ // (-1,2)
             ans = null;
             Map.markObstructed(l33);
@@ -7972,79 +7340,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
             attackLoc = l33;
-            center = l33;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l33; // (-1,2)
-            attackLoc = l23;
-            center = l33;
-        }
-
-
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l33; // (-1,2)
-            attackLoc = l42;
-            center = l33;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l22;
-            center = l33;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l33);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l33);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l32; // (-1,1)
-            attackLoc = l50;
-            center = l33;
         }
 
 
@@ -8062,25 +7357,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l33; // (-1,2)
             attackLoc = l32;
-            center = l33;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
             ans = null;
             Map.markObstructed(l33);
             return;
         }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l33);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l41; // (0,1)
-            attackLoc = l49;
-            center = l33;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l33; // (-1,2)
+            attackLoc = l24;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l33; // (-1,2)
+            attackLoc = l42;
+        }
+
+
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l33; // (-1,2)
+            attackLoc = l34;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l33; // (-1,2)
+            attackLoc = l23;
         }
 
 
@@ -8098,7 +7442,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l33; // (-1,2)
             attackLoc = l41;
-            center = l33;
+        }
+
+
+        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m25.getPaint();
+        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l33; // (-1,2)
+            attackLoc = l25;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l33; // (-1,2)
+            attackLoc = l43;
         }
 
 
@@ -8116,7 +7493,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l33; // (-1,2)
             attackLoc = l31;
-            center = l33;
+        }
+
+
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l33; // (-1,2)
+            attackLoc = l15;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l33; // (-1,2)
+            attackLoc = l51;
+        }
+
+
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l33; // (-1,2)
+            attackLoc = l35;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l32; // (-1,1)
+            attackLoc = l22;
         }
 
 
@@ -8134,7 +7578,159 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l32; // (-1,1)
             attackLoc = l40;
-            center = l33;
+        }
+
+
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l32; // (-1,1)
+            attackLoc = l14;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l32; // (-1,1)
+            attackLoc = l50;
+        }
+
+
+        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m16.getPaint();
+        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l24; // (-2,2)
+            attackLoc = l16;
+        }
+
+
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l42; // (0,2)
+            attackLoc = l52;
+        }
+
+
+        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m26.getPaint();
+        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l24; // (-2,2)
+            attackLoc = l26;
+        }
+
+
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l42; // (0,2)
+            attackLoc = l44;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l23; // (-2,1)
+            attackLoc = l13;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l41; // (0,1)
+            attackLoc = l49;
+        }
+
+
+        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+            ans = null;
+            Map.markObstructed(l33);
+            return;
+        }
+        p = m53.getPaint();
+        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l33);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l43; // (0,3)
+            attackLoc = l53;
         }
 
 
@@ -8142,259 +7738,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt17() throws GameActionException { // (1,-2)
         center = myLoc.translate(1,-2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m54.getPaint();
-        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
-            attackLoc = l54;
-            center = l47;
-        }
-
-
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m64.getPaint();
-        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
-            attackLoc = l64;
-            center = l47;
-        }
-
-
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m45.getPaint();
-        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l47; // (1,-2)
-            attackLoc = l45;
-            center = l47;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l37; // (0,-3)
-            attackLoc = l27;
-            center = l47;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l38; // (0,-2)
-            attackLoc = l36;
-            center = l47;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l47; // (1,-2)
-            attackLoc = l65;
-            center = l47;
-        }
-
-
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l47; // (1,-2)
-            attackLoc = l55;
-            center = l47;
-        }
-
-
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l66;
-            center = l47;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l47; // (1,-2)
-            attackLoc = l46;
-            center = l47;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l38; // (0,-2)
-            attackLoc = l28;
-            center = l47;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l57; // (2,-1)
-            attackLoc = l67;
-            center = l47;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l47; // (1,-2)
-            attackLoc = l37;
-            center = l47;
-        }
-
-
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l47; // (1,-2)
-            attackLoc = l56;
-            center = l47;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l47; // (1,-2)
-            attackLoc = l57;
-            center = l47;
-        }
-
-
         if (m47.isWall() || m47.hasRuin()){ // (1,-2)
             ans = null;
             Map.markObstructed(l47);
@@ -8409,61 +7754,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
             attackLoc = l47;
-            center = l47;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l47; // (1,-2)
-            attackLoc = l29;
-            center = l47;
-        }
-
-
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l58;
-            center = l47;
-        }
-
-
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l47; // (1,-2)
-            attackLoc = l38;
-            center = l47;
         }
 
 
@@ -8481,43 +7771,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l47; // (1,-2)
             attackLoc = l48;
-            center = l47;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
             ans = null;
             Map.markObstructed(l47);
             return;
         }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l47);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l30;
-            center = l47;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l47);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l47);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l47; // (1,-2)
-            attackLoc = l49;
-            center = l47;
+            attackLoc = l38;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l47; // (1,-2)
+            attackLoc = l56;
+        }
+
+
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l47; // (1,-2)
+            attackLoc = l46;
         }
 
 
@@ -8535,7 +7839,261 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l47; // (1,-2)
             attackLoc = l39;
-            center = l47;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l47; // (1,-2)
+            attackLoc = l57;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l47; // (1,-2)
+            attackLoc = l37;
+        }
+
+
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l47; // (1,-2)
+            attackLoc = l55;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l47; // (1,-2)
+            attackLoc = l49;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l47; // (1,-2)
+            attackLoc = l29;
+        }
+
+
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l47; // (1,-2)
+            attackLoc = l65;
+        }
+
+
+        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m45.getPaint();
+        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l47; // (1,-2)
+            attackLoc = l45;
+        }
+
+
+        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m40.getPaint();
+        if ( Map.isNearRuin(l40) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l40;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l30;
+        }
+
+
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l58;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l38; // (0,-2)
+            attackLoc = l28;
+        }
+
+
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l66;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l38; // (0,-2)
+            attackLoc = l36;
+        }
+
+
+        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m64.getPaint();
+        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l56; // (2,-2)
+            attackLoc = l64;
+        }
+
+
+        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m54.getPaint();
+        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l56; // (2,-2)
+            attackLoc = l54;
         }
 
 
@@ -8553,25 +8111,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l39; // (0,-1)
             attackLoc = l31;
-            center = l47;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
             ans = null;
             Map.markObstructed(l47);
             return;
         }
-        p = m40.getPaint();
-        if ( Map.isNearRuin(l40) && !maxT || p.isEnemy()){
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l47);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l40;
-            center = l47;
+            ans = l57; // (2,-1)
+            attackLoc = l67;
+        }
+
+
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+            ans = null;
+            Map.markObstructed(l47);
+            return;
+        }
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l47);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l37; // (0,-3)
+            attackLoc = l27;
         }
 
 
@@ -8579,259 +8152,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt18() throws GameActionException { // (1,2)
         center = myLoc.translate(1,2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m62.getPaint();
-        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
-            attackLoc = l62;
-            center = l51;
-        }
-
-
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m70.getPaint();
-        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
-            attackLoc = l70;
-            center = l51;
-        }
-
-
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m53.getPaint();
-        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l51; // (1,2)
-            attackLoc = l53;
-            center = l51;
-        }
-
-
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l43; // (0,3)
-            attackLoc = l35;
-            center = l51;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l42; // (0,2)
-            attackLoc = l44;
-            center = l51;
-        }
-
-
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l51; // (1,2)
-            attackLoc = l69;
-            center = l51;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l51; // (1,2)
-            attackLoc = l61;
-            center = l51;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l68;
-            center = l51;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l51; // (1,2)
-            attackLoc = l52;
-            center = l51;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l42; // (0,2)
-            attackLoc = l34;
-            center = l51;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l59; // (2,1)
-            attackLoc = l67;
-            center = l51;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l51; // (1,2)
-            attackLoc = l43;
-            center = l51;
-        }
-
-
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l51; // (1,2)
-            attackLoc = l60;
-            center = l51;
-        }
-
-
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l51; // (1,2)
-            attackLoc = l59;
-            center = l51;
-        }
-
-
         if (m51.isWall() || m51.hasRuin()){ // (1,2)
             ans = null;
             Map.markObstructed(l51);
@@ -8846,61 +8168,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
             attackLoc = l51;
-            center = l51;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l51; // (1,2)
-            attackLoc = l33;
-            center = l51;
-        }
-
-
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l58;
-            center = l51;
-        }
-
-
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l51; // (1,2)
-            attackLoc = l42;
-            center = l51;
         }
 
 
@@ -8918,43 +8185,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l51; // (1,2)
             attackLoc = l50;
-            center = l51;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
             ans = null;
             Map.markObstructed(l51);
             return;
         }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l51);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l32;
-            center = l51;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l51);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l51);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l51; // (1,2)
-            attackLoc = l49;
-            center = l51;
+            attackLoc = l42;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l51; // (1,2)
+            attackLoc = l60;
+        }
+
+
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l51; // (1,2)
+            attackLoc = l52;
         }
 
 
@@ -8972,7 +8253,261 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l51; // (1,2)
             attackLoc = l41;
-            center = l51;
+        }
+
+
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l51; // (1,2)
+            attackLoc = l59;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l51; // (1,2)
+            attackLoc = l43;
+        }
+
+
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l51; // (1,2)
+            attackLoc = l61;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l51; // (1,2)
+            attackLoc = l49;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l51; // (1,2)
+            attackLoc = l33;
+        }
+
+
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l51; // (1,2)
+            attackLoc = l69;
+        }
+
+
+        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m53.getPaint();
+        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l51; // (1,2)
+            attackLoc = l53;
+        }
+
+
+        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m40.getPaint();
+        if ( Map.isNearRuin(l40) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l40;
+        }
+
+
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l58;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l32;
+        }
+
+
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l68;
+        }
+
+
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l42; // (0,2)
+            attackLoc = l34;
+        }
+
+
+        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m70.getPaint();
+        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l60; // (2,2)
+            attackLoc = l70;
+        }
+
+
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l42; // (0,2)
+            attackLoc = l44;
+        }
+
+
+        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m62.getPaint();
+        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l60; // (2,2)
+            attackLoc = l62;
         }
 
 
@@ -8990,25 +8525,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l41; // (0,1)
             attackLoc = l31;
-            center = l51;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
             ans = null;
             Map.markObstructed(l51);
             return;
         }
-        p = m40.getPaint();
-        if ( Map.isNearRuin(l40) && !maxT || p.isEnemy()){
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l51);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l40;
-            center = l51;
+            ans = l59; // (2,1)
+            attackLoc = l67;
+        }
+
+
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+            ans = null;
+            Map.markObstructed(l51);
+            return;
+        }
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l51);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l43; // (0,3)
+            attackLoc = l35;
         }
 
 
@@ -9016,148 +8566,56 @@ public class ResourcePatternManager {
 
     static void checkCenterAt19() throws GameActionException { // (2,-1)
         center = myLoc.translate(2,-1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
             ans = null;
             Map.markObstructed(l57);
             return;
         }
-        p = m74.getPaint();
-        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l57);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
-            attackLoc = l74;
-            center = l57;
+            ans = l57; // (2,-1)
+            attackLoc = l57;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
             ans = null;
             Map.markObstructed(l57);
             return;
         }
-        p = m64.getPaint();
-        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l57);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
-            attackLoc = l64;
-            center = l57;
-        }
-
-
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
-            ans = null;
-            Map.markObstructed(l57);
-            return;
-        }
-        p = m77.getPaint();
-        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l57);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l67; // (3,0)
-            attackLoc = l77;
-            center = l57;
-        }
-
-
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
-            ans = null;
-            Map.markObstructed(l57);
-            return;
-        }
-        p = m75.getPaint();
-        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l57);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l75;
-            center = l57;
+            attackLoc = l58;
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
             ans = null;
             Map.markObstructed(l57);
             return;
         }
-        p = m76.getPaint();
-        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l57);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l58; // (2,0)
-            attackLoc = l76;
-            center = l57;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l57);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l57);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l65;
-            center = l57;
-        }
-
-
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l57);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l57);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l57; // (2,-1)
-            attackLoc = l55;
-            center = l57;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l57);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l57);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l58; // (2,0)
-            attackLoc = l68;
-            center = l57;
+            attackLoc = l48;
         }
 
 
@@ -9175,61 +8633,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
             attackLoc = l66;
-            center = l57;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l57);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l57);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l46;
-            center = l57;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l57);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l57);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l57; // (2,-1)
-            attackLoc = l67;
-            center = l57;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l57);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l57);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l37;
-            center = l57;
         }
 
 
@@ -9247,43 +8650,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
             attackLoc = l56;
-            center = l57;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
             ans = null;
             Map.markObstructed(l57);
             return;
         }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l57);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l59;
-            center = l57;
+            attackLoc = l49;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
             ans = null;
             Map.markObstructed(l57);
             return;
         }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l57);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
+        if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l57;
-            center = l57;
+            attackLoc = l67;
         }
 
 
@@ -9301,115 +8701,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
             attackLoc = l47;
-            center = l57;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
             ans = null;
             Map.markObstructed(l57);
             return;
         }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l57);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l58;
-            center = l57;
+            attackLoc = l65;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
             ans = null;
             Map.markObstructed(l57);
             return;
         }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l57);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l38;
-            center = l57;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l57);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l57);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
-            attackLoc = l50;
-            center = l57;
-        }
-
-
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
-            ans = null;
-            Map.markObstructed(l57);
-            return;
-        }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l57);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l48;
-            center = l57;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l57);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l57);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l57; // (2,-1)
-            attackLoc = l49;
-            center = l57;
-        }
-
-
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
-            ans = null;
-            Map.markObstructed(l57);
-            return;
-        }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l57);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l49; // (1,0)
-            attackLoc = l41;
-            center = l57;
+            attackLoc = l59;
         }
 
 
@@ -9427,7 +8752,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
             attackLoc = l39;
-            center = l57;
+        }
+
+
+        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+            ans = null;
+            Map.markObstructed(l57);
+            return;
+        }
+        p = m75.getPaint();
+        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l57);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l57; // (2,-1)
+            attackLoc = l75;
+        }
+
+
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+            ans = null;
+            Map.markObstructed(l57);
+            return;
+        }
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l57);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l57; // (2,-1)
+            attackLoc = l55;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l57);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l57);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l58; // (2,0)
+            attackLoc = l50;
         }
 
 
@@ -9443,9 +8818,161 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l48; // (1,-1)
+            ans = l58; // (2,0)
             attackLoc = l40;
-            center = l57;
+        }
+
+
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+            ans = null;
+            Map.markObstructed(l57);
+            return;
+        }
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l57);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l58; // (2,0)
+            attackLoc = l68;
+        }
+
+
+        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+            ans = null;
+            Map.markObstructed(l57);
+            return;
+        }
+        p = m76.getPaint();
+        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l57);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l58; // (2,0)
+            attackLoc = l76;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l57);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l57);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l38;
+        }
+
+
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+            ans = null;
+            Map.markObstructed(l57);
+            return;
+        }
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l57);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l48; // (1,-1)
+            attackLoc = l46;
+        }
+
+
+        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+            ans = null;
+            Map.markObstructed(l57);
+            return;
+        }
+        p = m74.getPaint();
+        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l57);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l66; // (3,-1)
+            attackLoc = l74;
+        }
+
+
+        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+            ans = null;
+            Map.markObstructed(l57);
+            return;
+        }
+        p = m64.getPaint();
+        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l57);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l66; // (3,-1)
+            attackLoc = l64;
+        }
+
+
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+            ans = null;
+            Map.markObstructed(l57);
+            return;
+        }
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l57);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l49; // (1,0)
+            attackLoc = l41;
+        }
+
+
+        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+            ans = null;
+            Map.markObstructed(l57);
+            return;
+        }
+        p = m77.getPaint();
+        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l57);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l67; // (3,0)
+            attackLoc = l77;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l57);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l57);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l37;
         }
 
 
@@ -9453,130 +8980,56 @@ public class ResourcePatternManager {
 
     static void checkCenterAt20() throws GameActionException { // (2,1)
         center = myLoc.translate(2,1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
             ans = null;
             Map.markObstructed(l59);
             return;
         }
-        p = m78.getPaint();
-        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l59);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
-            attackLoc = l78;
-            center = l59;
+            ans = l59; // (2,1)
+            attackLoc = l59;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
             ans = null;
             Map.markObstructed(l59);
             return;
         }
-        p = m70.getPaint();
-        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
-            attackLoc = l70;
-            center = l59;
-        }
-
-
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m77.getPaint();
-        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l59);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
-            attackLoc = l77;
-            center = l59;
+            attackLoc = l58;
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
             ans = null;
             Map.markObstructed(l59);
             return;
         }
-        p = m75.getPaint();
-        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l67; // (3,0)
-            attackLoc = l75;
-            center = l59;
-        }
-
-
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m76.getPaint();
-        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l58; // (2,0)
-            attackLoc = l76;
-            center = l59;
-        }
-
-
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l59);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
-            attackLoc = l69;
-            center = l59;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l59; // (2,1)
-            attackLoc = l61;
-            center = l59;
+            attackLoc = l50;
         }
 
 
@@ -9594,79 +9047,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
             attackLoc = l68;
-            center = l59;
-        }
-
-
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l58; // (2,0)
-            attackLoc = l66;
-            center = l59;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l52;
-            center = l59;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l59; // (2,1)
-            attackLoc = l67;
-            center = l59;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
-            attackLoc = l43;
-            center = l59;
         }
 
 
@@ -9684,133 +9064,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
             attackLoc = l60;
-            center = l59;
-        }
-
-
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l59; // (2,1)
-            attackLoc = l59;
-            center = l59;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l59; // (2,1)
-            attackLoc = l57;
-            center = l59;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l59; // (2,1)
-            attackLoc = l51;
-            center = l59;
-        }
-
-
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l59; // (2,1)
-            attackLoc = l58;
-            center = l59;
-        }
-
-
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l42;
-            center = l59;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l59; // (2,1)
-            attackLoc = l50;
-            center = l59;
-        }
-
-
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
-            ans = null;
-            Map.markObstructed(l59);
-            return;
-        }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l59);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l48;
-            center = l59;
         }
 
 
@@ -9828,7 +9081,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
             attackLoc = l49;
-            center = l59;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l59; // (2,1)
+            attackLoc = l67;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l59; // (2,1)
+            attackLoc = l51;
+        }
+
+
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l59; // (2,1)
+            attackLoc = l69;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l59; // (2,1)
+            attackLoc = l57;
         }
 
 
@@ -9846,7 +9166,176 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
             attackLoc = l41;
-            center = l59;
+        }
+
+
+        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m77.getPaint();
+        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l59; // (2,1)
+            attackLoc = l77;
+        }
+
+
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l59; // (2,1)
+            attackLoc = l61;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l58; // (2,0)
+            attackLoc = l48;
+        }
+
+
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l58; // (2,0)
+            attackLoc = l66;
+        }
+
+
+        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m40.getPaint();
+        if ( Map.isNearRuin(l40) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l58; // (2,0)
+            attackLoc = l40;
+        }
+
+
+        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m76.getPaint();
+        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l58; // (2,0)
+            attackLoc = l76;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l42;
+        }
+
+
+        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m78.getPaint();
+        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l68; // (3,1)
+            attackLoc = l78;
+        }
+
+
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l50; // (1,1)
+            attackLoc = l52;
+        }
+
+
+        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m70.getPaint();
+        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l68; // (3,1)
+            attackLoc = l70;
         }
 
 
@@ -9864,25 +9353,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l49; // (1,0)
             attackLoc = l39;
-            center = l59;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
             ans = null;
             Map.markObstructed(l59);
             return;
         }
-        p = m40.getPaint();
-        if ( Map.isNearRuin(l40) && !maxT || p.isEnemy()){
+        p = m75.getPaint();
+        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l59);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l50; // (1,1)
-            attackLoc = l40;
-            center = l59;
+            ans = l67; // (3,0)
+            attackLoc = l75;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l59);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l59);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l51; // (1,2)
+            attackLoc = l43;
         }
 
 
@@ -9890,241 +9394,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt21() throws GameActionException { // (-2,-2)
         center = myLoc.translate(-2,-2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m18.getPaint();
-        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l18;
-            center = l20;
-        }
-
-
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m2.getPaint();
-        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l2;
-            center = l20;
-        }
-
-
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m10.getPaint();
-        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l10;
-            center = l20;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l27;
-            center = l20;
-        }
-
-
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m3.getPaint();
-        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l3;
-            center = l20;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l36;
-            center = l20;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l4;
-            center = l20;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l19;
-            center = l20;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l11;
-            center = l20;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l28;
-            center = l20;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l12;
-            center = l20;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l37;
-            center = l20;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l20);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l20);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l13;
-            center = l20;
-        }
-
-
         if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l20);
@@ -10139,7 +9410,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
             attackLoc = l20;
-            center = l20;
         }
 
 
@@ -10157,7 +9427,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
             attackLoc = l29;
-            center = l20;
         }
 
 
@@ -10175,43 +9444,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
             attackLoc = l21;
-            center = l20;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l20);
             return;
         }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l20);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
-            attackLoc = l38;
-            center = l20;
+            attackLoc = l19;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l20);
             return;
         }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l20);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
-            attackLoc = l22;
-            center = l20;
+            attackLoc = l11;
         }
 
 
@@ -10229,7 +9495,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
             attackLoc = l30;
-            center = l20;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l28;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l12;
+        }
+
+
+        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m10.getPaint();
+        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l10;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l38;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l22;
+        }
+
+
+        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m18.getPaint();
+        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l18;
+        }
+
+
+        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m2.getPaint();
+        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l2;
         }
 
 
@@ -10245,9 +9629,8 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
+            ans = l29; // (-1,-2)
             attackLoc = l39;
-            center = l20;
         }
 
 
@@ -10263,9 +9646,76 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
+            ans = l29; // (-1,-2)
             attackLoc = l31;
-            center = l20;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l37;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l13;
+        }
+
+
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l27;
+        }
+
+
+        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m3.getPaint();
+        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l3;
         }
 
 
@@ -10283,7 +9733,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l30; // (-1,-1)
             attackLoc = l40;
-            center = l20;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l36;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l20);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l20);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l4;
         }
 
 
@@ -10291,241 +9774,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt22() throws GameActionException { // (-2,2)
         center = myLoc.translate(-2,2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m26.getPaint();
-        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l24; // (-2,2)
-            attackLoc = l26;
-            center = l24;
-        }
-
-
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m6.getPaint();
-        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l24; // (-2,2)
-            attackLoc = l6;
-            center = l24;
-        }
-
-
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m16.getPaint();
-        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l24; // (-2,2)
-            attackLoc = l16;
-            center = l24;
-        }
-
-
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l33; // (-1,2)
-            attackLoc = l35;
-            center = l24;
-        }
-
-
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m5.getPaint();
-        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l5;
-            center = l24;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l34; // (-1,3)
-            attackLoc = l44;
-            center = l24;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l14; // (-3,1)
-            attackLoc = l4;
-            center = l24;
-        }
-
-
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m25.getPaint();
-        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l24; // (-2,2)
-            attackLoc = l25;
-            center = l24;
-        }
-
-
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l24; // (-2,2)
-            attackLoc = l15;
-            center = l24;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l24; // (-2,2)
-            attackLoc = l34;
-            center = l24;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l24; // (-2,2)
-            attackLoc = l14;
-            center = l24;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l33; // (-1,2)
-            attackLoc = l43;
-            center = l24;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l13;
-            center = l24;
-        }
-
-
         if (m24.isWall() || m24.hasRuin()){ // (-2,2)
             ans = null;
             Map.markObstructed(l24);
@@ -10540,25 +9790,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
             attackLoc = l24;
-            center = l24;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l24);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l24);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l24; // (-2,2)
-            attackLoc = l33;
-            center = l24;
         }
 
 
@@ -10576,43 +9807,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
             attackLoc = l23;
-            center = l24;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
             ans = null;
             Map.markObstructed(l24);
             return;
         }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l24);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
-            attackLoc = l42;
-            center = l24;
+            attackLoc = l33;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
             ans = null;
             Map.markObstructed(l24);
             return;
         }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l24);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
-            attackLoc = l22;
-            center = l24;
+            attackLoc = l15;
+        }
+
+
+        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m25.getPaint();
+        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l24; // (-2,2)
+            attackLoc = l25;
         }
 
 
@@ -10630,25 +9875,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
             attackLoc = l32;
-            center = l24;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
             ans = null;
             Map.markObstructed(l24);
             return;
         }
-        p = m41.getPaint();
-        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l24);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l41;
-            center = l24;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l24; // (-2,2)
+            attackLoc = l14;
+        }
+
+
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l24; // (-2,2)
+            attackLoc = l34;
+        }
+
+
+        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m16.getPaint();
+        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l24; // (-2,2)
+            attackLoc = l16;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l24; // (-2,2)
+            attackLoc = l22;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l24; // (-2,2)
+            attackLoc = l42;
+        }
+
+
+        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m6.getPaint();
+        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l24; // (-2,2)
+            attackLoc = l6;
+        }
+
+
+        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m26.getPaint();
+        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l24; // (-2,2)
+            attackLoc = l26;
         }
 
 
@@ -10666,7 +10011,91 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
             attackLoc = l31;
-            center = l24;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l23; // (-2,1)
+            attackLoc = l13;
+        }
+
+
+        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m41.getPaint();
+        if ( Map.isNearRuin(l41) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l23; // (-2,1)
+            attackLoc = l41;
+        }
+
+
+        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m5.getPaint();
+        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l23; // (-2,1)
+            attackLoc = l5;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l33; // (-1,2)
+            attackLoc = l43;
+        }
+
+
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l33; // (-1,2)
+            attackLoc = l35;
         }
 
 
@@ -10684,7 +10113,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l32; // (-1,1)
             attackLoc = l40;
-            center = l24;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l14; // (-3,1)
+            attackLoc = l4;
+        }
+
+
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+            ans = null;
+            Map.markObstructed(l24);
+            return;
+        }
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l24);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l34; // (-1,3)
+            attackLoc = l44;
         }
 
 
@@ -10692,241 +10154,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt23() throws GameActionException { // (2,-2)
         center = myLoc.translate(2,-2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m74.getPaint();
-        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l56; // (2,-2)
-            attackLoc = l74;
-            center = l56;
-        }
-
-
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m54.getPaint();
-        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l56; // (2,-2)
-            attackLoc = l54;
-            center = l56;
-        }
-
-
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m64.getPaint();
-        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l56; // (2,-2)
-            attackLoc = l64;
-            center = l56;
-        }
-
-
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m75.getPaint();
-        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l57; // (2,-1)
-            attackLoc = l75;
-            center = l56;
-        }
-
-
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m45.getPaint();
-        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l45;
-            center = l56;
-        }
-
-
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m76.getPaint();
-        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l66; // (3,-1)
-            attackLoc = l76;
-            center = l56;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l46; // (1,-3)
-            attackLoc = l36;
-            center = l56;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l56; // (2,-2)
-            attackLoc = l65;
-            center = l56;
-        }
-
-
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l56; // (2,-2)
-            attackLoc = l55;
-            center = l56;
-        }
-
-
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l56; // (2,-2)
-            attackLoc = l66;
-            center = l56;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l56; // (2,-2)
-            attackLoc = l46;
-            center = l56;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l57; // (2,-1)
-            attackLoc = l67;
-            center = l56;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l37;
-            center = l56;
-        }
-
-
         if (m56.isWall() || m56.hasRuin()){ // (2,-2)
             ans = null;
             Map.markObstructed(l56);
@@ -10941,25 +10170,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
             attackLoc = l56;
-            center = l56;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l56);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l56);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l56; // (2,-2)
-            attackLoc = l57;
-            center = l56;
         }
 
 
@@ -10977,43 +10187,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
             attackLoc = l47;
-            center = l56;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
             ans = null;
             Map.markObstructed(l56);
             return;
         }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l56);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
-            attackLoc = l58;
-            center = l56;
+            attackLoc = l57;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
             ans = null;
             Map.markObstructed(l56);
             return;
         }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l56);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
-            attackLoc = l38;
-            center = l56;
+            attackLoc = l55;
+        }
+
+
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l56; // (2,-2)
+            attackLoc = l65;
         }
 
 
@@ -11031,25 +10255,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
             attackLoc = l48;
-            center = l56;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
             ans = null;
             Map.markObstructed(l56);
             return;
         }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l56);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l49;
-            center = l56;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l56; // (2,-2)
+            attackLoc = l46;
+        }
+
+
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l56; // (2,-2)
+            attackLoc = l66;
+        }
+
+
+        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m64.getPaint();
+        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l56; // (2,-2)
+            attackLoc = l64;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l56; // (2,-2)
+            attackLoc = l38;
+        }
+
+
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l56; // (2,-2)
+            attackLoc = l58;
+        }
+
+
+        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m54.getPaint();
+        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l56; // (2,-2)
+            attackLoc = l54;
+        }
+
+
+        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m74.getPaint();
+        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l56; // (2,-2)
+            attackLoc = l74;
         }
 
 
@@ -11067,7 +10391,91 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
             attackLoc = l39;
-            center = l56;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l49;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l37;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l57; // (2,-1)
+            attackLoc = l67;
+        }
+
+
+        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m45.getPaint();
+        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l45;
+        }
+
+
+        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m75.getPaint();
+        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l57; // (2,-1)
+            attackLoc = l75;
         }
 
 
@@ -11085,7 +10493,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l48; // (1,-1)
             attackLoc = l40;
-            center = l56;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l46; // (1,-3)
+            attackLoc = l36;
+        }
+
+
+        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+            ans = null;
+            Map.markObstructed(l56);
+            return;
+        }
+        p = m76.getPaint();
+        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l56);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l66; // (3,-1)
+            attackLoc = l76;
         }
 
 
@@ -11093,241 +10534,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt24() throws GameActionException { // (2,2)
         center = myLoc.translate(2,2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m78.getPaint();
-        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l60; // (2,2)
-            attackLoc = l78;
-            center = l60;
-        }
-
-
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m62.getPaint();
-        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l60; // (2,2)
-            attackLoc = l62;
-            center = l60;
-        }
-
-
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m70.getPaint();
-        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l60; // (2,2)
-            attackLoc = l70;
-            center = l60;
-        }
-
-
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m77.getPaint();
-        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l59; // (2,1)
-            attackLoc = l77;
-            center = l60;
-        }
-
-
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m53.getPaint();
-        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
-            attackLoc = l53;
-            center = l60;
-        }
-
-
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m76.getPaint();
-        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l68; // (3,1)
-            attackLoc = l76;
-            center = l60;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l52; // (1,3)
-            attackLoc = l44;
-            center = l60;
-        }
-
-
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l60; // (2,2)
-            attackLoc = l69;
-            center = l60;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l60; // (2,2)
-            attackLoc = l61;
-            center = l60;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l60; // (2,2)
-            attackLoc = l68;
-            center = l60;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l60; // (2,2)
-            attackLoc = l52;
-            center = l60;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l59; // (2,1)
-            attackLoc = l67;
-            center = l60;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l60);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l60);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
-            attackLoc = l43;
-            center = l60;
-        }
-
-
         if (m60.isWall() || m60.hasRuin()){ // (2,2)
             ans = null;
             Map.markObstructed(l60);
@@ -11342,7 +10550,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
             attackLoc = l60;
-            center = l60;
         }
 
 
@@ -11360,7 +10567,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
             attackLoc = l59;
-            center = l60;
         }
 
 
@@ -11378,43 +10584,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
             attackLoc = l51;
-            center = l60;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
             ans = null;
             Map.markObstructed(l60);
             return;
         }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l60);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
-            attackLoc = l58;
-            center = l60;
+            attackLoc = l69;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
             ans = null;
             Map.markObstructed(l60);
             return;
         }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l60);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
-            attackLoc = l42;
-            center = l60;
+            attackLoc = l61;
         }
 
 
@@ -11432,7 +10635,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
             attackLoc = l50;
-            center = l60;
+        }
+
+
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l60; // (2,2)
+            attackLoc = l68;
+        }
+
+
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l60; // (2,2)
+            attackLoc = l52;
+        }
+
+
+        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m70.getPaint();
+        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l60; // (2,2)
+            attackLoc = l70;
+        }
+
+
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l60; // (2,2)
+            attackLoc = l58;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l60; // (2,2)
+            attackLoc = l42;
+        }
+
+
+        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m78.getPaint();
+        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l60; // (2,2)
+            attackLoc = l78;
+        }
+
+
+        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m62.getPaint();
+        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l60; // (2,2)
+            attackLoc = l62;
         }
 
 
@@ -11448,9 +10769,25 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
+            ans = l59; // (2,1)
             attackLoc = l49;
-            center = l60;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l59; // (2,1)
+            attackLoc = l67;
         }
 
 
@@ -11466,9 +10803,59 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
+            ans = l59; // (2,1)
             attackLoc = l41;
-            center = l60;
+        }
+
+
+        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m77.getPaint();
+        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l59; // (2,1)
+            attackLoc = l77;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l51; // (1,2)
+            attackLoc = l43;
+        }
+
+
+        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m53.getPaint();
+        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l51; // (1,2)
+            attackLoc = l53;
         }
 
 
@@ -11486,7 +10873,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l50; // (1,1)
             attackLoc = l40;
-            center = l60;
+        }
+
+
+        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m76.getPaint();
+        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l68; // (3,1)
+            attackLoc = l76;
+        }
+
+
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+            ans = null;
+            Map.markObstructed(l60);
+            return;
+        }
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l60);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l52; // (1,3)
+            attackLoc = l44;
         }
 
 
@@ -11494,169 +10914,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt25() throws GameActionException { // (-3,0)
         center = myLoc.translate(-3,0);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m6.getPaint();
-        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l14; // (-3,1)
-            attackLoc = l6;
-            center = l13;
-        }
-
-
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m2.getPaint();
-        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l2;
-            center = l13;
-        }
-
-
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m5.getPaint();
-        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l13; // (-3,0)
-            attackLoc = l5;
-            center = l13;
-        }
-
-
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m3.getPaint();
-        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l13; // (-3,0)
-            attackLoc = l3;
-            center = l13;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l13; // (-3,0)
-            attackLoc = l4;
-            center = l13;
-        }
-
-
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l13; // (-3,0)
-            attackLoc = l15;
-            center = l13;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l13; // (-3,0)
-            attackLoc = l11;
-            center = l13;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l13; // (-3,0)
-            attackLoc = l14;
-            center = l13;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l13; // (-3,0)
-            attackLoc = l12;
-            center = l13;
-        }
-
-
         if (m13.isWall() || m13.hasRuin()){ // (-3,0)
             ans = null;
             Map.markObstructed(l13);
@@ -11671,115 +10930,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
             attackLoc = l13;
-            center = l13;
-        }
-
-
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l22; // (-2,0)
-            attackLoc = l24;
-            center = l13;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l22; // (-2,0)
-            attackLoc = l20;
-            center = l13;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l33;
-            center = l13;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l29;
-            center = l13;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l13; // (-3,0)
-            attackLoc = l23;
-            center = l13;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l13);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l13);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l13; // (-3,0)
-            attackLoc = l21;
-            center = l13;
         }
 
 
@@ -11797,43 +10947,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l13; // (-3,0)
             attackLoc = l22;
-            center = l13;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
             ans = null;
             Map.markObstructed(l13);
             return;
         }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l13);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l22; // (-2,0)
-            attackLoc = l32;
-            center = l13;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l13; // (-3,0)
+            attackLoc = l14;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l13);
             return;
         }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l13);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l22; // (-2,0)
-            attackLoc = l30;
-            center = l13;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l13; // (-3,0)
+            attackLoc = l12;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l13; // (-3,0)
+            attackLoc = l4;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l13; // (-3,0)
+            attackLoc = l23;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l13; // (-3,0)
+            attackLoc = l21;
+        }
+
+
+        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m5.getPaint();
+        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l13; // (-3,0)
+            attackLoc = l5;
+        }
+
+
+        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m3.getPaint();
+        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l13; // (-3,0)
+            attackLoc = l3;
         }
 
 
@@ -11851,7 +11083,176 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l13; // (-3,0)
             attackLoc = l31;
-            center = l13;
+        }
+
+
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l13; // (-3,0)
+            attackLoc = l15;
+        }
+
+
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l13; // (-3,0)
+            attackLoc = l11;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l32;
+        }
+
+
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l24;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l30;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l20;
+        }
+
+
+        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m6.getPaint();
+        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l14; // (-3,1)
+            attackLoc = l6;
+        }
+
+
+        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m2.getPaint();
+        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l2;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l23; // (-2,1)
+            attackLoc = l33;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l13);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l13);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l29;
         }
 
 
@@ -11859,169 +11260,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt26() throws GameActionException { // (0,-3)
         center = myLoc.translate(0,-3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m54.getPaint();
-        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l46; // (1,-3)
-            attackLoc = l54;
-            center = l37;
-        }
-
-
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m18.getPaint();
-        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l18;
-            center = l37;
-        }
-
-
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m45.getPaint();
-        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l37; // (0,-3)
-            attackLoc = l45;
-            center = l37;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l37; // (0,-3)
-            attackLoc = l27;
-            center = l37;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l37; // (0,-3)
-            attackLoc = l36;
-            center = l37;
-        }
-
-
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l37; // (0,-3)
-            attackLoc = l55;
-            center = l37;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l37; // (0,-3)
-            attackLoc = l19;
-            center = l37;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l37; // (0,-3)
-            attackLoc = l46;
-            center = l37;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l37; // (0,-3)
-            attackLoc = l28;
-            center = l37;
-        }
-
-
         if (m37.isWall() || m37.hasRuin()){ // (0,-3)
             ans = null;
             Map.markObstructed(l37);
@@ -12036,115 +11276,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l37; // (0,-3)
             attackLoc = l37;
-            center = l37;
-        }
-
-
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l38; // (0,-2)
-            attackLoc = l56;
-            center = l37;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l38; // (0,-2)
-            attackLoc = l20;
-            center = l37;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l57;
-            center = l37;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l37; // (0,-3)
-            attackLoc = l47;
-            center = l37;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l37; // (0,-3)
-            attackLoc = l29;
-            center = l37;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l37);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l37);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l21;
-            center = l37;
         }
 
 
@@ -12162,43 +11293,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l37; // (0,-3)
             attackLoc = l38;
-            center = l37;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l37);
             return;
         }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l37);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l38; // (0,-2)
-            attackLoc = l48;
-            center = l37;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l37; // (0,-3)
+            attackLoc = l28;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
             ans = null;
             Map.markObstructed(l37);
             return;
         }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l37);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l38; // (0,-2)
-            attackLoc = l30;
-            center = l37;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l37; // (0,-3)
+            attackLoc = l46;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l37; // (0,-3)
+            attackLoc = l36;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l37; // (0,-3)
+            attackLoc = l29;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l37; // (0,-3)
+            attackLoc = l47;
+        }
+
+
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l37; // (0,-3)
+            attackLoc = l27;
+        }
+
+
+        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m45.getPaint();
+        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l37; // (0,-3)
+            attackLoc = l45;
         }
 
 
@@ -12216,7 +11429,176 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l37; // (0,-3)
             attackLoc = l39;
-            center = l37;
+        }
+
+
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l37; // (0,-3)
+            attackLoc = l19;
+        }
+
+
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l37; // (0,-3)
+            attackLoc = l55;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l38; // (0,-2)
+            attackLoc = l30;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l38; // (0,-2)
+            attackLoc = l20;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l38; // (0,-2)
+            attackLoc = l48;
+        }
+
+
+        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m18.getPaint();
+        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l18;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l38; // (0,-2)
+            attackLoc = l56;
+        }
+
+
+        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m54.getPaint();
+        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l46; // (1,-3)
+            attackLoc = l54;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l21;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l37);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l37);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l57;
         }
 
 
@@ -12224,169 +11606,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt27() throws GameActionException { // (0,3)
         center = myLoc.translate(0,3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m62.getPaint();
-        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l52; // (1,3)
-            attackLoc = l62;
-            center = l43;
-        }
-
-
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m26.getPaint();
-        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l34; // (-1,3)
-            attackLoc = l26;
-            center = l43;
-        }
-
-
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m53.getPaint();
-        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l43; // (0,3)
-            attackLoc = l53;
-            center = l43;
-        }
-
-
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l43; // (0,3)
-            attackLoc = l35;
-            center = l43;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l43; // (0,3)
-            attackLoc = l44;
-            center = l43;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l43; // (0,3)
-            attackLoc = l61;
-            center = l43;
-        }
-
-
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m25.getPaint();
-        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l43; // (0,3)
-            attackLoc = l25;
-            center = l43;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l43; // (0,3)
-            attackLoc = l52;
-            center = l43;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l43; // (0,3)
-            attackLoc = l34;
-            center = l43;
-        }
-
-
         if (m43.isWall() || m43.hasRuin()){ // (0,3)
             ans = null;
             Map.markObstructed(l43);
@@ -12401,115 +11622,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l43; // (0,3)
             attackLoc = l43;
-            center = l43;
-        }
-
-
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l42; // (0,2)
-            attackLoc = l60;
-            center = l43;
-        }
-
-
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l42; // (0,2)
-            attackLoc = l24;
-            center = l43;
-        }
-
-
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
-            attackLoc = l59;
-            center = l43;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l43; // (0,3)
-            attackLoc = l51;
-            center = l43;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l43; // (0,3)
-            attackLoc = l33;
-            center = l43;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l43);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l43);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l33; // (-1,2)
-            attackLoc = l23;
-            center = l43;
         }
 
 
@@ -12527,43 +11639,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l43; // (0,3)
             attackLoc = l42;
-            center = l43;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
             ans = null;
             Map.markObstructed(l43);
             return;
         }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l43);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l42; // (0,2)
-            attackLoc = l50;
-            center = l43;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l43; // (0,3)
+            attackLoc = l34;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
             ans = null;
             Map.markObstructed(l43);
             return;
         }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l43);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l42; // (0,2)
-            attackLoc = l32;
-            center = l43;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l43; // (0,3)
+            attackLoc = l52;
+        }
+
+
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l43; // (0,3)
+            attackLoc = l44;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l43; // (0,3)
+            attackLoc = l33;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l43; // (0,3)
+            attackLoc = l51;
+        }
+
+
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l43; // (0,3)
+            attackLoc = l35;
+        }
+
+
+        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m53.getPaint();
+        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l43; // (0,3)
+            attackLoc = l53;
         }
 
 
@@ -12581,7 +11775,176 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l43; // (0,3)
             attackLoc = l41;
-            center = l43;
+        }
+
+
+        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m25.getPaint();
+        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l43; // (0,3)
+            attackLoc = l25;
+        }
+
+
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l43; // (0,3)
+            attackLoc = l61;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l42; // (0,2)
+            attackLoc = l32;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l42; // (0,2)
+            attackLoc = l50;
+        }
+
+
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l42; // (0,2)
+            attackLoc = l24;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l42; // (0,2)
+            attackLoc = l60;
+        }
+
+
+        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m26.getPaint();
+        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l34; // (-1,3)
+            attackLoc = l26;
+        }
+
+
+        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m62.getPaint();
+        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l52; // (1,3)
+            attackLoc = l62;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l33; // (-1,2)
+            attackLoc = l23;
+        }
+
+
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+            ans = null;
+            Map.markObstructed(l43);
+            return;
+        }
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l43);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l51; // (1,2)
+            attackLoc = l59;
         }
 
 
@@ -12589,169 +11952,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt28() throws GameActionException { // (3,0)
         center = myLoc.translate(3,0);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m78.getPaint();
-        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l68; // (3,1)
-            attackLoc = l78;
-            center = l67;
-        }
-
-
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m74.getPaint();
-        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l66; // (3,-1)
-            attackLoc = l74;
-            center = l67;
-        }
-
-
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m77.getPaint();
-        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l67; // (3,0)
-            attackLoc = l77;
-            center = l67;
-        }
-
-
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m75.getPaint();
-        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l67; // (3,0)
-            attackLoc = l75;
-            center = l67;
-        }
-
-
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m76.getPaint();
-        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l67; // (3,0)
-            attackLoc = l76;
-            center = l67;
-        }
-
-
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l67; // (3,0)
-            attackLoc = l69;
-            center = l67;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l67; // (3,0)
-            attackLoc = l65;
-            center = l67;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l67; // (3,0)
-            attackLoc = l68;
-            center = l67;
-        }
-
-
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l67; // (3,0)
-            attackLoc = l66;
-            center = l67;
-        }
-
-
         if (m67.isWall() || m67.hasRuin()){ // (3,0)
             ans = null;
             Map.markObstructed(l67);
@@ -12766,115 +11968,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
             attackLoc = l67;
-            center = l67;
-        }
-
-
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l58; // (2,0)
-            attackLoc = l60;
-            center = l67;
-        }
-
-
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l58; // (2,0)
-            attackLoc = l56;
-            center = l67;
-        }
-
-
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l67; // (3,0)
-            attackLoc = l59;
-            center = l67;
-        }
-
-
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l67; // (3,0)
-            attackLoc = l57;
-            center = l67;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l59; // (2,1)
-            attackLoc = l51;
-            center = l67;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l67);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l67);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l57; // (2,-1)
-            attackLoc = l47;
-            center = l67;
         }
 
 
@@ -12892,43 +11985,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l67; // (3,0)
             attackLoc = l58;
-            center = l67;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
             ans = null;
             Map.markObstructed(l67);
             return;
         }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l67);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l58; // (2,0)
-            attackLoc = l50;
-            center = l67;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l67; // (3,0)
+            attackLoc = l68;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
             ans = null;
             Map.markObstructed(l67);
             return;
         }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l67);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l58; // (2,0)
-            attackLoc = l48;
-            center = l67;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l67; // (3,0)
+            attackLoc = l66;
+        }
+
+
+        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m76.getPaint();
+        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l67; // (3,0)
+            attackLoc = l76;
+        }
+
+
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l67; // (3,0)
+            attackLoc = l59;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l67; // (3,0)
+            attackLoc = l57;
+        }
+
+
+        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m77.getPaint();
+        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l67; // (3,0)
+            attackLoc = l77;
+        }
+
+
+        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m75.getPaint();
+        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l67; // (3,0)
+            attackLoc = l75;
         }
 
 
@@ -12946,7 +12121,176 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l67; // (3,0)
             attackLoc = l49;
-            center = l67;
+        }
+
+
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l67; // (3,0)
+            attackLoc = l69;
+        }
+
+
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l67; // (3,0)
+            attackLoc = l65;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l58; // (2,0)
+            attackLoc = l50;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l58; // (2,0)
+            attackLoc = l60;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l58; // (2,0)
+            attackLoc = l48;
+        }
+
+
+        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m78.getPaint();
+        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l68; // (3,1)
+            attackLoc = l78;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l58; // (2,0)
+            attackLoc = l56;
+        }
+
+
+        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m74.getPaint();
+        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l66; // (3,-1)
+            attackLoc = l74;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l59; // (2,1)
+            attackLoc = l51;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l67);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l67);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l57; // (2,-1)
+            attackLoc = l47;
         }
 
 
@@ -12954,169 +12298,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt29() throws GameActionException { // (-3,-1)
         center = myLoc.translate(-3,-1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m2.getPaint();
-        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l2;
-            center = l12;
-        }
-
-
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m10.getPaint();
-        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l10;
-            center = l12;
-        }
-
-
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m5.getPaint();
-        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l13; // (-3,0)
-            attackLoc = l5;
-            center = l12;
-        }
-
-
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m3.getPaint();
-        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l3;
-            center = l12;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l4;
-            center = l12;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l19;
-            center = l12;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l11;
-            center = l12;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l28;
-            center = l12;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l14;
-            center = l12;
-        }
-
-
         if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l12);
@@ -13131,79 +12314,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
             attackLoc = l12;
-            center = l12;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l13;
-            center = l12;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l20;
-            center = l12;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l29;
-            center = l12;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l12);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l12);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l21; // (-2,-1)
-            attackLoc = l23;
-            center = l12;
         }
 
 
@@ -13221,7 +12331,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l12; // (-3,-1)
             attackLoc = l21;
-            center = l12;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l13;
+        }
+
+
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l11;
+        }
+
+
+        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m3.getPaint();
+        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l3;
         }
 
 
@@ -13239,25 +12399,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l12; // (-3,-1)
             attackLoc = l22;
-            center = l12;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l12);
             return;
         }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l12);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l22; // (-2,0)
-            attackLoc = l32;
-            center = l12;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l20;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l4;
+        }
+
+
+        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m2.getPaint();
+        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l2;
         }
 
 
@@ -13275,7 +12467,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l12; // (-3,-1)
             attackLoc = l30;
-            center = l12;
+        }
+
+
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l14;
+        }
+
+
+        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m10.getPaint();
+        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l10;
         }
 
 
@@ -13293,7 +12518,108 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
             attackLoc = l31;
-            center = l12;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l29;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l23;
+        }
+
+
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l21; // (-2,-1)
+            attackLoc = l19;
+        }
+
+
+        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m5.getPaint();
+        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l13; // (-3,0)
+            attackLoc = l5;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l22; // (-2,0)
+            attackLoc = l32;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l12);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l12);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l28;
         }
 
 
@@ -13301,151 +12627,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt30() throws GameActionException { // (-3,1)
         center = myLoc.translate(-3,1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
-            ans = null;
-            Map.markObstructed(l14);
-            return;
-        }
-        p = m6.getPaint();
-        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l14);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l14; // (-3,1)
-            attackLoc = l6;
-            center = l14;
-        }
-
-
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
-            ans = null;
-            Map.markObstructed(l14);
-            return;
-        }
-        p = m16.getPaint();
-        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l14);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l14; // (-3,1)
-            attackLoc = l16;
-            center = l14;
-        }
-
-
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
-            ans = null;
-            Map.markObstructed(l14);
-            return;
-        }
-        p = m5.getPaint();
-        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l14);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l14; // (-3,1)
-            attackLoc = l5;
-            center = l14;
-        }
-
-
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
-            ans = null;
-            Map.markObstructed(l14);
-            return;
-        }
-        p = m3.getPaint();
-        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l14);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l13; // (-3,0)
-            attackLoc = l3;
-            center = l14;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l14);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l14);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l14; // (-3,1)
-            attackLoc = l4;
-            center = l14;
-        }
-
-
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
-            ans = null;
-            Map.markObstructed(l14);
-            return;
-        }
-        p = m25.getPaint();
-        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l14);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l25;
-            center = l14;
-        }
-
-
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
-            ans = null;
-            Map.markObstructed(l14);
-            return;
-        }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l14);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l14; // (-3,1)
-            attackLoc = l15;
-            center = l14;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l14);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l14);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
-            attackLoc = l34;
-            center = l14;
-        }
-
-
         if (m14.isWall() || m14.hasRuin()){ // (-3,1)
             ans = null;
             Map.markObstructed(l14);
@@ -13460,25 +12643,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
             attackLoc = l14;
-            center = l14;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l14);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l14);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l14; // (-3,1)
-            attackLoc = l12;
-            center = l14;
         }
 
 
@@ -13496,43 +12660,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
             attackLoc = l13;
-            center = l14;
-        }
-
-
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
-            ans = null;
-            Map.markObstructed(l14);
-            return;
-        }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l14);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l14; // (-3,1)
-            attackLoc = l24;
-            center = l14;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l14);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l14);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l33;
-            center = l14;
         }
 
 
@@ -13550,25 +12677,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
             attackLoc = l23;
-            center = l14;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
             ans = null;
             Map.markObstructed(l14);
             return;
         }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+        p = m5.getPaint();
+        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l14);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l21;
-            center = l14;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l14; // (-3,1)
+            attackLoc = l5;
+        }
+
+
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+            ans = null;
+            Map.markObstructed(l14);
+            return;
+        }
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l14);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l14; // (-3,1)
+            attackLoc = l15;
         }
 
 
@@ -13586,7 +12728,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
             attackLoc = l22;
-            center = l14;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l14);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l14);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l14; // (-3,1)
+            attackLoc = l4;
+        }
+
+
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+            ans = null;
+            Map.markObstructed(l14);
+            return;
+        }
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l14);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l14; // (-3,1)
+            attackLoc = l24;
+        }
+
+
+        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+            ans = null;
+            Map.markObstructed(l14);
+            return;
+        }
+        p = m6.getPaint();
+        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l14);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l14; // (-3,1)
+            attackLoc = l6;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l14);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l14);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l14; // (-3,1)
+            attackLoc = l12;
         }
 
 
@@ -13604,7 +12813,108 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
             attackLoc = l32;
-            center = l14;
+        }
+
+
+        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+            ans = null;
+            Map.markObstructed(l14);
+            return;
+        }
+        p = m16.getPaint();
+        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l14);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l14; // (-3,1)
+            attackLoc = l16;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l14);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l14);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l13; // (-3,0)
+            attackLoc = l21;
+        }
+
+
+        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+            ans = null;
+            Map.markObstructed(l14);
+            return;
+        }
+        p = m3.getPaint();
+        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l14);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l13; // (-3,0)
+            attackLoc = l3;
+        }
+
+
+        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+            ans = null;
+            Map.markObstructed(l14);
+            return;
+        }
+        p = m31.getPaint();
+        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l14);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l13; // (-3,0)
+            attackLoc = l31;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l14);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l14);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l23; // (-2,1)
+            attackLoc = l33;
+        }
+
+
+        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+            ans = null;
+            Map.markObstructed(l14);
+            return;
+        }
+        p = m25.getPaint();
+        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l14);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l23; // (-2,1)
+            attackLoc = l25;
         }
 
 
@@ -13622,25 +12932,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l22; // (-2,0)
             attackLoc = l30;
-            center = l14;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
             ans = null;
             Map.markObstructed(l14);
             return;
         }
-        p = m31.getPaint();
-        if ( Map.isNearRuin(l31) && !maxT || p.isEnemy()){
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l14);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l23; // (-2,1)
-            attackLoc = l31;
-            center = l14;
+            ans = l24; // (-2,2)
+            attackLoc = l34;
         }
 
 
@@ -13648,151 +12956,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt31() throws GameActionException { // (-1,-3)
         center = myLoc.translate(-1,-3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
-            ans = null;
-            Map.markObstructed(l28);
-            return;
-        }
-        p = m18.getPaint();
-        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l28);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l18;
-            center = l28;
-        }
-
-
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
-            ans = null;
-            Map.markObstructed(l28);
-            return;
-        }
-        p = m10.getPaint();
-        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l28);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l10;
-            center = l28;
-        }
-
-
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
-            ans = null;
-            Map.markObstructed(l28);
-            return;
-        }
-        p = m45.getPaint();
-        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l28);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l37; // (0,-3)
-            attackLoc = l45;
-            center = l28;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l28);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l28);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l27;
-            center = l28;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l28);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l28);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l36;
-            center = l28;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l28);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l28);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l19;
-            center = l28;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l28);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l28);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l11;
-            center = l28;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l28);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l28);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l46;
-            center = l28;
-        }
-
-
         if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l28);
@@ -13807,79 +12972,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l28; // (-1,-3)
             attackLoc = l28;
-            center = l28;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l28);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l28);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l12;
-            center = l28;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l28);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l28);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l37;
-            center = l28;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l28);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l28);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l20;
-            center = l28;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l28);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l28);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l47;
-            center = l28;
         }
 
 
@@ -13897,25 +12989,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l28; // (-1,-3)
             attackLoc = l29;
-            center = l28;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l28);
             return;
         }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l28);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l29; // (-1,-2)
-            attackLoc = l21;
-            center = l28;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l19;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l28);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l28);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l37;
+        }
+
+
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+            ans = null;
+            Map.markObstructed(l28);
+            return;
+        }
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l28);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l27;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l28);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l28);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l20;
         }
 
 
@@ -13933,25 +13074,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l28; // (-1,-3)
             attackLoc = l38;
-            center = l28;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l28);
             return;
         }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+        p = m18.getPaint();
+        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l28);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l38; // (0,-2)
-            attackLoc = l48;
-            center = l28;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l18;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l28);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l28);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l36;
         }
 
 
@@ -13969,7 +13125,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l28; // (-1,-3)
             attackLoc = l30;
-            center = l28;
+        }
+
+
+        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+            ans = null;
+            Map.markObstructed(l28);
+            return;
+        }
+        p = m10.getPaint();
+        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l28);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l10;
+        }
+
+
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+            ans = null;
+            Map.markObstructed(l28);
+            return;
+        }
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l28);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l46;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l28);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l28);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l21;
+        }
+
+
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+            ans = null;
+            Map.markObstructed(l28);
+            return;
+        }
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l28);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l11;
         }
 
 
@@ -13987,7 +13210,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
             attackLoc = l39;
-            center = l28;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l28);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l28);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l29; // (-1,-2)
+            attackLoc = l47;
+        }
+
+
+        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+            ans = null;
+            Map.markObstructed(l28);
+            return;
+        }
+        p = m45.getPaint();
+        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l28);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l37; // (0,-3)
+            attackLoc = l45;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l28);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l28);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l12;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l28);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l28);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l38; // (0,-2)
+            attackLoc = l48;
         }
 
 
@@ -13995,94 +13285,39 @@ public class ResourcePatternManager {
 
     static void checkCenterAt32() throws GameActionException { // (-1,3)
         center = myLoc.translate(-1,3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
             ans = null;
             Map.markObstructed(l34);
             return;
         }
-        p = m26.getPaint();
-        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l34);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l34; // (-1,3)
-            attackLoc = l26;
-            center = l34;
-        }
-
-
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
-            ans = null;
-            Map.markObstructed(l34);
-            return;
-        }
-        p = m16.getPaint();
-        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l34);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l34; // (-1,3)
-            attackLoc = l16;
-            center = l34;
-        }
-
-
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
-            ans = null;
-            Map.markObstructed(l34);
-            return;
-        }
-        p = m53.getPaint();
-        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l34);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l43; // (0,3)
-            attackLoc = l53;
-            center = l34;
+            ans = l34; // (-1,3)
+            attackLoc = l34;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
             ans = null;
             Map.markObstructed(l34);
             return;
         }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l34);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
-            attackLoc = l35;
-            center = l34;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l34);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l34);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l34; // (-1,3)
-            attackLoc = l44;
-            center = l34;
+            attackLoc = l33;
         }
 
 
@@ -14100,79 +13335,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
             attackLoc = l25;
-            center = l34;
-        }
-
-
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
-            ans = null;
-            Map.markObstructed(l34);
-            return;
-        }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l34);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l33; // (-1,2)
-            attackLoc = l15;
-            center = l34;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l34);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l34);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l34; // (-1,3)
-            attackLoc = l52;
-            center = l34;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l34);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l34);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l34; // (-1,3)
-            attackLoc = l34;
-            center = l34;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l34);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l34);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
-            attackLoc = l14;
-            center = l34;
         }
 
 
@@ -14190,7 +13352,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
             attackLoc = l43;
-            center = l34;
+        }
+
+
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+            ans = null;
+            Map.markObstructed(l34);
+            return;
+        }
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l34);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l34; // (-1,3)
+            attackLoc = l35;
         }
 
 
@@ -14208,43 +13386,108 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
             attackLoc = l24;
-            center = l34;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
             ans = null;
             Map.markObstructed(l34);
             return;
         }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l34);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l33; // (-1,2)
-            attackLoc = l51;
-            center = l34;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l34);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l34);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
-            attackLoc = l33;
-            center = l34;
+            attackLoc = l42;
+        }
+
+
+        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+            ans = null;
+            Map.markObstructed(l34);
+            return;
+        }
+        p = m26.getPaint();
+        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l34);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l34; // (-1,3)
+            attackLoc = l26;
+        }
+
+
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+            ans = null;
+            Map.markObstructed(l34);
+            return;
+        }
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l34);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l34; // (-1,3)
+            attackLoc = l44;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l34);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l34);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l34; // (-1,3)
+            attackLoc = l32;
+        }
+
+
+        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+            ans = null;
+            Map.markObstructed(l34);
+            return;
+        }
+        p = m16.getPaint();
+        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l34);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l34; // (-1,3)
+            attackLoc = l16;
+        }
+
+
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+            ans = null;
+            Map.markObstructed(l34);
+            return;
+        }
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l34);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l34; // (-1,3)
+            attackLoc = l52;
         }
 
 
@@ -14262,61 +13505,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
             attackLoc = l23;
-            center = l34;
-        }
-
-
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
-            ans = null;
-            Map.markObstructed(l34);
-            return;
-        }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l34);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l34; // (-1,3)
-            attackLoc = l42;
-            center = l34;
-        }
-
-
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
-            ans = null;
-            Map.markObstructed(l34);
-            return;
-        }
-        p = m50.getPaint();
-        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l34);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l42; // (0,2)
-            attackLoc = l50;
-            center = l34;
-        }
-
-
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
-            ans = null;
-            Map.markObstructed(l34);
-            return;
-        }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l34);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l34; // (-1,3)
-            attackLoc = l32;
-            center = l34;
         }
 
 
@@ -14334,7 +13522,91 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
             attackLoc = l41;
-            center = l34;
+        }
+
+
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+            ans = null;
+            Map.markObstructed(l34);
+            return;
+        }
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l34);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l33; // (-1,2)
+            attackLoc = l15;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l34);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l34);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l33; // (-1,2)
+            attackLoc = l51;
+        }
+
+
+        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+            ans = null;
+            Map.markObstructed(l34);
+            return;
+        }
+        p = m53.getPaint();
+        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l34);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l43; // (0,3)
+            attackLoc = l53;
+        }
+
+
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+            ans = null;
+            Map.markObstructed(l34);
+            return;
+        }
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l34);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l24; // (-2,2)
+            attackLoc = l14;
+        }
+
+
+        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+            ans = null;
+            Map.markObstructed(l34);
+            return;
+        }
+        p = m50.getPaint();
+        if ( Map.isNearRuin(l50) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l34);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l42; // (0,2)
+            attackLoc = l50;
         }
 
 
@@ -14342,151 +13614,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt33() throws GameActionException { // (1,-3)
         center = myLoc.translate(1,-3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
-            ans = null;
-            Map.markObstructed(l46);
-            return;
-        }
-        p = m54.getPaint();
-        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l46);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l46; // (1,-3)
-            attackLoc = l54;
-            center = l46;
-        }
-
-
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
-            ans = null;
-            Map.markObstructed(l46);
-            return;
-        }
-        p = m64.getPaint();
-        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l46);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l46; // (1,-3)
-            attackLoc = l64;
-            center = l46;
-        }
-
-
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
-            ans = null;
-            Map.markObstructed(l46);
-            return;
-        }
-        p = m45.getPaint();
-        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l46);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l46; // (1,-3)
-            attackLoc = l45;
-            center = l46;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l46);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l46);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l37; // (0,-3)
-            attackLoc = l27;
-            center = l46;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l46);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l46);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l46; // (1,-3)
-            attackLoc = l36;
-            center = l46;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l46);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l46);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l65;
-            center = l46;
-        }
-
-
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l46);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l46);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l46; // (1,-3)
-            attackLoc = l55;
-            center = l46;
-        }
-
-
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
-            ans = null;
-            Map.markObstructed(l46);
-            return;
-        }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l46);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
-            attackLoc = l66;
-            center = l46;
-        }
-
-
         if (m46.isWall() || m46.hasRuin()){ // (1,-3)
             ans = null;
             Map.markObstructed(l46);
@@ -14501,25 +13630,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l46; // (1,-3)
             attackLoc = l46;
-            center = l46;
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
             ans = null;
             Map.markObstructed(l46);
             return;
         }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l46);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
-            attackLoc = l28;
-            center = l46;
+            attackLoc = l47;
         }
 
 
@@ -14537,79 +13664,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
             attackLoc = l37;
-            center = l46;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
             ans = null;
             Map.markObstructed(l46);
             return;
         }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l46);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
-            attackLoc = l56;
-            center = l46;
+            attackLoc = l55;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
             ans = null;
             Map.markObstructed(l46);
             return;
         }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l46);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l57;
-            center = l46;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l46);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+        p = m45.getPaint();
+        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l46);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
-            attackLoc = l47;
-            center = l46;
-        }
-
-
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
-            ans = null;
-            Map.markObstructed(l46);
-            return;
-        }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l46);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l47; // (1,-2)
-            attackLoc = l29;
-            center = l46;
+            attackLoc = l45;
         }
 
 
@@ -14627,7 +13715,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
             attackLoc = l38;
-            center = l46;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l46);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l46);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l46; // (1,-3)
+            attackLoc = l56;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l46);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l46);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l46; // (1,-3)
+            attackLoc = l36;
+        }
+
+
+        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+            ans = null;
+            Map.markObstructed(l46);
+            return;
+        }
+        p = m54.getPaint();
+        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l46);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l46; // (1,-3)
+            attackLoc = l54;
         }
 
 
@@ -14645,25 +13783,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
             attackLoc = l48;
-            center = l46;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l46);
             return;
         }
-        p = m30.getPaint();
-        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l46);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l38; // (0,-2)
-            attackLoc = l30;
-            center = l46;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l46; // (1,-3)
+            attackLoc = l28;
+        }
+
+
+        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+            ans = null;
+            Map.markObstructed(l46);
+            return;
+        }
+        p = m64.getPaint();
+        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l46);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l46; // (1,-3)
+            attackLoc = l64;
         }
 
 
@@ -14681,7 +13834,108 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
             attackLoc = l39;
-            center = l46;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l46);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l46);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l29;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l46);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l46);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l57;
+        }
+
+
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+            ans = null;
+            Map.markObstructed(l46);
+            return;
+        }
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l46);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l47; // (1,-2)
+            attackLoc = l65;
+        }
+
+
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+            ans = null;
+            Map.markObstructed(l46);
+            return;
+        }
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l46);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l37; // (0,-3)
+            attackLoc = l27;
+        }
+
+
+        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+            ans = null;
+            Map.markObstructed(l46);
+            return;
+        }
+        p = m30.getPaint();
+        if ( Map.isNearRuin(l30) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l46);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l38; // (0,-2)
+            attackLoc = l30;
+        }
+
+
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+            ans = null;
+            Map.markObstructed(l46);
+            return;
+        }
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l46);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l56; // (2,-2)
+            attackLoc = l66;
         }
 
 
@@ -14689,151 +13943,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt34() throws GameActionException { // (1,3)
         center = myLoc.translate(1,3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
-            ans = null;
-            Map.markObstructed(l52);
-            return;
-        }
-        p = m62.getPaint();
-        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l52);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l52; // (1,3)
-            attackLoc = l62;
-            center = l52;
-        }
-
-
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
-            ans = null;
-            Map.markObstructed(l52);
-            return;
-        }
-        p = m70.getPaint();
-        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l52);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l52; // (1,3)
-            attackLoc = l70;
-            center = l52;
-        }
-
-
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
-            ans = null;
-            Map.markObstructed(l52);
-            return;
-        }
-        p = m53.getPaint();
-        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l52);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l52; // (1,3)
-            attackLoc = l53;
-            center = l52;
-        }
-
-
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
-            ans = null;
-            Map.markObstructed(l52);
-            return;
-        }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l52);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l43; // (0,3)
-            attackLoc = l35;
-            center = l52;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l52);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l52);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l52; // (1,3)
-            attackLoc = l44;
-            center = l52;
-        }
-
-
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l52);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l52);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
-            attackLoc = l69;
-            center = l52;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l52);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l52);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l52; // (1,3)
-            attackLoc = l61;
-            center = l52;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l52);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l52);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
-            attackLoc = l68;
-            center = l52;
-        }
-
-
         if (m52.isWall() || m52.hasRuin()){ // (1,3)
             ans = null;
             Map.markObstructed(l52);
@@ -14848,25 +13959,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l52; // (1,3)
             attackLoc = l52;
-            center = l52;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
             ans = null;
             Map.markObstructed(l52);
             return;
         }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l52);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
-            attackLoc = l34;
-            center = l52;
+            attackLoc = l51;
         }
 
 
@@ -14884,79 +13993,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
             attackLoc = l43;
-            center = l52;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
             ans = null;
             Map.markObstructed(l52);
             return;
         }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l52);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
-            attackLoc = l60;
-            center = l52;
+            attackLoc = l61;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (m53.isWall() || m53.hasRuin()){ // (1,4)
             ans = null;
             Map.markObstructed(l52);
             return;
         }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l52);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
-            attackLoc = l59;
-            center = l52;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l52);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+        p = m53.getPaint();
+        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l52);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
-            attackLoc = l51;
-            center = l52;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l52);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l52);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l51; // (1,2)
-            attackLoc = l33;
-            center = l52;
+            attackLoc = l53;
         }
 
 
@@ -14974,7 +14044,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
             attackLoc = l42;
-            center = l52;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l52);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l52);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l52; // (1,3)
+            attackLoc = l60;
+        }
+
+
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+            ans = null;
+            Map.markObstructed(l52);
+            return;
+        }
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l52);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l52; // (1,3)
+            attackLoc = l44;
+        }
+
+
+        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+            ans = null;
+            Map.markObstructed(l52);
+            return;
+        }
+        p = m62.getPaint();
+        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l52);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l52; // (1,3)
+            attackLoc = l62;
         }
 
 
@@ -14992,25 +14112,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
             attackLoc = l50;
-            center = l52;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
             ans = null;
             Map.markObstructed(l52);
             return;
         }
-        p = m32.getPaint();
-        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l52);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l42; // (0,2)
-            attackLoc = l32;
-            center = l52;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l52; // (1,3)
+            attackLoc = l34;
+        }
+
+
+        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+            ans = null;
+            Map.markObstructed(l52);
+            return;
+        }
+        p = m70.getPaint();
+        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l52);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l52; // (1,3)
+            attackLoc = l70;
         }
 
 
@@ -15028,7 +14163,108 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
             attackLoc = l41;
-            center = l52;
+        }
+
+
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+            ans = null;
+            Map.markObstructed(l52);
+            return;
+        }
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l52);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l51; // (1,2)
+            attackLoc = l59;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l52);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l52);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l51; // (1,2)
+            attackLoc = l33;
+        }
+
+
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+            ans = null;
+            Map.markObstructed(l52);
+            return;
+        }
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l52);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l51; // (1,2)
+            attackLoc = l69;
+        }
+
+
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+            ans = null;
+            Map.markObstructed(l52);
+            return;
+        }
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l52);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l43; // (0,3)
+            attackLoc = l35;
+        }
+
+
+        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+            ans = null;
+            Map.markObstructed(l52);
+            return;
+        }
+        p = m32.getPaint();
+        if ( Map.isNearRuin(l32) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l52);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l42; // (0,2)
+            attackLoc = l32;
+        }
+
+
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+            ans = null;
+            Map.markObstructed(l52);
+            return;
+        }
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l52);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l60; // (2,2)
+            attackLoc = l68;
         }
 
 
@@ -15036,58 +14272,56 @@ public class ResourcePatternManager {
 
     static void checkCenterAt35() throws GameActionException { // (3,-1)
         center = myLoc.translate(3,-1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
             ans = null;
             Map.markObstructed(l66);
             return;
         }
-        p = m74.getPaint();
-        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l66);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l66; // (3,-1)
-            attackLoc = l74;
-            center = l66;
-        }
-
-
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
-            ans = null;
-            Map.markObstructed(l66);
-            return;
-        }
-        p = m64.getPaint();
-        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l66);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l66; // (3,-1)
-            attackLoc = l64;
-            center = l66;
-        }
-
-
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
-            ans = null;
-            Map.markObstructed(l66);
-            return;
-        }
-        p = m77.getPaint();
-        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l66);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l67; // (3,0)
-            attackLoc = l77;
-            center = l66;
+            ans = l66; // (3,-1)
+            attackLoc = l66;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l66);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l66);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l66; // (3,-1)
+            attackLoc = l67;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l66);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l66);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l66; // (3,-1)
+            attackLoc = l57;
         }
 
 
@@ -15105,25 +14339,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
             attackLoc = l75;
-            center = l66;
-        }
-
-
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
-            ans = null;
-            Map.markObstructed(l66);
-            return;
-        }
-        p = m76.getPaint();
-        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l66);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l66; // (3,-1)
-            attackLoc = l76;
-            center = l66;
         }
 
 
@@ -15141,97 +14356,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
             attackLoc = l65;
-            center = l66;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
             ans = null;
             Map.markObstructed(l66);
             return;
         }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l66);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l57; // (2,-1)
-            attackLoc = l55;
-            center = l66;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l66);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l66);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
-            attackLoc = l68;
-            center = l66;
+            attackLoc = l58;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (m76.isWall() || m76.hasRuin()){ // (4,0)
             ans = null;
             Map.markObstructed(l66);
             return;
         }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l66);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l66; // (3,-1)
-            attackLoc = l66;
-            center = l66;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l66);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l66);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
-            attackLoc = l46;
-            center = l66;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l66);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+        p = m76.getPaint();
+        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l66);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
-            attackLoc = l67;
-            center = l66;
+            attackLoc = l76;
         }
 
 
@@ -15249,7 +14407,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
             attackLoc = l56;
-            center = l66;
+        }
+
+
+        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+            ans = null;
+            Map.markObstructed(l66);
+            return;
+        }
+        p = m74.getPaint();
+        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l66);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l66; // (3,-1)
+            attackLoc = l74;
+        }
+
+
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+            ans = null;
+            Map.markObstructed(l66);
+            return;
+        }
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l66);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l66; // (3,-1)
+            attackLoc = l68;
+        }
+
+
+        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+            ans = null;
+            Map.markObstructed(l66);
+            return;
+        }
+        p = m48.getPaint();
+        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l66);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l66; // (3,-1)
+            attackLoc = l48;
+        }
+
+
+        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+            ans = null;
+            Map.markObstructed(l66);
+            return;
+        }
+        p = m64.getPaint();
+        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l66);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l66; // (3,-1)
+            attackLoc = l64;
         }
 
 
@@ -15265,27 +14490,42 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l57; // (2,-1)
+            ans = l67; // (3,0)
             attackLoc = l59;
-            center = l66;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
             ans = null;
             Map.markObstructed(l66);
             return;
         }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l66);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l66; // (3,-1)
-            attackLoc = l57;
-            center = l66;
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l67; // (3,0)
+            attackLoc = l49;
+        }
+
+
+        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+            ans = null;
+            Map.markObstructed(l66);
+            return;
+        }
+        p = m77.getPaint();
+        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l66);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l67; // (3,0)
+            attackLoc = l77;
         }
 
 
@@ -15303,25 +14543,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l57; // (2,-1)
             attackLoc = l47;
-            center = l66;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
             ans = null;
             Map.markObstructed(l66);
             return;
         }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l66);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l66; // (3,-1)
-            attackLoc = l58;
-            center = l66;
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l57; // (2,-1)
+            attackLoc = l55;
         }
 
 
@@ -15339,43 +14577,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l58; // (2,0)
             attackLoc = l50;
-            center = l66;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
             ans = null;
             Map.markObstructed(l66);
             return;
         }
-        p = m48.getPaint();
-        if ( Map.isNearRuin(l48) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l66);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l66; // (3,-1)
-            attackLoc = l48;
-            center = l66;
-        }
-
-
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
-            ans = null;
-            Map.markObstructed(l66);
-            return;
-        }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l66);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l57; // (2,-1)
-            attackLoc = l49;
-            center = l66;
+            ans = l56; // (2,-2)
+            attackLoc = l46;
         }
 
 
@@ -15383,133 +14601,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt36() throws GameActionException { // (3,1)
         center = myLoc.translate(3,1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
-            ans = null;
-            Map.markObstructed(l68);
-            return;
-        }
-        p = m78.getPaint();
-        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l68);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l68; // (3,1)
-            attackLoc = l78;
-            center = l68;
-        }
-
-
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
-            ans = null;
-            Map.markObstructed(l68);
-            return;
-        }
-        p = m70.getPaint();
-        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l68);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l68; // (3,1)
-            attackLoc = l70;
-            center = l68;
-        }
-
-
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
-            ans = null;
-            Map.markObstructed(l68);
-            return;
-        }
-        p = m77.getPaint();
-        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l68);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l68; // (3,1)
-            attackLoc = l77;
-            center = l68;
-        }
-
-
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
-            ans = null;
-            Map.markObstructed(l68);
-            return;
-        }
-        p = m75.getPaint();
-        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l68);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l67; // (3,0)
-            attackLoc = l75;
-            center = l68;
-        }
-
-
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
-            ans = null;
-            Map.markObstructed(l68);
-            return;
-        }
-        p = m76.getPaint();
-        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l68);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l68; // (3,1)
-            attackLoc = l76;
-            center = l68;
-        }
-
-
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l68);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l68);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l68; // (3,1)
-            attackLoc = l69;
-            center = l68;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l68);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l68);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l59; // (2,1)
-            attackLoc = l61;
-            center = l68;
-        }
-
-
         if (m68.isWall() || m68.hasRuin()){ // (3,1)
             ans = null;
             Map.markObstructed(l68);
@@ -15524,43 +14617,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l68; // (3,1)
             attackLoc = l68;
-            center = l68;
-        }
-
-
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
-            ans = null;
-            Map.markObstructed(l68);
-            return;
-        }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l68);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l68; // (3,1)
-            attackLoc = l66;
-            center = l68;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l68);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l68);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
-            attackLoc = l52;
-            center = l68;
         }
 
 
@@ -15578,25 +14634,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
             attackLoc = l67;
-            center = l68;
-        }
-
-
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
-            ans = null;
-            Map.markObstructed(l68);
-            return;
-        }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l68);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l68; // (3,1)
-            attackLoc = l60;
-            center = l68;
         }
 
 
@@ -15614,43 +14651,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
             attackLoc = l59;
-            center = l68;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (m77.isWall() || m77.hasRuin()){ // (4,1)
             ans = null;
             Map.markObstructed(l68);
             return;
         }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+        p = m77.getPaint();
+        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l68);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l59; // (2,1)
-            attackLoc = l57;
-            center = l68;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l68; // (3,1)
+            attackLoc = l77;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
             ans = null;
             Map.markObstructed(l68);
             return;
         }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l68);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l59; // (2,1)
-            attackLoc = l51;
-            center = l68;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l68; // (3,1)
+            attackLoc = l69;
         }
 
 
@@ -15668,7 +14702,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
             attackLoc = l58;
-            center = l68;
+        }
+
+
+        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+            ans = null;
+            Map.markObstructed(l68);
+            return;
+        }
+        p = m76.getPaint();
+        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l68);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l68; // (3,1)
+            attackLoc = l76;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l68);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l68);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l68; // (3,1)
+            attackLoc = l60;
+        }
+
+
+        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+            ans = null;
+            Map.markObstructed(l68);
+            return;
+        }
+        p = m78.getPaint();
+        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l68);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l68; // (3,1)
+            attackLoc = l78;
+        }
+
+
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+            ans = null;
+            Map.markObstructed(l68);
+            return;
+        }
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l68);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l68; // (3,1)
+            attackLoc = l66;
         }
 
 
@@ -15686,7 +14787,108 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
             attackLoc = l50;
-            center = l68;
+        }
+
+
+        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+            ans = null;
+            Map.markObstructed(l68);
+            return;
+        }
+        p = m70.getPaint();
+        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l68);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l68; // (3,1)
+            attackLoc = l70;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l68);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l68);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l67; // (3,0)
+            attackLoc = l57;
+        }
+
+
+        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+            ans = null;
+            Map.markObstructed(l68);
+            return;
+        }
+        p = m75.getPaint();
+        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l68);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l67; // (3,0)
+            attackLoc = l75;
+        }
+
+
+        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+            ans = null;
+            Map.markObstructed(l68);
+            return;
+        }
+        p = m49.getPaint();
+        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l68);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l67; // (3,0)
+            attackLoc = l49;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l68);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l68);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l59; // (2,1)
+            attackLoc = l51;
+        }
+
+
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+            ans = null;
+            Map.markObstructed(l68);
+            return;
+        }
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l68);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l59; // (2,1)
+            attackLoc = l61;
         }
 
 
@@ -15704,25 +14906,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l58; // (2,0)
             attackLoc = l48;
-            center = l68;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
             ans = null;
             Map.markObstructed(l68);
             return;
         }
-        p = m49.getPaint();
-        if ( Map.isNearRuin(l49) && !maxT || p.isEnemy()){
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l68);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l59; // (2,1)
-            attackLoc = l49;
-            center = l68;
+            ans = l60; // (2,2)
+            attackLoc = l52;
         }
 
 
@@ -15730,133 +14930,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt37() throws GameActionException { // (-3,-2)
         center = myLoc.translate(-3,-2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
-            ans = null;
-            Map.markObstructed(l11);
-            return;
-        }
-        p = m18.getPaint();
-        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l11);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l18;
-            center = l11;
-        }
-
-
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
-            ans = null;
-            Map.markObstructed(l11);
-            return;
-        }
-        p = m2.getPaint();
-        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l11);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l11; // (-3,-2)
-            attackLoc = l2;
-            center = l11;
-        }
-
-
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
-            ans = null;
-            Map.markObstructed(l11);
-            return;
-        }
-        p = m10.getPaint();
-        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l11);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l11; // (-3,-2)
-            attackLoc = l10;
-            center = l11;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l11);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l11);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l19; // (-2,-3)
-            attackLoc = l27;
-            center = l11;
-        }
-
-
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
-            ans = null;
-            Map.markObstructed(l11);
-            return;
-        }
-        p = m3.getPaint();
-        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l11);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l11; // (-3,-2)
-            attackLoc = l3;
-            center = l11;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l11);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l11);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l4;
-            center = l11;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l11);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l11);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l11; // (-3,-2)
-            attackLoc = l19;
-            center = l11;
-        }
-
-
         if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l11);
@@ -15871,61 +14946,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l11; // (-3,-2)
             attackLoc = l11;
-            center = l11;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l11);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l11);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l28;
-            center = l11;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l11);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l11);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l11; // (-3,-2)
-            attackLoc = l12;
-            center = l11;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l11);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l11);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l11; // (-3,-2)
-            attackLoc = l13;
-            center = l11;
         }
 
 
@@ -15943,25 +14963,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l11; // (-3,-2)
             attackLoc = l20;
-            center = l11;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l11);
             return;
         }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l11);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l11; // (-3,-2)
-            attackLoc = l29;
-            center = l11;
+            attackLoc = l12;
+        }
+
+
+        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+            ans = null;
+            Map.markObstructed(l11);
+            return;
+        }
+        p = m10.getPaint();
+        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l11);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l11; // (-3,-2)
+            attackLoc = l10;
+        }
+
+
+        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+            ans = null;
+            Map.markObstructed(l11);
+            return;
+        }
+        p = m2.getPaint();
+        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l11);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l11; // (-3,-2)
+            attackLoc = l2;
         }
 
 
@@ -15979,25 +15031,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l11; // (-3,-2)
             attackLoc = l21;
-            center = l11;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l11);
             return;
         }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l11);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l22;
-            center = l11;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l11; // (-3,-2)
+            attackLoc = l19;
+        }
+
+
+        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+            ans = null;
+            Map.markObstructed(l11);
+            return;
+        }
+        p = m3.getPaint();
+        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l11);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l11; // (-3,-2)
+            attackLoc = l3;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l11);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l11);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l11; // (-3,-2)
+            attackLoc = l29;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l11);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l11);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l11; // (-3,-2)
+            attackLoc = l13;
         }
 
 
@@ -16015,7 +15116,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
             attackLoc = l30;
-            center = l11;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l11);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l11);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l22;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l11);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l11);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l28;
+        }
+
+
+        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+            ans = null;
+            Map.markObstructed(l11);
+            return;
+        }
+        p = m18.getPaint();
+        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l11);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l18;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l11);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l11);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l4;
         }
 
 
@@ -16033,7 +15201,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
             attackLoc = l31;
-            center = l11;
+        }
+
+
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+            ans = null;
+            Map.markObstructed(l11);
+            return;
+        }
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l11);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l19; // (-2,-3)
+            attackLoc = l27;
         }
 
 
@@ -16041,133 +15225,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt38() throws GameActionException { // (-3,2)
         center = myLoc.translate(-3,2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
-            ans = null;
-            Map.markObstructed(l15);
-            return;
-        }
-        p = m26.getPaint();
-        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l15);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
-            attackLoc = l26;
-            center = l15;
-        }
-
-
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
-            ans = null;
-            Map.markObstructed(l15);
-            return;
-        }
-        p = m6.getPaint();
-        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l15);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l15; // (-3,2)
-            attackLoc = l6;
-            center = l15;
-        }
-
-
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
-            ans = null;
-            Map.markObstructed(l15);
-            return;
-        }
-        p = m16.getPaint();
-        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l15);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l15; // (-3,2)
-            attackLoc = l16;
-            center = l15;
-        }
-
-
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
-            ans = null;
-            Map.markObstructed(l15);
-            return;
-        }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l15);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l25; // (-2,3)
-            attackLoc = l35;
-            center = l15;
-        }
-
-
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
-            ans = null;
-            Map.markObstructed(l15);
-            return;
-        }
-        p = m5.getPaint();
-        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l15);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l15; // (-3,2)
-            attackLoc = l5;
-            center = l15;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l15);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l15);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l14; // (-3,1)
-            attackLoc = l4;
-            center = l15;
-        }
-
-
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
-            ans = null;
-            Map.markObstructed(l15);
-            return;
-        }
-        p = m25.getPaint();
-        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l15);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l15; // (-3,2)
-            attackLoc = l25;
-            center = l15;
-        }
-
-
         if (m15.isWall() || m15.hasRuin()){ // (-3,2)
             ans = null;
             Map.markObstructed(l15);
@@ -16182,25 +15241,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l15; // (-3,2)
             attackLoc = l15;
-            center = l15;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l15);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l15);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
-            attackLoc = l34;
-            center = l15;
         }
 
 
@@ -16218,25 +15258,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
             attackLoc = l14;
-            center = l15;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l15);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l15);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l15; // (-3,2)
-            attackLoc = l13;
-            center = l15;
         }
 
 
@@ -16254,25 +15275,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
             attackLoc = l24;
-            center = l15;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
             ans = null;
             Map.markObstructed(l15);
             return;
         }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+        p = m6.getPaint();
+        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l15);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
-            attackLoc = l33;
-            center = l15;
+            attackLoc = l6;
+        }
+
+
+        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+            ans = null;
+            Map.markObstructed(l15);
+            return;
+        }
+        p = m16.getPaint();
+        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l15);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l15; // (-3,2)
+            attackLoc = l16;
         }
 
 
@@ -16290,7 +15326,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
             attackLoc = l23;
-            center = l15;
+        }
+
+
+        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+            ans = null;
+            Map.markObstructed(l15);
+            return;
+        }
+        p = m5.getPaint();
+        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l15);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l15; // (-3,2)
+            attackLoc = l5;
+        }
+
+
+        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+            ans = null;
+            Map.markObstructed(l15);
+            return;
+        }
+        p = m25.getPaint();
+        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l15);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l15; // (-3,2)
+            attackLoc = l25;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l15);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l15);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l15; // (-3,2)
+            attackLoc = l13;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l15);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l15);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l15; // (-3,2)
+            attackLoc = l33;
         }
 
 
@@ -16306,9 +15409,25 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
+            ans = l14; // (-3,1)
             attackLoc = l22;
-            center = l15;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l15);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l15);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l14; // (-3,1)
+            attackLoc = l4;
         }
 
 
@@ -16324,9 +15443,42 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
+            ans = l14; // (-3,1)
             attackLoc = l32;
-            center = l15;
+        }
+
+
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+            ans = null;
+            Map.markObstructed(l15);
+            return;
+        }
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l15);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l24; // (-2,2)
+            attackLoc = l34;
+        }
+
+
+        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+            ans = null;
+            Map.markObstructed(l15);
+            return;
+        }
+        p = m26.getPaint();
+        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l15);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l24; // (-2,2)
+            attackLoc = l26;
         }
 
 
@@ -16344,7 +15496,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
             attackLoc = l31;
-            center = l15;
+        }
+
+
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+            ans = null;
+            Map.markObstructed(l15);
+            return;
+        }
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l15);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l25; // (-2,3)
+            attackLoc = l35;
         }
 
 
@@ -16352,115 +15520,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt39() throws GameActionException { // (-2,-3)
         center = myLoc.translate(-2,-3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
-            ans = null;
-            Map.markObstructed(l19);
-            return;
-        }
-        p = m18.getPaint();
-        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l19);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l19; // (-2,-3)
-            attackLoc = l18;
-            center = l19;
-        }
-
-
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
-            ans = null;
-            Map.markObstructed(l19);
-            return;
-        }
-        p = m2.getPaint();
-        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l19);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l2;
-            center = l19;
-        }
-
-
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
-            ans = null;
-            Map.markObstructed(l19);
-            return;
-        }
-        p = m10.getPaint();
-        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l19);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l19; // (-2,-3)
-            attackLoc = l10;
-            center = l19;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l19);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l19);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l19; // (-2,-3)
-            attackLoc = l27;
-            center = l19;
-        }
-
-
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
-            ans = null;
-            Map.markObstructed(l19);
-            return;
-        }
-        p = m3.getPaint();
-        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l19);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l11; // (-3,-2)
-            attackLoc = l3;
-            center = l19;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l19);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l19);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l36;
-            center = l19;
-        }
-
-
         if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l19);
@@ -16475,79 +15536,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l19; // (-2,-3)
             attackLoc = l19;
-            center = l19;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l19);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l19);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l19; // (-2,-3)
-            attackLoc = l11;
-            center = l19;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l19);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l19);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l19; // (-2,-3)
-            attackLoc = l28;
-            center = l19;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l19);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l19);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l20; // (-2,-2)
-            attackLoc = l12;
-            center = l19;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l19);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l19);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l19; // (-2,-3)
-            attackLoc = l37;
-            center = l19;
         }
 
 
@@ -16565,7 +15553,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l19; // (-2,-3)
             attackLoc = l20;
-            center = l19;
+        }
+
+
+        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+            ans = null;
+            Map.markObstructed(l19);
+            return;
+        }
+        p = m10.getPaint();
+        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l19);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l19; // (-2,-3)
+            attackLoc = l10;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l19);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l19);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l19; // (-2,-3)
+            attackLoc = l28;
+        }
+
+
+        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+            ans = null;
+            Map.markObstructed(l19);
+            return;
+        }
+        p = m18.getPaint();
+        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l19);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l19; // (-2,-3)
+            attackLoc = l18;
+        }
+
+
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+            ans = null;
+            Map.markObstructed(l19);
+            return;
+        }
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l19);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l19; // (-2,-3)
+            attackLoc = l11;
         }
 
 
@@ -16583,7 +15638,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l19; // (-2,-3)
             attackLoc = l29;
-            center = l19;
+        }
+
+
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+            ans = null;
+            Map.markObstructed(l19);
+            return;
+        }
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l19);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l19; // (-2,-3)
+            attackLoc = l27;
         }
 
 
@@ -16601,25 +15672,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l19; // (-2,-3)
             attackLoc = l21;
-            center = l19;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
             ans = null;
             Map.markObstructed(l19);
             return;
         }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l19);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l19; // (-2,-3)
+            attackLoc = l37;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l19);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l19);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l38;
-            center = l19;
+            attackLoc = l12;
         }
 
 
@@ -16637,7 +15723,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
             attackLoc = l30;
-            center = l19;
+        }
+
+
+        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+            ans = null;
+            Map.markObstructed(l19);
+            return;
+        }
+        p = m2.getPaint();
+        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l19);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l2;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l19);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l19);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l20; // (-2,-2)
+            attackLoc = l38;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l19);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l19);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l36;
+        }
+
+
+        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+            ans = null;
+            Map.markObstructed(l19);
+            return;
+        }
+        p = m3.getPaint();
+        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l19);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l11; // (-3,-2)
+            attackLoc = l3;
         }
 
 
@@ -16655,7 +15808,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
             attackLoc = l39;
-            center = l19;
         }
 
 
@@ -16663,115 +15815,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt40() throws GameActionException { // (-2,3)
         center = myLoc.translate(-2,3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
-            ans = null;
-            Map.markObstructed(l25);
-            return;
-        }
-        p = m26.getPaint();
-        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l25);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l25; // (-2,3)
-            attackLoc = l26;
-            center = l25;
-        }
-
-
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
-            ans = null;
-            Map.markObstructed(l25);
-            return;
-        }
-        p = m6.getPaint();
-        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l25);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
-            attackLoc = l6;
-            center = l25;
-        }
-
-
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
-            ans = null;
-            Map.markObstructed(l25);
-            return;
-        }
-        p = m16.getPaint();
-        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l25);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l25; // (-2,3)
-            attackLoc = l16;
-            center = l25;
-        }
-
-
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
-            ans = null;
-            Map.markObstructed(l25);
-            return;
-        }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l25);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l25; // (-2,3)
-            attackLoc = l35;
-            center = l25;
-        }
-
-
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
-            ans = null;
-            Map.markObstructed(l25);
-            return;
-        }
-        p = m5.getPaint();
-        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l25);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l15; // (-3,2)
-            attackLoc = l5;
-            center = l25;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l25);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l25);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l34; // (-1,3)
-            attackLoc = l44;
-            center = l25;
-        }
-
-
         if (m25.isWall() || m25.hasRuin()){ // (-2,3)
             ans = null;
             Map.markObstructed(l25);
@@ -16786,79 +15831,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l25; // (-2,3)
             attackLoc = l25;
-            center = l25;
-        }
-
-
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
-            ans = null;
-            Map.markObstructed(l25);
-            return;
-        }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l25);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l25; // (-2,3)
-            attackLoc = l15;
-            center = l25;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l25);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l25);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l25; // (-2,3)
-            attackLoc = l34;
-            center = l25;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l25);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l25);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l24; // (-2,2)
-            attackLoc = l14;
-            center = l25;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l25);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l25);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l25; // (-2,3)
-            attackLoc = l43;
-            center = l25;
         }
 
 
@@ -16876,7 +15848,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l25; // (-2,3)
             attackLoc = l24;
-            center = l25;
+        }
+
+
+        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+            ans = null;
+            Map.markObstructed(l25);
+            return;
+        }
+        p = m16.getPaint();
+        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l25);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l25; // (-2,3)
+            attackLoc = l16;
+        }
+
+
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+            ans = null;
+            Map.markObstructed(l25);
+            return;
+        }
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l25);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l25; // (-2,3)
+            attackLoc = l34;
+        }
+
+
+        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+            ans = null;
+            Map.markObstructed(l25);
+            return;
+        }
+        p = m26.getPaint();
+        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l25);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l25; // (-2,3)
+            attackLoc = l26;
+        }
+
+
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+            ans = null;
+            Map.markObstructed(l25);
+            return;
+        }
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l25);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l25; // (-2,3)
+            attackLoc = l15;
         }
 
 
@@ -16894,7 +15933,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l25; // (-2,3)
             attackLoc = l33;
-            center = l25;
+        }
+
+
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+            ans = null;
+            Map.markObstructed(l25);
+            return;
+        }
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l25);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l25; // (-2,3)
+            attackLoc = l35;
         }
 
 
@@ -16912,25 +15967,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l25; // (-2,3)
             attackLoc = l23;
-            center = l25;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
             ans = null;
             Map.markObstructed(l25);
             return;
         }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l25);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l25; // (-2,3)
+            attackLoc = l43;
+        }
+
+
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+            ans = null;
+            Map.markObstructed(l25);
+            return;
+        }
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l25);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
-            attackLoc = l42;
-            center = l25;
+            attackLoc = l14;
         }
 
 
@@ -16948,7 +16018,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
             attackLoc = l32;
-            center = l25;
+        }
+
+
+        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+            ans = null;
+            Map.markObstructed(l25);
+            return;
+        }
+        p = m6.getPaint();
+        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l25);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l24; // (-2,2)
+            attackLoc = l6;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l25);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l25);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l24; // (-2,2)
+            attackLoc = l42;
+        }
+
+
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+            ans = null;
+            Map.markObstructed(l25);
+            return;
+        }
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l25);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l34; // (-1,3)
+            attackLoc = l44;
+        }
+
+
+        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+            ans = null;
+            Map.markObstructed(l25);
+            return;
+        }
+        p = m5.getPaint();
+        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l25);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l15; // (-3,2)
+            attackLoc = l5;
         }
 
 
@@ -16966,7 +16103,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
             attackLoc = l41;
-            center = l25;
         }
 
 
@@ -16974,133 +16110,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt41() throws GameActionException { // (2,-3)
         center = myLoc.translate(2,-3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
-            ans = null;
-            Map.markObstructed(l55);
-            return;
-        }
-        p = m74.getPaint();
-        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l55);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
-            attackLoc = l74;
-            center = l55;
-        }
-
-
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
-            ans = null;
-            Map.markObstructed(l55);
-            return;
-        }
-        p = m54.getPaint();
-        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l55);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l55; // (2,-3)
-            attackLoc = l54;
-            center = l55;
-        }
-
-
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
-            ans = null;
-            Map.markObstructed(l55);
-            return;
-        }
-        p = m64.getPaint();
-        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l55);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l55; // (2,-3)
-            attackLoc = l64;
-            center = l55;
-        }
-
-
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
-            ans = null;
-            Map.markObstructed(l55);
-            return;
-        }
-        p = m75.getPaint();
-        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l55);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l65; // (3,-2)
-            attackLoc = l75;
-            center = l55;
-        }
-
-
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
-            ans = null;
-            Map.markObstructed(l55);
-            return;
-        }
-        p = m45.getPaint();
-        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l55);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l55; // (2,-3)
-            attackLoc = l45;
-            center = l55;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l55);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l55);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l46; // (1,-3)
-            attackLoc = l36;
-            center = l55;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l55);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l55);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l55; // (2,-3)
-            attackLoc = l65;
-            center = l55;
-        }
-
-
         if (m55.isWall() || m55.hasRuin()){ // (2,-3)
             ans = null;
             Map.markObstructed(l55);
@@ -17115,61 +16126,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l55; // (2,-3)
             attackLoc = l55;
-            center = l55;
-        }
-
-
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
-            ans = null;
-            Map.markObstructed(l55);
-            return;
-        }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l55);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
-            attackLoc = l66;
-            center = l55;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l55);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l55);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l55; // (2,-3)
-            attackLoc = l46;
-            center = l55;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l55);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l55);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l55; // (2,-3)
-            attackLoc = l37;
-            center = l55;
         }
 
 
@@ -17187,25 +16143,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l55; // (2,-3)
             attackLoc = l56;
-            center = l55;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
             ans = null;
             Map.markObstructed(l55);
             return;
         }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l55);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l55; // (2,-3)
-            attackLoc = l57;
-            center = l55;
+            attackLoc = l46;
+        }
+
+
+        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+            ans = null;
+            Map.markObstructed(l55);
+            return;
+        }
+        p = m64.getPaint();
+        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l55);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l55; // (2,-3)
+            attackLoc = l64;
+        }
+
+
+        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+            ans = null;
+            Map.markObstructed(l55);
+            return;
+        }
+        p = m54.getPaint();
+        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l55);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l55; // (2,-3)
+            attackLoc = l54;
         }
 
 
@@ -17223,25 +16211,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l55; // (2,-3)
             attackLoc = l47;
-            center = l55;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
             ans = null;
             Map.markObstructed(l55);
             return;
         }
-        p = m38.getPaint();
-        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l55);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
-            attackLoc = l38;
-            center = l55;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l55; // (2,-3)
+            attackLoc = l65;
+        }
+
+
+        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+            ans = null;
+            Map.markObstructed(l55);
+            return;
+        }
+        p = m45.getPaint();
+        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l55);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l55; // (2,-3)
+            attackLoc = l45;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l55);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l55);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l55; // (2,-3)
+            attackLoc = l57;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l55);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l55);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l55; // (2,-3)
+            attackLoc = l37;
         }
 
 
@@ -17259,7 +16296,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
             attackLoc = l48;
-            center = l55;
+        }
+
+
+        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+            ans = null;
+            Map.markObstructed(l55);
+            return;
+        }
+        p = m38.getPaint();
+        if ( Map.isNearRuin(l38) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l55);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l56; // (2,-2)
+            attackLoc = l38;
+        }
+
+
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+            ans = null;
+            Map.markObstructed(l55);
+            return;
+        }
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l55);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l56; // (2,-2)
+            attackLoc = l66;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l55);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l55);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l46; // (1,-3)
+            attackLoc = l36;
+        }
+
+
+        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+            ans = null;
+            Map.markObstructed(l55);
+            return;
+        }
+        p = m74.getPaint();
+        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l55);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l56; // (2,-2)
+            attackLoc = l74;
         }
 
 
@@ -17277,7 +16381,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
             attackLoc = l39;
-            center = l55;
+        }
+
+
+        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+            ans = null;
+            Map.markObstructed(l55);
+            return;
+        }
+        p = m75.getPaint();
+        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l55);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l65; // (3,-2)
+            attackLoc = l75;
         }
 
 
@@ -17285,133 +16405,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt42() throws GameActionException { // (2,3)
         center = myLoc.translate(2,3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
-            ans = null;
-            Map.markObstructed(l61);
-            return;
-        }
-        p = m78.getPaint();
-        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l61);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
-            attackLoc = l78;
-            center = l61;
-        }
-
-
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
-            ans = null;
-            Map.markObstructed(l61);
-            return;
-        }
-        p = m62.getPaint();
-        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l61);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l61; // (2,3)
-            attackLoc = l62;
-            center = l61;
-        }
-
-
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
-            ans = null;
-            Map.markObstructed(l61);
-            return;
-        }
-        p = m70.getPaint();
-        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l61);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l61; // (2,3)
-            attackLoc = l70;
-            center = l61;
-        }
-
-
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
-            ans = null;
-            Map.markObstructed(l61);
-            return;
-        }
-        p = m77.getPaint();
-        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l61);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l69; // (3,2)
-            attackLoc = l77;
-            center = l61;
-        }
-
-
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
-            ans = null;
-            Map.markObstructed(l61);
-            return;
-        }
-        p = m53.getPaint();
-        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l61);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l61; // (2,3)
-            attackLoc = l53;
-            center = l61;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l61);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l61);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l52; // (1,3)
-            attackLoc = l44;
-            center = l61;
-        }
-
-
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l61);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l61);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l61; // (2,3)
-            attackLoc = l69;
-            center = l61;
-        }
-
-
         if (m61.isWall() || m61.hasRuin()){ // (2,3)
             ans = null;
             Map.markObstructed(l61);
@@ -17426,61 +16421,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l61; // (2,3)
             attackLoc = l61;
-            center = l61;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l61);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l61);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
-            attackLoc = l68;
-            center = l61;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l61);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l61);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l61; // (2,3)
-            attackLoc = l52;
-            center = l61;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l61);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l61);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l61; // (2,3)
-            attackLoc = l43;
-            center = l61;
         }
 
 
@@ -17498,25 +16438,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l61; // (2,3)
             attackLoc = l60;
-            center = l61;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
             ans = null;
             Map.markObstructed(l61);
             return;
         }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l61);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l61; // (2,3)
-            attackLoc = l59;
-            center = l61;
+            attackLoc = l52;
+        }
+
+
+        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+            ans = null;
+            Map.markObstructed(l61);
+            return;
+        }
+        p = m70.getPaint();
+        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l61);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l61; // (2,3)
+            attackLoc = l70;
+        }
+
+
+        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+            ans = null;
+            Map.markObstructed(l61);
+            return;
+        }
+        p = m62.getPaint();
+        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l61);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l61; // (2,3)
+            attackLoc = l62;
         }
 
 
@@ -17534,25 +16506,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l61; // (2,3)
             attackLoc = l51;
-            center = l61;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
             ans = null;
             Map.markObstructed(l61);
             return;
         }
-        p = m42.getPaint();
-        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l61);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
-            attackLoc = l42;
-            center = l61;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l61; // (2,3)
+            attackLoc = l69;
+        }
+
+
+        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+            ans = null;
+            Map.markObstructed(l61);
+            return;
+        }
+        p = m53.getPaint();
+        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l61);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l61; // (2,3)
+            attackLoc = l53;
+        }
+
+
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+            ans = null;
+            Map.markObstructed(l61);
+            return;
+        }
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l61);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l61; // (2,3)
+            attackLoc = l59;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l61);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l61);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l61; // (2,3)
+            attackLoc = l43;
         }
 
 
@@ -17570,7 +16591,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
             attackLoc = l50;
-            center = l61;
+        }
+
+
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+            ans = null;
+            Map.markObstructed(l61);
+            return;
+        }
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l61);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l60; // (2,2)
+            attackLoc = l68;
+        }
+
+
+        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+            ans = null;
+            Map.markObstructed(l61);
+            return;
+        }
+        p = m42.getPaint();
+        if ( Map.isNearRuin(l42) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l61);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l60; // (2,2)
+            attackLoc = l42;
+        }
+
+
+        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+            ans = null;
+            Map.markObstructed(l61);
+            return;
+        }
+        p = m78.getPaint();
+        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l61);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l60; // (2,2)
+            attackLoc = l78;
+        }
+
+
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+            ans = null;
+            Map.markObstructed(l61);
+            return;
+        }
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l61);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l52; // (1,3)
+            attackLoc = l44;
         }
 
 
@@ -17588,7 +16676,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
             attackLoc = l41;
-            center = l61;
+        }
+
+
+        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+            ans = null;
+            Map.markObstructed(l61);
+            return;
+        }
+        p = m77.getPaint();
+        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l61);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l69; // (3,2)
+            attackLoc = l77;
         }
 
 
@@ -17596,115 +16700,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt43() throws GameActionException { // (3,-2)
         center = myLoc.translate(3,-2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
-            ans = null;
-            Map.markObstructed(l65);
-            return;
-        }
-        p = m74.getPaint();
-        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l65);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l65; // (3,-2)
-            attackLoc = l74;
-            center = l65;
-        }
-
-
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
-            ans = null;
-            Map.markObstructed(l65);
-            return;
-        }
-        p = m54.getPaint();
-        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l65);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
-            attackLoc = l54;
-            center = l65;
-        }
-
-
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
-            ans = null;
-            Map.markObstructed(l65);
-            return;
-        }
-        p = m64.getPaint();
-        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l65);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l65; // (3,-2)
-            attackLoc = l64;
-            center = l65;
-        }
-
-
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
-            ans = null;
-            Map.markObstructed(l65);
-            return;
-        }
-        p = m75.getPaint();
-        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l65);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l65; // (3,-2)
-            attackLoc = l75;
-            center = l65;
-        }
-
-
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
-            ans = null;
-            Map.markObstructed(l65);
-            return;
-        }
-        p = m45.getPaint();
-        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l65);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l55; // (2,-3)
-            attackLoc = l45;
-            center = l65;
-        }
-
-
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
-            ans = null;
-            Map.markObstructed(l65);
-            return;
-        }
-        p = m76.getPaint();
-        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l65);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l66; // (3,-1)
-            attackLoc = l76;
-            center = l65;
-        }
-
-
         if (m65.isWall() || m65.hasRuin()){ // (3,-2)
             ans = null;
             Map.markObstructed(l65);
@@ -17719,25 +16716,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l65; // (3,-2)
             attackLoc = l65;
-            center = l65;
-        }
-
-
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l65);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l65);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l65; // (3,-2)
-            attackLoc = l55;
-            center = l65;
         }
 
 
@@ -17755,43 +16733,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
             attackLoc = l66;
-            center = l65;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l65);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l65);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
-            attackLoc = l46;
-            center = l65;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l65);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l65);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l65; // (3,-2)
-            attackLoc = l67;
-            center = l65;
         }
 
 
@@ -17809,7 +16750,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
             attackLoc = l56;
-            center = l65;
+        }
+
+
+        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+            ans = null;
+            Map.markObstructed(l65);
+            return;
+        }
+        p = m74.getPaint();
+        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l65);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l65; // (3,-2)
+            attackLoc = l74;
+        }
+
+
+        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+            ans = null;
+            Map.markObstructed(l65);
+            return;
+        }
+        p = m64.getPaint();
+        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l65);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l65; // (3,-2)
+            attackLoc = l64;
         }
 
 
@@ -17827,7 +16801,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
             attackLoc = l57;
-            center = l65;
+        }
+
+
+        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+            ans = null;
+            Map.markObstructed(l65);
+            return;
+        }
+        p = m75.getPaint();
+        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l65);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l65; // (3,-2)
+            attackLoc = l75;
+        }
+
+
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+            ans = null;
+            Map.markObstructed(l65);
+            return;
+        }
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l65);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l65; // (3,-2)
+            attackLoc = l55;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l65);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l65);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l65; // (3,-2)
+            attackLoc = l67;
         }
 
 
@@ -17845,7 +16869,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
             attackLoc = l47;
-            center = l65;
         }
 
 
@@ -17861,9 +16884,25 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
+            ans = l66; // (3,-1)
             attackLoc = l58;
-            center = l65;
+        }
+
+
+        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+            ans = null;
+            Map.markObstructed(l65);
+            return;
+        }
+        p = m76.getPaint();
+        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l65);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l66; // (3,-1)
+            attackLoc = l76;
         }
 
 
@@ -17879,9 +16918,42 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l56; // (2,-2)
+            ans = l66; // (3,-1)
             attackLoc = l48;
-            center = l65;
+        }
+
+
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+            ans = null;
+            Map.markObstructed(l65);
+            return;
+        }
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l65);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l56; // (2,-2)
+            attackLoc = l46;
+        }
+
+
+        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+            ans = null;
+            Map.markObstructed(l65);
+            return;
+        }
+        p = m54.getPaint();
+        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l65);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l56; // (2,-2)
+            attackLoc = l54;
         }
 
 
@@ -17899,7 +16971,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l57; // (2,-1)
             attackLoc = l49;
-            center = l65;
+        }
+
+
+        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+            ans = null;
+            Map.markObstructed(l65);
+            return;
+        }
+        p = m45.getPaint();
+        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l65);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l55; // (2,-3)
+            attackLoc = l45;
         }
 
 
@@ -17907,115 +16995,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt44() throws GameActionException { // (3,2)
         center = myLoc.translate(3,2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
-            ans = null;
-            Map.markObstructed(l69);
-            return;
-        }
-        p = m78.getPaint();
-        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l69);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l69; // (3,2)
-            attackLoc = l78;
-            center = l69;
-        }
-
-
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
-            ans = null;
-            Map.markObstructed(l69);
-            return;
-        }
-        p = m62.getPaint();
-        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l69);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
-            attackLoc = l62;
-            center = l69;
-        }
-
-
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
-            ans = null;
-            Map.markObstructed(l69);
-            return;
-        }
-        p = m70.getPaint();
-        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l69);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l69; // (3,2)
-            attackLoc = l70;
-            center = l69;
-        }
-
-
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
-            ans = null;
-            Map.markObstructed(l69);
-            return;
-        }
-        p = m77.getPaint();
-        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l69);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l69; // (3,2)
-            attackLoc = l77;
-            center = l69;
-        }
-
-
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
-            ans = null;
-            Map.markObstructed(l69);
-            return;
-        }
-        p = m53.getPaint();
-        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l69);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l61; // (2,3)
-            attackLoc = l53;
-            center = l69;
-        }
-
-
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
-            ans = null;
-            Map.markObstructed(l69);
-            return;
-        }
-        p = m76.getPaint();
-        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l69);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l68; // (3,1)
-            attackLoc = l76;
-            center = l69;
-        }
-
-
         if (m69.isWall() || m69.hasRuin()){ // (3,2)
             ans = null;
             Map.markObstructed(l69);
@@ -18030,25 +17011,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l69; // (3,2)
             attackLoc = l69;
-            center = l69;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l69);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l69);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l69; // (3,2)
-            attackLoc = l61;
-            center = l69;
         }
 
 
@@ -18066,43 +17028,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
             attackLoc = l68;
-            center = l69;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l69);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l69);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
-            attackLoc = l52;
-            center = l69;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l69);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l69);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l69; // (3,2)
-            attackLoc = l67;
-            center = l69;
         }
 
 
@@ -18120,7 +17045,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
             attackLoc = l60;
-            center = l69;
+        }
+
+
+        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+            ans = null;
+            Map.markObstructed(l69);
+            return;
+        }
+        p = m78.getPaint();
+        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l69);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l69; // (3,2)
+            attackLoc = l78;
+        }
+
+
+        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+            ans = null;
+            Map.markObstructed(l69);
+            return;
+        }
+        p = m70.getPaint();
+        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l69);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l69; // (3,2)
+            attackLoc = l70;
         }
 
 
@@ -18138,7 +17096,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
             attackLoc = l59;
-            center = l69;
+        }
+
+
+        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+            ans = null;
+            Map.markObstructed(l69);
+            return;
+        }
+        p = m77.getPaint();
+        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l69);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l69; // (3,2)
+            attackLoc = l77;
+        }
+
+
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+            ans = null;
+            Map.markObstructed(l69);
+            return;
+        }
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l69);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l69; // (3,2)
+            attackLoc = l61;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l69);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l69);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l69; // (3,2)
+            attackLoc = l67;
         }
 
 
@@ -18156,7 +17164,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
             attackLoc = l51;
-            center = l69;
         }
 
 
@@ -18172,9 +17179,25 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
+            ans = l68; // (3,1)
             attackLoc = l58;
-            center = l69;
+        }
+
+
+        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+            ans = null;
+            Map.markObstructed(l69);
+            return;
+        }
+        p = m76.getPaint();
+        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l69);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l68; // (3,1)
+            attackLoc = l76;
         }
 
 
@@ -18190,9 +17213,42 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l60; // (2,2)
+            ans = l68; // (3,1)
             attackLoc = l50;
-            center = l69;
+        }
+
+
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+            ans = null;
+            Map.markObstructed(l69);
+            return;
+        }
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l69);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l60; // (2,2)
+            attackLoc = l52;
+        }
+
+
+        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+            ans = null;
+            Map.markObstructed(l69);
+            return;
+        }
+        p = m62.getPaint();
+        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l69);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l60; // (2,2)
+            attackLoc = l62;
         }
 
 
@@ -18210,7 +17266,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
             attackLoc = l49;
-            center = l69;
+        }
+
+
+        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+            ans = null;
+            Map.markObstructed(l69);
+            return;
+        }
+        p = m53.getPaint();
+        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l69);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l61; // (2,3)
+            attackLoc = l53;
         }
 
 
@@ -18218,40 +17290,39 @@ public class ResourcePatternManager {
 
     static void checkCenterAt45() throws GameActionException { // (-4,0)
         center = myLoc.translate(-4,0);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
             ans = null;
             Map.markObstructed(l4);
             return;
         }
-        p = m6.getPaint();
-        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l4);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l4; // (-4,0)
+            attackLoc = l4;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l4);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l4);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l4; // (-4,0)
-            attackLoc = l6;
-            center = l4;
-        }
-
-
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
-            ans = null;
-            Map.markObstructed(l4);
-            return;
-        }
-        p = m2.getPaint();
-        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l4);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l4; // (-4,0)
-            attackLoc = l2;
-            center = l4;
+            attackLoc = l13;
         }
 
 
@@ -18269,7 +17340,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l4; // (-4,0)
             attackLoc = l5;
-            center = l4;
         }
 
 
@@ -18287,25 +17357,125 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l4; // (-4,0)
             attackLoc = l3;
-            center = l4;
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
             ans = null;
             Map.markObstructed(l4);
             return;
         }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l4);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l4; // (-4,0)
+            attackLoc = l14;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l4);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l4);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l4; // (-4,0)
+            attackLoc = l12;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l4);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l4);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l4; // (-4,0)
+            attackLoc = l22;
+        }
+
+
+        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+            ans = null;
+            Map.markObstructed(l4);
+            return;
+        }
+        p = m6.getPaint();
+        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l4);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l4; // (-4,0)
+            attackLoc = l6;
+        }
+
+
+        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+            ans = null;
+            Map.markObstructed(l4);
+            return;
+        }
+        p = m2.getPaint();
+        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l4);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l4; // (-4,0)
+            attackLoc = l2;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l4);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l4);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l4; // (-4,0)
-            attackLoc = l4;
-            center = l4;
+            ans = l13; // (-3,0)
+            attackLoc = l23;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l4);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l4);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l13; // (-3,0)
+            attackLoc = l21;
         }
 
 
@@ -18323,7 +17493,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
             attackLoc = l15;
-            center = l4;
         }
 
 
@@ -18341,61 +17510,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
             attackLoc = l11;
-            center = l4;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l4);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l4);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l4; // (-4,0)
-            attackLoc = l14;
-            center = l4;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l4);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l4);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l4; // (-4,0)
-            attackLoc = l12;
-            center = l4;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l4);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l4);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l4; // (-4,0)
-            attackLoc = l13;
-            center = l4;
         }
 
 
@@ -18413,7 +17527,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
             attackLoc = l24;
-            center = l4;
         }
 
 
@@ -18431,61 +17544,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
             attackLoc = l20;
-            center = l4;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l4);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l4);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l13; // (-3,0)
-            attackLoc = l23;
-            center = l4;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l4);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l4);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l13; // (-3,0)
-            attackLoc = l21;
-            center = l4;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l4);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l4);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l4; // (-4,0)
-            attackLoc = l22;
-            center = l4;
         }
 
 
@@ -18493,79 +17551,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt46() throws GameActionException { // (0,-4)
         center = myLoc.translate(0,-4);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
-            ans = null;
-            Map.markObstructed(l36);
-            return;
-        }
-        p = m54.getPaint();
-        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l36);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l36; // (0,-4)
-            attackLoc = l54;
-            center = l36;
-        }
-
-
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
-            ans = null;
-            Map.markObstructed(l36);
-            return;
-        }
-        p = m18.getPaint();
-        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l36);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l36; // (0,-4)
-            attackLoc = l18;
-            center = l36;
-        }
-
-
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
-            ans = null;
-            Map.markObstructed(l36);
-            return;
-        }
-        p = m45.getPaint();
-        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l36);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l36; // (0,-4)
-            attackLoc = l45;
-            center = l36;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l36);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l36);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l36; // (0,-4)
-            attackLoc = l27;
-            center = l36;
-        }
-
-
         if (m36.isWall() || m36.hasRuin()){ // (0,-4)
             ans = null;
             Map.markObstructed(l36);
@@ -18580,79 +17567,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l36; // (0,-4)
             attackLoc = l36;
-            center = l36;
-        }
-
-
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l36);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l36);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l37; // (0,-3)
-            attackLoc = l55;
-            center = l36;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l36);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l36);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l37; // (0,-3)
-            attackLoc = l19;
-            center = l36;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l36);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l36);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l36; // (0,-4)
-            attackLoc = l46;
-            center = l36;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l36);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l36);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l36; // (0,-4)
-            attackLoc = l28;
-            center = l36;
         }
 
 
@@ -18670,79 +17584,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l36; // (0,-4)
             attackLoc = l37;
-            center = l36;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l36);
             return;
         }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l36);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l46; // (1,-3)
-            attackLoc = l56;
-            center = l36;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l36; // (0,-4)
+            attackLoc = l27;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
             ans = null;
             Map.markObstructed(l36);
             return;
         }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+        p = m45.getPaint();
+        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l36);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l20;
-            center = l36;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l36; // (0,-4)
+            attackLoc = l45;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l36);
             return;
         }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l36);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l37; // (0,-3)
-            attackLoc = l47;
-            center = l36;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l36; // (0,-4)
+            attackLoc = l28;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
             ans = null;
             Map.markObstructed(l36);
             return;
         }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l36);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l37; // (0,-3)
-            attackLoc = l29;
-            center = l36;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l36; // (0,-4)
+            attackLoc = l46;
         }
 
 
@@ -18760,7 +17669,142 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l36; // (0,-4)
             attackLoc = l38;
-            center = l36;
+        }
+
+
+        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+            ans = null;
+            Map.markObstructed(l36);
+            return;
+        }
+        p = m18.getPaint();
+        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l36);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l36; // (0,-4)
+            attackLoc = l18;
+        }
+
+
+        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+            ans = null;
+            Map.markObstructed(l36);
+            return;
+        }
+        p = m54.getPaint();
+        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l36);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l36; // (0,-4)
+            attackLoc = l54;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l36);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l36);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l37; // (0,-3)
+            attackLoc = l29;
+        }
+
+
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+            ans = null;
+            Map.markObstructed(l36);
+            return;
+        }
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l36);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l37; // (0,-3)
+            attackLoc = l19;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l36);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l36);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l37; // (0,-3)
+            attackLoc = l47;
+        }
+
+
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+            ans = null;
+            Map.markObstructed(l36);
+            return;
+        }
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l36);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l37; // (0,-3)
+            attackLoc = l55;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l36);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l36);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l20;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l36);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l36);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l46; // (1,-3)
+            attackLoc = l56;
         }
 
 
@@ -18768,79 +17812,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt47() throws GameActionException { // (0,4)
         center = myLoc.translate(0,4);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
-            ans = null;
-            Map.markObstructed(l44);
-            return;
-        }
-        p = m62.getPaint();
-        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l44);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l44; // (0,4)
-            attackLoc = l62;
-            center = l44;
-        }
-
-
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
-            ans = null;
-            Map.markObstructed(l44);
-            return;
-        }
-        p = m26.getPaint();
-        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l44);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l44; // (0,4)
-            attackLoc = l26;
-            center = l44;
-        }
-
-
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
-            ans = null;
-            Map.markObstructed(l44);
-            return;
-        }
-        p = m53.getPaint();
-        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l44);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l44; // (0,4)
-            attackLoc = l53;
-            center = l44;
-        }
-
-
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
-            ans = null;
-            Map.markObstructed(l44);
-            return;
-        }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l44);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l44; // (0,4)
-            attackLoc = l35;
-            center = l44;
-        }
-
-
         if (m44.isWall() || m44.hasRuin()){ // (0,4)
             ans = null;
             Map.markObstructed(l44);
@@ -18855,79 +17828,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l44; // (0,4)
             attackLoc = l44;
-            center = l44;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l44);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l44);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l43; // (0,3)
-            attackLoc = l61;
-            center = l44;
-        }
-
-
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
-            ans = null;
-            Map.markObstructed(l44);
-            return;
-        }
-        p = m25.getPaint();
-        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l44);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l43; // (0,3)
-            attackLoc = l25;
-            center = l44;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l44);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l44);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l44; // (0,4)
-            attackLoc = l52;
-            center = l44;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l44);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l44);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l44; // (0,4)
-            attackLoc = l34;
-            center = l44;
         }
 
 
@@ -18945,79 +17845,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l44; // (0,4)
             attackLoc = l43;
-            center = l44;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
             ans = null;
             Map.markObstructed(l44);
             return;
         }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l44);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l52; // (1,3)
-            attackLoc = l60;
-            center = l44;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l44; // (0,4)
+            attackLoc = l35;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (m53.isWall() || m53.hasRuin()){ // (1,4)
             ans = null;
             Map.markObstructed(l44);
             return;
         }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+        p = m53.getPaint();
+        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l44);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l34; // (-1,3)
-            attackLoc = l24;
-            center = l44;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l44; // (0,4)
+            attackLoc = l53;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
             ans = null;
             Map.markObstructed(l44);
             return;
         }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l44);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l43; // (0,3)
-            attackLoc = l51;
-            center = l44;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l44; // (0,4)
+            attackLoc = l34;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
             ans = null;
             Map.markObstructed(l44);
             return;
         }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l44);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l43; // (0,3)
-            attackLoc = l33;
-            center = l44;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l44; // (0,4)
+            attackLoc = l52;
         }
 
 
@@ -19035,7 +17930,142 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l44; // (0,4)
             attackLoc = l42;
-            center = l44;
+        }
+
+
+        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+            ans = null;
+            Map.markObstructed(l44);
+            return;
+        }
+        p = m26.getPaint();
+        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l44);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l44; // (0,4)
+            attackLoc = l26;
+        }
+
+
+        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+            ans = null;
+            Map.markObstructed(l44);
+            return;
+        }
+        p = m62.getPaint();
+        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l44);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l44; // (0,4)
+            attackLoc = l62;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l44);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l44);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l43; // (0,3)
+            attackLoc = l33;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l44);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l44);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l43; // (0,3)
+            attackLoc = l51;
+        }
+
+
+        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+            ans = null;
+            Map.markObstructed(l44);
+            return;
+        }
+        p = m25.getPaint();
+        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l44);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l43; // (0,3)
+            attackLoc = l25;
+        }
+
+
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+            ans = null;
+            Map.markObstructed(l44);
+            return;
+        }
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l44);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l43; // (0,3)
+            attackLoc = l61;
+        }
+
+
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+            ans = null;
+            Map.markObstructed(l44);
+            return;
+        }
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l44);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l34; // (-1,3)
+            attackLoc = l24;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l44);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l44);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l52; // (1,3)
+            attackLoc = l60;
         }
 
 
@@ -19043,79 +18073,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt48() throws GameActionException { // (4,0)
         center = myLoc.translate(4,0);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
-            ans = null;
-            Map.markObstructed(l76);
-            return;
-        }
-        p = m78.getPaint();
-        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l76);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l76; // (4,0)
-            attackLoc = l78;
-            center = l76;
-        }
-
-
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
-            ans = null;
-            Map.markObstructed(l76);
-            return;
-        }
-        p = m74.getPaint();
-        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l76);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l76; // (4,0)
-            attackLoc = l74;
-            center = l76;
-        }
-
-
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
-            ans = null;
-            Map.markObstructed(l76);
-            return;
-        }
-        p = m77.getPaint();
-        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l76);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l76; // (4,0)
-            attackLoc = l77;
-            center = l76;
-        }
-
-
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
-            ans = null;
-            Map.markObstructed(l76);
-            return;
-        }
-        p = m75.getPaint();
-        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l76);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l76; // (4,0)
-            attackLoc = l75;
-            center = l76;
-        }
-
-
         if (m76.isWall() || m76.hasRuin()){ // (4,0)
             ans = null;
             Map.markObstructed(l76);
@@ -19130,79 +18089,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l76; // (4,0)
             attackLoc = l76;
-            center = l76;
-        }
-
-
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l76);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l76);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l67; // (3,0)
-            attackLoc = l69;
-            center = l76;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l76);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l76);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l67; // (3,0)
-            attackLoc = l65;
-            center = l76;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l76);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l76);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l76; // (4,0)
-            attackLoc = l68;
-            center = l76;
-        }
-
-
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
-            ans = null;
-            Map.markObstructed(l76);
-            return;
-        }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l76);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l76; // (4,0)
-            attackLoc = l66;
-            center = l76;
         }
 
 
@@ -19220,79 +18106,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l76; // (4,0)
             attackLoc = l67;
-            center = l76;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (m77.isWall() || m77.hasRuin()){ // (4,1)
             ans = null;
             Map.markObstructed(l76);
             return;
         }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+        p = m77.getPaint();
+        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l76);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l68; // (3,1)
-            attackLoc = l60;
-            center = l76;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l76; // (4,0)
+            attackLoc = l77;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
             ans = null;
             Map.markObstructed(l76);
             return;
         }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+        p = m75.getPaint();
+        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l76);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l66; // (3,-1)
-            attackLoc = l56;
-            center = l76;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l76; // (4,0)
+            attackLoc = l75;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
             ans = null;
             Map.markObstructed(l76);
             return;
         }
-        p = m59.getPaint();
-        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l76);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l67; // (3,0)
-            attackLoc = l59;
-            center = l76;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l76; // (4,0)
+            attackLoc = l68;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
             ans = null;
             Map.markObstructed(l76);
             return;
         }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l76);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l67; // (3,0)
-            attackLoc = l57;
-            center = l76;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l76; // (4,0)
+            attackLoc = l66;
         }
 
 
@@ -19310,7 +18191,142 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l76; // (4,0)
             attackLoc = l58;
-            center = l76;
+        }
+
+
+        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+            ans = null;
+            Map.markObstructed(l76);
+            return;
+        }
+        p = m78.getPaint();
+        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l76);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l76; // (4,0)
+            attackLoc = l78;
+        }
+
+
+        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+            ans = null;
+            Map.markObstructed(l76);
+            return;
+        }
+        p = m74.getPaint();
+        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l76);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l76; // (4,0)
+            attackLoc = l74;
+        }
+
+
+        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+            ans = null;
+            Map.markObstructed(l76);
+            return;
+        }
+        p = m59.getPaint();
+        if ( Map.isNearRuin(l59) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l76);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l67; // (3,0)
+            attackLoc = l59;
+        }
+
+
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+            ans = null;
+            Map.markObstructed(l76);
+            return;
+        }
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l76);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l67; // (3,0)
+            attackLoc = l69;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l76);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l76);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l67; // (3,0)
+            attackLoc = l57;
+        }
+
+
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+            ans = null;
+            Map.markObstructed(l76);
+            return;
+        }
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l76);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l67; // (3,0)
+            attackLoc = l65;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l76);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l76);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l68; // (3,1)
+            attackLoc = l60;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l76);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l76);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l66; // (3,-1)
+            attackLoc = l56;
         }
 
 
@@ -19318,61 +18334,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt49() throws GameActionException { // (-4,-1)
         center = myLoc.translate(-4,-1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
-            ans = null;
-            Map.markObstructed(l3);
-            return;
-        }
-        p = m2.getPaint();
-        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l3);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l3; // (-4,-1)
-            attackLoc = l2;
-            center = l3;
-        }
-
-
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
-            ans = null;
-            Map.markObstructed(l3);
-            return;
-        }
-        p = m10.getPaint();
-        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l3);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l10;
-            center = l3;
-        }
-
-
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
-            ans = null;
-            Map.markObstructed(l3);
-            return;
-        }
-        p = m5.getPaint();
-        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l3);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l3; // (-4,-1)
-            attackLoc = l5;
-            center = l3;
-        }
-
-
         if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l3);
@@ -19387,79 +18350,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l3; // (-4,-1)
             attackLoc = l3;
-            center = l3;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l3);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l3);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l3; // (-4,-1)
-            attackLoc = l4;
-            center = l3;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l3);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l3);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l11; // (-3,-2)
-            attackLoc = l19;
-            center = l3;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l3);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l3);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l3; // (-4,-1)
-            attackLoc = l11;
-            center = l3;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l3);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l3);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l14;
-            center = l3;
         }
 
 
@@ -19477,7 +18367,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l3; // (-4,-1)
             attackLoc = l12;
-            center = l3;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l3);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l3);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l3; // (-4,-1)
+            attackLoc = l4;
+        }
+
+
+        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+            ans = null;
+            Map.markObstructed(l3);
+            return;
+        }
+        p = m2.getPaint();
+        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l3);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l3; // (-4,-1)
+            attackLoc = l2;
         }
 
 
@@ -19495,43 +18418,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l3; // (-4,-1)
             attackLoc = l13;
-            center = l3;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l3);
             return;
         }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l3);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l12; // (-3,-1)
-            attackLoc = l20;
-            center = l3;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l3);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l3);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l13; // (-3,0)
-            attackLoc = l23;
-            center = l3;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l3; // (-4,-1)
+            attackLoc = l11;
         }
 
 
@@ -19549,7 +18452,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l3; // (-4,-1)
             attackLoc = l21;
-            center = l3;
+        }
+
+
+        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+            ans = null;
+            Map.markObstructed(l3);
+            return;
+        }
+        p = m5.getPaint();
+        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l3);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l3; // (-4,-1)
+            attackLoc = l5;
         }
 
 
@@ -19567,7 +18486,91 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
             attackLoc = l22;
-            center = l3;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l3);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l3);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l20;
+        }
+
+
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+            ans = null;
+            Map.markObstructed(l3);
+            return;
+        }
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l3);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l14;
+        }
+
+
+        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+            ans = null;
+            Map.markObstructed(l3);
+            return;
+        }
+        p = m10.getPaint();
+        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l3);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l12; // (-3,-1)
+            attackLoc = l10;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l3);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l3);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l13; // (-3,0)
+            attackLoc = l23;
+        }
+
+
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+            ans = null;
+            Map.markObstructed(l3);
+            return;
+        }
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l3);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l11; // (-3,-2)
+            attackLoc = l19;
         }
 
 
@@ -19575,43 +18578,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt50() throws GameActionException { // (-4,1)
         center = myLoc.translate(-4,1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
-            ans = null;
-            Map.markObstructed(l5);
-            return;
-        }
-        p = m6.getPaint();
-        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l5);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l5; // (-4,1)
-            attackLoc = l6;
-            center = l5;
-        }
-
-
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
-            ans = null;
-            Map.markObstructed(l5);
-            return;
-        }
-        p = m16.getPaint();
-        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l5);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l14; // (-3,1)
-            attackLoc = l16;
-            center = l5;
-        }
-
-
         if (m5.isWall() || m5.hasRuin()){ // (-4,1)
             ans = null;
             Map.markObstructed(l5);
@@ -19626,25 +18594,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l5; // (-4,1)
             attackLoc = l5;
-            center = l5;
-        }
-
-
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
-            ans = null;
-            Map.markObstructed(l5);
-            return;
-        }
-        p = m3.getPaint();
-        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l5);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l5; // (-4,1)
-            attackLoc = l3;
-            center = l5;
         }
 
 
@@ -19662,7 +18611,193 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l5; // (-4,1)
             attackLoc = l4;
-            center = l5;
+        }
+
+
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+            ans = null;
+            Map.markObstructed(l5);
+            return;
+        }
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l5);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l5; // (-4,1)
+            attackLoc = l14;
+        }
+
+
+        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+            ans = null;
+            Map.markObstructed(l5);
+            return;
+        }
+        p = m6.getPaint();
+        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l5);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l5; // (-4,1)
+            attackLoc = l6;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l5);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l5);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l5; // (-4,1)
+            attackLoc = l13;
+        }
+
+
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+            ans = null;
+            Map.markObstructed(l5);
+            return;
+        }
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l5);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l5; // (-4,1)
+            attackLoc = l15;
+        }
+
+
+        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+            ans = null;
+            Map.markObstructed(l5);
+            return;
+        }
+        p = m3.getPaint();
+        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l5);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l5; // (-4,1)
+            attackLoc = l3;
+        }
+
+
+        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+            ans = null;
+            Map.markObstructed(l5);
+            return;
+        }
+        p = m23.getPaint();
+        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l5);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l5; // (-4,1)
+            attackLoc = l23;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l5);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l5);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l4; // (-4,0)
+            attackLoc = l12;
+        }
+
+
+        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+            ans = null;
+            Map.markObstructed(l5);
+            return;
+        }
+        p = m22.getPaint();
+        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l5);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l4; // (-4,0)
+            attackLoc = l22;
+        }
+
+
+        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+            ans = null;
+            Map.markObstructed(l5);
+            return;
+        }
+        p = m24.getPaint();
+        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l5);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l14; // (-3,1)
+            attackLoc = l24;
+        }
+
+
+        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+            ans = null;
+            Map.markObstructed(l5);
+            return;
+        }
+        p = m16.getPaint();
+        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l5);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l14; // (-3,1)
+            attackLoc = l16;
+        }
+
+
+        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+            ans = null;
+            Map.markObstructed(l5);
+            return;
+        }
+        p = m21.getPaint();
+        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l5);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l13; // (-3,0)
+            attackLoc = l21;
         }
 
 
@@ -19680,151 +18815,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l15; // (-3,2)
             attackLoc = l25;
-            center = l5;
-        }
-
-
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
-            ans = null;
-            Map.markObstructed(l5);
-            return;
-        }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l5);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l5; // (-4,1)
-            attackLoc = l15;
-            center = l5;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l5);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l5);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l5; // (-4,1)
-            attackLoc = l14;
-            center = l5;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l5);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l5);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l14; // (-3,1)
-            attackLoc = l12;
-            center = l5;
-        }
-
-
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
-            ans = null;
-            Map.markObstructed(l5);
-            return;
-        }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l5);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l5; // (-4,1)
-            attackLoc = l13;
-            center = l5;
-        }
-
-
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
-            ans = null;
-            Map.markObstructed(l5);
-            return;
-        }
-        p = m24.getPaint();
-        if ( Map.isNearRuin(l24) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l5);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l14; // (-3,1)
-            attackLoc = l24;
-            center = l5;
-        }
-
-
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
-            ans = null;
-            Map.markObstructed(l5);
-            return;
-        }
-        p = m23.getPaint();
-        if ( Map.isNearRuin(l23) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l5);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l5; // (-4,1)
-            attackLoc = l23;
-            center = l5;
-        }
-
-
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
-            ans = null;
-            Map.markObstructed(l5);
-            return;
-        }
-        p = m21.getPaint();
-        if ( Map.isNearRuin(l21) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l5);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l13; // (-3,0)
-            attackLoc = l21;
-            center = l5;
-        }
-
-
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
-            ans = null;
-            Map.markObstructed(l5);
-            return;
-        }
-        p = m22.getPaint();
-        if ( Map.isNearRuin(l22) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l5);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l14; // (-3,1)
-            attackLoc = l22;
-            center = l5;
         }
 
 
@@ -19832,61 +18822,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt51() throws GameActionException { // (-1,-4)
         center = myLoc.translate(-1,-4);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
-            ans = null;
-            Map.markObstructed(l27);
-            return;
-        }
-        p = m18.getPaint();
-        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l27);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l27; // (-1,-4)
-            attackLoc = l18;
-            center = l27;
-        }
-
-
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
-            ans = null;
-            Map.markObstructed(l27);
-            return;
-        }
-        p = m10.getPaint();
-        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l27);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l10;
-            center = l27;
-        }
-
-
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
-            ans = null;
-            Map.markObstructed(l27);
-            return;
-        }
-        p = m45.getPaint();
-        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l27);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l27; // (-1,-4)
-            attackLoc = l45;
-            center = l27;
-        }
-
-
         if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l27);
@@ -19901,79 +18838,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l27; // (-1,-4)
             attackLoc = l27;
-            center = l27;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l27);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l27);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l27; // (-1,-4)
-            attackLoc = l36;
-            center = l27;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l27);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l27);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l27; // (-1,-4)
-            attackLoc = l19;
-            center = l27;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l27);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l27);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l19; // (-2,-3)
-            attackLoc = l11;
-            center = l27;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l27);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l27);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l46;
-            center = l27;
         }
 
 
@@ -19991,7 +18855,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l27; // (-1,-4)
             attackLoc = l28;
-            center = l27;
+        }
+
+
+        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+            ans = null;
+            Map.markObstructed(l27);
+            return;
+        }
+        p = m18.getPaint();
+        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l27);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l27; // (-1,-4)
+            attackLoc = l18;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l27);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l27);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l27; // (-1,-4)
+            attackLoc = l36;
+        }
+
+
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+            ans = null;
+            Map.markObstructed(l27);
+            return;
+        }
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l27);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l27; // (-1,-4)
+            attackLoc = l19;
         }
 
 
@@ -20009,43 +18923,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l27; // (-1,-4)
             attackLoc = l37;
-            center = l27;
-        }
-
-
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
-            ans = null;
-            Map.markObstructed(l27);
-            return;
-        }
-        p = m20.getPaint();
-        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l27);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l28; // (-1,-3)
-            attackLoc = l20;
-            center = l27;
-        }
-
-
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
-            ans = null;
-            Map.markObstructed(l27);
-            return;
-        }
-        p = m47.getPaint();
-        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l27);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l37; // (0,-3)
-            attackLoc = l47;
-            center = l27;
         }
 
 
@@ -20063,7 +18940,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l27; // (-1,-4)
             attackLoc = l29;
-            center = l27;
+        }
+
+
+        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+            ans = null;
+            Map.markObstructed(l27);
+            return;
+        }
+        p = m45.getPaint();
+        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l27);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l27; // (-1,-4)
+            attackLoc = l45;
+        }
+
+
+        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+            ans = null;
+            Map.markObstructed(l27);
+            return;
+        }
+        p = m20.getPaint();
+        if ( Map.isNearRuin(l20) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l27);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l20;
+        }
+
+
+        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+            ans = null;
+            Map.markObstructed(l27);
+            return;
+        }
+        p = m10.getPaint();
+        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l27);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l10;
         }
 
 
@@ -20081,7 +19008,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l28; // (-1,-3)
             attackLoc = l38;
-            center = l27;
+        }
+
+
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+            ans = null;
+            Map.markObstructed(l27);
+            return;
+        }
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l27);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l28; // (-1,-3)
+            attackLoc = l46;
+        }
+
+
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+            ans = null;
+            Map.markObstructed(l27);
+            return;
+        }
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l27);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l19; // (-2,-3)
+            attackLoc = l11;
+        }
+
+
+        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+            ans = null;
+            Map.markObstructed(l27);
+            return;
+        }
+        p = m47.getPaint();
+        if ( Map.isNearRuin(l47) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l27);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l37; // (0,-3)
+            attackLoc = l47;
         }
 
 
@@ -20089,61 +19066,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt52() throws GameActionException { // (-1,4)
         center = myLoc.translate(-1,4);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
-            ans = null;
-            Map.markObstructed(l35);
-            return;
-        }
-        p = m26.getPaint();
-        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l35);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l35; // (-1,4)
-            attackLoc = l26;
-            center = l35;
-        }
-
-
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
-            ans = null;
-            Map.markObstructed(l35);
-            return;
-        }
-        p = m16.getPaint();
-        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l35);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l34; // (-1,3)
-            attackLoc = l16;
-            center = l35;
-        }
-
-
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
-            ans = null;
-            Map.markObstructed(l35);
-            return;
-        }
-        p = m53.getPaint();
-        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l35);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l35; // (-1,4)
-            attackLoc = l53;
-            center = l35;
-        }
-
-
         if (m35.isWall() || m35.hasRuin()){ // (-1,4)
             ans = null;
             Map.markObstructed(l35);
@@ -20158,7 +19082,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l35; // (-1,4)
             attackLoc = l35;
-            center = l35;
+        }
+
+
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+            ans = null;
+            Map.markObstructed(l35);
+            return;
+        }
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l35);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l35; // (-1,4)
+            attackLoc = l34;
+        }
+
+
+        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+            ans = null;
+            Map.markObstructed(l35);
+            return;
+        }
+        p = m26.getPaint();
+        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l35);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l35; // (-1,4)
+            attackLoc = l26;
         }
 
 
@@ -20176,7 +19133,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l35; // (-1,4)
             attackLoc = l44;
-            center = l35;
         }
 
 
@@ -20194,61 +19150,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l35; // (-1,4)
             attackLoc = l25;
-            center = l35;
-        }
-
-
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
-            ans = null;
-            Map.markObstructed(l35);
-            return;
-        }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l35);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l25; // (-2,3)
-            attackLoc = l15;
-            center = l35;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l35);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l35);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l34; // (-1,3)
-            attackLoc = l52;
-            center = l35;
-        }
-
-
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
-            ans = null;
-            Map.markObstructed(l35);
-            return;
-        }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l35);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l35; // (-1,4)
-            attackLoc = l34;
-            center = l35;
         }
 
 
@@ -20266,7 +19167,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l35; // (-1,4)
             attackLoc = l43;
-            center = l35;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l35);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l35);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l35; // (-1,4)
+            attackLoc = l33;
+        }
+
+
+        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+            ans = null;
+            Map.markObstructed(l35);
+            return;
+        }
+        p = m53.getPaint();
+        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l35);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l35; // (-1,4)
+            attackLoc = l53;
         }
 
 
@@ -20284,43 +19218,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l34; // (-1,3)
             attackLoc = l24;
-            center = l35;
-        }
-
-
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
-            ans = null;
-            Map.markObstructed(l35);
-            return;
-        }
-        p = m51.getPaint();
-        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l35);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l43; // (0,3)
-            attackLoc = l51;
-            center = l35;
-        }
-
-
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
-            ans = null;
-            Map.markObstructed(l35);
-            return;
-        }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l35);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l35; // (-1,4)
-            attackLoc = l33;
-            center = l35;
         }
 
 
@@ -20338,7 +19235,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l34; // (-1,3)
             attackLoc = l42;
-            center = l35;
+        }
+
+
+        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+            ans = null;
+            Map.markObstructed(l35);
+            return;
+        }
+        p = m16.getPaint();
+        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l35);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l34; // (-1,3)
+            attackLoc = l16;
+        }
+
+
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+            ans = null;
+            Map.markObstructed(l35);
+            return;
+        }
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l35);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l34; // (-1,3)
+            attackLoc = l52;
+        }
+
+
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+            ans = null;
+            Map.markObstructed(l35);
+            return;
+        }
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l35);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l25; // (-2,3)
+            attackLoc = l15;
+        }
+
+
+        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+            ans = null;
+            Map.markObstructed(l35);
+            return;
+        }
+        p = m51.getPaint();
+        if ( Map.isNearRuin(l51) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l35);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l43; // (0,3)
+            attackLoc = l51;
         }
 
 
@@ -20346,43 +19310,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt53() throws GameActionException { // (1,-4)
         center = myLoc.translate(1,-4);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
-            ans = null;
-            Map.markObstructed(l45);
-            return;
-        }
-        p = m54.getPaint();
-        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l45);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l45; // (1,-4)
-            attackLoc = l54;
-            center = l45;
-        }
-
-
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
-            ans = null;
-            Map.markObstructed(l45);
-            return;
-        }
-        p = m64.getPaint();
-        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l45);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l46; // (1,-3)
-            attackLoc = l64;
-            center = l45;
-        }
-
-
         if (m45.isWall() || m45.hasRuin()){ // (1,-4)
             ans = null;
             Map.markObstructed(l45);
@@ -20397,79 +19326,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l45; // (1,-4)
             attackLoc = l45;
-            center = l45;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l45);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l45);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l45; // (1,-4)
-            attackLoc = l27;
-            center = l45;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l45);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l45);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l45; // (1,-4)
-            attackLoc = l36;
-            center = l45;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l45);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l45);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l55; // (2,-3)
-            attackLoc = l65;
-            center = l45;
-        }
-
-
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l45);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l45);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l45; // (1,-4)
-            attackLoc = l55;
-            center = l45;
         }
 
 
@@ -20487,25 +19343,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l45; // (1,-4)
             attackLoc = l46;
-            center = l45;
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
             ans = null;
             Map.markObstructed(l45);
             return;
         }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l45);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l46; // (1,-3)
-            attackLoc = l28;
-            center = l45;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l45; // (1,-4)
+            attackLoc = l36;
+        }
+
+
+        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+            ans = null;
+            Map.markObstructed(l45);
+            return;
+        }
+        p = m54.getPaint();
+        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l45);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l45; // (1,-4)
+            attackLoc = l54;
         }
 
 
@@ -20523,25 +19394,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l45; // (1,-4)
             attackLoc = l37;
-            center = l45;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
             ans = null;
             Map.markObstructed(l45);
             return;
         }
-        p = m56.getPaint();
-        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l45);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l46; // (1,-3)
-            attackLoc = l56;
-            center = l45;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l45; // (1,-4)
+            attackLoc = l55;
         }
 
 
@@ -20559,25 +19428,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l45; // (1,-4)
             attackLoc = l47;
-            center = l45;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l45);
             return;
         }
-        p = m29.getPaint();
-        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l45);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l37; // (0,-3)
-            attackLoc = l29;
-            center = l45;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l45; // (1,-4)
+            attackLoc = l27;
         }
 
 
@@ -20595,7 +19462,91 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l46; // (1,-3)
             attackLoc = l38;
-            center = l45;
+        }
+
+
+        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+            ans = null;
+            Map.markObstructed(l45);
+            return;
+        }
+        p = m56.getPaint();
+        if ( Map.isNearRuin(l56) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l45);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l46; // (1,-3)
+            attackLoc = l56;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l45);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l45);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l46; // (1,-3)
+            attackLoc = l28;
+        }
+
+
+        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+            ans = null;
+            Map.markObstructed(l45);
+            return;
+        }
+        p = m64.getPaint();
+        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l45);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l46; // (1,-3)
+            attackLoc = l64;
+        }
+
+
+        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+            ans = null;
+            Map.markObstructed(l45);
+            return;
+        }
+        p = m29.getPaint();
+        if ( Map.isNearRuin(l29) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l45);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l37; // (0,-3)
+            attackLoc = l29;
+        }
+
+
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+            ans = null;
+            Map.markObstructed(l45);
+            return;
+        }
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l45);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l55; // (2,-3)
+            attackLoc = l65;
         }
 
 
@@ -20603,43 +19554,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt54() throws GameActionException { // (1,4)
         center = myLoc.translate(1,4);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
-            ans = null;
-            Map.markObstructed(l53);
-            return;
-        }
-        p = m62.getPaint();
-        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l53);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l53; // (1,4)
-            attackLoc = l62;
-            center = l53;
-        }
-
-
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
-            ans = null;
-            Map.markObstructed(l53);
-            return;
-        }
-        p = m70.getPaint();
-        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l53);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l52; // (1,3)
-            attackLoc = l70;
-            center = l53;
-        }
-
-
         if (m53.isWall() || m53.hasRuin()){ // (1,4)
             ans = null;
             Map.markObstructed(l53);
@@ -20654,79 +19570,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l53; // (1,4)
             attackLoc = l53;
-            center = l53;
-        }
-
-
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
-            ans = null;
-            Map.markObstructed(l53);
-            return;
-        }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l53);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l53; // (1,4)
-            attackLoc = l35;
-            center = l53;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l53);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l53);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l53; // (1,4)
-            attackLoc = l44;
-            center = l53;
-        }
-
-
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l53);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l53);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l61; // (2,3)
-            attackLoc = l69;
-            center = l53;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l53);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l53);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l53; // (1,4)
-            attackLoc = l61;
-            center = l53;
         }
 
 
@@ -20744,25 +19587,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l53; // (1,4)
             attackLoc = l52;
-            center = l53;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
             ans = null;
             Map.markObstructed(l53);
             return;
         }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l53);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l52; // (1,3)
-            attackLoc = l34;
-            center = l53;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l53; // (1,4)
+            attackLoc = l44;
+        }
+
+
+        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+            ans = null;
+            Map.markObstructed(l53);
+            return;
+        }
+        p = m62.getPaint();
+        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l53);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l53; // (1,4)
+            attackLoc = l62;
         }
 
 
@@ -20780,25 +19638,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l53; // (1,4)
             attackLoc = l43;
-            center = l53;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
             ans = null;
             Map.markObstructed(l53);
             return;
         }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l53);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l52; // (1,3)
-            attackLoc = l60;
-            center = l53;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l53; // (1,4)
+            attackLoc = l61;
         }
 
 
@@ -20816,25 +19672,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l53; // (1,4)
             attackLoc = l51;
-            center = l53;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
             ans = null;
             Map.markObstructed(l53);
             return;
         }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l53);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l43; // (0,3)
-            attackLoc = l33;
-            center = l53;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l53; // (1,4)
+            attackLoc = l35;
         }
 
 
@@ -20852,7 +19706,91 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l52; // (1,3)
             attackLoc = l42;
-            center = l53;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l53);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l53);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l52; // (1,3)
+            attackLoc = l60;
+        }
+
+
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+            ans = null;
+            Map.markObstructed(l53);
+            return;
+        }
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l53);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l52; // (1,3)
+            attackLoc = l34;
+        }
+
+
+        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+            ans = null;
+            Map.markObstructed(l53);
+            return;
+        }
+        p = m70.getPaint();
+        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l53);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l52; // (1,3)
+            attackLoc = l70;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l53);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l53);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l43; // (0,3)
+            attackLoc = l33;
+        }
+
+
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+            ans = null;
+            Map.markObstructed(l53);
+            return;
+        }
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l53);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l61; // (2,3)
+            attackLoc = l69;
         }
 
 
@@ -20860,61 +19798,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt55() throws GameActionException { // (4,-1)
         center = myLoc.translate(4,-1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
-            ans = null;
-            Map.markObstructed(l75);
-            return;
-        }
-        p = m74.getPaint();
-        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l75);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l75; // (4,-1)
-            attackLoc = l74;
-            center = l75;
-        }
-
-
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
-            ans = null;
-            Map.markObstructed(l75);
-            return;
-        }
-        p = m64.getPaint();
-        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l75);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l66; // (3,-1)
-            attackLoc = l64;
-            center = l75;
-        }
-
-
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
-            ans = null;
-            Map.markObstructed(l75);
-            return;
-        }
-        p = m77.getPaint();
-        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l75);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l75; // (4,-1)
-            attackLoc = l77;
-            center = l75;
-        }
-
-
         if (m75.isWall() || m75.hasRuin()){ // (4,-1)
             ans = null;
             Map.markObstructed(l75);
@@ -20929,7 +19814,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l75; // (4,-1)
             attackLoc = l75;
-            center = l75;
         }
 
 
@@ -20947,7 +19831,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l75; // (4,-1)
             attackLoc = l76;
-            center = l75;
+        }
+
+
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+            ans = null;
+            Map.markObstructed(l75);
+            return;
+        }
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l75);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l75; // (4,-1)
+            attackLoc = l66;
+        }
+
+
+        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+            ans = null;
+            Map.markObstructed(l75);
+            return;
+        }
+        p = m74.getPaint();
+        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l75);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l75; // (4,-1)
+            attackLoc = l74;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l75);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l75);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l75; // (4,-1)
+            attackLoc = l67;
         }
 
 
@@ -20965,25 +19899,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l75; // (4,-1)
             attackLoc = l65;
-            center = l75;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (m77.isWall() || m77.hasRuin()){ // (4,1)
             ans = null;
             Map.markObstructed(l75);
             return;
         }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
+        p = m77.getPaint();
+        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l75);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l65; // (3,-2)
-            attackLoc = l55;
-            center = l75;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l75; // (4,-1)
+            attackLoc = l77;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l75);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l75);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l75; // (4,-1)
+            attackLoc = l57;
         }
 
 
@@ -20999,45 +19948,25 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l66; // (3,-1)
+            ans = l76; // (4,0)
             attackLoc = l68;
-            center = l75;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
             ans = null;
             Map.markObstructed(l75);
             return;
         }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l75);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l75; // (4,-1)
-            attackLoc = l66;
-            center = l75;
-        }
-
-
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
-            ans = null;
-            Map.markObstructed(l75);
-            return;
-        }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l75);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l75; // (4,-1)
-            attackLoc = l67;
-            center = l75;
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l76; // (4,0)
+            attackLoc = l58;
         }
 
 
@@ -21055,7 +19984,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l66; // (3,-1)
             attackLoc = l56;
-            center = l75;
+        }
+
+
+        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+            ans = null;
+            Map.markObstructed(l75);
+            return;
+        }
+        p = m64.getPaint();
+        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l75);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l66; // (3,-1)
+            attackLoc = l64;
         }
 
 
@@ -21073,43 +20018,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
             attackLoc = l59;
-            center = l75;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
             ans = null;
             Map.markObstructed(l75);
             return;
         }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l75);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l75; // (4,-1)
-            attackLoc = l57;
-            center = l75;
-        }
-
-
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
-            ans = null;
-            Map.markObstructed(l75);
-            return;
-        }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l75);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l66; // (3,-1)
-            attackLoc = l58;
-            center = l75;
+            ans = l65; // (3,-2)
+            attackLoc = l55;
         }
 
 
@@ -21117,43 +20042,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt56() throws GameActionException { // (4,1)
         center = myLoc.translate(4,1);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
-            ans = null;
-            Map.markObstructed(l77);
-            return;
-        }
-        p = m78.getPaint();
-        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l77);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l77; // (4,1)
-            attackLoc = l78;
-            center = l77;
-        }
-
-
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
-            ans = null;
-            Map.markObstructed(l77);
-            return;
-        }
-        p = m70.getPaint();
-        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l77);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l68; // (3,1)
-            attackLoc = l70;
-            center = l77;
-        }
-
-
         if (m77.isWall() || m77.hasRuin()){ // (4,1)
             ans = null;
             Map.markObstructed(l77);
@@ -21168,25 +20058,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l77; // (4,1)
             attackLoc = l77;
-            center = l77;
-        }
-
-
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
-            ans = null;
-            Map.markObstructed(l77);
-            return;
-        }
-        p = m75.getPaint();
-        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l77);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l77; // (4,1)
-            attackLoc = l75;
-            center = l77;
         }
 
 
@@ -21204,43 +20075,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l77; // (4,1)
             attackLoc = l76;
-            center = l77;
-        }
-
-
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l77);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l77);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l77; // (4,1)
-            attackLoc = l69;
-            center = l77;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l77);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l77);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l69; // (3,2)
-            attackLoc = l61;
-            center = l77;
         }
 
 
@@ -21258,25 +20092,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l77; // (4,1)
             attackLoc = l68;
-            center = l77;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (m78.isWall() || m78.hasRuin()){ // (4,2)
             ans = null;
             Map.markObstructed(l77);
             return;
         }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+        p = m78.getPaint();
+        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l77);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l68; // (3,1)
-            attackLoc = l66;
-            center = l77;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l77; // (4,1)
+            attackLoc = l78;
         }
 
 
@@ -21294,25 +20126,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l77; // (4,1)
             attackLoc = l67;
-            center = l77;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
             ans = null;
             Map.markObstructed(l77);
             return;
         }
-        p = m60.getPaint();
-        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l77);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l68; // (3,1)
-            attackLoc = l60;
-            center = l77;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l77; // (4,1)
+            attackLoc = l69;
+        }
+
+
+        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+            ans = null;
+            Map.markObstructed(l77);
+            return;
+        }
+        p = m75.getPaint();
+        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l77);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l77; // (4,1)
+            attackLoc = l75;
         }
 
 
@@ -21330,7 +20177,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l77; // (4,1)
             attackLoc = l59;
-            center = l77;
+        }
+
+
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+            ans = null;
+            Map.markObstructed(l77);
+            return;
+        }
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l77);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l76; // (4,0)
+            attackLoc = l66;
+        }
+
+
+        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+            ans = null;
+            Map.markObstructed(l77);
+            return;
+        }
+        p = m58.getPaint();
+        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l77);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l76; // (4,0)
+            attackLoc = l58;
+        }
+
+
+        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+            ans = null;
+            Map.markObstructed(l77);
+            return;
+        }
+        p = m60.getPaint();
+        if ( Map.isNearRuin(l60) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l77);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l68; // (3,1)
+            attackLoc = l60;
+        }
+
+
+        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+            ans = null;
+            Map.markObstructed(l77);
+            return;
+        }
+        p = m70.getPaint();
+        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l77);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l68; // (3,1)
+            attackLoc = l70;
         }
 
 
@@ -21348,25 +20262,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
             attackLoc = l57;
-            center = l77;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
             ans = null;
             Map.markObstructed(l77);
             return;
         }
-        p = m58.getPaint();
-        if ( Map.isNearRuin(l58) && !maxT || p.isEnemy()){
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l77);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l68; // (3,1)
-            attackLoc = l58;
-            center = l77;
+            ans = l69; // (3,2)
+            attackLoc = l61;
         }
 
 
@@ -21374,43 +20286,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt57() throws GameActionException { // (-3,-3)
         center = myLoc.translate(-3,-3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
-            ans = null;
-            Map.markObstructed(l10);
-            return;
-        }
-        p = m18.getPaint();
-        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l10);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l10; // (-3,-3)
-            attackLoc = l18;
-            center = l10;
-        }
-
-
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
-            ans = null;
-            Map.markObstructed(l10);
-            return;
-        }
-        p = m2.getPaint();
-        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l10);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l10; // (-3,-3)
-            attackLoc = l2;
-            center = l10;
-        }
-
-
         if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l10);
@@ -21425,43 +20302,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l10; // (-3,-3)
             attackLoc = l10;
-            center = l10;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l10);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l10);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l19; // (-2,-3)
-            attackLoc = l27;
-            center = l10;
-        }
-
-
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
-            ans = null;
-            Map.markObstructed(l10);
-            return;
-        }
-        p = m3.getPaint();
-        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l10);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l11; // (-3,-2)
-            attackLoc = l3;
-            center = l10;
         }
 
 
@@ -21479,7 +20319,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l10; // (-3,-3)
             attackLoc = l19;
-            center = l10;
         }
 
 
@@ -21497,43 +20336,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l10; // (-3,-3)
             attackLoc = l11;
-            center = l10;
-        }
-
-
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
-            ans = null;
-            Map.markObstructed(l10);
-            return;
-        }
-        p = m28.getPaint();
-        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l10);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l10; // (-3,-3)
-            attackLoc = l28;
-            center = l10;
-        }
-
-
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
-            ans = null;
-            Map.markObstructed(l10);
-            return;
-        }
-        p = m12.getPaint();
-        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l10);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l10; // (-3,-3)
-            attackLoc = l12;
-            center = l10;
         }
 
 
@@ -21551,7 +20353,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l10; // (-3,-3)
             attackLoc = l20;
-            center = l10;
+        }
+
+
+        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+            ans = null;
+            Map.markObstructed(l10);
+            return;
+        }
+        p = m18.getPaint();
+        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l10);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l10; // (-3,-3)
+            attackLoc = l18;
+        }
+
+
+        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+            ans = null;
+            Map.markObstructed(l10);
+            return;
+        }
+        p = m2.getPaint();
+        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l10);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l10; // (-3,-3)
+            attackLoc = l2;
+        }
+
+
+        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+            ans = null;
+            Map.markObstructed(l10);
+            return;
+        }
+        p = m28.getPaint();
+        if ( Map.isNearRuin(l28) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l10);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l10; // (-3,-3)
+            attackLoc = l28;
+        }
+
+
+        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+            ans = null;
+            Map.markObstructed(l10);
+            return;
+        }
+        p = m12.getPaint();
+        if ( Map.isNearRuin(l12) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l10);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l10; // (-3,-3)
+            attackLoc = l12;
         }
 
 
@@ -21567,9 +20436,8 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l11; // (-3,-2)
+            ans = l19; // (-2,-3)
             attackLoc = l29;
-            center = l10;
         }
 
 
@@ -21585,9 +20453,42 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l11; // (-3,-2)
+            ans = l19; // (-2,-3)
             attackLoc = l21;
-            center = l10;
+        }
+
+
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+            ans = null;
+            Map.markObstructed(l10);
+            return;
+        }
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l10);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l19; // (-2,-3)
+            attackLoc = l27;
+        }
+
+
+        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+            ans = null;
+            Map.markObstructed(l10);
+            return;
+        }
+        p = m3.getPaint();
+        if ( Map.isNearRuin(l3) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l10);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l11; // (-3,-2)
+            attackLoc = l3;
         }
 
 
@@ -21605,7 +20506,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
             attackLoc = l30;
-            center = l10;
         }
 
 
@@ -21613,43 +20513,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt58() throws GameActionException { // (-3,3)
         center = myLoc.translate(-3,3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
-            ans = null;
-            Map.markObstructed(l16);
-            return;
-        }
-        p = m26.getPaint();
-        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l16);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l16; // (-3,3)
-            attackLoc = l26;
-            center = l16;
-        }
-
-
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
-            ans = null;
-            Map.markObstructed(l16);
-            return;
-        }
-        p = m6.getPaint();
-        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l16);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l16; // (-3,3)
-            attackLoc = l6;
-            center = l16;
-        }
-
-
         if (m16.isWall() || m16.hasRuin()){ // (-3,3)
             ans = null;
             Map.markObstructed(l16);
@@ -21664,61 +20529,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l16; // (-3,3)
             attackLoc = l16;
-            center = l16;
-        }
-
-
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
-            ans = null;
-            Map.markObstructed(l16);
-            return;
-        }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l16);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l25; // (-2,3)
-            attackLoc = l35;
-            center = l16;
-        }
-
-
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
-            ans = null;
-            Map.markObstructed(l16);
-            return;
-        }
-        p = m5.getPaint();
-        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l16);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l15; // (-3,2)
-            attackLoc = l5;
-            center = l16;
-        }
-
-
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
-            ans = null;
-            Map.markObstructed(l16);
-            return;
-        }
-        p = m25.getPaint();
-        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l16);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l16; // (-3,3)
-            attackLoc = l25;
-            center = l16;
         }
 
 
@@ -21736,43 +20546,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l16; // (-3,3)
             attackLoc = l15;
-            center = l16;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
             ans = null;
             Map.markObstructed(l16);
             return;
         }
-        p = m34.getPaint();
-        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+        p = m25.getPaint();
+        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l16);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l16; // (-3,3)
-            attackLoc = l34;
-            center = l16;
-        }
-
-
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
-            ans = null;
-            Map.markObstructed(l16);
-            return;
-        }
-        p = m14.getPaint();
-        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l16);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l16; // (-3,3)
-            attackLoc = l14;
-            center = l16;
+            attackLoc = l25;
         }
 
 
@@ -21790,25 +20580,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l16; // (-3,3)
             attackLoc = l24;
-            center = l16;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
             ans = null;
             Map.markObstructed(l16);
             return;
         }
-        p = m33.getPaint();
-        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+        p = m6.getPaint();
+        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l16);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l15; // (-3,2)
-            attackLoc = l33;
-            center = l16;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l16; // (-3,3)
+            attackLoc = l6;
+        }
+
+
+        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+            ans = null;
+            Map.markObstructed(l16);
+            return;
+        }
+        p = m26.getPaint();
+        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l16);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l16; // (-3,3)
+            attackLoc = l26;
+        }
+
+
+        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+            ans = null;
+            Map.markObstructed(l16);
+            return;
+        }
+        p = m14.getPaint();
+        if ( Map.isNearRuin(l14) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l16);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l16; // (-3,3)
+            attackLoc = l14;
+        }
+
+
+        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+            ans = null;
+            Map.markObstructed(l16);
+            return;
+        }
+        p = m34.getPaint();
+        if ( Map.isNearRuin(l34) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l16);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l16; // (-3,3)
+            attackLoc = l34;
         }
 
 
@@ -21826,7 +20665,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l15; // (-3,2)
             attackLoc = l23;
-            center = l16;
+        }
+
+
+        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+            ans = null;
+            Map.markObstructed(l16);
+            return;
+        }
+        p = m5.getPaint();
+        if ( Map.isNearRuin(l5) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l16);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l15; // (-3,2)
+            attackLoc = l5;
+        }
+
+
+        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+            ans = null;
+            Map.markObstructed(l16);
+            return;
+        }
+        p = m33.getPaint();
+        if ( Map.isNearRuin(l33) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l16);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l15; // (-3,2)
+            attackLoc = l33;
+        }
+
+
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+            ans = null;
+            Map.markObstructed(l16);
+            return;
+        }
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l16);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l25; // (-2,3)
+            attackLoc = l35;
         }
 
 
@@ -21844,7 +20733,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
             attackLoc = l32;
-            center = l16;
         }
 
 
@@ -21852,43 +20740,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt59() throws GameActionException { // (3,-3)
         center = myLoc.translate(3,-3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
-            ans = null;
-            Map.markObstructed(l64);
-            return;
-        }
-        p = m74.getPaint();
-        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l64);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l64; // (3,-3)
-            attackLoc = l74;
-            center = l64;
-        }
-
-
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
-            ans = null;
-            Map.markObstructed(l64);
-            return;
-        }
-        p = m54.getPaint();
-        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l64);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l64; // (3,-3)
-            attackLoc = l54;
-            center = l64;
-        }
-
-
         if (m64.isWall() || m64.hasRuin()){ // (3,-3)
             ans = null;
             Map.markObstructed(l64);
@@ -21903,61 +20756,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l64; // (3,-3)
             attackLoc = l64;
-            center = l64;
-        }
-
-
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
-            ans = null;
-            Map.markObstructed(l64);
-            return;
-        }
-        p = m75.getPaint();
-        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l64);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l65; // (3,-2)
-            attackLoc = l75;
-            center = l64;
-        }
-
-
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
-            ans = null;
-            Map.markObstructed(l64);
-            return;
-        }
-        p = m45.getPaint();
-        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l64);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l55; // (2,-3)
-            attackLoc = l45;
-            center = l64;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l64);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l64);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l64; // (3,-3)
-            attackLoc = l65;
-            center = l64;
         }
 
 
@@ -21975,43 +20773,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l64; // (3,-3)
             attackLoc = l55;
-            center = l64;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
             ans = null;
             Map.markObstructed(l64);
             return;
         }
-        p = m66.getPaint();
-        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l64);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l64; // (3,-3)
-            attackLoc = l66;
-            center = l64;
-        }
-
-
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
-            ans = null;
-            Map.markObstructed(l64);
-            return;
-        }
-        p = m46.getPaint();
-        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l64);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l64; // (3,-3)
-            attackLoc = l46;
-            center = l64;
+            attackLoc = l65;
         }
 
 
@@ -22029,25 +20807,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l64; // (3,-3)
             attackLoc = l56;
-            center = l64;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
             ans = null;
             Map.markObstructed(l64);
             return;
         }
-        p = m57.getPaint();
-        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+        p = m54.getPaint();
+        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l64);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l55; // (2,-3)
-            attackLoc = l57;
-            center = l64;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l64; // (3,-3)
+            attackLoc = l54;
+        }
+
+
+        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+            ans = null;
+            Map.markObstructed(l64);
+            return;
+        }
+        p = m74.getPaint();
+        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l64);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l64; // (3,-3)
+            attackLoc = l74;
+        }
+
+
+        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+            ans = null;
+            Map.markObstructed(l64);
+            return;
+        }
+        p = m46.getPaint();
+        if ( Map.isNearRuin(l46) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l64);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l64; // (3,-3)
+            attackLoc = l46;
+        }
+
+
+        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+            ans = null;
+            Map.markObstructed(l64);
+            return;
+        }
+        p = m66.getPaint();
+        if ( Map.isNearRuin(l66) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l64);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l64; // (3,-3)
+            attackLoc = l66;
         }
 
 
@@ -22065,7 +20892,57 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l55; // (2,-3)
             attackLoc = l47;
-            center = l64;
+        }
+
+
+        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+            ans = null;
+            Map.markObstructed(l64);
+            return;
+        }
+        p = m57.getPaint();
+        if ( Map.isNearRuin(l57) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l64);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l55; // (2,-3)
+            attackLoc = l57;
+        }
+
+
+        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+            ans = null;
+            Map.markObstructed(l64);
+            return;
+        }
+        p = m45.getPaint();
+        if ( Map.isNearRuin(l45) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l64);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l55; // (2,-3)
+            attackLoc = l45;
+        }
+
+
+        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+            ans = null;
+            Map.markObstructed(l64);
+            return;
+        }
+        p = m75.getPaint();
+        if ( Map.isNearRuin(l75) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l64);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l65; // (3,-2)
+            attackLoc = l75;
         }
 
 
@@ -22083,7 +20960,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
             attackLoc = l48;
-            center = l64;
         }
 
 
@@ -22091,43 +20967,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt60() throws GameActionException { // (3,3)
         center = myLoc.translate(3,3);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
-            ans = null;
-            Map.markObstructed(l70);
-            return;
-        }
-        p = m78.getPaint();
-        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l70);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l70; // (3,3)
-            attackLoc = l78;
-            center = l70;
-        }
-
-
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
-            ans = null;
-            Map.markObstructed(l70);
-            return;
-        }
-        p = m62.getPaint();
-        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l70);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l70; // (3,3)
-            attackLoc = l62;
-            center = l70;
-        }
-
-
         if (m70.isWall() || m70.hasRuin()){ // (3,3)
             ans = null;
             Map.markObstructed(l70);
@@ -22142,43 +20983,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l70; // (3,3)
             attackLoc = l70;
-            center = l70;
-        }
-
-
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
-            ans = null;
-            Map.markObstructed(l70);
-            return;
-        }
-        p = m77.getPaint();
-        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l70);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l69; // (3,2)
-            attackLoc = l77;
-            center = l70;
-        }
-
-
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
-            ans = null;
-            Map.markObstructed(l70);
-            return;
-        }
-        p = m53.getPaint();
-        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l70);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l61; // (2,3)
-            attackLoc = l53;
-            center = l70;
         }
 
 
@@ -22196,7 +21000,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l70; // (3,3)
             attackLoc = l69;
-            center = l70;
         }
 
 
@@ -22214,43 +21017,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l70; // (3,3)
             attackLoc = l61;
-            center = l70;
-        }
-
-
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
-            ans = null;
-            Map.markObstructed(l70);
-            return;
-        }
-        p = m68.getPaint();
-        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l70);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l70; // (3,3)
-            attackLoc = l68;
-            center = l70;
-        }
-
-
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
-            ans = null;
-            Map.markObstructed(l70);
-            return;
-        }
-        p = m52.getPaint();
-        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l70);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l70; // (3,3)
-            attackLoc = l52;
-            center = l70;
         }
 
 
@@ -22268,7 +21034,74 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l70; // (3,3)
             attackLoc = l60;
-            center = l70;
+        }
+
+
+        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+            ans = null;
+            Map.markObstructed(l70);
+            return;
+        }
+        p = m78.getPaint();
+        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l70);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l70; // (3,3)
+            attackLoc = l78;
+        }
+
+
+        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+            ans = null;
+            Map.markObstructed(l70);
+            return;
+        }
+        p = m62.getPaint();
+        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l70);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l70; // (3,3)
+            attackLoc = l62;
+        }
+
+
+        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+            ans = null;
+            Map.markObstructed(l70);
+            return;
+        }
+        p = m68.getPaint();
+        if ( Map.isNearRuin(l68) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l70);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l70; // (3,3)
+            attackLoc = l68;
+        }
+
+
+        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+            ans = null;
+            Map.markObstructed(l70);
+            return;
+        }
+        p = m52.getPaint();
+        if ( Map.isNearRuin(l52) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l70);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l70; // (3,3)
+            attackLoc = l52;
         }
 
 
@@ -22284,9 +21117,25 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l61; // (2,3)
+            ans = l69; // (3,2)
             attackLoc = l59;
-            center = l70;
+        }
+
+
+        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+            ans = null;
+            Map.markObstructed(l70);
+            return;
+        }
+        p = m77.getPaint();
+        if ( Map.isNearRuin(l77) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l70);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l69; // (3,2)
+            attackLoc = l77;
         }
 
 
@@ -22302,9 +21151,25 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l61; // (2,3)
+            ans = l69; // (3,2)
             attackLoc = l51;
-            center = l70;
+        }
+
+
+        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+            ans = null;
+            Map.markObstructed(l70);
+            return;
+        }
+        p = m53.getPaint();
+        if ( Map.isNearRuin(l53) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l70);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l61; // (2,3)
+            attackLoc = l53;
         }
 
 
@@ -22322,7 +21187,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
             attackLoc = l50;
-            center = l70;
         }
 
 
@@ -22330,25 +21194,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt61() throws GameActionException { // (-4,-2)
         center = myLoc.translate(-4,-2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
-            ans = null;
-            Map.markObstructed(l2);
-            return;
-        }
-        p = m18.getPaint();
-        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l2);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l10; // (-3,-3)
-            attackLoc = l18;
-            center = l2;
-        }
-
-
         if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l2);
@@ -22363,25 +21210,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l2; // (-4,-2)
             attackLoc = l2;
-            center = l2;
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l2);
             return;
         }
-        p = m10.getPaint();
-        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l2);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l2; // (-4,-2)
-            attackLoc = l10;
-            center = l2;
+            attackLoc = l11;
         }
 
 
@@ -22399,61 +21244,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l2; // (-4,-2)
             attackLoc = l3;
-            center = l2;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l2);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l2);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l2; // (-4,-2)
-            attackLoc = l4;
-            center = l2;
-        }
-
-
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
-            ans = null;
-            Map.markObstructed(l2);
-            return;
-        }
-        p = m19.getPaint();
-        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l2);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l11; // (-3,-2)
-            attackLoc = l19;
-            center = l2;
-        }
-
-
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
-            ans = null;
-            Map.markObstructed(l2);
-            return;
-        }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l2);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l2; // (-4,-2)
-            attackLoc = l11;
-            center = l2;
         }
 
 
@@ -22471,25 +21261,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l2; // (-4,-2)
             attackLoc = l12;
-            center = l2;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l2);
             return;
         }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+        p = m10.getPaint();
+        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l2);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l11; // (-3,-2)
-            attackLoc = l13;
-            center = l2;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l2; // (-4,-2)
+            attackLoc = l10;
         }
 
 
@@ -22507,7 +21295,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l2; // (-4,-2)
             attackLoc = l20;
-            center = l2;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l2);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l2);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l2; // (-4,-2)
+            attackLoc = l4;
         }
 
 
@@ -22525,7 +21329,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l11; // (-3,-2)
             attackLoc = l21;
-            center = l2;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l2);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l2);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l11; // (-3,-2)
+            attackLoc = l13;
+        }
+
+
+        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+            ans = null;
+            Map.markObstructed(l2);
+            return;
+        }
+        p = m19.getPaint();
+        if ( Map.isNearRuin(l19) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l2);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l11; // (-3,-2)
+            attackLoc = l19;
         }
 
 
@@ -22543,7 +21380,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
             attackLoc = l22;
-            center = l2;
+        }
+
+
+        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+            ans = null;
+            Map.markObstructed(l2);
+            return;
+        }
+        p = m18.getPaint();
+        if ( Map.isNearRuin(l18) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l2);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l10; // (-3,-3)
+            attackLoc = l18;
         }
 
 
@@ -22551,25 +21404,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt62() throws GameActionException { // (-4,2)
         center = myLoc.translate(-4,2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
-            ans = null;
-            Map.markObstructed(l6);
-            return;
-        }
-        p = m26.getPaint();
-        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l6);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l16; // (-3,3)
-            attackLoc = l26;
-            center = l6;
-        }
-
-
         if (m6.isWall() || m6.hasRuin()){ // (-4,2)
             ans = null;
             Map.markObstructed(l6);
@@ -22584,25 +21420,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l6; // (-4,2)
             attackLoc = l6;
-            center = l6;
-        }
-
-
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
-            ans = null;
-            Map.markObstructed(l6);
-            return;
-        }
-        p = m16.getPaint();
-        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l6);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l6; // (-4,2)
-            attackLoc = l16;
-            center = l6;
         }
 
 
@@ -22620,43 +21437,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l6; // (-4,2)
             attackLoc = l5;
-            center = l6;
-        }
-
-
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
-            ans = null;
-            Map.markObstructed(l6);
-            return;
-        }
-        p = m4.getPaint();
-        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l6);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l6; // (-4,2)
-            attackLoc = l4;
-            center = l6;
-        }
-
-
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
-            ans = null;
-            Map.markObstructed(l6);
-            return;
-        }
-        p = m25.getPaint();
-        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l6);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l15; // (-3,2)
-            attackLoc = l25;
-            center = l6;
         }
 
 
@@ -22674,7 +21454,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l6; // (-4,2)
             attackLoc = l15;
-            center = l6;
         }
 
 
@@ -22692,25 +21471,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l6; // (-4,2)
             attackLoc = l14;
-            center = l6;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
             ans = null;
             Map.markObstructed(l6);
             return;
         }
-        p = m13.getPaint();
-        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+        p = m16.getPaint();
+        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l6);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l15; // (-3,2)
-            attackLoc = l13;
-            center = l6;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l6; // (-4,2)
+            attackLoc = l16;
+        }
+
+
+        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+            ans = null;
+            Map.markObstructed(l6);
+            return;
+        }
+        p = m4.getPaint();
+        if ( Map.isNearRuin(l4) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l6);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l6; // (-4,2)
+            attackLoc = l4;
         }
 
 
@@ -22728,7 +21522,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l6; // (-4,2)
             attackLoc = l24;
-            center = l6;
+        }
+
+
+        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+            ans = null;
+            Map.markObstructed(l6);
+            return;
+        }
+        p = m13.getPaint();
+        if ( Map.isNearRuin(l13) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l6);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l5; // (-4,1)
+            attackLoc = l13;
         }
 
 
@@ -22744,9 +21554,25 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l15; // (-3,2)
+            ans = l5; // (-4,1)
             attackLoc = l23;
-            center = l6;
+        }
+
+
+        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+            ans = null;
+            Map.markObstructed(l6);
+            return;
+        }
+        p = m25.getPaint();
+        if ( Map.isNearRuin(l25) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l6);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l15; // (-3,2)
+            attackLoc = l25;
         }
 
 
@@ -22764,7 +21590,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
             attackLoc = l22;
-            center = l6;
+        }
+
+
+        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+            ans = null;
+            Map.markObstructed(l6);
+            return;
+        }
+        p = m26.getPaint();
+        if ( Map.isNearRuin(l26) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l6);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l16; // (-3,3)
+            attackLoc = l26;
         }
 
 
@@ -22772,6 +21614,7 @@ public class ResourcePatternManager {
 
     static void checkCenterAt63() throws GameActionException { // (-2,-4)
         center = myLoc.translate(-2,-4);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
         if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
             ans = null;
@@ -22787,79 +21630,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l18; // (-2,-4)
             attackLoc = l18;
-            center = l18;
-        }
-
-
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
-            ans = null;
-            Map.markObstructed(l18);
-            return;
-        }
-        p = m2.getPaint();
-        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l18);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l10; // (-3,-3)
-            attackLoc = l2;
-            center = l18;
-        }
-
-
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
-            ans = null;
-            Map.markObstructed(l18);
-            return;
-        }
-        p = m10.getPaint();
-        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l18);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l18; // (-2,-4)
-            attackLoc = l10;
-            center = l18;
-        }
-
-
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
-            ans = null;
-            Map.markObstructed(l18);
-            return;
-        }
-        p = m27.getPaint();
-        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l18);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l18; // (-2,-4)
-            attackLoc = l27;
-            center = l18;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l18);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l18);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l18; // (-2,-4)
-            attackLoc = l36;
-            center = l18;
         }
 
 
@@ -22877,25 +21647,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l18; // (-2,-4)
             attackLoc = l19;
-            center = l18;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l18);
             return;
         }
-        p = m11.getPaint();
-        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
+        p = m27.getPaint();
+        if ( Map.isNearRuin(l27) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l18);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l19; // (-2,-3)
-            attackLoc = l11;
-            center = l18;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l18; // (-2,-4)
+            attackLoc = l27;
+        }
+
+
+        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+            ans = null;
+            Map.markObstructed(l18);
+            return;
+        }
+        p = m10.getPaint();
+        if ( Map.isNearRuin(l10) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l18);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l18; // (-2,-4)
+            attackLoc = l10;
         }
 
 
@@ -22913,25 +21698,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l18; // (-2,-4)
             attackLoc = l28;
-            center = l18;
-        }
-
-
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
-            ans = null;
-            Map.markObstructed(l18);
-            return;
-        }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l18);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l19; // (-2,-3)
-            attackLoc = l37;
-            center = l18;
         }
 
 
@@ -22949,7 +21715,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l18; // (-2,-4)
             attackLoc = l20;
-            center = l18;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l18);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l18);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l18; // (-2,-4)
+            attackLoc = l36;
+        }
+
+
+        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+            ans = null;
+            Map.markObstructed(l18);
+            return;
+        }
+        p = m11.getPaint();
+        if ( Map.isNearRuin(l11) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l18);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l19; // (-2,-3)
+            attackLoc = l11;
         }
 
 
@@ -22967,7 +21766,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l19; // (-2,-3)
             attackLoc = l29;
-            center = l18;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l18);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l18);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l19; // (-2,-3)
+            attackLoc = l37;
+        }
+
+
+        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+            ans = null;
+            Map.markObstructed(l18);
+            return;
+        }
+        p = m2.getPaint();
+        if ( Map.isNearRuin(l2) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l18);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l10; // (-3,-3)
+            attackLoc = l2;
         }
 
 
@@ -22985,7 +21817,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l28; // (-1,-3)
             attackLoc = l38;
-            center = l18;
         }
 
 
@@ -22993,6 +21824,7 @@ public class ResourcePatternManager {
 
     static void checkCenterAt64() throws GameActionException { // (-2,4)
         center = myLoc.translate(-2,4);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
         if (m26.isWall() || m26.hasRuin()){ // (-2,4)
             ans = null;
@@ -23008,79 +21840,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l26; // (-2,4)
             attackLoc = l26;
-            center = l26;
-        }
-
-
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
-            ans = null;
-            Map.markObstructed(l26);
-            return;
-        }
-        p = m6.getPaint();
-        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l26);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l16; // (-3,3)
-            attackLoc = l6;
-            center = l26;
-        }
-
-
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
-            ans = null;
-            Map.markObstructed(l26);
-            return;
-        }
-        p = m16.getPaint();
-        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l26);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l26; // (-2,4)
-            attackLoc = l16;
-            center = l26;
-        }
-
-
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
-            ans = null;
-            Map.markObstructed(l26);
-            return;
-        }
-        p = m35.getPaint();
-        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l26);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l26; // (-2,4)
-            attackLoc = l35;
-            center = l26;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l26);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l26);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l26; // (-2,4)
-            attackLoc = l44;
-            center = l26;
         }
 
 
@@ -23098,25 +21857,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l26; // (-2,4)
             attackLoc = l25;
-            center = l26;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
             ans = null;
             Map.markObstructed(l26);
             return;
         }
-        p = m15.getPaint();
-        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+        p = m35.getPaint();
+        if ( Map.isNearRuin(l35) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l26);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l25; // (-2,3)
-            attackLoc = l15;
-            center = l26;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l26; // (-2,4)
+            attackLoc = l35;
+        }
+
+
+        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+            ans = null;
+            Map.markObstructed(l26);
+            return;
+        }
+        p = m16.getPaint();
+        if ( Map.isNearRuin(l16) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l26);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l26; // (-2,4)
+            attackLoc = l16;
         }
 
 
@@ -23134,25 +21908,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l26; // (-2,4)
             attackLoc = l34;
-            center = l26;
-        }
-
-
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
-            ans = null;
-            Map.markObstructed(l26);
-            return;
-        }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l26);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l25; // (-2,3)
-            attackLoc = l43;
-            center = l26;
         }
 
 
@@ -23170,7 +21925,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l26; // (-2,4)
             attackLoc = l24;
-            center = l26;
+        }
+
+
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+            ans = null;
+            Map.markObstructed(l26);
+            return;
+        }
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l26);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l26; // (-2,4)
+            attackLoc = l44;
+        }
+
+
+        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+            ans = null;
+            Map.markObstructed(l26);
+            return;
+        }
+        p = m15.getPaint();
+        if ( Map.isNearRuin(l15) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l26);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l25; // (-2,3)
+            attackLoc = l15;
         }
 
 
@@ -23188,7 +21976,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l25; // (-2,3)
             attackLoc = l33;
-            center = l26;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l26);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l26);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l25; // (-2,3)
+            attackLoc = l43;
+        }
+
+
+        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+            ans = null;
+            Map.markObstructed(l26);
+            return;
+        }
+        p = m6.getPaint();
+        if ( Map.isNearRuin(l6) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l26);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l16; // (-3,3)
+            attackLoc = l6;
         }
 
 
@@ -23206,7 +22027,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l34; // (-1,3)
             attackLoc = l42;
-            center = l26;
         }
 
 
@@ -23214,25 +22034,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt65() throws GameActionException { // (2,-4)
         center = myLoc.translate(2,-4);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
-            ans = null;
-            Map.markObstructed(l54);
-            return;
-        }
-        p = m74.getPaint();
-        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l54);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l64; // (3,-3)
-            attackLoc = l74;
-            center = l54;
-        }
-
-
         if (m54.isWall() || m54.hasRuin()){ // (2,-4)
             ans = null;
             Map.markObstructed(l54);
@@ -23247,25 +22050,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l54; // (2,-4)
             attackLoc = l54;
-            center = l54;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
             ans = null;
             Map.markObstructed(l54);
             return;
         }
-        p = m64.getPaint();
-        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l54);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l54; // (2,-4)
-            attackLoc = l64;
-            center = l54;
+            attackLoc = l55;
         }
 
 
@@ -23283,61 +22084,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l54; // (2,-4)
             attackLoc = l45;
-            center = l54;
-        }
-
-
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
-            ans = null;
-            Map.markObstructed(l54);
-            return;
-        }
-        p = m36.getPaint();
-        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l54);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l54; // (2,-4)
-            attackLoc = l36;
-            center = l54;
-        }
-
-
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
-            ans = null;
-            Map.markObstructed(l54);
-            return;
-        }
-        p = m65.getPaint();
-        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l54);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l55; // (2,-3)
-            attackLoc = l65;
-            center = l54;
-        }
-
-
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l54);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l54);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l54; // (2,-4)
-            attackLoc = l55;
-            center = l54;
         }
 
 
@@ -23355,25 +22101,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l54; // (2,-4)
             attackLoc = l46;
-            center = l54;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
             ans = null;
             Map.markObstructed(l54);
             return;
         }
-        p = m37.getPaint();
-        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+        p = m64.getPaint();
+        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l54);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l55; // (2,-3)
-            attackLoc = l37;
-            center = l54;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l54; // (2,-4)
+            attackLoc = l64;
         }
 
 
@@ -23391,7 +22135,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l54; // (2,-4)
             attackLoc = l56;
-            center = l54;
+        }
+
+
+        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+            ans = null;
+            Map.markObstructed(l54);
+            return;
+        }
+        p = m36.getPaint();
+        if ( Map.isNearRuin(l36) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l54);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l54; // (2,-4)
+            attackLoc = l36;
         }
 
 
@@ -23409,7 +22169,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l55; // (2,-3)
             attackLoc = l47;
-            center = l54;
+        }
+
+
+        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+            ans = null;
+            Map.markObstructed(l54);
+            return;
+        }
+        p = m37.getPaint();
+        if ( Map.isNearRuin(l37) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l54);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l55; // (2,-3)
+            attackLoc = l37;
+        }
+
+
+        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+            ans = null;
+            Map.markObstructed(l54);
+            return;
+        }
+        p = m65.getPaint();
+        if ( Map.isNearRuin(l65) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l54);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l55; // (2,-3)
+            attackLoc = l65;
         }
 
 
@@ -23427,7 +22220,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l46; // (1,-3)
             attackLoc = l38;
-            center = l54;
+        }
+
+
+        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+            ans = null;
+            Map.markObstructed(l54);
+            return;
+        }
+        p = m74.getPaint();
+        if ( Map.isNearRuin(l74) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l54);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l64; // (3,-3)
+            attackLoc = l74;
         }
 
 
@@ -23435,25 +22244,8 @@ public class ResourcePatternManager {
 
     static void checkCenterAt66() throws GameActionException { // (2,4)
         center = myLoc.translate(2,4);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
-            ans = null;
-            Map.markObstructed(l62);
-            return;
-        }
-        p = m78.getPaint();
-        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l62);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l70; // (3,3)
-            attackLoc = l78;
-            center = l62;
-        }
-
-
         if (m62.isWall() || m62.hasRuin()){ // (2,4)
             ans = null;
             Map.markObstructed(l62);
@@ -23468,25 +22260,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l62; // (2,4)
             attackLoc = l62;
-            center = l62;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
             ans = null;
             Map.markObstructed(l62);
             return;
         }
-        p = m70.getPaint();
-        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l62);
             ans = null;
             return;
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l62; // (2,4)
-            attackLoc = l70;
-            center = l62;
+            attackLoc = l61;
         }
 
 
@@ -23504,61 +22294,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l62; // (2,4)
             attackLoc = l53;
-            center = l62;
-        }
-
-
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
-            ans = null;
-            Map.markObstructed(l62);
-            return;
-        }
-        p = m44.getPaint();
-        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l62);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l62; // (2,4)
-            attackLoc = l44;
-            center = l62;
-        }
-
-
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
-            ans = null;
-            Map.markObstructed(l62);
-            return;
-        }
-        p = m69.getPaint();
-        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l62);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l61; // (2,3)
-            attackLoc = l69;
-            center = l62;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l62);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l62);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l62; // (2,4)
-            attackLoc = l61;
-            center = l62;
         }
 
 
@@ -23576,25 +22311,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l62; // (2,4)
             attackLoc = l52;
-            center = l62;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (m70.isWall() || m70.hasRuin()){ // (3,3)
             ans = null;
             Map.markObstructed(l62);
             return;
         }
-        p = m43.getPaint();
-        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+        p = m70.getPaint();
+        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l62);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l61; // (2,3)
-            attackLoc = l43;
-            center = l62;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l62; // (2,4)
+            attackLoc = l70;
         }
 
 
@@ -23612,7 +22345,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l62; // (2,4)
             attackLoc = l60;
-            center = l62;
+        }
+
+
+        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+            ans = null;
+            Map.markObstructed(l62);
+            return;
+        }
+        p = m44.getPaint();
+        if ( Map.isNearRuin(l44) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l62);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l62; // (2,4)
+            attackLoc = l44;
         }
 
 
@@ -23630,7 +22379,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l61; // (2,3)
             attackLoc = l51;
-            center = l62;
+        }
+
+
+        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+            ans = null;
+            Map.markObstructed(l62);
+            return;
+        }
+        p = m69.getPaint();
+        if ( Map.isNearRuin(l69) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l62);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l61; // (2,3)
+            attackLoc = l69;
+        }
+
+
+        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+            ans = null;
+            Map.markObstructed(l62);
+            return;
+        }
+        p = m43.getPaint();
+        if ( Map.isNearRuin(l43) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l62);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l61; // (2,3)
+            attackLoc = l43;
         }
 
 
@@ -23648,7 +22430,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l52; // (1,3)
             attackLoc = l42;
-            center = l62;
+        }
+
+
+        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+            ans = null;
+            Map.markObstructed(l62);
+            return;
+        }
+        p = m78.getPaint();
+        if ( Map.isNearRuin(l78) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l62);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l70; // (3,3)
+            attackLoc = l78;
         }
 
 
@@ -23656,6 +22454,7 @@ public class ResourcePatternManager {
 
     static void checkCenterAt67() throws GameActionException { // (4,-2)
         center = myLoc.translate(4,-2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
         if (m74.isWall() || m74.hasRuin()){ // (4,-2)
             ans = null;
@@ -23671,43 +22470,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l74; // (4,-2)
             attackLoc = l74;
-            center = l74;
-        }
-
-
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
-            ans = null;
-            Map.markObstructed(l74);
-            return;
-        }
-        p = m54.getPaint();
-        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l74);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l64; // (3,-3)
-            attackLoc = l54;
-            center = l74;
-        }
-
-
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
-            ans = null;
-            Map.markObstructed(l74);
-            return;
-        }
-        p = m64.getPaint();
-        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l74);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l74; // (4,-2)
-            attackLoc = l64;
-            center = l74;
         }
 
 
@@ -23725,25 +22487,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l74; // (4,-2)
             attackLoc = l75;
-            center = l74;
-        }
-
-
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
-            ans = null;
-            Map.markObstructed(l74);
-            return;
-        }
-        p = m76.getPaint();
-        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l74);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l74; // (4,-2)
-            attackLoc = l76;
-            center = l74;
         }
 
 
@@ -23761,25 +22504,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l74; // (4,-2)
             attackLoc = l65;
-            center = l74;
-        }
-
-
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
-            ans = null;
-            Map.markObstructed(l74);
-            return;
-        }
-        p = m55.getPaint();
-        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l74);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l65; // (3,-2)
-            attackLoc = l55;
-            center = l74;
         }
 
 
@@ -23797,25 +22521,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l74; // (4,-2)
             attackLoc = l66;
-            center = l74;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
             ans = null;
             Map.markObstructed(l74);
             return;
         }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+        p = m64.getPaint();
+        if ( Map.isNearRuin(l64) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l74);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l65; // (3,-2)
-            attackLoc = l67;
-            center = l74;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l74; // (4,-2)
+            attackLoc = l64;
+        }
+
+
+        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+            ans = null;
+            Map.markObstructed(l74);
+            return;
+        }
+        p = m76.getPaint();
+        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l74);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l74; // (4,-2)
+            attackLoc = l76;
         }
 
 
@@ -23833,7 +22572,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l74; // (4,-2)
             attackLoc = l56;
-            center = l74;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l74);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l74);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l75; // (4,-1)
+            attackLoc = l67;
         }
 
 
@@ -23849,9 +22604,25 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l65; // (3,-2)
+            ans = l75; // (4,-1)
             attackLoc = l57;
-            center = l74;
+        }
+
+
+        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+            ans = null;
+            Map.markObstructed(l74);
+            return;
+        }
+        p = m55.getPaint();
+        if ( Map.isNearRuin(l55) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l74);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l65; // (3,-2)
+            attackLoc = l55;
         }
 
 
@@ -23869,7 +22640,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l66; // (3,-1)
             attackLoc = l58;
-            center = l74;
+        }
+
+
+        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+            ans = null;
+            Map.markObstructed(l74);
+            return;
+        }
+        p = m54.getPaint();
+        if ( Map.isNearRuin(l54) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l74);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l64; // (3,-3)
+            attackLoc = l54;
         }
 
 
@@ -23877,6 +22664,7 @@ public class ResourcePatternManager {
 
     static void checkCenterAt68() throws GameActionException { // (4,2)
         center = myLoc.translate(4,2);
+        attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
         if (m78.isWall() || m78.hasRuin()){ // (4,2)
             ans = null;
@@ -23892,43 +22680,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l78; // (4,2)
             attackLoc = l78;
-            center = l78;
-        }
-
-
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
-            ans = null;
-            Map.markObstructed(l78);
-            return;
-        }
-        p = m62.getPaint();
-        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l78);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l70; // (3,3)
-            attackLoc = l62;
-            center = l78;
-        }
-
-
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
-            ans = null;
-            Map.markObstructed(l78);
-            return;
-        }
-        p = m70.getPaint();
-        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l78);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l78; // (4,2)
-            attackLoc = l70;
-            center = l78;
         }
 
 
@@ -23946,25 +22697,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l78; // (4,2)
             attackLoc = l77;
-            center = l78;
-        }
-
-
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
-            ans = null;
-            Map.markObstructed(l78);
-            return;
-        }
-        p = m76.getPaint();
-        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l78);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_PRIMARY){
-            ans = l78; // (4,2)
-            attackLoc = l76;
-            center = l78;
         }
 
 
@@ -23982,25 +22714,6 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l78; // (4,2)
             attackLoc = l69;
-            center = l78;
-        }
-
-
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
-            ans = null;
-            Map.markObstructed(l78);
-            return;
-        }
-        p = m61.getPaint();
-        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
-            Map.markCenterNearRuins(l78);
-            ans = null;
-            return;
-        }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l69; // (3,2)
-            attackLoc = l61;
-            center = l78;
         }
 
 
@@ -24018,25 +22731,40 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l78; // (4,2)
             attackLoc = l68;
-            center = l78;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (m70.isWall() || m70.hasRuin()){ // (3,3)
             ans = null;
             Map.markObstructed(l78);
             return;
         }
-        p = m67.getPaint();
-        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+        p = m70.getPaint();
+        if ( Map.isNearRuin(l70) && !maxT || p.isEnemy()){
             Map.markCenterNearRuins(l78);
             ans = null;
             return;
         }
-        if (p != PaintType.ALLY_SECONDARY){
-            ans = l69; // (3,2)
-            attackLoc = l67;
-            center = l78;
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l78; // (4,2)
+            attackLoc = l70;
+        }
+
+
+        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+            ans = null;
+            Map.markObstructed(l78);
+            return;
+        }
+        p = m76.getPaint();
+        if ( Map.isNearRuin(l76) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l78);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_PRIMARY){
+            ans = l78; // (4,2)
+            attackLoc = l76;
         }
 
 
@@ -24054,7 +22782,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_PRIMARY){
             ans = l78; // (4,2)
             attackLoc = l60;
-            center = l78;
+        }
+
+
+        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+            ans = null;
+            Map.markObstructed(l78);
+            return;
+        }
+        p = m67.getPaint();
+        if ( Map.isNearRuin(l67) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l78);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l77; // (4,1)
+            attackLoc = l67;
         }
 
 
@@ -24070,9 +22814,25 @@ public class ResourcePatternManager {
             return;
         }
         if (p != PaintType.ALLY_SECONDARY){
-            ans = l69; // (3,2)
+            ans = l77; // (4,1)
             attackLoc = l59;
-            center = l78;
+        }
+
+
+        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+            ans = null;
+            Map.markObstructed(l78);
+            return;
+        }
+        p = m61.getPaint();
+        if ( Map.isNearRuin(l61) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l78);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l69; // (3,2)
+            attackLoc = l61;
         }
 
 
@@ -24090,7 +22850,23 @@ public class ResourcePatternManager {
         if (p != PaintType.ALLY_SECONDARY){
             ans = l68; // (3,1)
             attackLoc = l58;
-            center = l78;
+        }
+
+
+        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+            ans = null;
+            Map.markObstructed(l78);
+            return;
+        }
+        p = m62.getPaint();
+        if ( Map.isNearRuin(l62) && !maxT || p.isEnemy()){
+            Map.markCenterNearRuins(l78);
+            ans = null;
+            return;
+        }
+        if (p != PaintType.ALLY_SECONDARY){
+            ans = l70; // (3,3)
+            attackLoc = l62;
         }
 
 
