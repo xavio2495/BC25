@@ -13,7 +13,7 @@ for ax in range(-2, 3):
         for dx in range(-2, 3):
             for dy in range(-2, 3):
                 if dx*dx+dy*dy>4: continue
-                can_remove_enemy_paint = dx*dx+dy*dy>2
+                can_remove_enemy_paint = dx*dx+dy*dy<=2
 
                 ddx = ax+dx
                 ddy = ay+dy

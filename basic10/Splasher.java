@@ -35,6 +35,7 @@ public class Splasher extends Unit {
             recovering = false;
         tryAttackTile();
         move();
+        tryAttackTile();
         tryGivePaint();
         tryWithdraw();
     }
@@ -59,6 +60,7 @@ public class Splasher extends Unit {
     }
 
     void tryAttackTile() throws GameActionException {
+        if(!rc.isActionReady()) return;
         MapLocation loc = SplasherAttackManager.getBestAttack();
         if (loc != null && rc.canAttack(loc))
             rc.attack(loc);
