@@ -52,11 +52,9 @@ public class Splasher extends Unit {
     MapLocation getTarget() throws GameActionException {
         if (recovering && TowerManager.closestPaintTower != null)
             return TowerManager.closestPaintTower;
-        MapLocation target = getClosestEnemyPaint();
+        //MapLocation target = getClosestEnemyPaint();
         // if (target == null) target = searchClosestHurt();
-        if (target == null)
-            target = explore.getExplore3Target();
-        return target;
+        return explore.getExplore3Target();
     }
 
     void tryAttackTile() throws GameActionException {
