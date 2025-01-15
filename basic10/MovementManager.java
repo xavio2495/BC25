@@ -15,6 +15,7 @@ public class MovementManager {
         return switch (MyRobot.rc.getType()) {
             case SOLDIER -> MicroManagerSoldier.microInfos[dir.ordinal()].towersInRange > 0;
             case MOPPER -> MicroManagerMopper.microInfos[dir.ordinal()].towersInRange > 0;
+            case SPLASHER -> MicroManagerMopper.microInfos[dir.ordinal()].towersInRange > 0;
             default -> true;
         };
     }
