@@ -14,10 +14,12 @@ public class Main {
     static final String filename = "ResourcePattern.txt";
 
 
-    static final int code = 22365525;
+    static final int code = 5147;
+
+    static CustomLoc center;
 
 
-    static int dx, dy;
+    //static int DX, DY;
 
     static class CustomLoc implements Comparable<CustomLoc> {
         int dx, dy;
@@ -44,25 +46,27 @@ public class Main {
         }
 
         public int compareTo(CustomLoc c){
-            //if (!isOtherQuadrant() && c.isOtherQuadrant()) return -1;
-            //if (isOtherQuadrant() && !c.isOtherQuadrant()) return 1;
             return Integer.compare(dist(0, 0), c.dist(0, 0));
         }
 
         boolean getPaintBit(){
-            int cx = (dx + Main.dx + 10)%10, cy = (dy + Main.dy + 10)%10;
-            return !((cx+cy)%2 == 0 || (cx + cy*7)%10 == 1);
+            int cx = (dx - center.dx + 6)%4, cy = (dy - center.dy + 6)%4;
+            int c = cx * 4 + cy;
+            return (((code >>> c) & 1) >0);
+
         }
 
-        boolean isCenter(){
-            int cx = (dx + Main.dx + 10)%10, cy = (dy + Main.dy + 10)%10;
-            return ((cx + cy*7)%10 == 1);
+        boolean isCenter(int myX, int myY){
+            int cx = (dx + myX + 4)%4, cy = (dy + myY + 4)%4;
+            //return !((cx+cy)%2 == 0 || (cx + cy*7)%10 == 1);
+            int c = cx * 4 + cy;
+            return cx == 2 && cy == 2;
         }
 
-        boolean isOtherQuadrant(){
+        /*boolean isOtherQuadrant(){
             int cx = dx + Main.dx, cy = dy + Main.dy;
             return (cx < 0 || cx >= 5 || cy < 0 || cy >= 5);
-        }
+        }*/
     }
 
     static class PatternDetector{
@@ -191,6 +195,8 @@ public class Main {
             write("static boolean maxT;");
             write("static MapLocation ans;");
             write("static MapLocation myLoc;");
+            write("static MapLocation attackLoc;");
+            write("static MapLocation center;");
             write("static PaintType p;");
 
 
@@ -210,8 +216,8 @@ public class Main {
 
             write("");
 
-            write("int dx = myLoc.x%10, dy = myLoc.y%10;");
-            write("int dencode = dx*10 + dy;");
+            write("int dx = myLoc.x%4, dy = myLoc.y%4;");
+            write("int dencode = dx*4 + dy;");
             write("ans = null;");
 
             write("switch(dencode){");
@@ -219,19 +225,18 @@ public class Main {
 
             Collections.sort(ruinLocs);
 
-            ArrayList<Integer> methods = new ArrayList<>();
+            //ArrayList<Integer> methods = new ArrayList<>();
 
-            for (int i = 0; i < 100; ++i){
+            for (int i = 0; i < 16; ++i){
                 write("case " + i  + ":");
                 ++tabs;
-                Main.dx = i / 10;
-                Main.dy = i % 10;
                 for (int x = 0; x < ruinLocs.size(); ++x){
-                    if (ruinLocs.get(x).isCenter() && ruinLocs.get(x).dist(0,0) <= 8){
-                        //write("checkCenterAt(myLoc.translate(" + ruinLocs.get(x).dx + "," + ruinLocs.get(x).dy + ");");
-                        write("checkCenterAt" + i + "x" + x + "();");
+                    if (ruinLocs.get(x).isCenter(i/4, i%4)
+                            //&& ruinLocs.get(x).dist(0,0) <= 8
+                    ){
+                        write("checkCenterAt" + x + "();");
                         write("if (ans != null) return ans;");
-                        methods.add(x*100+i);
+                        //methods.add(x*100+i);
                     }
                 }
                 write("break;");
@@ -249,16 +254,17 @@ public class Main {
 
             /*================================= CENTERS =================================*/
 
-            for (int z = 0; z < methods.size(); ++z){
-                int code = methods.get(z);
-                int i = code %100;
-                Main.dx = i / 10;
-                Main.dy = i % 10;
-                int x = code /100;
-                CustomLoc center = ruinLocs.get(x);
-                write("static void checkCenterAt" + i + "x" + x + "() throws GameActionException {" + " // (" + center.dx + "," + center.dy + ")");
+            //for (int z = 0; z < methods.size(); ++z){
+            for (int z = 0; z < ruinLocs.size(); ++z){
+                //int code = methods.get(z);
+                //int i = code %100;
+                //int x = code /100;
+                center = ruinLocs.get(z);
+                //Main.DX = (6 - center.dx)%4;
+                //Main.DY = (6 - center.dy)%4;
+                write("static void checkCenterAt" + z + "() throws GameActionException {" + " // (" + center.dx + "," + center.dy + ")");
                 ++tabs;
-                write ("MapLocation center = myLoc.translate(" + center.dx + "," + center.dy + ");");
+                write ("center = myLoc.translate(" + center.dx + "," + center.dy + ");");
                 write ("if (Map.forbiddenCenter(center)) return;");
 
                 for (int j = ruinLocs.size()-1; j >= 0; --j){
@@ -267,21 +273,29 @@ public class Main {
                     write("if ("  + cl.getMapInfoName() + ".isWall() || " + cl.getMapInfoName() + ".hasRuin()){ // (" + cl.dx + "," + cl.dy + ")");
                     ++tabs;
                     write("ans = null;");
-                    write("Map.markObstructed(" + cl.getName() + ");");
+                    write("Map.markObstructed(" + center.getName() + ");");
                     write("return;");
                     --tabs;
                     write("}");
                     write("p = " + cl.getMapInfoName() + ".getPaint();");
                     write("if ( Map.isNearRuin("  + cl.getName() + ") && !maxT || p.isEnemy()){");
                     ++tabs;
-                    write("Map.markCenterNearRuins(" + cl.getName() + ");");
+                    write("Map.markCenterNearRuins(" + center.getName() + ");");
 
                     write("ans = null;");
                     write("return;");
                     --tabs;
                     write("}");
                     CustomLoc bc = getBestCustomLoc(cl, center);
-                    write("if (p != PaintType." + getPaintType(cl.getPaintBit()) + ") ans = " + bc.getName() + "; // (" + cl.dx + "," + cl.dy + ")");
+                    write("if (p != PaintType." + getPaintType(cl.getPaintBit()) + "){");
+                    ++tabs;
+                    write("ans = " + bc.getName() + "; // (" + bc.dx + "," + bc.dy + ")");
+                    write("attackLoc = " + cl.getName() + ";");
+                    write("center = " + center.getName() + ";");
+                    --tabs;
+                    write("}");
+                    write("");
+                    write("");
                     //++tabs;
                     //write("ans = " + bc.getName() + "; // (" + bc.dx + "," + bc.dy + ")");
                     //--tabs;

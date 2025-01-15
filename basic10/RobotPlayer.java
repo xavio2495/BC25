@@ -1,4 +1,4 @@
-package basic9;
+package basic10;
 
 import battlecode.common.Clock;
 import battlecode.common.GameActionException;
