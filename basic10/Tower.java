@@ -31,6 +31,7 @@ public class Tower extends MyRobot {
     static final UnitType[] spawnPlanDefault = {
             UnitType.SOLDIER,
             UnitType.MOPPER,
+            UnitType.SPLASHER,
     };
 
     Tower(RobotController rc){
