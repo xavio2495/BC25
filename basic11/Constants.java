@@ -13,7 +13,7 @@ public class Constants {
     static int CRITICAL_PAINT_MOPPER = 55;
     static int CRITICAL_PAINT_SPLASHER = 55;
 
-    static int NO_HEAL_ROUND = 250;
+    static int NO_HEAL_ROUND = 1950;
 
     static int MIN_SOLDIER_MOVEMENT = UnitType.SOLDIER.attackCost + GameConstants.PENALTY_ENEMY_TERRITORY + 1;
 

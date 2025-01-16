@@ -1,13 +1,6 @@
 package basic11;
 
-import battlecode.common.GameActionException;
-import battlecode.common.MapInfo;
-import battlecode.common.MapLocation;
-import battlecode.common.PaintType;
-import battlecode.common.RobotController;
-import battlecode.common.RobotInfo;
-import battlecode.common.Team;
-import battlecode.common.UnitType;
+import battlecode.common.*;
 
 public class Splasher extends Unit {
 
@@ -60,8 +53,7 @@ public class Splasher extends Unit {
 
     void tryAttackTile() throws GameActionException {
         if(!rc.isActionReady()) return;
-        MapLocation loc = SplasherAttackManager.getBestAttack();
-        if (loc != null && rc.canAttack(loc))
-            rc.attack(loc);
+        if(rc.getPaint() < 50) return; // paint cost of splasher attack
+        SplasherAttackManager.doMoveAndAttack();
     }
 }
