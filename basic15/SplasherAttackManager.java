@@ -16,43 +16,43 @@ RobotInfo r;
 PaintType p;
 Team myTeam = rc.getTeam();
 
-int attack21 = 0;
-int attack32 = 0;
-int attack26 = 0;
-int attack19 = 0;
-int attack36 = 0;
-int attack6 = 0;
-int attack5 = 0;
-int attack12 = 0;
-int attack25 = 0;
-int attack4 = 0;
-int attack1 = 0;
-int attack29 = 0;
-int attack33 = 0;
-int attack10 = 0;
-int attack22 = 0;
-int attack11 = 0;
-int attack7 = 0;
-int attack16 = 0;
-int attack24 = 0;
-int attack2 = 0;
-int attack13 = 0;
+int attack20 = 0;
+int attack9 = 0;
 int attack34 = 0;
 int attack14 = 0;
-int attack23 = 0;
-int attack18 = 0;
-int attack3 = 0;
+int attack2 = 0;
 int attack28 = 0;
-int attack9 = 0;
-int attack15 = 0;
+int attack6 = 0;
+int attack8 = 0;
+int attack29 = 0;
 int attack30 = 0;
-int attack20 = 0;
 int attack31 = 0;
+int attack24 = 0;
+int attack5 = 0;
+int attack1 = 0;
+int attack10 = 0;
+int attack19 = 0;
+int attack25 = 0;
+int attack33 = 0;
+int attack22 = 0;
+int attack11 = 0;
+int attack23 = 0;
+int attack36 = 0;
 int attack0 = 0;
+int attack7 = 0;
+int attack16 = 0;
 int attack17 = 0;
 int attack35 = 0;
-int attack8 = 0;
+int attack18 = 0;
+int attack4 = 0;
 int attack27 = 0;
+int attack3 = 0;
+int attack32 = 0;
+int attack13 = 0;
+int attack26 = 0;
+int attack21 = 0;
+int attack12 = 0;
+int attack15 = 0;
 i = rc.senseMapInfo(myLoc);
 p = i.getPaint();
 loc = myLoc.translate(2, -2);
@@ -2170,8 +2170,8 @@ if(bestScore < attack15) { bestScore = attack15; best = attack15; }
 if(bestScore < attack30) { bestScore = attack30; best = attack30; }
 if(bestScore < attack34) { bestScore = attack34; best = attack34; }
 var info = MicroManagerSplasher.microInfos[Direction.SOUTHWEST.ordinal()];
-info.bestAtkValue=bestScore;
-info.bestAtkLoc=id2loc(best);
+info.atkValue=bestScore;
+info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.WEST)){
 int best = -1; int bestScore = 0;
@@ -2189,8 +2189,8 @@ if(bestScore < attack30) { bestScore = attack30; best = attack30; }
 if(bestScore < attack17) { bestScore = attack17; best = attack17; }
 if(bestScore < attack6) { bestScore = attack6; best = attack6; }
 var info = MicroManagerSplasher.microInfos[Direction.WEST.ordinal()];
-info.bestAtkValue=bestScore;
-info.bestAtkLoc=id2loc(best);
+info.atkValue=bestScore;
+info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.NORTHWEST)){
 int best = -1; int bestScore = 0;
@@ -2208,8 +2208,8 @@ if(bestScore < attack17) { bestScore = attack17; best = attack17; }
 if(bestScore < attack3) { bestScore = attack3; best = attack3; }
 if(bestScore < attack31) { bestScore = attack31; best = attack31; }
 var info = MicroManagerSplasher.microInfos[Direction.NORTHWEST.ordinal()];
-info.bestAtkValue=bestScore;
-info.bestAtkLoc=id2loc(best);
+info.atkValue=bestScore;
+info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.SOUTH)){
 int best = -1; int bestScore = 0;
@@ -2227,8 +2227,8 @@ if(bestScore < attack34) { bestScore = attack34; best = attack34; }
 if(bestScore < attack6) { bestScore = attack6; best = attack6; }
 if(bestScore < attack18) { bestScore = attack18; best = attack18; }
 var info = MicroManagerSplasher.microInfos[Direction.SOUTH.ordinal()];
-info.bestAtkValue=bestScore;
-info.bestAtkLoc=id2loc(best);
+info.atkValue=bestScore;
+info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.CENTER)){
 int best = -1; int bestScore = 0;
@@ -2246,8 +2246,8 @@ if(bestScore < attack6) { bestScore = attack6; best = attack6; }
 if(bestScore < attack31) { bestScore = attack31; best = attack31; }
 if(bestScore < attack33) { bestScore = attack33; best = attack33; }
 var info = MicroManagerSplasher.microInfos[Direction.CENTER.ordinal()];
-info.bestAtkValue=bestScore;
-info.bestAtkLoc=id2loc(best);
+info.atkValue=bestScore;
+info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.NORTH)){
 int best = -1; int bestScore = 0;
@@ -2265,8 +2265,8 @@ if(bestScore < attack31) { bestScore = attack31; best = attack31; }
 if(bestScore < attack20) { bestScore = attack20; best = attack20; }
 if(bestScore < attack21) { bestScore = attack21; best = attack21; }
 var info = MicroManagerSplasher.microInfos[Direction.NORTH.ordinal()];
-info.bestAtkValue=bestScore;
-info.bestAtkLoc=id2loc(best);
+info.atkValue=bestScore;
+info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.SOUTHEAST)){
 int best = -1; int bestScore = 0;
@@ -2284,8 +2284,8 @@ if(bestScore < attack18) { bestScore = attack18; best = attack18; }
 if(bestScore < attack33) { bestScore = attack33; best = attack33; }
 if(bestScore < attack0) { bestScore = attack0; best = attack0; }
 var info = MicroManagerSplasher.microInfos[Direction.SOUTHEAST.ordinal()];
-info.bestAtkValue=bestScore;
-info.bestAtkLoc=id2loc(best);
+info.atkValue=bestScore;
+info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.EAST)){
 int best = -1; int bestScore = 0;
@@ -2303,8 +2303,8 @@ if(bestScore < attack33) { bestScore = attack33; best = attack33; }
 if(bestScore < attack21) { bestScore = attack21; best = attack21; }
 if(bestScore < attack14) { bestScore = attack14; best = attack14; }
 var info = MicroManagerSplasher.microInfos[Direction.EAST.ordinal()];
-info.bestAtkValue=bestScore;
-info.bestAtkLoc=id2loc(best);
+info.atkValue=bestScore;
+info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.NORTHEAST)){
 int best = -1; int bestScore = 0;
@@ -2322,8 +2322,8 @@ if(bestScore < attack21) { bestScore = attack21; best = attack21; }
 if(bestScore < attack5) { bestScore = attack5; best = attack5; }
 if(bestScore < attack1) { bestScore = attack1; best = attack1; }
 var info = MicroManagerSplasher.microInfos[Direction.NORTHEAST.ordinal()];
-info.bestAtkValue=bestScore;
-info.bestAtkLoc=id2loc(best);
+info.atkValue=bestScore;
+info.atkLoc=id2loc(best);
 }
 }
 static MapLocation id2loc(int id) {

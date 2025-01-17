@@ -130,8 +130,8 @@ for move in radius(2):
         id = f'attack{actions.index(attack+move)}'
         p(f'if(bestScore < {id}) {{ bestScore = {id}; best = {id}; }}')
     p(f'var info = MicroManagerSplasher.microInfos[{move.direction()}.ordinal()];')
-    p('info.bestAtkValue=bestScore;')
-    p('info.bestAtkLoc=id2loc(best);')
+    p('info.atkValue=bestScore;')
+    p('info.atkLoc=id2loc(best);')
     p('}') # if canMove
     
 p('}') # void calc
