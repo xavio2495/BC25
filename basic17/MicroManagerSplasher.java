@@ -17,7 +17,7 @@ public class MicroManagerSplasher {
 
     static boolean doMicro() throws GameActionException {
         rc = MyRobot.rc;
-        if (!rc.isMovementReady()) return false;
+        //if (!rc.isMovementReady()) return false;
 
         myRange = rc.getType().actionRadiusSquared;
         canAttack = rc.isActionReady();

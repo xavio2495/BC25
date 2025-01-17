@@ -55,7 +55,7 @@ public class Mopper extends Unit {
         return target;
     }
 
-    void tryAttackEnemy() throws GameActionException {
+    static void tryAttackEnemy() throws GameActionException {
         RobotInfo[] enemies = rc.senseNearbyRobots(rc.getType().actionRadiusSquared, rc.getTeam().opponent());
         RobotInfo bestR = null;
         for (RobotInfo r : enemies){
@@ -70,7 +70,7 @@ public class Mopper extends Unit {
         if (rc.canAttack(loc)) rc.attack(loc);
     }
 
-    boolean isBetterThan(RobotInfo A, RobotInfo B){
+    static boolean isBetterThan(RobotInfo A, RobotInfo B){
         if (B == null) return true;
         if (A.getPaintAmount() < Constants.MIN_PAINT_MOPPER_ATTACK) return false;
         if (A.getPaintAmount() < GameConstants.MOPPER_ATTACK_PAINT_DEPLETION && B.getPaintAmount() >= GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) return false;

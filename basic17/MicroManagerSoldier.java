@@ -151,7 +151,7 @@ public class MicroManagerSoldier {
         //int allyMoppers = 0;
         Direction dir;
         MapLocation loc;
-        PaintType p;
+        PaintType p = PaintType.EMPTY;
         int closestDistMopper = Constants.INF;
         int adjAllies;
         boolean isAccessible = true;
@@ -197,7 +197,6 @@ public class MicroManagerSoldier {
         }
 
         int paintLost(){
-            if (p == null) return Constants.INF; // TODO: ugh bytecode
             return switch (p) {
                 case ENEMY_PRIMARY, ENEMY_SECONDARY ->
                         (GameConstants.PENALTY_ENEMY_TERRITORY + 2*adjAllies) + (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3;

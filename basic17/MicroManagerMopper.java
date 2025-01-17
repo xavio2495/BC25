@@ -19,7 +19,7 @@ public class MicroManagerMopper {
 
     static boolean doMicro() throws GameActionException {
         rc = MyRobot.rc;
-        if (!rc.isMovementReady()) return false;
+        //if (!rc.isMovementReady()) return false;
 
         myRange = rc.getType().actionRadiusSquared;
         canAttack = rc.isActionReady();
@@ -46,6 +46,7 @@ public class MicroManagerMopper {
                 case SOLDIER:
                     if (rc.getLocation().distanceSquaredTo(r.getLocation()) <= 8) {
                         //enemyNearby = true;
+                        hasPaint = r.getPaintAmount() > 0;
                         unit = r;
                         unitLoc = r.getLocation();
                         microInfos[0].updateEnemy();
@@ -62,6 +63,7 @@ public class MicroManagerMopper {
                 case MOPPER:
                     if (rc.getLocation().distanceSquaredTo(r.getLocation()) <= 8) {
                         //enemyNearby = true;
+                        hasPaint = r.getPaintAmount() > 0;
                         unit = r;
                         unitLoc = r.getLocation();
                         microInfos[0].updateMopper();
@@ -78,6 +80,7 @@ public class MicroManagerMopper {
                 default:
                     unit = r;
                     unitLoc = r.getLocation();
+                    hasPaint = true;
                     rc.setIndicatorDot(unitLoc, 0, 200, 0);
                     microInfos[0].updateTower();
                     microInfos[1].updateTower();
@@ -112,15 +115,15 @@ public class MicroManagerMopper {
 
         boolean shouldMicro = microInfos[8].p.isEnemy() && goodPaintNearby;
 
-        if (microInfos[0].isAccessible && microInfos[0].inAttackRange) shouldMicro = true;
-        if (microInfos[1].isAccessible && microInfos[1].inAttackRange) shouldMicro = true;
-        if (microInfos[2].isAccessible && microInfos[2].inAttackRange) shouldMicro = true;
-        if (microInfos[3].isAccessible && microInfos[3].inAttackRange) shouldMicro = true;
-        if (microInfos[4].isAccessible && microInfos[4].inAttackRange) shouldMicro = true;
-        if (microInfos[5].isAccessible && microInfos[5].inAttackRange) shouldMicro = true;
-        if (microInfos[6].isAccessible && microInfos[6].inAttackRange) shouldMicro = true;
-        if (microInfos[7].isAccessible && microInfos[7].inAttackRange) shouldMicro = true;
-        if (microInfos[8].isAccessible && microInfos[8].inAttackRange) shouldMicro = true;
+        if (microInfos[0].isAccessible && microInfos[0].atkValue > 0) shouldMicro = true;
+        if (microInfos[1].isAccessible && microInfos[1].atkValue > 0) shouldMicro = true;
+        if (microInfos[2].isAccessible && microInfos[2].atkValue > 0) shouldMicro = true;
+        if (microInfos[3].isAccessible && microInfos[3].atkValue > 0) shouldMicro = true;
+        if (microInfos[4].isAccessible && microInfos[4].atkValue > 0) shouldMicro = true;
+        if (microInfos[5].isAccessible && microInfos[5].atkValue > 0) shouldMicro = true;
+        if (microInfos[6].isAccessible && microInfos[6].atkValue > 0) shouldMicro = true;
+        if (microInfos[7].isAccessible && microInfos[7].atkValue > 0) shouldMicro = true;
+        if (microInfos[8].isAccessible && microInfos[8].atkValue > 0) shouldMicro = true;
 
         if (!shouldMicro) return false;
 
@@ -134,30 +137,92 @@ public class MicroManagerMopper {
         if (microInfos[6].isBetterThan(bestMicro)) bestMicro = microInfos[6];
         if (microInfos[7].isBetterThan(bestMicro)) bestMicro = microInfos[7];
 
-        if (bestMicro.dir == Direction.CENTER) return true;
+        int minPaint = microInfos[8].paintDiff();
+        Direction moveDir = Direction.CENTER;
+        int x = microInfos[0].paintDiff();
+        if (microInfos[0].isAccessible && minPaint > x){
+            minPaint = x;
+            moveDir = microInfos[0].dir;
+        }
+        x = microInfos[1].paintDiff();
+        if (microInfos[1].isAccessible && minPaint > x){
+            minPaint = x;
+            moveDir = microInfos[1].dir;
+        }
+        x = microInfos[2].paintDiff();
+        if (microInfos[2].isAccessible && minPaint > x){
+            minPaint = x;
+            moveDir = microInfos[2].dir;
+        }
+        x = microInfos[3].paintDiff();
+        if (microInfos[3].isAccessible && minPaint > x){
+            minPaint = x;
+            moveDir = microInfos[3].dir;
+        }
+        x = microInfos[4].paintDiff();
+        if (microInfos[4].isAccessible && minPaint > x){
+            minPaint = x;
+            moveDir = microInfos[4].dir;
+        }
+        x = microInfos[5].paintDiff();
+        if (microInfos[5].isAccessible && minPaint > x){
+            minPaint = x;
+            moveDir = microInfos[5].dir;
+        }
+        x = microInfos[6].paintDiff();
+        if (microInfos[6].isAccessible && minPaint > x){
+            minPaint = x;
+            moveDir = microInfos[6].dir;
+        }
+        x = microInfos[7].paintDiff();
+        if (microInfos[7].isAccessible && minPaint > x){
+            minPaint = x;
+            moveDir = microInfos[7].dir;
+        }
+        if (minPaint - microInfos[8].getAtk() < bestMicro.paintLost()){
+            attack(microInfos[8]);
+            if (rc.canMove(moveDir))rc.move(moveDir);
+            return true;
+        }
+        else if (bestMicro.dir == Direction.CENTER || rc.canMove(bestMicro.dir)) {
+            if (bestMicro.dir != Direction.CENTER) rc.move(bestMicro.dir);
+            attack(bestMicro);
+            return true;
+        }
+
+        /*if (bestMicro.dir == Direction.CENTER) return true;
 
         if (rc.canMove(bestMicro.dir)){
             rc.move(bestMicro.dir);
-        }
+        }*/
+
+
         return true;
+    }
+
+
+    static void attack(MicroInfo M) throws GameActionException {
+        if (M.inAttackRange && M.atkValue < 10){
+            Mopper.tryAttackEnemy();
+            return;
+        }
+        if (M.atkDirection == null) return;
+        if (rc.canMopSwing(M.atkDirection)) rc.mopSwing(M.atkDirection);
     }
 
     static RobotInfo unit;
     static MapLocation unitLoc;
-    static boolean mopper;
+    static boolean hasPaint;
 
     static class MicroInfo{
         int atkValue; //in paint loss
-        // only one of these is non-null:
-        MapLocation atkLoc = null; // for regular attack
         Direction atkDirection = null; // for mopwsing attack
-
         
         int towersInRange = 0;
         int moppersInRange = 0;
         Direction dir;
         MapLocation loc;
-        PaintType p;
+        PaintType p = PaintType.EMPTY;
         int closestDistMopper = Constants.INF;
         int adjAllies;
         boolean isAccessible = true;
@@ -193,7 +258,7 @@ public class MicroManagerMopper {
             if (dist <= UnitType.MOPPER.actionRadiusSquared) ++moppersInRange;
             //if (dist <= 8) ++moppersInMoveRange;
             if (dist < closestDistMopper) closestDistMopper = dist;
-            if (dist <= myRange) inAttackRange = true;
+            if (dist <= myRange && hasPaint) inAttackRange = true;
             if (dist < closestDistEnemy) closestDistEnemy = dist;
         }
 
@@ -205,19 +270,28 @@ public class MicroManagerMopper {
         void updateEnemy(){
             if (!isAccessible) return;
             int dist = unitLoc.distanceSquaredTo(loc);
-            if (dist <= myRange) inAttackRange = true;
+            if (dist <= myRange && hasPaint) inAttackRange = true;
             if (dist < closestDistEnemy) closestDistEnemy = dist;
         }
 
-        int paintLost(){
-            int ptk = 0;
-            if (canAttack && inAttackRange) ptk = GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + GameConstants.MOPPER_ATTACK_PAINT_ADDITION;
+        int getAtk(){
+            if (!canAttack) return 0;
+            int x = inAttackRange ? GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + GameConstants.MOPPER_ATTACK_PAINT_ADDITION : 0;
+            if (x < atkValue) x = atkValue;
+            return x;
+        }
+
+        int paintDiff(){
+            return paintLost() - getAtk();
+        }
+
+        int paintLost(){ //paintDiff
             return switch (p) {
                 case ENEMY_PRIMARY, ENEMY_SECONDARY ->
-                        GameConstants.MOPPER_PAINT_PENALTY_MULTIPLIER*(GameConstants.PENALTY_ENEMY_TERRITORY + 2*adjAllies) + (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3 - ptk;
+                        GameConstants.MOPPER_PAINT_PENALTY_MULTIPLIER*(GameConstants.PENALTY_ENEMY_TERRITORY + 2*adjAllies) + (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3;
                 case EMPTY ->
-                        GameConstants.PENALTY_NEUTRAL_TERRITORY + adjAllies + (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3 - ptk;
-                default -> adjAllies + (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3 - ptk;
+                        GameConstants.PENALTY_NEUTRAL_TERRITORY + adjAllies + (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3;
+                default -> adjAllies + (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3;
             };
         }
 
@@ -230,18 +304,22 @@ public class MicroManagerMopper {
             if (M.towersInRange > towersInRange) return true;
 
 
-            int p = paintLost(), mp = M.paintLost();
+            int p = paintDiff(), mp = M.paintDiff();
             if (p > mp) return false;
             if (mp > p) return true;
 
             if (canAttack){
-                if (inAttackRange && !M.inAttackRange) return true;
-                if (M.inAttackRange && !inAttackRange) return false;
+
+                //if (inAttackRange && !M.inAttackRange) return true;
+                //if (M.inAttackRange && !inAttackRange) return false;
+                int atkPaint = getAtk(), matkPaint = M.getAtk();
+                if (atkPaint > matkPaint) return true;
+                if (matkPaint > atkPaint) return false;
             }
 
-            if (!inAttackRange && !M.inAttackRange){
+            /*if (!inAttackRange && !M.inAttackRange){
                 return closestDistEnemy < M.closestDistEnemy;
-            }
+            }*/
 
             return false;
 
