@@ -30,9 +30,9 @@ public class Splasher extends Unit {
             recovering = true;
         if (rc.getPaint() >= UnitType.SPLASHER.paintCapacity - Constants.MIN_TRANSFER_PAINT)
             recovering = false;
-        tryAttackTile();
+        //tryAttackTile();
         move();
-        tryAttackTile();
+        //tryAttackTile();
         tryGivePaint();
         tryWithdraw();
     }
@@ -54,8 +54,8 @@ public class Splasher extends Unit {
         return explore.getExplore3Target();
     }
 
-    void tryAttackTile() throws GameActionException {
-        if(!rc.isActionReady()) return;
-        SplasherAttackManager.doit();
-    }
+    //void tryAttackTile() throws GameActionException {
+    //    if(!rc.isActionReady()) return;
+    //    SplasherAttackManager.doit();
+    //}
 }
