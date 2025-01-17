@@ -148,7 +148,10 @@ public class MicroManagerMopper {
 
     static class MicroInfo{
         int atkValue; //in paint loss
-        Direction atkDirection = null;
+        // only one of these is non-null:
+        MapLocation atkLoc = null; // for regular attack
+        Direction atkDirection = null; // for mopwsing attack
+
         int towersInRange = 0;
         int moppersInRange = 0;
         Direction dir;

@@ -2,8 +2,6 @@ package basic15;
 
 import battlecode.common.*;
 
-import javax.xml.stream.Location;
-
 public class MicroManagerSplasher {
 
     static Direction[] directions = Direction.values();
@@ -88,6 +86,8 @@ public class MicroManagerSplasher {
             microInfos[8].updateAlly();
         }
 
+        SplasherAttackManager.calc();
+
         //if (!enemyNearby) return false;
 
         boolean shouldMicro = false;
@@ -126,8 +126,8 @@ public class MicroManagerSplasher {
     static MapLocation unitLoc;
 
     static class MicroInfo{
-        int bestAtkValue = 0;
-        Location bestAtkLoc = null;
+        int atkValue = 0;
+        MapLocation atkLoc = null;
         int towersInRange = 0;
         int moppersInRange = 0;
         int moppersInMoveRange = 0;

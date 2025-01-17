@@ -1,18 +1,8 @@
 from dataclasses import dataclass
 
-SCORE_THRESHOLD = 0
-
-SCORE_ATTACK = -18
 SCORE_ATTACK_PAINT = 1
 SCORE_ATTACK_PAINT_ENEMY = 4
 SCORE_ATTACK_TOWER = 10
-
-SCORE_MOVE = -5
-SCORE_MOVE_TOWER_RANGE = -20
-SCORE_MOVE_PAINT_NEUTRAL = -1
-SCORE_MOVE_PAINT_ENEMY = -2
-SCORE_MOVE_CLUMP = -1
-SCORE_MOVE_CLUMP_ENEMY = -2
 
 def group_by(items, key):
     r = {}
@@ -53,20 +43,6 @@ class Vec:
     def __bool__(self):
         return self.x != 0 or self.y != 0
 
-@dataclass(frozen=True)
-class ActionMove:
-    move: Vec
-
-@dataclass(frozen=True)
-class ActionMoveAttack:
-    move: Vec
-    attack: Vec
-
-@dataclass(frozen=True)
-class ActionAttackMove:
-    attack: Vec
-    move: Vec
-
 def radius(d):
     for dx in range(-2, 3):
         for dy in range(-2, 3):
@@ -77,13 +53,11 @@ def radius(d):
 # Generate all possible actions.
 def all_actions():
     for move in radius(2):
-        #yield ActionMove(move)
         for attack in radius(4):
-            yield ActionMoveAttack(move, attack+move)  # move, then attack
-            #yield ActionAttackMove(attack, move)  # attack, then move
+            yield attack+move
 
 # dedup actions that end up moving+attacking to the same places.
-actions = dedup_by(all_actions(), lambda a: (a.move, getattr(a, 'attack', None)))
+actions = list(set(all_actions()))
 
 score_ids = set()
 locations = {}
@@ -92,22 +66,8 @@ def score(loc, cond, id, score):
     loc.setdefault(cond, []).append((id, score))
     score_ids.add(id)
     
-# score moves
-moves = list(set((a.move for a in actions)))
-for id, a in enumerate(moves):
-    id = f'move{id}'
-    score(a, 'p == PaintType.EMPTY', id, SCORE_MOVE_PAINT_NEUTRAL)
-    score(a, 'p.isEnemy()', id, SCORE_MOVE_PAINT_ENEMY)
-    for d in radius(2):
-        score(a+d, 'r != null && r.team == myTeam', id, 'clumpScore')
-    for d in radius(3*3):
-        score(a+d, 'r != null && r.team != myTeam && r.type.isTowerType()', id, SCORE_MOVE_TOWER_RANGE)
-    for d in radius(4*4):
-        score(a+d, 'r != null && r.team != myTeam && r.type.ordinal() >= 9', id, SCORE_MOVE_TOWER_RANGE)
-
 # score attacks
-attacks = list(set((a.attack for a in actions if hasattr(a, 'attack'))))
-for id, a in enumerate(attacks):
+for id, a in enumerate(actions):
     id = f'attack{id}'
     for d in radius(2):
         score(a+d, 'p.isEnemy()', id, SCORE_ATTACK_PAINT_ENEMY)
@@ -128,7 +88,7 @@ import battlecode.common.*;
 
 public class SplasherAttackManager {
     static RobotController rc;
-    public static void doit() throws GameActionException {
+    public static void calc() throws GameActionException {
         rc = MyRobot.rc;
 ''')
 
@@ -142,16 +102,10 @@ Team myTeam = rc.getTeam();
 ''')
 
 for id in score_ids:
-    val = 0
-    if id.startswith('attack'):
-        val = SCORE_ATTACK
-    if id.startswith('move') and moves[int(id[4:])]:
-        val = SCORE_MOVE
-    p(f'int {id} = {val};')
+    p(f'int {id} = 0;')
 
 p('i = rc.senseMapInfo(myLoc);')
 p('p = i.getPaint();')
-p(f'int clumpScore = p.isEnemy() ? {SCORE_MOVE_CLUMP_ENEMY} : {SCORE_MOVE_CLUMP};')
 
 for loc, l in locations.items():
     if loc.d2() > 20: continue
@@ -169,34 +123,27 @@ for loc, l in locations.items():
     p('}') # endif canSenseLocation
 
 
-p('int best = -1;')
-p(f'int bestScore = {SCORE_THRESHOLD};')
-for id, a in enumerate(actions):
-    move_cond = ''
-    if a.move:
-        move_cond = f'&& rc.canMove({a.move.direction()})'
-    score_expr = f'move{moves.index(a.move)}'
-    if hasattr(a, 'attack'):
-        score_expr += f'+attack{attacks.index(a.attack)}'
-    p(f'if(bestScore < {score_expr}{move_cond}) {{ bestScore = {score_expr}; best = {id}; }}')
+for move in radius(2):
+    p(f'if(rc.canMove({move.direction()})){{')
+    p('int best = -1; int bestScore = 0;')
+    for attack in radius(4):
+        id = actions.index(attack+move)
+        p(f'if(bestScore < attack{id}) {{ bestScore = attack{id}; best = {id}; }}')
+    p(f'var info = MicroManagerSplasher.microInfos[{move.direction()}.ordinal()];')
+    p('info.atkValue=bestScore;')
+    p('info.atkLoc=id2loc(best);')
+    p('}') # if canMove
+    
+p('}') # void calc
 
 
-p('switch(best){')
+p('static MapLocation id2loc(int id) {')
+p('MapLocation myLoc = rc.getLocation();')
+p('return switch(id) {')
 for id, a in enumerate(actions):
-    p(f'    case {id}:')
-    match a:
-        case ActionMove(move):
-            if move: 
-                p(f'        rc.move({a.move.direction()});')
-        case ActionMoveAttack(move, attack):
-            if move:
-                p(f'        rc.move({a.move.direction()});')
-            p(f'        rc.attack(myLoc.translate({a.attack.x}, {a.attack.y}));')
-        case ActionAttackMove(attack, move):
-            p(f'        rc.attack(myLoc.translate({a.attack.x}, {a.attack.y}));')
-            if move:
-                p(f'        rc.move({a.move.direction()});')
-    p(f'        return;')
-p('}') # switch
-p('}') # void doit
+    p(f'    case {id} -> myLoc.translate({a.x},{a.y});')
+p('    default -> null;')
+p('};')
+p('}') # static MapLocation id2loc
+
 p('}') # class
