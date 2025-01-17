@@ -481,7 +481,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(0,0);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -498,7 +498,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -515,7 +515,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -532,7 +532,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -549,7 +549,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -566,7 +566,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -583,7 +583,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -600,7 +600,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -617,7 +617,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -634,7 +634,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -651,7 +651,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -668,7 +668,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -685,7 +685,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -702,7 +702,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -715,11 +715,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
-            attackLoc = l21;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -732,11 +731,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
-            attackLoc = l23;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -749,11 +747,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
-            attackLoc = l29;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -766,11 +763,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
-            attackLoc = l33;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -783,11 +779,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l39; // (0,-1)
-            attackLoc = l47;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -800,11 +795,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l41; // (0,1)
-            attackLoc = l51;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -817,11 +811,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l39; // (0,-1)
-            attackLoc = l57;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -834,11 +827,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l41; // (0,1)
-            attackLoc = l59;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -851,11 +843,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l30; // (-1,-1)
-            attackLoc = l20;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -868,11 +859,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l32; // (-1,1)
-            attackLoc = l24;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -885,11 +875,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l48; // (1,-1)
-            attackLoc = l56;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l40);
             return;
@@ -902,7 +891,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l50; // (1,1)
-            attackLoc = l60;
         }
 
 
@@ -912,7 +900,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-1,0);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -929,7 +917,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -946,7 +934,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -963,7 +951,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -980,7 +968,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -997,7 +985,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1014,7 +1002,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1031,7 +1019,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1044,11 +1032,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l31; // (-1,0)
-            attackLoc = l21;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1061,11 +1048,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l31; // (-1,0)
-            attackLoc = l23;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1082,7 +1068,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1095,11 +1081,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l31; // (-1,0)
-            attackLoc = l29;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1112,11 +1097,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l31; // (-1,0)
-            attackLoc = l33;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1129,11 +1113,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l31; // (-1,0)
-            attackLoc = l13;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1150,7 +1133,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1167,7 +1150,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1184,7 +1167,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1201,7 +1184,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1214,11 +1197,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l30; // (-1,-1)
-            attackLoc = l20;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1231,11 +1213,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l32; // (-1,1)
-            attackLoc = l24;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1248,11 +1229,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l30; // (-1,-1)
-            attackLoc = l12;
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1265,11 +1245,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l32; // (-1,1)
-            attackLoc = l14;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1282,11 +1261,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l39; // (0,-1)
-            attackLoc = l47;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1299,11 +1277,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l41; // (0,1)
-            attackLoc = l51;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1316,11 +1293,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
-            attackLoc = l11;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l31);
             return;
@@ -1333,7 +1309,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
-            attackLoc = l15;
         }
 
 
@@ -1343,7 +1318,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(0,-1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1360,7 +1335,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1377,7 +1352,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1394,7 +1369,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1411,7 +1386,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1428,7 +1403,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1445,7 +1420,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1462,7 +1437,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1475,11 +1450,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l39; // (0,-1)
-            attackLoc = l29;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1492,11 +1466,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l39; // (0,-1)
-            attackLoc = l47;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1513,7 +1486,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1526,11 +1499,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l39; // (0,-1)
-            attackLoc = l21;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1543,11 +1515,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l39; // (0,-1)
-            attackLoc = l57;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1560,11 +1531,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l39; // (0,-1)
-            attackLoc = l37;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1581,7 +1551,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1598,7 +1568,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1615,7 +1585,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1628,11 +1598,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l30; // (-1,-1)
-            attackLoc = l20;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1649,7 +1618,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1662,11 +1631,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l30; // (-1,-1)
-            attackLoc = l28;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1679,11 +1647,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l48; // (1,-1)
-            attackLoc = l56;
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1696,11 +1663,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l48; // (1,-1)
-            attackLoc = l46;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1713,11 +1679,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
-            attackLoc = l23;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1730,11 +1695,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l49; // (1,0)
-            attackLoc = l59;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1747,11 +1711,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l19;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l39);
             return;
@@ -1764,7 +1727,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l55;
         }
 
 
@@ -1774,7 +1736,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(0,1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1791,7 +1753,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1808,7 +1770,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1825,7 +1787,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1842,7 +1804,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1859,7 +1821,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1876,7 +1838,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1893,7 +1855,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1906,11 +1868,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l41; // (0,1)
-            attackLoc = l33;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1923,11 +1884,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l41; // (0,1)
-            attackLoc = l51;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1944,7 +1904,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1957,11 +1917,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l41; // (0,1)
-            attackLoc = l23;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1974,11 +1933,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l41; // (0,1)
-            attackLoc = l59;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -1991,11 +1949,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l41; // (0,1)
-            attackLoc = l43;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -2012,7 +1969,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -2029,7 +1986,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -2046,7 +2003,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -2063,7 +2020,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -2076,11 +2033,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l32; // (-1,1)
-            attackLoc = l24;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -2093,11 +2049,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l50; // (1,1)
-            attackLoc = l60;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -2110,11 +2065,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l32; // (-1,1)
-            attackLoc = l34;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -2127,11 +2081,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l50; // (1,1)
-            attackLoc = l52;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -2144,11 +2097,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
-            attackLoc = l21;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -2161,11 +2113,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l49; // (1,0)
-            attackLoc = l57;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -2178,11 +2129,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
-            attackLoc = l25;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l41);
             return;
@@ -2195,7 +2145,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
-            attackLoc = l61;
         }
 
 
@@ -2205,7 +2154,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(1,0);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2222,7 +2171,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2239,7 +2188,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2256,7 +2205,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2273,7 +2222,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2290,7 +2239,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2307,7 +2256,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2324,7 +2273,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2337,11 +2286,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l49; // (1,0)
-            attackLoc = l59;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2354,11 +2302,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l49; // (1,0)
-            attackLoc = l57;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2375,7 +2322,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2388,11 +2335,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l49; // (1,0)
-            attackLoc = l51;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2405,11 +2351,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l49; // (1,0)
-            attackLoc = l47;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2422,11 +2367,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l49; // (1,0)
-            attackLoc = l67;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2443,7 +2387,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2460,7 +2404,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2477,7 +2421,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2490,11 +2434,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l50; // (1,1)
-            attackLoc = l60;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2511,7 +2454,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2524,11 +2467,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l50; // (1,1)
-            attackLoc = l68;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2541,11 +2483,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l48; // (1,-1)
-            attackLoc = l56;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2558,11 +2499,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l48; // (1,-1)
-            attackLoc = l66;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2575,11 +2515,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l41; // (0,1)
-            attackLoc = l33;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2592,11 +2531,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l39; // (0,-1)
-            attackLoc = l29;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2609,11 +2547,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
-            attackLoc = l69;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l49);
             return;
@@ -2626,7 +2563,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l57; // (2,-1)
-            attackLoc = l65;
         }
 
 
@@ -2636,7 +2572,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-1,-1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2653,7 +2589,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2670,7 +2606,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2687,7 +2623,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2700,11 +2636,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l30; // (-1,-1)
-            attackLoc = l29;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2717,11 +2652,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l30; // (-1,-1)
-            attackLoc = l21;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2738,7 +2672,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2755,7 +2689,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2772,7 +2706,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2785,11 +2719,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l30; // (-1,-1)
-            attackLoc = l20;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2806,7 +2739,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2823,7 +2756,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2836,11 +2769,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l30; // (-1,-1)
-            attackLoc = l28;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2853,11 +2785,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l30; // (-1,-1)
-            attackLoc = l12;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2874,7 +2805,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2891,7 +2822,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2904,11 +2835,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l39; // (0,-1)
-            attackLoc = l47;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2921,11 +2851,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
-            attackLoc = l23;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2938,11 +2867,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l39; // (0,-1)
-            attackLoc = l37;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2955,11 +2883,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
-            attackLoc = l13;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2972,11 +2899,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l19;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -2989,11 +2915,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l11;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -3010,7 +2935,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -3023,11 +2948,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l38; // (0,-2)
-            attackLoc = l46;
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -3040,11 +2964,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l22; // (-2,0)
-            attackLoc = l14;
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l30);
             return;
@@ -3057,7 +2980,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l10;
         }
 
 
@@ -3067,7 +2989,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-1,1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3084,7 +3006,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3101,7 +3023,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3118,7 +3040,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3131,11 +3053,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l32; // (-1,1)
-            attackLoc = l23;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3148,11 +3069,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l32; // (-1,1)
-            attackLoc = l33;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3169,7 +3089,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3186,7 +3106,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3203,7 +3123,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3216,11 +3136,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l32; // (-1,1)
-            attackLoc = l24;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3237,7 +3156,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3254,7 +3173,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3267,11 +3186,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l32; // (-1,1)
-            attackLoc = l14;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3284,11 +3202,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l32; // (-1,1)
-            attackLoc = l34;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3305,7 +3222,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3318,11 +3235,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
-            attackLoc = l21;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3339,7 +3255,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3352,11 +3268,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
-            attackLoc = l13;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3369,11 +3284,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l41; // (0,1)
-            attackLoc = l51;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3386,11 +3300,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
-            attackLoc = l15;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3403,11 +3316,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l41; // (0,1)
-            attackLoc = l43;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3420,11 +3332,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
-            attackLoc = l25;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3441,7 +3352,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3454,11 +3365,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l22; // (-2,0)
-            attackLoc = l12;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3471,11 +3381,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l42; // (0,2)
-            attackLoc = l52;
         }
 
 
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l32);
             return;
@@ -3488,7 +3397,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
-            attackLoc = l16;
         }
 
 
@@ -3498,7 +3406,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(1,-1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3515,7 +3423,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3532,7 +3440,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3549,7 +3457,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3562,11 +3470,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l48; // (1,-1)
-            attackLoc = l47;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3579,11 +3486,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l48; // (1,-1)
-            attackLoc = l57;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3600,7 +3506,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3617,7 +3523,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3634,7 +3540,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3647,11 +3553,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l48; // (1,-1)
-            attackLoc = l56;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3668,7 +3573,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3685,7 +3590,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3698,11 +3603,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l48; // (1,-1)
-            attackLoc = l46;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3715,11 +3619,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l48; // (1,-1)
-            attackLoc = l66;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3736,7 +3639,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3753,7 +3656,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3766,11 +3669,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l39; // (0,-1)
-            attackLoc = l29;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3783,11 +3685,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l49; // (1,0)
-            attackLoc = l59;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3800,11 +3701,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l39; // (0,-1)
-            attackLoc = l37;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3817,11 +3717,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l49; // (1,0)
-            attackLoc = l67;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3834,11 +3733,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l55;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3851,11 +3749,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l65;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3872,7 +3769,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3885,11 +3782,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l38; // (0,-2)
-            attackLoc = l28;
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3902,11 +3798,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l58; // (2,0)
-            attackLoc = l68;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l48);
             return;
@@ -3919,7 +3814,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
-            attackLoc = l64;
         }
 
 
@@ -3929,7 +3823,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(1,1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -3946,7 +3840,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -3963,7 +3857,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -3980,7 +3874,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -3993,11 +3887,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
-            attackLoc = l59;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4010,11 +3903,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
-            attackLoc = l51;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4031,7 +3923,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4048,7 +3940,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4065,7 +3957,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4078,11 +3970,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
-            attackLoc = l60;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4099,7 +3990,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4116,7 +4007,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4129,11 +4020,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
-            attackLoc = l68;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4146,11 +4036,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l50; // (1,1)
-            attackLoc = l52;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4167,7 +4056,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4180,11 +4069,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l49; // (1,0)
-            attackLoc = l57;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4201,7 +4089,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4214,11 +4102,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l49; // (1,0)
-            attackLoc = l67;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4231,11 +4118,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l41; // (0,1)
-            attackLoc = l33;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4248,11 +4134,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
-            attackLoc = l69;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4265,11 +4150,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l41; // (0,1)
-            attackLoc = l43;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4282,11 +4166,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
-            attackLoc = l61;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4303,7 +4186,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4316,11 +4199,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l58; // (2,0)
-            attackLoc = l66;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4333,11 +4215,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l42; // (0,2)
-            attackLoc = l34;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l50);
             return;
@@ -4350,7 +4231,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
-            attackLoc = l70;
         }
 
 
@@ -4360,7 +4240,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-2,0);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4377,7 +4257,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4394,7 +4274,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4407,11 +4287,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l22; // (-2,0)
-            attackLoc = l23;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4424,11 +4303,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l22; // (-2,0)
-            attackLoc = l21;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4441,11 +4319,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l22; // (-2,0)
-            attackLoc = l13;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4462,7 +4339,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4479,7 +4356,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4492,11 +4369,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l22; // (-2,0)
-            attackLoc = l14;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4509,11 +4385,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l22; // (-2,0)
-            attackLoc = l12;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4530,7 +4405,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4543,11 +4418,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l22; // (-2,0)
-            attackLoc = l24;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4560,11 +4434,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l22; // (-2,0)
-            attackLoc = l20;
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4577,11 +4450,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l22; // (-2,0)
-            attackLoc = l4;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4598,7 +4470,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4615,7 +4487,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4628,11 +4500,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
-            attackLoc = l33;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4645,11 +4516,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l31; // (-1,0)
-            attackLoc = l29;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4662,11 +4532,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
-            attackLoc = l15;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4679,11 +4548,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
-            attackLoc = l11;
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4696,11 +4564,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
-            attackLoc = l5;
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4713,11 +4580,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
-            attackLoc = l3;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4734,7 +4600,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4751,7 +4617,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (!m6.isPassable()){ // (-4,2)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4764,11 +4630,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
-            attackLoc = l6;
         }
 
 
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+        if (!m2.isPassable()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l22);
             return;
@@ -4781,7 +4646,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
-            attackLoc = l2;
         }
 
 
@@ -4791,7 +4655,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(0,-2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -4808,7 +4672,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -4825,7 +4689,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -4838,11 +4702,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l38; // (0,-2)
-            attackLoc = l29;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -4855,11 +4718,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l38; // (0,-2)
-            attackLoc = l47;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -4872,11 +4734,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l38; // (0,-2)
-            attackLoc = l37;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -4893,7 +4754,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -4910,7 +4771,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -4923,11 +4784,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l38; // (0,-2)
-            attackLoc = l28;
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -4940,11 +4800,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l38; // (0,-2)
-            attackLoc = l46;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -4961,7 +4820,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -4974,11 +4833,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l38; // (0,-2)
-            attackLoc = l20;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -4991,11 +4849,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l38; // (0,-2)
-            attackLoc = l56;
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5008,11 +4865,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l38; // (0,-2)
-            attackLoc = l36;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5029,7 +4885,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5042,11 +4898,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l39; // (0,-1)
-            attackLoc = l21;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5063,7 +4918,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5076,11 +4931,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l19;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5093,11 +4947,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l39; // (0,-1)
-            attackLoc = l57;
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5110,11 +4963,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l27;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5127,11 +4979,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l55;
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5144,11 +4995,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l45;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5165,7 +5015,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5182,7 +5032,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+        if (!m18.isPassable()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5195,11 +5045,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l28; // (-1,-3)
-            attackLoc = l18;
         }
 
 
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+        if (!m54.isPassable()){ // (2,-4)
             ans = null;
             Map.markObstructed(l38);
             return;
@@ -5212,7 +5061,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l46; // (1,-3)
-            attackLoc = l54;
         }
 
 
@@ -5222,7 +5070,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(0,2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5239,7 +5087,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5256,7 +5104,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5269,11 +5117,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l42; // (0,2)
-            attackLoc = l33;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5286,11 +5133,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l42; // (0,2)
-            attackLoc = l51;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5303,11 +5149,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l42; // (0,2)
-            attackLoc = l43;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5324,7 +5169,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5341,7 +5186,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5354,11 +5199,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l42; // (0,2)
-            attackLoc = l34;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5371,11 +5215,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l42; // (0,2)
-            attackLoc = l52;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5392,7 +5235,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5405,11 +5248,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l42; // (0,2)
-            attackLoc = l24;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5422,11 +5264,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l42; // (0,2)
-            attackLoc = l60;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5439,11 +5280,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l42; // (0,2)
-            attackLoc = l44;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5460,7 +5300,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5477,7 +5317,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5490,11 +5330,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l41; // (0,1)
-            attackLoc = l23;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5507,11 +5346,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l41; // (0,1)
-            attackLoc = l59;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5524,11 +5362,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
-            attackLoc = l25;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5541,11 +5378,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
-            attackLoc = l61;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5558,11 +5394,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
-            attackLoc = l35;
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5575,11 +5410,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
-            attackLoc = l53;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5596,7 +5430,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5613,7 +5447,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (!m26.isPassable()){ // (-2,4)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5626,11 +5460,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l34; // (-1,3)
-            attackLoc = l26;
         }
 
 
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+        if (!m62.isPassable()){ // (2,4)
             ans = null;
             Map.markObstructed(l42);
             return;
@@ -5643,7 +5476,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l52; // (1,3)
-            attackLoc = l62;
         }
 
 
@@ -5653,7 +5485,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(2,0);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5670,7 +5502,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5687,7 +5519,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5700,11 +5532,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l58; // (2,0)
-            attackLoc = l59;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5717,11 +5548,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l58; // (2,0)
-            attackLoc = l57;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5734,11 +5564,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l58; // (2,0)
-            attackLoc = l67;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5755,7 +5584,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5772,7 +5601,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5785,11 +5614,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l58; // (2,0)
-            attackLoc = l68;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5802,11 +5630,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l58; // (2,0)
-            attackLoc = l66;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5823,7 +5650,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5836,11 +5663,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l58; // (2,0)
-            attackLoc = l60;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5853,11 +5679,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l58; // (2,0)
-            attackLoc = l56;
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5870,11 +5695,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l58; // (2,0)
-            attackLoc = l76;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5891,7 +5715,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5904,11 +5728,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l49; // (1,0)
-            attackLoc = l51;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5925,7 +5748,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5938,11 +5761,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
-            attackLoc = l69;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5955,11 +5777,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l49; // (1,0)
-            attackLoc = l47;
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5972,11 +5793,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
-            attackLoc = l77;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -5989,11 +5809,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l57; // (2,-1)
-            attackLoc = l65;
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -6006,11 +5825,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l57; // (2,-1)
-            attackLoc = l75;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -6027,7 +5845,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -6044,7 +5862,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (!m78.isPassable()){ // (4,2)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -6057,11 +5875,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l68; // (3,1)
-            attackLoc = l78;
         }
 
 
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (!m74.isPassable()){ // (4,-2)
             ans = null;
             Map.markObstructed(l58);
             return;
@@ -6074,7 +5891,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l66; // (3,-1)
-            attackLoc = l74;
         }
 
 
@@ -6084,7 +5900,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-2,-1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6097,11 +5913,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
-            attackLoc = l21;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6118,7 +5933,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6135,7 +5950,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6148,11 +5963,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l21; // (-2,-1)
-            attackLoc = l20;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6165,11 +5979,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l21; // (-2,-1)
-            attackLoc = l12;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6186,7 +5999,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6199,11 +6012,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l21; // (-2,-1)
-            attackLoc = l29;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6216,11 +6028,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l21; // (-2,-1)
-            attackLoc = l13;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6233,11 +6044,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l21; // (-2,-1)
-            attackLoc = l11;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6254,7 +6064,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6267,11 +6077,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l21; // (-2,-1)
-            attackLoc = l23;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6284,11 +6093,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l21; // (-2,-1)
-            attackLoc = l19;
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6301,11 +6109,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l21; // (-2,-1)
-            attackLoc = l3;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6322,7 +6129,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6339,7 +6146,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6356,7 +6163,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6369,11 +6176,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l30; // (-1,-1)
-            attackLoc = l28;
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6386,11 +6192,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l22; // (-2,0)
-            attackLoc = l14;
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6403,11 +6208,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l10;
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6420,11 +6224,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l22; // (-2,0)
-            attackLoc = l4;
         }
 
 
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+        if (!m2.isPassable()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6437,11 +6240,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l2;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6458,7 +6260,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6471,11 +6273,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l37;
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l21);
             return;
@@ -6488,7 +6289,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
-            attackLoc = l5;
         }
 
 
@@ -6498,7 +6298,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-2,1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6511,11 +6311,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
-            attackLoc = l23;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6532,7 +6331,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6549,7 +6348,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6562,11 +6361,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l23; // (-2,1)
-            attackLoc = l14;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6579,11 +6377,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l23; // (-2,1)
-            attackLoc = l24;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6600,7 +6397,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6613,11 +6410,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l23; // (-2,1)
-            attackLoc = l13;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6630,11 +6426,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l23; // (-2,1)
-            attackLoc = l33;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6647,11 +6442,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l23; // (-2,1)
-            attackLoc = l15;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6664,11 +6458,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l23; // (-2,1)
-            attackLoc = l21;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6685,7 +6478,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6698,11 +6491,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l23; // (-2,1)
-            attackLoc = l5;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6715,11 +6507,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l23; // (-2,1)
-            attackLoc = l25;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6736,7 +6527,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6749,11 +6540,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l22; // (-2,0)
-            attackLoc = l12;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6770,7 +6560,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6783,11 +6573,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l22; // (-2,0)
-            attackLoc = l4;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6804,7 +6593,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (!m6.isPassable()){ // (-4,2)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6817,11 +6606,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
-            attackLoc = l6;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6834,11 +6622,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l32; // (-1,1)
-            attackLoc = l34;
         }
 
 
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6851,11 +6638,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
-            attackLoc = l16;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6872,7 +6658,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6885,11 +6671,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
-            attackLoc = l3;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l23);
             return;
@@ -6902,7 +6687,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
-            attackLoc = l43;
         }
 
 
@@ -6912,7 +6696,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-1,-2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -6925,11 +6709,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l29;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -6946,7 +6729,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -6959,11 +6742,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l29; // (-1,-2)
-            attackLoc = l20;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -6980,7 +6762,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -6993,11 +6775,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l29; // (-1,-2)
-            attackLoc = l28;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7010,11 +6791,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l29; // (-1,-2)
-            attackLoc = l21;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7031,7 +6811,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7044,11 +6824,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l29; // (-1,-2)
-            attackLoc = l19;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7061,11 +6840,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l29; // (-1,-2)
-            attackLoc = l37;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7082,7 +6860,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7095,11 +6873,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l29; // (-1,-2)
-            attackLoc = l11;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7112,11 +6889,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l29; // (-1,-2)
-            attackLoc = l47;
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7129,11 +6905,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l29; // (-1,-2)
-            attackLoc = l27;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7150,7 +6925,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7163,11 +6938,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l30; // (-1,-1)
-            attackLoc = l12;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7184,7 +6958,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7201,7 +6975,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7214,11 +6988,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l10;
         }
 
 
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+        if (!m18.isPassable()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7231,11 +7004,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l18;
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7248,11 +7020,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l38; // (0,-2)
-            attackLoc = l46;
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7265,11 +7036,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l38; // (0,-2)
-            attackLoc = l36;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7282,11 +7052,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
-            attackLoc = l13;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7303,7 +7072,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l29);
             return;
@@ -7316,7 +7085,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l37; // (0,-3)
-            attackLoc = l45;
         }
 
 
@@ -7326,7 +7094,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-1,2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7339,11 +7107,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
-            attackLoc = l33;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7360,7 +7127,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7373,11 +7140,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l33; // (-1,2)
-            attackLoc = l24;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7394,7 +7160,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7407,11 +7173,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l33; // (-1,2)
-            attackLoc = l34;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7424,11 +7189,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l33; // (-1,2)
-            attackLoc = l23;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7445,7 +7209,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7458,11 +7222,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l33; // (-1,2)
-            attackLoc = l25;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7475,11 +7238,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l33; // (-1,2)
-            attackLoc = l43;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7496,7 +7258,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7509,11 +7271,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l33; // (-1,2)
-            attackLoc = l15;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7526,11 +7287,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l33; // (-1,2)
-            attackLoc = l51;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7543,11 +7303,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l33; // (-1,2)
-            attackLoc = l35;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7564,7 +7323,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7581,7 +7340,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7594,11 +7353,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l32; // (-1,1)
-            attackLoc = l14;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7615,7 +7373,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7628,11 +7386,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
-            attackLoc = l16;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7645,11 +7402,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l42; // (0,2)
-            attackLoc = l52;
         }
 
 
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (!m26.isPassable()){ // (-2,4)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7662,11 +7418,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
-            attackLoc = l26;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7679,11 +7434,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l42; // (0,2)
-            attackLoc = l44;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7696,11 +7450,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
-            attackLoc = l13;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7717,7 +7470,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l33);
             return;
@@ -7730,7 +7483,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l43; // (0,3)
-            attackLoc = l53;
         }
 
 
@@ -7740,7 +7492,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(1,-2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7753,11 +7505,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l47;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7774,7 +7525,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7791,7 +7542,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7804,11 +7555,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l47; // (1,-2)
-            attackLoc = l56;
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7821,11 +7571,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l47; // (1,-2)
-            attackLoc = l46;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7842,7 +7591,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7855,11 +7604,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l47; // (1,-2)
-            attackLoc = l57;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7872,11 +7620,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l47; // (1,-2)
-            attackLoc = l37;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7889,11 +7636,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l47; // (1,-2)
-            attackLoc = l55;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7910,7 +7656,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7923,11 +7669,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l47; // (1,-2)
-            attackLoc = l29;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7940,11 +7685,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l47; // (1,-2)
-            attackLoc = l65;
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7957,11 +7701,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l47; // (1,-2)
-            attackLoc = l45;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7978,7 +7721,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -7995,7 +7738,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -8012,7 +7755,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -8025,11 +7768,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l38; // (0,-2)
-            attackLoc = l28;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -8042,11 +7784,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l48; // (1,-1)
-            attackLoc = l66;
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -8059,11 +7800,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l38; // (0,-2)
-            attackLoc = l36;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -8076,11 +7816,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
-            attackLoc = l64;
         }
 
 
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+        if (!m54.isPassable()){ // (2,-4)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -8093,11 +7832,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
-            attackLoc = l54;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -8114,7 +7852,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -8127,11 +7865,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l57; // (2,-1)
-            attackLoc = l67;
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l47);
             return;
@@ -8144,7 +7881,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l37; // (0,-3)
-            attackLoc = l27;
         }
 
 
@@ -8154,7 +7890,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(1,2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8167,11 +7903,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
-            attackLoc = l51;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8188,7 +7923,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8205,7 +7940,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8218,11 +7953,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l51; // (1,2)
-            attackLoc = l60;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8235,11 +7969,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l51; // (1,2)
-            attackLoc = l52;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8256,7 +7989,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8269,11 +8002,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l51; // (1,2)
-            attackLoc = l59;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8286,11 +8018,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l51; // (1,2)
-            attackLoc = l43;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8303,11 +8034,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l51; // (1,2)
-            attackLoc = l61;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8324,7 +8054,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8337,11 +8067,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l51; // (1,2)
-            attackLoc = l33;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8354,11 +8083,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l51; // (1,2)
-            attackLoc = l69;
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8371,11 +8099,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l51; // (1,2)
-            attackLoc = l53;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8392,7 +8119,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8409,7 +8136,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8426,7 +8153,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8439,11 +8166,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l50; // (1,1)
-            attackLoc = l68;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8456,11 +8182,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l42; // (0,2)
-            attackLoc = l34;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8473,11 +8198,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
-            attackLoc = l70;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8490,11 +8214,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l42; // (0,2)
-            attackLoc = l44;
         }
 
 
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+        if (!m62.isPassable()){ // (2,4)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8507,11 +8230,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
-            attackLoc = l62;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8528,7 +8250,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8541,11 +8263,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
-            attackLoc = l67;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l51);
             return;
@@ -8558,7 +8279,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l43; // (0,3)
-            attackLoc = l35;
         }
 
 
@@ -8568,7 +8288,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(2,-1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8581,11 +8301,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l57; // (2,-1)
-            attackLoc = l57;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8602,7 +8321,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8619,7 +8338,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8632,11 +8351,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l66;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8649,11 +8367,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l56;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8670,7 +8387,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8683,11 +8400,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l67;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8700,11 +8416,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l47;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8717,11 +8432,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l65;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8734,11 +8448,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l59;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8755,7 +8468,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8768,11 +8481,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l75;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8785,11 +8497,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l57; // (2,-1)
-            attackLoc = l55;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8806,7 +8517,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8823,7 +8534,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8836,11 +8547,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l58; // (2,0)
-            attackLoc = l68;
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8853,11 +8563,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l58; // (2,0)
-            attackLoc = l76;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8874,7 +8583,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8887,11 +8596,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l48; // (1,-1)
-            attackLoc = l46;
         }
 
 
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (!m74.isPassable()){ // (4,-2)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8904,11 +8612,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l66; // (3,-1)
-            attackLoc = l74;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8921,11 +8628,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l66; // (3,-1)
-            attackLoc = l64;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8942,7 +8648,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8955,11 +8661,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l77;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l57);
             return;
@@ -8972,7 +8677,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l37;
         }
 
 
@@ -8982,7 +8686,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(2,1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -8995,11 +8699,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
-            attackLoc = l59;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9016,7 +8719,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9033,7 +8736,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9046,11 +8749,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
-            attackLoc = l68;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9063,11 +8765,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
-            attackLoc = l60;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9084,7 +8785,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9097,11 +8798,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
-            attackLoc = l67;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9114,11 +8814,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
-            attackLoc = l51;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9131,11 +8830,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
-            attackLoc = l69;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9148,11 +8846,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
-            attackLoc = l57;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9169,7 +8866,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9182,11 +8879,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
-            attackLoc = l77;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9199,11 +8895,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l59; // (2,1)
-            attackLoc = l61;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9220,7 +8915,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9233,11 +8928,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l58; // (2,0)
-            attackLoc = l66;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9254,7 +8948,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9267,11 +8961,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l58; // (2,0)
-            attackLoc = l76;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9288,7 +8981,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (!m78.isPassable()){ // (4,2)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9301,11 +8994,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l68; // (3,1)
-            attackLoc = l78;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9318,11 +9010,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l50; // (1,1)
-            attackLoc = l52;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9335,11 +9026,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l68; // (3,1)
-            attackLoc = l70;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9356,7 +9046,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9369,11 +9059,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l75;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l59);
             return;
@@ -9386,7 +9075,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
-            attackLoc = l43;
         }
 
 
@@ -9396,7 +9084,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-2,-2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9409,11 +9097,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l20;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9426,11 +9113,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
-            attackLoc = l29;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9443,11 +9129,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
-            attackLoc = l21;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9460,11 +9145,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
-            attackLoc = l19;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9477,11 +9161,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
-            attackLoc = l11;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9498,7 +9181,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9511,11 +9194,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
-            attackLoc = l28;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9528,11 +9210,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
-            attackLoc = l12;
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9545,11 +9226,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
-            attackLoc = l10;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9566,7 +9246,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9583,7 +9263,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+        if (!m18.isPassable()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9596,11 +9276,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
-            attackLoc = l18;
         }
 
 
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+        if (!m2.isPassable()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9613,11 +9292,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l20; // (-2,-2)
-            attackLoc = l2;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9634,7 +9312,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9651,7 +9329,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9664,11 +9342,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l37;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9681,11 +9358,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
-            attackLoc = l13;
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9698,11 +9374,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l27;
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9715,11 +9390,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
-            attackLoc = l3;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9736,7 +9410,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9749,11 +9423,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l28; // (-1,-3)
-            attackLoc = l36;
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l20);
             return;
@@ -9766,7 +9439,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
-            attackLoc = l4;
         }
 
 
@@ -9776,7 +9448,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-2,2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9789,11 +9461,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
-            attackLoc = l24;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9806,11 +9477,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
-            attackLoc = l23;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9823,11 +9493,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
-            attackLoc = l33;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9840,11 +9509,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
-            attackLoc = l15;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9857,11 +9525,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
-            attackLoc = l25;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9878,7 +9545,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9891,11 +9558,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
-            attackLoc = l14;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9908,11 +9574,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
-            attackLoc = l34;
         }
 
 
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9925,11 +9590,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
-            attackLoc = l16;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9946,7 +9610,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9963,7 +9627,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (!m6.isPassable()){ // (-4,2)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9976,11 +9640,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
-            attackLoc = l6;
         }
 
 
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (!m26.isPassable()){ // (-2,4)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -9993,11 +9656,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l24; // (-2,2)
-            attackLoc = l26;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -10014,7 +9676,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -10027,11 +9689,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
-            attackLoc = l13;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -10048,7 +9709,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -10061,11 +9722,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
-            attackLoc = l5;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -10078,11 +9738,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
-            attackLoc = l43;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -10095,11 +9754,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
-            attackLoc = l35;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -10116,7 +9774,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -10129,11 +9787,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
-            attackLoc = l4;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l24);
             return;
@@ -10146,7 +9803,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l34; // (-1,3)
-            attackLoc = l44;
         }
 
 
@@ -10156,7 +9812,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(2,-2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10169,11 +9825,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
-            attackLoc = l56;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10186,11 +9841,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
-            attackLoc = l47;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10203,11 +9857,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
-            attackLoc = l57;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10220,11 +9873,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
-            attackLoc = l55;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10237,11 +9889,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
-            attackLoc = l65;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10258,7 +9909,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10271,11 +9922,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
-            attackLoc = l46;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10288,11 +9938,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
-            attackLoc = l66;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10305,11 +9954,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
-            attackLoc = l64;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10326,7 +9974,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10343,7 +9991,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+        if (!m54.isPassable()){ // (2,-4)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10356,11 +10004,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
-            attackLoc = l54;
         }
 
 
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (!m74.isPassable()){ // (4,-2)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10373,11 +10020,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l56; // (2,-2)
-            attackLoc = l74;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10394,7 +10040,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10411,7 +10057,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10424,11 +10070,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l37;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10441,11 +10086,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l57; // (2,-1)
-            attackLoc = l67;
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10458,11 +10102,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l45;
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10475,11 +10118,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l57; // (2,-1)
-            attackLoc = l75;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10496,7 +10138,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10509,11 +10151,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l46; // (1,-3)
-            attackLoc = l36;
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l56);
             return;
@@ -10526,7 +10167,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l66; // (3,-1)
-            attackLoc = l76;
         }
 
 
@@ -10536,7 +10176,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(2,2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10549,11 +10189,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
-            attackLoc = l60;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10566,11 +10205,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
-            attackLoc = l59;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10583,11 +10221,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
-            attackLoc = l51;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10600,11 +10237,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
-            attackLoc = l69;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10617,11 +10253,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
-            attackLoc = l61;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10638,7 +10273,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10651,11 +10286,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
-            attackLoc = l68;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10668,11 +10302,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
-            attackLoc = l52;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10685,11 +10318,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
-            attackLoc = l70;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10706,7 +10338,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10723,7 +10355,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (!m78.isPassable()){ // (4,2)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10736,11 +10368,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
-            attackLoc = l78;
         }
 
 
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+        if (!m62.isPassable()){ // (2,4)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10753,11 +10384,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l60; // (2,2)
-            attackLoc = l62;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10774,7 +10404,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10787,11 +10417,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
-            attackLoc = l67;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10808,7 +10437,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10821,11 +10450,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
-            attackLoc = l77;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10838,11 +10466,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
-            attackLoc = l43;
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10855,11 +10482,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
-            attackLoc = l53;
         }
 
 
-        if (m40.isWall() || m40.hasRuin()){ // (0,0)
+        if (!m40.isPassable()){ // (0,0)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10876,7 +10502,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10889,11 +10515,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l68; // (3,1)
-            attackLoc = l76;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l60);
             return;
@@ -10906,7 +10531,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l52; // (1,3)
-            attackLoc = l44;
         }
 
 
@@ -10916,7 +10540,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-3,0);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -10929,11 +10553,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
-            attackLoc = l13;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -10950,7 +10573,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -10963,11 +10586,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l13; // (-3,0)
-            attackLoc = l14;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -10980,11 +10602,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l13; // (-3,0)
-            attackLoc = l12;
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -10997,11 +10618,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l13; // (-3,0)
-            attackLoc = l4;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11014,11 +10634,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l13; // (-3,0)
-            attackLoc = l23;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11031,11 +10650,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l13; // (-3,0)
-            attackLoc = l21;
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11048,11 +10666,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l13; // (-3,0)
-            attackLoc = l5;
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11065,11 +10682,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l13; // (-3,0)
-            attackLoc = l3;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11086,7 +10702,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11099,11 +10715,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l13; // (-3,0)
-            attackLoc = l15;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11116,11 +10731,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l13; // (-3,0)
-            attackLoc = l11;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11137,7 +10751,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11150,11 +10764,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l22; // (-2,0)
-            attackLoc = l24;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11171,7 +10784,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11184,11 +10797,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l22; // (-2,0)
-            attackLoc = l20;
         }
 
 
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (!m6.isPassable()){ // (-4,2)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11201,11 +10813,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
-            attackLoc = l6;
         }
 
 
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+        if (!m2.isPassable()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11218,11 +10829,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
-            attackLoc = l2;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11235,11 +10845,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
-            attackLoc = l33;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l13);
             return;
@@ -11252,7 +10861,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
-            attackLoc = l29;
         }
 
 
@@ -11262,7 +10870,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(0,-3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11275,11 +10883,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l37; // (0,-3)
-            attackLoc = l37;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11296,7 +10903,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11309,11 +10916,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l37; // (0,-3)
-            attackLoc = l28;
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11326,11 +10932,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l37; // (0,-3)
-            attackLoc = l46;
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11343,11 +10948,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l37; // (0,-3)
-            attackLoc = l36;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11360,11 +10964,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l37; // (0,-3)
-            attackLoc = l29;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11377,11 +10980,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l37; // (0,-3)
-            attackLoc = l47;
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11394,11 +10996,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l37; // (0,-3)
-            attackLoc = l27;
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11411,11 +11012,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l37; // (0,-3)
-            attackLoc = l45;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11432,7 +11032,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11445,11 +11045,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l37; // (0,-3)
-            attackLoc = l19;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11462,11 +11061,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l37; // (0,-3)
-            attackLoc = l55;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11483,7 +11081,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11496,11 +11094,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l38; // (0,-2)
-            attackLoc = l20;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11517,7 +11114,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+        if (!m18.isPassable()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11530,11 +11127,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l28; // (-1,-3)
-            attackLoc = l18;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11547,11 +11143,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l38; // (0,-2)
-            attackLoc = l56;
         }
 
 
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+        if (!m54.isPassable()){ // (2,-4)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11564,11 +11159,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l46; // (1,-3)
-            attackLoc = l54;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11581,11 +11175,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l21;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l37);
             return;
@@ -11598,7 +11191,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l57;
         }
 
 
@@ -11608,7 +11200,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(0,3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11621,11 +11213,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l43; // (0,3)
-            attackLoc = l43;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11642,7 +11233,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11655,11 +11246,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l43; // (0,3)
-            attackLoc = l34;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11672,11 +11262,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l43; // (0,3)
-            attackLoc = l52;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11689,11 +11278,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l43; // (0,3)
-            attackLoc = l44;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11706,11 +11294,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l43; // (0,3)
-            attackLoc = l33;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11723,11 +11310,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l43; // (0,3)
-            attackLoc = l51;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11740,11 +11326,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l43; // (0,3)
-            attackLoc = l35;
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11757,11 +11342,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l43; // (0,3)
-            attackLoc = l53;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11778,7 +11362,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11791,11 +11375,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l43; // (0,3)
-            attackLoc = l25;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11808,11 +11391,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l43; // (0,3)
-            attackLoc = l61;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11829,7 +11411,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11846,7 +11428,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11859,11 +11441,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l42; // (0,2)
-            attackLoc = l24;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11876,11 +11457,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l42; // (0,2)
-            attackLoc = l60;
         }
 
 
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (!m26.isPassable()){ // (-2,4)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11893,11 +11473,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l34; // (-1,3)
-            attackLoc = l26;
         }
 
 
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+        if (!m62.isPassable()){ // (2,4)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11910,11 +11489,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l52; // (1,3)
-            attackLoc = l62;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11927,11 +11505,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
-            attackLoc = l23;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l43);
             return;
@@ -11944,7 +11521,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
-            attackLoc = l59;
         }
 
 
@@ -11954,7 +11530,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(3,0);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -11967,11 +11543,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l67;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -11988,7 +11563,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12001,11 +11576,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l67; // (3,0)
-            attackLoc = l68;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12018,11 +11592,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l67; // (3,0)
-            attackLoc = l66;
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12035,11 +11608,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l67; // (3,0)
-            attackLoc = l76;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12052,11 +11624,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l67; // (3,0)
-            attackLoc = l59;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12069,11 +11640,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l67; // (3,0)
-            attackLoc = l57;
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12086,11 +11656,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l67; // (3,0)
-            attackLoc = l77;
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12103,11 +11672,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l67; // (3,0)
-            attackLoc = l75;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12124,7 +11692,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12137,11 +11705,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l67; // (3,0)
-            attackLoc = l69;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12154,11 +11721,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l67; // (3,0)
-            attackLoc = l65;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12175,7 +11741,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12188,11 +11754,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l58; // (2,0)
-            attackLoc = l60;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12209,7 +11774,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (!m78.isPassable()){ // (4,2)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12222,11 +11787,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l68; // (3,1)
-            attackLoc = l78;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12239,11 +11803,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l58; // (2,0)
-            attackLoc = l56;
         }
 
 
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (!m74.isPassable()){ // (4,-2)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12256,11 +11819,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l66; // (3,-1)
-            attackLoc = l74;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12273,11 +11835,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
-            attackLoc = l51;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l67);
             return;
@@ -12290,7 +11851,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l57; // (2,-1)
-            attackLoc = l47;
         }
 
 
@@ -12300,7 +11860,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-3,-1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12313,11 +11873,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
-            attackLoc = l12;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12330,11 +11889,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l12; // (-3,-1)
-            attackLoc = l21;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12347,11 +11905,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l12; // (-3,-1)
-            attackLoc = l13;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12364,11 +11921,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l12; // (-3,-1)
-            attackLoc = l11;
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12381,11 +11937,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l12; // (-3,-1)
-            attackLoc = l3;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12402,7 +11957,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12415,11 +11970,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l12; // (-3,-1)
-            attackLoc = l20;
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12432,11 +11986,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l12; // (-3,-1)
-            attackLoc = l4;
         }
 
 
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+        if (!m2.isPassable()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12449,11 +12002,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l12; // (-3,-1)
-            attackLoc = l2;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12470,7 +12022,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12483,11 +12035,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l12; // (-3,-1)
-            attackLoc = l14;
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12500,11 +12051,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l12; // (-3,-1)
-            attackLoc = l10;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12521,7 +12071,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12534,11 +12084,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
-            attackLoc = l29;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12551,11 +12100,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
-            attackLoc = l23;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12568,11 +12116,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l21; // (-2,-1)
-            attackLoc = l19;
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12585,11 +12132,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
-            attackLoc = l5;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12606,7 +12152,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l12);
             return;
@@ -12619,7 +12165,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l28;
         }
 
 
@@ -12629,7 +12174,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-3,1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12642,11 +12187,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
-            attackLoc = l14;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12659,11 +12203,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
-            attackLoc = l13;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12676,11 +12219,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
-            attackLoc = l23;
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12693,11 +12235,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
-            attackLoc = l5;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12710,11 +12251,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
-            attackLoc = l15;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12731,7 +12271,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12744,11 +12284,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
-            attackLoc = l4;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12761,11 +12300,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
-            attackLoc = l24;
         }
 
 
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (!m6.isPassable()){ // (-4,2)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12778,11 +12316,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
-            attackLoc = l6;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12795,11 +12332,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
-            attackLoc = l12;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12816,7 +12352,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12829,11 +12365,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l14; // (-3,1)
-            attackLoc = l16;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12846,11 +12381,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
-            attackLoc = l21;
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12863,11 +12397,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
-            attackLoc = l3;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12884,7 +12417,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12897,11 +12430,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
-            attackLoc = l33;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12914,11 +12446,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l23; // (-2,1)
-            attackLoc = l25;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12935,7 +12466,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l14);
             return;
@@ -12948,7 +12479,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
-            attackLoc = l34;
         }
 
 
@@ -12958,7 +12488,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-1,-3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -12971,11 +12501,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l28; // (-1,-3)
-            attackLoc = l28;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -12988,11 +12517,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l28; // (-1,-3)
-            attackLoc = l29;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13005,11 +12533,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l28; // (-1,-3)
-            attackLoc = l19;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13022,11 +12549,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l28; // (-1,-3)
-            attackLoc = l37;
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13039,11 +12565,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l28; // (-1,-3)
-            attackLoc = l27;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13056,11 +12581,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l28; // (-1,-3)
-            attackLoc = l20;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13077,7 +12601,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+        if (!m18.isPassable()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13090,11 +12614,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l28; // (-1,-3)
-            attackLoc = l18;
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13107,11 +12630,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l28; // (-1,-3)
-            attackLoc = l36;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13128,7 +12650,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13141,11 +12663,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l28; // (-1,-3)
-            attackLoc = l10;
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13158,11 +12679,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l28; // (-1,-3)
-            attackLoc = l46;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13175,11 +12695,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l21;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13192,11 +12711,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l11;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13213,7 +12731,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13226,11 +12744,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l29; // (-1,-2)
-            attackLoc = l47;
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13243,11 +12760,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l37; // (0,-3)
-            attackLoc = l45;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13260,11 +12776,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l12;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l28);
             return;
@@ -13287,7 +12802,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-1,3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13300,11 +12815,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l34; // (-1,3)
-            attackLoc = l34;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13317,11 +12831,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
-            attackLoc = l33;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13334,11 +12847,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
-            attackLoc = l25;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13351,11 +12863,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
-            attackLoc = l43;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13368,11 +12879,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
-            attackLoc = l35;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13385,11 +12895,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
-            attackLoc = l24;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13406,7 +12915,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (!m26.isPassable()){ // (-2,4)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13419,11 +12928,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
-            attackLoc = l26;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13436,11 +12944,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
-            attackLoc = l44;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13457,7 +12964,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13470,11 +12977,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
-            attackLoc = l16;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13487,11 +12993,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l34; // (-1,3)
-            attackLoc = l52;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13504,11 +13009,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
-            attackLoc = l23;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13525,7 +13029,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13538,11 +13042,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
-            attackLoc = l15;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13555,11 +13058,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l33; // (-1,2)
-            attackLoc = l51;
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13572,11 +13074,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l43; // (0,3)
-            attackLoc = l53;
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13589,11 +13090,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
-            attackLoc = l14;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l34);
             return;
@@ -13616,7 +13116,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(1,-3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13629,11 +13129,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l46; // (1,-3)
-            attackLoc = l46;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13646,11 +13145,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
-            attackLoc = l47;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13663,11 +13161,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
-            attackLoc = l37;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13680,11 +13177,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
-            attackLoc = l55;
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13697,11 +13193,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
-            attackLoc = l45;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13718,7 +13213,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13731,11 +13226,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
-            attackLoc = l56;
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13748,11 +13242,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
-            attackLoc = l36;
         }
 
 
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+        if (!m54.isPassable()){ // (2,-4)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13765,11 +13258,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
-            attackLoc = l54;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13786,7 +13278,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13799,11 +13291,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
-            attackLoc = l28;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13816,11 +13307,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l46; // (1,-3)
-            attackLoc = l64;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13837,7 +13327,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13850,11 +13340,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l29;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13867,11 +13356,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l57;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13884,11 +13372,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l47; // (1,-2)
-            attackLoc = l65;
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13901,11 +13388,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l37; // (0,-3)
-            attackLoc = l27;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13922,7 +13408,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l46);
             return;
@@ -13935,7 +13421,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
-            attackLoc = l66;
         }
 
 
@@ -13945,7 +13430,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(1,3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -13958,11 +13443,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l52; // (1,3)
-            attackLoc = l52;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -13975,11 +13459,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
-            attackLoc = l51;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -13992,11 +13475,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
-            attackLoc = l43;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14009,11 +13491,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
-            attackLoc = l61;
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14026,11 +13507,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
-            attackLoc = l53;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14047,7 +13527,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14060,11 +13540,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
-            attackLoc = l60;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14077,11 +13556,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
-            attackLoc = l44;
         }
 
 
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+        if (!m62.isPassable()){ // (2,4)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14094,11 +13572,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
-            attackLoc = l62;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14115,7 +13592,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14128,11 +13605,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
-            attackLoc = l34;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14145,11 +13621,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l52; // (1,3)
-            attackLoc = l70;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14166,7 +13641,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14179,11 +13654,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
-            attackLoc = l59;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14196,11 +13670,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
-            attackLoc = l33;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14213,11 +13686,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l51; // (1,2)
-            attackLoc = l69;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14230,11 +13702,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l43; // (0,3)
-            attackLoc = l35;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14251,7 +13722,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l52);
             return;
@@ -14264,7 +13735,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
-            attackLoc = l68;
         }
 
 
@@ -14274,7 +13744,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(3,-1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14287,11 +13757,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l66; // (3,-1)
-            attackLoc = l66;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14304,11 +13773,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
-            attackLoc = l67;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14321,11 +13789,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
-            attackLoc = l57;
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14338,11 +13805,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
-            attackLoc = l75;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14355,11 +13821,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
-            attackLoc = l65;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14376,7 +13841,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14389,11 +13854,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
-            attackLoc = l76;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14406,11 +13870,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
-            attackLoc = l56;
         }
 
 
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (!m74.isPassable()){ // (4,-2)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14423,11 +13886,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
-            attackLoc = l74;
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14440,11 +13902,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
-            attackLoc = l68;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14461,7 +13922,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14474,11 +13935,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l66; // (3,-1)
-            attackLoc = l64;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14491,11 +13951,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l59;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14512,7 +13971,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14525,11 +13984,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l77;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14542,11 +14000,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l57; // (2,-1)
-            attackLoc = l47;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14559,11 +14016,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l57; // (2,-1)
-            attackLoc = l55;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14580,7 +14036,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l66);
             return;
@@ -14593,7 +14049,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
-            attackLoc = l46;
         }
 
 
@@ -14603,7 +14058,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(3,1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14616,11 +14071,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l68; // (3,1)
-            attackLoc = l68;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14633,11 +14087,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
-            attackLoc = l67;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14650,11 +14103,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
-            attackLoc = l59;
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14667,11 +14119,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
-            attackLoc = l77;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14684,11 +14135,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
-            attackLoc = l69;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14705,7 +14155,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14718,11 +14168,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
-            attackLoc = l76;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14735,11 +14184,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
-            attackLoc = l60;
         }
 
 
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (!m78.isPassable()){ // (4,2)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14752,11 +14200,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
-            attackLoc = l78;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14769,11 +14216,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
-            attackLoc = l66;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14790,7 +14236,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14803,11 +14249,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l68; // (3,1)
-            attackLoc = l70;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14820,11 +14265,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l57;
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14837,11 +14281,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l75;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14858,7 +14301,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14871,11 +14314,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
-            attackLoc = l51;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14888,11 +14330,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l59; // (2,1)
-            attackLoc = l61;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14909,7 +14350,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l68);
             return;
@@ -14922,7 +14363,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
-            attackLoc = l52;
         }
 
 
@@ -14932,7 +14372,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-3,-2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -14945,11 +14385,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l11; // (-3,-2)
-            attackLoc = l11;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -14962,11 +14401,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l11; // (-3,-2)
-            attackLoc = l20;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -14979,11 +14417,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l11; // (-3,-2)
-            attackLoc = l12;
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -14996,11 +14433,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l11; // (-3,-2)
-            attackLoc = l10;
         }
 
 
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+        if (!m2.isPassable()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15013,11 +14449,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l11; // (-3,-2)
-            attackLoc = l2;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15030,11 +14465,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l11; // (-3,-2)
-            attackLoc = l21;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15047,11 +14481,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l11; // (-3,-2)
-            attackLoc = l19;
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15064,11 +14497,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l11; // (-3,-2)
-            attackLoc = l3;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15081,11 +14513,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l11; // (-3,-2)
-            attackLoc = l29;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15098,11 +14529,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l11; // (-3,-2)
-            attackLoc = l13;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15119,7 +14549,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15136,7 +14566,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15149,11 +14579,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l28;
         }
 
 
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+        if (!m18.isPassable()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15166,11 +14595,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l18;
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15183,11 +14611,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
-            attackLoc = l4;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15204,7 +14631,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l11);
             return;
@@ -15217,7 +14644,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l19; // (-2,-3)
-            attackLoc = l27;
         }
 
 
@@ -15227,7 +14653,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-3,2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15240,11 +14666,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l15; // (-3,2)
-            attackLoc = l15;
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15257,11 +14682,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
-            attackLoc = l14;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15274,11 +14698,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
-            attackLoc = l24;
         }
 
 
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (!m6.isPassable()){ // (-4,2)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15291,11 +14714,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
-            attackLoc = l6;
         }
 
 
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15308,11 +14730,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
-            attackLoc = l16;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15325,11 +14746,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
-            attackLoc = l23;
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15342,11 +14762,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
-            attackLoc = l5;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15359,11 +14778,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
-            attackLoc = l25;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15376,11 +14794,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
-            attackLoc = l13;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15393,11 +14810,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l15; // (-3,2)
-            attackLoc = l33;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15414,7 +14830,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15427,11 +14843,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
-            attackLoc = l4;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15448,7 +14863,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15461,11 +14876,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
-            attackLoc = l34;
         }
 
 
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (!m26.isPassable()){ // (-2,4)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15478,11 +14892,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
-            attackLoc = l26;
         }
 
 
-        if (m31.isWall() || m31.hasRuin()){ // (-1,0)
+        if (!m31.isPassable()){ // (-1,0)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15499,7 +14912,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l15);
             return;
@@ -15512,7 +14925,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l25; // (-2,3)
-            attackLoc = l35;
         }
 
 
@@ -15522,7 +14934,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-2,-3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15535,11 +14947,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l19; // (-2,-3)
-            attackLoc = l19;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15552,11 +14963,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l19; // (-2,-3)
-            attackLoc = l20;
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15569,11 +14979,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l19; // (-2,-3)
-            attackLoc = l10;
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15586,11 +14995,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l19; // (-2,-3)
-            attackLoc = l28;
         }
 
 
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+        if (!m18.isPassable()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15603,11 +15011,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l19; // (-2,-3)
-            attackLoc = l18;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15620,11 +15027,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l19; // (-2,-3)
-            attackLoc = l11;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15637,11 +15043,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l19; // (-2,-3)
-            attackLoc = l29;
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15654,11 +15059,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l19; // (-2,-3)
-            attackLoc = l27;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15671,11 +15075,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l19; // (-2,-3)
-            attackLoc = l21;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15688,11 +15091,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l19; // (-2,-3)
-            attackLoc = l37;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15705,11 +15107,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l12;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15726,7 +15127,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+        if (!m2.isPassable()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15739,11 +15140,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l20; // (-2,-2)
-            attackLoc = l2;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15760,7 +15160,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15773,11 +15173,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l28; // (-1,-3)
-            attackLoc = l36;
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15790,11 +15189,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l11; // (-3,-2)
-            attackLoc = l3;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l19);
             return;
@@ -15817,7 +15215,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-2,3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -15830,11 +15228,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l25; // (-2,3)
-            attackLoc = l25;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -15847,11 +15244,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l25; // (-2,3)
-            attackLoc = l24;
         }
 
 
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -15864,11 +15260,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l25; // (-2,3)
-            attackLoc = l16;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -15881,11 +15276,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l25; // (-2,3)
-            attackLoc = l34;
         }
 
 
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (!m26.isPassable()){ // (-2,4)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -15898,11 +15292,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l25; // (-2,3)
-            attackLoc = l26;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -15915,11 +15308,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l25; // (-2,3)
-            attackLoc = l15;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -15932,11 +15324,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l25; // (-2,3)
-            attackLoc = l33;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -15949,11 +15340,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l25; // (-2,3)
-            attackLoc = l35;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -15966,11 +15356,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l25; // (-2,3)
-            attackLoc = l23;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -15983,11 +15372,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l25; // (-2,3)
-            attackLoc = l43;
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -16000,11 +15388,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
-            attackLoc = l14;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -16021,7 +15408,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (!m6.isPassable()){ // (-4,2)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -16034,11 +15421,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l24; // (-2,2)
-            attackLoc = l6;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -16055,7 +15441,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -16068,11 +15454,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l34; // (-1,3)
-            attackLoc = l44;
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -16085,11 +15470,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l15; // (-3,2)
-            attackLoc = l5;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l25);
             return;
@@ -16112,7 +15496,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(2,-3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16125,11 +15509,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l55; // (2,-3)
-            attackLoc = l55;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16142,11 +15525,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l55; // (2,-3)
-            attackLoc = l56;
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16159,11 +15541,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l55; // (2,-3)
-            attackLoc = l46;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16176,11 +15557,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l55; // (2,-3)
-            attackLoc = l64;
         }
 
 
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+        if (!m54.isPassable()){ // (2,-4)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16193,11 +15573,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l55; // (2,-3)
-            attackLoc = l54;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16210,11 +15589,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l55; // (2,-3)
-            attackLoc = l47;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16227,11 +15605,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l55; // (2,-3)
-            attackLoc = l65;
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16244,11 +15621,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l55; // (2,-3)
-            attackLoc = l45;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16261,11 +15637,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l55; // (2,-3)
-            attackLoc = l57;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16278,11 +15653,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l55; // (2,-3)
-            attackLoc = l37;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16299,7 +15673,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16316,7 +15690,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16329,11 +15703,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
-            attackLoc = l66;
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16346,11 +15719,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l46; // (1,-3)
-            attackLoc = l36;
         }
 
 
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (!m74.isPassable()){ // (4,-2)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16363,11 +15735,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
-            attackLoc = l74;
         }
 
 
-        if (m39.isWall() || m39.hasRuin()){ // (0,-1)
+        if (!m39.isPassable()){ // (0,-1)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16384,7 +15755,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l55);
             return;
@@ -16397,7 +15768,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l65; // (3,-2)
-            attackLoc = l75;
         }
 
 
@@ -16407,7 +15777,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(2,3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16420,11 +15790,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l61; // (2,3)
-            attackLoc = l61;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16437,11 +15806,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l61; // (2,3)
-            attackLoc = l60;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16454,11 +15822,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l61; // (2,3)
-            attackLoc = l52;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16471,11 +15838,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l61; // (2,3)
-            attackLoc = l70;
         }
 
 
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+        if (!m62.isPassable()){ // (2,4)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16488,11 +15854,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l61; // (2,3)
-            attackLoc = l62;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16505,11 +15870,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l61; // (2,3)
-            attackLoc = l51;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16522,11 +15886,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l61; // (2,3)
-            attackLoc = l69;
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16539,11 +15902,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l61; // (2,3)
-            attackLoc = l53;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16556,11 +15918,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l61; // (2,3)
-            attackLoc = l59;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16573,11 +15934,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l61; // (2,3)
-            attackLoc = l43;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16594,7 +15954,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16607,11 +15967,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
-            attackLoc = l68;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16628,7 +15987,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (!m78.isPassable()){ // (4,2)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16641,11 +16000,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
-            attackLoc = l78;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16658,11 +16016,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l52; // (1,3)
-            attackLoc = l44;
         }
 
 
-        if (m41.isWall() || m41.hasRuin()){ // (0,1)
+        if (!m41.isPassable()){ // (0,1)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16679,7 +16036,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l61);
             return;
@@ -16692,7 +16049,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l69; // (3,2)
-            attackLoc = l77;
         }
 
 
@@ -16702,7 +16058,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(3,-2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16715,11 +16071,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l65; // (3,-2)
-            attackLoc = l65;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16732,11 +16087,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
-            attackLoc = l66;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16749,11 +16103,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
-            attackLoc = l56;
         }
 
 
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (!m74.isPassable()){ // (4,-2)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16766,11 +16119,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
-            attackLoc = l74;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16783,11 +16135,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
-            attackLoc = l64;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16800,11 +16151,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
-            attackLoc = l57;
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16817,11 +16167,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
-            attackLoc = l75;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16834,11 +16183,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
-            attackLoc = l55;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16851,11 +16199,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
-            attackLoc = l67;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16868,11 +16215,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l65; // (3,-2)
-            attackLoc = l47;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16889,7 +16235,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16902,11 +16248,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l66; // (3,-1)
-            attackLoc = l76;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16923,7 +16268,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16936,11 +16281,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
-            attackLoc = l46;
         }
 
 
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+        if (!m54.isPassable()){ // (2,-4)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16953,11 +16297,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l56; // (2,-2)
-            attackLoc = l54;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16974,7 +16317,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l65);
             return;
@@ -16987,7 +16330,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l55; // (2,-3)
-            attackLoc = l45;
         }
 
 
@@ -16997,7 +16339,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(3,2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17010,11 +16352,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l69; // (3,2)
-            attackLoc = l69;
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17027,11 +16368,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
-            attackLoc = l68;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17044,11 +16384,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
-            attackLoc = l60;
         }
 
 
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (!m78.isPassable()){ // (4,2)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17061,11 +16400,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
-            attackLoc = l78;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17078,11 +16416,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
-            attackLoc = l70;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17095,11 +16432,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
-            attackLoc = l59;
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17112,11 +16448,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
-            attackLoc = l77;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17129,11 +16464,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
-            attackLoc = l61;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17146,11 +16480,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
-            attackLoc = l67;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17163,11 +16496,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l69; // (3,2)
-            attackLoc = l51;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17184,7 +16516,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17197,11 +16529,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l68; // (3,1)
-            attackLoc = l76;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17218,7 +16549,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17231,11 +16562,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
-            attackLoc = l52;
         }
 
 
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+        if (!m62.isPassable()){ // (2,4)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17248,11 +16578,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l60; // (2,2)
-            attackLoc = l62;
         }
 
 
-        if (m49.isWall() || m49.hasRuin()){ // (1,0)
+        if (!m49.isPassable()){ // (1,0)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17269,7 +16598,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l69);
             return;
@@ -17282,7 +16611,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l61; // (2,3)
-            attackLoc = l53;
         }
 
 
@@ -17292,7 +16620,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-4,0);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17305,11 +16633,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l4; // (-4,0)
-            attackLoc = l4;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17322,11 +16649,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l4; // (-4,0)
-            attackLoc = l13;
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17339,11 +16665,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l4; // (-4,0)
-            attackLoc = l5;
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17356,11 +16681,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l4; // (-4,0)
-            attackLoc = l3;
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17373,11 +16697,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l4; // (-4,0)
-            attackLoc = l14;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17390,11 +16713,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l4; // (-4,0)
-            attackLoc = l12;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17411,7 +16733,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (!m6.isPassable()){ // (-4,2)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17424,11 +16746,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l4; // (-4,0)
-            attackLoc = l6;
         }
 
 
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+        if (!m2.isPassable()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17441,11 +16762,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l4; // (-4,0)
-            attackLoc = l2;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17458,11 +16778,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
-            attackLoc = l23;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17475,11 +16794,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
-            attackLoc = l21;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17492,11 +16810,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
-            attackLoc = l15;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17509,11 +16826,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
-            attackLoc = l11;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17526,11 +16842,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
-            attackLoc = l24;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l4);
             return;
@@ -17543,7 +16858,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
-            attackLoc = l20;
         }
 
 
@@ -17553,7 +16867,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(0,-4);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17566,11 +16880,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l36; // (0,-4)
-            attackLoc = l36;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17583,11 +16896,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l36; // (0,-4)
-            attackLoc = l37;
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17600,11 +16912,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l36; // (0,-4)
-            attackLoc = l27;
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17617,11 +16928,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l36; // (0,-4)
-            attackLoc = l45;
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17634,11 +16944,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l36; // (0,-4)
-            attackLoc = l28;
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17651,11 +16960,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l36; // (0,-4)
-            attackLoc = l46;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17672,7 +16980,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+        if (!m18.isPassable()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17685,11 +16993,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l36; // (0,-4)
-            attackLoc = l18;
         }
 
 
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+        if (!m54.isPassable()){ // (2,-4)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17702,11 +17009,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l36; // (0,-4)
-            attackLoc = l54;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17719,11 +17025,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l37; // (0,-3)
-            attackLoc = l29;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17736,11 +17041,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l37; // (0,-3)
-            attackLoc = l19;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17753,11 +17057,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l37; // (0,-3)
-            attackLoc = l47;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17770,11 +17073,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l37; // (0,-3)
-            attackLoc = l55;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17787,11 +17089,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l28; // (-1,-3)
-            attackLoc = l20;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l36);
             return;
@@ -17804,7 +17105,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l46; // (1,-3)
-            attackLoc = l56;
         }
 
 
@@ -17814,7 +17114,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(0,4);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -17827,11 +17127,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l44; // (0,4)
-            attackLoc = l44;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -17844,11 +17143,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l44; // (0,4)
-            attackLoc = l43;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -17861,11 +17159,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l44; // (0,4)
-            attackLoc = l35;
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -17878,11 +17175,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l44; // (0,4)
-            attackLoc = l53;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -17895,11 +17191,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l44; // (0,4)
-            attackLoc = l34;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -17912,11 +17207,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l44; // (0,4)
-            attackLoc = l52;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -17933,7 +17227,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (!m26.isPassable()){ // (-2,4)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -17946,11 +17240,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l44; // (0,4)
-            attackLoc = l26;
         }
 
 
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+        if (!m62.isPassable()){ // (2,4)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -17963,11 +17256,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l44; // (0,4)
-            attackLoc = l62;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -17980,11 +17272,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l43; // (0,3)
-            attackLoc = l33;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -17997,11 +17288,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l43; // (0,3)
-            attackLoc = l51;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -18014,11 +17304,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l43; // (0,3)
-            attackLoc = l25;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -18031,11 +17320,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l43; // (0,3)
-            attackLoc = l61;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -18048,11 +17336,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l34; // (-1,3)
-            attackLoc = l24;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l44);
             return;
@@ -18065,7 +17352,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l52; // (1,3)
-            attackLoc = l60;
         }
 
 
@@ -18075,7 +17361,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(4,0);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18088,11 +17374,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l76; // (4,0)
-            attackLoc = l76;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18105,11 +17390,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l76; // (4,0)
-            attackLoc = l67;
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18122,11 +17406,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l76; // (4,0)
-            attackLoc = l77;
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18139,11 +17422,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l76; // (4,0)
-            attackLoc = l75;
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18156,11 +17438,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l76; // (4,0)
-            attackLoc = l68;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18173,11 +17454,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l76; // (4,0)
-            attackLoc = l66;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18194,7 +17474,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (!m78.isPassable()){ // (4,2)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18207,11 +17487,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l76; // (4,0)
-            attackLoc = l78;
         }
 
 
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (!m74.isPassable()){ // (4,-2)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18224,11 +17503,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l76; // (4,0)
-            attackLoc = l74;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18241,11 +17519,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l59;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18258,11 +17535,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l69;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18275,11 +17551,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l57;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18292,11 +17567,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l65;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18309,11 +17583,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l68; // (3,1)
-            attackLoc = l60;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l76);
             return;
@@ -18326,7 +17599,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l66; // (3,-1)
-            attackLoc = l56;
         }
 
 
@@ -18336,7 +17608,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-4,-1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18349,11 +17621,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l3; // (-4,-1)
-            attackLoc = l3;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18366,11 +17637,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l3; // (-4,-1)
-            attackLoc = l12;
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18383,11 +17653,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l3; // (-4,-1)
-            attackLoc = l4;
         }
 
 
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+        if (!m2.isPassable()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18400,11 +17669,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l3; // (-4,-1)
-            attackLoc = l2;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18417,11 +17685,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l3; // (-4,-1)
-            attackLoc = l13;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18434,11 +17701,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l3; // (-4,-1)
-            attackLoc = l11;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18451,11 +17717,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l3; // (-4,-1)
-            attackLoc = l21;
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18468,11 +17733,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l3; // (-4,-1)
-            attackLoc = l5;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18489,7 +17753,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18502,11 +17766,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
-            attackLoc = l20;
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18519,11 +17782,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
-            attackLoc = l14;
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18536,11 +17798,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l12; // (-3,-1)
-            attackLoc = l10;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18553,11 +17814,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
-            attackLoc = l23;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l3);
             return;
@@ -18570,7 +17830,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l11; // (-3,-2)
-            attackLoc = l19;
         }
 
 
@@ -18580,7 +17839,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-4,1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18593,11 +17852,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l5; // (-4,1)
-            attackLoc = l5;
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18610,11 +17868,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l5; // (-4,1)
-            attackLoc = l4;
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18627,11 +17884,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l5; // (-4,1)
-            attackLoc = l14;
         }
 
 
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (!m6.isPassable()){ // (-4,2)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18644,11 +17900,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l5; // (-4,1)
-            attackLoc = l6;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18661,11 +17916,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l5; // (-4,1)
-            attackLoc = l13;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18678,11 +17932,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l5; // (-4,1)
-            attackLoc = l15;
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18695,11 +17948,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l5; // (-4,1)
-            attackLoc = l3;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18712,11 +17964,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l5; // (-4,1)
-            attackLoc = l23;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18729,11 +17980,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l4; // (-4,0)
-            attackLoc = l12;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18750,7 +18000,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18763,11 +18013,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
-            attackLoc = l24;
         }
 
 
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18780,11 +18029,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l14; // (-3,1)
-            attackLoc = l16;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18797,11 +18045,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l13; // (-3,0)
-            attackLoc = l21;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l5);
             return;
@@ -18814,7 +18061,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l15; // (-3,2)
-            attackLoc = l25;
         }
 
 
@@ -18824,7 +18070,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-1,-4);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -18837,11 +18083,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l27; // (-1,-4)
-            attackLoc = l27;
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -18854,11 +18099,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l27; // (-1,-4)
-            attackLoc = l28;
         }
 
 
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+        if (!m18.isPassable()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -18871,11 +18115,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l27; // (-1,-4)
-            attackLoc = l18;
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -18888,11 +18131,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l27; // (-1,-4)
-            attackLoc = l36;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -18905,11 +18147,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l27; // (-1,-4)
-            attackLoc = l19;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -18922,11 +18163,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l27; // (-1,-4)
-            attackLoc = l37;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -18939,11 +18179,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l27; // (-1,-4)
-            attackLoc = l29;
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -18956,11 +18195,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l27; // (-1,-4)
-            attackLoc = l45;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -18973,11 +18211,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l28; // (-1,-3)
-            attackLoc = l20;
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -18990,11 +18227,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l28; // (-1,-3)
-            attackLoc = l10;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -19011,7 +18247,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -19024,11 +18260,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l28; // (-1,-3)
-            attackLoc = l46;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -19041,11 +18276,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l19; // (-2,-3)
-            attackLoc = l11;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l27);
             return;
@@ -19058,7 +18292,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l37; // (0,-3)
-            attackLoc = l47;
         }
 
 
@@ -19068,7 +18301,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-1,4);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19081,11 +18314,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l35; // (-1,4)
-            attackLoc = l35;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19098,11 +18330,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l35; // (-1,4)
-            attackLoc = l34;
         }
 
 
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (!m26.isPassable()){ // (-2,4)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19115,11 +18346,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l35; // (-1,4)
-            attackLoc = l26;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19132,11 +18362,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l35; // (-1,4)
-            attackLoc = l44;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19149,11 +18378,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l35; // (-1,4)
-            attackLoc = l25;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19166,11 +18394,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l35; // (-1,4)
-            attackLoc = l43;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19183,11 +18410,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l35; // (-1,4)
-            attackLoc = l33;
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19200,11 +18426,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l35; // (-1,4)
-            attackLoc = l53;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19217,11 +18442,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l34; // (-1,3)
-            attackLoc = l24;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19238,7 +18462,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19251,11 +18475,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l34; // (-1,3)
-            attackLoc = l16;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19268,11 +18491,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l34; // (-1,3)
-            attackLoc = l52;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19285,11 +18507,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l25; // (-2,3)
-            attackLoc = l15;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l35);
             return;
@@ -19302,7 +18523,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l43; // (0,3)
-            attackLoc = l51;
         }
 
 
@@ -19312,7 +18532,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(1,-4);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19325,11 +18545,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l45; // (1,-4)
-            attackLoc = l45;
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19342,11 +18561,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l45; // (1,-4)
-            attackLoc = l46;
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19359,11 +18577,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l45; // (1,-4)
-            attackLoc = l36;
         }
 
 
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+        if (!m54.isPassable()){ // (2,-4)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19376,11 +18593,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l45; // (1,-4)
-            attackLoc = l54;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19393,11 +18609,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l45; // (1,-4)
-            attackLoc = l37;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19410,11 +18625,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l45; // (1,-4)
-            attackLoc = l55;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19427,11 +18641,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l45; // (1,-4)
-            attackLoc = l47;
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19444,11 +18657,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l45; // (1,-4)
-            attackLoc = l27;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19465,7 +18677,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19478,11 +18690,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l46; // (1,-3)
-            attackLoc = l56;
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19495,11 +18706,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l46; // (1,-3)
-            attackLoc = l28;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19512,11 +18722,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l46; // (1,-3)
-            attackLoc = l64;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19529,11 +18738,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l37; // (0,-3)
-            attackLoc = l29;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l45);
             return;
@@ -19546,7 +18754,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l55; // (2,-3)
-            attackLoc = l65;
         }
 
 
@@ -19556,7 +18763,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(1,4);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19569,11 +18776,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l53; // (1,4)
-            attackLoc = l53;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19586,11 +18792,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l53; // (1,4)
-            attackLoc = l52;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19603,11 +18808,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l53; // (1,4)
-            attackLoc = l44;
         }
 
 
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+        if (!m62.isPassable()){ // (2,4)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19620,11 +18824,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l53; // (1,4)
-            attackLoc = l62;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19637,11 +18840,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l53; // (1,4)
-            attackLoc = l43;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19654,11 +18856,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l53; // (1,4)
-            attackLoc = l61;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19671,11 +18872,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l53; // (1,4)
-            attackLoc = l51;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19688,11 +18888,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l53; // (1,4)
-            attackLoc = l35;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19709,7 +18908,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19722,11 +18921,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l52; // (1,3)
-            attackLoc = l60;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19739,11 +18937,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l52; // (1,3)
-            attackLoc = l34;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19756,11 +18953,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l52; // (1,3)
-            attackLoc = l70;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19773,11 +18969,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l43; // (0,3)
-            attackLoc = l33;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l53);
             return;
@@ -19790,7 +18985,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l61; // (2,3)
-            attackLoc = l69;
         }
 
 
@@ -19800,7 +18994,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(4,-1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -19813,11 +19007,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l75; // (4,-1)
-            attackLoc = l75;
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -19830,11 +19023,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l75; // (4,-1)
-            attackLoc = l76;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -19847,11 +19039,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l75; // (4,-1)
-            attackLoc = l66;
         }
 
 
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (!m74.isPassable()){ // (4,-2)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -19864,11 +19055,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l75; // (4,-1)
-            attackLoc = l74;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -19881,11 +19071,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l75; // (4,-1)
-            attackLoc = l67;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -19898,11 +19087,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l75; // (4,-1)
-            attackLoc = l65;
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -19915,11 +19103,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l75; // (4,-1)
-            attackLoc = l77;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -19932,11 +19119,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l75; // (4,-1)
-            attackLoc = l57;
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -19949,11 +19135,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l76; // (4,0)
-            attackLoc = l68;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -19970,7 +19155,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -19983,11 +19168,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l66; // (3,-1)
-            attackLoc = l56;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -20000,11 +19184,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l66; // (3,-1)
-            attackLoc = l64;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -20017,11 +19200,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l59;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l75);
             return;
@@ -20034,7 +19216,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l65; // (3,-2)
-            attackLoc = l55;
         }
 
 
@@ -20044,7 +19225,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(4,1);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20057,11 +19238,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l77; // (4,1)
-            attackLoc = l77;
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20074,11 +19254,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l77; // (4,1)
-            attackLoc = l76;
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20091,11 +19270,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l77; // (4,1)
-            attackLoc = l68;
         }
 
 
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (!m78.isPassable()){ // (4,2)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20108,11 +19286,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l77; // (4,1)
-            attackLoc = l78;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20125,11 +19302,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l77; // (4,1)
-            attackLoc = l67;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20142,11 +19318,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l77; // (4,1)
-            attackLoc = l69;
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20159,11 +19334,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l77; // (4,1)
-            attackLoc = l75;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20176,11 +19350,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l77; // (4,1)
-            attackLoc = l59;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20193,11 +19366,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l76; // (4,0)
-            attackLoc = l66;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20214,7 +19386,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20227,11 +19399,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l68; // (3,1)
-            attackLoc = l60;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20244,11 +19415,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l68; // (3,1)
-            attackLoc = l70;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20261,11 +19431,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l67; // (3,0)
-            attackLoc = l57;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l77);
             return;
@@ -20278,7 +19447,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l69; // (3,2)
-            attackLoc = l61;
         }
 
 
@@ -20288,7 +19456,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-3,-3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20301,11 +19469,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l10; // (-3,-3)
-            attackLoc = l10;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20318,11 +19485,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l10; // (-3,-3)
-            attackLoc = l19;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20335,11 +19501,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l10; // (-3,-3)
-            attackLoc = l11;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20352,11 +19517,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l10; // (-3,-3)
-            attackLoc = l20;
         }
 
 
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+        if (!m18.isPassable()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20369,11 +19533,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l10; // (-3,-3)
-            attackLoc = l18;
         }
 
 
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+        if (!m2.isPassable()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20386,11 +19549,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l10; // (-3,-3)
-            attackLoc = l2;
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20403,11 +19565,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l10; // (-3,-3)
-            attackLoc = l28;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20420,11 +19581,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l10; // (-3,-3)
-            attackLoc = l12;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20437,11 +19597,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l19; // (-2,-3)
-            attackLoc = l29;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20454,11 +19613,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l19; // (-2,-3)
-            attackLoc = l21;
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20471,11 +19629,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l19; // (-2,-3)
-            attackLoc = l27;
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20488,11 +19645,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l11; // (-3,-2)
-            attackLoc = l3;
         }
 
 
-        if (m30.isWall() || m30.hasRuin()){ // (-1,-1)
+        if (!m30.isPassable()){ // (-1,-1)
             ans = null;
             Map.markObstructed(l10);
             return;
@@ -20515,7 +19671,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-3,3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20528,11 +19684,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l16; // (-3,3)
-            attackLoc = l16;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20545,11 +19700,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l16; // (-3,3)
-            attackLoc = l15;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20562,11 +19716,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l16; // (-3,3)
-            attackLoc = l25;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20579,11 +19732,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l16; // (-3,3)
-            attackLoc = l24;
         }
 
 
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (!m6.isPassable()){ // (-4,2)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20596,11 +19748,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l16; // (-3,3)
-            attackLoc = l6;
         }
 
 
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (!m26.isPassable()){ // (-2,4)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20613,11 +19764,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l16; // (-3,3)
-            attackLoc = l26;
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20630,11 +19780,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l16; // (-3,3)
-            attackLoc = l14;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20647,11 +19796,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l16; // (-3,3)
-            attackLoc = l34;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20664,11 +19812,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l15; // (-3,2)
-            attackLoc = l23;
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20681,11 +19828,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l15; // (-3,2)
-            attackLoc = l5;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20698,11 +19844,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l15; // (-3,2)
-            attackLoc = l33;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20715,11 +19860,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l25; // (-2,3)
-            attackLoc = l35;
         }
 
 
-        if (m32.isWall() || m32.hasRuin()){ // (-1,1)
+        if (!m32.isPassable()){ // (-1,1)
             ans = null;
             Map.markObstructed(l16);
             return;
@@ -20742,7 +19886,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(3,-3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20755,11 +19899,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l64; // (3,-3)
-            attackLoc = l64;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20772,11 +19915,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l64; // (3,-3)
-            attackLoc = l55;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20789,11 +19931,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l64; // (3,-3)
-            attackLoc = l65;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20806,11 +19947,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l64; // (3,-3)
-            attackLoc = l56;
         }
 
 
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+        if (!m54.isPassable()){ // (2,-4)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20823,11 +19963,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l64; // (3,-3)
-            attackLoc = l54;
         }
 
 
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (!m74.isPassable()){ // (4,-2)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20840,11 +19979,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l64; // (3,-3)
-            attackLoc = l74;
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20857,11 +19995,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l64; // (3,-3)
-            attackLoc = l46;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20874,11 +20011,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l64; // (3,-3)
-            attackLoc = l66;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20891,11 +20027,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l55; // (2,-3)
-            attackLoc = l47;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20908,11 +20043,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l55; // (2,-3)
-            attackLoc = l57;
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20925,11 +20059,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l55; // (2,-3)
-            attackLoc = l45;
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20942,11 +20075,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l65; // (3,-2)
-            attackLoc = l75;
         }
 
 
-        if (m48.isWall() || m48.hasRuin()){ // (1,-1)
+        if (!m48.isPassable()){ // (1,-1)
             ans = null;
             Map.markObstructed(l64);
             return;
@@ -20969,7 +20101,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(3,3);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -20982,11 +20114,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l70; // (3,3)
-            attackLoc = l70;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -20999,11 +20130,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l70; // (3,3)
-            attackLoc = l69;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -21016,11 +20146,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l70; // (3,3)
-            attackLoc = l61;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -21033,11 +20162,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l70; // (3,3)
-            attackLoc = l60;
         }
 
 
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (!m78.isPassable()){ // (4,2)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -21050,11 +20178,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l70; // (3,3)
-            attackLoc = l78;
         }
 
 
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+        if (!m62.isPassable()){ // (2,4)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -21067,11 +20194,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l70; // (3,3)
-            attackLoc = l62;
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -21084,11 +20210,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l70; // (3,3)
-            attackLoc = l68;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -21101,11 +20226,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l70; // (3,3)
-            attackLoc = l52;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -21118,11 +20242,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l69; // (3,2)
-            attackLoc = l59;
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -21135,11 +20258,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l69; // (3,2)
-            attackLoc = l77;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -21152,11 +20274,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l69; // (3,2)
-            attackLoc = l51;
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -21169,11 +20290,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l61; // (2,3)
-            attackLoc = l53;
         }
 
 
-        if (m50.isWall() || m50.hasRuin()){ // (1,1)
+        if (!m50.isPassable()){ // (1,1)
             ans = null;
             Map.markObstructed(l70);
             return;
@@ -21196,7 +20316,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-4,-2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+        if (!m2.isPassable()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l2);
             return;
@@ -21209,11 +20329,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l2; // (-4,-2)
-            attackLoc = l2;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l2);
             return;
@@ -21226,11 +20345,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l2; // (-4,-2)
-            attackLoc = l11;
         }
 
 
-        if (m3.isWall() || m3.hasRuin()){ // (-4,-1)
+        if (!m3.isPassable()){ // (-4,-1)
             ans = null;
             Map.markObstructed(l2);
             return;
@@ -21243,11 +20361,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l2; // (-4,-2)
-            attackLoc = l3;
         }
 
 
-        if (m12.isWall() || m12.hasRuin()){ // (-3,-1)
+        if (!m12.isPassable()){ // (-3,-1)
             ans = null;
             Map.markObstructed(l2);
             return;
@@ -21260,11 +20377,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l2; // (-4,-2)
-            attackLoc = l12;
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l2);
             return;
@@ -21277,11 +20393,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l2; // (-4,-2)
-            attackLoc = l10;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l2);
             return;
@@ -21294,11 +20409,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l2; // (-4,-2)
-            attackLoc = l20;
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l2);
             return;
@@ -21311,11 +20425,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l2; // (-4,-2)
-            attackLoc = l4;
         }
 
 
-        if (m21.isWall() || m21.hasRuin()){ // (-2,-1)
+        if (!m21.isPassable()){ // (-2,-1)
             ans = null;
             Map.markObstructed(l2);
             return;
@@ -21328,11 +20441,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l11; // (-3,-2)
-            attackLoc = l21;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l2);
             return;
@@ -21345,11 +20457,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l11; // (-3,-2)
-            attackLoc = l13;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l2);
             return;
@@ -21362,11 +20473,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l11; // (-3,-2)
-            attackLoc = l19;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l2);
             return;
@@ -21383,7 +20493,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+        if (!m18.isPassable()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l2);
             return;
@@ -21396,7 +20506,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l10; // (-3,-3)
-            attackLoc = l18;
         }
 
 
@@ -21406,7 +20515,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-4,2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (!m6.isPassable()){ // (-4,2)
             ans = null;
             Map.markObstructed(l6);
             return;
@@ -21419,11 +20528,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l6; // (-4,2)
-            attackLoc = l6;
         }
 
 
-        if (m5.isWall() || m5.hasRuin()){ // (-4,1)
+        if (!m5.isPassable()){ // (-4,1)
             ans = null;
             Map.markObstructed(l6);
             return;
@@ -21436,11 +20544,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l6; // (-4,2)
-            attackLoc = l5;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l6);
             return;
@@ -21453,11 +20560,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l6; // (-4,2)
-            attackLoc = l15;
         }
 
 
-        if (m14.isWall() || m14.hasRuin()){ // (-3,1)
+        if (!m14.isPassable()){ // (-3,1)
             ans = null;
             Map.markObstructed(l6);
             return;
@@ -21470,11 +20576,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l6; // (-4,2)
-            attackLoc = l14;
         }
 
 
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l6);
             return;
@@ -21487,11 +20592,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l6; // (-4,2)
-            attackLoc = l16;
         }
 
 
-        if (m4.isWall() || m4.hasRuin()){ // (-4,0)
+        if (!m4.isPassable()){ // (-4,0)
             ans = null;
             Map.markObstructed(l6);
             return;
@@ -21504,11 +20608,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l6; // (-4,2)
-            attackLoc = l4;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l6);
             return;
@@ -21521,11 +20624,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l6; // (-4,2)
-            attackLoc = l24;
         }
 
 
-        if (m13.isWall() || m13.hasRuin()){ // (-3,0)
+        if (!m13.isPassable()){ // (-3,0)
             ans = null;
             Map.markObstructed(l6);
             return;
@@ -21538,11 +20640,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l5; // (-4,1)
-            attackLoc = l13;
         }
 
 
-        if (m23.isWall() || m23.hasRuin()){ // (-2,1)
+        if (!m23.isPassable()){ // (-2,1)
             ans = null;
             Map.markObstructed(l6);
             return;
@@ -21555,11 +20656,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l5; // (-4,1)
-            attackLoc = l23;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l6);
             return;
@@ -21572,11 +20672,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l15; // (-3,2)
-            attackLoc = l25;
         }
 
 
-        if (m22.isWall() || m22.hasRuin()){ // (-2,0)
+        if (!m22.isPassable()){ // (-2,0)
             ans = null;
             Map.markObstructed(l6);
             return;
@@ -21593,7 +20692,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (!m26.isPassable()){ // (-2,4)
             ans = null;
             Map.markObstructed(l6);
             return;
@@ -21606,7 +20705,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l16; // (-3,3)
-            attackLoc = l26;
         }
 
 
@@ -21616,7 +20714,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-2,-4);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m18.isWall() || m18.hasRuin()){ // (-2,-4)
+        if (!m18.isPassable()){ // (-2,-4)
             ans = null;
             Map.markObstructed(l18);
             return;
@@ -21629,11 +20727,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l18; // (-2,-4)
-            attackLoc = l18;
         }
 
 
-        if (m19.isWall() || m19.hasRuin()){ // (-2,-3)
+        if (!m19.isPassable()){ // (-2,-3)
             ans = null;
             Map.markObstructed(l18);
             return;
@@ -21646,11 +20743,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l18; // (-2,-4)
-            attackLoc = l19;
         }
 
 
-        if (m27.isWall() || m27.hasRuin()){ // (-1,-4)
+        if (!m27.isPassable()){ // (-1,-4)
             ans = null;
             Map.markObstructed(l18);
             return;
@@ -21663,11 +20759,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l18; // (-2,-4)
-            attackLoc = l27;
         }
 
 
-        if (m10.isWall() || m10.hasRuin()){ // (-3,-3)
+        if (!m10.isPassable()){ // (-3,-3)
             ans = null;
             Map.markObstructed(l18);
             return;
@@ -21680,11 +20775,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l18; // (-2,-4)
-            attackLoc = l10;
         }
 
 
-        if (m28.isWall() || m28.hasRuin()){ // (-1,-3)
+        if (!m28.isPassable()){ // (-1,-3)
             ans = null;
             Map.markObstructed(l18);
             return;
@@ -21697,11 +20791,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l18; // (-2,-4)
-            attackLoc = l28;
         }
 
 
-        if (m20.isWall() || m20.hasRuin()){ // (-2,-2)
+        if (!m20.isPassable()){ // (-2,-2)
             ans = null;
             Map.markObstructed(l18);
             return;
@@ -21714,11 +20807,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l18; // (-2,-4)
-            attackLoc = l20;
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l18);
             return;
@@ -21731,11 +20823,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l18; // (-2,-4)
-            attackLoc = l36;
         }
 
 
-        if (m11.isWall() || m11.hasRuin()){ // (-3,-2)
+        if (!m11.isPassable()){ // (-3,-2)
             ans = null;
             Map.markObstructed(l18);
             return;
@@ -21748,11 +20839,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l19; // (-2,-3)
-            attackLoc = l11;
         }
 
 
-        if (m29.isWall() || m29.hasRuin()){ // (-1,-2)
+        if (!m29.isPassable()){ // (-1,-2)
             ans = null;
             Map.markObstructed(l18);
             return;
@@ -21765,11 +20855,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l19; // (-2,-3)
-            attackLoc = l29;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l18);
             return;
@@ -21782,11 +20871,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l19; // (-2,-3)
-            attackLoc = l37;
         }
 
 
-        if (m2.isWall() || m2.hasRuin()){ // (-4,-2)
+        if (!m2.isPassable()){ // (-4,-2)
             ans = null;
             Map.markObstructed(l18);
             return;
@@ -21799,11 +20887,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l10; // (-3,-3)
-            attackLoc = l2;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l18);
             return;
@@ -21826,7 +20913,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(-2,4);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m26.isWall() || m26.hasRuin()){ // (-2,4)
+        if (!m26.isPassable()){ // (-2,4)
             ans = null;
             Map.markObstructed(l26);
             return;
@@ -21839,11 +20926,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l26; // (-2,4)
-            attackLoc = l26;
         }
 
 
-        if (m25.isWall() || m25.hasRuin()){ // (-2,3)
+        if (!m25.isPassable()){ // (-2,3)
             ans = null;
             Map.markObstructed(l26);
             return;
@@ -21856,11 +20942,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l26; // (-2,4)
-            attackLoc = l25;
         }
 
 
-        if (m35.isWall() || m35.hasRuin()){ // (-1,4)
+        if (!m35.isPassable()){ // (-1,4)
             ans = null;
             Map.markObstructed(l26);
             return;
@@ -21873,11 +20958,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l26; // (-2,4)
-            attackLoc = l35;
         }
 
 
-        if (m16.isWall() || m16.hasRuin()){ // (-3,3)
+        if (!m16.isPassable()){ // (-3,3)
             ans = null;
             Map.markObstructed(l26);
             return;
@@ -21890,11 +20974,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l26; // (-2,4)
-            attackLoc = l16;
         }
 
 
-        if (m34.isWall() || m34.hasRuin()){ // (-1,3)
+        if (!m34.isPassable()){ // (-1,3)
             ans = null;
             Map.markObstructed(l26);
             return;
@@ -21907,11 +20990,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l26; // (-2,4)
-            attackLoc = l34;
         }
 
 
-        if (m24.isWall() || m24.hasRuin()){ // (-2,2)
+        if (!m24.isPassable()){ // (-2,2)
             ans = null;
             Map.markObstructed(l26);
             return;
@@ -21924,11 +21006,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l26; // (-2,4)
-            attackLoc = l24;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l26);
             return;
@@ -21941,11 +21022,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l26; // (-2,4)
-            attackLoc = l44;
         }
 
 
-        if (m15.isWall() || m15.hasRuin()){ // (-3,2)
+        if (!m15.isPassable()){ // (-3,2)
             ans = null;
             Map.markObstructed(l26);
             return;
@@ -21958,11 +21038,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l25; // (-2,3)
-            attackLoc = l15;
         }
 
 
-        if (m33.isWall() || m33.hasRuin()){ // (-1,2)
+        if (!m33.isPassable()){ // (-1,2)
             ans = null;
             Map.markObstructed(l26);
             return;
@@ -21975,11 +21054,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l25; // (-2,3)
-            attackLoc = l33;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l26);
             return;
@@ -21992,11 +21070,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l25; // (-2,3)
-            attackLoc = l43;
         }
 
 
-        if (m6.isWall() || m6.hasRuin()){ // (-4,2)
+        if (!m6.isPassable()){ // (-4,2)
             ans = null;
             Map.markObstructed(l26);
             return;
@@ -22009,11 +21086,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l16; // (-3,3)
-            attackLoc = l6;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l26);
             return;
@@ -22036,7 +21112,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(2,-4);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+        if (!m54.isPassable()){ // (2,-4)
             ans = null;
             Map.markObstructed(l54);
             return;
@@ -22049,11 +21125,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l54; // (2,-4)
-            attackLoc = l54;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l54);
             return;
@@ -22066,11 +21141,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l54; // (2,-4)
-            attackLoc = l55;
         }
 
 
-        if (m45.isWall() || m45.hasRuin()){ // (1,-4)
+        if (!m45.isPassable()){ // (1,-4)
             ans = null;
             Map.markObstructed(l54);
             return;
@@ -22083,11 +21157,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l54; // (2,-4)
-            attackLoc = l45;
         }
 
 
-        if (m46.isWall() || m46.hasRuin()){ // (1,-3)
+        if (!m46.isPassable()){ // (1,-3)
             ans = null;
             Map.markObstructed(l54);
             return;
@@ -22100,11 +21173,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l54; // (2,-4)
-            attackLoc = l46;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l54);
             return;
@@ -22117,11 +21189,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l54; // (2,-4)
-            attackLoc = l64;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l54);
             return;
@@ -22134,11 +21205,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l54; // (2,-4)
-            attackLoc = l56;
         }
 
 
-        if (m36.isWall() || m36.hasRuin()){ // (0,-4)
+        if (!m36.isPassable()){ // (0,-4)
             ans = null;
             Map.markObstructed(l54);
             return;
@@ -22151,11 +21221,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l54; // (2,-4)
-            attackLoc = l36;
         }
 
 
-        if (m47.isWall() || m47.hasRuin()){ // (1,-2)
+        if (!m47.isPassable()){ // (1,-2)
             ans = null;
             Map.markObstructed(l54);
             return;
@@ -22168,11 +21237,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l55; // (2,-3)
-            attackLoc = l47;
         }
 
 
-        if (m37.isWall() || m37.hasRuin()){ // (0,-3)
+        if (!m37.isPassable()){ // (0,-3)
             ans = null;
             Map.markObstructed(l54);
             return;
@@ -22185,11 +21253,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l55; // (2,-3)
-            attackLoc = l37;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l54);
             return;
@@ -22202,11 +21269,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l55; // (2,-3)
-            attackLoc = l65;
         }
 
 
-        if (m38.isWall() || m38.hasRuin()){ // (0,-2)
+        if (!m38.isPassable()){ // (0,-2)
             ans = null;
             Map.markObstructed(l54);
             return;
@@ -22223,7 +21289,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (!m74.isPassable()){ // (4,-2)
             ans = null;
             Map.markObstructed(l54);
             return;
@@ -22236,7 +21302,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l64; // (3,-3)
-            attackLoc = l74;
         }
 
 
@@ -22246,7 +21311,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(2,4);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+        if (!m62.isPassable()){ // (2,4)
             ans = null;
             Map.markObstructed(l62);
             return;
@@ -22259,11 +21324,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l62; // (2,4)
-            attackLoc = l62;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l62);
             return;
@@ -22276,11 +21340,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l62; // (2,4)
-            attackLoc = l61;
         }
 
 
-        if (m53.isWall() || m53.hasRuin()){ // (1,4)
+        if (!m53.isPassable()){ // (1,4)
             ans = null;
             Map.markObstructed(l62);
             return;
@@ -22293,11 +21356,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l62; // (2,4)
-            attackLoc = l53;
         }
 
 
-        if (m52.isWall() || m52.hasRuin()){ // (1,3)
+        if (!m52.isPassable()){ // (1,3)
             ans = null;
             Map.markObstructed(l62);
             return;
@@ -22310,11 +21372,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l62; // (2,4)
-            attackLoc = l52;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l62);
             return;
@@ -22327,11 +21388,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l62; // (2,4)
-            attackLoc = l70;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l62);
             return;
@@ -22344,11 +21404,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l62; // (2,4)
-            attackLoc = l60;
         }
 
 
-        if (m44.isWall() || m44.hasRuin()){ // (0,4)
+        if (!m44.isPassable()){ // (0,4)
             ans = null;
             Map.markObstructed(l62);
             return;
@@ -22361,11 +21420,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l62; // (2,4)
-            attackLoc = l44;
         }
 
 
-        if (m51.isWall() || m51.hasRuin()){ // (1,2)
+        if (!m51.isPassable()){ // (1,2)
             ans = null;
             Map.markObstructed(l62);
             return;
@@ -22378,11 +21436,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l61; // (2,3)
-            attackLoc = l51;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l62);
             return;
@@ -22395,11 +21452,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l61; // (2,3)
-            attackLoc = l69;
         }
 
 
-        if (m43.isWall() || m43.hasRuin()){ // (0,3)
+        if (!m43.isPassable()){ // (0,3)
             ans = null;
             Map.markObstructed(l62);
             return;
@@ -22412,11 +21468,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l61; // (2,3)
-            attackLoc = l43;
         }
 
 
-        if (m42.isWall() || m42.hasRuin()){ // (0,2)
+        if (!m42.isPassable()){ // (0,2)
             ans = null;
             Map.markObstructed(l62);
             return;
@@ -22433,7 +21488,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (!m78.isPassable()){ // (4,2)
             ans = null;
             Map.markObstructed(l62);
             return;
@@ -22446,7 +21501,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l70; // (3,3)
-            attackLoc = l78;
         }
 
 
@@ -22456,7 +21510,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(4,-2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m74.isWall() || m74.hasRuin()){ // (4,-2)
+        if (!m74.isPassable()){ // (4,-2)
             ans = null;
             Map.markObstructed(l74);
             return;
@@ -22469,11 +21523,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l74; // (4,-2)
-            attackLoc = l74;
         }
 
 
-        if (m75.isWall() || m75.hasRuin()){ // (4,-1)
+        if (!m75.isPassable()){ // (4,-1)
             ans = null;
             Map.markObstructed(l74);
             return;
@@ -22486,11 +21539,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l74; // (4,-2)
-            attackLoc = l75;
         }
 
 
-        if (m65.isWall() || m65.hasRuin()){ // (3,-2)
+        if (!m65.isPassable()){ // (3,-2)
             ans = null;
             Map.markObstructed(l74);
             return;
@@ -22503,11 +21555,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l74; // (4,-2)
-            attackLoc = l65;
         }
 
 
-        if (m66.isWall() || m66.hasRuin()){ // (3,-1)
+        if (!m66.isPassable()){ // (3,-1)
             ans = null;
             Map.markObstructed(l74);
             return;
@@ -22520,11 +21571,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l74; // (4,-2)
-            attackLoc = l66;
         }
 
 
-        if (m64.isWall() || m64.hasRuin()){ // (3,-3)
+        if (!m64.isPassable()){ // (3,-3)
             ans = null;
             Map.markObstructed(l74);
             return;
@@ -22537,11 +21587,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l74; // (4,-2)
-            attackLoc = l64;
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l74);
             return;
@@ -22554,11 +21603,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l74; // (4,-2)
-            attackLoc = l76;
         }
 
 
-        if (m56.isWall() || m56.hasRuin()){ // (2,-2)
+        if (!m56.isPassable()){ // (2,-2)
             ans = null;
             Map.markObstructed(l74);
             return;
@@ -22571,11 +21619,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l74; // (4,-2)
-            attackLoc = l56;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l74);
             return;
@@ -22588,11 +21635,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l75; // (4,-1)
-            attackLoc = l67;
         }
 
 
-        if (m57.isWall() || m57.hasRuin()){ // (2,-1)
+        if (!m57.isPassable()){ // (2,-1)
             ans = null;
             Map.markObstructed(l74);
             return;
@@ -22605,11 +21651,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l75; // (4,-1)
-            attackLoc = l57;
         }
 
 
-        if (m55.isWall() || m55.hasRuin()){ // (2,-3)
+        if (!m55.isPassable()){ // (2,-3)
             ans = null;
             Map.markObstructed(l74);
             return;
@@ -22622,11 +21667,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l65; // (3,-2)
-            attackLoc = l55;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l74);
             return;
@@ -22643,7 +21687,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m54.isWall() || m54.hasRuin()){ // (2,-4)
+        if (!m54.isPassable()){ // (2,-4)
             ans = null;
             Map.markObstructed(l74);
             return;
@@ -22656,7 +21700,6 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l64; // (3,-3)
-            attackLoc = l54;
         }
 
 
@@ -22666,7 +21709,7 @@ public class ResourcePatternManager {
         center = myLoc.translate(4,2);
         attackLoc = null;
         if (Map.forbiddenCenter(center)) return;
-        if (m78.isWall() || m78.hasRuin()){ // (4,2)
+        if (!m78.isPassable()){ // (4,2)
             ans = null;
             Map.markObstructed(l78);
             return;
@@ -22679,11 +21722,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l78; // (4,2)
-            attackLoc = l78;
         }
 
 
-        if (m77.isWall() || m77.hasRuin()){ // (4,1)
+        if (!m77.isPassable()){ // (4,1)
             ans = null;
             Map.markObstructed(l78);
             return;
@@ -22696,11 +21738,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l78; // (4,2)
-            attackLoc = l77;
         }
 
 
-        if (m69.isWall() || m69.hasRuin()){ // (3,2)
+        if (!m69.isPassable()){ // (3,2)
             ans = null;
             Map.markObstructed(l78);
             return;
@@ -22713,11 +21754,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l78; // (4,2)
-            attackLoc = l69;
         }
 
 
-        if (m68.isWall() || m68.hasRuin()){ // (3,1)
+        if (!m68.isPassable()){ // (3,1)
             ans = null;
             Map.markObstructed(l78);
             return;
@@ -22730,11 +21770,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l78; // (4,2)
-            attackLoc = l68;
         }
 
 
-        if (m70.isWall() || m70.hasRuin()){ // (3,3)
+        if (!m70.isPassable()){ // (3,3)
             ans = null;
             Map.markObstructed(l78);
             return;
@@ -22747,11 +21786,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l78; // (4,2)
-            attackLoc = l70;
         }
 
 
-        if (m76.isWall() || m76.hasRuin()){ // (4,0)
+        if (!m76.isPassable()){ // (4,0)
             ans = null;
             Map.markObstructed(l78);
             return;
@@ -22764,11 +21802,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l78; // (4,2)
-            attackLoc = l76;
         }
 
 
-        if (m60.isWall() || m60.hasRuin()){ // (2,2)
+        if (!m60.isPassable()){ // (2,2)
             ans = null;
             Map.markObstructed(l78);
             return;
@@ -22781,11 +21818,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_PRIMARY){
             ans = l78; // (4,2)
-            attackLoc = l60;
         }
 
 
-        if (m67.isWall() || m67.hasRuin()){ // (3,0)
+        if (!m67.isPassable()){ // (3,0)
             ans = null;
             Map.markObstructed(l78);
             return;
@@ -22798,11 +21834,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l77; // (4,1)
-            attackLoc = l67;
         }
 
 
-        if (m59.isWall() || m59.hasRuin()){ // (2,1)
+        if (!m59.isPassable()){ // (2,1)
             ans = null;
             Map.markObstructed(l78);
             return;
@@ -22815,11 +21850,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l77; // (4,1)
-            attackLoc = l59;
         }
 
 
-        if (m61.isWall() || m61.hasRuin()){ // (2,3)
+        if (!m61.isPassable()){ // (2,3)
             ans = null;
             Map.markObstructed(l78);
             return;
@@ -22832,11 +21866,10 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l69; // (3,2)
-            attackLoc = l61;
         }
 
 
-        if (m58.isWall() || m58.hasRuin()){ // (2,0)
+        if (!m58.isPassable()){ // (2,0)
             ans = null;
             Map.markObstructed(l78);
             return;
@@ -22853,7 +21886,7 @@ public class ResourcePatternManager {
         }
 
 
-        if (m62.isWall() || m62.hasRuin()){ // (2,4)
+        if (!m62.isPassable()){ // (2,4)
             ans = null;
             Map.markObstructed(l78);
             return;
@@ -22866,11 +21899,11 @@ public class ResourcePatternManager {
         }
         if (p != PaintType.ALLY_SECONDARY){
             ans = l70; // (3,3)
-            attackLoc = l62;
         }
 
 
     }
+
 
 
 }

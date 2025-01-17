@@ -275,7 +275,7 @@ public class Main {
                 for (int j = 0; j < ruinLocs.size(); ++j){
                     CustomLoc cl = ruinLocs.get(j);
                     if (cl.dist(center.dx, center.dy) > 8) continue;
-                    write("if ("  + cl.getMapInfoName() + ".isWall() || " + cl.getMapInfoName() + ".hasRuin()){ // (" + cl.dx + "," + cl.dy + ")");
+                    write("if (!"  + cl.getMapInfoName() + ".isPassable()){ // (" + cl.dx + "," + cl.dy + ")");
                     ++tabs;
                     write("ans = null;");
                     write("Map.markObstructed(" + center.getName() + ");");
@@ -295,7 +295,7 @@ public class Main {
                     write("if (p != PaintType." + getPaintType(cl.getPaintBit()) + "){");
                     ++tabs;
                     write("ans = " + bc.getName() + "; // (" + bc.dx + "," + bc.dy + ")");
-                    write("attackLoc = " + cl.getName() + ";");
+                    if (cl.dist(0,0) <= 4) write("attackLoc = " + cl.getName() + ";");
                     --tabs;
                     write("}");
                     write("");
