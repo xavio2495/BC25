@@ -11,10 +11,10 @@ import java.io.IOException;  // Import the IOException class to handle errors
 
 public class Main {
 
-    static final int VISION_RANGE_SQ = 34;
+    static final int VISION_RANGE_SQ = 20;
     final static int DIST_SENSE = 2;
 
-    static final String filename = "BFSArchon.txt";
+    static final String filename = "BFS.txt";
 
 
     static final int MAP_SIZE = 6;
@@ -23,10 +23,14 @@ public class Main {
     static final String dirVar = "d";
     static final String passVar = "p";
     static final String distVar = "dist";
+    static final String mapVar = "m";
 
     static final String infinity = "1000000";
 
     static final boolean euclid = true;
+
+    static final int PENALTY_NEUTRAL = 5;
+    static final int PENALTY_ENEMY = 10;
 
 
 
@@ -56,6 +60,10 @@ public class Main {
 
         String getPassVar(){
             return passVar + id.toString();
+        }
+
+        String getMapVar(){
+            return mapVar + id.toString();
         }
 
         String getDistVar(){
@@ -248,15 +256,33 @@ public class Main {
                     continue;
                 }
 
-                write("if (" + "rc.onTheMap(" + currentLoc.getLocVar() + ")){");
-                ++tabs;
+                //write("if (" + "rc.onTheMap(" + currentLoc.getLocVar() + ")){");
+                //++tabs;
 
                 if (currentLoc.getDistToOrigin() <= DIST_SENSE) {
-                    write("if (" + "!rc.isLocationOccupied(" + currentLoc.getLocVar() + ")){");
+                    write("if (MovementManager.canMove(Direction." + new Location(0,0).directionTo(currentLoc.loc).name() + ")){");
+                    ++tabs;
+                    write(currentLoc.getMapVar() + " =  rc.senseMapInfo(" + currentLoc.getLocVar() + ");");
+                }
+                else {
+                    write("if (" + "rc.onTheMap(" + currentLoc.getLocVar() + ")){");
+                    ++tabs;
+                    write(currentLoc.getMapVar() + " =  rc.senseMapInfo(" + currentLoc.getLocVar() + ");");
+                    write("if ("+ currentLoc.getMapVar() + ".isPassable()){");
                     ++tabs;
                 }
 
-                write(currentLoc.getPassVar() + " = 10 + rc.senseRubble(" + currentLoc.getLocVar() + ");");
+                //write(currentLoc.getPassVar() + " = 10 + rc.senseRubble(" + currentLoc.getLocVar() + ");");
+                write(currentLoc.getPassVar() + " = 10 + switch(" + currentLoc.getMapVar() + ".getPaint()){");
+                ++tabs;
+                write("case ENEMY_PRIMARY, ENEMY_SECONDARY -> " + PENALTY_ENEMY + ";");
+                write("case EMPTY -> " + PENALTY_NEUTRAL+ ";");
+                write("default -> " + 0+ ";");
+                --tabs;
+                write("};");
+                if (currentLoc.getDistToOrigin() <= DIST_SENSE){
+                    write(currentLoc.getPassVar() + " += " + PENALTY_NEUTRAL + "*Util.getPaintLost(Direction." + new Location(0,0).directionTo(currentLoc.loc).name() + ");");
+                }
                 Location l = currentLoc.loc;
 
                 ArrayList<Direction> validDirs = new ArrayList<>();
@@ -273,7 +299,7 @@ public class Main {
 
                 writeRecurrence2(currentLoc, makeCopy(validDirs));
 
-                if (currentLoc.getDistToOrigin() <= DIST_SENSE) {
+                if (currentLoc.getDistToOrigin() > DIST_SENSE) {
                     --tabs;
                     write("}");
                 }
@@ -292,9 +318,10 @@ public class Main {
                     CustomLocation c = getCustomLocation(i-MAP_SIZE,j-MAP_SIZE);
                     if (c.getDistToOrigin() > VISION_RANGE_SQ) continue;
                     write("static MapLocation " + c.getLocVar() + ";");
-                    write("static double " + c.getValueVar() + ";");
+                    write("static int " + c.getValueVar() + ";");
                     write("static Direction " + c.getDirVar() + ";");
-                    write("static double " + c.getPassVar() + ";");
+                    write("static int " + c.getPassVar() + ";");
+                    write("static MapInfo " + c.getMapVar() + ";");
                     write("");
                 }
             }
@@ -442,7 +469,7 @@ public class Main {
 
             write("");
 
-            write("Direction getBestDir(MapLocation target){");
+            write("static Direction getBestDir(MapLocation target) throws GameActionException {");
 
             ++tabs;
 
