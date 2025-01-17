@@ -76,8 +76,8 @@ DIRS = [
 # Generate all possible actions.
 def all_actions():
     for move in radius(2):
-        for attack in radius(2):
-            yield move, ActionAttack(attack+move)
+        # for attack in radius(2):
+        #     yield move, ActionAttack(attack+move)
         for dir in DIRS:
             yield move, ActionMopSwing(move, dir)
             
