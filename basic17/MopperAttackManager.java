@@ -16,42 +16,42 @@ RobotInfo r;
 PaintType p;
 Team myTeam = rc.getTeam();
 
-int action22 = 0;
-int action28 = 0;
-int action14 = 0;
-int action24 = 0;
-int action31 = 0;
-int action9 = 0;
-int action26 = 0;
 int action20 = 0;
-int action33 = 0;
-int action3 = 0;
-int action1 = 0;
-int action19 = 0;
-int action5 = 0;
-int action13 = 0;
-int action21 = 0;
+int action12 = 0;
 int action35 = 0;
-int action34 = 0;
-int action6 = 0;
-int action7 = 0;
-int action15 = 0;
-int action17 = 0;
-int action18 = 0;
-int action27 = 0;
 int action25 = 0;
-int action30 = 0;
-int action23 = 0;
-int action2 = 0;
+int action5 = 0;
+int action11 = 0;
+int action17 = 0;
+int action33 = 0;
+int action21 = 0;
+int action8 = 0;
 int action16 = 0;
+int action3 = 0;
+int action7 = 0;
+int action1 = 0;
+int action9 = 0;
+int action15 = 0;
+int action2 = 0;
+int action13 = 0;
+int action26 = 0;
+int action32 = 0;
+int action30 = 0;
+int action28 = 0;
+int action22 = 0;
+int action31 = 0;
+int action24 = 0;
+int action6 = 0;
+int action34 = 0;
+int action10 = 0;
+int action27 = 0;
+int action23 = 0;
+int action18 = 0;
 int action29 = 0;
 int action4 = 0;
 int action0 = 0;
-int action8 = 0;
-int action11 = 0;
-int action32 = 0;
-int action12 = 0;
-int action10 = 0;
+int action14 = 0;
+int action19 = 0;
 i = rc.senseMapInfo(myLoc);
 p = i.getPaint();
 loc = myLoc.translate(0, 1);
@@ -59,17 +59,17 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action0 += 4;
-    action4 += 4;
-    action7 += 4;
-    action9 += 4;
-    action13 += 4;
-    action16 += 4;
-    action19 += 4;
-    action24 += 4;
-    action30 += 4;
-    action33 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action0 += 5;
+    action4 += 5;
+    action7 += 5;
+    action9 += 5;
+    action13 += 5;
+    action16 += 5;
+    action19 += 5;
+    action24 += 5;
+    action30 += 5;
+    action33 += 5;
 }
 }
 loc = myLoc.translate(0, 2);
@@ -77,15 +77,15 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action0 += 4;
-    action4 += 4;
-    action13 += 4;
-    action19 += 4;
-    action21 += 4;
-    action29 += 4;
-    action30 += 4;
-    action35 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action0 += 5;
+    action4 += 5;
+    action13 += 5;
+    action19 += 5;
+    action21 += 5;
+    action29 += 5;
+    action30 += 5;
+    action35 += 5;
 }
 }
 loc = myLoc.translate(1, 1);
@@ -93,15 +93,15 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action0 += 4;
-    action7 += 4;
-    action9 += 4;
-    action13 += 4;
-    action16 += 4;
-    action17 += 4;
-    action23 += 4;
-    action30 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action0 += 5;
+    action7 += 5;
+    action9 += 5;
+    action13 += 5;
+    action16 += 5;
+    action17 += 5;
+    action23 += 5;
+    action30 += 5;
 }
 }
 loc = myLoc.translate(1, 2);
@@ -109,13 +109,13 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action0 += 4;
-    action13 += 4;
-    action21 += 4;
-    action23 += 4;
-    action30 += 4;
-    action35 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action0 += 5;
+    action13 += 5;
+    action21 += 5;
+    action23 += 5;
+    action30 += 5;
+    action35 += 5;
 }
 }
 loc = myLoc.translate(2, 1);
@@ -123,13 +123,13 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action0 += 4;
-    action8 += 4;
-    action16 += 4;
-    action17 += 4;
-    action23 += 4;
-    action27 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action0 += 5;
+    action8 += 5;
+    action16 += 5;
+    action17 += 5;
+    action23 += 5;
+    action27 += 5;
 }
 }
 loc = myLoc.translate(2, 2);
@@ -137,11 +137,11 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action0 += 4;
-    action8 += 4;
-    action21 += 4;
-    action23 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action0 += 5;
+    action8 += 5;
+    action21 += 5;
+    action23 += 5;
 }
 }
 loc = myLoc.translate(-2, -1);
@@ -149,13 +149,13 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action1 += 4;
-    action5 += 4;
-    action11 += 4;
-    action12 += 4;
-    action15 += 4;
-    action28 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action1 += 5;
+    action5 += 5;
+    action11 += 5;
+    action12 += 5;
+    action15 += 5;
+    action28 += 5;
 }
 }
 loc = myLoc.translate(-3, -1);
@@ -163,9 +163,9 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action1 += 4;
-    action15 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action1 += 5;
+    action15 += 5;
 }
 }
 loc = myLoc.translate(-2, 0);
@@ -173,15 +173,15 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action1 += 4;
-    action10 += 4;
-    action11 += 4;
-    action12 += 4;
-    action15 += 4;
-    action18 += 4;
-    action28 += 4;
-    action33 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action1 += 5;
+    action10 += 5;
+    action11 += 5;
+    action12 += 5;
+    action15 += 5;
+    action18 += 5;
+    action28 += 5;
+    action33 += 5;
 }
 }
 loc = myLoc.translate(-3, 0);
@@ -189,10 +189,10 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action1 += 4;
-    action10 += 4;
-    action15 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action1 += 5;
+    action10 += 5;
+    action15 += 5;
 }
 }
 loc = myLoc.translate(-2, 1);
@@ -200,13 +200,13 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action1 += 4;
-    action10 += 4;
-    action12 += 4;
-    action18 += 4;
-    action19 += 4;
-    action33 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action1 += 5;
+    action10 += 5;
+    action12 += 5;
+    action18 += 5;
+    action19 += 5;
+    action33 += 5;
 }
 }
 loc = myLoc.translate(-3, 1);
@@ -214,9 +214,9 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action1 += 4;
-    action10 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action1 += 5;
+    action10 += 5;
 }
 }
 loc = myLoc.translate(2, -2);
@@ -224,11 +224,11 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action2 += 4;
-    action3 += 4;
-    action26 += 4;
-    action32 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action2 += 5;
+    action3 += 5;
+    action26 += 5;
+    action32 += 5;
 }
 }
 loc = myLoc.translate(2, -3);
@@ -236,8 +236,8 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action2 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action2 += 5;
 }
 }
 loc = myLoc.translate(1, -2);
@@ -245,13 +245,13 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action2 += 4;
-    action14 += 4;
-    action22 += 4;
-    action26 += 4;
-    action31 += 4;
-    action32 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action2 += 5;
+    action14 += 5;
+    action22 += 5;
+    action26 += 5;
+    action31 += 5;
+    action32 += 5;
 }
 }
 loc = myLoc.translate(1, -3);
@@ -259,9 +259,9 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action2 += 4;
-    action31 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action2 += 5;
+    action31 += 5;
 }
 }
 loc = myLoc.translate(0, -2);
@@ -269,15 +269,15 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action2 += 4;
-    action5 += 4;
-    action14 += 4;
-    action20 += 4;
-    action22 += 4;
-    action26 += 4;
-    action31 += 4;
-    action34 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action2 += 5;
+    action5 += 5;
+    action14 += 5;
+    action20 += 5;
+    action22 += 5;
+    action26 += 5;
+    action31 += 5;
+    action34 += 5;
 }
 }
 loc = myLoc.translate(0, -3);
@@ -285,10 +285,10 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action2 += 4;
-    action20 += 4;
-    action31 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action2 += 5;
+    action20 += 5;
+    action31 += 5;
 }
 }
 loc = myLoc.translate(2, 0);
@@ -296,15 +296,15 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action3 += 4;
-    action6 += 4;
-    action8 += 4;
-    action16 += 4;
-    action17 += 4;
-    action23 += 4;
-    action27 += 4;
-    action32 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action3 += 5;
+    action6 += 5;
+    action8 += 5;
+    action16 += 5;
+    action17 += 5;
+    action23 += 5;
+    action27 += 5;
+    action32 += 5;
 }
 }
 loc = myLoc.translate(3, 0);
@@ -312,10 +312,10 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action3 += 4;
-    action8 += 4;
-    action27 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action3 += 5;
+    action8 += 5;
+    action27 += 5;
 }
 }
 loc = myLoc.translate(2, -1);
@@ -323,13 +323,13 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action3 += 4;
-    action6 += 4;
-    action17 += 4;
-    action26 += 4;
-    action27 += 4;
-    action32 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action3 += 5;
+    action6 += 5;
+    action17 += 5;
+    action26 += 5;
+    action27 += 5;
+    action32 += 5;
 }
 }
 loc = myLoc.translate(3, -1);
@@ -337,9 +337,9 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action3 += 4;
-    action27 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action3 += 5;
+    action27 += 5;
 }
 }
 loc = myLoc.translate(3, -2);
@@ -347,8 +347,8 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action3 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action3 += 5;
 }
 }
 loc = myLoc.translate(0, 0);
@@ -356,19 +356,19 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action4 += 4;
-    action6 += 4;
-    action7 += 4;
-    action9 += 4;
-    action11 += 4;
-    action13 += 4;
-    action16 += 4;
-    action22 += 4;
-    action24 += 4;
-    action25 += 4;
-    action33 += 4;
-    action34 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action4 += 5;
+    action6 += 5;
+    action7 += 5;
+    action9 += 5;
+    action11 += 5;
+    action13 += 5;
+    action16 += 5;
+    action22 += 5;
+    action24 += 5;
+    action25 += 5;
+    action33 += 5;
+    action34 += 5;
 }
 }
 loc = myLoc.translate(-1, 0);
@@ -376,17 +376,17 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action4 += 4;
-    action9 += 4;
-    action11 += 4;
-    action12 += 4;
-    action18 += 4;
-    action24 += 4;
-    action25 += 4;
-    action28 += 4;
-    action33 += 4;
-    action34 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action4 += 5;
+    action9 += 5;
+    action11 += 5;
+    action12 += 5;
+    action18 += 5;
+    action24 += 5;
+    action25 += 5;
+    action28 += 5;
+    action33 += 5;
+    action34 += 5;
 }
 }
 loc = myLoc.translate(-1, 1);
@@ -394,15 +394,15 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action4 += 4;
-    action9 += 4;
-    action12 += 4;
-    action18 += 4;
-    action19 += 4;
-    action24 += 4;
-    action30 += 4;
-    action33 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action4 += 5;
+    action9 += 5;
+    action12 += 5;
+    action18 += 5;
+    action19 += 5;
+    action24 += 5;
+    action30 += 5;
+    action33 += 5;
 }
 }
 loc = myLoc.translate(-1, 2);
@@ -410,13 +410,13 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action4 += 4;
-    action18 += 4;
-    action19 += 4;
-    action29 += 4;
-    action30 += 4;
-    action35 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action4 += 5;
+    action18 += 5;
+    action19 += 5;
+    action29 += 5;
+    action30 += 5;
+    action35 += 5;
 }
 }
 loc = myLoc.translate(0, -1);
@@ -424,17 +424,17 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action5 += 4;
-    action6 += 4;
-    action7 += 4;
-    action11 += 4;
-    action14 += 4;
-    action22 += 4;
-    action24 += 4;
-    action25 += 4;
-    action26 += 4;
-    action34 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action5 += 5;
+    action6 += 5;
+    action7 += 5;
+    action11 += 5;
+    action14 += 5;
+    action22 += 5;
+    action24 += 5;
+    action25 += 5;
+    action26 += 5;
+    action34 += 5;
 }
 }
 loc = myLoc.translate(-1, -1);
@@ -442,15 +442,15 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action5 += 4;
-    action11 += 4;
-    action12 += 4;
-    action14 += 4;
-    action24 += 4;
-    action25 += 4;
-    action28 += 4;
-    action34 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action5 += 5;
+    action11 += 5;
+    action12 += 5;
+    action14 += 5;
+    action24 += 5;
+    action25 += 5;
+    action28 += 5;
+    action34 += 5;
 }
 }
 loc = myLoc.translate(-1, -2);
@@ -458,13 +458,13 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action5 += 4;
-    action14 += 4;
-    action20 += 4;
-    action28 += 4;
-    action31 += 4;
-    action34 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action5 += 5;
+    action14 += 5;
+    action20 += 5;
+    action28 += 5;
+    action31 += 5;
+    action34 += 5;
 }
 }
 loc = myLoc.translate(-2, -2);
@@ -472,11 +472,11 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action5 += 4;
-    action15 += 4;
-    action20 += 4;
-    action28 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action5 += 5;
+    action15 += 5;
+    action20 += 5;
+    action28 += 5;
 }
 }
 loc = myLoc.translate(1, 0);
@@ -484,17 +484,17 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action6 += 4;
-    action7 += 4;
-    action9 += 4;
-    action13 += 4;
-    action16 += 4;
-    action17 += 4;
-    action22 += 4;
-    action23 += 4;
-    action25 += 4;
-    action32 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action6 += 5;
+    action7 += 5;
+    action9 += 5;
+    action13 += 5;
+    action16 += 5;
+    action17 += 5;
+    action22 += 5;
+    action23 += 5;
+    action25 += 5;
+    action32 += 5;
 }
 }
 loc = myLoc.translate(1, -1);
@@ -502,15 +502,15 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action6 += 4;
-    action7 += 4;
-    action14 += 4;
-    action17 += 4;
-    action22 += 4;
-    action25 += 4;
-    action26 += 4;
-    action32 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action6 += 5;
+    action7 += 5;
+    action14 += 5;
+    action17 += 5;
+    action22 += 5;
+    action25 += 5;
+    action26 += 5;
+    action32 += 5;
 }
 }
 loc = myLoc.translate(3, 2);
@@ -518,8 +518,8 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action8 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action8 += 5;
 }
 }
 loc = myLoc.translate(3, 1);
@@ -527,9 +527,9 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action8 += 4;
-    action27 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action8 += 5;
+    action27 += 5;
 }
 }
 loc = myLoc.translate(-2, 2);
@@ -537,11 +537,11 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action10 += 4;
-    action18 += 4;
-    action19 += 4;
-    action29 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action10 += 5;
+    action18 += 5;
+    action19 += 5;
+    action29 += 5;
 }
 }
 loc = myLoc.translate(-3, 2);
@@ -549,8 +549,8 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action10 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action10 += 5;
 }
 }
 loc = myLoc.translate(-3, -2);
@@ -558,8 +558,8 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action15 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action15 += 5;
 }
 }
 loc = myLoc.translate(-1, -3);
@@ -567,9 +567,9 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action20 += 4;
-    action31 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action20 += 5;
+    action31 += 5;
 }
 }
 loc = myLoc.translate(-2, -3);
@@ -577,8 +577,8 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action20 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action20 += 5;
 }
 }
 loc = myLoc.translate(0, 3);
@@ -586,10 +586,10 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action21 += 4;
-    action29 += 4;
-    action35 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action21 += 5;
+    action29 += 5;
+    action35 += 5;
 }
 }
 loc = myLoc.translate(1, 3);
@@ -597,9 +597,9 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action21 += 4;
-    action35 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action21 += 5;
+    action35 += 5;
 }
 }
 loc = myLoc.translate(2, 3);
@@ -607,8 +607,8 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action21 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action21 += 5;
 }
 }
 loc = myLoc.translate(-2, 3);
@@ -616,8 +616,8 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action29 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action29 += 5;
 }
 }
 loc = myLoc.translate(-1, 3);
@@ -625,9 +625,9 @@ if(rc.canSenseLocation(loc)) {
 i = rc.senseMapInfo(loc);
 r = rc.senseRobotAtLocation(loc);
 p = i.getPaint();
-if(r != null && r.team != myTeam){
-    action29 += 4;
-    action35 += 4;
+if(r != null && r.team != myTeam && r.getPaintAmount() != 0){
+    action29 += 5;
+    action35 += 5;
 }
 }
 if(rc.canMove(Direction.SOUTHWEST)){
