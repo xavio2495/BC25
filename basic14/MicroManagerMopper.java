@@ -145,7 +145,6 @@ public class MicroManagerMopper {
     static boolean mopper;
 
     static class MicroInfo{
-
         int towersInRange = 0;
         int moppersInRange = 0;
         Direction dir;

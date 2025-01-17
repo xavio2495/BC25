@@ -106,6 +106,8 @@ public class MicroManagerMopper {
             microInfos[8].updateAlly();
         }
 
+        //CALL ATK MANAGER <---
+
         //if (!enemyNearby) return false;
 
         boolean shouldMicro = microInfos[8].p.isEnemy() && goodPaintNearby;
@@ -145,7 +147,8 @@ public class MicroManagerMopper {
     static boolean mopper;
 
     static class MicroInfo{
-
+        int atkValue; //in paint loss
+        Direction atkDirection = null;
         int towersInRange = 0;
         int moppersInRange = 0;
         Direction dir;
