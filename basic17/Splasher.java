@@ -1,5 +1,4 @@
 package basic17;
-
 import battlecode.common.GameActionException;
 import battlecode.common.MapLocation;
 import battlecode.common.RobotController;
@@ -30,9 +29,9 @@ public class Splasher extends Unit {
             recovering = true;
         if (rc.getPaint() >= UnitType.SPLASHER.paintCapacity - Constants.MIN_TRANSFER_PAINT)
             recovering = false;
-        //tryAttackTile();
+        tryAttackTile();
         move();
-        //tryAttackTile();
+        tryAttackTile();
         tryGivePaint();
         tryWithdraw();
     }
@@ -54,10 +53,10 @@ public class Splasher extends Unit {
         return explore.getExplore3Target();
     }
 
-    //void tryAttackTile() throws GameActionException {
-    //    if(!rc.isActionReady()) return;
-    //    MapLocation loc = SplasherAttackManager.getBestAttack();
-    //    if (loc != null && rc.canAttack(loc))
-    //        rc.attack(loc);
-    //}
+    void tryAttackTile() throws GameActionException {
+        if(!rc.isActionReady()) return;
+        MapLocation loc = SplasherAttackManager.getBestAttack();
+        if (loc != null && rc.canAttack(loc))
+            rc.attack(loc);
+    }
 }

@@ -88,7 +88,7 @@ public class MicroManagerSplasher {
 
         //if (!enemyNearby) return false;
 
-        SplasherAttackManager.calc();
+        //SplasherAttackManager.calc();
 
         boolean shouldMicro = false;
 

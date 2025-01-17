@@ -137,49 +137,49 @@ public class MicroManagerMopper {
         if (microInfos[6].isBetterThan(bestMicro)) bestMicro = microInfos[6];
         if (microInfos[7].isBetterThan(bestMicro)) bestMicro = microInfos[7];
 
-        int minPaint = microInfos[8].paintDiff();
+        int minPaint = microInfos[8].paintLost();
         Direction moveDir = Direction.CENTER;
-        int x = microInfos[0].paintDiff();
+        int x = microInfos[0].paintLost();
         if (microInfos[0].isAccessible && minPaint > x){
             minPaint = x;
             moveDir = microInfos[0].dir;
         }
-        x = microInfos[1].paintDiff();
+        x = microInfos[1].paintLost();
         if (microInfos[1].isAccessible && minPaint > x){
             minPaint = x;
             moveDir = microInfos[1].dir;
         }
-        x = microInfos[2].paintDiff();
+        x = microInfos[2].paintLost();
         if (microInfos[2].isAccessible && minPaint > x){
             minPaint = x;
             moveDir = microInfos[2].dir;
         }
-        x = microInfos[3].paintDiff();
+        x = microInfos[3].paintLost();
         if (microInfos[3].isAccessible && minPaint > x){
             minPaint = x;
             moveDir = microInfos[3].dir;
         }
-        x = microInfos[4].paintDiff();
+        x = microInfos[4].paintLost();
         if (microInfos[4].isAccessible && minPaint > x){
             minPaint = x;
             moveDir = microInfos[4].dir;
         }
-        x = microInfos[5].paintDiff();
+        x = microInfos[5].paintLost();
         if (microInfos[5].isAccessible && minPaint > x){
             minPaint = x;
             moveDir = microInfos[5].dir;
         }
-        x = microInfos[6].paintDiff();
+        x = microInfos[6].paintLost();
         if (microInfos[6].isAccessible && minPaint > x){
             minPaint = x;
             moveDir = microInfos[6].dir;
         }
-        x = microInfos[7].paintDiff();
+        x = microInfos[7].paintLost();
         if (microInfos[7].isAccessible && minPaint > x){
             minPaint = x;
             moveDir = microInfos[7].dir;
         }
-        if (minPaint - microInfos[8].getAtk() < bestMicro.paintLost()){
+        if (minPaint - microInfos[8].getAtk() < bestMicro.paintDiff()){
             attack(microInfos[8]);
             if (rc.canMove(moveDir))rc.move(moveDir);
             return true;
@@ -207,7 +207,10 @@ public class MicroManagerMopper {
             return;
         }
         if (M.atkDirection == null) return;
-        if (rc.canMopSwing(M.atkDirection)) rc.mopSwing(M.atkDirection);
+        if (rc.canMopSwing(M.atkDirection)){
+            rc.mopSwing(M.atkDirection);
+            rc.setIndicatorLine(rc.getLocation(), rc.getLocation().add(M.atkDirection), 0,0,200);
+        }
     }
 
     static RobotInfo unit;
@@ -247,7 +250,7 @@ public class MicroManagerMopper {
             if (!isAccessible) return;
             int dist = unitLoc.distanceSquaredTo(loc);
             if (dist <= unit.getType().actionRadiusSquared){
-                rc.setIndicatorDot(loc, 0,0,200);
+                //rc.setIndicatorDot(loc, 0,0,200);
                 ++towersInRange;
             }
         }

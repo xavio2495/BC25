@@ -1,2372 +1,1029 @@
-
 package basic17;
 
-import battlecode.common.*;
+import battlecode.common.GameActionException;
+import battlecode.common.MapInfo;
+import battlecode.common.MapLocation;
+import battlecode.common.PaintType;
+import battlecode.common.RobotController;
+import battlecode.common.RobotInfo;
+import battlecode.common.Team;
 
-public class SplasherAttackManager {
+public  class SplasherAttackManager {
     static RobotController rc;
-    public static void calc() throws GameActionException {
+
+    public static MapLocation getBestAttack() throws GameActionException {
         rc = MyRobot.rc;
+        int score0 = 0;
+        int score1 = 0;
+        int score2 = 0;
+        int score3 = 0;
+        int score4 = 0;
+        int score5 = 0;
+        int score6 = 0;
+        int score7 = 0;
+        int score8 = 0;
+        int score9 = 0;
+        int score10 = 0;
+        int score11 = 0;
+        int score12 = 0;
+        MapLocation myLoc = rc.getLocation();
+        MapLocation loc;
+        MapInfo i;
+        RobotInfo r;
+        PaintType p;
+        Team myTeam = rc.getTeam();
+        loc = myLoc.translate(-4, 0);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+            }
+        }
+        loc = myLoc.translate(-3, -1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score0 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score1 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+                score1 += 10;
+            }
+        }
+        loc = myLoc.translate(-3, 0);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score0 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score2 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+                score2 += 10;
+            }
+        }
+        loc = myLoc.translate(-3, 1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score0 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score3 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+                score3 += 10;
+            }
+        }
+        loc = myLoc.translate(-2, -2);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score1 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score1 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+                score4 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+                score1 += 10;
+                score4 += 10;
+            }
+        }
+        loc = myLoc.translate(-2, -1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score0 += 4;
+                score1 += 4;
+                score2 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+                score1 += 1;
+                score2 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score5 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+                score1 += 10;
+                score2 += 10;
+                score5 += 10;
+            }
+        }
+        loc = myLoc.translate(-2, 0);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score0 += 4;
+                score1 += 4;
+                score2 += 4;
+                score3 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+                score1 += 1;
+                score2 += 1;
+                score3 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score6 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+                score1 += 10;
+                score2 += 10;
+                score3 += 10;
+                score6 += 10;
+            }
+        }
+        loc = myLoc.translate(-2, 1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score0 += 4;
+                score2 += 4;
+                score3 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+                score2 += 1;
+                score3 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score7 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+                score2 += 10;
+                score3 += 10;
+                score7 += 10;
+            }
+        }
+        loc = myLoc.translate(-2, 2);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score3 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score3 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+                score8 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+                score3 += 10;
+                score8 += 10;
+            }
+        }
+        loc = myLoc.translate(-1, -1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score0 += 4;
+                score1 += 4;
+                score2 += 4;
+                score4 += 4;
+                score5 += 4;
+                score6 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+                score1 += 1;
+                score2 += 1;
+                score4 += 1;
+                score5 += 1;
+                score6 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score3 += 1;
+                score9 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+                score1 += 10;
+                score2 += 10;
+                score3 += 10;
+                score4 += 10;
+                score5 += 10;
+                score6 += 10;
+                score9 += 10;
+            }
+        }
+        loc = myLoc.translate(-1, 0);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score0 += 4;
+                score1 += 4;
+                score2 += 4;
+                score3 += 4;
+                score5 += 4;
+                score6 += 4;
+                score7 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+                score1 += 1;
+                score2 += 1;
+                score3 += 1;
+                score5 += 1;
+                score6 += 1;
+                score7 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score10 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+                score1 += 10;
+                score2 += 10;
+                score3 += 10;
+                score5 += 10;
+                score6 += 10;
+                score7 += 10;
+                score10 += 10;
+            }
+        }
+        loc = myLoc.translate(-1, 1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score0 += 4;
+                score2 += 4;
+                score3 += 4;
+                score6 += 4;
+                score7 += 4;
+                score8 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+                score2 += 1;
+                score3 += 1;
+                score6 += 1;
+                score7 += 1;
+                score8 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score1 += 1;
+                score11 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+                score1 += 10;
+                score2 += 10;
+                score3 += 10;
+                score6 += 10;
+                score7 += 10;
+                score8 += 10;
+                score11 += 10;
+            }
+        }
+        loc = myLoc.translate(0, 0);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score1 += 4;
+                score2 += 4;
+                score3 += 4;
+                score5 += 4;
+                score6 += 4;
+                score7 += 4;
+                score9 += 4;
+                score10 += 4;
+                score11 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score1 += 1;
+                score2 += 1;
+                score3 += 1;
+                score5 += 1;
+                score6 += 1;
+                score7 += 1;
+                score9 += 1;
+                score10 += 1;
+                score11 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score0 += 1;
+                score4 += 1;
+                score8 += 1;
+                score12 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score0 += 10;
+                score1 += 10;
+                score2 += 10;
+                score3 += 10;
+                score4 += 10;
+                score5 += 10;
+                score6 += 10;
+                score7 += 10;
+                score8 += 10;
+                score9 += 10;
+                score10 += 10;
+                score11 += 10;
+                score12 += 10;
+            }
+        }
+        loc = myLoc.translate(-1, -3);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score4 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score4 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score1 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score1 += 10;
+                score4 += 10;
+            }
+        }
+        loc = myLoc.translate(-1, -2);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score1 += 4;
+                score4 += 4;
+                score5 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score1 += 1;
+                score4 += 1;
+                score5 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score2 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score1 += 10;
+                score2 += 10;
+                score4 += 10;
+                score5 += 10;
+            }
+        }
+        loc = myLoc.translate(0, -2);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score1 += 4;
+                score4 += 4;
+                score5 += 4;
+                score9 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score1 += 1;
+                score4 += 1;
+                score5 += 1;
+                score9 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score6 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score1 += 10;
+                score4 += 10;
+                score5 += 10;
+                score6 += 10;
+                score9 += 10;
+            }
+        }
+        loc = myLoc.translate(0, -1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score1 += 4;
+                score2 += 4;
+                score4 += 4;
+                score5 += 4;
+                score6 += 4;
+                score9 += 4;
+                score10 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score1 += 1;
+                score2 += 1;
+                score4 += 1;
+                score5 += 1;
+                score6 += 1;
+                score9 += 1;
+                score10 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score7 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score1 += 10;
+                score2 += 10;
+                score4 += 10;
+                score5 += 10;
+                score6 += 10;
+                score7 += 10;
+                score9 += 10;
+                score10 += 10;
+            }
+        }
+        loc = myLoc.translate(1, -1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score4 += 4;
+                score5 += 4;
+                score6 += 4;
+                score9 += 4;
+                score10 += 4;
+                score12 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score4 += 1;
+                score5 += 1;
+                score6 += 1;
+                score9 += 1;
+                score10 += 1;
+                score12 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score1 += 1;
+                score11 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score1 += 10;
+                score4 += 10;
+                score5 += 10;
+                score6 += 10;
+                score9 += 10;
+                score10 += 10;
+                score11 += 10;
+                score12 += 10;
+            }
+        }
+        loc = myLoc.translate(-1, 2);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score3 += 4;
+                score7 += 4;
+                score8 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score3 += 1;
+                score7 += 1;
+                score8 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score2 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score2 += 10;
+                score3 += 10;
+                score7 += 10;
+                score8 += 10;
+            }
+        }
+        loc = myLoc.translate(0, 1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score2 += 4;
+                score3 += 4;
+                score6 += 4;
+                score7 += 4;
+                score8 += 4;
+                score10 += 4;
+                score11 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score2 += 1;
+                score3 += 1;
+                score6 += 1;
+                score7 += 1;
+                score8 += 1;
+                score10 += 1;
+                score11 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score5 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score2 += 10;
+                score3 += 10;
+                score5 += 10;
+                score6 += 10;
+                score7 += 10;
+                score8 += 10;
+                score10 += 10;
+                score11 += 10;
+            }
+        }
+        loc = myLoc.translate(1, 0);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score5 += 4;
+                score6 += 4;
+                score7 += 4;
+                score9 += 4;
+                score10 += 4;
+                score11 += 4;
+                score12 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score5 += 1;
+                score6 += 1;
+                score7 += 1;
+                score9 += 1;
+                score10 += 1;
+                score11 += 1;
+                score12 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score2 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score2 += 10;
+                score5 += 10;
+                score6 += 10;
+                score7 += 10;
+                score9 += 10;
+                score10 += 10;
+                score11 += 10;
+                score12 += 10;
+            }
+        }
+        loc = myLoc.translate(-1, 3);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score8 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score8 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score3 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score3 += 10;
+                score8 += 10;
+            }
+        }
+        loc = myLoc.translate(0, 2);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score3 += 4;
+                score7 += 4;
+                score8 += 4;
+                score11 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score3 += 1;
+                score7 += 1;
+                score8 += 1;
+                score11 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score6 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score3 += 10;
+                score6 += 10;
+                score7 += 10;
+                score8 += 10;
+                score11 += 10;
+            }
+        }
+        loc = myLoc.translate(1, 1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score6 += 4;
+                score7 += 4;
+                score8 += 4;
+                score10 += 4;
+                score11 += 4;
+                score12 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score6 += 1;
+                score7 += 1;
+                score8 += 1;
+                score10 += 1;
+                score11 += 1;
+                score12 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score3 += 1;
+                score9 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score3 += 10;
+                score6 += 10;
+                score7 += 10;
+                score8 += 10;
+                score9 += 10;
+                score10 += 10;
+                score11 += 10;
+                score12 += 10;
+            }
+        }
+        loc = myLoc.translate(0, -4);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score4 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score4 += 10;
+            }
+        }
+        loc = myLoc.translate(0, -3);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score4 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score4 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score5 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score4 += 10;
+                score5 += 10;
+            }
+        }
+        loc = myLoc.translate(1, -3);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score4 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score4 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score9 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score4 += 10;
+                score9 += 10;
+            }
+        }
+        loc = myLoc.translate(1, -2);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score4 += 4;
+                score5 += 4;
+                score9 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score4 += 1;
+                score5 += 1;
+                score9 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score10 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score4 += 10;
+                score5 += 10;
+                score9 += 10;
+                score10 += 10;
+            }
+        }
+        loc = myLoc.translate(2, -2);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score9 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score9 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score4 += 1;
+                score12 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score4 += 10;
+                score9 += 10;
+                score12 += 10;
+            }
+        }
+        loc = myLoc.translate(2, -1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score9 += 4;
+                score10 += 4;
+                score12 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score9 += 1;
+                score10 += 1;
+                score12 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score5 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score5 += 10;
+                score9 += 10;
+                score10 += 10;
+                score12 += 10;
+            }
+        }
+        loc = myLoc.translate(2, 0);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score9 += 4;
+                score10 += 4;
+                score11 += 4;
+                score12 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score9 += 1;
+                score10 += 1;
+                score11 += 1;
+                score12 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score6 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score6 += 10;
+                score9 += 10;
+                score10 += 10;
+                score11 += 10;
+                score12 += 10;
+            }
+        }
+        loc = myLoc.translate(0, 3);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score8 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score8 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score7 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score7 += 10;
+                score8 += 10;
+            }
+        }
+        loc = myLoc.translate(1, 2);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score7 += 4;
+                score8 += 4;
+                score11 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score7 += 1;
+                score8 += 1;
+                score11 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score10 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score7 += 10;
+                score8 += 10;
+                score10 += 10;
+                score11 += 10;
+            }
+        }
+        loc = myLoc.translate(2, 1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score10 += 4;
+                score11 += 4;
+                score12 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score10 += 1;
+                score11 += 1;
+                score12 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score7 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score7 += 10;
+                score10 += 10;
+                score11 += 10;
+                score12 += 10;
+            }
+        }
+        loc = myLoc.translate(0, 4);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score8 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score8 += 10;
+            }
+        }
+        loc = myLoc.translate(1, 3);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score8 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score8 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score11 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score8 += 10;
+                score11 += 10;
+            }
+        }
+        loc = myLoc.translate(2, 2);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score11 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score11 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score8 += 1;
+                score12 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score8 += 10;
+                score11 += 10;
+                score12 += 10;
+            }
+        }
+        loc = myLoc.translate(3, -1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score12 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score12 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score9 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score9 += 10;
+                score12 += 10;
+            }
+        }
+        loc = myLoc.translate(3, 0);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score12 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score12 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score10 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score10 += 10;
+                score12 += 10;
+            }
+        }
+        loc = myLoc.translate(3, 1);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if(p.isEnemy()){
+                score12 += 4;
+            } else if (p == PaintType.EMPTY && i.isPassable()) {
+                score12 += 1;
+            }
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score11 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score11 += 10;
+                score12 += 10;
+            }
+        }
+        loc = myLoc.translate(4, 0);
+        if(rc.canSenseLocation(loc)) {
+            i = rc.senseMapInfo(loc);
+            r = rc.senseRobotAtLocation(loc);
+            p = i.getPaint();
+            if (p == PaintType.EMPTY && i.isPassable()) {
+                score12 += 1;
+            }
+            if(r != null && r.team != myTeam && r.type.isTowerType()){
+                score12 += 10;
+            }
+        }
+        MapLocation best = null;
+        int bestScore = 17;
+        if(bestScore < score0) { bestScore = score0; best = myLoc.translate(-2, 0); }
+        if(bestScore < score1) { bestScore = score1; best = myLoc.translate(-1, -1); }
+        if(bestScore < score2) { bestScore = score2; best = myLoc.translate(-1, 0); }
+        if(bestScore < score3) { bestScore = score3; best = myLoc.translate(-1, 1); }
+        if(bestScore < score4) { bestScore = score4; best = myLoc.translate(0, -2); }
+        if(bestScore < score5) { bestScore = score5; best = myLoc.translate(0, -1); }
+        if(bestScore < score6) { bestScore = score6; best = myLoc.translate(0, 0); }
+        if(bestScore < score7) { bestScore = score7; best = myLoc.translate(0, 1); }
+        if(bestScore < score8) { bestScore = score8; best = myLoc.translate(0, 2); }
+        if(bestScore < score9) { bestScore = score9; best = myLoc.translate(1, -1); }
+        if(bestScore < score10) { bestScore = score10; best = myLoc.translate(1, 0); }
+        if(bestScore < score11) { bestScore = score11; best = myLoc.translate(1, 1); }
+        if(bestScore < score12) { bestScore = score12; best = myLoc.translate(2, 0); }
+        return best;
 
-
-MapLocation myLoc = rc.getLocation();
-MapLocation loc;
-MapInfo i;
-RobotInfo r;
-PaintType p;
-Team myTeam = rc.getTeam();
-
-int attack9 = 0;
-int attack13 = 0;
-int attack14 = 0;
-int attack31 = 0;
-int attack25 = 0;
-int attack24 = 0;
-int attack23 = 0;
-int attack35 = 0;
-int attack8 = 0;
-int attack7 = 0;
-int attack16 = 0;
-int attack27 = 0;
-int attack30 = 0;
-int attack29 = 0;
-int attack1 = 0;
-int attack0 = 0;
-int attack19 = 0;
-int attack4 = 0;
-int attack15 = 0;
-int attack20 = 0;
-int attack21 = 0;
-int attack6 = 0;
-int attack28 = 0;
-int attack22 = 0;
-int attack17 = 0;
-int attack11 = 0;
-int attack26 = 0;
-int attack5 = 0;
-int attack34 = 0;
-int attack3 = 0;
-int attack10 = 0;
-int attack12 = 0;
-int attack32 = 0;
-int attack33 = 0;
-int attack36 = 0;
-int attack2 = 0;
-int attack18 = 0;
-i = rc.senseMapInfo(myLoc);
-p = i.getPaint();
-loc = myLoc.translate(2, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack0 += 4;
-    attack4 += 4;
-    attack18 += 4;
-    attack19 += 4;
-    attack34 += 4;
-    attack35 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack0 += 1;
-    attack4 += 1;
-    attack16 += 1;
-    attack18 += 1;
-    attack19 += 1;
-    attack33 += 1;
-    attack34 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack0 += 10;
-    attack4 += 10;
-    attack16 += 10;
-    attack18 += 10;
-    attack19 += 10;
-    attack33 += 10;
-    attack34 += 10;
-    attack35 += 10;
-}
-}
-loc = myLoc.translate(2, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack0 += 4;
-    attack6 += 4;
-    attack14 += 4;
-    attack18 += 4;
-    attack19 += 4;
-    attack33 += 4;
-    attack34 += 4;
-    attack35 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack0 += 1;
-    attack6 += 1;
-    attack14 += 1;
-    attack15 += 1;
-    attack18 += 1;
-    attack19 += 1;
-    attack21 += 1;
-    attack33 += 1;
-    attack34 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack0 += 10;
-    attack6 += 10;
-    attack14 += 10;
-    attack15 += 10;
-    attack18 += 10;
-    attack19 += 10;
-    attack21 += 10;
-    attack33 += 10;
-    attack34 += 10;
-    attack35 += 10;
-}
-}
-loc = myLoc.translate(2, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack0 += 4;
-    attack1 += 4;
-    attack6 += 4;
-    attack14 += 4;
-    attack18 += 4;
-    attack21 += 4;
-    attack31 += 4;
-    attack33 += 4;
-    attack34 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack0 += 1;
-    attack1 += 1;
-    attack5 += 1;
-    attack6 += 1;
-    attack14 += 1;
-    attack18 += 1;
-    attack19 += 1;
-    attack21 += 1;
-    attack30 += 1;
-    attack31 += 1;
-    attack33 += 1;
-    attack34 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack0 += 10;
-    attack1 += 10;
-    attack5 += 10;
-    attack6 += 10;
-    attack14 += 10;
-    attack18 += 10;
-    attack19 += 10;
-    attack21 += 10;
-    attack30 += 10;
-    attack31 += 10;
-    attack33 += 10;
-    attack34 += 10;
-}
-}
-loc = myLoc.translate(3, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack0 += 4;
-    attack18 += 4;
-    attack19 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack0 += 1;
-    attack14 += 1;
-    attack18 += 1;
-    attack19 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack0 += 10;
-    attack14 += 10;
-    attack18 += 10;
-    attack19 += 10;
-    attack35 += 10;
-}
-}
-loc = myLoc.translate(3, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack0 += 4;
-    attack14 += 4;
-    attack18 += 4;
-    attack19 += 4;
-    attack33 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack0 += 1;
-    attack1 += 1;
-    attack14 += 1;
-    attack18 += 1;
-    attack19 += 1;
-    attack33 += 1;
-    attack34 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack0 += 10;
-    attack1 += 10;
-    attack14 += 10;
-    attack18 += 10;
-    attack19 += 10;
-    attack33 += 10;
-    attack34 += 10;
-}
-}
-loc = myLoc.translate(3, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack0 += 4;
-    attack1 += 4;
-    attack14 += 4;
-    attack18 += 4;
-    attack21 += 4;
-    attack33 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack0 += 1;
-    attack1 += 1;
-    attack6 += 1;
-    attack14 += 1;
-    attack18 += 1;
-    attack21 += 1;
-    attack33 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack0 += 10;
-    attack1 += 10;
-    attack6 += 10;
-    attack14 += 10;
-    attack18 += 10;
-    attack21 += 10;
-    attack33 += 10;
-}
-}
-loc = myLoc.translate(4, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack0 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack0 += 1;
-    attack19 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack0 += 10;
-    attack19 += 10;
-}
-}
-loc = myLoc.translate(4, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack0 += 4;
-    attack14 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack0 += 1;
-    attack14 += 1;
-    attack18 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack0 += 10;
-    attack14 += 10;
-    attack18 += 10;
-}
-}
-loc = myLoc.translate(4, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack0 += 4;
-    attack1 += 4;
-    attack14 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack0 += 1;
-    attack1 += 1;
-    attack14 += 1;
-    attack33 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack0 += 10;
-    attack1 += 10;
-    attack14 += 10;
-    attack33 += 10;
-}
-}
-loc = myLoc.translate(1, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack0 += 1;
-    attack4 += 1;
-    attack6 += 1;
-    attack11 += 1;
-    attack15 += 1;
-    attack16 += 1;
-    attack18 += 1;
-    attack19 += 1;
-    attack30 += 1;
-    attack31 += 1;
-    attack33 += 1;
-    attack34 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack0 += 10;
-    attack4 += 10;
-    attack6 += 10;
-    attack11 += 10;
-    attack15 += 10;
-    attack16 += 10;
-    attack18 += 10;
-    attack19 += 10;
-    attack30 += 10;
-    attack31 += 10;
-    attack33 += 10;
-    attack34 += 10;
-    attack35 += 10;
-}
-if(p.isEnemy()){
-    attack6 += 4;
-    attack15 += 4;
-    attack16 += 4;
-    attack18 += 4;
-    attack19 += 4;
-    attack30 += 4;
-    attack33 += 4;
-    attack34 += 4;
-    attack35 += 4;
-}
-}
-loc = myLoc.translate(3, -3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack0 += 1;
-    attack4 += 1;
-    attack19 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack0 += 10;
-    attack4 += 10;
-    attack19 += 10;
-}
-if(p.isEnemy()){
-    attack19 += 4;
-}
-}
-loc = myLoc.translate(3, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack0 += 1;
-    attack1 += 1;
-    attack5 += 1;
-    attack14 += 1;
-    attack21 += 1;
-    attack31 += 1;
-    attack33 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack0 += 10;
-    attack1 += 10;
-    attack5 += 10;
-    attack14 += 10;
-    attack21 += 10;
-    attack31 += 10;
-    attack33 += 10;
-}
-if(p.isEnemy()){
-    attack1 += 4;
-    attack5 += 4;
-    attack14 += 4;
-    attack21 += 4;
-    attack33 += 4;
-}
-}
-loc = myLoc.translate(2, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack1 += 4;
-    attack5 += 4;
-    attack6 += 4;
-    attack14 += 4;
-    attack20 += 4;
-    attack21 += 4;
-    attack31 += 4;
-    attack33 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack1 += 1;
-    attack5 += 1;
-    attack6 += 1;
-    attack14 += 1;
-    attack17 += 1;
-    attack18 += 1;
-    attack20 += 1;
-    attack21 += 1;
-    attack31 += 1;
-    attack33 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack1 += 10;
-    attack5 += 10;
-    attack6 += 10;
-    attack14 += 10;
-    attack17 += 10;
-    attack18 += 10;
-    attack20 += 10;
-    attack21 += 10;
-    attack31 += 10;
-    attack33 += 10;
-}
-}
-loc = myLoc.translate(2, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack1 += 4;
-    attack5 += 4;
-    attack7 += 4;
-    attack20 += 4;
-    attack21 += 4;
-    attack31 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack1 += 1;
-    attack3 += 1;
-    attack5 += 1;
-    attack7 += 1;
-    attack20 += 1;
-    attack21 += 1;
-    attack31 += 1;
-    attack33 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack1 += 10;
-    attack3 += 10;
-    attack5 += 10;
-    attack7 += 10;
-    attack20 += 10;
-    attack21 += 10;
-    attack31 += 10;
-    attack33 += 10;
-}
-}
-loc = myLoc.translate(3, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack1 += 4;
-    attack5 += 4;
-    attack21 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack1 += 1;
-    attack5 += 1;
-    attack14 += 1;
-    attack20 += 1;
-    attack21 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack1 += 10;
-    attack5 += 10;
-    attack14 += 10;
-    attack20 += 10;
-    attack21 += 10;
-}
-}
-loc = myLoc.translate(4, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack1 += 4;
-    attack14 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack1 += 1;
-    attack14 += 1;
-    attack21 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack1 += 10;
-    attack14 += 10;
-    attack21 += 10;
-}
-}
-loc = myLoc.translate(4, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack1 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack1 += 1;
-    attack5 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack1 += 10;
-    attack5 += 10;
-}
-}
-loc = myLoc.translate(1, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack1 += 1;
-    attack3 += 1;
-    attack5 += 1;
-    attack6 += 1;
-    attack7 += 1;
-    attack12 += 1;
-    attack17 += 1;
-    attack20 += 1;
-    attack21 += 1;
-    attack30 += 1;
-    attack31 += 1;
-    attack33 += 1;
-    attack34 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack1 += 10;
-    attack3 += 10;
-    attack5 += 10;
-    attack6 += 10;
-    attack7 += 10;
-    attack12 += 10;
-    attack17 += 10;
-    attack20 += 10;
-    attack21 += 10;
-    attack30 += 10;
-    attack31 += 10;
-    attack33 += 10;
-    attack34 += 10;
-}
-if(p.isEnemy()){
-    attack3 += 4;
-    attack5 += 4;
-    attack6 += 4;
-    attack17 += 4;
-    attack20 += 4;
-    attack21 += 4;
-    attack30 += 4;
-    attack31 += 4;
-    attack33 += 4;
-}
-}
-loc = myLoc.translate(3, 3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack1 += 1;
-    attack5 += 1;
-    attack7 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack1 += 10;
-    attack5 += 10;
-    attack7 += 10;
-}
-if(p.isEnemy()){
-    attack5 += 4;
-}
-}
-loc = myLoc.translate(-4, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack2 += 4;
-    attack27 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack2 += 1;
-    attack8 += 1;
-    attack27 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack2 += 10;
-    attack8 += 10;
-    attack27 += 10;
-}
-}
-loc = myLoc.translate(-4, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack2 += 4;
-    attack27 += 4;
-    attack29 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack2 += 1;
-    attack23 += 1;
-    attack27 += 1;
-    attack29 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack2 += 10;
-    attack23 += 10;
-    attack27 += 10;
-    attack29 += 10;
-}
-}
-loc = myLoc.translate(-4, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack2 += 4;
-    attack29 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack2 += 1;
-    attack13 += 1;
-    attack29 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack2 += 10;
-    attack13 += 10;
-    attack29 += 10;
-}
-}
-loc = myLoc.translate(-3, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack2 += 4;
-    attack8 += 4;
-    attack9 += 4;
-    attack23 += 4;
-    attack27 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack2 += 1;
-    attack8 += 1;
-    attack9 += 1;
-    attack11 += 1;
-    attack23 += 1;
-    attack27 += 1;
-    attack29 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack2 += 10;
-    attack8 += 10;
-    attack9 += 10;
-    attack11 += 10;
-    attack23 += 10;
-    attack27 += 10;
-    attack29 += 10;
-}
-}
-loc = myLoc.translate(-3, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack2 += 4;
-    attack8 += 4;
-    attack13 += 4;
-    attack23 += 4;
-    attack27 += 4;
-    attack29 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack2 += 1;
-    attack8 += 1;
-    attack13 += 1;
-    attack23 += 1;
-    attack24 += 1;
-    attack27 += 1;
-    attack29 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack2 += 10;
-    attack8 += 10;
-    attack13 += 10;
-    attack23 += 10;
-    attack24 += 10;
-    attack27 += 10;
-    attack29 += 10;
-}
-}
-loc = myLoc.translate(-3, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack2 += 4;
-    attack13 += 4;
-    attack23 += 4;
-    attack26 += 4;
-    attack29 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack2 += 1;
-    attack12 += 1;
-    attack13 += 1;
-    attack23 += 1;
-    attack26 += 1;
-    attack27 += 1;
-    attack29 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack2 += 10;
-    attack12 += 10;
-    attack13 += 10;
-    attack23 += 10;
-    attack26 += 10;
-    attack27 += 10;
-    attack29 += 10;
-}
-}
-loc = myLoc.translate(-2, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack2 += 4;
-    attack8 += 4;
-    attack9 += 4;
-    attack10 += 4;
-    attack11 += 4;
-    attack23 += 4;
-    attack24 += 4;
-    attack27 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack2 += 1;
-    attack8 += 1;
-    attack9 += 1;
-    attack10 += 1;
-    attack11 += 1;
-    attack13 += 1;
-    attack15 += 1;
-    attack23 += 1;
-    attack24 += 1;
-    attack27 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack2 += 10;
-    attack8 += 10;
-    attack9 += 10;
-    attack10 += 10;
-    attack11 += 10;
-    attack13 += 10;
-    attack15 += 10;
-    attack23 += 10;
-    attack24 += 10;
-    attack27 += 10;
-}
-}
-loc = myLoc.translate(-2, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack2 += 4;
-    attack8 += 4;
-    attack11 += 4;
-    attack12 += 4;
-    attack13 += 4;
-    attack23 += 4;
-    attack24 += 4;
-    attack27 += 4;
-    attack29 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack2 += 1;
-    attack8 += 1;
-    attack9 += 1;
-    attack11 += 1;
-    attack12 += 1;
-    attack13 += 1;
-    attack23 += 1;
-    attack24 += 1;
-    attack26 += 1;
-    attack27 += 1;
-    attack29 += 1;
-    attack30 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack2 += 10;
-    attack8 += 10;
-    attack9 += 10;
-    attack11 += 10;
-    attack12 += 10;
-    attack13 += 10;
-    attack23 += 10;
-    attack24 += 10;
-    attack26 += 10;
-    attack27 += 10;
-    attack29 += 10;
-    attack30 += 10;
-}
-}
-loc = myLoc.translate(-2, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack2 += 4;
-    attack12 += 4;
-    attack13 += 4;
-    attack23 += 4;
-    attack24 += 4;
-    attack26 += 4;
-    attack29 += 4;
-    attack36 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack2 += 1;
-    attack8 += 1;
-    attack12 += 1;
-    attack13 += 1;
-    attack17 += 1;
-    attack23 += 1;
-    attack24 += 1;
-    attack26 += 1;
-    attack29 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack2 += 10;
-    attack8 += 10;
-    attack12 += 10;
-    attack13 += 10;
-    attack17 += 10;
-    attack23 += 10;
-    attack24 += 10;
-    attack26 += 10;
-    attack29 += 10;
-    attack36 += 10;
-}
-}
-loc = myLoc.translate(-3, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack2 += 1;
-    attack8 += 1;
-    attack9 += 1;
-    attack10 += 1;
-    attack27 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack2 += 10;
-    attack8 += 10;
-    attack9 += 10;
-    attack10 += 10;
-    attack27 += 10;
-}
-if(p.isEnemy()){
-    attack8 += 4;
-    attack9 += 4;
-    attack27 += 4;
-}
-}
-loc = myLoc.translate(-3, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack2 += 1;
-    attack13 += 1;
-    attack26 += 1;
-    attack29 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack2 += 10;
-    attack13 += 10;
-    attack26 += 10;
-    attack29 += 10;
-    attack36 += 10;
-}
-if(p.isEnemy()){
-    attack13 += 4;
-    attack26 += 4;
-    attack29 += 4;
-}
-}
-loc = myLoc.translate(-1, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack2 += 1;
-    attack6 += 1;
-    attack8 += 1;
-    attack10 += 1;
-    attack11 += 1;
-    attack12 += 1;
-    attack13 += 1;
-    attack15 += 1;
-    attack17 += 1;
-    attack23 += 1;
-    attack24 += 1;
-    attack30 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack2 += 10;
-    attack6 += 10;
-    attack8 += 10;
-    attack10 += 10;
-    attack11 += 10;
-    attack12 += 10;
-    attack13 += 10;
-    attack15 += 10;
-    attack17 += 10;
-    attack23 += 10;
-    attack24 += 10;
-    attack30 += 10;
-    attack36 += 10;
-}
-if(p.isEnemy()){
-    attack8 += 4;
-    attack11 += 4;
-    attack12 += 4;
-    attack13 += 4;
-    attack15 += 4;
-    attack17 += 4;
-    attack23 += 4;
-    attack24 += 4;
-    attack30 += 4;
-}
-}
-loc = myLoc.translate(-1, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack3 += 4;
-    attack12 += 4;
-    attack13 += 4;
-    attack17 += 4;
-    attack23 += 4;
-    attack24 += 4;
-    attack26 += 4;
-    attack30 += 4;
-    attack36 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack3 += 1;
-    attack11 += 1;
-    attack12 += 1;
-    attack13 += 1;
-    attack17 += 1;
-    attack23 += 1;
-    attack24 += 1;
-    attack25 += 1;
-    attack26 += 1;
-    attack29 += 1;
-    attack30 += 1;
-    attack31 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack3 += 10;
-    attack11 += 10;
-    attack12 += 10;
-    attack13 += 10;
-    attack17 += 10;
-    attack23 += 10;
-    attack24 += 10;
-    attack25 += 10;
-    attack26 += 10;
-    attack29 += 10;
-    attack30 += 10;
-    attack31 += 10;
-    attack36 += 10;
-}
-}
-loc = myLoc.translate(-1, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack3 += 4;
-    attack12 += 4;
-    attack13 += 4;
-    attack17 += 4;
-    attack25 += 4;
-    attack26 += 4;
-    attack32 += 4;
-    attack36 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack3 += 1;
-    attack12 += 1;
-    attack13 += 1;
-    attack17 += 1;
-    attack20 += 1;
-    attack24 += 1;
-    attack25 += 1;
-    attack26 += 1;
-    attack32 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack3 += 10;
-    attack12 += 10;
-    attack13 += 10;
-    attack17 += 10;
-    attack20 += 10;
-    attack24 += 10;
-    attack25 += 10;
-    attack26 += 10;
-    attack32 += 10;
-    attack36 += 10;
-}
-}
-loc = myLoc.translate(-1, 3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack3 += 4;
-    attack25 += 4;
-    attack26 += 4;
-    attack32 += 4;
-    attack36 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack3 += 1;
-    attack7 += 1;
-    attack12 += 1;
-    attack25 += 1;
-    attack26 += 1;
-    attack32 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack3 += 10;
-    attack7 += 10;
-    attack12 += 10;
-    attack25 += 10;
-    attack26 += 10;
-    attack32 += 10;
-    attack36 += 10;
-}
-}
-loc = myLoc.translate(0, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack3 += 4;
-    attack6 += 4;
-    attack12 += 4;
-    attack17 += 4;
-    attack20 += 4;
-    attack24 += 4;
-    attack30 += 4;
-    attack31 += 4;
-    attack36 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack3 += 1;
-    attack6 += 1;
-    attack12 += 1;
-    attack13 += 1;
-    attack15 += 1;
-    attack17 += 1;
-    attack20 += 1;
-    attack21 += 1;
-    attack24 += 1;
-    attack30 += 1;
-    attack31 += 1;
-    attack32 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack3 += 10;
-    attack6 += 10;
-    attack12 += 10;
-    attack13 += 10;
-    attack15 += 10;
-    attack17 += 10;
-    attack20 += 10;
-    attack21 += 10;
-    attack24 += 10;
-    attack30 += 10;
-    attack31 += 10;
-    attack32 += 10;
-    attack36 += 10;
-}
-}
-loc = myLoc.translate(0, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack3 += 4;
-    attack7 += 4;
-    attack12 += 4;
-    attack17 += 4;
-    attack20 += 4;
-    attack25 += 4;
-    attack31 += 4;
-    attack32 += 4;
-    attack36 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack3 += 1;
-    attack5 += 1;
-    attack7 += 1;
-    attack12 += 1;
-    attack17 += 1;
-    attack20 += 1;
-    attack25 += 1;
-    attack26 += 1;
-    attack30 += 1;
-    attack31 += 1;
-    attack32 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack3 += 10;
-    attack5 += 10;
-    attack7 += 10;
-    attack12 += 10;
-    attack17 += 10;
-    attack20 += 10;
-    attack25 += 10;
-    attack26 += 10;
-    attack30 += 10;
-    attack31 += 10;
-    attack32 += 10;
-    attack36 += 10;
-}
-}
-loc = myLoc.translate(0, 3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack3 += 4;
-    attack7 += 4;
-    attack20 += 4;
-    attack25 += 4;
-    attack32 += 4;
-    attack36 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack3 += 1;
-    attack7 += 1;
-    attack17 += 1;
-    attack20 += 1;
-    attack25 += 1;
-    attack32 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack3 += 10;
-    attack7 += 10;
-    attack17 += 10;
-    attack20 += 10;
-    attack25 += 10;
-    attack32 += 10;
-    attack36 += 10;
-}
-}
-loc = myLoc.translate(1, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack3 += 4;
-    attack5 += 4;
-    attack7 += 4;
-    attack17 += 4;
-    attack20 += 4;
-    attack21 += 4;
-    attack31 += 4;
-    attack32 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack3 += 1;
-    attack5 += 1;
-    attack6 += 1;
-    attack7 += 1;
-    attack17 += 1;
-    attack20 += 1;
-    attack21 += 1;
-    attack31 += 1;
-    attack32 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack3 += 10;
-    attack5 += 10;
-    attack6 += 10;
-    attack7 += 10;
-    attack17 += 10;
-    attack20 += 10;
-    attack21 += 10;
-    attack31 += 10;
-    attack32 += 10;
-    attack36 += 10;
-}
-}
-loc = myLoc.translate(1, 3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack3 += 4;
-    attack5 += 4;
-    attack7 += 4;
-    attack20 += 4;
-    attack32 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack3 += 1;
-    attack5 += 1;
-    attack7 += 1;
-    attack20 += 1;
-    attack25 += 1;
-    attack31 += 1;
-    attack32 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack3 += 10;
-    attack5 += 10;
-    attack7 += 10;
-    attack20 += 10;
-    attack25 += 10;
-    attack31 += 10;
-    attack32 += 10;
-}
-}
-loc = myLoc.translate(-2, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack3 += 1;
-    attack12 += 1;
-    attack13 += 1;
-    attack23 += 1;
-    attack25 += 1;
-    attack26 += 1;
-    attack29 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack3 += 10;
-    attack12 += 10;
-    attack13 += 10;
-    attack23 += 10;
-    attack25 += 10;
-    attack26 += 10;
-    attack29 += 10;
-    attack36 += 10;
-}
-if(p.isEnemy()){
-    attack12 += 4;
-    attack13 += 4;
-    attack25 += 4;
-    attack26 += 4;
-    attack29 += 4;
-    attack36 += 4;
-}
-}
-loc = myLoc.translate(0, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack3 += 1;
-    attack6 += 1;
-    attack11 += 1;
-    attack12 += 1;
-    attack15 += 1;
-    attack16 += 1;
-    attack17 += 1;
-    attack23 += 1;
-    attack24 += 1;
-    attack30 += 1;
-    attack31 += 1;
-    attack33 += 1;
-    attack34 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack3 += 10;
-    attack6 += 10;
-    attack11 += 10;
-    attack12 += 10;
-    attack15 += 10;
-    attack16 += 10;
-    attack17 += 10;
-    attack23 += 10;
-    attack24 += 10;
-    attack30 += 10;
-    attack31 += 10;
-    attack33 += 10;
-    attack34 += 10;
-}
-if(p.isEnemy()){
-    attack6 += 4;
-    attack11 += 4;
-    attack12 += 4;
-    attack15 += 4;
-    attack17 += 4;
-    attack24 += 4;
-    attack30 += 4;
-    attack31 += 4;
-    attack34 += 4;
-}
-}
-loc = myLoc.translate(0, 4);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack3 += 1;
-    attack7 += 1;
-    attack25 += 1;
-    attack32 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack3 += 10;
-    attack7 += 10;
-    attack25 += 10;
-    attack32 += 10;
-}
-if(p.isEnemy()){
-    attack7 += 4;
-    attack25 += 4;
-    attack32 += 4;
-}
-}
-loc = myLoc.translate(0, -4);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack4 += 4;
-    attack22 += 4;
-    attack28 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack4 += 1;
-    attack16 += 1;
-    attack22 += 1;
-    attack28 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack4 += 10;
-    attack16 += 10;
-    attack22 += 10;
-    attack28 += 10;
-}
-}
-loc = myLoc.translate(0, -3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack4 += 4;
-    attack10 += 4;
-    attack16 += 4;
-    attack22 += 4;
-    attack28 += 4;
-    attack35 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack4 += 1;
-    attack10 += 1;
-    attack15 += 1;
-    attack16 += 1;
-    attack22 += 1;
-    attack28 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack4 += 10;
-    attack10 += 10;
-    attack15 += 10;
-    attack16 += 10;
-    attack22 += 10;
-    attack28 += 10;
-    attack35 += 10;
-}
-}
-loc = myLoc.translate(0, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack4 += 4;
-    attack10 += 4;
-    attack11 += 4;
-    attack15 += 4;
-    attack16 += 4;
-    attack22 += 4;
-    attack28 += 4;
-    attack34 += 4;
-    attack35 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack4 += 1;
-    attack9 += 1;
-    attack10 += 1;
-    attack11 += 1;
-    attack15 += 1;
-    attack16 += 1;
-    attack19 += 1;
-    attack22 += 1;
-    attack28 += 1;
-    attack30 += 1;
-    attack34 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack4 += 10;
-    attack9 += 10;
-    attack10 += 10;
-    attack11 += 10;
-    attack15 += 10;
-    attack16 += 10;
-    attack19 += 10;
-    attack22 += 10;
-    attack28 += 10;
-    attack30 += 10;
-    attack34 += 10;
-    attack35 += 10;
-}
-}
-loc = myLoc.translate(1, -4);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack4 += 4;
-    attack28 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack4 += 1;
-    attack28 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack4 += 10;
-    attack28 += 10;
-    attack35 += 10;
-}
-}
-loc = myLoc.translate(1, -3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack4 += 4;
-    attack16 += 4;
-    attack19 += 4;
-    attack28 += 4;
-    attack35 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack4 += 1;
-    attack16 += 1;
-    attack19 += 1;
-    attack22 += 1;
-    attack28 += 1;
-    attack34 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack4 += 10;
-    attack16 += 10;
-    attack19 += 10;
-    attack22 += 10;
-    attack28 += 10;
-    attack34 += 10;
-    attack35 += 10;
-}
-}
-loc = myLoc.translate(1, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack4 += 4;
-    attack15 += 4;
-    attack16 += 4;
-    attack18 += 4;
-    attack19 += 4;
-    attack28 += 4;
-    attack34 += 4;
-    attack35 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack4 += 1;
-    attack6 += 1;
-    attack10 += 1;
-    attack15 += 1;
-    attack16 += 1;
-    attack18 += 1;
-    attack19 += 1;
-    attack28 += 1;
-    attack34 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack4 += 10;
-    attack6 += 10;
-    attack10 += 10;
-    attack15 += 10;
-    attack16 += 10;
-    attack18 += 10;
-    attack19 += 10;
-    attack28 += 10;
-    attack34 += 10;
-    attack35 += 10;
-}
-}
-loc = myLoc.translate(2, -4);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack4 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack4 += 1;
-    attack19 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack4 += 10;
-    attack19 += 10;
-}
-}
-loc = myLoc.translate(2, -3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack4 += 4;
-    attack19 += 4;
-    attack35 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack4 += 1;
-    attack18 += 1;
-    attack19 += 1;
-    attack28 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack4 += 10;
-    attack18 += 10;
-    attack19 += 10;
-    attack28 += 10;
-    attack35 += 10;
-}
-}
-loc = myLoc.translate(-1, -3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack4 += 1;
-    attack9 += 1;
-    attack10 += 1;
-    attack11 += 1;
-    attack16 += 1;
-    attack22 += 1;
-    attack28 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack4 += 10;
-    attack9 += 10;
-    attack10 += 10;
-    attack11 += 10;
-    attack16 += 10;
-    attack22 += 10;
-    attack28 += 10;
-}
-if(p.isEnemy()){
-    attack9 += 4;
-    attack10 += 4;
-    attack16 += 4;
-    attack22 += 4;
-    attack28 += 4;
-}
-}
-loc = myLoc.translate(2, 3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack5 += 4;
-    attack7 += 4;
-    attack20 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack5 += 1;
-    attack7 += 1;
-    attack20 += 1;
-    attack21 += 1;
-    attack32 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack5 += 10;
-    attack7 += 10;
-    attack20 += 10;
-    attack21 += 10;
-    attack32 += 10;
-}
-}
-loc = myLoc.translate(2, 4);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack5 += 1;
-    attack7 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack5 += 10;
-    attack7 += 10;
-}
-if(p.isEnemy()){
-    attack7 += 4;
-}
-}
-loc = myLoc.translate(0, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack6 += 4;
-    attack10 += 4;
-    attack11 += 4;
-    attack15 += 4;
-    attack16 += 4;
-    attack24 += 4;
-    attack30 += 4;
-    attack34 += 4;
-    attack35 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack6 += 1;
-    attack8 += 1;
-    attack10 += 1;
-    attack11 += 1;
-    attack15 += 1;
-    attack16 += 1;
-    attack17 += 1;
-    attack18 += 1;
-    attack24 += 1;
-    attack28 += 1;
-    attack30 += 1;
-    attack34 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack6 += 10;
-    attack8 += 10;
-    attack10 += 10;
-    attack11 += 10;
-    attack15 += 10;
-    attack16 += 10;
-    attack17 += 10;
-    attack18 += 10;
-    attack24 += 10;
-    attack28 += 10;
-    attack30 += 10;
-    attack34 += 10;
-    attack35 += 10;
-}
-}
-loc = myLoc.translate(1, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack6 += 4;
-    attack15 += 4;
-    attack17 += 4;
-    attack18 += 4;
-    attack21 += 4;
-    attack30 += 4;
-    attack31 += 4;
-    attack33 += 4;
-    attack34 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack6 += 1;
-    attack14 += 1;
-    attack15 += 1;
-    attack17 += 1;
-    attack18 += 1;
-    attack20 += 1;
-    attack21 += 1;
-    attack24 += 1;
-    attack30 += 1;
-    attack31 += 1;
-    attack33 += 1;
-    attack34 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack6 += 10;
-    attack14 += 10;
-    attack15 += 10;
-    attack17 += 10;
-    attack18 += 10;
-    attack20 += 10;
-    attack21 += 10;
-    attack24 += 10;
-    attack30 += 10;
-    attack31 += 10;
-    attack33 += 10;
-    attack34 += 10;
-    attack35 += 10;
-}
-}
-loc = myLoc.translate(1, 4);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack7 += 4;
-    attack32 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack7 += 1;
-    attack20 += 1;
-    attack32 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack7 += 10;
-    attack20 += 10;
-    attack32 += 10;
-}
-}
-loc = myLoc.translate(-2, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack8 += 4;
-    attack9 += 4;
-    attack10 += 4;
-    attack11 += 4;
-    attack22 += 4;
-    attack27 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack8 += 1;
-    attack9 += 1;
-    attack10 += 1;
-    attack11 += 1;
-    attack16 += 1;
-    attack22 += 1;
-    attack23 += 1;
-    attack27 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack8 += 10;
-    attack9 += 10;
-    attack10 += 10;
-    attack11 += 10;
-    attack16 += 10;
-    attack22 += 10;
-    attack23 += 10;
-    attack27 += 10;
-}
-}
-loc = myLoc.translate(-1, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack8 += 4;
-    attack9 += 4;
-    attack10 += 4;
-    attack11 += 4;
-    attack15 += 4;
-    attack16 += 4;
-    attack22 += 4;
-    attack28 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack8 += 1;
-    attack9 += 1;
-    attack10 += 1;
-    attack11 += 1;
-    attack15 += 1;
-    attack16 += 1;
-    attack22 += 1;
-    attack24 += 1;
-    attack28 += 1;
-    attack35 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack8 += 10;
-    attack9 += 10;
-    attack10 += 10;
-    attack11 += 10;
-    attack15 += 10;
-    attack16 += 10;
-    attack22 += 10;
-    attack24 += 10;
-    attack28 += 10;
-    attack35 += 10;
-}
-}
-loc = myLoc.translate(-1, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack8 += 4;
-    attack9 += 4;
-    attack10 += 4;
-    attack11 += 4;
-    attack15 += 4;
-    attack16 += 4;
-    attack23 += 4;
-    attack24 += 4;
-    attack30 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack8 += 1;
-    attack9 += 1;
-    attack10 += 1;
-    attack11 += 1;
-    attack12 += 1;
-    attack15 += 1;
-    attack16 += 1;
-    attack22 += 1;
-    attack23 += 1;
-    attack24 += 1;
-    attack27 += 1;
-    attack30 += 1;
-    attack34 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack8 += 10;
-    attack9 += 10;
-    attack10 += 10;
-    attack11 += 10;
-    attack12 += 10;
-    attack15 += 10;
-    attack16 += 10;
-    attack22 += 10;
-    attack23 += 10;
-    attack24 += 10;
-    attack27 += 10;
-    attack30 += 10;
-    attack34 += 10;
-}
-}
-loc = myLoc.translate(-2, -3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack8 += 1;
-    attack9 += 1;
-    attack10 += 1;
-    attack22 += 1;
-    attack28 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack8 += 10;
-    attack9 += 10;
-    attack10 += 10;
-    attack22 += 10;
-    attack28 += 10;
-}
-if(p.isEnemy()){
-    attack9 += 4;
-    attack10 += 4;
-    attack22 += 4;
-}
-}
-loc = myLoc.translate(-3, -3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack9 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack9 += 1;
-    attack22 += 1;
-    attack27 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack9 += 10;
-    attack22 += 10;
-    attack27 += 10;
-}
-}
-loc = myLoc.translate(-4, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack9 += 1;
-    attack27 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack9 += 10;
-    attack27 += 10;
-}
-if(p.isEnemy()){
-    attack27 += 4;
-}
-}
-loc = myLoc.translate(-2, -4);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack9 += 1;
-    attack22 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack9 += 10;
-    attack22 += 10;
-}
-if(p.isEnemy()){
-    attack22 += 4;
-}
-}
-loc = myLoc.translate(-1, -4);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack10 += 1;
-    attack22 += 1;
-    attack28 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack10 += 10;
-    attack22 += 10;
-    attack28 += 10;
-}
-if(p.isEnemy()){
-    attack22 += 4;
-    attack28 += 4;
-}
-}
-loc = myLoc.translate(-2, 3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack13 += 1;
-    attack25 += 1;
-    attack26 += 1;
-    attack32 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack13 += 10;
-    attack25 += 10;
-    attack26 += 10;
-    attack32 += 10;
-    attack36 += 10;
-}
-if(p.isEnemy()){
-    attack25 += 4;
-    attack26 += 4;
-    attack36 += 4;
-}
-}
-loc = myLoc.translate(-2, 4);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack25 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack25 += 1;
-    attack26 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack25 += 10;
-    attack26 += 10;
-}
-}
-loc = myLoc.translate(-1, 4);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p.isEnemy()){
-    attack25 += 4;
-    attack32 += 4;
-}
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack25 += 1;
-    attack32 += 1;
-    attack36 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack25 += 10;
-    attack32 += 10;
-    attack36 += 10;
-}
-}
-loc = myLoc.translate(-3, 3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack25 += 1;
-    attack26 += 1;
-    attack29 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack25 += 10;
-    attack26 += 10;
-    attack29 += 10;
-}
-if(p.isEnemy()){
-    attack26 += 4;
-}
-}
-loc = myLoc.translate(-4, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(p == PaintType.EMPTY && i.isPassable()){
-    attack26 += 1;
-    attack29 += 1;
-}
-if(r != null && r.team != myTeam && r.type.isTowerType()){
-    attack26 += 10;
-    attack29 += 10;
-}
-if(p.isEnemy()){
-    attack29 += 4;
-}
-}
-if(rc.canMove(Direction.SOUTHWEST)){
-int best = -1; int bestScore = 0;
-if(bestScore < attack27) { bestScore = attack27; best = 27; }
-if(bestScore < attack9) { bestScore = attack9; best = 9; }
-if(bestScore < attack8) { bestScore = attack8; best = 8; }
-if(bestScore < attack23) { bestScore = attack23; best = 23; }
-if(bestScore < attack22) { bestScore = attack22; best = 22; }
-if(bestScore < attack10) { bestScore = attack10; best = 10; }
-if(bestScore < attack11) { bestScore = attack11; best = 11; }
-if(bestScore < attack24) { bestScore = attack24; best = 24; }
-if(bestScore < attack12) { bestScore = attack12; best = 12; }
-if(bestScore < attack16) { bestScore = attack16; best = 16; }
-if(bestScore < attack15) { bestScore = attack15; best = 15; }
-if(bestScore < attack30) { bestScore = attack30; best = 30; }
-if(bestScore < attack34) { bestScore = attack34; best = 34; }
-var info = MicroManagerSplasher.microInfos[Direction.SOUTHWEST.ordinal()];
-info.atkValue=bestScore;
-info.atkLoc=id2loc(best);
-}
-if(rc.canMove(Direction.WEST)){
-int best = -1; int bestScore = 0;
-if(bestScore < attack2) { bestScore = attack2; best = 2; }
-if(bestScore < attack8) { bestScore = attack8; best = 8; }
-if(bestScore < attack23) { bestScore = attack23; best = 23; }
-if(bestScore < attack13) { bestScore = attack13; best = 13; }
-if(bestScore < attack10) { bestScore = attack10; best = 10; }
-if(bestScore < attack11) { bestScore = attack11; best = 11; }
-if(bestScore < attack24) { bestScore = attack24; best = 24; }
-if(bestScore < attack12) { bestScore = attack12; best = 12; }
-if(bestScore < attack36) { bestScore = attack36; best = 36; }
-if(bestScore < attack15) { bestScore = attack15; best = 15; }
-if(bestScore < attack30) { bestScore = attack30; best = 30; }
-if(bestScore < attack17) { bestScore = attack17; best = 17; }
-if(bestScore < attack6) { bestScore = attack6; best = 6; }
-var info = MicroManagerSplasher.microInfos[Direction.WEST.ordinal()];
-info.atkValue=bestScore;
-info.atkLoc=id2loc(best);
-}
-if(rc.canMove(Direction.NORTHWEST)){
-int best = -1; int bestScore = 0;
-if(bestScore < attack29) { bestScore = attack29; best = 29; }
-if(bestScore < attack23) { bestScore = attack23; best = 23; }
-if(bestScore < attack13) { bestScore = attack13; best = 13; }
-if(bestScore < attack26) { bestScore = attack26; best = 26; }
-if(bestScore < attack11) { bestScore = attack11; best = 11; }
-if(bestScore < attack24) { bestScore = attack24; best = 24; }
-if(bestScore < attack12) { bestScore = attack12; best = 12; }
-if(bestScore < attack36) { bestScore = attack36; best = 36; }
-if(bestScore < attack25) { bestScore = attack25; best = 25; }
-if(bestScore < attack30) { bestScore = attack30; best = 30; }
-if(bestScore < attack17) { bestScore = attack17; best = 17; }
-if(bestScore < attack3) { bestScore = attack3; best = 3; }
-if(bestScore < attack31) { bestScore = attack31; best = 31; }
-var info = MicroManagerSplasher.microInfos[Direction.NORTHWEST.ordinal()];
-info.atkValue=bestScore;
-info.atkLoc=id2loc(best);
-}
-if(rc.canMove(Direction.SOUTH)){
-int best = -1; int bestScore = 0;
-if(bestScore < attack8) { bestScore = attack8; best = 8; }
-if(bestScore < attack10) { bestScore = attack10; best = 10; }
-if(bestScore < attack11) { bestScore = attack11; best = 11; }
-if(bestScore < attack24) { bestScore = attack24; best = 24; }
-if(bestScore < attack28) { bestScore = attack28; best = 28; }
-if(bestScore < attack16) { bestScore = attack16; best = 16; }
-if(bestScore < attack15) { bestScore = attack15; best = 15; }
-if(bestScore < attack30) { bestScore = attack30; best = 30; }
-if(bestScore < attack17) { bestScore = attack17; best = 17; }
-if(bestScore < attack35) { bestScore = attack35; best = 35; }
-if(bestScore < attack34) { bestScore = attack34; best = 34; }
-if(bestScore < attack6) { bestScore = attack6; best = 6; }
-if(bestScore < attack18) { bestScore = attack18; best = 18; }
-var info = MicroManagerSplasher.microInfos[Direction.SOUTH.ordinal()];
-info.atkValue=bestScore;
-info.atkLoc=id2loc(best);
-}
-if(rc.canMove(Direction.CENTER)){
-int best = -1; int bestScore = 0;
-if(bestScore < attack23) { bestScore = attack23; best = 23; }
-if(bestScore < attack11) { bestScore = attack11; best = 11; }
-if(bestScore < attack24) { bestScore = attack24; best = 24; }
-if(bestScore < attack12) { bestScore = attack12; best = 12; }
-if(bestScore < attack16) { bestScore = attack16; best = 16; }
-if(bestScore < attack15) { bestScore = attack15; best = 15; }
-if(bestScore < attack30) { bestScore = attack30; best = 30; }
-if(bestScore < attack17) { bestScore = attack17; best = 17; }
-if(bestScore < attack3) { bestScore = attack3; best = 3; }
-if(bestScore < attack34) { bestScore = attack34; best = 34; }
-if(bestScore < attack6) { bestScore = attack6; best = 6; }
-if(bestScore < attack31) { bestScore = attack31; best = 31; }
-if(bestScore < attack33) { bestScore = attack33; best = 33; }
-var info = MicroManagerSplasher.microInfos[Direction.CENTER.ordinal()];
-info.atkValue=bestScore;
-info.atkLoc=id2loc(best);
-}
-if(rc.canMove(Direction.NORTH)){
-int best = -1; int bestScore = 0;
-if(bestScore < attack13) { bestScore = attack13; best = 13; }
-if(bestScore < attack24) { bestScore = attack24; best = 24; }
-if(bestScore < attack12) { bestScore = attack12; best = 12; }
-if(bestScore < attack36) { bestScore = attack36; best = 36; }
-if(bestScore < attack15) { bestScore = attack15; best = 15; }
-if(bestScore < attack30) { bestScore = attack30; best = 30; }
-if(bestScore < attack17) { bestScore = attack17; best = 17; }
-if(bestScore < attack3) { bestScore = attack3; best = 3; }
-if(bestScore < attack32) { bestScore = attack32; best = 32; }
-if(bestScore < attack6) { bestScore = attack6; best = 6; }
-if(bestScore < attack31) { bestScore = attack31; best = 31; }
-if(bestScore < attack20) { bestScore = attack20; best = 20; }
-if(bestScore < attack21) { bestScore = attack21; best = 21; }
-var info = MicroManagerSplasher.microInfos[Direction.NORTH.ordinal()];
-info.atkValue=bestScore;
-info.atkLoc=id2loc(best);
-}
-if(rc.canMove(Direction.SOUTHEAST)){
-int best = -1; int bestScore = 0;
-if(bestScore < attack11) { bestScore = attack11; best = 11; }
-if(bestScore < attack16) { bestScore = attack16; best = 16; }
-if(bestScore < attack15) { bestScore = attack15; best = 15; }
-if(bestScore < attack30) { bestScore = attack30; best = 30; }
-if(bestScore < attack4) { bestScore = attack4; best = 4; }
-if(bestScore < attack35) { bestScore = attack35; best = 35; }
-if(bestScore < attack34) { bestScore = attack34; best = 34; }
-if(bestScore < attack6) { bestScore = attack6; best = 6; }
-if(bestScore < attack31) { bestScore = attack31; best = 31; }
-if(bestScore < attack19) { bestScore = attack19; best = 19; }
-if(bestScore < attack18) { bestScore = attack18; best = 18; }
-if(bestScore < attack33) { bestScore = attack33; best = 33; }
-if(bestScore < attack0) { bestScore = attack0; best = 0; }
-var info = MicroManagerSplasher.microInfos[Direction.SOUTHEAST.ordinal()];
-info.atkValue=bestScore;
-info.atkLoc=id2loc(best);
-}
-if(rc.canMove(Direction.EAST)){
-int best = -1; int bestScore = 0;
-if(bestScore < attack24) { bestScore = attack24; best = 24; }
-if(bestScore < attack15) { bestScore = attack15; best = 15; }
-if(bestScore < attack30) { bestScore = attack30; best = 30; }
-if(bestScore < attack17) { bestScore = attack17; best = 17; }
-if(bestScore < attack35) { bestScore = attack35; best = 35; }
-if(bestScore < attack34) { bestScore = attack34; best = 34; }
-if(bestScore < attack6) { bestScore = attack6; best = 6; }
-if(bestScore < attack31) { bestScore = attack31; best = 31; }
-if(bestScore < attack20) { bestScore = attack20; best = 20; }
-if(bestScore < attack18) { bestScore = attack18; best = 18; }
-if(bestScore < attack33) { bestScore = attack33; best = 33; }
-if(bestScore < attack21) { bestScore = attack21; best = 21; }
-if(bestScore < attack14) { bestScore = attack14; best = 14; }
-var info = MicroManagerSplasher.microInfos[Direction.EAST.ordinal()];
-info.atkValue=bestScore;
-info.atkLoc=id2loc(best);
-}
-if(rc.canMove(Direction.NORTHEAST)){
-int best = -1; int bestScore = 0;
-if(bestScore < attack12) { bestScore = attack12; best = 12; }
-if(bestScore < attack30) { bestScore = attack30; best = 30; }
-if(bestScore < attack17) { bestScore = attack17; best = 17; }
-if(bestScore < attack3) { bestScore = attack3; best = 3; }
-if(bestScore < attack34) { bestScore = attack34; best = 34; }
-if(bestScore < attack6) { bestScore = attack6; best = 6; }
-if(bestScore < attack31) { bestScore = attack31; best = 31; }
-if(bestScore < attack20) { bestScore = attack20; best = 20; }
-if(bestScore < attack7) { bestScore = attack7; best = 7; }
-if(bestScore < attack33) { bestScore = attack33; best = 33; }
-if(bestScore < attack21) { bestScore = attack21; best = 21; }
-if(bestScore < attack5) { bestScore = attack5; best = 5; }
-if(bestScore < attack1) { bestScore = attack1; best = 1; }
-var info = MicroManagerSplasher.microInfos[Direction.NORTHEAST.ordinal()];
-info.atkValue=bestScore;
-info.atkLoc=id2loc(best);
-}
-}
-static MapLocation id2loc(int id) {
-MapLocation myLoc = rc.getLocation();
-return switch(id) {
-    case 0 -> myLoc.translate(3,-1);
-    case 1 -> myLoc.translate(3,1);
-    case 2 -> myLoc.translate(-3,0);
-    case 3 -> myLoc.translate(0,2);
-    case 4 -> myLoc.translate(1,-3);
-    case 5 -> myLoc.translate(2,2);
-    case 6 -> myLoc.translate(1,0);
-    case 7 -> myLoc.translate(1,3);
-    case 8 -> myLoc.translate(-2,-1);
-    case 9 -> myLoc.translate(-2,-2);
-    case 10 -> myLoc.translate(-1,-2);
-    case 11 -> myLoc.translate(-1,-1);
-    case 12 -> myLoc.translate(-1,1);
-    case 13 -> myLoc.translate(-2,1);
-    case 14 -> myLoc.translate(3,0);
-    case 15 -> myLoc.translate(0,-1);
-    case 16 -> myLoc.translate(0,-2);
-    case 17 -> myLoc.translate(0,1);
-    case 18 -> myLoc.translate(2,-1);
-    case 19 -> myLoc.translate(2,-2);
-    case 20 -> myLoc.translate(1,2);
-    case 21 -> myLoc.translate(2,1);
-    case 22 -> myLoc.translate(-1,-3);
-    case 23 -> myLoc.translate(-2,0);
-    case 24 -> myLoc.translate(-1,0);
-    case 25 -> myLoc.translate(-1,3);
-    case 26 -> myLoc.translate(-2,2);
-    case 27 -> myLoc.translate(-3,-1);
-    case 28 -> myLoc.translate(0,-3);
-    case 29 -> myLoc.translate(-3,1);
-    case 30 -> myLoc.translate(0,0);
-    case 31 -> myLoc.translate(1,1);
-    case 32 -> myLoc.translate(0,3);
-    case 33 -> myLoc.translate(2,0);
-    case 34 -> myLoc.translate(1,-1);
-    case 35 -> myLoc.translate(1,-2);
-    case 36 -> myLoc.translate(-1,2);
-    default -> null;
-};
-}
+    }
 }
