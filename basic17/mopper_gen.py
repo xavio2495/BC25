@@ -101,14 +101,14 @@ for id, a in enumerate(actions):
 
     if isinstance(a, ActionAttack):
         score(a.loc, 'p.isEnemy()', id, SCORE_ATTACK_UNPAINT)
-        score(a.loc, 'r != null && r.team != myTeam && r.getPaintAmount() != 0', id, SCORE_ATTACK_ENEMY)
+        score(a.loc, 'r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()', id, SCORE_ATTACK_ENEMY)
     elif isinstance(a, ActionMopSwing):
         d = a.dir
         j = Vec(d.y, -d.x)
         for xx in range(-1,2):
             for yy in range(1,3):
                 loc = a.loc + j*xx + d*yy
-                score(loc, 'r != null && r.team != myTeam && r.getPaintAmount() != 0', id, SCORE_MOPSWING_ENEMY)
+                score(loc, 'r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()', id, SCORE_MOPSWING_ENEMY)
     else:
         raise Exception('wtf')  
 
