@@ -127,8 +127,8 @@ for move in radius(2):
     p(f'if(rc.canMove({move.direction()})){{')
     p('int best = -1; int bestScore = 0;')
     for attack in radius(4):
-        id = f'attack{actions.index(attack+move)}'
-        p(f'if(bestScore < {id}) {{ bestScore = {id}; best = {id}; }}')
+        id = actions.index(attack+move)
+        p(f'if(bestScore < attack{id}) {{ bestScore = attack{id}; best = {id}; }}')
     p(f'var info = MicroManagerSplasher.microInfos[{move.direction()}.ordinal()];')
     p('info.atkValue=bestScore;')
     p('info.atkLoc=id2loc(best);')

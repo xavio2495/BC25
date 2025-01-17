@@ -16,43 +16,43 @@ RobotInfo r;
 PaintType p;
 Team myTeam = rc.getTeam();
 
-int attack20 = 0;
-int attack9 = 0;
-int attack34 = 0;
-int attack14 = 0;
-int attack2 = 0;
-int attack28 = 0;
-int attack6 = 0;
-int attack8 = 0;
-int attack29 = 0;
-int attack30 = 0;
-int attack31 = 0;
-int attack24 = 0;
-int attack5 = 0;
-int attack1 = 0;
 int attack10 = 0;
+int attack3 = 0;
+int attack8 = 0;
+int attack28 = 0;
+int attack15 = 0;
+int attack4 = 0;
+int attack6 = 0;
 int attack19 = 0;
-int attack25 = 0;
-int attack33 = 0;
-int attack22 = 0;
-int attack11 = 0;
-int attack23 = 0;
+int attack35 = 0;
+int attack21 = 0;
+int attack26 = 0;
 int attack36 = 0;
-int attack0 = 0;
+int attack31 = 0;
+int attack34 = 0;
+int attack29 = 0;
+int attack13 = 0;
+int attack24 = 0;
 int attack7 = 0;
+int attack32 = 0;
+int attack12 = 0;
+int attack1 = 0;
+int attack33 = 0;
 int attack16 = 0;
 int attack17 = 0;
-int attack35 = 0;
-int attack18 = 0;
-int attack4 = 0;
+int attack5 = 0;
+int attack25 = 0;
+int attack20 = 0;
+int attack23 = 0;
+int attack14 = 0;
 int attack27 = 0;
-int attack3 = 0;
-int attack32 = 0;
-int attack13 = 0;
-int attack26 = 0;
-int attack21 = 0;
-int attack12 = 0;
-int attack15 = 0;
+int attack30 = 0;
+int attack0 = 0;
+int attack2 = 0;
+int attack22 = 0;
+int attack18 = 0;
+int attack9 = 0;
+int attack11 = 0;
 i = rc.senseMapInfo(myLoc);
 p = i.getPaint();
 loc = myLoc.translate(2, -2);
@@ -2156,171 +2156,171 @@ if(p.isEnemy()){
 }
 if(rc.canMove(Direction.SOUTHWEST)){
 int best = -1; int bestScore = 0;
-if(bestScore < attack27) { bestScore = attack27; best = attack27; }
-if(bestScore < attack9) { bestScore = attack9; best = attack9; }
-if(bestScore < attack8) { bestScore = attack8; best = attack8; }
-if(bestScore < attack23) { bestScore = attack23; best = attack23; }
-if(bestScore < attack22) { bestScore = attack22; best = attack22; }
-if(bestScore < attack10) { bestScore = attack10; best = attack10; }
-if(bestScore < attack11) { bestScore = attack11; best = attack11; }
-if(bestScore < attack24) { bestScore = attack24; best = attack24; }
-if(bestScore < attack12) { bestScore = attack12; best = attack12; }
-if(bestScore < attack16) { bestScore = attack16; best = attack16; }
-if(bestScore < attack15) { bestScore = attack15; best = attack15; }
-if(bestScore < attack30) { bestScore = attack30; best = attack30; }
-if(bestScore < attack34) { bestScore = attack34; best = attack34; }
+if(bestScore < attack27) { bestScore = attack27; best = 27; }
+if(bestScore < attack9) { bestScore = attack9; best = 9; }
+if(bestScore < attack8) { bestScore = attack8; best = 8; }
+if(bestScore < attack23) { bestScore = attack23; best = 23; }
+if(bestScore < attack22) { bestScore = attack22; best = 22; }
+if(bestScore < attack10) { bestScore = attack10; best = 10; }
+if(bestScore < attack11) { bestScore = attack11; best = 11; }
+if(bestScore < attack24) { bestScore = attack24; best = 24; }
+if(bestScore < attack12) { bestScore = attack12; best = 12; }
+if(bestScore < attack16) { bestScore = attack16; best = 16; }
+if(bestScore < attack15) { bestScore = attack15; best = 15; }
+if(bestScore < attack30) { bestScore = attack30; best = 30; }
+if(bestScore < attack34) { bestScore = attack34; best = 34; }
 var info = MicroManagerSplasher.microInfos[Direction.SOUTHWEST.ordinal()];
 info.atkValue=bestScore;
 info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.WEST)){
 int best = -1; int bestScore = 0;
-if(bestScore < attack2) { bestScore = attack2; best = attack2; }
-if(bestScore < attack8) { bestScore = attack8; best = attack8; }
-if(bestScore < attack23) { bestScore = attack23; best = attack23; }
-if(bestScore < attack13) { bestScore = attack13; best = attack13; }
-if(bestScore < attack10) { bestScore = attack10; best = attack10; }
-if(bestScore < attack11) { bestScore = attack11; best = attack11; }
-if(bestScore < attack24) { bestScore = attack24; best = attack24; }
-if(bestScore < attack12) { bestScore = attack12; best = attack12; }
-if(bestScore < attack36) { bestScore = attack36; best = attack36; }
-if(bestScore < attack15) { bestScore = attack15; best = attack15; }
-if(bestScore < attack30) { bestScore = attack30; best = attack30; }
-if(bestScore < attack17) { bestScore = attack17; best = attack17; }
-if(bestScore < attack6) { bestScore = attack6; best = attack6; }
+if(bestScore < attack2) { bestScore = attack2; best = 2; }
+if(bestScore < attack8) { bestScore = attack8; best = 8; }
+if(bestScore < attack23) { bestScore = attack23; best = 23; }
+if(bestScore < attack13) { bestScore = attack13; best = 13; }
+if(bestScore < attack10) { bestScore = attack10; best = 10; }
+if(bestScore < attack11) { bestScore = attack11; best = 11; }
+if(bestScore < attack24) { bestScore = attack24; best = 24; }
+if(bestScore < attack12) { bestScore = attack12; best = 12; }
+if(bestScore < attack36) { bestScore = attack36; best = 36; }
+if(bestScore < attack15) { bestScore = attack15; best = 15; }
+if(bestScore < attack30) { bestScore = attack30; best = 30; }
+if(bestScore < attack17) { bestScore = attack17; best = 17; }
+if(bestScore < attack6) { bestScore = attack6; best = 6; }
 var info = MicroManagerSplasher.microInfos[Direction.WEST.ordinal()];
 info.atkValue=bestScore;
 info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.NORTHWEST)){
 int best = -1; int bestScore = 0;
-if(bestScore < attack29) { bestScore = attack29; best = attack29; }
-if(bestScore < attack23) { bestScore = attack23; best = attack23; }
-if(bestScore < attack13) { bestScore = attack13; best = attack13; }
-if(bestScore < attack26) { bestScore = attack26; best = attack26; }
-if(bestScore < attack11) { bestScore = attack11; best = attack11; }
-if(bestScore < attack24) { bestScore = attack24; best = attack24; }
-if(bestScore < attack12) { bestScore = attack12; best = attack12; }
-if(bestScore < attack36) { bestScore = attack36; best = attack36; }
-if(bestScore < attack25) { bestScore = attack25; best = attack25; }
-if(bestScore < attack30) { bestScore = attack30; best = attack30; }
-if(bestScore < attack17) { bestScore = attack17; best = attack17; }
-if(bestScore < attack3) { bestScore = attack3; best = attack3; }
-if(bestScore < attack31) { bestScore = attack31; best = attack31; }
+if(bestScore < attack29) { bestScore = attack29; best = 29; }
+if(bestScore < attack23) { bestScore = attack23; best = 23; }
+if(bestScore < attack13) { bestScore = attack13; best = 13; }
+if(bestScore < attack26) { bestScore = attack26; best = 26; }
+if(bestScore < attack11) { bestScore = attack11; best = 11; }
+if(bestScore < attack24) { bestScore = attack24; best = 24; }
+if(bestScore < attack12) { bestScore = attack12; best = 12; }
+if(bestScore < attack36) { bestScore = attack36; best = 36; }
+if(bestScore < attack25) { bestScore = attack25; best = 25; }
+if(bestScore < attack30) { bestScore = attack30; best = 30; }
+if(bestScore < attack17) { bestScore = attack17; best = 17; }
+if(bestScore < attack3) { bestScore = attack3; best = 3; }
+if(bestScore < attack31) { bestScore = attack31; best = 31; }
 var info = MicroManagerSplasher.microInfos[Direction.NORTHWEST.ordinal()];
 info.atkValue=bestScore;
 info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.SOUTH)){
 int best = -1; int bestScore = 0;
-if(bestScore < attack8) { bestScore = attack8; best = attack8; }
-if(bestScore < attack10) { bestScore = attack10; best = attack10; }
-if(bestScore < attack11) { bestScore = attack11; best = attack11; }
-if(bestScore < attack24) { bestScore = attack24; best = attack24; }
-if(bestScore < attack28) { bestScore = attack28; best = attack28; }
-if(bestScore < attack16) { bestScore = attack16; best = attack16; }
-if(bestScore < attack15) { bestScore = attack15; best = attack15; }
-if(bestScore < attack30) { bestScore = attack30; best = attack30; }
-if(bestScore < attack17) { bestScore = attack17; best = attack17; }
-if(bestScore < attack35) { bestScore = attack35; best = attack35; }
-if(bestScore < attack34) { bestScore = attack34; best = attack34; }
-if(bestScore < attack6) { bestScore = attack6; best = attack6; }
-if(bestScore < attack18) { bestScore = attack18; best = attack18; }
+if(bestScore < attack8) { bestScore = attack8; best = 8; }
+if(bestScore < attack10) { bestScore = attack10; best = 10; }
+if(bestScore < attack11) { bestScore = attack11; best = 11; }
+if(bestScore < attack24) { bestScore = attack24; best = 24; }
+if(bestScore < attack28) { bestScore = attack28; best = 28; }
+if(bestScore < attack16) { bestScore = attack16; best = 16; }
+if(bestScore < attack15) { bestScore = attack15; best = 15; }
+if(bestScore < attack30) { bestScore = attack30; best = 30; }
+if(bestScore < attack17) { bestScore = attack17; best = 17; }
+if(bestScore < attack35) { bestScore = attack35; best = 35; }
+if(bestScore < attack34) { bestScore = attack34; best = 34; }
+if(bestScore < attack6) { bestScore = attack6; best = 6; }
+if(bestScore < attack18) { bestScore = attack18; best = 18; }
 var info = MicroManagerSplasher.microInfos[Direction.SOUTH.ordinal()];
 info.atkValue=bestScore;
 info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.CENTER)){
 int best = -1; int bestScore = 0;
-if(bestScore < attack23) { bestScore = attack23; best = attack23; }
-if(bestScore < attack11) { bestScore = attack11; best = attack11; }
-if(bestScore < attack24) { bestScore = attack24; best = attack24; }
-if(bestScore < attack12) { bestScore = attack12; best = attack12; }
-if(bestScore < attack16) { bestScore = attack16; best = attack16; }
-if(bestScore < attack15) { bestScore = attack15; best = attack15; }
-if(bestScore < attack30) { bestScore = attack30; best = attack30; }
-if(bestScore < attack17) { bestScore = attack17; best = attack17; }
-if(bestScore < attack3) { bestScore = attack3; best = attack3; }
-if(bestScore < attack34) { bestScore = attack34; best = attack34; }
-if(bestScore < attack6) { bestScore = attack6; best = attack6; }
-if(bestScore < attack31) { bestScore = attack31; best = attack31; }
-if(bestScore < attack33) { bestScore = attack33; best = attack33; }
+if(bestScore < attack23) { bestScore = attack23; best = 23; }
+if(bestScore < attack11) { bestScore = attack11; best = 11; }
+if(bestScore < attack24) { bestScore = attack24; best = 24; }
+if(bestScore < attack12) { bestScore = attack12; best = 12; }
+if(bestScore < attack16) { bestScore = attack16; best = 16; }
+if(bestScore < attack15) { bestScore = attack15; best = 15; }
+if(bestScore < attack30) { bestScore = attack30; best = 30; }
+if(bestScore < attack17) { bestScore = attack17; best = 17; }
+if(bestScore < attack3) { bestScore = attack3; best = 3; }
+if(bestScore < attack34) { bestScore = attack34; best = 34; }
+if(bestScore < attack6) { bestScore = attack6; best = 6; }
+if(bestScore < attack31) { bestScore = attack31; best = 31; }
+if(bestScore < attack33) { bestScore = attack33; best = 33; }
 var info = MicroManagerSplasher.microInfos[Direction.CENTER.ordinal()];
 info.atkValue=bestScore;
 info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.NORTH)){
 int best = -1; int bestScore = 0;
-if(bestScore < attack13) { bestScore = attack13; best = attack13; }
-if(bestScore < attack24) { bestScore = attack24; best = attack24; }
-if(bestScore < attack12) { bestScore = attack12; best = attack12; }
-if(bestScore < attack36) { bestScore = attack36; best = attack36; }
-if(bestScore < attack15) { bestScore = attack15; best = attack15; }
-if(bestScore < attack30) { bestScore = attack30; best = attack30; }
-if(bestScore < attack17) { bestScore = attack17; best = attack17; }
-if(bestScore < attack3) { bestScore = attack3; best = attack3; }
-if(bestScore < attack32) { bestScore = attack32; best = attack32; }
-if(bestScore < attack6) { bestScore = attack6; best = attack6; }
-if(bestScore < attack31) { bestScore = attack31; best = attack31; }
-if(bestScore < attack20) { bestScore = attack20; best = attack20; }
-if(bestScore < attack21) { bestScore = attack21; best = attack21; }
+if(bestScore < attack13) { bestScore = attack13; best = 13; }
+if(bestScore < attack24) { bestScore = attack24; best = 24; }
+if(bestScore < attack12) { bestScore = attack12; best = 12; }
+if(bestScore < attack36) { bestScore = attack36; best = 36; }
+if(bestScore < attack15) { bestScore = attack15; best = 15; }
+if(bestScore < attack30) { bestScore = attack30; best = 30; }
+if(bestScore < attack17) { bestScore = attack17; best = 17; }
+if(bestScore < attack3) { bestScore = attack3; best = 3; }
+if(bestScore < attack32) { bestScore = attack32; best = 32; }
+if(bestScore < attack6) { bestScore = attack6; best = 6; }
+if(bestScore < attack31) { bestScore = attack31; best = 31; }
+if(bestScore < attack20) { bestScore = attack20; best = 20; }
+if(bestScore < attack21) { bestScore = attack21; best = 21; }
 var info = MicroManagerSplasher.microInfos[Direction.NORTH.ordinal()];
 info.atkValue=bestScore;
 info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.SOUTHEAST)){
 int best = -1; int bestScore = 0;
-if(bestScore < attack11) { bestScore = attack11; best = attack11; }
-if(bestScore < attack16) { bestScore = attack16; best = attack16; }
-if(bestScore < attack15) { bestScore = attack15; best = attack15; }
-if(bestScore < attack30) { bestScore = attack30; best = attack30; }
-if(bestScore < attack4) { bestScore = attack4; best = attack4; }
-if(bestScore < attack35) { bestScore = attack35; best = attack35; }
-if(bestScore < attack34) { bestScore = attack34; best = attack34; }
-if(bestScore < attack6) { bestScore = attack6; best = attack6; }
-if(bestScore < attack31) { bestScore = attack31; best = attack31; }
-if(bestScore < attack19) { bestScore = attack19; best = attack19; }
-if(bestScore < attack18) { bestScore = attack18; best = attack18; }
-if(bestScore < attack33) { bestScore = attack33; best = attack33; }
-if(bestScore < attack0) { bestScore = attack0; best = attack0; }
+if(bestScore < attack11) { bestScore = attack11; best = 11; }
+if(bestScore < attack16) { bestScore = attack16; best = 16; }
+if(bestScore < attack15) { bestScore = attack15; best = 15; }
+if(bestScore < attack30) { bestScore = attack30; best = 30; }
+if(bestScore < attack4) { bestScore = attack4; best = 4; }
+if(bestScore < attack35) { bestScore = attack35; best = 35; }
+if(bestScore < attack34) { bestScore = attack34; best = 34; }
+if(bestScore < attack6) { bestScore = attack6; best = 6; }
+if(bestScore < attack31) { bestScore = attack31; best = 31; }
+if(bestScore < attack19) { bestScore = attack19; best = 19; }
+if(bestScore < attack18) { bestScore = attack18; best = 18; }
+if(bestScore < attack33) { bestScore = attack33; best = 33; }
+if(bestScore < attack0) { bestScore = attack0; best = 0; }
 var info = MicroManagerSplasher.microInfos[Direction.SOUTHEAST.ordinal()];
 info.atkValue=bestScore;
 info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.EAST)){
 int best = -1; int bestScore = 0;
-if(bestScore < attack24) { bestScore = attack24; best = attack24; }
-if(bestScore < attack15) { bestScore = attack15; best = attack15; }
-if(bestScore < attack30) { bestScore = attack30; best = attack30; }
-if(bestScore < attack17) { bestScore = attack17; best = attack17; }
-if(bestScore < attack35) { bestScore = attack35; best = attack35; }
-if(bestScore < attack34) { bestScore = attack34; best = attack34; }
-if(bestScore < attack6) { bestScore = attack6; best = attack6; }
-if(bestScore < attack31) { bestScore = attack31; best = attack31; }
-if(bestScore < attack20) { bestScore = attack20; best = attack20; }
-if(bestScore < attack18) { bestScore = attack18; best = attack18; }
-if(bestScore < attack33) { bestScore = attack33; best = attack33; }
-if(bestScore < attack21) { bestScore = attack21; best = attack21; }
-if(bestScore < attack14) { bestScore = attack14; best = attack14; }
+if(bestScore < attack24) { bestScore = attack24; best = 24; }
+if(bestScore < attack15) { bestScore = attack15; best = 15; }
+if(bestScore < attack30) { bestScore = attack30; best = 30; }
+if(bestScore < attack17) { bestScore = attack17; best = 17; }
+if(bestScore < attack35) { bestScore = attack35; best = 35; }
+if(bestScore < attack34) { bestScore = attack34; best = 34; }
+if(bestScore < attack6) { bestScore = attack6; best = 6; }
+if(bestScore < attack31) { bestScore = attack31; best = 31; }
+if(bestScore < attack20) { bestScore = attack20; best = 20; }
+if(bestScore < attack18) { bestScore = attack18; best = 18; }
+if(bestScore < attack33) { bestScore = attack33; best = 33; }
+if(bestScore < attack21) { bestScore = attack21; best = 21; }
+if(bestScore < attack14) { bestScore = attack14; best = 14; }
 var info = MicroManagerSplasher.microInfos[Direction.EAST.ordinal()];
 info.atkValue=bestScore;
 info.atkLoc=id2loc(best);
 }
 if(rc.canMove(Direction.NORTHEAST)){
 int best = -1; int bestScore = 0;
-if(bestScore < attack12) { bestScore = attack12; best = attack12; }
-if(bestScore < attack30) { bestScore = attack30; best = attack30; }
-if(bestScore < attack17) { bestScore = attack17; best = attack17; }
-if(bestScore < attack3) { bestScore = attack3; best = attack3; }
-if(bestScore < attack34) { bestScore = attack34; best = attack34; }
-if(bestScore < attack6) { bestScore = attack6; best = attack6; }
-if(bestScore < attack31) { bestScore = attack31; best = attack31; }
-if(bestScore < attack20) { bestScore = attack20; best = attack20; }
-if(bestScore < attack7) { bestScore = attack7; best = attack7; }
-if(bestScore < attack33) { bestScore = attack33; best = attack33; }
-if(bestScore < attack21) { bestScore = attack21; best = attack21; }
-if(bestScore < attack5) { bestScore = attack5; best = attack5; }
-if(bestScore < attack1) { bestScore = attack1; best = attack1; }
+if(bestScore < attack12) { bestScore = attack12; best = 12; }
+if(bestScore < attack30) { bestScore = attack30; best = 30; }
+if(bestScore < attack17) { bestScore = attack17; best = 17; }
+if(bestScore < attack3) { bestScore = attack3; best = 3; }
+if(bestScore < attack34) { bestScore = attack34; best = 34; }
+if(bestScore < attack6) { bestScore = attack6; best = 6; }
+if(bestScore < attack31) { bestScore = attack31; best = 31; }
+if(bestScore < attack20) { bestScore = attack20; best = 20; }
+if(bestScore < attack7) { bestScore = attack7; best = 7; }
+if(bestScore < attack33) { bestScore = attack33; best = 33; }
+if(bestScore < attack21) { bestScore = attack21; best = 21; }
+if(bestScore < attack5) { bestScore = attack5; best = 5; }
+if(bestScore < attack1) { bestScore = attack1; best = 1; }
 var info = MicroManagerSplasher.microInfos[Direction.NORTHEAST.ordinal()];
 info.atkValue=bestScore;
 info.atkLoc=id2loc(best);
