@@ -50,7 +50,7 @@ public class Main {
         static final int PAINT = 0, MONEY = 1, DEFENSE = 2;
         static final int UNSEEN = 3;
         static final int ENEMY_PAINT = 4;
-        static final int WRONG = -1;
+        static final int ALLY_PAINT = 5;
 
         static final int[] OgCodes = new int[]{18157905, 15583086, 4685252};
 
@@ -240,6 +240,7 @@ public class Main {
                 write("int ans = 0;");
                 write("long colorBit;");
                 write("boolean enemyPaint = false;");
+                write("boolean allyPaint = false;");
 
 
 
@@ -255,10 +256,12 @@ public class Main {
                     write("case ALLY_PRIMARY:");
                     ++tabs;
                     write("colorBit = 1;");
+                    write("allyPaint = true;");
                     write("break;");
                     --tabs;
                     write("case ALLY_SECONDARY:");
                     ++tabs;
+                    write("allyPaint = true;");
                     write("colorBit = 2;");
                     write("break;");
                     --tabs;
@@ -288,6 +291,7 @@ public class Main {
                 }
                 if (unseen) write ("ans |= " + (1 << UNSEEN) + ";");
                 write("if (enemyPaint) ans |= " + (1 << ENEMY_PAINT) + ";");
+                write("if (allyPaint) ans |= " + (1 << ALLY_PAINT) + ";");
                 write("return ans;");
                 --tabs;
                 write("}");
@@ -411,82 +415,6 @@ public class Main {
                 --tabs;
                 write("}");
             }
-
-
-            /*
-
-
-            write("static void drawPattern (MapLocation ruinLoc, int pattern) throws GameActionException {");
-            ++tabs;
-            write("");
-
-            write("if (rc.getPaint() <= Constants.MIN_SOLDIER_MOVEMENT) return;");
-
-            write("if (!rc.isActionReady()) return;");
-
-            write("");
-
-
-
-            write( "MapLocation myLoc = rc.getLocation();");
-            write("int dx = myLoc.x - ruinLoc.x, dy = myLoc.y - ruinLoc.y;");
-            write("int dencode = (dx+4)*9 + (dy+4);");
-
-            write("int pt = switch(pattern){");
-            ++tabs;
-            write("case PAINT -> " + OgCodes[PAINT] + ";");
-            write("case MONEY -> " + OgCodes[MONEY]+ ";");
-            write("default -> " + OgCodes[DEFENSE]+ ";");
-            --tabs;
-            write("};");
-
-            write("switch(dencode){");
-            ++tabs;
-
-            used = new boolean[81];
-
-            for (int i = 0; i < 81; ++i){
-                if (used[i]) continue;
-                int dx = (i/9) - 4, dy = (i%9) - 4;
-                if (dx*dx + dy*dy > VISION_RANGE_SQ) continue;
-                //int vision = getVision(dx,dy);
-                int attack = getAttack(dx,dy);
-                for (int j = 0; j < 81; ++j){
-                    int dxj = (j/9) - 4, dyj = (j%9) - 4;
-                    if (dxj*dxj + dyj*dyj > VISION_RANGE_SQ) continue;
-                    if (getAttack(dxj, dyj) == attack){
-                        write("case "+ j + ":");
-                        used[j] = true;
-                    }
-                }
-                ++tabs;
-
-                for (int j = 0; j < 24; ++j){
-                    int ind = ruinLocs[j].index;
-                    if (((attack >>> ind)& 1) == 0){
-                        continue;
-                    }
-
-                    write("if(" + ruinLocs[j].getMapInfoName() + ".getPaint() == PaintType.EMPTY) {");
-                    ++tabs;
-                    //write("case EMPTY:");
-                    //++tabs;
-
-                    if (ruinLocs[j].index > 0) write("rc.attack(" + ruinLocs[j].getName() + ", ((pt >>> " + ruinLocs[j].index + ")&1) > 0);");
-                    else write("rc.attack(" + ruinLocs[j].getName() + ", (pt&1) > 0);");
-                    write("return;");
-                    //--tabs;
-                    --tabs;
-                    write("}");
-                }
-                write("break;");
-                --tabs;
-
-            }
-            --tabs;
-            write("}");*/
-
-
 
 
 

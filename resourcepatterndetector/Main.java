@@ -311,54 +311,47 @@ public class Main {
             }
 
 
+            /*================================ CHECK DRAWABILITY =================================================*/
+            write("");
+            write("");
+            write("");
+            write("static boolean shouldPaint (MapLocation loc) throws GameActionException {");
 
-             /*================================= CASES =================================*/
-
-            /*for (int i = 0; i < 100; ++i) {
-                Main.dx = i / 10;
-                Main.dy = i % 10;
-                Collections.sort(ruinLocs);
-
-                write("static MapLocation process" + i + "() throws GameActionException {" + " // (" + Main.dx + "," + Main.dy + ")");
-
+            ++tabs;
+            write("switch(loc.x*4 + loc.y%16){");
+            ++tabs;
+            for (int i = 0; i < 16; ++i){
+                int dx = i/4, dy = i%4;
+                write("case "+ i + ":");
                 ++tabs;
-                write("MapLocation ans = null;");
-
-                for (int x = 0; x < ruinLocs.size(); ++x) {
-                    write("if (rc.onTheMap(" + ruinLocs.get(x).getName() + ") && " + "!" + ruinLocs.get(x).getMapInfoName() + ".isWall()" + " && "
-                            + "!" + ruinLocs.get(x).getMapInfoName() + ".hasRuin()" + " && "
-                            + "(maxT || !Map.isNearRuin(" + ruinLocs.get(x).getName() + "))){" + addComment(x));
-                    ++tabs;
-
-                    write("PaintType p = " + ruinLocs.get(x).getMapInfoName() + ".getPaint();");
-                    write("if (!p.isEnemy() && p != PaintType." + getPaintType(ruinLocs.get(x).getPaintBit()) + "){");
-                    ++tabs;
-                    if (ruinLocs.get(x).dist(0, 0) <= ATTACK_RANGE_SQ && !ruinLocs.get(x).isOtherQuadrant()) {
-                        write("if (ready){ ");
-                        ++tabs;
-                        write("rc.attack(" + ruinLocs.get(x).getName() + ", " + (ruinLocs.get(x).getPaintBit()  ? "true" : "false" )+ ");");
-                        //write("ready = false;");
-                        --tabs;
-                        write("}");
+                int[] ddx = switch(dx){
+                    case 0 -> new int[]{-2,2};
+                    case 1-> new int[]{1};
+                    case 2-> new int[]{0};
+                    default -> new int[]{-1};
+                };
+                int[] ddy = switch(dy){
+                    case 0 -> new int[]{-2,2};
+                    case 1-> new int[]{1};
+                    case 2-> new int[]{0};
+                    default -> new int[]{-1};
+                };
+                for (int xx = 0; xx < ddx.length; ++xx){
+                    for (int yy = 0; yy < ddy.length; ++yy){
+                        write("if (!Map.forbiddenCenter(loc.translate("+ddx[xx]+","+ddy[yy] + "))) return true;");
                     }
-                    write("return " + ruinLocs.get(x).getName() + ";");
-
-                    --tabs;
-                    write("}");
-                    --tabs;
-                    write("}");
                 }
-
-                write("return ans;");
-
+                write("return false;");
+                write("break;");
                 --tabs;
-                write("}");
+            }
+            --tabs;
+            write("}");
 
-                write("");
-                write("");
+            write("return false");
 
-
-            }*/
+            --tabs;
+            write("}");
 
             writer.close();
 
