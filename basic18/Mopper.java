@@ -1,4 +1,4 @@
-package basic17;
+package basic18;
 
 import battlecode.common.*;
 
@@ -51,7 +51,7 @@ public class Mopper extends Unit {
         if (recovering && TowerManager.closestPaintTower != null) return TowerManager.closestPaintTower;
         MapLocation target = getClosestEnemy();
         if (target == null) target = getClosestEnemyPaint();
-        if (target == null) target = searchClosestHurt();
+        if (target == null && 2*rc.getPaint() > rc.getType().paintCapacity + Constants.MIN_GIVING_THRESHOLD) target = searchClosestHurt();
         if (target == null) target = explore.getExplore3Target();
         return target;
     }

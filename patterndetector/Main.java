@@ -241,6 +241,7 @@ public class Main {
                 write("long colorBit;");
                 write("boolean enemyPaint = false;");
                 write("boolean allyPaint = false;");
+                write("boolean emptyTiles = false;");
 
 
 
@@ -255,8 +256,8 @@ public class Main {
                     ++tabs;
                     write("case ALLY_PRIMARY:");
                     ++tabs;
-                    write("colorBit = 1;");
                     write("allyPaint = true;");
+                    write("colorBit = 1;");
                     write("break;");
                     --tabs;
                     write("case ALLY_SECONDARY:");
@@ -267,6 +268,7 @@ public class Main {
                     --tabs;
                     write("case EMPTY:");
                     ++tabs;
+                    write("emptyTiles = true;");
                     write("colorBit = 0;");
                     write("break;");
                     --tabs;
@@ -291,7 +293,7 @@ public class Main {
                 }
                 if (unseen) write ("ans |= " + (1 << UNSEEN) + ";");
                 write("if (enemyPaint) ans |= " + (1 << ENEMY_PAINT) + ";");
-                write("if (allyPaint) ans |= " + (1 << ALLY_PAINT) + ";");
+                write("if (allyPaint || !emptyTiles) ans |= " + (1 << ALLY_PAINT) + ";");
                 write("return ans;");
                 --tabs;
                 write("}");
@@ -395,7 +397,7 @@ public class Main {
                         }
 
 
-                        write("if(" +  newRuinLocs.get(j).getMapInfoName() + ".getPaint() != PaintType." + getPaintType((OgCodes[t] >>>  newRuinLocs.get(j).index) & 1) + ") {");
+                        write("if(" +  newRuinLocs.get(j).getMapInfoName() + ".getPaint() != PaintType." + getPaintType((OgCodes[t] >>>  newRuinLocs.get(j).index) & 1) + " && !" + newRuinLocs.get(j).getMapInfoName() + ".getPaint().isEnemy()) {");
                         ++tabs;
                         //write("case EMPTY:");
                         //++tabs;
