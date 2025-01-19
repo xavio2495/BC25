@@ -129,10 +129,10 @@ p('''
 MapLocation myLoc = rc.getLocation();
 ''')
 
-for id in score_ids:
+for id in sorted(list(score_ids)):
     p(f'int {id} = 0;')
 
-p('for(RobotInfo r : rc.senseNearbyRobots(10, rc.getTeam().opponent())) {')
+p('for(RobotInfo r : rc.senseNearbyRobots(13, rc.getTeam().opponent())) {')
 p('    if(r.getPaintAmount() != 0 && !r.type.isTowerType()) {')
 p('        MapLocation loc = r.location;')
 p('        int dx = loc.x - myLoc.x;')
