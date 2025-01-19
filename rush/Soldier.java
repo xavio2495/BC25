@@ -11,6 +11,7 @@ public class Soldier extends Unit {
         TowerManager.update();
         if (TowerManager.closestTower != null) Map.setSpawn(TowerManager.closestTower);
         else Map.setSpawn(rc.getLocation());
+
     }
 
     void startTurn() throws GameActionException {

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 public class Main {
 
@@ -17,6 +18,10 @@ public class Main {
     static final int code = 5147;
 
     static CustomLoc center;
+
+
+    final static int[] diffX = new int[]{0,1,0,-1,0,1,1,-1,-1,2,0,-2,0};
+    final static int[] diffY = new int[]{0,0,1,0,-1,1,-1,-1,1,0,2,0,-2};
 
 
     //static int DX, DY;
@@ -67,6 +72,14 @@ public class Main {
             int cx = dx + Main.dx, cy = dy + Main.dy;
             return (cx < 0 || cx >= 5 || cy < 0 || cy >= 5);
         }*/
+    }
+
+    static String getPaint(int dx, int dy){
+        int c = ((dx+4)%4)*4 + (dy+4)%4;
+        if ((((code >>> c) & 1) >0)) {
+            return "PaintType.ALLY_SECONDARY";
+        }
+        return "PaintType.ALLY_PRIMARY";
     }
 
     static class PatternDetector{
@@ -198,6 +211,10 @@ public class Main {
             write("static MapLocation attackLoc;");
             write("static MapLocation center;");
             write("static PaintType p;");
+            write("static int paintPositions;");
+
+            write("");
+            write("");
 
 
             /* ================================== CHECK PATTERN =============================== */
@@ -318,7 +335,7 @@ public class Main {
             write("static boolean shouldPaint (MapLocation loc) throws GameActionException {");
 
             ++tabs;
-            write("switch(loc.x*4 + loc.y%16){");
+            write("switch((loc.x*4 + (loc.y%4))%16){");
             ++tabs;
             for (int i = 0; i < 16; ++i){
                 int dx = i/4, dy = i%4;
@@ -341,14 +358,157 @@ public class Main {
                         write("if (!Map.forbiddenCenter(loc.translate("+ddx[xx]+","+ddy[yy] + "))) return true;");
                     }
                 }
-                write("return false;");
+                //write("return false;");
                 write("break;");
                 --tabs;
             }
             --tabs;
             write("}");
 
-            write("return false");
+            write("return false;");
+
+            --tabs;
+            write("}");
+
+
+
+            /*=========================================== CHECK CENTERS ============================================*/
+            write("");
+            write("");
+            write("");
+            write("static void completePatterns () throws GameActionException {");
+
+            ++tabs;
+            write("MapLocation loc = rc.getLocation();");
+            write("switch((loc.x*4 + (loc.y%4))%16){");
+            ++tabs;
+            for (int i = 0; i < 16; ++i){
+                int dx = i/4, dy = i%4;
+                write("case "+ i + ":");
+                ++tabs;
+                int[] ddx = switch(dx){
+                    case 0 -> new int[]{-2,2};
+                    case 1-> new int[]{1};
+                    case 2-> new int[]{0};
+                    default -> new int[]{-1};
+                };
+                int[] ddy = switch(dy){
+                    case 0 -> new int[]{-2,2};
+                    case 1-> new int[]{1};
+                    case 2-> new int[]{0};
+                    default -> new int[]{-1};
+                };
+                for (int xx = 0; xx < ddx.length; ++xx){
+                    for (int yy = 0; yy < ddy.length; ++yy){
+                        write("if (rc.canCompleteResourcePattern(loc.translate("+ddx[xx]+","+ddy[yy] + "))) rc.completeResourcePattern(loc.translate("+ddx[xx] + "," + ddy[yy] + "));");
+                    }
+                }
+                //write("return false;");
+                write("break;");
+                --tabs;
+            }
+            --tabs;
+            write("}");
+
+            //write("return false");
+
+            --tabs;
+            write("}");
+
+
+            /*=========================================== CHECK PAINTINGLOCS ============================================*/
+            write("");
+            write("");
+            write("");
+            write("static void paintNearby () throws GameActionException {");
+
+            ++tabs;
+            write("paintPositions = 0;");
+            write("MapLocation l0 = rc.getLocation();");
+            for (int i = 1; i < 13; ++i){
+                write("MapLocation l" + i + " = l0.translate(" + diffX[i] + "," + diffY[i] + ");");
+            }
+            write("");
+            write("int code = (l0.x*4 + (l0.y%4))%16;");
+            write("switch(code){");
+            ++tabs;
+            for (int i = 0; i < 16; ++i){
+                int dx = i/4, dy = i%4;
+                write("case " + i + ":");
+                ++tabs;
+
+                HashMap<Integer, Integer> centerToLoc = new HashMap<>();
+                for (int j = 0; j < 13; ++j){
+                    int iX = diffX[j], iY = diffY[j];
+                    int[] ddx = switch((dx + iX + 4)%4){
+                        case 0 -> new int[]{-2,2};
+                        case 1-> new int[]{1};
+                        case 2-> new int[]{0};
+                        default -> new int[]{-1};
+                    };
+                    int[] ddy = switch((dy + iY + 4)%4){
+                        case 0 -> new int[]{-2,2};
+                        case 1-> new int[]{1};
+                        case 2-> new int[]{0};
+                        default -> new int[]{-1};
+                    };
+                    for (int xx = 0; xx < ddx.length; ++xx){
+                        for (int yy = 0; yy < ddy.length; ++yy){
+                            int trueDifX = iX + ddx[xx], trueDifY = iY + ddy[yy];
+                            int key = (trueDifX + 10)* 100 + (trueDifY + 10);
+                            if (!centerToLoc.containsKey(key)) centerToLoc.put(key, 0);
+                            centerToLoc.put(key, (centerToLoc.get(key) | (1 << j)));
+                        }
+                    }
+                }
+                for (Integer key : centerToLoc.keySet()){
+                    int trueDifX = key/100 - 10, trueDifY = (key%100) - 10;
+                    int sol = centerToLoc.get(key);
+                    write("if (!Map.forbiddenCenter(l0.translate(" + trueDifX + "," + trueDifY+ "))) { paintPositions |= " + sol + "; rc.setIndicatorDot(l0.translate(" + trueDifX + "," + trueDifY + "), 0, 200, 0);}");
+                }
+                write("if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, " + getPaint(dx, dy) + ")) return;");
+                write("if (ResourcePatternManager.attackLoc != null) {");
+                ++tabs;
+                write("int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;");
+                write("switch (dx){");
+                ++tabs;
+                for (int dxi = -2; dxi <= 2; ++dxi){
+                    write("case " + dxi + ":");
+                    ++tabs;
+                    write("switch(dy){");
+                    ++tabs;
+                    for (int dyi = -2; dyi <= 2; ++dyi){
+                        for (int o = 1; o < 13; ++o){
+                            if (dxi == diffX[o] && dyi == diffY[o]){
+                                write("case " + dyi + ":");
+                                ++tabs;
+                                write("if (((paintPositions & " + (1 << o)  + ") != 0) && Soldier.tryPaint(l" + o + ", " + getPaint(dx + diffX[o], dy + diffY[o]) + ")) return;");
+                                write("break;");
+                                --tabs;
+                            }
+                        }
+                    }
+                    --tabs;
+                    write("}");
+                    write("break;");
+                    --tabs;
+                }
+                --tabs;
+                write("}");
+                --tabs;
+                write("}");
+
+                for (int o = 1; o < 13; ++o){
+                    write("if (((paintPositions & " + (1 << o)  + ") != 0) && Soldier.tryPaint(l" + o + ", " + getPaint(dx + diffX[o], dy + diffY[o]) + ")) return;");
+                }
+                write("break;");
+                --tabs;
+                //write("}");
+            }
+            --tabs;
+            write("}");
+
+            //write("return false");
 
             --tabs;
             write("}");
