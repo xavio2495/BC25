@@ -172,16 +172,12 @@ public class MicroManagerSplasher {
 
         int towersInRange = 0;
         int moppersInRange = 0;
-        int moppersInMoveRange = 0;
-        int allyMoppers = 0;
         Direction dir;
         MapLocation loc;
         PaintType p;
         int closestDistMopper = Constants.INF;
         int adjAllies;
         boolean isAccessible = true;
-        int closestDistEnemy = Constants.INF;
-        boolean inAttackRange = false;
 
         MicroInfo(Direction dir) throws GameActionException {
             this.dir = dir;
@@ -203,17 +199,7 @@ public class MicroManagerSplasher {
             if (!isAccessible) return;
             int dist = unitLoc.distanceSquaredTo(loc);
             if (dist <= UnitType.MOPPER.actionRadiusSquared) ++moppersInRange;
-            //if (dist <= 8) ++moppersInMoveRange;
             if (dist < closestDistMopper) closestDistMopper = dist;
-            if (dist <= 2) inAttackRange = true;
-            if (dist < closestDistEnemy) closestDistEnemy = dist;
-        }
-
-        void updateAllyMopper(){
-            if (!isAccessible) return;
-            int dist = unitLoc.distanceSquaredTo(loc);
-            if (dist <= 8) ++allyMoppers;
-            if (dist <= 2) ++adjAllies;
         }
 
         void updateAlly(){
