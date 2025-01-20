@@ -226,7 +226,7 @@ public class MicroManagerSplasher {
 
         int attackScore() {
             if(canAttack && atkLoc != null) {
-                return 10000*atkValue;
+                return 100*atkValue;
             }
             return 0;
         }
