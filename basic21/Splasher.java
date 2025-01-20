@@ -10,21 +10,24 @@ public class Splasher extends Unit {
 
     Splasher(RobotController rc) throws GameActionException {
         super(rc);
-        Map.initialize();
     }
 
     void startTurn() throws GameActionException {
-        Map.fill();
-        updateClosestRuin();
+        //updateClosestRuin();
+        TowerManager.updateAll();
+    }
+
+    void endTurn() throws GameActionException {
+        super.endTurn();
     }
 
     boolean shouldRecover() {
         if (rc.getChips() > Constants.NO_HEAL_CHIPS) return false;
-        return (rc.getPaint() < Constants.CRITICAL_PAINT_SPLASHER);
+        return (TowerManager.closestPaintTower != null && rc.getPaint() < Constants.CRITICAL_PAINT_SPLASHER);
     }
 
     void runTurn() throws GameActionException {
-        tryWithdraw();
+        //tryWithdraw();
         if (shouldRecover())
             recovering = true;
         if (rc.getPaint() >= UnitType.SPLASHER.paintCapacity - Constants.MIN_TRANSFER_PAINT)
@@ -32,7 +35,6 @@ public class Splasher extends Unit {
         tryAttackTile();
         move();
         tryAttackTile();
-        tryGivePaint();
         tryWithdraw();
     }
 
@@ -40,7 +42,7 @@ public class Splasher extends Unit {
         if (!rc.isMovementReady())
             return;
         if (MicroManagerSplasher.doMicro())
-            return; // TODO custom micro for splashers?
+            return;
         MapLocation target = getTarget();
         pathfinding.moveTo(target);
     }

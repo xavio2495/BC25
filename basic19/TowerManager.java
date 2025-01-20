@@ -44,6 +44,7 @@ public class TowerManager {
     }
 
 
+
     static void update(RobotInfo r) throws GameActionException  {
         if (r != null && r.getTeam() == MyRobot.rc.getTeam()){
             switch(r.getType()){

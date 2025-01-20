@@ -3,6 +3,9 @@ import battlecode.common.*;
 
 public class ResourcePatternManager {
 
+    static void init(){
+        rc = MyRobot.rc;
+    }
 
     static MapLocation l2;
     static MapInfo m2;
@@ -152,6 +155,9 @@ public class ResourcePatternManager {
     static MapLocation attackLoc;
     static MapLocation center;
     static PaintType p;
+    static int paintPositions;
+
+
     static MapLocation getBestTarget () throws GameActionException {
 
         rc = MyRobot.rc;
@@ -21908,67 +21914,1439 @@ public class ResourcePatternManager {
 
 
     static boolean shouldPaint (MapLocation loc) throws GameActionException {
-        switch((loc.x%4)*4 + loc.y%4){
+        switch((loc.x*4 + (loc.y%4))%16){
             case 0:
                 if (!Map.forbiddenCenter(loc.translate(-2,-2))) return true;
                 if (!Map.forbiddenCenter(loc.translate(-2,2))) return true;
                 if (!Map.forbiddenCenter(loc.translate(2,-2))) return true;
                 if (!Map.forbiddenCenter(loc.translate(2,2))) return true;
-                return false;
+                break;
             case 1:
                 if (!Map.forbiddenCenter(loc.translate(-2,1))) return true;
                 if (!Map.forbiddenCenter(loc.translate(2,1))) return true;
-                return false;
+                break;
             case 2:
                 if (!Map.forbiddenCenter(loc.translate(-2,0))) return true;
                 if (!Map.forbiddenCenter(loc.translate(2,0))) return true;
-                return false;
+                break;
             case 3:
                 if (!Map.forbiddenCenter(loc.translate(-2,-1))) return true;
                 if (!Map.forbiddenCenter(loc.translate(2,-1))) return true;
-                return false;
+                break;
             case 4:
                 if (!Map.forbiddenCenter(loc.translate(1,-2))) return true;
                 if (!Map.forbiddenCenter(loc.translate(1,2))) return true;
-                return false;
+                break;
             case 5:
                 if (!Map.forbiddenCenter(loc.translate(1,1))) return true;
-                return false;
+                break;
             case 6:
                 if (!Map.forbiddenCenter(loc.translate(1,0))) return true;
-                return false;
+                break;
             case 7:
                 if (!Map.forbiddenCenter(loc.translate(1,-1))) return true;
-                return false;
+                break;
             case 8:
                 if (!Map.forbiddenCenter(loc.translate(0,-2))) return true;
                 if (!Map.forbiddenCenter(loc.translate(0,2))) return true;
-                return false;
+                break;
             case 9:
                 if (!Map.forbiddenCenter(loc.translate(0,1))) return true;
-                return false;
+                break;
             case 10:
                 if (!Map.forbiddenCenter(loc.translate(0,0))) return true;
-                return false;
+                break;
             case 11:
                 if (!Map.forbiddenCenter(loc.translate(0,-1))) return true;
-                return false;
+                break;
             case 12:
                 if (!Map.forbiddenCenter(loc.translate(-1,-2))) return true;
                 if (!Map.forbiddenCenter(loc.translate(-1,2))) return true;
-                return false;
+                break;
             case 13:
                 if (!Map.forbiddenCenter(loc.translate(-1,1))) return true;
-                return false;
+                break;
             case 14:
                 if (!Map.forbiddenCenter(loc.translate(-1,0))) return true;
-                return false;
+                break;
             case 15:
                 if (!Map.forbiddenCenter(loc.translate(-1,-1))) return true;
-                return false;
+                break;
         }
         return false;
     }
 
+
+
+    static void completePatterns () throws GameActionException {
+        MapLocation loc = rc.getLocation();
+        switch((loc.x*4 + (loc.y%4))%16){
+            case 0:
+                if (rc.canCompleteResourcePattern(loc.translate(-2,-2))) rc.completeResourcePattern(loc.translate(-2,-2));
+                if (rc.canCompleteResourcePattern(loc.translate(-2,2))) rc.completeResourcePattern(loc.translate(-2,2));
+                if (rc.canCompleteResourcePattern(loc.translate(2,-2))) rc.completeResourcePattern(loc.translate(2,-2));
+                if (rc.canCompleteResourcePattern(loc.translate(2,2))) rc.completeResourcePattern(loc.translate(2,2));
+                break;
+            case 1:
+                if (rc.canCompleteResourcePattern(loc.translate(-2,1))) rc.completeResourcePattern(loc.translate(-2,1));
+                if (rc.canCompleteResourcePattern(loc.translate(2,1))) rc.completeResourcePattern(loc.translate(2,1));
+                break;
+            case 2:
+                if (rc.canCompleteResourcePattern(loc.translate(-2,0))) rc.completeResourcePattern(loc.translate(-2,0));
+                if (rc.canCompleteResourcePattern(loc.translate(2,0))) rc.completeResourcePattern(loc.translate(2,0));
+                break;
+            case 3:
+                if (rc.canCompleteResourcePattern(loc.translate(-2,-1))) rc.completeResourcePattern(loc.translate(-2,-1));
+                if (rc.canCompleteResourcePattern(loc.translate(2,-1))) rc.completeResourcePattern(loc.translate(2,-1));
+                break;
+            case 4:
+                if (rc.canCompleteResourcePattern(loc.translate(1,-2))) rc.completeResourcePattern(loc.translate(1,-2));
+                if (rc.canCompleteResourcePattern(loc.translate(1,2))) rc.completeResourcePattern(loc.translate(1,2));
+                break;
+            case 5:
+                if (rc.canCompleteResourcePattern(loc.translate(1,1))) rc.completeResourcePattern(loc.translate(1,1));
+                break;
+            case 6:
+                if (rc.canCompleteResourcePattern(loc.translate(1,0))) rc.completeResourcePattern(loc.translate(1,0));
+                break;
+            case 7:
+                if (rc.canCompleteResourcePattern(loc.translate(1,-1))) rc.completeResourcePattern(loc.translate(1,-1));
+                break;
+            case 8:
+                if (rc.canCompleteResourcePattern(loc.translate(0,-2))) rc.completeResourcePattern(loc.translate(0,-2));
+                if (rc.canCompleteResourcePattern(loc.translate(0,2))) rc.completeResourcePattern(loc.translate(0,2));
+                break;
+            case 9:
+                if (rc.canCompleteResourcePattern(loc.translate(0,1))) rc.completeResourcePattern(loc.translate(0,1));
+                break;
+            case 10:
+                if (rc.canCompleteResourcePattern(loc.translate(0,0))) rc.completeResourcePattern(loc.translate(0,0));
+                break;
+            case 11:
+                if (rc.canCompleteResourcePattern(loc.translate(0,-1))) rc.completeResourcePattern(loc.translate(0,-1));
+                break;
+            case 12:
+                if (rc.canCompleteResourcePattern(loc.translate(-1,-2))) rc.completeResourcePattern(loc.translate(-1,-2));
+                if (rc.canCompleteResourcePattern(loc.translate(-1,2))) rc.completeResourcePattern(loc.translate(-1,2));
+                break;
+            case 13:
+                if (rc.canCompleteResourcePattern(loc.translate(-1,1))) rc.completeResourcePattern(loc.translate(-1,1));
+                break;
+            case 14:
+                if (rc.canCompleteResourcePattern(loc.translate(-1,0))) rc.completeResourcePattern(loc.translate(-1,0));
+                break;
+            case 15:
+                if (rc.canCompleteResourcePattern(loc.translate(-1,-1))) rc.completeResourcePattern(loc.translate(-1,-1));
+                break;
+        }
+    }
+
+
+
+    static void paintNearby () throws GameActionException {
+        paintPositions = 0;
+        MapLocation l0 = rc.getLocation();
+        MapLocation l1 = l0.translate(1,0);
+        MapLocation l2 = l0.translate(0,1);
+        MapLocation l3 = l0.translate(-1,0);
+        MapLocation l4 = l0.translate(0,-1);
+        MapLocation l5 = l0.translate(1,1);
+        MapLocation l6 = l0.translate(1,-1);
+        MapLocation l7 = l0.translate(-1,-1);
+        MapLocation l8 = l0.translate(-1,1);
+        MapLocation l9 = l0.translate(2,0);
+        MapLocation l10 = l0.translate(0,2);
+        MapLocation l11 = l0.translate(-2,0);
+        MapLocation l12 = l0.translate(0,-2);
+
+        int code = (l0.x*4 + (l0.y%4))%16;
+        switch(code){
+            case 0:
+                if (!Map.forbiddenCenter(l0.translate(-2,-2))) paintPositions |= 6297;
+                if (!Map.forbiddenCenter(l0.translate(2,-2))) paintPositions |= 4691;
+                if (!Map.forbiddenCenter(l0.translate(-2,2))) paintPositions |= 3341;
+                if (!Map.forbiddenCenter(l0.translate(2,2))) paintPositions |= 1575;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_SECONDARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                break;
+            case 1:
+                if (!Map.forbiddenCenter(l0.translate(-2,-3))) paintPositions |= 4240;
+                if (!Map.forbiddenCenter(l0.translate(2,-3))) paintPositions |= 4176;
+                if (!Map.forbiddenCenter(l0.translate(-2,1))) paintPositions |= 3485;
+                if (!Map.forbiddenCenter(l0.translate(2,1))) paintPositions |= 1655;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_SECONDARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_SECONDARY)) return;
+                break;
+            case 2:
+                if (!Map.forbiddenCenter(l0.translate(-2,-4))) paintPositions |= 4096;
+                if (!Map.forbiddenCenter(l0.translate(2,-4))) paintPositions |= 4096;
+                if (!Map.forbiddenCenter(l0.translate(-2,0))) paintPositions |= 7581;
+                if (!Map.forbiddenCenter(l0.translate(2,0))) paintPositions |= 5751;
+                if (!Map.forbiddenCenter(l0.translate(-2,4))) paintPositions |= 1024;
+                if (!Map.forbiddenCenter(l0.translate(2,4))) paintPositions |= 1024;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_PRIMARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_SECONDARY)) return;
+                break;
+            case 3:
+                if (!Map.forbiddenCenter(l0.translate(-2,-1))) paintPositions |= 6557;
+                if (!Map.forbiddenCenter(l0.translate(2,-1))) paintPositions |= 4727;
+                if (!Map.forbiddenCenter(l0.translate(-2,3))) paintPositions |= 1284;
+                if (!Map.forbiddenCenter(l0.translate(2,3))) paintPositions |= 1060;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_SECONDARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_SECONDARY)) return;
+                break;
+            case 4:
+                if (!Map.forbiddenCenter(l0.translate(1,-2))) paintPositions |= 4827;
+                if (!Map.forbiddenCenter(l0.translate(-3,-2))) paintPositions |= 2184;
+                if (!Map.forbiddenCenter(l0.translate(1,2))) paintPositions |= 1839;
+                if (!Map.forbiddenCenter(l0.translate(-3,2))) paintPositions |= 2312;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_SECONDARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                break;
+            case 5:
+                if (!Map.forbiddenCenter(l0.translate(1,-3))) paintPositions |= 4304;
+                if (!Map.forbiddenCenter(l0.translate(-3,-3))) paintPositions |= 128;
+                if (!Map.forbiddenCenter(l0.translate(1,1))) paintPositions |= 2047;
+                if (!Map.forbiddenCenter(l0.translate(-3,1))) paintPositions |= 2440;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_PRIMARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                break;
+            case 6:
+                if (!Map.forbiddenCenter(l0.translate(1,-4))) paintPositions |= 4096;
+                if (!Map.forbiddenCenter(l0.translate(1,0))) paintPositions |= 6143;
+                if (!Map.forbiddenCenter(l0.translate(-3,0))) paintPositions |= 2440;
+                if (!Map.forbiddenCenter(l0.translate(1,4))) paintPositions |= 1024;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_PRIMARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_SECONDARY)) return;
+                break;
+            case 7:
+                if (!Map.forbiddenCenter(l0.translate(1,-1))) paintPositions |= 5119;
+                if (!Map.forbiddenCenter(l0.translate(-3,-1))) paintPositions |= 2440;
+                if (!Map.forbiddenCenter(l0.translate(1,3))) paintPositions |= 1316;
+                if (!Map.forbiddenCenter(l0.translate(-3,3))) paintPositions |= 256;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_PRIMARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                break;
+            case 8:
+                if (!Map.forbiddenCenter(l0.translate(0,-2))) paintPositions |= 6875;
+                if (!Map.forbiddenCenter(l0.translate(4,-2))) paintPositions |= 512;
+                if (!Map.forbiddenCenter(l0.translate(-4,-2))) paintPositions |= 2048;
+                if (!Map.forbiddenCenter(l0.translate(0,2))) paintPositions |= 3887;
+                if (!Map.forbiddenCenter(l0.translate(4,2))) paintPositions |= 512;
+                if (!Map.forbiddenCenter(l0.translate(-4,2))) paintPositions |= 2048;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_PRIMARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_SECONDARY)) return;
+                break;
+            case 9:
+                if (!Map.forbiddenCenter(l0.translate(0,1))) paintPositions |= 4095;
+                if (!Map.forbiddenCenter(l0.translate(4,1))) paintPositions |= 512;
+                if (!Map.forbiddenCenter(l0.translate(-4,1))) paintPositions |= 2048;
+                if (!Map.forbiddenCenter(l0.translate(0,-3))) paintPositions |= 4304;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_PRIMARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                break;
+            case 10:
+                if (!Map.forbiddenCenter(l0.translate(0,0))) paintPositions |= 8191;
+                if (!Map.forbiddenCenter(l0.translate(4,0))) paintPositions |= 512;
+                if (!Map.forbiddenCenter(l0.translate(-4,0))) paintPositions |= 2048;
+                if (!Map.forbiddenCenter(l0.translate(0,4))) paintPositions |= 1024;
+                if (!Map.forbiddenCenter(l0.translate(0,-4))) paintPositions |= 4096;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_SECONDARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                break;
+            case 11:
+                if (!Map.forbiddenCenter(l0.translate(0,-1))) paintPositions |= 7167;
+                if (!Map.forbiddenCenter(l0.translate(4,-1))) paintPositions |= 512;
+                if (!Map.forbiddenCenter(l0.translate(-4,-1))) paintPositions |= 2048;
+                if (!Map.forbiddenCenter(l0.translate(0,3))) paintPositions |= 1316;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_PRIMARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                break;
+            case 12:
+                if (!Map.forbiddenCenter(l0.translate(-1,2))) paintPositions |= 3375;
+                if (!Map.forbiddenCenter(l0.translate(3,2))) paintPositions |= 546;
+                if (!Map.forbiddenCenter(l0.translate(-1,-2))) paintPositions |= 6363;
+                if (!Map.forbiddenCenter(l0.translate(3,-2))) paintPositions |= 578;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_SECONDARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                break;
+            case 13:
+                if (!Map.forbiddenCenter(l0.translate(-1,-3))) paintPositions |= 4304;
+                if (!Map.forbiddenCenter(l0.translate(3,-3))) paintPositions |= 64;
+                if (!Map.forbiddenCenter(l0.translate(-1,1))) paintPositions |= 3583;
+                if (!Map.forbiddenCenter(l0.translate(3,1))) paintPositions |= 610;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_PRIMARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                break;
+            case 14:
+                if (!Map.forbiddenCenter(l0.translate(-1,4))) paintPositions |= 1024;
+                if (!Map.forbiddenCenter(l0.translate(-1,-4))) paintPositions |= 4096;
+                if (!Map.forbiddenCenter(l0.translate(-1,0))) paintPositions |= 7679;
+                if (!Map.forbiddenCenter(l0.translate(3,0))) paintPositions |= 610;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_PRIMARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_SECONDARY)) return;
+                break;
+            case 15:
+                if (!Map.forbiddenCenter(l0.translate(-1,3))) paintPositions |= 1316;
+                if (!Map.forbiddenCenter(l0.translate(3,3))) paintPositions |= 32;
+                if (!Map.forbiddenCenter(l0.translate(-1,-1))) paintPositions |= 6655;
+                if (!Map.forbiddenCenter(l0.translate(3,-1))) paintPositions |= 610;
+                if (((paintPositions & 1) != 0) && Soldier.tryPaint(l0, PaintType.ALLY_PRIMARY)) return;
+                if (ResourcePatternManager.attackLoc != null) {
+                    int dx = ResourcePatternManager.attackLoc.x - l0.x, dy = ResourcePatternManager.attackLoc.y - l0.y;
+                    switch (dx){
+                        case -2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case -1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 0:
+                            switch(dy){
+                                case -2:
+                                    if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case -1:
+                                    if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 2:
+                                    if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 1:
+                            switch(dy){
+                                case -1:
+                                    if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                                case 0:
+                                    if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                                case 1:
+                                    if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_SECONDARY)) return;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            switch(dy){
+                                case 0:
+                                    if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                if (((paintPositions & 2) != 0) && Soldier.tryPaint(l1, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 4) != 0) && Soldier.tryPaint(l2, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 8) != 0) && Soldier.tryPaint(l3, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 16) != 0) && Soldier.tryPaint(l4, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 32) != 0) && Soldier.tryPaint(l5, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 64) != 0) && Soldier.tryPaint(l6, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 128) != 0) && Soldier.tryPaint(l7, PaintType.ALLY_SECONDARY)) return;
+                if (((paintPositions & 256) != 0) && Soldier.tryPaint(l8, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 512) != 0) && Soldier.tryPaint(l9, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 1024) != 0) && Soldier.tryPaint(l10, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 2048) != 0) && Soldier.tryPaint(l11, PaintType.ALLY_PRIMARY)) return;
+                if (((paintPositions & 4096) != 0) && Soldier.tryPaint(l12, PaintType.ALLY_PRIMARY)) return;
+                break;
+        }
+    }
 
 }

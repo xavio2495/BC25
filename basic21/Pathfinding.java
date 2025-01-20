@@ -44,7 +44,7 @@ public class Pathfinding {
             if (!bugNav.isUsingBugnav() && turnsGreedy <= 0){
 
                 //System.err.println("Using bfs");
-                Direction dir = BFS.getBestDir(target);
+                Direction dir = BFSUnit.getBestDir(target);
                 if (dir != null && !MapTracker.check(rc.getLocation().add(dir))){
                     MovementManager.move(dir);
                     //return;

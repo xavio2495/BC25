@@ -17216,6 +17216,7 @@ public class RuinManager {
 
 
     static void drawPattern (MapLocation ruinLoc, int pattern) throws GameActionException {
+        if (!rc.canSenseLocation(ruinLoc)) return;
         l0 = ruinLoc.translate(-2,-2);
         if (rc.canSenseLocation(l0)) m0 = rc.senseMapInfo(l0);
         l1 = ruinLoc.translate(-2,-1);

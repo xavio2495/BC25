@@ -8,23 +8,22 @@ public class Mopper extends Unit {
 
     Mopper(RobotController rc) throws GameActionException {
         super(rc);
-        Map.initialize();
     }
 
     void startTurn() throws GameActionException {
-        Map.fill();
-        updateClosestRuin();
+        //updateClosestRuin();
+        TowerManager.updateAll();
     }
 
     boolean shouldRecover(){
         //if (rc.getRoundNum() >= Constants.NO_HEAL_ROUND) return false;
         if (rc.getChips() > Constants.NO_HEAL_CHIPS) return false;
-        return (rc.getPaint() < Constants.CRITICAL_PAINT_MOPPER);
+        return (TowerManager.closestPaintTower != null && rc.getPaint() < Constants.CRITICAL_PAINT_MOPPER);
     }
 
     void runTurn() throws GameActionException {
         completePatterns();
-        tryWithdraw();
+        //tryWithdraw();
         //tryAttackEnemy();
         if (shouldRecover()) recovering = true;
         if (rc.getPaint() >= UnitType.MOPPER.paintCapacity - Constants.MIN_TRANSFER_PAINT) recovering = false;
@@ -36,7 +35,8 @@ public class Mopper extends Unit {
         completePatterns();
     }
 
-    void endTurn(){
+    void endTurn() throws GameActionException {
+        super.endTurn();
     }
 
     void move() throws GameActionException {

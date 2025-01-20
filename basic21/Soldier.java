@@ -5,31 +5,19 @@ import battlecode.common.*;
 public class Soldier extends Unit {
 
     boolean recovering = false;
-
-    static enum Mode {
-        TOWERS,
-        RESOURCES,
-    }
-
-    Mode mode;
-
     Soldier(RobotController rc) throws GameActionException {
         super(rc);
         Map.initialize();
-
-        mode = Mode.TOWERS;
-        if(rc.getRoundNum() > 10 && Math.random() < 0.5) {
-            mode = Mode.RESOURCES;
-        }
+        Map.fill();
     }
 
     void startTurn() throws GameActionException {
-        Map.fill();
         updateClosestRuin();
         ResourcePatternManager.attackLoc = null;
     }
 
-    void endTurn(){
+    void endTurn() throws GameActionException {
+        super.endTurn();
     }
 
     void runTurn() throws GameActionException {
@@ -45,34 +33,12 @@ public class Soldier extends Unit {
     }
 
     void paintNearby() throws GameActionException {
-        if (rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER) return;
+        if (recovering) return;
         if (!rc.isActionReady()) return;
-        /*MapLocation myLoc = rc.getLocation();
-        if (!rc.isActionReady()) return;
-        MapInfo[] infos = rc.senseNearbyMapInfos(4);
-        for (MapInfo m : infos){
-            if (!Util.towerMax() && Map.isNearRuin(m.getMapLocation())) return;
-            int x = m.getMapLocation().x, y = m.getMapLocation().y;
-            PaintType targetPaint = ((x + y)%2 == 0 || (x + 7*y)%10 == 1) ? PaintType.ALLY_PRIMARY : PaintType.ALLY_SECONDARY;
-            if (m.getPaint().isEnemy() || m.getPaint() == targetPaint) continue;
-            if (rc.canAttack(m.getMapLocation())) rc.attack(m.getMapLocation(), targetPaint == PaintType.ALLY_SECONDARY);
-        }*/
-        MapLocation myLoc = rc.getLocation();
-        tryPaint(myLoc);
-        if (ResourcePatternManager.attackLoc != null) tryPaint(ResourcePatternManager.attackLoc);
-        if(tryPaint(myLoc.translate(1,0))) return;
-        if(tryPaint(myLoc.translate(0,1))) return;
-        if(tryPaint(myLoc.translate(-1,0))) return;
-        if(tryPaint(myLoc.translate(0,-1))) return;
-        if(tryPaint(myLoc.translate(1,1))) return;
-        if(tryPaint(myLoc.translate(1,-1))) return;
-        if(tryPaint(myLoc.translate(-1,-1))) return;
-        if(tryPaint(myLoc.translate(-1,1))) return;
-        if(tryPaint(myLoc.translate(2,0))) return;
-        if(tryPaint(myLoc.translate(0,2))) return;
-        if(tryPaint(myLoc.translate(-2,0))) return;
-        if(tryPaint(myLoc.translate(0,-2)))return;
 
+        if (rc.getRoundNum() > creationTurn) ResourcePatternManager.paintNearby();
+
+        if (!Util.towerMax() && Map.isNearRuin(rc.getLocation())) return;
         if (rc.senseMapInfo(rc.getLocation()).getPaint() == PaintType.EMPTY){
             if (rc.canAttack(rc.getLocation())){
                 int x = rc.getLocation().x%4, y = rc.getLocation().y%4;
@@ -83,31 +49,14 @@ public class Soldier extends Unit {
         }
     }
 
-    /*void paintSelf() throws GameActionException {
-        if (!rc.canAttack(rc.getLocation())) return;
-        MapLocation myLoc = rc.getLocation();
-        if (!Util.towerMax() && Map.isNearRuin(myLoc)) return;
-        int dx = myLoc.x;
-        int dy = myLoc.y;
-        PaintType targetPaint = ((dx + dy)%2 == 0 || (dx + 7*dy)%10 == 1) ? PaintType.ALLY_PRIMARY : PaintType.ALLY_SECONDARY;
-        PaintType cp = rc.senseMapInfo(rc.getLocation()).getPaint();
-        if (cp.isEnemy()) return;
-        if (cp == targetPaint) return;
-        rc.attack(rc.getLocation(), targetPaint == PaintType.ALLY_SECONDARY);
-    }*/
-
-    boolean tryPaint(MapLocation loc) throws GameActionException {
+    static boolean tryPaint(MapLocation loc, PaintType t) throws GameActionException {
         if (!rc.canSenseLocation(loc)) return false;
         MapInfo m = rc.senseMapInfo(loc);
-        if (m.isWall() || m.hasRuin() || !ResourcePatternManager.shouldPaint(loc)) return false;
+        //if (!m.isPassable() || !ResourcePatternManager.shouldPaint(loc)) return false;
         if (!Util.towerMax() && Map.isNearRuin(m.getMapLocation())) return false;
-        int x = m.getMapLocation().x%4, y = m.getMapLocation().y%4;
-        int z = x*4 + y;
-        //PaintType targetPaint = ((x + y)%2 == 0 || (x + 7*y)%10 == 1) ? PaintType.ALLY_PRIMARY : PaintType.ALLY_SECONDARY;
-        PaintType targetPaint = ((5147 >>> z)&1) > 0 ? PaintType.ALLY_SECONDARY : PaintType.ALLY_PRIMARY;
-        if (m.getPaint().isEnemy() || m.getPaint() == targetPaint) return false;
+        if (m.getPaint().isEnemy() || m.getPaint() == t) return false;
         if (rc.canAttack(m.getMapLocation())){
-            rc.attack(m.getMapLocation(), targetPaint == PaintType.ALLY_SECONDARY);
+            rc.attack(m.getMapLocation(), t == PaintType.ALLY_SECONDARY);
             return true;
         }
         return false;
@@ -156,7 +105,7 @@ public class Soldier extends Unit {
 
     boolean shouldRecover(){
         if (rc.getChips() > Constants.NO_HEAL_CHIPS) return false;
-        return ((closestRuin == null || rc.getLocation().distanceSquaredTo(closestRuin) > 2 ||  Util.towerMax()) && rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER);
+        return (TowerManager.closestPaintTower != null && rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER);
     }
 
     void move() throws GameActionException {
@@ -171,11 +120,13 @@ public class Soldier extends Unit {
         MapLocation tg = getClosestEnemyTower();
         if (tg != null) return tg;
         if (closestRuin != null && !Util.towerMax()) return closestRuin;
+        if (rc.getRoundNum() > creationTurn){
         tg = ResourcePatternManager.getBestTarget();
         if (tg != null){
             if (ResourcePatternManager.attackLoc != null) rc.setIndicatorDot(ResourcePatternManager.attackLoc, 200, 0, 0);
             if (ResourcePatternManager.center != null) rc.setIndicatorDot(ResourcePatternManager.center, 0, 0, 200);
             return tg;
+        }
         }
         if (rc.getRoundNum() > 200){
             MapLocation loc = getClosestEmptyTile();
@@ -192,7 +143,7 @@ public class Soldier extends Unit {
             paintNearby();
             return;
         }*/
-        if (closestRuin != null && Map.hasEnemyPaint(closestRuin)){
+        if (closestRuin != null && Map.hasEnemyPaint(closestRuin) && rc.canSenseLocation(closestRuin)){
             RuinManager.drawPatternEnhanced(closestRuin, TowerManager.getNextBuild());
             return;
         }
