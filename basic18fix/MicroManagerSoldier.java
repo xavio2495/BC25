@@ -16,6 +16,8 @@ public class MicroManagerSoldier {
     static MicroInfo[] microInfos;
     static MicroInfo bestMicro;
     static boolean roundNice;
+    static boolean turretSeen;
+    static int moppers;
 
     static boolean doMicro() throws GameActionException {
         rc = MyRobot.rc;
@@ -23,6 +25,8 @@ public class MicroManagerSoldier {
 
         myRange = rc.getType().actionRadiusSquared;
 
+        turretSeen = false;
+        moppers = 0;
         int myPaint = rc.getPaint();
         roundNice = rc.getRoundNum()%2 == 0;
 
@@ -64,6 +68,7 @@ public class MicroManagerSoldier {
                 case MOPPER:
                     unit = r;
                     unitLoc = r.getLocation();
+                    //++moppers;
                     microInfos[0].updateMopper();
                     microInfos[1].updateMopper();
                     microInfos[2].updateMopper();
@@ -76,6 +81,7 @@ public class MicroManagerSoldier {
                     break;
                 default:
                     unit = r;
+                    turretSeen = true;
                     unitLoc = r.getLocation();
                     microInfos[0].updateTower();
                     microInfos[1].updateTower();
@@ -92,6 +98,7 @@ public class MicroManagerSoldier {
         units = rc.senseNearbyRobots(8, rc.getTeam());
         for (RobotInfo r : units) {
                 unit = r;
+                //if (r.getType() == UnitType.MOPPER) --moppers;
                 unitLoc = r.getLocation();
                 microInfos[0].updateAlly();
                 microInfos[1].updateAlly();
@@ -146,16 +153,17 @@ public class MicroManagerSoldier {
     static class MicroInfo{
 
         int towersInRange = 0;
-        int moppersInRange = 0;
+        int moppersInRange8 = 0;
+        int moppersInRange13 = 0;
         //int moppersInMoveRange = 0;
         //int allyMoppers = 0;
         Direction dir;
         MapLocation loc;
         PaintType p = PaintType.EMPTY;
-        int closestDistMopper = Constants.INF;
-        int adjAllies;
+        //int closestDistMopper = Constants.INF;
+        int adjAllies = 0;
         boolean isAccessible = true;
-        //int closestDistEnemy = Constants.INF;
+        int closestDistEnemy = Constants.INF;
         boolean inAttackRange = false;
 
         MicroInfo(Direction dir) throws GameActionException {
@@ -173,23 +181,16 @@ public class MicroManagerSoldier {
             int dist = unitLoc.distanceSquaredTo(loc);
             if (dist <= unit.getType().actionRadiusSquared) ++towersInRange;
             if (dist <= myRange) inAttackRange = true;
-            //if (dist < closestDistEnemy) closestDistEnemy = dist;
+            if (dist < closestDistEnemy) closestDistEnemy = dist;
         }
 
         void updateMopper(){
             if (!isAccessible) return;
             int dist = unitLoc.distanceSquaredTo(loc);
-            if (dist <= UnitType.MOPPER.actionRadiusSquared) ++moppersInRange;
-            //if (dist <= 8) ++moppersInMoveRange;
-            if (dist < closestDistMopper) closestDistMopper = dist;
+            if (dist <= 8) ++moppersInRange8;
+            else if (dist <= 13) ++moppersInRange13;
+            //if (dist < closestDistMopper) closestDistMopper = dist;
         }
-
-        /*void updateAllyMopper(){
-            if (!isAccessible) return;
-            int dist = unitLoc.distanceSquaredTo(loc);
-            if (dist <= 8) ++allyMoppers;
-            if (dist <= 2) ++adjAllies;
-        }*/
 
         void updateAlly(){
             if (!isAccessible) return;
@@ -199,18 +200,12 @@ public class MicroManagerSoldier {
         int paintLost(){
             return switch (p) {
                 case ENEMY_PRIMARY, ENEMY_SECONDARY ->
-                        (GameConstants.PENALTY_ENEMY_TERRITORY + 2*adjAllies) + (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3;
+                        (GameConstants.PENALTY_ENEMY_TERRITORY + 2*adjAllies) + (moppersInRange8 * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + moppersInRange13 *GameConstants.MOPPER_SWING_PAINT_DEPLETION) / 3;
                 case EMPTY ->
-                        GameConstants.PENALTY_NEUTRAL_TERRITORY + adjAllies + (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3;
-                default -> adjAllies + (moppersInRange * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION) / 3;
+                        GameConstants.PENALTY_NEUTRAL_TERRITORY + adjAllies + (moppersInRange8 * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + moppersInRange13 *GameConstants.MOPPER_SWING_PAINT_DEPLETION) / 3;
+                default -> adjAllies + (moppersInRange8 * GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + moppersInRange13 *GameConstants.MOPPER_SWING_PAINT_DEPLETION) / 3;
             };
         }
-
-        /*void updateAlly(){
-            if (!isAccessible) return;
-            int dist = unitLoc.distanceSquaredTo(loc);
-            if (dist <= 2) ++adjAllies;
-        }*/
 
         boolean isBetterThan(MicroInfo M){
             if (!isAccessible) return false;
@@ -224,6 +219,9 @@ public class MicroManagerSoldier {
 
             if (towersInRange > M.towersInRange) return false;
             if (M.towersInRange > towersInRange) return true;
+
+            if (closestDistEnemy <= 17 && M.closestDistEnemy > 17) return true;
+            if (closestDistEnemy > 17 && M.closestDistEnemy <= 17) return false;
 
             return paintLost() < M.paintLost();
 
