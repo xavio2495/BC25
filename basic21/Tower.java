@@ -79,7 +79,7 @@ public class Tower extends MyRobot {
         double dAns = -1;
         for (Direction dir : directions){
             if (!rc.canBuildRobot(UnitType.SOLDIER, rc.getLocation().add(dir))) continue;
-            double ndAns = dists[dir.ordinal()]/((soldierDirCount[dir.ordinal()]/2)+1);
+            double ndAns = dists[dir.ordinal()]/((soldierDirCount[dir.ordinal()])+1);
             if (ndAns > dAns){
                 dAns = ndAns;
                 ans = dir;
@@ -89,7 +89,7 @@ public class Tower extends MyRobot {
     }
 
     void startTurn() throws GameActionException {
-
+        TowerManager.updateTowerCount();
     }
 
     void checkSpawnPlan(){
@@ -114,6 +114,7 @@ public class Tower extends MyRobot {
     }
 
     void endTurn() throws GameActionException {
+        if (TowerManager.shouldDestruct()) rc.disintegrate();
     }
 
     void tryUpgrade() throws GameActionException {

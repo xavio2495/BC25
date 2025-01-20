@@ -4,9 +4,13 @@ import battlecode.common.GameConstants;
 import battlecode.common.UnitType;
 
 public class Constants {
-    public static final int SPLASHER_SCORE_ATTACK_PAINT = 1;
-    public static final int SPLASHER_SCORE_ATTACK_PAINT_ENEMY = 4;
-    public static final int SPLASHER_SCORE_ATTACK_TOWER = 10;
+    public static final int SPLASHER_SCORE_ATTACK_PAINT = 3;
+    public static final int SPLASHER_SCORE_ATTACK_PAINT_ENEMY = 10;
+    public static final int SPLASHER_SCORE_ATTACK_TOWER = 30;
+    public static final int SPLASHER_ATK_THRESHOLD = 50;
+
+    public static final int MIN_CHIPS_PAINT_TOWER = 6000;
+    public static final int WAIT_DESTRUCTION = 40;
 
     public static final int INF = 1000000000;
 

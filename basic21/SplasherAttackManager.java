@@ -1009,7 +1009,7 @@ public  class SplasherAttackManager {
             }
         }
         MapLocation best = null;
-        int bestScore = 17;
+        int bestScore = Constants.SPLASHER_ATK_THRESHOLD;
         if(bestScore < score0) { bestScore = score0; best = myLoc.translate(-2, 0); }
         if(bestScore < score1) { bestScore = score1; best = myLoc.translate(-1, -1); }
         if(bestScore < score2) { bestScore = score2; best = myLoc.translate(-1, 0); }
