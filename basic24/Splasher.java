@@ -28,9 +28,7 @@ public class Splasher extends Unit {
             recovering = true;
         if (rc.getPaint() >= UnitType.SPLASHER.paintCapacity - Constants.MIN_TRANSFER_PAINT)
             recovering = false;
-        tryAttackTile();
         move();
-        tryAttackTile();
         tryWithdraw();
     }
 
@@ -39,8 +37,17 @@ public class Splasher extends Unit {
             return;
         if (MicroManagerSplasher.doMicro())
             return;
+
+        MapLocation oldLoc = rc.getLocation();
+
         MapLocation target = getTarget();
         pathfinding.moveTo(target);
+
+        var dir = oldLoc.directionTo(rc.getLocation());
+        var info = MicroManagerSplasher.microInfos[dir.ordinal()];
+        if(info.atkLoc != null && rc.canAttack(info.atkLoc)) {
+            rc.attack(info.atkLoc);
+        }
     }
 
     MapLocation getTarget() throws GameActionException {
@@ -49,12 +56,5 @@ public class Splasher extends Unit {
         //MapLocation target = getClosestEnemyPaint();
         // if (target == null) target = searchClosestHurt();
         return explore.getExplore3Target();
-    }
-
-    void tryAttackTile() throws GameActionException {
-        if(!rc.isActionReady()) return;
-        MapLocation loc = SplasherAttackManager.getBestAttack();
-        if (loc != null && rc.canAttack(loc))
-            rc.attack(loc);
     }
 }

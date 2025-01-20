@@ -1,6 +1,13 @@
 package basic24;
 
-import battlecode.common.*;
+import battlecode.common.Direction;
+import battlecode.common.GameActionException;
+import battlecode.common.GameConstants;
+import battlecode.common.MapLocation;
+import battlecode.common.PaintType;
+import battlecode.common.RobotController;
+import battlecode.common.RobotInfo;
+import battlecode.common.UnitType;
 
 public class MicroManagerSplasher {
 
@@ -88,37 +95,70 @@ public class MicroManagerSplasher {
 
         //if (!enemyNearby) return false;
 
-        //SplasherAttackManager.calc();
+
+        SplasherAttackManager.calc();
 
         boolean shouldMicro = false;
-
-        if (microInfos[0].isAccessible && microInfos[0].inAttackRange) shouldMicro = true;
-        if (microInfos[1].isAccessible && microInfos[1].inAttackRange) shouldMicro = true;
-        if (microInfos[2].isAccessible && microInfos[2].inAttackRange) shouldMicro = true;
-        if (microInfos[3].isAccessible && microInfos[3].inAttackRange) shouldMicro = true;
-        if (microInfos[4].isAccessible && microInfos[4].inAttackRange) shouldMicro = true;
-        if (microInfos[5].isAccessible && microInfos[5].inAttackRange) shouldMicro = true;
-        if (microInfos[6].isAccessible && microInfos[6].inAttackRange) shouldMicro = true;
-        if (microInfos[7].isAccessible && microInfos[7].inAttackRange) shouldMicro = true;
-        if (microInfos[8].isAccessible && microInfos[8].inAttackRange) shouldMicro = true;
+        if (microInfos[0].isAccessible && (microInfos[0].inAttackRange || microInfos[0].atkLoc != null)) shouldMicro = true;
+        if (microInfos[1].isAccessible && (microInfos[1].inAttackRange || microInfos[1].atkLoc != null)) shouldMicro = true;
+        if (microInfos[2].isAccessible && (microInfos[2].inAttackRange || microInfos[2].atkLoc != null)) shouldMicro = true;
+        if (microInfos[3].isAccessible && (microInfos[3].inAttackRange || microInfos[3].atkLoc != null)) shouldMicro = true;
+        if (microInfos[4].isAccessible && (microInfos[4].inAttackRange || microInfos[4].atkLoc != null)) shouldMicro = true;
+        if (microInfos[5].isAccessible && (microInfos[5].inAttackRange || microInfos[5].atkLoc != null)) shouldMicro = true;
+        if (microInfos[6].isAccessible && (microInfos[6].inAttackRange || microInfos[6].atkLoc != null)) shouldMicro = true;
+        if (microInfos[7].isAccessible && (microInfos[7].inAttackRange || microInfos[7].atkLoc != null)) shouldMicro = true;
+        if (microInfos[8].isAccessible && (microInfos[8].inAttackRange || microInfos[8].atkLoc != null)) shouldMicro = true;
 
         if (!shouldMicro) return false;
 
-        MicroInfo bestMicro = microInfos[8];
-        if (microInfos[0].isBetterThan(bestMicro)) bestMicro = microInfos[0];
-        if (microInfos[1].isBetterThan(bestMicro)) bestMicro = microInfos[1];
-        if (microInfos[2].isBetterThan(bestMicro)) bestMicro = microInfos[2];
-        if (microInfos[3].isBetterThan(bestMicro)) bestMicro = microInfos[3];
-        if (microInfos[4].isBetterThan(bestMicro)) bestMicro = microInfos[4];
-        if (microInfos[5].isBetterThan(bestMicro)) bestMicro = microInfos[5];
-        if (microInfos[6].isBetterThan(bestMicro)) bestMicro = microInfos[6];
-        if (microInfos[7].isBetterThan(bestMicro)) bestMicro = microInfos[7];
+        int score;
 
-        if (bestMicro.dir == Direction.CENTER) return true;
+        // get best move+attack
+        MicroInfo maBest = null;
+        int maBestScore = -2147483648;
+        score = microInfos[0].score(); if(score > maBestScore) { maBestScore = score; maBest = microInfos[0]; }
+        score = microInfos[1].score(); if(score > maBestScore) { maBestScore = score; maBest = microInfos[1]; }
+        score = microInfos[2].score(); if(score > maBestScore) { maBestScore = score; maBest = microInfos[2]; }
+        score = microInfos[3].score(); if(score > maBestScore) { maBestScore = score; maBest = microInfos[3]; }
+        score = microInfos[4].score(); if(score > maBestScore) { maBestScore = score; maBest = microInfos[4]; }
+        score = microInfos[5].score(); if(score > maBestScore) { maBestScore = score; maBest = microInfos[5]; }
+        score = microInfos[6].score(); if(score > maBestScore) { maBestScore = score; maBest = microInfos[6]; }
+        score = microInfos[7].score(); if(score > maBestScore) { maBestScore = score; maBest = microInfos[7]; }
+        score = microInfos[8].score(); if(score > maBestScore) { maBestScore = score; maBest = microInfos[8]; }
 
-        if (rc.canMove(bestMicro.dir)){
-            MovementManager.move(bestMicro.dir);
+        // get best move
+        MicroInfo mBest = null;
+        int mBestScore = -2147483648;
+        score = microInfos[0].moveScore(); if(score > mBestScore) { mBestScore = score; mBest = microInfos[0]; }
+        score = microInfos[1].moveScore(); if(score > mBestScore) { mBestScore = score; mBest = microInfos[1]; }
+        score = microInfos[2].moveScore(); if(score > mBestScore) { mBestScore = score; mBest = microInfos[2]; }
+        score = microInfos[3].moveScore(); if(score > mBestScore) { mBestScore = score; mBest = microInfos[3]; }
+        score = microInfos[4].moveScore(); if(score > mBestScore) { mBestScore = score; mBest = microInfos[4]; }
+        score = microInfos[5].moveScore(); if(score > mBestScore) { mBestScore = score; mBest = microInfos[5]; }
+        score = microInfos[6].moveScore(); if(score > mBestScore) { mBestScore = score; mBest = microInfos[6]; }
+        score = microInfos[7].moveScore(); if(score > mBestScore) { mBestScore = score; mBest = microInfos[7]; }
+        score = microInfos[8].moveScore(); if(score > mBestScore) { mBestScore = score; mBest = microInfos[8]; }
+
+
+        if(microInfos[8].attackScore() + mBestScore > maBestScore) {
+            // attack, then move
+            if(microInfos[8].atkLoc != null && rc.canAttack(microInfos[8].atkLoc)) {
+                rc.attack(microInfos[8].atkLoc);
+            }
+            if (rc.canMove(mBest.dir)){
+                MovementManager.move(mBest.dir);
+            }
+        } else {
+            // move + attack
+            if (rc.canMove(maBest.dir)){
+                MovementManager.move(maBest.dir);
+            }
+            if(maBest.atkLoc != null && rc.canAttack(maBest.atkLoc)) {
+                rc.attack(maBest.atkLoc);
+            }
         }
+
+
         return true;
     }
 
@@ -191,21 +231,22 @@ public class MicroManagerSplasher {
             };
         }
 
-        boolean isBetterThan(MicroInfo M){
-            if (!isAccessible) return false;
-            if (!M.isAccessible) return true;
-
-
-            if (towersInRange > M.towersInRange) return false;
-            if (M.towersInRange > towersInRange) return true;
-
-
-            int p = paintLost(), mp = M.paintLost();
-            if (p > mp) return false;
-            if (mp > p) return true;
-
-            return closestDistMopper > M.closestDistMopper;
-
+        int moveScore()  {
+            if(!isAccessible) return -100000000;
+            if(towersInRange != 0) return -10000000 * towersInRange;
+            return -paintLost() * 100 + closestDistMopper;
         }
+
+        int attackScore() {
+            if(canAttack && atkLoc != null) {
+                return 10000*atkValue;
+            }
+            return 0;
+        }
+
+        int score() {
+            return attackScore() + moveScore();
+        }
+
     }
 }

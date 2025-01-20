@@ -33,4 +33,8 @@ public class Constants {
 
     static int MIN_PAINT_MOPPER_ATTACK = 5;
 
+    public static final int SPLASHER_SCORE_ATTACK_PAINT = 1;
+    public static final int SPLASHER_SCORE_ATTACK_PAINT_ENEMY = 4;
+    public static final int SPLASHER_SCORE_ATTACK_TOWER = 10;
+    public static final int SPLASHER_ATK_THRESHOLD = 17;
 }

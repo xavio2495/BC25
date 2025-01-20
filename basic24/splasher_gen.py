@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 
-SCORE_ATTACK_PAINT = 1
-SCORE_ATTACK_PAINT_ENEMY = 4
-SCORE_ATTACK_TOWER = 10
+SCORE_ATTACK_PAINT = 'Constants.SPLASHER_SCORE_ATTACK_PAINT'
+SCORE_ATTACK_PAINT_ENEMY = 'Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY'
+SCORE_ATTACK_TOWER = 'Constants.SPLASHER_SCORE_ATTACK_TOWER'
 
 def group_by(items, key):
     r = {}
@@ -125,7 +125,7 @@ for loc, l in locations.items():
 
 for move in radius(2):
     p(f'if(rc.canMove({move.direction()})){{')
-    p('int best = -1; int bestScore = 0;')
+    p('int best = -1; int bestScore = Constants.SPLASHER_ATK_THRESHOLD;')
     for attack in radius(4):
         id = actions.index(attack+move)
         p(f'if(bestScore < attack{id}) {{ bestScore = attack{id}; best = {id}; }}')
