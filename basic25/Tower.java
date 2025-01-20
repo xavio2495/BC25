@@ -1,4 +1,4 @@
-package basic23;
+package basic25;
 
 import battlecode.common.*;
 
@@ -60,6 +60,7 @@ public class Tower extends MyRobot {
 
     void startTurn() throws GameActionException {
         TowerManager.updateTowerCount();
+        SymmetryManager.readMessages();
         paintIncrease[rc.getRoundNum()%TURNS_PAINT] = MyRobot.rc.getPaint() - oldPaint;
     }
 
@@ -122,8 +123,10 @@ public class Tower extends MyRobot {
     }
 
     void endTurn() throws GameActionException {
+        SymmetryManager.towerBroadcast();
         if (TowerManager.shouldDestruct()) rc.disintegrate();
         oldPaint = MyRobot.rc.getPaint();
+        SymmetryManager.checkSym();
     }
 
     void tryUpgrade() throws GameActionException {

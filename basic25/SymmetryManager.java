@@ -1,4 +1,4 @@
-package basic23;
+package basic25;
 
 import battlecode.common.*;
 

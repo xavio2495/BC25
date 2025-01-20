@@ -1,4 +1,4 @@
-package basic23;
+package basic25;
 
 import battlecode.common.*;
 
@@ -14,6 +14,7 @@ public class Soldier extends Unit {
     void startTurn() throws GameActionException {
         updateClosestRuin();
         ResourcePatternManager.attackLoc = null;
+        super.startTurn();
     }
 
     void endTurn() throws GameActionException {

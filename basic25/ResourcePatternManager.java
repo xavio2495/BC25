@@ -1,4 +1,4 @@
-package basic23;
+package basic25;
 import battlecode.common.*;
 
 public class ResourcePatternManager {
@@ -21913,59 +21913,43 @@ public class ResourcePatternManager {
                 if (!Map.forbiddenCenter(loc.translate(-2,-2))) return true;
                 if (!Map.forbiddenCenter(loc.translate(-2,2))) return true;
                 if (!Map.forbiddenCenter(loc.translate(2,-2))) return true;
-                if (!Map.forbiddenCenter(loc.translate(2,2))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(2, 2));
             case 1:
                 if (!Map.forbiddenCenter(loc.translate(-2,1))) return true;
-                if (!Map.forbiddenCenter(loc.translate(2,1))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(2, 1));
             case 2:
                 if (!Map.forbiddenCenter(loc.translate(-2,0))) return true;
-                if (!Map.forbiddenCenter(loc.translate(2,0))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(2, 0));
             case 3:
                 if (!Map.forbiddenCenter(loc.translate(-2,-1))) return true;
-                if (!Map.forbiddenCenter(loc.translate(2,-1))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(2, -1));
             case 4:
                 if (!Map.forbiddenCenter(loc.translate(1,-2))) return true;
-                if (!Map.forbiddenCenter(loc.translate(1,2))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(1, 2));
             case 5:
-                if (!Map.forbiddenCenter(loc.translate(1,1))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(1, 1));
             case 6:
-                if (!Map.forbiddenCenter(loc.translate(1,0))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(1, 0));
             case 7:
-                if (!Map.forbiddenCenter(loc.translate(1,-1))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(1, -1));
             case 8:
                 if (!Map.forbiddenCenter(loc.translate(0,-2))) return true;
-                if (!Map.forbiddenCenter(loc.translate(0,2))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(0, 2));
             case 9:
-                if (!Map.forbiddenCenter(loc.translate(0,1))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(0, 1));
             case 10:
-                if (!Map.forbiddenCenter(loc.translate(0,0))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(0, 0));
             case 11:
-                if (!Map.forbiddenCenter(loc.translate(0,-1))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(0, -1));
             case 12:
                 if (!Map.forbiddenCenter(loc.translate(-1,-2))) return true;
-                if (!Map.forbiddenCenter(loc.translate(-1,2))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(-1, 2));
             case 13:
-                if (!Map.forbiddenCenter(loc.translate(-1,1))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(-1, 1));
             case 14:
-                if (!Map.forbiddenCenter(loc.translate(-1,0))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(-1, 0));
             case 15:
-                if (!Map.forbiddenCenter(loc.translate(-1,-1))) return true;
-                return false;
+                return !Map.forbiddenCenter(loc.translate(-1, -1));
         }
         return false;
     }
