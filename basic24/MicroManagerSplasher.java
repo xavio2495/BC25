@@ -140,26 +140,27 @@ public class MicroManagerSplasher {
         score = microInfos[8].moveScore(); if(score > mBestScore) { mBestScore = score; mBest = microInfos[8]; }
 
 
-        if(microInfos[8].attackScore() + mBestScore > maBestScore) {
+        if(mBest != null && (microInfos[8].attackScore() + mBestScore > maBestScore)) {
             // attack, then move
             if(microInfos[8].atkLoc != null && rc.canAttack(microInfos[8].atkLoc)) {
                 rc.attack(microInfos[8].atkLoc);
             }
             if (rc.canMove(mBest.dir)){
-                MovementManager.move(mBest.dir);
+                rc.move(mBest.dir);
             }
-        } else {
+            return true;
+        } else if (maBest != null) {    
             // move + attack
             if (rc.canMove(maBest.dir)){
-                MovementManager.move(maBest.dir);
+                rc.move(maBest.dir);
             }
             if(maBest.atkLoc != null && rc.canAttack(maBest.atkLoc)) {
                 rc.attack(maBest.atkLoc);
             }
+            return true;
+        } else {
+            return false;
         }
-
-
-        return true;
     }
 
     static RobotInfo unit;
