@@ -173,8 +173,8 @@ public class Soldier extends Unit {
         if (closestRuin != null && !Util.towerMax()) return closestRuin;
         tg = ResourcePatternManager.getBestTarget();
         if (tg != null){
-            if (ResourcePatternManager.attackLoc != null) rc.setIndicatorDot(ResourcePatternManager.attackLoc, 200, 0, 0);
-            if (ResourcePatternManager.center != null) rc.setIndicatorDot(ResourcePatternManager.center, 0, 0, 200);
+            //if (ResourcePatternManager.attackLoc != null) rc.setIndicatorDot(ResourcePatternManager.attackLoc, 200, 0, 0);
+            //if (ResourcePatternManager.center != null) rc.setIndicatorDot(ResourcePatternManager.center, 0, 0, 200);
             return tg;
         }
         if (rc.getRoundNum() > 200){

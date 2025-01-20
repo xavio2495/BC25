@@ -81,7 +81,7 @@ public class MicroManagerMopper {
                     unit = r;
                     unitLoc = r.getLocation();
                     hasPaint = true;
-                    rc.setIndicatorDot(unitLoc, 0, 200, 0);
+                    //rc.setIndicatorDot(unitLoc, 0, 200, 0);
                     microInfos[0].updateTower();
                     microInfos[1].updateTower();
                     microInfos[2].updateTower();

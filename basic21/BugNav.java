@@ -63,7 +63,7 @@ public class BugNav {
         try{
             for (Direction dir : dirs){
                 MapLocation newLoc = myLoc.add(dir);
-                if (rc.canSenseLocation(newLoc) && MovementManager.canMove(dir)) rc.setIndicatorDot(newLoc, 0, 0, 255);
+                //if (rc.canSenseLocation(newLoc) && MovementManager.canMove(dir)) rc.setIndicatorDot(newLoc, 0, 0, 255);
             }
         } catch (Throwable t){
             t.printStackTrace();
@@ -133,7 +133,7 @@ public class BugNav {
         else{
             dir = myLoc.directionTo(lastObstacleFound);
             //rc.setIndicatorDot(lastObstacleFound, 0, 255, 0);
-            //if (lastCurrent != null) rc.setIndicatorDot(lastCurrent, 255, 0, 0);
+            //if (lastCurrent != null) //rc.setIndicatorDot(lastCurrent, 255, 0, 0);
         }
 
         try {

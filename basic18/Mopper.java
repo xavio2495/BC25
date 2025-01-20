@@ -66,7 +66,7 @@ public class Mopper extends Unit {
         }
         if (bestR != null){
             rc.attack(bestR.getLocation());
-            rc.setIndicatorDot(bestR.getLocation(), 200,0,0);
+            //rc.setIndicatorDot(bestR.getLocation(), 200,0,0);
         }
     }
 
