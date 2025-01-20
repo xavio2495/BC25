@@ -8,12 +8,11 @@ public class Mopper extends Unit {
 
     Mopper(RobotController rc) throws GameActionException {
         super(rc);
-        Map.initialize();
     }
 
     void startTurn() throws GameActionException {
-        Map.fill();
-        updateClosestRuin();
+        //updateClosestRuin();
+        TowerManager.updateAll();
     }
 
     boolean shouldRecover(){
