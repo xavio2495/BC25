@@ -288,7 +288,7 @@ public class MicroManagerMopper {
         int getAtk(){
             if (!canAttack){
                 if (shouldFlee) return 0;
-                return (GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + GameConstants.MOPPER_ATTACK_PAINT_ADDITION);
+                return (GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + GameConstants.MOPPER_ATTACK_PAINT_ADDITION) / 3;
             }
             int x = inAttackRange ? GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + GameConstants.MOPPER_ATTACK_PAINT_ADDITION : 0;
             if (x < atkValue) x = atkValue;
