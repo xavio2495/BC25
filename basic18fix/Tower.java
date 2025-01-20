@@ -36,6 +36,7 @@ public class Tower extends MyRobot {
             UnitType.SOLDIER,
             UnitType.MOPPER,
             UnitType.SPLASHER,
+            UnitType.MOPPER,
     };
 
     Tower(RobotController rc){
@@ -43,15 +44,12 @@ public class Tower extends MyRobot {
 
         BFSTower.initiate();
 
-        if (rc.getRoundNum() < 4) {
-            spawnPlan = switch (rc.getType()) {
-                case LEVEL_ONE_PAINT_TOWER -> spawnPlanInitialPaint;
-                case LEVEL_ONE_MONEY_TOWER -> spawnPlanInitialMoney;
-                default -> spawnPlanDefault;
-            };
-        } else {
-            spawnPlan = spawnPlanDefault;
-        }
+        spawnPlan = switch (rc.getType()) {
+            case LEVEL_ONE_PAINT_TOWER -> spawnPlanInitialPaint;
+            case LEVEL_ONE_MONEY_TOWER -> spawnPlanInitialMoney;
+            default -> spawnPlanDefault;
+        };
+
         doDirs();
     }
 
@@ -81,7 +79,7 @@ public class Tower extends MyRobot {
         double dAns = -1;
         for (Direction dir : directions){
             if (!rc.canBuildRobot(UnitType.SOLDIER, rc.getLocation().add(dir))) continue;
-            double ndAns = dists[dir.ordinal()]/(soldierDirCount[dir.ordinal()]+1);
+            double ndAns = dists[dir.ordinal()]/((soldierDirCount[dir.ordinal()])+1);
             if (ndAns > dAns){
                 dAns = ndAns;
                 ans = dir;
@@ -98,7 +96,7 @@ public class Tower extends MyRobot {
         if (spawnPlan == spawnPlanDefault) return;
         if (spawnPlanPos + 2*rc.getNumberTowers() >= THRESHOLD){
             spawnPlan = spawnPlanDefault;
-            spawnPlanPos = 1;
+            spawnPlanPos = 0;
         }
     }
 
