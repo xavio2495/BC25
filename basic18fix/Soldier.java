@@ -143,8 +143,8 @@ public class Soldier extends Unit {
     }
 
     boolean shouldRecover(){
-        if (rc.getChips() > Constants.NO_HEAL_CHIPS) return false;
-        return ((closestRuin == null || rc.getLocation().distanceSquaredTo(closestRuin) > 2 ||  Util.towerMax()) && rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER);
+        if (rc.getRoundNum() > Constants.MIN_ROUNDS_NO_RECOVERY && rc.getNumberTowers() > Constants.MIN_TOWERS_NO_RECOVERY) return false;
+        return (TowerManager.closestPaintTower != null && rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER);
     }
 
     void move() throws GameActionException {
@@ -160,12 +160,12 @@ public class Soldier extends Unit {
         if (tg != null) return tg;
         if (closestRuin != null && !Util.towerMax()) return closestRuin;
         if (rc.getRoundNum() > creationTurn){
-            tg = ResourcePatternManager.getBestTarget();
-            if (tg != null){
-                //if (ResourcePatternManager.attackLoc != null) //rc.setIndicatorDot(ResourcePatternManager.attackLoc, 200, 0, 0);
-                //if (ResourcePatternManager.center != null) //rc.setIndicatorDot(ResourcePatternManager.center, 0, 0, 200);
-                return tg;
-            }
+        tg = ResourcePatternManager.getBestTarget();
+        if (tg != null){
+            //if (ResourcePatternManager.attackLoc != null) //rc.setIndicatorDot(ResourcePatternManager.attackLoc, 200, 0, 0);
+            //if (ResourcePatternManager.center != null) //rc.setIndicatorDot(ResourcePatternManager.center, 0, 0, 200);
+            return tg;
+        }
         }
         if (rc.getRoundNum() > 200){
             MapLocation loc = getClosestEmptyTile();
@@ -187,7 +187,7 @@ public class Soldier extends Unit {
             return;
         }
         else if (closestRuin != null && rc.getLocation().distanceSquaredTo(closestRuin) <= 8 && !Util.towerMax()) {
-            int ruinType = Map.getPattern(closestRuin);
+            /*int ruinType = Map.getPattern(closestRuin);
             //System.out.println("ruinType: " + ruinType);
             int trueType = RuinManager.getType(ruinType);
             switch (trueType) {
@@ -205,7 +205,18 @@ public class Soldier extends Unit {
                     }
                     else RuinManager.drawPatternEnhanced(closestRuin, trueType);
                 }
+            }*/
+            int x = TowerManager.getNextBuild();
+            UnitType t = switch (x) {
+                case RuinManager.PAINT -> UnitType.LEVEL_ONE_PAINT_TOWER;
+                case RuinManager.MONEY -> UnitType.LEVEL_ONE_MONEY_TOWER;
+                default -> UnitType.LEVEL_ONE_DEFENSE_TOWER;
+            };
+            if (rc.canCompleteTowerPattern(t, closestRuin)) {
+                rc.completeTowerPattern(t, closestRuin);
+                //return;
             }
+            RuinManager.drawPatternEnhanced(closestRuin, TowerManager.getNextBuild());
         }
         //paintSelf();
         paintNearby();

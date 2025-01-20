@@ -17,8 +17,8 @@ public class Mopper extends Unit {
 
     boolean shouldRecover(){
         //if (rc.getRoundNum() >= Constants.NO_HEAL_ROUND) return false;
-        if (rc.getChips() > Constants.NO_HEAL_CHIPS) return false;
-        return (rc.getPaint() < Constants.CRITICAL_PAINT_MOPPER);
+        if (rc.getRoundNum() > Constants.MIN_ROUNDS_NO_RECOVERY && rc.getNumberTowers() > Constants.MIN_TOWERS_NO_RECOVERY) return false;
+        return (TowerManager.closestPaintTower != null && rc.getPaint() < Constants.CRITICAL_PAINT_MOPPER);
     }
 
     void runTurn() throws GameActionException {
