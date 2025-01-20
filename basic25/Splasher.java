@@ -29,6 +29,7 @@ public class Splasher extends Unit {
 
     void runTurn() throws GameActionException {
         //tryWithdraw();
+        completePatterns();
         if (shouldRecover())
             recovering = true;
         if (rc.getPaint() >= UnitType.SPLASHER.paintCapacity - Constants.MIN_TRANSFER_PAINT)
@@ -37,6 +38,7 @@ public class Splasher extends Unit {
         move();
         tryAttackTile();
         tryWithdraw();
+        completePatterns();
     }
 
     void move() throws GameActionException {

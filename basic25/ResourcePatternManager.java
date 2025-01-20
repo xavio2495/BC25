@@ -3,6 +3,12 @@ import battlecode.common.*;
 
 public class ResourcePatternManager {
 
+    static RobotController rc;
+
+    static void init(){
+        rc = MyRobot.rc;
+    }
+
 
     static MapLocation l2;
     static MapInfo m2;
@@ -21952,6 +21958,69 @@ public class ResourcePatternManager {
                 return !Map.forbiddenCenter(loc.translate(-1, -1));
         }
         return false;
+    }
+
+    static void completePatterns () throws GameActionException {
+        MapLocation loc = rc.getLocation();
+        switch((loc.x%4)*4 + loc.y%4){
+            case 0:
+                if (rc.canCompleteResourcePattern(loc.translate(-2,-2))) rc.completeResourcePattern(loc.translate(-2,-2));
+                if (rc.canCompleteResourcePattern(loc.translate(-2,2))) rc.completeResourcePattern(loc.translate(-2,2));
+                if (rc.canCompleteResourcePattern(loc.translate(2,-2))) rc.completeResourcePattern(loc.translate(2,-2));
+                if (rc.canCompleteResourcePattern(loc.translate(2,2))) rc.completeResourcePattern(loc.translate(2,2));
+                break;
+            case 1:
+                if (rc.canCompleteResourcePattern(loc.translate(-2,1))) rc.completeResourcePattern(loc.translate(-2,1));
+                if (rc.canCompleteResourcePattern(loc.translate(2,1))) rc.completeResourcePattern(loc.translate(2,1));
+                break;
+            case 2:
+                if (rc.canCompleteResourcePattern(loc.translate(-2,0))) rc.completeResourcePattern(loc.translate(-2,0));
+                if (rc.canCompleteResourcePattern(loc.translate(2,0))) rc.completeResourcePattern(loc.translate(2,0));
+                break;
+            case 3:
+                if (rc.canCompleteResourcePattern(loc.translate(-2,-1))) rc.completeResourcePattern(loc.translate(-2,-1));
+                if (rc.canCompleteResourcePattern(loc.translate(2,-1))) rc.completeResourcePattern(loc.translate(2,-1));
+                break;
+            case 4:
+                if (rc.canCompleteResourcePattern(loc.translate(1,-2))) rc.completeResourcePattern(loc.translate(1,-2));
+                if (rc.canCompleteResourcePattern(loc.translate(1,2))) rc.completeResourcePattern(loc.translate(1,2));
+                break;
+            case 5:
+                if (rc.canCompleteResourcePattern(loc.translate(1,1))) rc.completeResourcePattern(loc.translate(1,1));
+                break;
+            case 6:
+                if (rc.canCompleteResourcePattern(loc.translate(1,0))) rc.completeResourcePattern(loc.translate(1,0));
+                break;
+            case 7:
+                if (rc.canCompleteResourcePattern(loc.translate(1,-1))) rc.completeResourcePattern(loc.translate(1,-1));
+                break;
+            case 8:
+                if (rc.canCompleteResourcePattern(loc.translate(0,-2))) rc.completeResourcePattern(loc.translate(0,-2));
+                if (rc.canCompleteResourcePattern(loc.translate(0,2))) rc.completeResourcePattern(loc.translate(0,2));
+                break;
+            case 9:
+                if (rc.canCompleteResourcePattern(loc.translate(0,1))) rc.completeResourcePattern(loc.translate(0,1));
+                break;
+            case 10:
+                if (rc.canCompleteResourcePattern(loc.translate(0,0))) rc.completeResourcePattern(loc.translate(0,0));
+                break;
+            case 11:
+                if (rc.canCompleteResourcePattern(loc.translate(0,-1))) rc.completeResourcePattern(loc.translate(0,-1));
+                break;
+            case 12:
+                if (rc.canCompleteResourcePattern(loc.translate(-1,-2))) rc.completeResourcePattern(loc.translate(-1,-2));
+                if (rc.canCompleteResourcePattern(loc.translate(-1,2))) rc.completeResourcePattern(loc.translate(-1,2));
+                break;
+            case 13:
+                if (rc.canCompleteResourcePattern(loc.translate(-1,1))) rc.completeResourcePattern(loc.translate(-1,1));
+                break;
+            case 14:
+                if (rc.canCompleteResourcePattern(loc.translate(-1,0))) rc.completeResourcePattern(loc.translate(-1,0));
+                break;
+            case 15:
+                if (rc.canCompleteResourcePattern(loc.translate(-1,-1))) rc.completeResourcePattern(loc.translate(-1,-1));
+                break;
+        }
     }
 
 

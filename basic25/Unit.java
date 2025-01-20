@@ -16,6 +16,7 @@ public abstract class Unit extends MyRobot {
         explore = new Explore();
         pathfinding = new Pathfinding();
         BFSUnit.initiate();
+        ResourcePatternManager.init();
     }
 
     void startTurn() throws GameActionException {
@@ -92,16 +93,7 @@ public abstract class Unit extends MyRobot {
     }
 
     void completePatterns() throws GameActionException {
-        /*int x = (rc.getLocation().x / 5)*5 + 2;
-        int y = (rc.getLocation().y / 5)*5 + 2;
-        MapLocation pLoc = new MapLocation(x,y);
-        if (rc.canCompleteResourcePattern(pLoc)) rc.completeResourcePattern(pLoc);*/
-        MapLocation[] locs = rc.getAllLocationsWithinRadiusSquared(rc.getLocation(), 8);
-        for (MapLocation loc : locs){
-            if (loc.x%4 == 2 && loc.y%4 == 2){
-                if (rc.canCompleteResourcePattern(loc)) rc.completeResourcePattern(loc);
-            }
-        }
+        ResourcePatternManager.completePatterns();
     }
 
 
