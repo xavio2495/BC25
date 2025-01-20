@@ -30,7 +30,7 @@ public class Pathfinding {
         }
 
         void moveTo(MapLocation target) throws GameActionException {
-            if (target != null) MyRobot.rc.setIndicatorString("Going to " + target);
+            //if (target != null) MyRobot.rc.setIndicatorString("Going to " + target);
             //if (bugNav.isUsingBugnav()) bugNav.moveTo(target);
             //Direction dir = BFS.getBestDir(target);
             RobotController rc = MyRobot.rc;
@@ -44,7 +44,7 @@ public class Pathfinding {
             if (!bugNav.isUsingBugnav() && turnsGreedy <= 0){
 
                 //System.err.println("Using bfs");
-                Direction dir = BFS.getBestDir(target);
+                Direction dir = BFSUnit.getBestDir(target);
                 if (dir != null && !MapTracker.check(rc.getLocation().add(dir))){
                     MovementManager.move(dir);
                     //return;

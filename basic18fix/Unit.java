@@ -15,7 +15,7 @@ public abstract class Unit extends MyRobot {
         super(rc);
         explore = new Explore();
         pathfinding = new Pathfinding();
-        BFS.initiate();
+        BFSUnit.initiate();
     }
 
     void startTurn() throws GameActionException {}
