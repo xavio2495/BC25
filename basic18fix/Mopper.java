@@ -35,9 +35,6 @@ public class Mopper extends Unit {
         completePatterns();
     }
 
-    void endTurn(){
-    }
-
     void move() throws GameActionException {
         //if (!rc.isMovementReady()) return;
         if (MicroManagerMopper.doMicro()) return;

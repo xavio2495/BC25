@@ -19,7 +19,7 @@ public abstract class MyRobot {
 
     static RobotController rc;
     static int H, W;
-    int creationTurn;
+    static int creationTurn;
 
 
     //static String debugLine;

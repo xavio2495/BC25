@@ -4,8 +4,8 @@ import battlecode.common.MapLocation;
 
 public class MapTracker {
 
-    final static int MAX_MAP_SIZE = 64;
-    final static int LONG_BITS = 64;
+    //final static int MAX_MAP_SIZE = 64;
+    //final static int LONG_BITS = 64;
     final static int ARRAY_SIZE = 64;
 
     static long[] visitedLocations = new long[ARRAY_SIZE];

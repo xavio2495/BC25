@@ -28,7 +28,7 @@ public class MicroManagerSoldier {
         turretSeen = false;
         moppers = 0;
         int myPaint = rc.getPaint();
-        roundNice = rc.getRoundNum()%2 == 0;
+        roundNice = true; // rc.getRoundNum()%2 == 0;
 
         /*int frac = (200*myPaint) / rc.getType().paintCapacity;
         extraCd = 100 - frac;
