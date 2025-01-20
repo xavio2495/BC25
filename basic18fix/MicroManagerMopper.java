@@ -17,6 +17,8 @@ public class MicroManagerMopper {
 
     static boolean goodPaintNearby;
 
+    static boolean shouldFlee;
+
     static boolean doMicro() throws GameActionException {
         rc = MyRobot.rc;
         //if (!rc.isMovementReady()) return false;
@@ -38,6 +40,7 @@ public class MicroManagerMopper {
         microInfos[Direction.CENTER.ordinal()] = new MicroInfo(Direction.CENTER);
 
         //boolean enemyNearby = false;
+        shouldFlee = false;
 
         RobotInfo[] units = rc.senseNearbyRobots(GameConstants.VISION_RADIUS_SQUARED, rc.getTeam().opponent());
         for (RobotInfo r : units) {
@@ -62,7 +65,7 @@ public class MicroManagerMopper {
                     break;
                 case MOPPER:
                     if (rc.getLocation().distanceSquaredTo(r.getLocation()) <= 8) {
-                        //enemyNearby = true;
+                        shouldFlee = true;
                         hasPaint = r.getPaintAmount() > 0;
                         unit = r;
                         unitLoc = r.getLocation();
@@ -283,7 +286,10 @@ public class MicroManagerMopper {
         }
 
         int getAtk(){
-            if (!canAttack) return 0;
+            if (!canAttack){
+                if (shouldFlee) return 0;
+                return (GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + GameConstants.MOPPER_ATTACK_PAINT_ADDITION) / 3;
+            }
             int x = inAttackRange ? GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + GameConstants.MOPPER_ATTACK_PAINT_ADDITION : 0;
             if (x < atkValue) x = atkValue;
             return x;
@@ -317,9 +323,6 @@ public class MicroManagerMopper {
             if (mp > p) return true;
 
             if (canAttack){
-
-                //if (inAttackRange && !M.inAttackRange) return true;
-                //if (M.inAttackRange && !inAttackRange) return false;
                 int atkPaint = getAtk(), matkPaint = M.getAtk();
                 if (atkPaint > matkPaint) return true;
                 if (matkPaint > atkPaint) return false;
