@@ -38,10 +38,10 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-3, -1);
@@ -50,16 +50,16 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score0 += 4;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score1 += 1;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
-                score1 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-3, 0);
@@ -68,16 +68,16 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score0 += 4;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score2 += 1;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
-                score2 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-3, 1);
@@ -86,16 +86,16 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score0 += 4;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score3 += 1;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
-                score3 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-2, -2);
@@ -104,18 +104,18 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score1 += 4;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score1 += 1;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
-                score4 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
-                score1 += 10;
-                score4 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-2, -1);
@@ -124,22 +124,22 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score0 += 4;
-                score1 += 4;
-                score2 += 4;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
-                score1 += 1;
-                score2 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score5 += 1;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
-                score1 += 10;
-                score2 += 10;
-                score5 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-2, 0);
@@ -148,25 +148,25 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score0 += 4;
-                score1 += 4;
-                score2 += 4;
-                score3 += 4;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
-                score1 += 1;
-                score2 += 1;
-                score3 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score6 += 1;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
-                score1 += 10;
-                score2 += 10;
-                score3 += 10;
-                score6 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-2, 1);
@@ -175,22 +175,22 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score0 += 4;
-                score2 += 4;
-                score3 += 4;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
-                score2 += 1;
-                score3 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score7 += 1;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
-                score2 += 10;
-                score3 += 10;
-                score7 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-2, 2);
@@ -199,18 +199,18 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score3 += 4;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score3 += 1;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
-                score8 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
-                score3 += 10;
-                score8 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-1, -1);
@@ -219,33 +219,33 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score0 += 4;
-                score1 += 4;
-                score2 += 4;
-                score4 += 4;
-                score5 += 4;
-                score6 += 4;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
-                score1 += 1;
-                score2 += 1;
-                score4 += 1;
-                score5 += 1;
-                score6 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score3 += 1;
-                score9 += 1;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
-                score1 += 10;
-                score2 += 10;
-                score3 += 10;
-                score4 += 10;
-                score5 += 10;
-                score6 += 10;
-                score9 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-1, 0);
@@ -254,34 +254,34 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score0 += 4;
-                score1 += 4;
-                score2 += 4;
-                score3 += 4;
-                score5 += 4;
-                score6 += 4;
-                score7 += 4;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
-                score1 += 1;
-                score2 += 1;
-                score3 += 1;
-                score5 += 1;
-                score6 += 1;
-                score7 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score10 += 1;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
-                score1 += 10;
-                score2 += 10;
-                score3 += 10;
-                score5 += 10;
-                score6 += 10;
-                score7 += 10;
-                score10 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-1, 1);
@@ -290,33 +290,33 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score0 += 4;
-                score2 += 4;
-                score3 += 4;
-                score6 += 4;
-                score7 += 4;
-                score8 += 4;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
-                score2 += 1;
-                score3 += 1;
-                score6 += 1;
-                score7 += 1;
-                score8 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score1 += 1;
-                score11 += 1;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
-                score1 += 10;
-                score2 += 10;
-                score3 += 10;
-                score6 += 10;
-                score7 += 10;
-                score8 += 10;
-                score11 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(0, 0);
@@ -325,46 +325,46 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score1 += 4;
-                score2 += 4;
-                score3 += 4;
-                score5 += 4;
-                score6 += 4;
-                score7 += 4;
-                score9 += 4;
-                score10 += 4;
-                score11 += 4;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score1 += 1;
-                score2 += 1;
-                score3 += 1;
-                score5 += 1;
-                score6 += 1;
-                score7 += 1;
-                score9 += 1;
-                score10 += 1;
-                score11 += 1;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score0 += 1;
-                score4 += 1;
-                score8 += 1;
-                score12 += 1;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score0 += 10;
-                score1 += 10;
-                score2 += 10;
-                score3 += 10;
-                score4 += 10;
-                score5 += 10;
-                score6 += 10;
-                score7 += 10;
-                score8 += 10;
-                score9 += 10;
-                score10 += 10;
-                score11 += 10;
-                score12 += 10;
+                score0 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-1, -3);
@@ -373,16 +373,16 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score4 += 4;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score4 += 1;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score1 += 1;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score1 += 10;
-                score4 += 10;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-1, -2);
@@ -391,22 +391,22 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score1 += 4;
-                score4 += 4;
-                score5 += 4;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score1 += 1;
-                score4 += 1;
-                score5 += 1;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score2 += 1;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score1 += 10;
-                score2 += 10;
-                score4 += 10;
-                score5 += 10;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(0, -2);
@@ -415,25 +415,25 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score1 += 4;
-                score4 += 4;
-                score5 += 4;
-                score9 += 4;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score1 += 1;
-                score4 += 1;
-                score5 += 1;
-                score9 += 1;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score6 += 1;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score1 += 10;
-                score4 += 10;
-                score5 += 10;
-                score6 += 10;
-                score9 += 10;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(0, -1);
@@ -442,34 +442,34 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score1 += 4;
-                score2 += 4;
-                score4 += 4;
-                score5 += 4;
-                score6 += 4;
-                score9 += 4;
-                score10 += 4;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score1 += 1;
-                score2 += 1;
-                score4 += 1;
-                score5 += 1;
-                score6 += 1;
-                score9 += 1;
-                score10 += 1;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score7 += 1;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score1 += 10;
-                score2 += 10;
-                score4 += 10;
-                score5 += 10;
-                score6 += 10;
-                score7 += 10;
-                score9 += 10;
-                score10 += 10;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(1, -1);
@@ -478,33 +478,33 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score4 += 4;
-                score5 += 4;
-                score6 += 4;
-                score9 += 4;
-                score10 += 4;
-                score12 += 4;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score4 += 1;
-                score5 += 1;
-                score6 += 1;
-                score9 += 1;
-                score10 += 1;
-                score12 += 1;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score1 += 1;
-                score11 += 1;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score1 += 10;
-                score4 += 10;
-                score5 += 10;
-                score6 += 10;
-                score9 += 10;
-                score10 += 10;
-                score11 += 10;
-                score12 += 10;
+                score1 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-1, 2);
@@ -513,22 +513,22 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score3 += 4;
-                score7 += 4;
-                score8 += 4;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score3 += 1;
-                score7 += 1;
-                score8 += 1;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score2 += 1;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score2 += 10;
-                score3 += 10;
-                score7 += 10;
-                score8 += 10;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(0, 1);
@@ -537,34 +537,34 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score2 += 4;
-                score3 += 4;
-                score6 += 4;
-                score7 += 4;
-                score8 += 4;
-                score10 += 4;
-                score11 += 4;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score2 += 1;
-                score3 += 1;
-                score6 += 1;
-                score7 += 1;
-                score8 += 1;
-                score10 += 1;
-                score11 += 1;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score5 += 1;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score2 += 10;
-                score3 += 10;
-                score5 += 10;
-                score6 += 10;
-                score7 += 10;
-                score8 += 10;
-                score10 += 10;
-                score11 += 10;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(1, 0);
@@ -573,34 +573,34 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score5 += 4;
-                score6 += 4;
-                score7 += 4;
-                score9 += 4;
-                score10 += 4;
-                score11 += 4;
-                score12 += 4;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score5 += 1;
-                score6 += 1;
-                score7 += 1;
-                score9 += 1;
-                score10 += 1;
-                score11 += 1;
-                score12 += 1;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score2 += 1;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score2 += 10;
-                score5 += 10;
-                score6 += 10;
-                score7 += 10;
-                score9 += 10;
-                score10 += 10;
-                score11 += 10;
-                score12 += 10;
+                score2 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(-1, 3);
@@ -609,16 +609,16 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score8 += 4;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score8 += 1;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score3 += 1;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score3 += 10;
-                score8 += 10;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(0, 2);
@@ -627,25 +627,25 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score3 += 4;
-                score7 += 4;
-                score8 += 4;
-                score11 += 4;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score3 += 1;
-                score7 += 1;
-                score8 += 1;
-                score11 += 1;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score6 += 1;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score3 += 10;
-                score6 += 10;
-                score7 += 10;
-                score8 += 10;
-                score11 += 10;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(1, 1);
@@ -654,33 +654,33 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score6 += 4;
-                score7 += 4;
-                score8 += 4;
-                score10 += 4;
-                score11 += 4;
-                score12 += 4;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score6 += 1;
-                score7 += 1;
-                score8 += 1;
-                score10 += 1;
-                score11 += 1;
-                score12 += 1;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score3 += 1;
-                score9 += 1;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score3 += 10;
-                score6 += 10;
-                score7 += 10;
-                score8 += 10;
-                score9 += 10;
-                score10 += 10;
-                score11 += 10;
-                score12 += 10;
+                score3 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(0, -4);
@@ -689,10 +689,10 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score4 += 1;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score4 += 10;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(0, -3);
@@ -701,16 +701,16 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score4 += 4;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score4 += 1;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score5 += 1;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score4 += 10;
-                score5 += 10;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(1, -3);
@@ -719,16 +719,16 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score4 += 4;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score4 += 1;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score9 += 1;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score4 += 10;
-                score9 += 10;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(1, -2);
@@ -737,22 +737,22 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score4 += 4;
-                score5 += 4;
-                score9 += 4;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score4 += 1;
-                score5 += 1;
-                score9 += 1;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score10 += 1;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score4 += 10;
-                score5 += 10;
-                score9 += 10;
-                score10 += 10;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(2, -2);
@@ -761,18 +761,18 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score9 += 4;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score9 += 1;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score4 += 1;
-                score12 += 1;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score4 += 10;
-                score9 += 10;
-                score12 += 10;
+                score4 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(2, -1);
@@ -781,22 +781,22 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score9 += 4;
-                score10 += 4;
-                score12 += 4;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score9 += 1;
-                score10 += 1;
-                score12 += 1;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score5 += 1;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score5 += 10;
-                score9 += 10;
-                score10 += 10;
-                score12 += 10;
+                score5 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(2, 0);
@@ -805,25 +805,25 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score9 += 4;
-                score10 += 4;
-                score11 += 4;
-                score12 += 4;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score9 += 1;
-                score10 += 1;
-                score11 += 1;
-                score12 += 1;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score6 += 1;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score6 += 10;
-                score9 += 10;
-                score10 += 10;
-                score11 += 10;
-                score12 += 10;
+                score6 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(0, 3);
@@ -832,16 +832,16 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score8 += 4;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score8 += 1;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score7 += 1;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score7 += 10;
-                score8 += 10;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(1, 2);
@@ -850,22 +850,22 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score7 += 4;
-                score8 += 4;
-                score11 += 4;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score7 += 1;
-                score8 += 1;
-                score11 += 1;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score10 += 1;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score7 += 10;
-                score8 += 10;
-                score10 += 10;
-                score11 += 10;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(2, 1);
@@ -874,22 +874,22 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score10 += 4;
-                score11 += 4;
-                score12 += 4;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score10 += 1;
-                score11 += 1;
-                score12 += 1;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score7 += 1;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score7 += 10;
-                score10 += 10;
-                score11 += 10;
-                score12 += 10;
+                score7 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(0, 4);
@@ -898,10 +898,10 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score8 += 1;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score8 += 10;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(1, 3);
@@ -910,16 +910,16 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score8 += 4;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score8 += 1;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score11 += 1;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score8 += 10;
-                score11 += 10;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(2, 2);
@@ -928,18 +928,18 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score11 += 4;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score11 += 1;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score8 += 1;
-                score12 += 1;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score8 += 10;
-                score11 += 10;
-                score12 += 10;
+                score8 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(3, -1);
@@ -948,16 +948,16 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score12 += 4;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score12 += 1;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score9 += 1;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score9 += 10;
-                score12 += 10;
+                score9 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(3, 0);
@@ -966,16 +966,16 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score12 += 4;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score12 += 1;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score10 += 1;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score10 += 10;
-                score12 += 10;
+                score10 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(3, 1);
@@ -984,16 +984,16 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if(p.isEnemy()){
-                score12 += 4;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT_ENEMY;
             } else if (p == PaintType.EMPTY && i.isPassable()) {
-                score12 += 1;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score11 += 1;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score11 += 10;
-                score12 += 10;
+                score11 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         loc = myLoc.translate(4, 0);
@@ -1002,10 +1002,10 @@ public  class SplasherAttackManager {
             r = rc.senseRobotAtLocation(loc);
             p = i.getPaint();
             if (p == PaintType.EMPTY && i.isPassable()) {
-                score12 += 1;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_PAINT;
             }
             if(r != null && r.team != myTeam && r.type.isTowerType()){
-                score12 += 10;
+                score12 += Constants.SPLASHER_SCORE_ATTACK_TOWER;
             }
         }
         MapLocation best = null;
