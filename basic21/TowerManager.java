@@ -84,12 +84,14 @@ public class TowerManager {
 
 
     static int getNextBuild() {
-        int ans = getNextBuildOld();
+        //int ans = getNextBuildOld();
         int ch = MyRobot.rc.getChips();
-        int tn = MyRobot.rc.getNumberTowers();
-        if (ch > Constants.MIN_CHIPS_PAINT_TOWER) return PAINT;
+        //int tn = MyRobot.rc.getNumberTowers();
+        if (ch < Constants.MIN_CHIPS_PAINT_TOWER) return MONEY;
+        return PAINT;
+        /*if (ch >= Constants.MIN_CHIPS_PAINT_TOWER) return PAINT;
         if (tn < 7 && ans == DEFENSE) ans = MONEY;
-        return ans;
+        return ans;*/
     }
 
 

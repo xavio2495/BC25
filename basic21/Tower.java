@@ -39,6 +39,10 @@ public class Tower extends MyRobot {
             UnitType.MOPPER,
     };
 
+    static final int TURNS_PAINT = 20;
+    int[] paintIncrease = new int[TURNS_PAINT];
+    int oldPaint = 0;
+
     Tower(RobotController rc){
         super(rc);
 
@@ -51,6 +55,12 @@ public class Tower extends MyRobot {
         };
 
         doDirs();
+        oldPaint = MyRobot.rc.getPaint();
+    }
+
+    void startTurn() throws GameActionException {
+        TowerManager.updateTowerCount();
+        paintIncrease[rc.getRoundNum()%TURNS_PAINT] = MyRobot.rc.getPaint() - oldPaint;
     }
 
     void doDirs(){
@@ -88,10 +98,6 @@ public class Tower extends MyRobot {
         return ans;
     }
 
-    void startTurn() throws GameActionException {
-        TowerManager.updateTowerCount();
-    }
-
     void checkSpawnPlan(){
         if (spawnPlan == spawnPlanDefault) return;
         if (spawnPlanPos + 2*rc.getNumberTowers() >= THRESHOLD){
@@ -99,6 +105,8 @@ public class Tower extends MyRobot {
             spawnPlanPos = 0;
         }
     }
+
+
 
     void runTurn() throws GameActionException {
         tryUpgrade();
@@ -115,6 +123,7 @@ public class Tower extends MyRobot {
 
     void endTurn() throws GameActionException {
         if (TowerManager.shouldDestruct()) rc.disintegrate();
+        oldPaint = MyRobot.rc.getPaint();
     }
 
     void tryUpgrade() throws GameActionException {
@@ -123,15 +132,21 @@ public class Tower extends MyRobot {
         switch(rc.getType()){
             case LEVEL_ONE_PAINT_TOWER:
                 if (rc.getChips() >= UnitType.LEVEL_TWO_MONEY_TOWER.moneyCost + savings){
-                    if (rc.canUpgradeTower(rc.getLocation())) rc.upgradeTower(rc.getLocation());
+                    if (rc.canUpgradeTower(rc.getLocation()) && maxIncrease() < Constants.MIN_INCREASE_NO_UPGRADE_2) rc.upgradeTower(rc.getLocation());
                 }
                 break;
             case LEVEL_TWO_PAINT_TOWER:
                 if (rc.getChips() >= UnitType.LEVEL_THREE_PAINT_TOWER.moneyCost + savings){
-                    if (rc.canUpgradeTower(rc.getLocation())) rc.upgradeTower(rc.getLocation());
+                    if (rc.canUpgradeTower(rc.getLocation()) && maxIncrease() < Constants.MIN_INCREASE_NO_UPGRADE_2) rc.upgradeTower(rc.getLocation());
                 }
                 break;
         }
+    }
+
+    int maxIncrease(){
+        int ans = 0;
+        for (int x : paintIncrease) if (ans < x) ans = x;
+        return ans;
     }
 
     /*boolean shouldSpawnSoldier(){

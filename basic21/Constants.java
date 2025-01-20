@@ -9,10 +9,15 @@ public class Constants {
     public static final int SPLASHER_SCORE_ATTACK_TOWER = 30;
     public static final int SPLASHER_ATK_THRESHOLD = 50;
 
-    public static final int MIN_CHIPS_PAINT_TOWER = 6000;
+    public static final int MIN_CHIPS_DESTRUCTION = 6500;
+    public static final int MIN_CHIPS_DESTRUCTION_DEFENSE = 7500;
+    public static final int MIN_CHIPS_PAINT_TOWER = 5500;
     public static final int WAIT_DESTRUCTION = 40;
 
     public static final int INF = 1000000000;
+
+    public static final int MIN_TOWERS_NO_RECOVERY = 6;
+    public static final int MIN_ROUNDS_NO_RECOVERY = 300;
 
     public static final int MIN_TRANSFER_PAINT = 5;
 
@@ -23,7 +28,11 @@ public class Constants {
 
     public static final int MIN_GIVING_THRESHOLD = 20;
 
-    public static final int NO_HEAL_CHIPS = 6000;
+    public static final int MIN_INCREASE_NO_UPGRADE_2 = 50;
+
+    public static final int MIN_INCREASE_NO_UPGRADE_3 = 30;
+
+    //public static final int NO_HEAL_CHIPS = 6000;
 
     public static final int MIN_SOLDIER_MOVEMENT = UnitType.SOLDIER.attackCost + GameConstants.PENALTY_ENEMY_TERRITORY + 1;
 
