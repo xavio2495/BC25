@@ -41,7 +41,7 @@ public class MicroManagerSoldier {
                     * (GameConstants.INCREASED_COOLDOWN_INTERCEPT + GameConstants.INCREASED_COOLDOWN_SLOPE * paintPercentage) / 100.0);
         }
 
-        canMoveNextTurn = (cdAdd + rc.getActionCooldownTurns() - GameConstants.COOLDOWNS_PER_TURN < GameConstants.COOLDOWN_LIMIT);
+        canMoveNextTurn = (cdAdd + rc.getMovementCooldownTurns() - GameConstants.COOLDOWNS_PER_TURN < GameConstants.COOLDOWN_LIMIT);
 
         microInfos = new MicroInfo[9];
         microInfos[0] = new MicroInfo(Direction.NORTH);
