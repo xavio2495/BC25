@@ -1,5 +1,5 @@
 
-package basic18fix;
+package basic23;
 
 import battlecode.common.*;
 

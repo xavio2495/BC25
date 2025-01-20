@@ -82,7 +82,7 @@ def p(what):
 f = open('SplasherAttackManager.java', 'w')
 
 p('''
-package basic18fix;
+package basic23;
 
 import battlecode.common.*;
 

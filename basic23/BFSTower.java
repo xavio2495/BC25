@@ -1,17 +1,12 @@
-package basic18fix;
+package basic23;
+
 
 import battlecode.common.*;
 
-public class BFSUnit extends BFS {
-
-    static RobotController rc;
-
-    static void initiate() {
-        rc = MyRobot.rc;
-    }
+public class BFSTower extends BFS {
 
 
-    static Direction getBestDir(MapLocation target) throws GameActionException {
+    static void computeDists() throws GameActionException {
         l84 = rc.getLocation();
         v84 = 0;
         l85 = l84.add(Direction.NORTH);
@@ -219,193 +214,209 @@ public class BFSUnit extends BFS {
         v114 = 1000000;
         d114 = null;
 
-        if (MovementManager.canMove(Direction.WEST)){
+        if (rc.onTheMap(l71)){
             m71 =  rc.senseMapInfo(l71);
-            p71 = 10 + switch(m71.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p71 += 5*Util.getPaintLost(Direction.WEST);
-            v71 = v84 + p71;
-            d71 = Direction.WEST;
+            if (m71.isPassable()){
+                p71 = 10 + switch(m71.getPaint()){
+                    case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+                    case EMPTY -> 5;
+                    default -> 0;
+                };
+                p71 += 5*Util.getPaintLost(Direction.WEST);
+                v71 = v84 + p71;
+                d71 = Direction.WEST;
+            }
         }
-        if (MovementManager.canMove(Direction.SOUTH)){
+        if (rc.onTheMap(l83)){
             m83 =  rc.senseMapInfo(l83);
-            p83 = 10 + switch(m83.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p83 += 5*Util.getPaintLost(Direction.SOUTH);
-            if (v84 > v71) {
-                v83 = v71 + p83;
-                d83 = d71;
-            }
-            else {
-                v83 = v84 + p83;
-                d83 = Direction.SOUTH;
+            if (m83.isPassable()){
+                p83 = 10 + switch(m83.getPaint()){
+                    case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+                    case EMPTY -> 5;
+                    default -> 0;
+                };
+                p83 += 5*Util.getPaintLost(Direction.SOUTH);
+                if (v84 > v71) {
+                    v83 = v71 + p83;
+                    d83 = d71;
+                }
+                else {
+                    v83 = v84 + p83;
+                    d83 = Direction.SOUTH;
+                }
             }
         }
-        if (MovementManager.canMove(Direction.NORTH)){
+        if (rc.onTheMap(l85)){
             m85 =  rc.senseMapInfo(l85);
-            p85 = 10 + switch(m85.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p85 += 5*Util.getPaintLost(Direction.NORTH);
-            if (v84 > v71) {
-                v85 = v71 + p85;
-                d85 = d71;
-            }
-            else {
-                v85 = v84 + p85;
-                d85 = Direction.NORTH;
+            if (m85.isPassable()){
+                p85 = 10 + switch(m85.getPaint()){
+                    case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+                    case EMPTY -> 5;
+                    default -> 0;
+                };
+                p85 += 5*Util.getPaintLost(Direction.NORTH);
+                if (v84 > v71) {
+                    v85 = v71 + p85;
+                    d85 = d71;
+                }
+                else {
+                    v85 = v84 + p85;
+                    d85 = Direction.NORTH;
+                }
             }
         }
-        if (MovementManager.canMove(Direction.EAST)){
+        if (rc.onTheMap(l97)){
             m97 =  rc.senseMapInfo(l97);
-            p97 = 10 + switch(m97.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p97 += 5*Util.getPaintLost(Direction.EAST);
-            if (v84 > v85) {
-                if (v85 > v83) {
-                    v97 = v83 + p97;
-                    d97 = d83;
-                }
-                else {
-                    v97 = v85 + p97;
-                    d97 = d85;
-                }
-            }
-            else {
-                if (v84 > v83) {
-                    v97 = v83 + p97;
-                    d97 = d83;
-                }
-                else {
-                    v97 = v84 + p97;
-                    d97 = Direction.EAST;
-                }
-            }
-        }
-        if (MovementManager.canMove(Direction.SOUTHWEST)){
-            m70 =  rc.senseMapInfo(l70);
-            p70 = 10 + switch(m70.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p70 += 5*Util.getPaintLost(Direction.SOUTHWEST);
-            if (v84 > v71) {
-                if (v71 > v83) {
-                    v70 = v83 + p70;
-                    d70 = d83;
-                }
-                else {
-                    v70 = v71 + p70;
-                    d70 = d71;
-                }
-            }
-            else {
-                if (v84 > v83) {
-                    v70 = v83 + p70;
-                    d70 = d83;
-                }
-                else {
-                    v70 = v84 + p70;
-                    d70 = Direction.SOUTHWEST;
-                }
-            }
-        }
-        if (MovementManager.canMove(Direction.NORTHWEST)){
-            m72 =  rc.senseMapInfo(l72);
-            p72 = 10 + switch(m72.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p72 += 5*Util.getPaintLost(Direction.NORTHWEST);
-            if (v84 > v71) {
-                if (v71 > v85) {
-                    v72 = v85 + p72;
-                    d72 = d85;
-                }
-                else {
-                    v72 = v71 + p72;
-                    d72 = d71;
-                }
-            }
-            else {
+            if (m97.isPassable()){
+                p97 = 10 + switch(m97.getPaint()){
+                    case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+                    case EMPTY -> 5;
+                    default -> 0;
+                };
+                p97 += 5*Util.getPaintLost(Direction.EAST);
                 if (v84 > v85) {
-                    v72 = v85 + p72;
-                    d72 = d85;
+                    if (v85 > v83) {
+                        v97 = v83 + p97;
+                        d97 = d83;
+                    }
+                    else {
+                        v97 = v85 + p97;
+                        d97 = d85;
+                    }
                 }
                 else {
-                    v72 = v84 + p72;
-                    d72 = Direction.NORTHWEST;
+                    if (v84 > v83) {
+                        v97 = v83 + p97;
+                        d97 = d83;
+                    }
+                    else {
+                        v97 = v84 + p97;
+                        d97 = Direction.EAST;
+                    }
                 }
             }
         }
-        if (MovementManager.canMove(Direction.SOUTHEAST)){
+        if (rc.onTheMap(l70)){
+            m70 =  rc.senseMapInfo(l70);
+            if (m70.isPassable()){
+                p70 = 10 + switch(m70.getPaint()){
+                    case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+                    case EMPTY -> 5;
+                    default -> 0;
+                };
+                p70 += 5*Util.getPaintLost(Direction.SOUTHWEST);
+                if (v84 > v71) {
+                    if (v71 > v83) {
+                        v70 = v83 + p70;
+                        d70 = d83;
+                    }
+                    else {
+                        v70 = v71 + p70;
+                        d70 = d71;
+                    }
+                }
+                else {
+                    if (v84 > v83) {
+                        v70 = v83 + p70;
+                        d70 = d83;
+                    }
+                    else {
+                        v70 = v84 + p70;
+                        d70 = Direction.SOUTHWEST;
+                    }
+                }
+            }
+        }
+        if (rc.onTheMap(l72)){
+            m72 =  rc.senseMapInfo(l72);
+            if (m72.isPassable()){
+                p72 = 10 + switch(m72.getPaint()){
+                    case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+                    case EMPTY -> 5;
+                    default -> 0;
+                };
+                p72 += 5*Util.getPaintLost(Direction.NORTHWEST);
+                if (v84 > v71) {
+                    if (v71 > v85) {
+                        v72 = v85 + p72;
+                        d72 = d85;
+                    }
+                    else {
+                        v72 = v71 + p72;
+                        d72 = d71;
+                    }
+                }
+                else {
+                    if (v84 > v85) {
+                        v72 = v85 + p72;
+                        d72 = d85;
+                    }
+                    else {
+                        v72 = v84 + p72;
+                        d72 = Direction.NORTHWEST;
+                    }
+                }
+            }
+        }
+        if (rc.onTheMap(l96)){
             m96 =  rc.senseMapInfo(l96);
-            p96 = 10 + switch(m96.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p96 += 5*Util.getPaintLost(Direction.SOUTHEAST);
-            if (v84 > v97) {
-                if (v97 > v83) {
-                    v96 = v83 + p96;
-                    d96 = d83;
+            if (m96.isPassable()){
+                p96 = 10 + switch(m96.getPaint()){
+                    case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+                    case EMPTY -> 5;
+                    default -> 0;
+                };
+                p96 += 5*Util.getPaintLost(Direction.SOUTHEAST);
+                if (v84 > v97) {
+                    if (v97 > v83) {
+                        v96 = v83 + p96;
+                        d96 = d83;
+                    }
+                    else {
+                        v96 = v97 + p96;
+                        d96 = d97;
+                    }
                 }
                 else {
-                    v96 = v97 + p96;
-                    d96 = d97;
-                }
-            }
-            else {
-                if (v84 > v83) {
-                    v96 = v83 + p96;
-                    d96 = d83;
-                }
-                else {
-                    v96 = v84 + p96;
-                    d96 = Direction.SOUTHEAST;
+                    if (v84 > v83) {
+                        v96 = v83 + p96;
+                        d96 = d83;
+                    }
+                    else {
+                        v96 = v84 + p96;
+                        d96 = Direction.SOUTHEAST;
+                    }
                 }
             }
         }
-        if (MovementManager.canMove(Direction.NORTHEAST)){
+        if (rc.onTheMap(l98)){
             m98 =  rc.senseMapInfo(l98);
-            p98 = 10 + switch(m98.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p98 += 5*Util.getPaintLost(Direction.NORTHEAST);
-            if (v84 > v85) {
-                if (v85 > v97) {
-                    v98 = v97 + p98;
-                    d98 = d97;
+            if (m98.isPassable()){
+                p98 = 10 + switch(m98.getPaint()){
+                    case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+                    case EMPTY -> 5;
+                    default -> 0;
+                };
+                p98 += 5*Util.getPaintLost(Direction.NORTHEAST);
+                if (v84 > v85) {
+                    if (v85 > v97) {
+                        v98 = v97 + p98;
+                        d98 = d97;
+                    }
+                    else {
+                        v98 = v85 + p98;
+                        d98 = d85;
+                    }
                 }
                 else {
-                    v98 = v85 + p98;
-                    d98 = d85;
-                }
-            }
-            else {
-                if (v84 > v97) {
-                    v98 = v97 + p98;
-                    d98 = d97;
-                }
-                else {
-                    v98 = v84 + p98;
-                    d98 = Direction.NORTHEAST;
+                    if (v84 > v97) {
+                        v98 = v97 + p98;
+                        d98 = d97;
+                    }
+                    else {
+                        v98 = v84 + p98;
+                        d98 = Direction.NORTHEAST;
+                    }
                 }
             }
         }
@@ -2977,282 +2988,120 @@ public class BFSUnit extends BFS {
                 }
             }
         }
+    }
 
-        int dx = target.x - l84.x;
-        int dy = target.y - l84.y;
+    static boolean isClose(MapLocation target){
+        int dx = target.x - rc.getLocation().x;
+        int dy = target.y - rc.getLocation().y;
         switch(dx){
             case -4:
                 switch(dy){
-                    case -2: return d30;
-                    case -1: return d31;
-                    case 0: return d32;
-                    case 1: return d33;
-                    case 2: return d34;
+                    case -2: return v30 < 1000;
+                    case -1: return v31 < 1000;
+                    case 0: return v32 < 1000;
+                    case 1: return v33 < 1000;
+                    case 2: return v34 < 1000;
                 }
                 break;
             case -3:
                 switch(dy){
-                    case -3: return d42;
-                    case -2: return d43;
-                    case -1: return d44;
-                    case 0: return d45;
-                    case 1: return d46;
-                    case 2: return d47;
-                    case 3: return d48;
+                    case -3: return v42 < 1000;
+                    case -2: return v43 < 1000;
+                    case -1: return v44 < 1000;
+                    case 0: return v45 < 1000;
+                    case 1: return v46 < 1000;
+                    case 2: return v47 < 1000;
+                    case 3: return v48 < 1000;
                 }
                 break;
             case -2:
                 switch(dy){
-                    case -4: return d54;
-                    case -3: return d55;
-                    case -2: return d56;
-                    case -1: return d57;
-                    case 0: return d58;
-                    case 1: return d59;
-                    case 2: return d60;
-                    case 3: return d61;
-                    case 4: return d62;
+                    case -4: return v54 < 1000;
+                    case -3: return v55 < 1000;
+                    case -2: return v56 < 1000;
+                    case -1: return v57 < 1000;
+                    case 0: return v58 < 1000;
+                    case 1: return v59 < 1000;
+                    case 2: return v60 < 1000;
+                    case 3: return v61 < 1000;
+                    case 4: return v62 < 1000;
                 }
                 break;
             case -1:
                 switch(dy){
-                    case -4: return d67;
-                    case -3: return d68;
-                    case -2: return d69;
-                    case -1: return d70;
-                    case 0: return d71;
-                    case 1: return d72;
-                    case 2: return d73;
-                    case 3: return d74;
-                    case 4: return d75;
+                    case -4: return v67 < 1000;
+                    case -3: return v68 < 1000;
+                    case -2: return v69 < 1000;
+                    case -1: return v70 < 1000;
+                    case 0: return v71 < 1000;
+                    case 1: return v72 < 1000;
+                    case 2: return v73 < 1000;
+                    case 3: return v74 < 1000;
+                    case 4: return v75 < 1000;
                 }
                 break;
             case 0:
                 switch(dy){
-                    case -4: return d80;
-                    case -3: return d81;
-                    case -2: return d82;
-                    case -1: return d83;
-                    case 0: return d84;
-                    case 1: return d85;
-                    case 2: return d86;
-                    case 3: return d87;
-                    case 4: return d88;
+                    case -4: return v80 < 1000;
+                    case -3: return v81 < 1000;
+                    case -2: return v82 < 1000;
+                    case -1: return v83 < 1000;
+                    case 0: return v84 < 1000;
+                    case 1: return v85 < 1000;
+                    case 2: return v86 < 1000;
+                    case 3: return v87 < 1000;
+                    case 4: return v88 < 1000;
                 }
                 break;
             case 1:
                 switch(dy){
-                    case -4: return d93;
-                    case -3: return d94;
-                    case -2: return d95;
-                    case -1: return d96;
-                    case 0: return d97;
-                    case 1: return d98;
-                    case 2: return d99;
-                    case 3: return d100;
-                    case 4: return d101;
+                    case -4: return v93 < 1000;
+                    case -3: return v94 < 1000;
+                    case -2: return v95 < 1000;
+                    case -1: return v96 < 1000;
+                    case 0: return v97 < 1000;
+                    case 1: return v98 < 1000;
+                    case 2: return v99 < 1000;
+                    case 3: return v100 < 1000;
+                    case 4: return v101 < 1000;
                 }
                 break;
             case 2:
                 switch(dy){
-                    case -4: return d106;
-                    case -3: return d107;
-                    case -2: return d108;
-                    case -1: return d109;
-                    case 0: return d110;
-                    case 1: return d111;
-                    case 2: return d112;
-                    case 3: return d113;
-                    case 4: return d114;
+                    case -4: return v106 < 1000;
+                    case -3: return v107 < 1000;
+                    case -2: return v108 < 1000;
+                    case -1: return v109 < 1000;
+                    case 0: return v110 < 1000;
+                    case 1: return v111 < 1000;
+                    case 2: return v112 < 1000;
+                    case 3: return v113 < 1000;
+                    case 4: return v114 < 1000;
                 }
                 break;
             case 3:
                 switch(dy){
-                    case -3: return d120;
-                    case -2: return d121;
-                    case -1: return d122;
-                    case 0: return d123;
-                    case 1: return d124;
-                    case 2: return d125;
-                    case 3: return d126;
+                    case -3: return v120 < 1000;
+                    case -2: return v121 < 1000;
+                    case -1: return v122 < 1000;
+                    case 0: return v123 < 1000;
+                    case 1: return v124 < 1000;
+                    case 2: return v125 < 1000;
+                    case 3: return v126 < 1000;
                 }
                 break;
             case 4:
                 switch(dy){
-                    case -2: return d134;
-                    case -1: return d135;
-                    case 0: return d136;
-                    case 1: return d137;
-                    case 2: return d138;
+                    case -2: return v134 < 1000;
+                    case -1: return v135 < 1000;
+                    case 0: return v136 < 1000;
+                    case 1: return v137 < 1000;
+                    case 2: return v138 < 1000;
                 }
                 break;
         }
-
-        Direction ans = null;
-        double bestEstimation = 0;
-        double initialDist = Math.sqrt(l84.distanceSquaredTo(target));
-
-        double dist30 = (initialDist - Math.sqrt(l30.distanceSquaredTo(target)))/v30;
-        if (dist30 > bestEstimation) {
-            bestEstimation = dist30;
-            ans = d30;
-        }
-        double dist31 = (initialDist - Math.sqrt(l31.distanceSquaredTo(target)))/v31;
-        if (dist31 > bestEstimation) {
-            bestEstimation = dist31;
-            ans = d31;
-        }
-        double dist32 = (initialDist - Math.sqrt(l32.distanceSquaredTo(target)))/v32;
-        if (dist32 > bestEstimation) {
-            bestEstimation = dist32;
-            ans = d32;
-        }
-        double dist33 = (initialDist - Math.sqrt(l33.distanceSquaredTo(target)))/v33;
-        if (dist33 > bestEstimation) {
-            bestEstimation = dist33;
-            ans = d33;
-        }
-        double dist34 = (initialDist - Math.sqrt(l34.distanceSquaredTo(target)))/v34;
-        if (dist34 > bestEstimation) {
-            bestEstimation = dist34;
-            ans = d34;
-        }
-        double dist42 = (initialDist - Math.sqrt(l42.distanceSquaredTo(target)))/v42;
-        if (dist42 > bestEstimation) {
-            bestEstimation = dist42;
-            ans = d42;
-        }
-        double dist43 = (initialDist - Math.sqrt(l43.distanceSquaredTo(target)))/v43;
-        if (dist43 > bestEstimation) {
-            bestEstimation = dist43;
-            ans = d43;
-        }
-        double dist47 = (initialDist - Math.sqrt(l47.distanceSquaredTo(target)))/v47;
-        if (dist47 > bestEstimation) {
-            bestEstimation = dist47;
-            ans = d47;
-        }
-        double dist48 = (initialDist - Math.sqrt(l48.distanceSquaredTo(target)))/v48;
-        if (dist48 > bestEstimation) {
-            bestEstimation = dist48;
-            ans = d48;
-        }
-        double dist54 = (initialDist - Math.sqrt(l54.distanceSquaredTo(target)))/v54;
-        if (dist54 > bestEstimation) {
-            bestEstimation = dist54;
-            ans = d54;
-        }
-        double dist55 = (initialDist - Math.sqrt(l55.distanceSquaredTo(target)))/v55;
-        if (dist55 > bestEstimation) {
-            bestEstimation = dist55;
-            ans = d55;
-        }
-        double dist61 = (initialDist - Math.sqrt(l61.distanceSquaredTo(target)))/v61;
-        if (dist61 > bestEstimation) {
-            bestEstimation = dist61;
-            ans = d61;
-        }
-        double dist62 = (initialDist - Math.sqrt(l62.distanceSquaredTo(target)))/v62;
-        if (dist62 > bestEstimation) {
-            bestEstimation = dist62;
-            ans = d62;
-        }
-        double dist67 = (initialDist - Math.sqrt(l67.distanceSquaredTo(target)))/v67;
-        if (dist67 > bestEstimation) {
-            bestEstimation = dist67;
-            ans = d67;
-        }
-        double dist75 = (initialDist - Math.sqrt(l75.distanceSquaredTo(target)))/v75;
-        if (dist75 > bestEstimation) {
-            bestEstimation = dist75;
-            ans = d75;
-        }
-        double dist80 = (initialDist - Math.sqrt(l80.distanceSquaredTo(target)))/v80;
-        if (dist80 > bestEstimation) {
-            bestEstimation = dist80;
-            ans = d80;
-        }
-        double dist88 = (initialDist - Math.sqrt(l88.distanceSquaredTo(target)))/v88;
-        if (dist88 > bestEstimation) {
-            bestEstimation = dist88;
-            ans = d88;
-        }
-        double dist93 = (initialDist - Math.sqrt(l93.distanceSquaredTo(target)))/v93;
-        if (dist93 > bestEstimation) {
-            bestEstimation = dist93;
-            ans = d93;
-        }
-        double dist101 = (initialDist - Math.sqrt(l101.distanceSquaredTo(target)))/v101;
-        if (dist101 > bestEstimation) {
-            bestEstimation = dist101;
-            ans = d101;
-        }
-        double dist106 = (initialDist - Math.sqrt(l106.distanceSquaredTo(target)))/v106;
-        if (dist106 > bestEstimation) {
-            bestEstimation = dist106;
-            ans = d106;
-        }
-        double dist107 = (initialDist - Math.sqrt(l107.distanceSquaredTo(target)))/v107;
-        if (dist107 > bestEstimation) {
-            bestEstimation = dist107;
-            ans = d107;
-        }
-        double dist113 = (initialDist - Math.sqrt(l113.distanceSquaredTo(target)))/v113;
-        if (dist113 > bestEstimation) {
-            bestEstimation = dist113;
-            ans = d113;
-        }
-        double dist114 = (initialDist - Math.sqrt(l114.distanceSquaredTo(target)))/v114;
-        if (dist114 > bestEstimation) {
-            bestEstimation = dist114;
-            ans = d114;
-        }
-        double dist120 = (initialDist - Math.sqrt(l120.distanceSquaredTo(target)))/v120;
-        if (dist120 > bestEstimation) {
-            bestEstimation = dist120;
-            ans = d120;
-        }
-        double dist121 = (initialDist - Math.sqrt(l121.distanceSquaredTo(target)))/v121;
-        if (dist121 > bestEstimation) {
-            bestEstimation = dist121;
-            ans = d121;
-        }
-        double dist125 = (initialDist - Math.sqrt(l125.distanceSquaredTo(target)))/v125;
-        if (dist125 > bestEstimation) {
-            bestEstimation = dist125;
-            ans = d125;
-        }
-        double dist126 = (initialDist - Math.sqrt(l126.distanceSquaredTo(target)))/v126;
-        if (dist126 > bestEstimation) {
-            bestEstimation = dist126;
-            ans = d126;
-        }
-        double dist134 = (initialDist - Math.sqrt(l134.distanceSquaredTo(target)))/v134;
-        if (dist134 > bestEstimation) {
-            bestEstimation = dist134;
-            ans = d134;
-        }
-        double dist135 = (initialDist - Math.sqrt(l135.distanceSquaredTo(target)))/v135;
-        if (dist135 > bestEstimation) {
-            bestEstimation = dist135;
-            ans = d135;
-        }
-        double dist136 = (initialDist - Math.sqrt(l136.distanceSquaredTo(target)))/v136;
-        if (dist136 > bestEstimation) {
-            bestEstimation = dist136;
-            ans = d136;
-        }
-        double dist137 = (initialDist - Math.sqrt(l137.distanceSquaredTo(target)))/v137;
-        if (dist137 > bestEstimation) {
-            bestEstimation = dist137;
-            ans = d137;
-        }
-        double dist138 = (initialDist - Math.sqrt(l138.distanceSquaredTo(target)))/v138;
-        if (dist138 > bestEstimation) {
-            bestEstimation = dist138;
-            ans = d138;
-        }
-        return ans;
+        return true;
     }
+
 
 }
