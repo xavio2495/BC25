@@ -99,15 +99,15 @@ public class MicroManagerSplasher {
         SplasherAttackManager.calc();
 
         boolean shouldMicro = false;
-        if (microInfos[0].isAccessible && (microInfos[0].inAttackRange || microInfos[0].atkLoc != null)) shouldMicro = true;
-        if (microInfos[1].isAccessible && (microInfos[1].inAttackRange || microInfos[1].atkLoc != null)) shouldMicro = true;
-        if (microInfos[2].isAccessible && (microInfos[2].inAttackRange || microInfos[2].atkLoc != null)) shouldMicro = true;
-        if (microInfos[3].isAccessible && (microInfos[3].inAttackRange || microInfos[3].atkLoc != null)) shouldMicro = true;
-        if (microInfos[4].isAccessible && (microInfos[4].inAttackRange || microInfos[4].atkLoc != null)) shouldMicro = true;
-        if (microInfos[5].isAccessible && (microInfos[5].inAttackRange || microInfos[5].atkLoc != null)) shouldMicro = true;
-        if (microInfos[6].isAccessible && (microInfos[6].inAttackRange || microInfos[6].atkLoc != null)) shouldMicro = true;
-        if (microInfos[7].isAccessible && (microInfos[7].inAttackRange || microInfos[7].atkLoc != null)) shouldMicro = true;
-        if (microInfos[8].isAccessible && (microInfos[8].inAttackRange || microInfos[8].atkLoc != null)) shouldMicro = true;
+        if (microInfos[0].isAccessible && (microInfos[0].moppersInRange > 0 || microInfos[0].atkLoc != null)) shouldMicro = true;
+        if (microInfos[1].isAccessible && (microInfos[1].moppersInRange > 0 || microInfos[1].atkLoc != null)) shouldMicro = true;
+        if (microInfos[2].isAccessible && (microInfos[2].moppersInRange > 0 || microInfos[2].atkLoc != null)) shouldMicro = true;
+        if (microInfos[3].isAccessible && (microInfos[3].moppersInRange > 0 || microInfos[3].atkLoc != null)) shouldMicro = true;
+        if (microInfos[4].isAccessible && (microInfos[4].moppersInRange > 0 || microInfos[4].atkLoc != null)) shouldMicro = true;
+        if (microInfos[5].isAccessible && (microInfos[5].moppersInRange > 0 || microInfos[5].atkLoc != null)) shouldMicro = true;
+        if (microInfos[6].isAccessible && (microInfos[6].moppersInRange > 0 || microInfos[6].atkLoc != null)) shouldMicro = true;
+        if (microInfos[7].isAccessible && (microInfos[7].moppersInRange > 0 || microInfos[7].atkLoc != null)) shouldMicro = true;
+        if (microInfos[8].isAccessible && (microInfos[8].moppersInRange > 0 || microInfos[8].atkLoc != null)) shouldMicro = true;
 
         if (!shouldMicro) return false;
 
