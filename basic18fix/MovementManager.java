@@ -25,7 +25,11 @@ public class MovementManager {
                 if(MyRobot.rc.senseMapInfo(newLoc).getPaint().isEnemy()) return;
             }
         }
+        if (dir == Direction.CENTER) return;
         MyRobot.rc.move(dir);
+        if (MyRobot.rc.getType() == UnitType.SOLDIER){
+            Map.fill();
+        }
     }
 }
 

@@ -5,26 +5,13 @@ import battlecode.common.*;
 public class Soldier extends Unit {
 
     boolean recovering = false;
-
-    static enum Mode {
-        TOWERS,
-        RESOURCES,
-    }
-
-    Mode mode;
-
     Soldier(RobotController rc) throws GameActionException {
         super(rc);
         Map.initialize();
-
-        mode = Mode.TOWERS;
-        if(rc.getRoundNum() > 10 && Math.random() < 0.5) {
-            mode = Mode.RESOURCES;
-        }
+        Map.fill();
     }
 
     void startTurn() throws GameActionException {
-        Map.fill();
         updateClosestRuin();
         ResourcePatternManager.attackLoc = null;
     }
