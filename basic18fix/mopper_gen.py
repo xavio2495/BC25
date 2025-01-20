@@ -89,26 +89,22 @@ for move, action in all_actions():
 actions = list(actions)
 
 score_ids = set()
-locations = {}
-def score(loc, cond, id, score):
-    loc = locations.setdefault(loc, {})
-    loc.setdefault(cond, []).append((id, score))
-    score_ids.add(id)
-    
+locations = {}    
 # score attacks
 for id, a in enumerate(actions):
     id = f'action{id}'
 
-    if isinstance(a, ActionAttack):
-        score(a.loc, 'p.isEnemy()', id, SCORE_ATTACK_UNPAINT)
-        score(a.loc, 'r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()', id, SCORE_ATTACK_ENEMY)
-    elif isinstance(a, ActionMopSwing):
+    #if isinstance(a, ActionAttack):
+    #    score(a.loc, 'p.isEnemy()', id, SCORE_ATTACK_UNPAINT)
+    #    score(a.loc, 'r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()', id, SCORE_ATTACK_ENEMY)
+    if isinstance(a, ActionMopSwing):
         d = a.dir
         j = Vec(d.y, -d.x)
         for xx in range(-1,2):
             for yy in range(1,3):
                 loc = a.loc + j*xx + d*yy
-                score(loc, 'r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()', id, SCORE_MOPSWING_ENEMY)
+                locations.setdefault(loc, []).append((id, SCORE_MOPSWING_ENEMY))
+                score_ids.add(id)
     else:
         raise Exception('wtf')  
 
@@ -131,33 +127,30 @@ public class MopperAttackManager {
 
 p('''
 MapLocation myLoc = rc.getLocation();
-MapLocation loc;
-MapInfo i;
-RobotInfo r;
-PaintType p;
-Team myTeam = rc.getTeam();
 ''')
 
-for id in score_ids:
+for id in sorted(list(score_ids)):
     p(f'int {id} = 0;')
 
-p('i = rc.senseMapInfo(myLoc);')
-p('p = i.getPaint();')
+p('for(RobotInfo r : rc.senseNearbyRobots(13, rc.getTeam().opponent())) {')
+p('    if(r.getPaintAmount() != 0 && !r.type.isTowerType()) {')
+p('        MapLocation loc = r.location;')
+p('        int dx = loc.x - myLoc.x;')
+p('        int dy = loc.y - myLoc.y;')
+p('        switch(dx+dy*10) {')
+
 
 for loc, l in locations.items():
     if loc.d2() > 20: continue
-    p(f'loc = myLoc.translate({loc.x}, {loc.y});')
-    p('if(rc.canSenseLocation(loc)) {')
-    p('i = rc.senseMapInfo(loc);')
-    p('r = rc.senseRobotAtLocation(loc);')
-    p('p = i.getPaint();')
 
-    for cond, scores in l.items():
-        p(f'if({cond}){{')
-        for (id, score) in scores: p(f'    {id} += {score};')
-        p('}')
-
-    p('}') # endif canSenseLocation
+    x = loc.x + loc.y*10
+    p(f'            case {x}:')
+    for (id, score) in l: 
+        p(f'                {id} += {score};')
+    p('                break;')
+p('        }')
+p('    }')
+p('}')
 
 
 for move in radius(2):

@@ -10,625 +10,357 @@ public class MopperAttackManager {
 
 
 MapLocation myLoc = rc.getLocation();
-MapLocation loc;
-MapInfo i;
-RobotInfo r;
-PaintType p;
-Team myTeam = rc.getTeam();
 
-int action23 = 0;
-int action6 = 0;
+int action0 = 0;
+int action1 = 0;
+int action10 = 0;
+int action11 = 0;
+int action12 = 0;
+int action13 = 0;
+int action14 = 0;
 int action15 = 0;
 int action16 = 0;
-int action7 = 0;
-int action20 = 0;
-int action24 = 0;
-int action14 = 0;
-int action35 = 0;
-int action12 = 0;
-int action19 = 0;
-int action28 = 0;
-int action13 = 0;
-int action31 = 0;
-int action29 = 0;
-int action34 = 0;
-int action25 = 0;
-int action5 = 0;
-int action32 = 0;
-int action26 = 0;
-int action11 = 0;
-int action4 = 0;
-int action33 = 0;
-int action0 = 0;
-int action21 = 0;
-int action9 = 0;
-int action1 = 0;
-int action30 = 0;
-int action10 = 0;
-int action18 = 0;
 int action17 = 0;
+int action18 = 0;
+int action19 = 0;
 int action2 = 0;
-int action3 = 0;
+int action20 = 0;
+int action21 = 0;
 int action22 = 0;
-int action8 = 0;
+int action23 = 0;
+int action24 = 0;
+int action25 = 0;
+int action26 = 0;
 int action27 = 0;
-i = rc.senseMapInfo(myLoc);
-p = i.getPaint();
-loc = myLoc.translate(0, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action0 += 5;
-    action4 += 5;
-    action7 += 5;
-    action9 += 5;
-    action13 += 5;
-    action16 += 5;
-    action19 += 5;
-    action24 += 5;
-    action30 += 5;
-    action33 += 5;
-}
-}
-loc = myLoc.translate(0, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action0 += 5;
-    action4 += 5;
-    action13 += 5;
-    action19 += 5;
-    action21 += 5;
-    action29 += 5;
-    action30 += 5;
-    action35 += 5;
-}
-}
-loc = myLoc.translate(1, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action0 += 5;
-    action7 += 5;
-    action9 += 5;
-    action13 += 5;
-    action16 += 5;
-    action17 += 5;
-    action23 += 5;
-    action30 += 5;
-}
-}
-loc = myLoc.translate(1, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action0 += 5;
-    action13 += 5;
-    action21 += 5;
-    action23 += 5;
-    action30 += 5;
-    action35 += 5;
-}
-}
-loc = myLoc.translate(2, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action0 += 5;
-    action8 += 5;
-    action16 += 5;
-    action17 += 5;
-    action23 += 5;
-    action27 += 5;
-}
-}
-loc = myLoc.translate(2, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action0 += 5;
-    action8 += 5;
-    action21 += 5;
-    action23 += 5;
-}
-}
-loc = myLoc.translate(-2, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action1 += 5;
-    action5 += 5;
-    action11 += 5;
-    action12 += 5;
-    action15 += 5;
-    action28 += 5;
-}
-}
-loc = myLoc.translate(-3, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action1 += 5;
-    action15 += 5;
-}
-}
-loc = myLoc.translate(-2, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action1 += 5;
-    action10 += 5;
-    action11 += 5;
-    action12 += 5;
-    action15 += 5;
-    action18 += 5;
-    action28 += 5;
-    action33 += 5;
-}
-}
-loc = myLoc.translate(-3, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action1 += 5;
-    action10 += 5;
-    action15 += 5;
-}
-}
-loc = myLoc.translate(-2, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action1 += 5;
-    action10 += 5;
-    action12 += 5;
-    action18 += 5;
-    action19 += 5;
-    action33 += 5;
-}
-}
-loc = myLoc.translate(-3, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action1 += 5;
-    action10 += 5;
-}
-}
-loc = myLoc.translate(2, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action2 += 5;
-    action3 += 5;
-    action26 += 5;
-    action32 += 5;
-}
-}
-loc = myLoc.translate(2, -3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action2 += 5;
-}
-}
-loc = myLoc.translate(1, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action2 += 5;
-    action14 += 5;
-    action22 += 5;
-    action26 += 5;
-    action31 += 5;
-    action32 += 5;
-}
-}
-loc = myLoc.translate(1, -3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action2 += 5;
-    action31 += 5;
-}
-}
-loc = myLoc.translate(0, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action2 += 5;
-    action5 += 5;
-    action14 += 5;
-    action20 += 5;
-    action22 += 5;
-    action26 += 5;
-    action31 += 5;
-    action34 += 5;
-}
-}
-loc = myLoc.translate(0, -3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action2 += 5;
-    action20 += 5;
-    action31 += 5;
-}
-}
-loc = myLoc.translate(2, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action3 += 5;
-    action6 += 5;
-    action8 += 5;
-    action16 += 5;
-    action17 += 5;
-    action23 += 5;
-    action27 += 5;
-    action32 += 5;
-}
-}
-loc = myLoc.translate(3, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action3 += 5;
-    action8 += 5;
-    action27 += 5;
-}
-}
-loc = myLoc.translate(2, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action3 += 5;
-    action6 += 5;
-    action17 += 5;
-    action26 += 5;
-    action27 += 5;
-    action32 += 5;
-}
-}
-loc = myLoc.translate(3, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action3 += 5;
-    action27 += 5;
-}
-}
-loc = myLoc.translate(3, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action3 += 5;
-}
-}
-loc = myLoc.translate(0, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action4 += 5;
-    action6 += 5;
-    action7 += 5;
-    action9 += 5;
-    action11 += 5;
-    action13 += 5;
-    action16 += 5;
-    action22 += 5;
-    action24 += 5;
-    action25 += 5;
-    action33 += 5;
-    action34 += 5;
-}
-}
-loc = myLoc.translate(-1, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action4 += 5;
-    action9 += 5;
-    action11 += 5;
-    action12 += 5;
-    action18 += 5;
-    action24 += 5;
-    action25 += 5;
-    action28 += 5;
-    action33 += 5;
-    action34 += 5;
-}
-}
-loc = myLoc.translate(-1, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action4 += 5;
-    action9 += 5;
-    action12 += 5;
-    action18 += 5;
-    action19 += 5;
-    action24 += 5;
-    action30 += 5;
-    action33 += 5;
-}
-}
-loc = myLoc.translate(-1, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action4 += 5;
-    action18 += 5;
-    action19 += 5;
-    action29 += 5;
-    action30 += 5;
-    action35 += 5;
-}
-}
-loc = myLoc.translate(0, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action5 += 5;
-    action6 += 5;
-    action7 += 5;
-    action11 += 5;
-    action14 += 5;
-    action22 += 5;
-    action24 += 5;
-    action25 += 5;
-    action26 += 5;
-    action34 += 5;
-}
-}
-loc = myLoc.translate(-1, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action5 += 5;
-    action11 += 5;
-    action12 += 5;
-    action14 += 5;
-    action24 += 5;
-    action25 += 5;
-    action28 += 5;
-    action34 += 5;
-}
-}
-loc = myLoc.translate(-1, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action5 += 5;
-    action14 += 5;
-    action20 += 5;
-    action28 += 5;
-    action31 += 5;
-    action34 += 5;
-}
-}
-loc = myLoc.translate(-2, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action5 += 5;
-    action15 += 5;
-    action20 += 5;
-    action28 += 5;
-}
-}
-loc = myLoc.translate(1, 0);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action6 += 5;
-    action7 += 5;
-    action9 += 5;
-    action13 += 5;
-    action16 += 5;
-    action17 += 5;
-    action22 += 5;
-    action23 += 5;
-    action25 += 5;
-    action32 += 5;
-}
-}
-loc = myLoc.translate(1, -1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action6 += 5;
-    action7 += 5;
-    action14 += 5;
-    action17 += 5;
-    action22 += 5;
-    action25 += 5;
-    action26 += 5;
-    action32 += 5;
-}
-}
-loc = myLoc.translate(3, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action8 += 5;
-}
-}
-loc = myLoc.translate(3, 1);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action8 += 5;
-    action27 += 5;
-}
-}
-loc = myLoc.translate(-2, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action10 += 5;
-    action18 += 5;
-    action19 += 5;
-    action29 += 5;
-}
-}
-loc = myLoc.translate(-3, 2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action10 += 5;
-}
-}
-loc = myLoc.translate(-3, -2);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action15 += 5;
-}
-}
-loc = myLoc.translate(-1, -3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action20 += 5;
-    action31 += 5;
-}
-}
-loc = myLoc.translate(-2, -3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action20 += 5;
-}
-}
-loc = myLoc.translate(0, 3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action21 += 5;
-    action29 += 5;
-    action35 += 5;
-}
-}
-loc = myLoc.translate(1, 3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action21 += 5;
-    action35 += 5;
-}
-}
-loc = myLoc.translate(2, 3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action21 += 5;
-}
-}
-loc = myLoc.translate(-2, 3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action29 += 5;
-}
-}
-loc = myLoc.translate(-1, 3);
-if(rc.canSenseLocation(loc)) {
-i = rc.senseMapInfo(loc);
-r = rc.senseRobotAtLocation(loc);
-p = i.getPaint();
-if(r != null && r.team != myTeam && r.getPaintAmount() != 0 && !r.type.isTowerType()){
-    action29 += 5;
-    action35 += 5;
-}
+int action28 = 0;
+int action29 = 0;
+int action3 = 0;
+int action30 = 0;
+int action31 = 0;
+int action32 = 0;
+int action33 = 0;
+int action34 = 0;
+int action35 = 0;
+int action4 = 0;
+int action5 = 0;
+int action6 = 0;
+int action7 = 0;
+int action8 = 0;
+int action9 = 0;
+for(RobotInfo r : rc.senseNearbyRobots(13, rc.getTeam().opponent())) {
+    if(r.getPaintAmount() != 0 && !r.type.isTowerType()) {
+        MapLocation loc = r.location;
+        int dx = loc.x - myLoc.x;
+        int dy = loc.y - myLoc.y;
+        switch(dx+dy*10) {
+            case 10:
+                action0 += 5;
+                action4 += 5;
+                action7 += 5;
+                action9 += 5;
+                action13 += 5;
+                action16 += 5;
+                action19 += 5;
+                action24 += 5;
+                action30 += 5;
+                action33 += 5;
+                break;
+            case 20:
+                action0 += 5;
+                action4 += 5;
+                action13 += 5;
+                action19 += 5;
+                action21 += 5;
+                action29 += 5;
+                action30 += 5;
+                action35 += 5;
+                break;
+            case 11:
+                action0 += 5;
+                action7 += 5;
+                action9 += 5;
+                action13 += 5;
+                action16 += 5;
+                action17 += 5;
+                action23 += 5;
+                action30 += 5;
+                break;
+            case 21:
+                action0 += 5;
+                action13 += 5;
+                action21 += 5;
+                action23 += 5;
+                action30 += 5;
+                action35 += 5;
+                break;
+            case 12:
+                action0 += 5;
+                action8 += 5;
+                action16 += 5;
+                action17 += 5;
+                action23 += 5;
+                action27 += 5;
+                break;
+            case 22:
+                action0 += 5;
+                action8 += 5;
+                action21 += 5;
+                action23 += 5;
+                break;
+            case -12:
+                action1 += 5;
+                action5 += 5;
+                action11 += 5;
+                action12 += 5;
+                action15 += 5;
+                action28 += 5;
+                break;
+            case -13:
+                action1 += 5;
+                action15 += 5;
+                break;
+            case -2:
+                action1 += 5;
+                action10 += 5;
+                action11 += 5;
+                action12 += 5;
+                action15 += 5;
+                action18 += 5;
+                action28 += 5;
+                action33 += 5;
+                break;
+            case -3:
+                action1 += 5;
+                action10 += 5;
+                action15 += 5;
+                break;
+            case 8:
+                action1 += 5;
+                action10 += 5;
+                action12 += 5;
+                action18 += 5;
+                action19 += 5;
+                action33 += 5;
+                break;
+            case 7:
+                action1 += 5;
+                action10 += 5;
+                break;
+            case -18:
+                action2 += 5;
+                action3 += 5;
+                action26 += 5;
+                action32 += 5;
+                break;
+            case -28:
+                action2 += 5;
+                break;
+            case -19:
+                action2 += 5;
+                action14 += 5;
+                action22 += 5;
+                action26 += 5;
+                action31 += 5;
+                action32 += 5;
+                break;
+            case -29:
+                action2 += 5;
+                action31 += 5;
+                break;
+            case -20:
+                action2 += 5;
+                action5 += 5;
+                action14 += 5;
+                action20 += 5;
+                action22 += 5;
+                action26 += 5;
+                action31 += 5;
+                action34 += 5;
+                break;
+            case -30:
+                action2 += 5;
+                action20 += 5;
+                action31 += 5;
+                break;
+            case 2:
+                action3 += 5;
+                action6 += 5;
+                action8 += 5;
+                action16 += 5;
+                action17 += 5;
+                action23 += 5;
+                action27 += 5;
+                action32 += 5;
+                break;
+            case 3:
+                action3 += 5;
+                action8 += 5;
+                action27 += 5;
+                break;
+            case -8:
+                action3 += 5;
+                action6 += 5;
+                action17 += 5;
+                action26 += 5;
+                action27 += 5;
+                action32 += 5;
+                break;
+            case -7:
+                action3 += 5;
+                action27 += 5;
+                break;
+            case -17:
+                action3 += 5;
+                break;
+            case 0:
+                action4 += 5;
+                action6 += 5;
+                action7 += 5;
+                action9 += 5;
+                action11 += 5;
+                action13 += 5;
+                action16 += 5;
+                action22 += 5;
+                action24 += 5;
+                action25 += 5;
+                action33 += 5;
+                action34 += 5;
+                break;
+            case -1:
+                action4 += 5;
+                action9 += 5;
+                action11 += 5;
+                action12 += 5;
+                action18 += 5;
+                action24 += 5;
+                action25 += 5;
+                action28 += 5;
+                action33 += 5;
+                action34 += 5;
+                break;
+            case 9:
+                action4 += 5;
+                action9 += 5;
+                action12 += 5;
+                action18 += 5;
+                action19 += 5;
+                action24 += 5;
+                action30 += 5;
+                action33 += 5;
+                break;
+            case 19:
+                action4 += 5;
+                action18 += 5;
+                action19 += 5;
+                action29 += 5;
+                action30 += 5;
+                action35 += 5;
+                break;
+            case -10:
+                action5 += 5;
+                action6 += 5;
+                action7 += 5;
+                action11 += 5;
+                action14 += 5;
+                action22 += 5;
+                action24 += 5;
+                action25 += 5;
+                action26 += 5;
+                action34 += 5;
+                break;
+            case -11:
+                action5 += 5;
+                action11 += 5;
+                action12 += 5;
+                action14 += 5;
+                action24 += 5;
+                action25 += 5;
+                action28 += 5;
+                action34 += 5;
+                break;
+            case -21:
+                action5 += 5;
+                action14 += 5;
+                action20 += 5;
+                action28 += 5;
+                action31 += 5;
+                action34 += 5;
+                break;
+            case -22:
+                action5 += 5;
+                action15 += 5;
+                action20 += 5;
+                action28 += 5;
+                break;
+            case 1:
+                action6 += 5;
+                action7 += 5;
+                action9 += 5;
+                action13 += 5;
+                action16 += 5;
+                action17 += 5;
+                action22 += 5;
+                action23 += 5;
+                action25 += 5;
+                action32 += 5;
+                break;
+            case -9:
+                action6 += 5;
+                action7 += 5;
+                action14 += 5;
+                action17 += 5;
+                action22 += 5;
+                action25 += 5;
+                action26 += 5;
+                action32 += 5;
+                break;
+            case 23:
+                action8 += 5;
+                break;
+            case 13:
+                action8 += 5;
+                action27 += 5;
+                break;
+            case 18:
+                action10 += 5;
+                action18 += 5;
+                action19 += 5;
+                action29 += 5;
+                break;
+            case 17:
+                action10 += 5;
+                break;
+            case -23:
+                action15 += 5;
+                break;
+            case -31:
+                action20 += 5;
+                action31 += 5;
+                break;
+            case -32:
+                action20 += 5;
+                break;
+            case 30:
+                action21 += 5;
+                action29 += 5;
+                action35 += 5;
+                break;
+            case 31:
+                action21 += 5;
+                action35 += 5;
+                break;
+            case 32:
+                action21 += 5;
+                break;
+            case 28:
+                action29 += 5;
+                break;
+            case 29:
+                action29 += 5;
+                action35 += 5;
+                break;
+        }
+    }
 }
 if(rc.canMove(Direction.SOUTHWEST)){
 int best = -1; int bestScore = 0;
