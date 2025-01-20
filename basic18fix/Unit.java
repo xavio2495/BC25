@@ -22,7 +22,9 @@ public abstract class Unit extends MyRobot {
 
     void runTurn() throws GameActionException {}
 
-    void endTurn() throws GameActionException {}
+    void endTurn() throws GameActionException {
+        Pathfinding.bugNav.run();
+    }
 
     static void updateClosestRuin() throws GameActionException {
         checkCurrentRuin();

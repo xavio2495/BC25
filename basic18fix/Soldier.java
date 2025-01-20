@@ -29,7 +29,8 @@ public class Soldier extends Unit {
         ResourcePatternManager.attackLoc = null;
     }
 
-    void endTurn(){
+    void endTurn() throws GameActionException {
+        super.endTurn();
     }
 
     void runTurn() throws GameActionException {

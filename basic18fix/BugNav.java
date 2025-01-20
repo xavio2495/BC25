@@ -1,9 +1,6 @@
 package basic18fix;
 
-import battlecode.common.Direction;
-import battlecode.common.GameActionException;
-import battlecode.common.MapLocation;
-import battlecode.common.RobotController;
+import battlecode.common.*;
 
 public class BugNav {
 
@@ -14,7 +11,19 @@ public class BugNav {
     BugNav(){
         this.rc = MyRobot.rc;
         H = MyRobot.H; W = MyRobot.W;
-        states = new int[W][H];
+        states = new int[W][];
+    }
+
+    int arrayIndex = 0;
+
+    boolean finished(){
+        return arrayIndex >= W;
+    }
+
+    void run(){
+        while (arrayIndex < W && Clock.getBytecodesLeft() > 300){
+            states[arrayIndex++] = new int[H];
+        }
     }
 
     int bugPathIndex = 0;
@@ -242,25 +251,7 @@ public class BugNav {
     }
 
     void checkState(){
-        /*int x,y;
-        if (lastObstacleFound == null) {
-            x = 61;
-            y = 61;
-        }
-        else{
-            x = lastObstacleFound.x;
-            y = lastObstacleFound.y;
-        }
-        int state = (bugPathIndex << 14) | (x << 8) |  (y << 2);
-        if (rotateRight != null) {
-            if (rotateRight) state |= 1;
-            else state |= 2;
-        }
-        if (states[myLoc.x][myLoc.y] == state){
-            resetPathfinding();
-        }
-
-        states[myLoc.x][myLoc.y] = state;*/
+        if (!finished()) return;
         if (lastObstacleFound == null) return;
         int dir = myLoc.directionTo(lastObstacleFound).ordinal();
         int state = (bugPathIndex << 6);
