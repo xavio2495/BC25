@@ -111,7 +111,7 @@ public class TowerManager {
             return false;
         }
         if (rc.getRoundNum() < MyRobot.creationTurn + 2 || rc.getRoundNum() < roundDestruction + Constants.WAIT_DESTRUCTION) return false;
-        if (rc.getChips() < Constants.MIN_CHIPS_PAINT_TOWER) return false;
+        if (rc.getChips() < Constants.MIN_CHIPS_DESTRUCTION) return false;
         switch(rc.getType()) {
             case LEVEL_ONE_PAINT_TOWER:
             case LEVEL_TWO_PAINT_TOWER:

@@ -11,7 +11,7 @@ public class Constants {
 
     public static final int MIN_CHIPS_DESTRUCTION = 6500;
     public static final int MIN_CHIPS_DESTRUCTION_DEFENSE = 7500;
-    public static final int MIN_CHIPS_PAINT_TOWER = 5500;
+    public static final int MIN_CHIPS_PAINT_TOWER = 2000;
     public static final int WAIT_DESTRUCTION = 40;
 
     public static final int INF = 1000000000;

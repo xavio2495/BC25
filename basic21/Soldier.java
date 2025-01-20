@@ -148,7 +148,7 @@ public class Soldier extends Unit {
             return;
         }
         else if (closestRuin != null && rc.getLocation().distanceSquaredTo(closestRuin) <= 8 && !Util.towerMax()) {
-            int ruinType = Map.getPattern(closestRuin);
+            /*int ruinType = Map.getPattern(closestRuin);
             //System.out.println("ruinType: " + ruinType);
             int trueType = RuinManager.getType(ruinType);
             switch (trueType) {
@@ -166,7 +166,18 @@ public class Soldier extends Unit {
                     }
                     else RuinManager.drawPatternEnhanced(closestRuin, trueType);
                 }
+            }*/
+            int x = TowerManager.getNextBuild();
+            UnitType t = switch (x) {
+                case RuinManager.PAINT -> UnitType.LEVEL_ONE_PAINT_TOWER;
+                case RuinManager.MONEY -> UnitType.LEVEL_ONE_MONEY_TOWER;
+                default -> UnitType.LEVEL_ONE_DEFENSE_TOWER;
+            };
+            if (rc.canCompleteTowerPattern(t, closestRuin)) {
+                rc.completeTowerPattern(t, closestRuin);
+                //return;
             }
+            RuinManager.drawPatternEnhanced(closestRuin, TowerManager.getNextBuild());
         }
         //paintSelf();
         paintNearby();
