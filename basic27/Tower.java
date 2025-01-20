@@ -34,16 +34,29 @@ public class Tower extends MyRobot {
             UnitType.SOLDIER,
             UnitType.SOLDIER
     };
-    static final UnitType[] spawnPlanDefault = {
+    static UnitType[] spawnPlanEarly = {
+            UnitType.SOLDIER,
+            UnitType.MOPPER,
+            UnitType.SPLASHER,
+    };
+    static UnitType[] spawnPlanMid = {
             UnitType.SOLDIER,
             UnitType.MOPPER,
             UnitType.SPLASHER,
             UnitType.MOPPER,
     };
+    static UnitType[] spawnPlanLate = {
+            UnitType.SOLDIER,
+            UnitType.SPLASHER,
+            UnitType.SPLASHER,
+            UnitType.SPLASHER,
+            UnitType.SPLASHER,
+    };
 
     static final int TURNS_PAINT = 20;
     int[] paintIncrease = new int[TURNS_PAINT];
     int oldPaint = 0;
+    boolean spawnInitial = true;
 
     Tower(RobotController rc){
         super(rc);
@@ -53,7 +66,7 @@ public class Tower extends MyRobot {
         spawnPlan = switch (rc.getType()) {
             case LEVEL_ONE_PAINT_TOWER -> spawnPlanInitialPaint;
             case LEVEL_ONE_MONEY_TOWER -> spawnPlanInitialMoney;
-            default -> spawnPlanDefault;
+            default -> wantedSpawnPlan();
         };
 
         doDirs();
@@ -100,18 +113,30 @@ public class Tower extends MyRobot {
         return ans;
     }
 
+    UnitType[] wantedSpawnPlan() {
+        var round = rc.getRoundNum();
+        if(round < 500) return spawnPlanEarly;
+        if(round < 1700) return spawnPlanMid;
+        return spawnPlanLate;
+    }
+
     void checkSpawnPlan(){
-        if (spawnPlan == spawnPlanDefault) return;
-        if (spawnPlanPos + 2*rc.getNumberTowers() >= THRESHOLD){
-            spawnPlan = spawnPlanDefault;
+        if (spawnInitial && spawnPlanPos + 2*rc.getNumberTowers() >= THRESHOLD){
+            spawnPlan = wantedSpawnPlan();
             spawnPlanPos = 0;
+            spawnInitial = false;
+        }
+
+        if(!spawnInitial) {
+            var want = wantedSpawnPlan();
+            if(spawnPlan != want) {
+                spawnPlan = want;
+                spawnPlanPos = 0;
+            }
         }
     }
 
-
-
     void runTurn() throws GameActionException {
-        tryUpgrade();
         checkSpawnPlan();
 
         MapLocation m = getThreat();
@@ -119,6 +144,7 @@ public class Tower extends MyRobot {
 
         UnitType t = getNextSpawn();
         if (shouldSpawn(t)) spawn(t);
+        tryUpgrade();
         attack();
         //if (shouldSpawnSoldier()) spawn(UnitType.SOLDIER, null);
     }
@@ -196,8 +222,9 @@ public class Tower extends MyRobot {
             spawnPlanPos++;
             if (spawnPlanPos >= spawnPlan.length) {
                 spawnPlanPos = 0;
-                spawnPlan = spawnPlanDefault;
-            }
+                spawnPlan = wantedSpawnPlan();
+                spawnInitial = false;
+        }
             return;
         }
 
@@ -207,7 +234,8 @@ public class Tower extends MyRobot {
             spawnPlanPos++;
             if (spawnPlanPos >= spawnPlan.length) {
                 spawnPlanPos = 0;
-                spawnPlan = spawnPlanDefault;
+                spawnPlan = wantedSpawnPlan();
+                spawnInitial = false;
             }
         }
     }
