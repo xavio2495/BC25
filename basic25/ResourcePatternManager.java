@@ -149,8 +149,6 @@ public class ResourcePatternManager {
     static MapLocation l78;
     static MapInfo m78;
 
-    static RobotController rc;
-
     static boolean ready;
     static boolean maxT;
     static MapLocation ans;
