@@ -87,11 +87,6 @@ public class Tower extends MyRobot {
     }
 
     Direction getBestDir(int[] dirCount){
-        /*int[] dirCount = switch(t){
-            case SOLDIER -> soldierDirCount;
-            case SPLASHER -> splasherDirCount;
-            default -> mopperDirCount;
-        };*/
         Direction ans = null;
         double dAns = -1;
         for (Direction dir : directions){
@@ -195,8 +190,8 @@ public class Tower extends MyRobot {
         };
         Direction dir = getBestDir(dirCount);
         if (dir == null) return;
-        if (rc.canBuildRobot(UnitType.SOLDIER, rc.getLocation().add(dir).add(dir))){
-            rc.buildRobot(UnitType.SOLDIER, rc.getLocation().add(dir).add(dir));
+        if (rc.canBuildRobot(t, rc.getLocation().add(dir).add(dir))){
+            rc.buildRobot(t, rc.getLocation().add(dir).add(dir));
             dirCount[dir.ordinal()]++;
             spawnPlanPos++;
             if (spawnPlanPos >= spawnPlan.length) {
@@ -205,8 +200,9 @@ public class Tower extends MyRobot {
             }
             return;
         }
-        if (rc.canBuildRobot(UnitType.SOLDIER, rc.getLocation().add(dir))){
-            rc.buildRobot(UnitType.SOLDIER, rc.getLocation().add(dir));
+
+        if (rc.canBuildRobot(t, rc.getLocation().add(dir))){
+            rc.buildRobot(t, rc.getLocation().add(dir));
             dirCount[dir.ordinal()]++;
             spawnPlanPos++;
             if (spawnPlanPos >= spawnPlan.length) {
