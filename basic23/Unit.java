@@ -18,12 +18,16 @@ public abstract class Unit extends MyRobot {
         BFSUnit.initiate();
     }
 
-    void startTurn() throws GameActionException {}
+    void startTurn() throws GameActionException {
+        SymmetryManager.readMessages();
+    }
 
     void runTurn() throws GameActionException {}
 
     void endTurn() throws GameActionException {
+        SymmetryManager.sendToTower();
         Pathfinding.bugNav.run();
+        SymmetryManager.checkSym();
     }
 
     static void updateClosestRuin() throws GameActionException {

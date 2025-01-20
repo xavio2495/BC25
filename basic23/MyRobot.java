@@ -2,6 +2,7 @@ package basic23;
 
 import battlecode.common.Direction;
 import battlecode.common.GameActionException;
+import battlecode.common.MapLocation;
 import battlecode.common.RobotController;
 
 public abstract class MyRobot {
@@ -20,6 +21,7 @@ public abstract class MyRobot {
     static RobotController rc;
     static int H, W;
     static int creationTurn;
+    static MapLocation spawnLoc;
 
 
     //static String debugLine;
@@ -28,6 +30,7 @@ public abstract class MyRobot {
         MyRobot.rc = rc;
         H = rc.getMapHeight(); W = rc.getMapWidth();
         creationTurn = rc.getRoundNum();
+        spawnLoc = rc.getLocation();
     }
 
     abstract void startTurn() throws GameActionException;

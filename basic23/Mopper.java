@@ -13,6 +13,7 @@ public class Mopper extends Unit {
     void startTurn() throws GameActionException {
         //updateClosestRuin();
         TowerManager.updateAll();
+        SymmetryManager.readMessages();
     }
 
     boolean shouldRecover(){
@@ -41,6 +42,10 @@ public class Mopper extends Unit {
         if (!rc.isMovementReady()) return;
         MapLocation target = getTarget();
         pathfinding.moveTo(target);
+    }
+
+    void endTurn() throws GameActionException {
+        super.endTurn();
     }
 
     MapLocation getTarget() throws GameActionException {
