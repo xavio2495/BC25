@@ -63,11 +63,7 @@ public class Tower extends MyRobot {
 
         BFSTower.initiate();
 
-        spawnPlan = switch (rc.getType()) {
-            case LEVEL_ONE_PAINT_TOWER -> spawnPlanInitialPaint;
-            case LEVEL_ONE_MONEY_TOWER -> spawnPlanInitialMoney;
-            default -> wantedSpawnPlan();
-        };
+        spawnPlan = spawnPlanInitialPaint;
 
         doDirs();
         oldPaint = MyRobot.rc.getPaint();
