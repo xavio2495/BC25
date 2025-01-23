@@ -225,7 +225,7 @@ public class MicroManagerSplasher {
         }
 
         int attackScore() {
-            if(canAttack && atkLoc != null) {
+            if(canAttack && atkLoc != null && rc.getPaint() > Constants.CRITICAL_PAINT_SPLASHER) {
                 return 100*atkValue;
             }
             return 0;
