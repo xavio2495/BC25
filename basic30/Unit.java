@@ -81,7 +81,7 @@ public abstract class Unit extends MyRobot {
                 int remainingPaint = switch(r.getType()){
                     case LEVEL_ONE_PAINT_TOWER, LEVEL_TWO_PAINT_TOWER, LEVEL_THREE_PAINT_TOWER -> 0;
                     default -> rc.getNumberTowers() > Constants.MIN_TOWERS_SPLASHER ? 300 : 200;
-                };s
+                };
                 int theirPaint = r.getPaintAmount();
                 if (theirPaint <= 0) return;
                 if (neededPaint > theirPaint) neededPaint = theirPaint;
