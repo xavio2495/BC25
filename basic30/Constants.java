@@ -23,7 +23,7 @@ public class Constants {
 
     static int MIN_GIVING_THRESHOLD = 20;
 
-    public static int PAINT_SAVINGS = 30;
+    public static int PAINT_SAVINGS = 15;
 
     static int MIN_INCREASE_NO_UPGRADE_2 = 50;
 
