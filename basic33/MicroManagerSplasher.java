@@ -27,7 +27,7 @@ public class MicroManagerSplasher {
         //if (!rc.isMovementReady()) return false;
 
         myRange = rc.getType().actionRadiusSquared;
-        canAttack = rc.isActionReady();
+        canAttack = rc.isActionReady() && rc.getPaint() >= Constants.CRITICAL_PAINT_SPLASHER;
 
         microInfos = new MicroInfo[9];
         microInfos[0] = new MicroInfo(Direction.NORTH);
@@ -225,7 +225,7 @@ public class MicroManagerSplasher {
         }
 
         int attackScore() {
-            if(canAttack && atkLoc != null && rc.getPaint() > Constants.CRITICAL_PAINT_SPLASHER) {
+            if(canAttack && atkLoc != null) {
                 return 100*atkValue;
             }
             return 0;
