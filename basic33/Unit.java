@@ -1,4 +1,4 @@
-package basic32;
+package basic33;
 
 import battlecode.common.*;
 
@@ -10,10 +10,6 @@ public abstract class Unit extends MyRobot {
     static MapLocation closestRuin = null;
     static MapLocation prevClosestRuin = null;
     static int closestRuinDist = 0;
-
-    boolean suicide = false;
-
-    static MapLocation closestPaintTower = null;
 
     Unit(RobotController rc) throws GameActionException {
         super(rc);
@@ -187,58 +183,4 @@ public abstract class Unit extends MyRobot {
         if (mostHurt == null) return null;
         return mostHurt.getLocation();
     }
-
-    static int X[] = new int[]{2, 2, 2, 0, -2, -2, -2, 0};
-    static int Y[] = new int[]{2, 0, -2, -2, -2, 0, 2, 2};
-
-    MapLocation getBestRecoveringLoc() throws GameActionException {
-        MapLocation bestSpot = null;
-        MapLocation myLoc = rc.getLocation();
-        int myID = rc.getID();
-        int bestDistance = 0;
-        int paintLost = 0;
-        for (int i = 0; i < 8; ++i){
-            MapLocation waitingLoc = TowerManager.closestPaintTower.translate(X[i], Y[i]);
-            if (!rc.canSenseLocation(waitingLoc)) continue;
-            RobotInfo r = rc.senseRobotAtLocation(waitingLoc);
-            MapInfo m = rc.senseMapInfo(waitingLoc);
-            int d = myLoc.distanceSquaredTo(waitingLoc);
-            int pl = switch(m.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> GameConstants.PENALTY_ENEMY_TERRITORY;
-                case EMPTY -> GameConstants.PENALTY_NEUTRAL_TERRITORY;
-                default -> 0;
-            };
-            if ((r == null || r.getID() == myID) && (bestSpot == null || pl < paintLost  || (pl == paintLost && d < bestDistance))){
-                bestDistance = d;
-                bestSpot = waitingLoc;
-                paintLost = pl;
-            }
-        }
-        if (bestSpot == null){
-            if (myLoc.distanceSquaredTo(TowerManager.closestPaintTower) <= 4){
-                suicide = true;
-                return null;
-            }
-            return TowerManager.closestPaintTower;
-        }
-        return bestSpot;
-    }
-
-
-    void goRecover() throws GameActionException {
-        MapLocation target = getBestRecoveringLoc();
-        if (rc.getLocation().distanceSquaredTo(target) > 0){
-            pathfinding.moveTo(target);
-            return;
-        }
-        int neededPaint = rc.getType().paintCapacity - rc.getPaint();
-        RobotInfo tower = rc.senseRobotAtLocation(TowerManager.closestPaintTower);
-        int towerPaint = tower.getPaintAmount();
-        if (towerPaint >= neededPaint || (towerPaint >= Constants.MINIMUM_PAINT_RECOVERY && rc.getPaint() <= Constants.CRITICAL_PAINT_RECOVERY)){
-            Direction dir = rc.getLocation().directionTo(TowerManager.closestPaintTower);
-            if (rc.canMove(dir) && rc.isActionReady()) rc.move(dir);
-        }
-    }
-
-
 }

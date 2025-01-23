@@ -1,4 +1,4 @@
-package basic32;
+package basic33;
 
 import battlecode.common.GameConstants;
 import battlecode.common.UnitType;
@@ -34,10 +34,6 @@ public class Constants {
     static int MIN_SOLDIER_MOVEMENT = UnitType.SOLDIER.attackCost + GameConstants.PENALTY_ENEMY_TERRITORY + 1;
 
     static int MIN_PAINT_MOPPER_ATTACK = 5;
-
-    static int CRITICAL_PAINT_RECOVERY = 5;
-
-    static int MINIMUM_PAINT_RECOVERY = 20;
 
     static final int MIN_TOWERS_SPLASHER = 6;
 

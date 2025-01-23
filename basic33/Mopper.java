@@ -1,4 +1,4 @@
-package basic32;
+package basic33;
 
 import battlecode.common.*;
 
@@ -16,6 +16,8 @@ public class Mopper extends Unit {
     }
 
     boolean shouldRecover(){
+        //if (rc.getRoundNum() >= Constants.NO_HEAL_ROUND) return false;
+        if (rc.getRoundNum() > Constants.MIN_ROUNDS_NO_RECOVERY && rc.getNumberTowers() > Constants.MIN_TOWERS_NO_RECOVERY) return false;
         return (TowerManager.closestPaintTower != null && rc.getPaint() < Constants.CRITICAL_PAINT_MOPPER);
     }
 
@@ -42,10 +44,7 @@ public class Mopper extends Unit {
     }
 
     MapLocation getTarget() throws GameActionException {
-        if (recovering && !suicide && TowerManager.closestPaintTower != null){
-            goRecover();
-            return null;
-        }
+        if (recovering && TowerManager.closestPaintTower != null) return TowerManager.closestPaintTower;
         MapLocation target = getClosestEnemy();
         if (target == null) target = getClosestEnemyPaint();
         if (target == null && 2*rc.getPaint() > rc.getType().paintCapacity + Constants.MIN_GIVING_THRESHOLD) target = searchClosestHurt();

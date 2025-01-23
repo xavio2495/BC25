@@ -1,4 +1,4 @@
-package basic32;
+package basic33;
 import battlecode.common.GameActionException;
 import battlecode.common.MapLocation;
 import battlecode.common.RobotController;
@@ -18,6 +18,7 @@ public class Splasher extends Unit {
     }
 
     boolean shouldRecover() {
+        if (rc.getRoundNum() > Constants.MIN_ROUNDS_NO_RECOVERY && rc.getNumberTowers() > Constants.MIN_TOWERS_NO_RECOVERY) return false;
         return (TowerManager.closestPaintTower != null && rc.getPaint() < Constants.CRITICAL_PAINT_SPLASHER);
     }
 
@@ -50,10 +51,10 @@ public class Splasher extends Unit {
     }
 
     MapLocation getTarget() throws GameActionException {
-        if (recovering && !suicide && TowerManager.closestPaintTower != null){
-            goRecover();
-            return null;
-        }
+        if (recovering && TowerManager.closestPaintTower != null)
+            return TowerManager.closestPaintTower;
+        //MapLocation target = getClosestEnemyPaint();
+        // if (target == null) target = searchClosestHurt();
         return explore.getExplore3Target();
     }
 }

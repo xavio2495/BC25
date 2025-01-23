@@ -1,4 +1,4 @@
-package basic32;
+package basic33;
 
 import battlecode.common.*;
 
@@ -143,6 +143,7 @@ public class Soldier extends Unit {
     }
 
     boolean shouldRecover(){
+        if (rc.getRoundNum() > Constants.MIN_ROUNDS_NO_RECOVERY && rc.getNumberTowers() > Constants.MIN_TOWERS_NO_RECOVERY) return false;
         return (TowerManager.closestPaintTower != null && rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER);
     }
 
@@ -154,10 +155,7 @@ public class Soldier extends Unit {
     }
 
     MapLocation getTarget() throws GameActionException{
-        if (recovering && !suicide && TowerManager.closestPaintTower != null){
-            goRecover();
-            return null;
-        }
+        if (recovering && TowerManager.closestPaintTower != null) return TowerManager.closestPaintTower;
         MapLocation tg = getClosestEnemyTower();
         if (tg != null) return tg;
         if (closestRuin != null && !Util.towerMax()) return closestRuin;
