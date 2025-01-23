@@ -1,7 +1,6 @@
-package basic30;
+package basic32;
 
 import battlecode.common.*;
-import battlecode.schema.RobotType;
 
 public class Tower extends MyRobot {
 

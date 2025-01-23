@@ -1,4 +1,4 @@
-package basic30;
+package basic32;
 
 import battlecode.common.GameConstants;
 import battlecode.common.UnitType;
