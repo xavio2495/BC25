@@ -1,4 +1,4 @@
-package basic35;
+package basic35bugasso;
 
 import battlecode.common.*;
 

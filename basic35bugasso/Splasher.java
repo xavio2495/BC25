@@ -1,4 +1,4 @@
-package basic35;
+package basic35bugasso;
 import battlecode.common.GameActionException;
 import battlecode.common.MapLocation;
 import battlecode.common.RobotController;
@@ -33,18 +33,28 @@ public class Splasher extends Unit {
     }
 
     void move() throws GameActionException {
-        if (!rc.isMovementReady()) return;
-        if (MicroManagerSplasher.doMicro()) return;
+        if (!rc.isMovementReady())
+            return;
+        if (MicroManagerSplasher.doMicro())
+            return;
+
+        MapLocation oldLoc = rc.getLocation();
+
         MapLocation target = getTarget();
         pathfinding.moveTo(target);
+
+        var dir = oldLoc.directionTo(rc.getLocation());
+        var info = MicroManagerSplasher.microInfos[dir.ordinal()];
+        if(info.atkLoc != null && rc.canAttack(info.atkLoc)) {
+            rc.attack(info.atkLoc);
+        }
     }
 
     MapLocation getTarget() throws GameActionException {
-        MapLocation tg = null;
-        if (recovering && !suicide && TowerManager.closestPaintTower != null){
-            tg = getRecoveryLoc();
-            if (tg != null) return tg;
-        }
+        if (recovering && TowerManager.closestPaintTower != null)
+            return TowerManager.closestPaintTower;
+        //MapLocation target = getClosestEnemyPaint();
+        // if (target == null) target = searchClosestHurt();
         return explore.getExplore3Target();
     }
 }
