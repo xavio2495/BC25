@@ -115,7 +115,7 @@ def p(what):
 f = open('MopperAttackManager.java', 'w')
 
 p('''
-package basic27;
+package basic35;
 
 import battlecode.common.*;
 
