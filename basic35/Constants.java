@@ -1,9 +1,11 @@
-package basic27;
+package basic35;
 
 import battlecode.common.GameConstants;
 import battlecode.common.UnitType;
 
 public class Constants {
+    public static final int MINIMUM_PAINT_RECOVERY = 20;
+    public static final int CRITICAL_PAINT_RECOVERY = 5;
     static int MIN_CHIPS_DESTRUCTION = 6500;
     static int MIN_CHIPS_DESTRUCTION_DEFENSE = 7500;
     static int MIN_CHIPS_PAINT_TOWER = 2000;

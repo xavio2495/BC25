@@ -1,4 +1,4 @@
-package basic27;
+package basic35;
 
 import battlecode.common.*;
 
@@ -144,7 +144,7 @@ public class Soldier extends Unit {
 
     boolean shouldRecover(){
         if (rc.getRoundNum() > Constants.MIN_ROUNDS_NO_RECOVERY && rc.getNumberTowers() > Constants.MIN_TOWERS_NO_RECOVERY) return false;
-        return (TowerManager.closestPaintTower != null && rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER);
+        return (rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER);
     }
 
     void move() throws GameActionException {
@@ -155,8 +155,12 @@ public class Soldier extends Unit {
     }
 
     MapLocation getTarget() throws GameActionException{
-        if (recovering && TowerManager.closestPaintTower != null) return TowerManager.closestPaintTower;
-        MapLocation tg = getClosestEnemyTower();
+        MapLocation tg = null;
+        if (recovering && !suicide && TowerManager.closestPaintTower != null){
+            tg = getRecoveryLoc();
+            if (tg != null) return tg;
+        }
+        tg = getClosestEnemyTower();
         if (tg != null) return tg;
         if (closestRuin != null && !Util.towerMax()) return closestRuin;
         if (rc.getRoundNum() > creationTurn){
@@ -177,35 +181,11 @@ public class Soldier extends Unit {
 
     void paint() throws GameActionException {
         attackTowers();
-        /*if (closestRuin == null || rc.getLocation().distanceSquaredTo(closestRuin) > 8 || Util.towerMax()){
-            paintSelf();
-            paintNearby();
-            return;
-        }*/
         if (closestRuin != null && Map.hasEnemyPaint(closestRuin)){
             RuinManager.drawPatternEnhanced(closestRuin, TowerManager.getNextBuild());
             return;
         }
         else if (closestRuin != null && rc.getLocation().distanceSquaredTo(closestRuin) <= 8 && !Util.towerMax()) {
-            /*int ruinType = Map.getPattern(closestRuin);
-            //System.out.println("ruinType: " + ruinType);
-            int trueType = RuinManager.getType(ruinType);
-            switch (trueType) {
-                case -1 -> chooseWisely(ruinType);
-                default -> {
-                    UnitType t = switch (trueType) {
-                        case RuinManager.PAINT -> UnitType.LEVEL_ONE_PAINT_TOWER;
-                        case RuinManager.MONEY -> UnitType.LEVEL_ONE_MONEY_TOWER;
-                        default -> UnitType.LEVEL_ONE_DEFENSE_TOWER;
-                    };
-                    //System.out.println("Trying to complete tower of type " + t);
-                    if (rc.canCompleteTowerPattern(t, closestRuin)) {
-                        rc.completeTowerPattern(t, closestRuin);
-                        //return;
-                    }
-                    else RuinManager.drawPatternEnhanced(closestRuin, trueType);
-                }
-            }*/
             int x = TowerManager.getNextBuild();
             UnitType t = switch (x) {
                 case RuinManager.PAINT -> UnitType.LEVEL_ONE_PAINT_TOWER;
@@ -214,34 +194,10 @@ public class Soldier extends Unit {
             };
             if (rc.canCompleteTowerPattern(t, closestRuin)) {
                 rc.completeTowerPattern(t, closestRuin);
-                //return;
             }
             RuinManager.drawPatternEnhanced(closestRuin, TowerManager.getNextBuild());
         }
-        //paintSelf();
         paintNearby();
-    }
-
-    void chooseWisely(int ruinType) throws GameActionException{
-        if ((ruinType & 8) > 0) paintRuinSafe();
-        try {
-            RuinManager.drawPatternEnhanced(closestRuin, TowerManager.getNextBuild());
-        } catch(GameActionException e){
-            e.printStackTrace();
-            //System.out.println("My Location " + rc.getLocation());
-            //System.out.println("Ruin Location " + closestRuin);
-        }
-    }
-
-    void paintRuinSafe() throws GameActionException {
-        MapLocation loc = closestRuin.add(Direction.NORTHEAST);
-        if (rc.canSenseLocation(loc) && rc.senseMapInfo(loc).getPaint() == PaintType.EMPTY && rc.canAttack(loc)) rc.attack(loc, true);
-        loc = closestRuin.add(Direction.SOUTHEAST);
-        if (rc.canSenseLocation(loc) && rc.senseMapInfo(loc).getPaint() == PaintType.EMPTY && rc.canAttack(loc)) rc.attack(loc, true);
-        loc = closestRuin.add(Direction.SOUTHWEST);
-        if (rc.canSenseLocation(loc) && rc.senseMapInfo(loc).getPaint() == PaintType.EMPTY && rc.canAttack(loc)) rc.attack(loc, true);
-        loc = closestRuin.add(Direction.NORTHWEST);
-        if (rc.canSenseLocation(loc) && rc.senseMapInfo(loc).getPaint() == PaintType.EMPTY && rc.canAttack(loc)) rc.attack(loc, true);
     }
 
 }

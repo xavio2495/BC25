@@ -1,4 +1,4 @@
-package basic27;
+package basic35;
 
 import battlecode.common.*;
 
@@ -15,7 +15,13 @@ public class TowerManager {
 
 
     static void updateClosest(){
-        if (closestPaintTower != null) d = MyRobot.rc.getLocation().distanceSquaredTo(closestPaintTower);
+        if (closestPaintTower != null){
+            if (MyRobot.rc.canSenseLocation(closestPaintTower)){
+                closestPaintTower = null;
+                return;
+            }
+            d = MyRobot.rc.getLocation().distanceSquaredTo(closestPaintTower);
+        }
     }
 
 
