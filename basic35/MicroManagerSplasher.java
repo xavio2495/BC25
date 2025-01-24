@@ -27,7 +27,7 @@ public class MicroManagerSplasher {
         //if (!rc.isMovementReady()) return false;
 
         myRange = rc.getType().actionRadiusSquared;
-        canAttack = rc.isActionReady();
+        canAttack = rc.isActionReady() && rc.getPaint() > UnitType.SPLASHER.attackCost;
 
         microInfos = new MicroInfo[9];
         microInfos[0] = new MicroInfo(Direction.NORTH);
