@@ -1,4 +1,4 @@
-package basic35;
+package basic36;
 
 import battlecode.common.*;
 
@@ -186,6 +186,17 @@ public class Map {
     /*IMPORTANT: DO NOT DO THIS ON TOP OF RUINS*/
     static void markCenterNearRuins(MapLocation loc){
         map[loc.x][loc.y] |= ((rc.getRoundNum() + MIN_ROUNDS_RUIN) << ROUND_RUIN_SHIFT);
+    }
+
+    static boolean canBeCenter(MapLocation loc){
+        if (loc.x <= 1 || loc.y <= 1 || loc.x >= MyRobot.W-2 || loc.y >= MyRobot.H-2) return false;
+        return true;
+    }
+
+    static boolean canBeCenterNoCheck (MapLocation loc){
+        int c = map[loc.x][loc.y];
+        if ((c & 15) != 0) return false;
+        return (c >>> ROUND_RUIN_SHIFT & 0x7FF) <= MyRobot.rc.getRoundNum();
     }
 
 }

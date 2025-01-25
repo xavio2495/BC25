@@ -1,4 +1,4 @@
-package basic35bugasso;
+package basic36;
 
 import battlecode.common.*;
 
@@ -12,8 +12,9 @@ public class Soldier extends Unit {
     }
 
     void startTurn() throws GameActionException {
+        super.startTurn();
+        VisionManager.scanRSPs(); //MAX 4200 bytecode
         updateClosestRuin();
-        ResourcePatternManager.attackLoc = null;
     }
 
     void endTurn() throws GameActionException {
@@ -37,7 +38,7 @@ public class Soldier extends Unit {
         if (!rc.isActionReady()) return;
         MapLocation myLoc = rc.getLocation();
         tryPaint(myLoc);
-        if (ResourcePatternManager.attackLoc != null) tryPaint(ResourcePatternManager.attackLoc);
+        if (VisionManager.bestSRPSpot != null && rc.getLocation().distanceSquaredTo(VisionManager.bestSRPSpot) <= 4) tryPaint(VisionManager.bestSRPSpot);
         if(tryPaint(myLoc.translate(1,0))) return;
         if(tryPaint(myLoc.translate(0,1))) return;
         if(tryPaint(myLoc.translate(-1,0))) return;
@@ -77,7 +78,7 @@ public class Soldier extends Unit {
     boolean tryPaint(MapLocation loc) throws GameActionException {
         if (!rc.canSenseLocation(loc)) return false;
         MapInfo m = rc.senseMapInfo(loc);
-        if (m.isWall() || m.hasRuin() || !ResourcePatternManager.shouldPaint(loc)) return false;
+        if (m.isWall() || m.hasRuin() || !shouldPaint(loc)) return false;
         if (!Util.towerMax() && Map.isNearRuin(m.getMapLocation())) return false;
         int x = m.getMapLocation().x%4, y = m.getMapLocation().y%4;
         int z = x*4 + y;
@@ -154,16 +155,14 @@ public class Soldier extends Unit {
         if (tg != null) return tg;
         if (closestRuin != null && !Util.towerMax()) return closestRuin;
         if (rc.getRoundNum() > creationTurn){
-        tg = ResourcePatternManager.getBestTarget();
-        if (tg != null){
-            //if (ResourcePatternManager.attackLoc != null) //rc.setIndicatorDot(ResourcePatternManager.attackLoc, 200, 0, 0);
-            //if (ResourcePatternManager.center != null) //rc.setIndicatorDot(ResourcePatternManager.center, 0, 0, 200);
-            return tg;
-        }
+        tg = VisionManager.bestSRPSpot;
+            if (tg != null){
+                tg = tg.add(tg.directionTo(VisionManager.bestCenter));
+                return tg;
+            }
         }
         if (rc.getRoundNum() > 200){
-            MapLocation loc = getClosestEmptyTile();
-            if (loc != null) return loc;
+            if (VisionManager.emptyLoc != null) return VisionManager.emptyLoc;
         }
         return explore.getExplore3Target();
     }
@@ -188,6 +187,69 @@ public class Soldier extends Unit {
             RuinManager.drawPatternEnhanced(closestRuin, TowerManager.getNextBuild());
         }
         paintNearby();
+    }
+
+    static boolean shouldPaint (MapLocation loc) throws GameActionException {
+        switch((loc.x%4)*4 + loc.y%4){
+            case 0:
+                if (!Map.forbiddenCenter(loc.translate(-2,-2))) { rc.setIndicatorDot(loc.translate(-2, -2), 200, 0, 0); return true; }
+                if (!Map.forbiddenCenter(loc.translate(-2,2))) { rc.setIndicatorDot(loc.translate(-2, 2), 200, 0, 0); return true; }
+                if (!Map.forbiddenCenter(loc.translate(2,-2))) { rc.setIndicatorDot(loc.translate(2, -2), 200, 0, 0); return true; }
+                if (!Map.forbiddenCenter(loc.translate(2,2))) { rc.setIndicatorDot(loc.translate(2, 2), 200, 0, 0); return true; }
+                return false;
+            case 1:
+                if (!Map.forbiddenCenter(loc.translate(-2,1))) { rc.setIndicatorDot(loc.translate(-2, 1), 200, 0, 0); return true; }
+                if (!Map.forbiddenCenter(loc.translate(2,1))) { rc.setIndicatorDot(loc.translate(2, 1), 200, 0, 0); return true; }
+                return false;
+            case 2:
+                if (!Map.forbiddenCenter(loc.translate(-2,0))) { rc.setIndicatorDot(loc.translate(-2, 0), 200, 0, 0); return true; }
+                if (!Map.forbiddenCenter(loc.translate(2,0))) { rc.setIndicatorDot(loc.translate(2, 0), 200, 0, 0); return true; }
+                return false;
+            case 3:
+                if (!Map.forbiddenCenter(loc.translate(-2,-1))) { rc.setIndicatorDot(loc.translate(-2, -1), 200, 0, 0); return true; }
+                if (!Map.forbiddenCenter(loc.translate(2,-1))) { rc.setIndicatorDot(loc.translate(2, -1), 200, 0, 0); return true; }
+                return false;
+            case 4:
+                if (!Map.forbiddenCenter(loc.translate(1,-2))) { rc.setIndicatorDot(loc.translate(1, -2), 200, 0, 0); return true; }
+                if (!Map.forbiddenCenter(loc.translate(1,2))) { rc.setIndicatorDot(loc.translate(1, 2), 200, 0, 0); return true; }
+                return false;
+            case 5:
+                if (!Map.forbiddenCenter(loc.translate(1,1))) { rc.setIndicatorDot(loc.translate(1, 1), 200, 0, 0); return true; }
+                return false;
+            case 6:
+                if (!Map.forbiddenCenter(loc.translate(1,0))) { rc.setIndicatorDot(loc.translate(1, 0), 200, 0, 0); return true; }
+                return false;
+            case 7:
+                if (!Map.forbiddenCenter(loc.translate(1,-1))) { rc.setIndicatorDot(loc.translate(1, -1), 200, 0, 0); return true; }
+                return false;
+            case 8:
+                if (!Map.forbiddenCenter(loc.translate(0,-2))) { rc.setIndicatorDot(loc.translate(0, -2), 200, 0, 0); return true; }
+                if (!Map.forbiddenCenter(loc.translate(0,2))) { rc.setIndicatorDot(loc.translate(0, 2), 200, 0, 0); return true; }
+                return false;
+            case 9:
+                if (!Map.forbiddenCenter(loc.translate(0,1))) { rc.setIndicatorDot(loc.translate(0, 1), 200, 0, 0); return true; }
+                return false;
+            case 10:
+                if (!Map.forbiddenCenter(loc.translate(0,0))) { rc.setIndicatorDot(loc.translate(0, 0), 200, 0, 0); return true; }
+                return false;
+            case 11:
+                if (!Map.forbiddenCenter(loc.translate(0,-1))) { rc.setIndicatorDot(loc.translate(0, -1), 200, 0, 0); return true; }
+                return false;
+            case 12:
+                if (!Map.forbiddenCenter(loc.translate(-1,-2))) { rc.setIndicatorDot(loc.translate(-1, -2), 200, 0, 0); return true; }
+                if (!Map.forbiddenCenter(loc.translate(-1,2))) { rc.setIndicatorDot(loc.translate(-1, 2), 200, 0, 0); return true; }
+                return false;
+            case 13:
+                if (!Map.forbiddenCenter(loc.translate(-1,1))) { rc.setIndicatorDot(loc.translate(-1, 1), 200, 0, 0); return true; }
+                return false;
+            case 14:
+                if (!Map.forbiddenCenter(loc.translate(-1,0))) { rc.setIndicatorDot(loc.translate(-1, 0), 200, 0, 0); return true; }
+                return false;
+            case 15:
+                if (!Map.forbiddenCenter(loc.translate(-1,-1))) { rc.setIndicatorDot(loc.translate(-1, -1), 200, 0, 0); return true; }
+                return false;
+        }
+        return false;
     }
 
 }
