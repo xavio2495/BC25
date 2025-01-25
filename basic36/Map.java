@@ -83,9 +83,17 @@ public class Map {
                     c &= ROUND_ENEMY_PAINT_C;
                 }
                 //if (((c >>> ROUND_ENEMY_PAINT_SHIFT) & 0xFFF) <= rc.getRoundNum()) Unit.updateClosestRuin(m);
-                map[x][y] = c;
 
                 int rd = ((rc.getRoundNum() + MIN_ROUNDS_RUIN) << ROUND_RUIN_SHIFT);
+
+                if (((c >>> ROUND_RUIN_SHIFT) & 0x7FF) > 0){
+                    c &= ROUND_RUIN_C;
+                    c |= rd;
+                    map[x][y] = c;
+                    return;
+                }
+
+                map[x][y] = (c | rd);
 
                 map[x-2][y-2] |= (1 << ROUND_ENEMY_PAINT_SHIFT);
                 map[x-2][y-1] |= (2 << ROUND_ENEMY_PAINT_SHIFT);
@@ -101,7 +109,7 @@ public class Map {
 
                 map[x][y-2] |= (11 << ROUND_ENEMY_PAINT_SHIFT);
                 map[x][y-1] |= (12 << ROUND_ENEMY_PAINT_SHIFT);
-                map[x][y] |= rd;
+                //map[x][y] |= rd;
                 map[x][y+1] |= (14 << ROUND_ENEMY_PAINT_SHIFT);
                 map[x][y+2] |= (15 << ROUND_ENEMY_PAINT_SHIFT);
 
@@ -146,7 +154,7 @@ public class Map {
             case 2 -> map[loc.x+2][loc.y+1];
             case 3 -> map[loc.x+2][loc.y];
             case 4 -> map[loc.x+2][loc.y-1];
-            case 5-> map[loc.x+2][loc.y-2];
+            case 5 -> map[loc.x+2][loc.y-2];
             case 6 -> map[loc.x+1][loc.y+2];
             case 7 -> map[loc.x+1][loc.y+1];
             case 8 -> map[loc.x+1][loc.y];
@@ -189,8 +197,7 @@ public class Map {
     }
 
     static boolean canBeCenter(MapLocation loc){
-        if (loc.x <= 1 || loc.y <= 1 || loc.x >= MyRobot.W-2 || loc.y >= MyRobot.H-2) return false;
-        return true;
+        return loc.x > 1 && loc.y > 1 && loc.x < MyRobot.W - 2 && loc.y < MyRobot.H - 2;
     }
 
     static boolean canBeCenterNoCheck (MapLocation loc){

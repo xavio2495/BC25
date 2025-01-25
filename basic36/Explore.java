@@ -48,12 +48,21 @@ public class Explore {
     }
 
     void assignExplore3Dir(Direction dir){
-        exploreDir = dir;
+        /*exploreDir = dir;
         angle = Math.atan2(exploreDir.dy, exploreDir.dx);
         double x = rc.getLocation().x, y = rc.getLocation().y;
         x += Math.cos(angle)*exploreDist;
         y += Math.sin(angle)*exploreDist;
-        explore3Target = new MapLocation((int)x, (int)y);
+        explore3Target = new MapLocation((int)x, (int)y);*/
+        exploreDir = dir;
+        int diffX = Constants.INF, diffY = Constants.INF;
+        if (dir.dx > 0) diffX = MyRobot.W - rc.getLocation().x - 1;
+        else if (dir.dx < 0) diffX = rc.getLocation().x;
+        if (dir.dy > 0) diffY = MyRobot.H - rc.getLocation().y - 1;
+        else if (dir.dy < 0) diffY = rc.getLocation().y;
+        int diff = diffX;
+        if (diffY < diffX) diff = diffY;
+        explore3Target = rc.getLocation().translate(diff*dir.dx, diff*dir.dy);
     }
 
     void checkDirection(){

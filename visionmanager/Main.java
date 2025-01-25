@@ -630,9 +630,10 @@ public class Main {
                     write("center = myLoc.translate(" + centerLocs[i].loc.x + "," + centerLocs[i].loc.y + ");");
                     write("if (Map.canBeCenter(center)){");
                     ++tabs;
+                    //write("rc.setIndicatorDot(center, 0, 200, 0);");
                     write("if ((obstructedCenters & " + (1 << i) + ") > 0) Map.markObstructed(center);");
                     write("else if ((unavailableCenters & " + (1 << i) + ") > 0) Map.markCenterNearRuins(center);");
-                    write("else if ((targetCenters >>> " + (i << 1) + ") > 0 && Map.canBeCenterNoCheck(center)){");
+                    write("else if ((targetCenters & " + (1 << i) + ") > 0 && Map.canBeCenterNoCheck(center)){");
                     ++tabs;
                     write("bestSRPSpot = bestSpot" + i +";");
                     write("bestCenter = center;");

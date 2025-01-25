@@ -7699,7 +7699,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2048) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2048) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 22) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2048) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot11;
                 bestCenter = center;
             }
@@ -7708,7 +7708,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1024) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1024) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 20) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1024) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot10;
                 bestCenter = center;
             }
@@ -7717,7 +7717,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 18) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -7726,7 +7726,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -7735,7 +7735,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -7744,7 +7744,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -7753,7 +7753,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -7762,7 +7762,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -7771,7 +7771,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -7780,7 +7780,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -7789,7 +7789,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -7798,7 +7798,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -9108,7 +9108,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 18) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -9117,7 +9117,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -9126,7 +9126,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -9135,7 +9135,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -9144,7 +9144,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -9153,7 +9153,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -9162,7 +9162,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -9171,7 +9171,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -9180,7 +9180,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -9189,7 +9189,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -10505,7 +10505,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2048) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2048) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 22) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2048) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot11;
                 bestCenter = center;
             }
@@ -10514,7 +10514,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1024) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1024) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 20) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1024) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot10;
                 bestCenter = center;
             }
@@ -10523,7 +10523,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 18) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -10532,7 +10532,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -10541,7 +10541,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -10550,7 +10550,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -10559,7 +10559,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -10568,7 +10568,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -10577,7 +10577,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -10586,7 +10586,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -10595,7 +10595,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -10604,7 +10604,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -11914,7 +11914,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 18) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -11923,7 +11923,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -11932,7 +11932,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -11941,7 +11941,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -11950,7 +11950,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -11959,7 +11959,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -11968,7 +11968,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -11977,7 +11977,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -11986,7 +11986,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -11995,7 +11995,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -13305,7 +13305,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 18) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -13314,7 +13314,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -13323,7 +13323,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -13332,7 +13332,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -13341,7 +13341,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -13350,7 +13350,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -13359,7 +13359,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -13368,7 +13368,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -13377,7 +13377,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -13386,7 +13386,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -14692,7 +14692,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -14701,7 +14701,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -14710,7 +14710,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -14719,7 +14719,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -14728,7 +14728,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -14737,7 +14737,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -14746,7 +14746,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -14755,7 +14755,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -14764,7 +14764,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -16072,7 +16072,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -16081,7 +16081,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -16090,7 +16090,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -16099,7 +16099,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -16108,7 +16108,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -16117,7 +16117,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -16126,7 +16126,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -16135,7 +16135,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -16144,7 +16144,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -17450,7 +17450,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -17459,7 +17459,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -17468,7 +17468,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -17477,7 +17477,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -17486,7 +17486,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -17495,7 +17495,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -17504,7 +17504,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -17513,7 +17513,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -17522,7 +17522,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -18838,7 +18838,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2048) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2048) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 22) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2048) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot11;
                 bestCenter = center;
             }
@@ -18847,7 +18847,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1024) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1024) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 20) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1024) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot10;
                 bestCenter = center;
             }
@@ -18856,7 +18856,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 18) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -18865,7 +18865,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -18874,7 +18874,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -18883,7 +18883,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -18892,7 +18892,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -18901,7 +18901,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -18910,7 +18910,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -18919,7 +18919,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -18928,7 +18928,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -18937,7 +18937,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -20245,7 +20245,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -20254,7 +20254,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -20263,7 +20263,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -20272,7 +20272,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -20281,7 +20281,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -20290,7 +20290,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -20299,7 +20299,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -20308,7 +20308,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -20317,7 +20317,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -21627,7 +21627,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -21636,7 +21636,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -21645,7 +21645,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -21654,7 +21654,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -21663,7 +21663,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -21672,7 +21672,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -21681,7 +21681,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -21690,7 +21690,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -21699,7 +21699,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -23007,7 +23007,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -23016,7 +23016,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -23025,7 +23025,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -23034,7 +23034,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -23043,7 +23043,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -23052,7 +23052,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -23061,7 +23061,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -23070,7 +23070,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -23079,7 +23079,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -24389,7 +24389,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 18) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -24398,7 +24398,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -24407,7 +24407,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -24416,7 +24416,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -24425,7 +24425,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -24434,7 +24434,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -24443,7 +24443,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -24452,7 +24452,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -24461,7 +24461,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -24470,7 +24470,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -25776,7 +25776,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -25785,7 +25785,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -25794,7 +25794,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -25803,7 +25803,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -25812,7 +25812,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -25821,7 +25821,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -25830,7 +25830,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -25839,7 +25839,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -25848,7 +25848,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -27156,7 +27156,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -27165,7 +27165,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -27174,7 +27174,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -27183,7 +27183,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -27192,7 +27192,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -27201,7 +27201,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -27210,7 +27210,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -27219,7 +27219,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -27228,7 +27228,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -28534,7 +28534,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -28543,7 +28543,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 14) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -28552,7 +28552,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 12) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -28561,7 +28561,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 10) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -28570,7 +28570,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -28579,7 +28579,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 6) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -28588,7 +28588,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -28597,7 +28597,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -28606,7 +28606,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters >>> 0) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
