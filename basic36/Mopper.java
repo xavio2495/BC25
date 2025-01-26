@@ -69,8 +69,16 @@ public class Mopper extends Unit {
     }
 
     void tryAttackTile() throws GameActionException {
-        MapLocation loc = getClosestEnemyPaint();
-        if (rc.canAttack(loc)) rc.attack(loc);
+        if (!rc.isActionReady()) return;
+        MapInfo[] tiles = rc.senseNearbyMapInfos();
+        for (MapInfo m : tiles){
+            if (m.getPaint().isEnemy()) {
+                if (rc.canAttack(m.getMapLocation())){
+                    rc.attack(m.getMapLocation());
+                    return;
+                }
+            }
+        }
     }
 
     static boolean isBetterThan(RobotInfo A, RobotInfo B){
