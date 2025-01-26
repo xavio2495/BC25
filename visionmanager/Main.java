@@ -155,7 +155,7 @@ public class Main {
             if (dirs.size() < 1) return; //Can't happen?
             if (dirs.size() == 1){
                 CustomLocation origin = getCustomLocation(dest.loc.add(dirs.get(0)));
-                write(dest.getValueVar() + " = " + origin.getValueVar()  + " + " + dest.getPassVar() + ";");
+                write(dest.getValueVar() + " = " + origin.getValueVar()  + ";");
                 if (origin.getDistToOrigin() == 0) write(dest.getDirVar() + " = Direction." + dirs.get(0).opposite().name() + ";");
                 else write(dest.getDirVar() + " = " + origin.getDirVar() + ";");
                 return;
@@ -178,16 +178,6 @@ public class Main {
             newDirs = makeCopy(dirs);
             newDirs.remove(1);
             writeRecurrence2(dest, newDirs);
-            --tabs;
-            write("}");
-        }
-
-        void writeRecurrence(CustomLocation dest, CustomLocation origin, Direction dir, boolean o){
-            write("if (" + dest.getValueVar() + " > " + origin.getValueVar() + " + " + dest.getPassVar() + ") {");
-            ++tabs;
-            write(dest.getValueVar() + " = " + origin.getValueVar()  + " + " + dest.getPassVar() + ";");
-            if (o) write(dest.getDirVar() + " = Direction." + dir.name() + ";");
-            else write(dest.getDirVar() + " = " + origin.getDirVar() + ";");
             --tabs;
             write("}");
         }
@@ -237,28 +227,26 @@ public class Main {
                     continue;
                 }
 
-                if (tower || currentLoc.getDistToOrigin() > DIST_SENSE) {
+                /*if (tower || currentLoc.getDistToOrigin() > DIST_SENSE) {
                     write("if (" + currentLoc.getMapVar() + " != null && " + currentLoc.getMapVar() + ".isPassable()){");
                     ++tabs;
                 }
                 else {
-                    if (currentLoc.getDistToOrigin() <= DIST_SENSE) {
-                        write("if (MovementManager.canMove(Direction." + new Location(0,0).directionTo(currentLoc.loc).name() + ")){");
-                        ++tabs;
-                    }
-                }
+                    write("if (MovementManager.canMove(Direction." + new Location(0,0).directionTo(currentLoc.loc).name() + ")){");
+                    ++tabs;
+                }*/
 
 
-                write(currentLoc.getPassVar() + " = 10 + switch(" + currentLoc.getMapVar() + ".getPaint()){");
+                /*write(currentLoc.getPassVar() + " = 10 + switch(" + currentLoc.getMapVar() + ".getPaint()){");
                 ++tabs;
                 write("case ENEMY_PRIMARY, ENEMY_SECONDARY -> " + PENALTY_ENEMY + ";");
                 write("case EMPTY -> " + PENALTY_NEUTRAL+ ";");
                 write("default -> " + 0+ ";");
                 --tabs;
-                write("};");
-                if (currentLoc.getDistToOrigin() <= DIST_SENSE){
+                write("};");*/
+                /*if (currentLoc.getDistToOrigin() <= DIST_SENSE){
                     write(currentLoc.getPassVar() + " += " + PENALTY_NEUTRAL + "*Util.getPaintLost(Direction." + new Location(0,0).directionTo(currentLoc.loc).name() + ");");
-                }
+                }*/
                 Location l = currentLoc.loc;
 
                 ArrayList<Direction> validDirs = new ArrayList<>();
@@ -272,8 +260,29 @@ public class Main {
 
                 writeRecurrence2(currentLoc, makeCopy(validDirs));
 
-                --tabs;
-                write("}");
+                /*--tabs;
+                write("}");*/
+
+                if (tower || currentLoc.getDistToOrigin() > DIST_SENSE) {
+                    write("if (" + currentLoc.getMapVar() + " == null || !" + currentLoc.getMapVar() + ".isPassable()) " + currentLoc.getValueVar() + " += " + infinity + ";");
+                    write("else " + currentLoc.getValueVar() + " += 10 + switch(" + currentLoc.getMapVar() + ".getPaint()){");
+                    ++tabs;
+                    write("case ENEMY_PRIMARY, ENEMY_SECONDARY -> " + PENALTY_ENEMY + ";");
+                    write("case EMPTY -> " + PENALTY_NEUTRAL+ ";");
+                    write("default -> " + 0+ ";");
+                    --tabs;
+                    write("};");
+                }
+                else {
+                    write("if (!MovementManager.canMove(Direction." + new Location(0,0).directionTo(currentLoc.loc).name() + ")) " + currentLoc.getValueVar() + " += " + infinity + ";");
+                    write("else " + currentLoc.getValueVar() + " += 10 + " + PENALTY_NEUTRAL + "*Util.getPaintLost(Direction." + new Location(0,0).directionTo(currentLoc.loc).name() + ") +  switch(" + currentLoc.getMapVar() + ".getPaint()){");
+                    ++tabs;
+                    write("case ENEMY_PRIMARY, ENEMY_SECONDARY -> " + PENALTY_ENEMY + ";");
+                    write("case EMPTY -> " + PENALTY_NEUTRAL+ ";");
+                    write("default -> " + 0+ ";");
+                    --tabs;
+                    write("};");
+                }
 
                 currentLoc.dist = 0;
 
@@ -292,7 +301,7 @@ public class Main {
                     write("static MapLocation " + c.getLocVar() + ";");
                     write("static int " + c.getValueVar() + ";");
                     write("static Direction " + c.getDirVar() + ";");
-                    write("static int " + c.getPassVar() + ";");
+                    //write("static int " + c.getPassVar() + ";");
                     write("static MapInfo " + c.getMapVar() + ";");
                     write("");
                 }
@@ -348,8 +357,8 @@ public class Main {
             for (int i = dirPath[VISION_RANGE_SQ].length; i-- > 0; ){
                 Location newLoc = loc.add(dirPath[VISION_RANGE_SQ][i]);
                 write(getCustomLocation(newLoc).getLocVar() + " = " + getCustomLocation(loc).getLocVar() + ".add(Direction." + dirPath[VISION_RANGE_SQ][i].name() + ");");
-                write(getCustomLocation(newLoc).getValueVar() + " = " + infinity + ";");
-                write(getCustomLocation(newLoc).getDirVar() + " = " + "null;");
+                //write(getCustomLocation(newLoc).getValueVar() + " = " + infinity + ";");
+                //write(getCustomLocation(newLoc).getDirVar() + " = " + "null;");
                 write("if (" + "rc.onTheMap(" + getCustomLocation(newLoc).getLocVar() + ")) " + getCustomLocation(newLoc).getMapVar() + " =  rc.senseMapInfo(" + getCustomLocation(newLoc).getLocVar() + ");");
                 write("else " + getCustomLocation(newLoc).getMapVar() + " =  null;");
                 loc = newLoc;
@@ -362,6 +371,7 @@ public class Main {
         void printDistances(){
             write("static int computeDistance(MapLocation target){");
             ++tabs;
+            //write("if (rc.getLocation().distanceSquaredTo(target) <= 2) return rc.getLocation().distanceSquaredTo(target);");
             write("int dx = target.x - rc.getLocation().x;");
             write("int dy = target.y - rc.getLocation().y;");
             write("switch(dx){");
@@ -379,8 +389,10 @@ public class Main {
                 ++tabs;
 
                 for (int j = -maxY; j <= maxY; ++j){
-                    write("case " + j + ": return " + getCustomLocation(i,j).getValueVar() + ";");
+                    write("case " + j + ": return " + getCustomLocation(i,j).getValueVar() + " - ((" + getCustomLocation(i,j).getMapVar() + " == null || !" + getCustomLocation(i,j).getMapVar() + ".isPassable()) ? " + infinity + ": 0);");
                 }
+
+
 
                 write("}");
                 --tabs;
@@ -399,6 +411,10 @@ public class Main {
         }
 
         void printCloseOptimal(){
+            write("if (rc.getLocation().distanceSquaredTo(target) <= " + VISION_RANGE_SQ + " && computeDistance(target) > Constants.DIST_INF) return null;");
+            write("if (rc.getLocation().distanceSquaredTo(target) <= 2) return MovementManager.canMove(rc.getLocation().directionTo(target)) ? rc.getLocation().directionTo(target) : null;");
+
+
             write("int dx = target.x - " + getCustomLocation(0,0).getLocVar() + ".x;");
             write("int dy = target.y - " + getCustomLocation(0,0).getLocVar() + ".y;");
             write("switch(dx){");
@@ -462,11 +478,15 @@ public class Main {
                     CustomLocation c = getCustomLocation(i-MAP_SIZE,j-MAP_SIZE);
                     if (!c.in()) continue;
                     if (!c.border()) continue;
+                    write("if (" + c.getValueVar() + " < Constants.DIST_INF" + "){");
+                    ++tabs;
                     write("double " + c.getDistVar() + " = " + getEstimationFormula(c) + ";");
                     write("if (" + c.getDistVar()  + " > bestEstimation) {");
                     ++tabs;
                     write("bestEstimation = " + c.getDistVar() + ";");
                     write("ans = " + c.getDirVar() + ";");
+                    --tabs;
+                    write("}");
                     --tabs;
                     write("}");
                 }
@@ -605,7 +625,7 @@ public class Main {
                     --tabs;
                     write("case EMPTY:");
                     ++tabs;
-                    write("emptyLoc = " + loc.getLocVar() + ";");
+                    write("if (" + loc.getValueVar() + " < Constants.DIST_INF) emptyLoc = " + loc.getLocVar() + ";");
                     --tabs;
                     write("default:");
                     ++tabs;
@@ -633,7 +653,7 @@ public class Main {
                     //write("rc.setIndicatorDot(center, 0, 200, 0);");
                     write("if ((obstructedCenters & " + (1 << i) + ") > 0) Map.markObstructed(center);");
                     write("else if ((unavailableCenters & " + (1 << i) + ") > 0) Map.markCenterNearRuins(center);");
-                    write("else if ((targetCenters & " + (1 << i) + ") > 0 && Map.canBeCenterNoCheck(center)){");
+                    write("else if ((targetCenters & " + (1 << i) + ") > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot" + i + ") < Constants.DIST_INF){");
                     ++tabs;
                     write("bestSRPSpot = bestSpot" + i +";");
                     write("bestCenter = center;");

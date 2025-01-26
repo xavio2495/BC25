@@ -11,7 +11,14 @@ public class Mopper extends Unit {
     }
 
     void startTurn() throws GameActionException {
+        completePatterns();
+        if (shouldRecover()) recovering = true;
+        if (rc.getPaint() >= UnitType.MOPPER.paintCapacity - Constants.MIN_TRANSFER_PAINT) recovering = false;
+
+        hasMicro = MicroManagerMopper.doMicro();
+
         super.startTurn();
+
         TowerManager.updateAll();
     }
 
@@ -21,13 +28,7 @@ public class Mopper extends Unit {
     }
 
     void runTurn() throws GameActionException {
-        completePatterns();
-        //tryWithdraw();
-        //tryAttackEnemy();
-        if (shouldRecover()) recovering = true;
-        if (rc.getPaint() >= UnitType.MOPPER.paintCapacity - Constants.MIN_TRANSFER_PAINT) recovering = false;
         move();
-        //tryAttackEnemy();
         tryGivePaint();
         tryAttackTile();
         tryWithdraw();
@@ -35,9 +36,7 @@ public class Mopper extends Unit {
     }
 
     void move() throws GameActionException {
-        //if (!rc.isMovementReady()) return;
-        if (MicroManagerMopper.doMicro()) return;
-        if (!rc.isMovementReady()) return;
+        if (hasMicro || !rc.isMovementReady()) return;
         MapLocation target = getTarget();
         pathfinding.moveTo(target);
     }

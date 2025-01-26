@@ -12,8 +12,16 @@ public class Soldier extends Unit {
     }
 
     void startTurn() throws GameActionException {
+        attackTowers();
+        completePatterns();
+        tryWithdraw();
+        if (shouldRecover()) recovering = true;
+        if (rc.getPaint() >= UnitType.SOLDIER.paintCapacity - Constants.MIN_TRANSFER_PAINT) recovering = false;
+        hasMicro = MicroManagerSoldier.doMicro();
+
         super.startTurn();
-        VisionManager.scanRSPs(); //MAX 4200 bytecode
+
+        if (rc.getRoundNum() > creationTurn) VisionManager.scanRSPs(); //MAX 4200 bytecode
         updateClosestRuin();
     }
 
@@ -22,11 +30,6 @@ public class Soldier extends Unit {
     }
 
     void runTurn() throws GameActionException {
-        attackTowers();
-        completePatterns();
-        tryWithdraw();
-        if (shouldRecover()) recovering = true;
-        if (rc.getPaint() >= UnitType.SOLDIER.paintCapacity - Constants.MIN_TRANSFER_PAINT) recovering = false;
         move();
         paint();
         tryWithdraw();
@@ -37,27 +40,28 @@ public class Soldier extends Unit {
         if (rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER) return;
         if (!rc.isActionReady()) return;
         MapLocation myLoc = rc.getLocation();
-        tryPaint(myLoc);
-        if (VisionManager.bestSRPSpot != null && rc.getLocation().distanceSquaredTo(VisionManager.bestSRPSpot) <= 4) tryPaint(VisionManager.bestSRPSpot);
-        if(tryPaint(myLoc.translate(1,0))) return;
-        if(tryPaint(myLoc.translate(0,1))) return;
-        if(tryPaint(myLoc.translate(-1,0))) return;
-        if(tryPaint(myLoc.translate(0,-1))) return;
-        if(tryPaint(myLoc.translate(1,1))) return;
-        if(tryPaint(myLoc.translate(1,-1))) return;
-        if(tryPaint(myLoc.translate(-1,-1))) return;
-        if(tryPaint(myLoc.translate(-1,1))) return;
-        if(tryPaint(myLoc.translate(2,0))) return;
-        if(tryPaint(myLoc.translate(0,2))) return;
-        if(tryPaint(myLoc.translate(-2,0))) return;
-        if(tryPaint(myLoc.translate(0,-2)))return;
-
-        if (rc.senseMapInfo(rc.getLocation()).getPaint() == PaintType.EMPTY){
-            if (rc.canAttack(rc.getLocation())){
-                int x = rc.getLocation().x%4, y = rc.getLocation().y%4;
+        if (rc.getRoundNum() > creationTurn) {
+            tryPaint(myLoc);
+            if (VisionManager.bestSRPSpot != null && rc.getLocation().distanceSquaredTo(VisionManager.bestSRPSpot) <= 4) tryPaint(VisionManager.bestSRPSpot);
+            if (tryPaint(myLoc.translate(1, 0))) return;
+            if (tryPaint(myLoc.translate(0, 1))) return;
+            if (tryPaint(myLoc.translate(-1, 0))) return;
+            if (tryPaint(myLoc.translate(0, -1))) return;
+            if (tryPaint(myLoc.translate(1, 1))) return;
+            if (tryPaint(myLoc.translate(1, -1))) return;
+            if (tryPaint(myLoc.translate(-1, -1))) return;
+            if (tryPaint(myLoc.translate(-1, 1))) return;
+            if (tryPaint(myLoc.translate(2, 0))) return;
+            if (tryPaint(myLoc.translate(0, 2))) return;
+            if (tryPaint(myLoc.translate(-2, 0))) return;
+            if (tryPaint(myLoc.translate(0, -2))) return;
+        }
+        if (rc.senseMapInfo(myLoc).getPaint() == PaintType.EMPTY){
+            if (rc.canAttack(myLoc)){
+                int x = myLoc.x%4, y = myLoc.y%4;
                 int z = x*4 + y;
                 PaintType targetPaint = ((5147 >>> z)&1) > 0 ? PaintType.ALLY_SECONDARY : PaintType.ALLY_PRIMARY;
-                rc.attack(rc.getLocation(), targetPaint == PaintType.ALLY_SECONDARY);
+                rc.attack(myLoc, targetPaint == PaintType.ALLY_SECONDARY);
             }
         }
     }
@@ -82,7 +86,6 @@ public class Soldier extends Unit {
         if (!Util.towerMax() && Map.isNearRuin(m.getMapLocation())) return false;
         int x = m.getMapLocation().x%4, y = m.getMapLocation().y%4;
         int z = x*4 + y;
-        //PaintType targetPaint = ((x + y)%2 == 0 || (x + 7*y)%10 == 1) ? PaintType.ALLY_PRIMARY : PaintType.ALLY_SECONDARY;
         PaintType targetPaint = ((5147 >>> z)&1) > 0 ? PaintType.ALLY_SECONDARY : PaintType.ALLY_PRIMARY;
         if (m.getPaint().isEnemy() || m.getPaint() == targetPaint) return false;
         if (rc.canAttack(m.getMapLocation())){
@@ -124,7 +127,8 @@ public class Soldier extends Unit {
         int bestDist = 0;
         for (RobotInfo r : robots){
             if (!r.getType().isTowerType()) continue;
-            int dist = r.getLocation().distanceSquaredTo(rc.getLocation());
+            int dist = VisionManager.computeDistance(r.getLocation());
+            if (dist > Constants.DIST_INF) continue;
             if (bestLoc == null || dist < bestDist){
                 bestLoc = r.getLocation();
                 bestDist = dist;
@@ -139,8 +143,7 @@ public class Soldier extends Unit {
     }
 
     void move() throws GameActionException {
-        if (!rc.isMovementReady()) return;
-        if (MicroManagerSoldier.doMicro()) return;
+        if (hasMicro || !rc.isMovementReady()) return;
         MapLocation target = getTarget();
         pathfinding.moveTo(target);
     }
@@ -155,7 +158,7 @@ public class Soldier extends Unit {
         if (tg != null) return tg;
         if (closestRuin != null && !Util.towerMax()) return closestRuin;
         if (rc.getRoundNum() > creationTurn){
-        tg = VisionManager.bestSRPSpot;
+            tg = VisionManager.bestSRPSpot;
             if (tg != null){
                 tg = tg.add(tg.directionTo(VisionManager.bestCenter));
                 return tg;

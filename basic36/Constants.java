@@ -39,4 +39,6 @@ public class Constants {
     public static final int SPLASHER_SCORE_ATTACK_PAINT_ENEMY = 4;
     public static final int SPLASHER_SCORE_ATTACK_TOWER = 10;
     public static final int SPLASHER_ATK_THRESHOLD = 17;
+
+    static int DIST_INF = 100000;
 }

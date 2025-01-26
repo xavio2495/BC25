@@ -17,4 +17,10 @@ public class Util {
         };
     }
 
+    /*static int getActualDistanceRuin(MapLocation loc){
+        int d = MyRobot.rc.getLocation().distanceSquaredTo(loc);
+        if (d <= 8) return 2;
+        MapLocation l = loc.add(loc.directionTo(MyRobot.rc.getLocation()));
+        return VisionManager.computeDistance(l);
+    }*/
 }

@@ -10,6 +10,9 @@ public abstract class Unit extends MyRobot {
     static MapLocation closestRuin = null;
     static MapLocation prevClosestRuin = null;
     static int closestRuinDist = 0;
+    static boolean ruinHasEnemyPaint = false;
+
+    static boolean hasMicro = false;
 
     static boolean suicide = false;
 
@@ -21,6 +24,7 @@ public abstract class Unit extends MyRobot {
 
     void startTurn() throws GameActionException {
         VisionManager.makeAssignments();
+        VisionManager.computeDistsUnit();
     }
 
     void runTurn() throws GameActionException {}
@@ -30,37 +34,39 @@ public abstract class Unit extends MyRobot {
     }
 
     static void updateClosestRuin() throws GameActionException {
-        checkCurrentRuin();
+        checkCurrentRuin(); //WTH does this do
+
+
         MapLocation myLoc = rc.getLocation();
-        int bestDist = -1;
-        boolean hasEnemyPaint = false;
-        if (closestRuin != null) bestDist = myLoc.distanceSquaredTo(closestRuin);
+        if (closestRuin != null) closestRuinDist = myLoc.distanceSquaredTo(closestRuin);
         MapLocation[] ruins = rc.senseNearbyRuins(GameConstants.VISION_RADIUS_SQUARED);
         for (MapLocation loc : ruins){
             if (Map.invalidTarget(loc)){
                 continue;
             }
+            //rc.setIndicatorDot(loc, 0, 200, 0);
+            int dist = VisionManager.computeDistance(loc);
+            if (dist > Constants.DIST_INF){
+                rc.setIndicatorDot(loc, 0, 200, 0);
+                continue;
+            }
             if (closestRuin == null){
                 closestRuin = loc;
-                hasEnemyPaint = Map.hasEnemyPaint(closestRuin);
-                bestDist = myLoc.distanceSquaredTo(closestRuin);
+                ruinHasEnemyPaint = Map.hasEnemyPaint(closestRuin);
+                closestRuinDist = dist;
                 continue;
             }
             boolean pt = Map.hasEnemyPaint(loc);
-            if (!pt && hasEnemyPaint) continue;
-            if (pt && !hasEnemyPaint){
+            if (!pt && ruinHasEnemyPaint) continue;
+            if (pt && !ruinHasEnemyPaint){
                 closestRuin = loc;
-                hasEnemyPaint = true;
-                bestDist = myLoc.distanceSquaredTo(closestRuin);
+                ruinHasEnemyPaint = true;
+                closestRuinDist = dist;
                 continue;
             }
-            //RobotInfo r = rc.senseRobotAtLocation(loc);
-            //if (r != null && r.getType().isTowerType()) continue;
-            int d = myLoc.distanceSquaredTo(loc);
-            if (d < bestDist){
-                bestDist = d;
+            if (dist < closestRuinDist){
+                closestRuinDist = dist;
                 closestRuin = loc;
-                //hasEnemyPaint = pt; //Already assigned
             }
         }
         if (closestRuin == null) closestRuin = prevClosestRuin;
@@ -71,7 +77,7 @@ public abstract class Unit extends MyRobot {
         closestRuin = null;
         if (prevClosestRuin == null) return;
         if (!rc.canSenseLocation(prevClosestRuin)) return;
-        if (Map.invalidTarget(prevClosestRuin)) prevClosestRuin = null;
+        prevClosestRuin = null;
     }
 
     void tryWithdraw() throws GameActionException {
@@ -91,10 +97,6 @@ public abstract class Unit extends MyRobot {
     }
 
     void completePatterns() throws GameActionException {
-        /*int x = (rc.getLocation().x / 5)*5 + 2;
-        int y = (rc.getLocation().y / 5)*5 + 2;
-        MapLocation pLoc = new MapLocation(x,y);
-        if (rc.canCompleteResourcePattern(pLoc)) rc.completeResourcePattern(pLoc);*/
         MapLocation[] locs = rc.getAllLocationsWithinRadiusSquared(rc.getLocation(), 8);
         for (MapLocation loc : locs){
             if (loc.x%4 == 2 && loc.y%4 == 2){
@@ -112,7 +114,8 @@ public abstract class Unit extends MyRobot {
         for (RobotInfo r : enemies){
             if (r.getType().isTowerType()) continue;
             if (r.getPaintAmount() == 0) continue;
-            int d = r.getLocation().distanceSquaredTo(rc.getLocation());
+            int d = VisionManager.computeDistance(r.getLocation());
+            if (d > Constants.DIST_INF) continue;
             if (ans == null || d < bestDist){
                 ans = r.getLocation();
                 bestDist = d;
@@ -127,7 +130,8 @@ public abstract class Unit extends MyRobot {
         MapInfo[] tiles = rc.senseNearbyMapInfos();
         for (MapInfo m : tiles){
             if (m.getPaint().isEnemy()) {
-                int d = m.getMapLocation().distanceSquaredTo(rc.getLocation());
+                int d = VisionManager.computeDistance(m.getMapLocation());
+                if (d > Constants.DIST_INF) continue;
                 if (ans == null || d < bestDist) {
                     ans = m.getMapLocation();
                     bestDist = d;
@@ -160,6 +164,7 @@ public abstract class Unit extends MyRobot {
         RobotInfo mostHurt = null;
         RobotInfo[] rs = rc.senseNearbyRobots(GameConstants.VISION_RADIUS_SQUARED, rc.getTeam());
         for (RobotInfo r : rs){
+            if (VisionManager.computeDistance(r.getLocation()) > Constants.DIST_INF) continue;
             if (isHurt(r)){
                 if (mostHurt == null || r.getPaintAmount() < mostHurt.getPaintAmount()) mostHurt = r;
             }

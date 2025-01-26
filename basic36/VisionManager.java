@@ -11,415 +11,346 @@ public class VisionManager {
     static MapLocation l14;
     static int v14;
     static Direction d14;
-    static int p14;
     static MapInfo m14;
 
     static MapLocation l15;
     static int v15;
     static Direction d15;
-    static int p15;
     static MapInfo m15;
 
     static MapLocation l16;
     static int v16;
     static Direction d16;
-    static int p16;
     static MapInfo m16;
 
     static MapLocation l17;
     static int v17;
     static Direction d17;
-    static int p17;
     static MapInfo m17;
 
     static MapLocation l18;
     static int v18;
     static Direction d18;
-    static int p18;
     static MapInfo m18;
 
     static MapLocation l24;
     static int v24;
     static Direction d24;
-    static int p24;
     static MapInfo m24;
 
     static MapLocation l25;
     static int v25;
     static Direction d25;
-    static int p25;
     static MapInfo m25;
 
     static MapLocation l26;
     static int v26;
     static Direction d26;
-    static int p26;
     static MapInfo m26;
 
     static MapLocation l27;
     static int v27;
     static Direction d27;
-    static int p27;
     static MapInfo m27;
 
     static MapLocation l28;
     static int v28;
     static Direction d28;
-    static int p28;
     static MapInfo m28;
 
     static MapLocation l29;
     static int v29;
     static Direction d29;
-    static int p29;
     static MapInfo m29;
 
     static MapLocation l30;
     static int v30;
     static Direction d30;
-    static int p30;
     static MapInfo m30;
 
     static MapLocation l34;
     static int v34;
     static Direction d34;
-    static int p34;
     static MapInfo m34;
 
     static MapLocation l35;
     static int v35;
     static Direction d35;
-    static int p35;
     static MapInfo m35;
 
     static MapLocation l36;
     static int v36;
     static Direction d36;
-    static int p36;
     static MapInfo m36;
 
     static MapLocation l37;
     static int v37;
     static Direction d37;
-    static int p37;
     static MapInfo m37;
 
     static MapLocation l38;
     static int v38;
     static Direction d38;
-    static int p38;
     static MapInfo m38;
 
     static MapLocation l39;
     static int v39;
     static Direction d39;
-    static int p39;
     static MapInfo m39;
 
     static MapLocation l40;
     static int v40;
     static Direction d40;
-    static int p40;
     static MapInfo m40;
 
     static MapLocation l41;
     static int v41;
     static Direction d41;
-    static int p41;
     static MapInfo m41;
 
     static MapLocation l42;
     static int v42;
     static Direction d42;
-    static int p42;
     static MapInfo m42;
 
     static MapLocation l45;
     static int v45;
     static Direction d45;
-    static int p45;
     static MapInfo m45;
 
     static MapLocation l46;
     static int v46;
     static Direction d46;
-    static int p46;
     static MapInfo m46;
 
     static MapLocation l47;
     static int v47;
     static Direction d47;
-    static int p47;
     static MapInfo m47;
 
     static MapLocation l48;
     static int v48;
     static Direction d48;
-    static int p48;
     static MapInfo m48;
 
     static MapLocation l49;
     static int v49;
     static Direction d49;
-    static int p49;
     static MapInfo m49;
 
     static MapLocation l50;
     static int v50;
     static Direction d50;
-    static int p50;
     static MapInfo m50;
 
     static MapLocation l51;
     static int v51;
     static Direction d51;
-    static int p51;
     static MapInfo m51;
 
     static MapLocation l52;
     static int v52;
     static Direction d52;
-    static int p52;
     static MapInfo m52;
 
     static MapLocation l53;
     static int v53;
     static Direction d53;
-    static int p53;
     static MapInfo m53;
 
     static MapLocation l56;
     static int v56;
     static Direction d56;
-    static int p56;
     static MapInfo m56;
 
     static MapLocation l57;
     static int v57;
     static Direction d57;
-    static int p57;
     static MapInfo m57;
 
     static MapLocation l58;
     static int v58;
     static Direction d58;
-    static int p58;
     static MapInfo m58;
 
     static MapLocation l59;
     static int v59;
     static Direction d59;
-    static int p59;
     static MapInfo m59;
 
     static MapLocation l60;
     static int v60;
     static Direction d60;
-    static int p60;
     static MapInfo m60;
 
     static MapLocation l61;
     static int v61;
     static Direction d61;
-    static int p61;
     static MapInfo m61;
 
     static MapLocation l62;
     static int v62;
     static Direction d62;
-    static int p62;
     static MapInfo m62;
 
     static MapLocation l63;
     static int v63;
     static Direction d63;
-    static int p63;
     static MapInfo m63;
 
     static MapLocation l64;
     static int v64;
     static Direction d64;
-    static int p64;
     static MapInfo m64;
 
     static MapLocation l67;
     static int v67;
     static Direction d67;
-    static int p67;
     static MapInfo m67;
 
     static MapLocation l68;
     static int v68;
     static Direction d68;
-    static int p68;
     static MapInfo m68;
 
     static MapLocation l69;
     static int v69;
     static Direction d69;
-    static int p69;
     static MapInfo m69;
 
     static MapLocation l70;
     static int v70;
     static Direction d70;
-    static int p70;
     static MapInfo m70;
 
     static MapLocation l71;
     static int v71;
     static Direction d71;
-    static int p71;
     static MapInfo m71;
 
     static MapLocation l72;
     static int v72;
     static Direction d72;
-    static int p72;
     static MapInfo m72;
 
     static MapLocation l73;
     static int v73;
     static Direction d73;
-    static int p73;
     static MapInfo m73;
 
     static MapLocation l74;
     static int v74;
     static Direction d74;
-    static int p74;
     static MapInfo m74;
 
     static MapLocation l75;
     static int v75;
     static Direction d75;
-    static int p75;
     static MapInfo m75;
 
     static MapLocation l78;
     static int v78;
     static Direction d78;
-    static int p78;
     static MapInfo m78;
 
     static MapLocation l79;
     static int v79;
     static Direction d79;
-    static int p79;
     static MapInfo m79;
 
     static MapLocation l80;
     static int v80;
     static Direction d80;
-    static int p80;
     static MapInfo m80;
 
     static MapLocation l81;
     static int v81;
     static Direction d81;
-    static int p81;
     static MapInfo m81;
 
     static MapLocation l82;
     static int v82;
     static Direction d82;
-    static int p82;
     static MapInfo m82;
 
     static MapLocation l83;
     static int v83;
     static Direction d83;
-    static int p83;
     static MapInfo m83;
 
     static MapLocation l84;
     static int v84;
     static Direction d84;
-    static int p84;
     static MapInfo m84;
 
     static MapLocation l85;
     static int v85;
     static Direction d85;
-    static int p85;
     static MapInfo m85;
 
     static MapLocation l86;
     static int v86;
     static Direction d86;
-    static int p86;
     static MapInfo m86;
 
     static MapLocation l90;
     static int v90;
     static Direction d90;
-    static int p90;
     static MapInfo m90;
 
     static MapLocation l91;
     static int v91;
     static Direction d91;
-    static int p91;
     static MapInfo m91;
 
     static MapLocation l92;
     static int v92;
     static Direction d92;
-    static int p92;
     static MapInfo m92;
 
     static MapLocation l93;
     static int v93;
     static Direction d93;
-    static int p93;
     static MapInfo m93;
 
     static MapLocation l94;
     static int v94;
     static Direction d94;
-    static int p94;
     static MapInfo m94;
 
     static MapLocation l95;
     static int v95;
     static Direction d95;
-    static int p95;
     static MapInfo m95;
 
     static MapLocation l96;
     static int v96;
     static Direction d96;
-    static int p96;
     static MapInfo m96;
 
     static MapLocation l102;
     static int v102;
     static Direction d102;
-    static int p102;
     static MapInfo m102;
 
     static MapLocation l103;
     static int v103;
     static Direction d103;
-    static int p103;
     static MapInfo m103;
 
     static MapLocation l104;
     static int v104;
     static Direction d104;
-    static int p104;
     static MapInfo m104;
 
     static MapLocation l105;
     static int v105;
     static Direction d105;
-    static int p105;
     static MapInfo m105;
 
     static MapLocation l106;
     static int v106;
     static Direction d106;
-    static int p106;
     static MapInfo m106;
 
 
@@ -427,5495 +358,5209 @@ public class VisionManager {
         l60 = rc.getLocation();
         v60 = 0;
         l61 = l60.add(Direction.NORTH);
-        v61 = 1000000;
-        d61 = null;
         if (rc.onTheMap(l61)) m61 =  rc.senseMapInfo(l61);
         else m61 =  null;
         l50 = l61.add(Direction.WEST);
-        v50 = 1000000;
-        d50 = null;
         if (rc.onTheMap(l50)) m50 =  rc.senseMapInfo(l50);
         else m50 =  null;
         l49 = l50.add(Direction.SOUTH);
-        v49 = 1000000;
-        d49 = null;
         if (rc.onTheMap(l49)) m49 =  rc.senseMapInfo(l49);
         else m49 =  null;
         l48 = l49.add(Direction.SOUTH);
-        v48 = 1000000;
-        d48 = null;
         if (rc.onTheMap(l48)) m48 =  rc.senseMapInfo(l48);
         else m48 =  null;
         l59 = l48.add(Direction.EAST);
-        v59 = 1000000;
-        d59 = null;
         if (rc.onTheMap(l59)) m59 =  rc.senseMapInfo(l59);
         else m59 =  null;
         l70 = l59.add(Direction.EAST);
-        v70 = 1000000;
-        d70 = null;
         if (rc.onTheMap(l70)) m70 =  rc.senseMapInfo(l70);
         else m70 =  null;
         l71 = l70.add(Direction.NORTH);
-        v71 = 1000000;
-        d71 = null;
         if (rc.onTheMap(l71)) m71 =  rc.senseMapInfo(l71);
         else m71 =  null;
         l72 = l71.add(Direction.NORTH);
-        v72 = 1000000;
-        d72 = null;
         if (rc.onTheMap(l72)) m72 =  rc.senseMapInfo(l72);
         else m72 =  null;
         l73 = l72.add(Direction.NORTH);
-        v73 = 1000000;
-        d73 = null;
         if (rc.onTheMap(l73)) m73 =  rc.senseMapInfo(l73);
         else m73 =  null;
         l62 = l73.add(Direction.WEST);
-        v62 = 1000000;
-        d62 = null;
         if (rc.onTheMap(l62)) m62 =  rc.senseMapInfo(l62);
         else m62 =  null;
         l51 = l62.add(Direction.WEST);
-        v51 = 1000000;
-        d51 = null;
         if (rc.onTheMap(l51)) m51 =  rc.senseMapInfo(l51);
         else m51 =  null;
         l40 = l51.add(Direction.WEST);
-        v40 = 1000000;
-        d40 = null;
         if (rc.onTheMap(l40)) m40 =  rc.senseMapInfo(l40);
         else m40 =  null;
         l39 = l40.add(Direction.SOUTH);
-        v39 = 1000000;
-        d39 = null;
         if (rc.onTheMap(l39)) m39 =  rc.senseMapInfo(l39);
         else m39 =  null;
         l38 = l39.add(Direction.SOUTH);
-        v38 = 1000000;
-        d38 = null;
         if (rc.onTheMap(l38)) m38 =  rc.senseMapInfo(l38);
         else m38 =  null;
         l37 = l38.add(Direction.SOUTH);
-        v37 = 1000000;
-        d37 = null;
         if (rc.onTheMap(l37)) m37 =  rc.senseMapInfo(l37);
         else m37 =  null;
         l36 = l37.add(Direction.SOUTH);
-        v36 = 1000000;
-        d36 = null;
         if (rc.onTheMap(l36)) m36 =  rc.senseMapInfo(l36);
         else m36 =  null;
         l47 = l36.add(Direction.EAST);
-        v47 = 1000000;
-        d47 = null;
         if (rc.onTheMap(l47)) m47 =  rc.senseMapInfo(l47);
         else m47 =  null;
         l58 = l47.add(Direction.EAST);
-        v58 = 1000000;
-        d58 = null;
         if (rc.onTheMap(l58)) m58 =  rc.senseMapInfo(l58);
         else m58 =  null;
         l69 = l58.add(Direction.EAST);
-        v69 = 1000000;
-        d69 = null;
         if (rc.onTheMap(l69)) m69 =  rc.senseMapInfo(l69);
         else m69 =  null;
         l80 = l69.add(Direction.EAST);
-        v80 = 1000000;
-        d80 = null;
         if (rc.onTheMap(l80)) m80 =  rc.senseMapInfo(l80);
         else m80 =  null;
         l81 = l80.add(Direction.NORTH);
-        v81 = 1000000;
-        d81 = null;
         if (rc.onTheMap(l81)) m81 =  rc.senseMapInfo(l81);
         else m81 =  null;
         l82 = l81.add(Direction.NORTH);
-        v82 = 1000000;
-        d82 = null;
         if (rc.onTheMap(l82)) m82 =  rc.senseMapInfo(l82);
         else m82 =  null;
         l83 = l82.add(Direction.NORTH);
-        v83 = 1000000;
-        d83 = null;
         if (rc.onTheMap(l83)) m83 =  rc.senseMapInfo(l83);
         else m83 =  null;
         l84 = l83.add(Direction.NORTH);
-        v84 = 1000000;
-        d84 = null;
         if (rc.onTheMap(l84)) m84 =  rc.senseMapInfo(l84);
         else m84 =  null;
         l74 = l84.add(Direction.NORTHWEST);
-        v74 = 1000000;
-        d74 = null;
         if (rc.onTheMap(l74)) m74 =  rc.senseMapInfo(l74);
         else m74 =  null;
         l63 = l74.add(Direction.WEST);
-        v63 = 1000000;
-        d63 = null;
         if (rc.onTheMap(l63)) m63 =  rc.senseMapInfo(l63);
         else m63 =  null;
         l52 = l63.add(Direction.WEST);
-        v52 = 1000000;
-        d52 = null;
         if (rc.onTheMap(l52)) m52 =  rc.senseMapInfo(l52);
         else m52 =  null;
         l41 = l52.add(Direction.WEST);
-        v41 = 1000000;
-        d41 = null;
         if (rc.onTheMap(l41)) m41 =  rc.senseMapInfo(l41);
         else m41 =  null;
         l29 = l41.add(Direction.SOUTHWEST);
-        v29 = 1000000;
-        d29 = null;
         if (rc.onTheMap(l29)) m29 =  rc.senseMapInfo(l29);
         else m29 =  null;
         l28 = l29.add(Direction.SOUTH);
-        v28 = 1000000;
-        d28 = null;
         if (rc.onTheMap(l28)) m28 =  rc.senseMapInfo(l28);
         else m28 =  null;
         l27 = l28.add(Direction.SOUTH);
-        v27 = 1000000;
-        d27 = null;
         if (rc.onTheMap(l27)) m27 =  rc.senseMapInfo(l27);
         else m27 =  null;
         l26 = l27.add(Direction.SOUTH);
-        v26 = 1000000;
-        d26 = null;
         if (rc.onTheMap(l26)) m26 =  rc.senseMapInfo(l26);
         else m26 =  null;
         l25 = l26.add(Direction.SOUTH);
-        v25 = 1000000;
-        d25 = null;
         if (rc.onTheMap(l25)) m25 =  rc.senseMapInfo(l25);
         else m25 =  null;
         l35 = l25.add(Direction.SOUTHEAST);
-        v35 = 1000000;
-        d35 = null;
         if (rc.onTheMap(l35)) m35 =  rc.senseMapInfo(l35);
         else m35 =  null;
         l46 = l35.add(Direction.EAST);
-        v46 = 1000000;
-        d46 = null;
         if (rc.onTheMap(l46)) m46 =  rc.senseMapInfo(l46);
         else m46 =  null;
         l57 = l46.add(Direction.EAST);
-        v57 = 1000000;
-        d57 = null;
         if (rc.onTheMap(l57)) m57 =  rc.senseMapInfo(l57);
         else m57 =  null;
         l68 = l57.add(Direction.EAST);
-        v68 = 1000000;
-        d68 = null;
         if (rc.onTheMap(l68)) m68 =  rc.senseMapInfo(l68);
         else m68 =  null;
         l79 = l68.add(Direction.EAST);
-        v79 = 1000000;
-        d79 = null;
         if (rc.onTheMap(l79)) m79 =  rc.senseMapInfo(l79);
         else m79 =  null;
         l91 = l79.add(Direction.NORTHEAST);
-        v91 = 1000000;
-        d91 = null;
         if (rc.onTheMap(l91)) m91 =  rc.senseMapInfo(l91);
         else m91 =  null;
         l92 = l91.add(Direction.NORTH);
-        v92 = 1000000;
-        d92 = null;
         if (rc.onTheMap(l92)) m92 =  rc.senseMapInfo(l92);
         else m92 =  null;
         l93 = l92.add(Direction.NORTH);
-        v93 = 1000000;
-        d93 = null;
         if (rc.onTheMap(l93)) m93 =  rc.senseMapInfo(l93);
         else m93 =  null;
         l94 = l93.add(Direction.NORTH);
-        v94 = 1000000;
-        d94 = null;
         if (rc.onTheMap(l94)) m94 =  rc.senseMapInfo(l94);
         else m94 =  null;
         l95 = l94.add(Direction.NORTH);
-        v95 = 1000000;
-        d95 = null;
         if (rc.onTheMap(l95)) m95 =  rc.senseMapInfo(l95);
         else m95 =  null;
         l85 = l95.add(Direction.NORTHWEST);
-        v85 = 1000000;
-        d85 = null;
         if (rc.onTheMap(l85)) m85 =  rc.senseMapInfo(l85);
         else m85 =  null;
         l75 = l85.add(Direction.NORTHWEST);
-        v75 = 1000000;
-        d75 = null;
         if (rc.onTheMap(l75)) m75 =  rc.senseMapInfo(l75);
         else m75 =  null;
         l64 = l75.add(Direction.WEST);
-        v64 = 1000000;
-        d64 = null;
         if (rc.onTheMap(l64)) m64 =  rc.senseMapInfo(l64);
         else m64 =  null;
         l53 = l64.add(Direction.WEST);
-        v53 = 1000000;
-        d53 = null;
         if (rc.onTheMap(l53)) m53 =  rc.senseMapInfo(l53);
         else m53 =  null;
         l42 = l53.add(Direction.WEST);
-        v42 = 1000000;
-        d42 = null;
         if (rc.onTheMap(l42)) m42 =  rc.senseMapInfo(l42);
         else m42 =  null;
         l30 = l42.add(Direction.SOUTHWEST);
-        v30 = 1000000;
-        d30 = null;
         if (rc.onTheMap(l30)) m30 =  rc.senseMapInfo(l30);
         else m30 =  null;
         l18 = l30.add(Direction.SOUTHWEST);
-        v18 = 1000000;
-        d18 = null;
         if (rc.onTheMap(l18)) m18 =  rc.senseMapInfo(l18);
         else m18 =  null;
         l17 = l18.add(Direction.SOUTH);
-        v17 = 1000000;
-        d17 = null;
         if (rc.onTheMap(l17)) m17 =  rc.senseMapInfo(l17);
         else m17 =  null;
         l16 = l17.add(Direction.SOUTH);
-        v16 = 1000000;
-        d16 = null;
         if (rc.onTheMap(l16)) m16 =  rc.senseMapInfo(l16);
         else m16 =  null;
         l15 = l16.add(Direction.SOUTH);
-        v15 = 1000000;
-        d15 = null;
         if (rc.onTheMap(l15)) m15 =  rc.senseMapInfo(l15);
         else m15 =  null;
         l14 = l15.add(Direction.SOUTH);
-        v14 = 1000000;
-        d14 = null;
         if (rc.onTheMap(l14)) m14 =  rc.senseMapInfo(l14);
         else m14 =  null;
         l24 = l14.add(Direction.SOUTHEAST);
-        v24 = 1000000;
-        d24 = null;
         if (rc.onTheMap(l24)) m24 =  rc.senseMapInfo(l24);
         else m24 =  null;
         l34 = l24.add(Direction.SOUTHEAST);
-        v34 = 1000000;
-        d34 = null;
         if (rc.onTheMap(l34)) m34 =  rc.senseMapInfo(l34);
         else m34 =  null;
         l45 = l34.add(Direction.EAST);
-        v45 = 1000000;
-        d45 = null;
         if (rc.onTheMap(l45)) m45 =  rc.senseMapInfo(l45);
         else m45 =  null;
         l56 = l45.add(Direction.EAST);
-        v56 = 1000000;
-        d56 = null;
         if (rc.onTheMap(l56)) m56 =  rc.senseMapInfo(l56);
         else m56 =  null;
         l67 = l56.add(Direction.EAST);
-        v67 = 1000000;
-        d67 = null;
         if (rc.onTheMap(l67)) m67 =  rc.senseMapInfo(l67);
         else m67 =  null;
         l78 = l67.add(Direction.EAST);
-        v78 = 1000000;
-        d78 = null;
         if (rc.onTheMap(l78)) m78 =  rc.senseMapInfo(l78);
         else m78 =  null;
         l90 = l78.add(Direction.NORTHEAST);
-        v90 = 1000000;
-        d90 = null;
         if (rc.onTheMap(l90)) m90 =  rc.senseMapInfo(l90);
         else m90 =  null;
         l102 = l90.add(Direction.NORTHEAST);
-        v102 = 1000000;
-        d102 = null;
         if (rc.onTheMap(l102)) m102 =  rc.senseMapInfo(l102);
         else m102 =  null;
         l103 = l102.add(Direction.NORTH);
-        v103 = 1000000;
-        d103 = null;
         if (rc.onTheMap(l103)) m103 =  rc.senseMapInfo(l103);
         else m103 =  null;
         l104 = l103.add(Direction.NORTH);
-        v104 = 1000000;
-        d104 = null;
         if (rc.onTheMap(l104)) m104 =  rc.senseMapInfo(l104);
         else m104 =  null;
         l105 = l104.add(Direction.NORTH);
-        v105 = 1000000;
-        d105 = null;
         if (rc.onTheMap(l105)) m105 =  rc.senseMapInfo(l105);
         else m105 =  null;
         l106 = l105.add(Direction.NORTH);
-        v106 = 1000000;
-        d106 = null;
         if (rc.onTheMap(l106)) m106 =  rc.senseMapInfo(l106);
         else m106 =  null;
         l96 = l106.add(Direction.NORTHWEST);
-        v96 = 1000000;
-        d96 = null;
         if (rc.onTheMap(l96)) m96 =  rc.senseMapInfo(l96);
         else m96 =  null;
         l86 = l96.add(Direction.NORTHWEST);
-        v86 = 1000000;
-        d86 = null;
         if (rc.onTheMap(l86)) m86 =  rc.senseMapInfo(l86);
         else m86 =  null;
     }
 
 
     static void computeDistsUnit() throws GameActionException {
-        if (MovementManager.canMove(Direction.WEST)){
-            p49 = 10 + switch(m49.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p49 += 5*Util.getPaintLost(Direction.WEST);
-            v49 = v60 + p49;
-            d49 = Direction.WEST;
+        v49 = v60;
+        d49 = Direction.WEST;
+        if (!MovementManager.canMove(Direction.WEST)) v49 += 1000000;
+        else v49 += 10 + 5*Util.getPaintLost(Direction.WEST) +  switch(m49.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v49) {
+            v59 = v49;
+            d59 = d49;
         }
-        if (MovementManager.canMove(Direction.SOUTH)){
-            p59 = 10 + switch(m59.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p59 += 5*Util.getPaintLost(Direction.SOUTH);
-            if (v60 > v49) {
-                v59 = v49 + p59;
-                d59 = d49;
+        else {
+            v59 = v60;
+            d59 = Direction.SOUTH;
+        }
+        if (!MovementManager.canMove(Direction.SOUTH)) v59 += 1000000;
+        else v59 += 10 + 5*Util.getPaintLost(Direction.SOUTH) +  switch(m59.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v49) {
+            v61 = v49;
+            d61 = d49;
+        }
+        else {
+            v61 = v60;
+            d61 = Direction.NORTH;
+        }
+        if (!MovementManager.canMove(Direction.NORTH)) v61 += 1000000;
+        else v61 += 10 + 5*Util.getPaintLost(Direction.NORTH) +  switch(m61.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v61) {
+            if (v61 > v59) {
+                v71 = v59;
+                d71 = d59;
             }
             else {
-                v59 = v60 + p59;
-                d59 = Direction.SOUTH;
+                v71 = v61;
+                d71 = d61;
             }
         }
-        if (MovementManager.canMove(Direction.NORTH)){
-            p61 = 10 + switch(m61.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p61 += 5*Util.getPaintLost(Direction.NORTH);
-            if (v60 > v49) {
-                v61 = v49 + p61;
-                d61 = d49;
+        else {
+            if (v60 > v59) {
+                v71 = v59;
+                d71 = d59;
             }
             else {
-                v61 = v60 + p61;
-                d61 = Direction.NORTH;
+                v71 = v60;
+                d71 = Direction.EAST;
             }
         }
-        if (MovementManager.canMove(Direction.EAST)){
-            p71 = 10 + switch(m71.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p71 += 5*Util.getPaintLost(Direction.EAST);
+        if (!MovementManager.canMove(Direction.EAST)) v71 += 1000000;
+        else v71 += 10 + 5*Util.getPaintLost(Direction.EAST) +  switch(m71.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v49) {
+            if (v49 > v59) {
+                v48 = v59;
+                d48 = d59;
+            }
+            else {
+                v48 = v49;
+                d48 = d49;
+            }
+        }
+        else {
+            if (v60 > v59) {
+                v48 = v59;
+                d48 = d59;
+            }
+            else {
+                v48 = v60;
+                d48 = Direction.SOUTHWEST;
+            }
+        }
+        if (!MovementManager.canMove(Direction.SOUTHWEST)) v48 += 1000000;
+        else v48 += 10 + 5*Util.getPaintLost(Direction.SOUTHWEST) +  switch(m48.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v49) {
+            if (v49 > v61) {
+                v50 = v61;
+                d50 = d61;
+            }
+            else {
+                v50 = v49;
+                d50 = d49;
+            }
+        }
+        else {
             if (v60 > v61) {
-                if (v61 > v59) {
-                    v71 = v59 + p71;
-                    d71 = d59;
-                }
-                else {
-                    v71 = v61 + p71;
-                    d71 = d61;
-                }
+                v50 = v61;
+                d50 = d61;
             }
             else {
-                if (v60 > v59) {
-                    v71 = v59 + p71;
-                    d71 = d59;
-                }
-                else {
-                    v71 = v60 + p71;
-                    d71 = Direction.EAST;
-                }
+                v50 = v60;
+                d50 = Direction.NORTHWEST;
             }
         }
-        if (MovementManager.canMove(Direction.SOUTHWEST)){
-            p48 = 10 + switch(m48.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p48 += 5*Util.getPaintLost(Direction.SOUTHWEST);
-            if (v60 > v49) {
-                if (v49 > v59) {
-                    v48 = v59 + p48;
-                    d48 = d59;
-                }
-                else {
-                    v48 = v49 + p48;
-                    d48 = d49;
-                }
+        if (!MovementManager.canMove(Direction.NORTHWEST)) v50 += 1000000;
+        else v50 += 10 + 5*Util.getPaintLost(Direction.NORTHWEST) +  switch(m50.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v71) {
+            if (v71 > v59) {
+                v70 = v59;
+                d70 = d59;
             }
             else {
-                if (v60 > v59) {
-                    v48 = v59 + p48;
-                    d48 = d59;
-                }
-                else {
-                    v48 = v60 + p48;
-                    d48 = Direction.SOUTHWEST;
-                }
+                v70 = v71;
+                d70 = d71;
             }
         }
-        if (MovementManager.canMove(Direction.NORTHWEST)){
-            p50 = 10 + switch(m50.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p50 += 5*Util.getPaintLost(Direction.NORTHWEST);
-            if (v60 > v49) {
-                if (v49 > v61) {
-                    v50 = v61 + p50;
-                    d50 = d61;
-                }
-                else {
-                    v50 = v49 + p50;
-                    d50 = d49;
-                }
+        else {
+            if (v60 > v59) {
+                v70 = v59;
+                d70 = d59;
             }
             else {
-                if (v60 > v61) {
-                    v50 = v61 + p50;
-                    d50 = d61;
-                }
-                else {
-                    v50 = v60 + p50;
-                    d50 = Direction.NORTHWEST;
-                }
+                v70 = v60;
+                d70 = Direction.SOUTHEAST;
             }
         }
-        if (MovementManager.canMove(Direction.SOUTHEAST)){
-            p70 = 10 + switch(m70.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p70 += 5*Util.getPaintLost(Direction.SOUTHEAST);
+        if (!MovementManager.canMove(Direction.SOUTHEAST)) v70 += 1000000;
+        else v70 += 10 + 5*Util.getPaintLost(Direction.SOUTHEAST) +  switch(m70.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v61) {
+            if (v61 > v71) {
+                v72 = v71;
+                d72 = d71;
+            }
+            else {
+                v72 = v61;
+                d72 = d61;
+            }
+        }
+        else {
             if (v60 > v71) {
-                if (v71 > v59) {
-                    v70 = v59 + p70;
-                    d70 = d59;
-                }
-                else {
-                    v70 = v71 + p70;
-                    d70 = d71;
-                }
+                v72 = v71;
+                d72 = d71;
             }
             else {
-                if (v60 > v59) {
-                    v70 = v59 + p70;
-                    d70 = d59;
-                }
-                else {
-                    v70 = v60 + p70;
-                    d70 = Direction.SOUTHEAST;
-                }
+                v72 = v60;
+                d72 = Direction.NORTHEAST;
             }
         }
-        if (MovementManager.canMove(Direction.NORTHEAST)){
-            p72 = 10 + switch(m72.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p72 += 5*Util.getPaintLost(Direction.NORTHEAST);
-            if (v60 > v61) {
-                if (v61 > v71) {
-                    v72 = v71 + p72;
-                    d72 = d71;
-                }
-                else {
-                    v72 = v61 + p72;
-                    d72 = d61;
-                }
+        if (!MovementManager.canMove(Direction.NORTHEAST)) v72 += 1000000;
+        else v72 += 10 + 5*Util.getPaintLost(Direction.NORTHEAST) +  switch(m72.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v49 > v48) {
+            if (v48 > v50) {
+                v38 = v50;
+                d38 = d50;
             }
             else {
-                if (v60 > v71) {
-                    v72 = v71 + p72;
-                    d72 = d71;
-                }
-                else {
-                    v72 = v60 + p72;
-                    d72 = Direction.NORTHEAST;
-                }
+                v38 = v48;
+                d38 = d48;
             }
         }
-        if (m38 != null && m38.isPassable()){
-            p38 = 10 + switch(m38.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v49 > v48) {
-                if (v48 > v50) {
-                    v38 = v50 + p38;
-                    d38 = d50;
-                }
-                else {
-                    v38 = v48 + p38;
-                    d38 = d48;
-                }
-            }
-            else {
-                if (v49 > v50) {
-                    v38 = v50 + p38;
-                    d38 = d50;
-                }
-                else {
-                    v38 = v49 + p38;
-                    d38 = d49;
-                }
-            }
-        }
-        if (m58 != null && m58.isPassable()){
-            p58 = 10 + switch(m58.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v59 > v48) {
-                if (v48 > v70) {
-                    v58 = v70 + p58;
-                    d58 = d70;
-                }
-                else {
-                    v58 = v48 + p58;
-                    d58 = d48;
-                }
-            }
-            else {
-                if (v59 > v70) {
-                    v58 = v70 + p58;
-                    d58 = d70;
-                }
-                else {
-                    v58 = v59 + p58;
-                    d58 = d59;
-                }
-            }
-        }
-        if (m62 != null && m62.isPassable()){
-            p62 = 10 + switch(m62.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v61 > v50) {
-                if (v50 > v72) {
-                    v62 = v72 + p62;
-                    d62 = d72;
-                }
-                else {
-                    v62 = v50 + p62;
-                    d62 = d50;
-                }
-            }
-            else {
-                if (v61 > v72) {
-                    v62 = v72 + p62;
-                    d62 = d72;
-                }
-                else {
-                    v62 = v61 + p62;
-                    d62 = d61;
-                }
-            }
-        }
-        if (m82 != null && m82.isPassable()){
-            p82 = 10 + switch(m82.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v71 > v72) {
-                if (v72 > v70) {
-                    v82 = v70 + p82;
-                    d82 = d70;
-                }
-                else {
-                    v82 = v72 + p82;
-                    d82 = d72;
-                }
-            }
-            else {
-                if (v71 > v70) {
-                    v82 = v70 + p82;
-                    d82 = d70;
-                }
-                else {
-                    v82 = v71 + p82;
-                    d82 = d71;
-                }
-            }
-        }
-        if (m37 != null && m37.isPassable()){
-            p37 = 10 + switch(m37.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v49 > v48) {
-                if (v48 > v38) {
-                    v37 = v38 + p37;
-                    d37 = d38;
-                }
-                else {
-                    v37 = v48 + p37;
-                    d37 = d48;
-                }
-            }
-            else {
-                if (v49 > v38) {
-                    v37 = v38 + p37;
-                    d37 = d38;
-                }
-                else {
-                    v37 = v49 + p37;
-                    d37 = d49;
-                }
-            }
-        }
-        if (m39 != null && m39.isPassable()){
-            p39 = 10 + switch(m39.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
             if (v49 > v50) {
-                if (v50 > v38) {
-                    v39 = v38 + p39;
-                    d39 = d38;
-                }
-                else {
-                    v39 = v50 + p39;
-                    d39 = d50;
-                }
+                v38 = v50;
+                d38 = d50;
             }
             else {
-                if (v49 > v38) {
-                    v39 = v38 + p39;
-                    d39 = d38;
-                }
-                else {
-                    v39 = v49 + p39;
-                    d39 = d49;
-                }
+                v38 = v49;
+                d38 = d49;
             }
         }
-        if (m47 != null && m47.isPassable()){
-            p47 = 10 + switch(m47.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v59 > v48) {
-                if (v48 > v58) {
-                    if (v58 > v37) {
-                        v47 = v37 + p47;
-                        d47 = d37;
-                    }
-                    else {
-                        v47 = v58 + p47;
-                        d47 = d58;
-                    }
-                }
-                else {
-                    if (v48 > v37) {
-                        v47 = v37 + p47;
-                        d47 = d37;
-                    }
-                    else {
-                        v47 = v48 + p47;
-                        d47 = d48;
-                    }
-                }
+        if (m38 == null || !m38.isPassable()) v38 += 1000000;
+        else v38 += 10 + switch(m38.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v59 > v48) {
+            if (v48 > v70) {
+                v58 = v70;
+                d58 = d70;
             }
             else {
-                if (v59 > v58) {
-                    if (v58 > v37) {
-                        v47 = v37 + p47;
-                        d47 = d37;
-                    }
-                    else {
-                        v47 = v58 + p47;
-                        d47 = d58;
-                    }
-                }
-                else {
-                    if (v59 > v37) {
-                        v47 = v37 + p47;
-                        d47 = d37;
-                    }
-                    else {
-                        v47 = v59 + p47;
-                        d47 = d59;
-                    }
-                }
+                v58 = v48;
+                d58 = d48;
             }
         }
-        if (m51 != null && m51.isPassable()){
-            p51 = 10 + switch(m51.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v61 > v50) {
-                if (v50 > v62) {
-                    if (v62 > v39) {
-                        v51 = v39 + p51;
-                        d51 = d39;
-                    }
-                    else {
-                        v51 = v62 + p51;
-                        d51 = d62;
-                    }
-                }
-                else {
-                    if (v50 > v39) {
-                        v51 = v39 + p51;
-                        d51 = d39;
-                    }
-                    else {
-                        v51 = v50 + p51;
-                        d51 = d50;
-                    }
-                }
-            }
-            else {
-                if (v61 > v62) {
-                    if (v62 > v39) {
-                        v51 = v39 + p51;
-                        d51 = d39;
-                    }
-                    else {
-                        v51 = v62 + p51;
-                        d51 = d62;
-                    }
-                }
-                else {
-                    if (v61 > v39) {
-                        v51 = v39 + p51;
-                        d51 = d39;
-                    }
-                    else {
-                        v51 = v61 + p51;
-                        d51 = d61;
-                    }
-                }
-            }
-        }
-        if (m69 != null && m69.isPassable()){
-            p69 = 10 + switch(m69.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
             if (v59 > v70) {
-                if (v70 > v58) {
-                    v69 = v58 + p69;
-                    d69 = d58;
-                }
-                else {
-                    v69 = v70 + p69;
-                    d69 = d70;
-                }
+                v58 = v70;
+                d58 = d70;
             }
             else {
-                if (v59 > v58) {
-                    v69 = v58 + p69;
-                    d69 = d58;
-                }
-                else {
-                    v69 = v59 + p69;
-                    d69 = d59;
-                }
+                v58 = v59;
+                d58 = d59;
             }
         }
-        if (m73 != null && m73.isPassable()){
-            p73 = 10 + switch(m73.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        if (m58 == null || !m58.isPassable()) v58 += 1000000;
+        else v58 += 10 + switch(m58.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v61 > v50) {
+            if (v50 > v72) {
+                v62 = v72;
+                d62 = d72;
+            }
+            else {
+                v62 = v50;
+                d62 = d50;
+            }
+        }
+        else {
             if (v61 > v72) {
-                if (v72 > v62) {
-                    v73 = v62 + p73;
-                    d73 = d62;
-                }
-                else {
-                    v73 = v72 + p73;
-                    d73 = d72;
-                }
+                v62 = v72;
+                d62 = d72;
             }
             else {
-                if (v61 > v62) {
-                    v73 = v62 + p73;
-                    d73 = d62;
-                }
-                else {
-                    v73 = v61 + p73;
-                    d73 = d61;
-                }
+                v62 = v61;
+                d62 = d61;
             }
         }
-        if (m81 != null && m81.isPassable()){
-            p81 = 10 + switch(m81.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        if (m62 == null || !m62.isPassable()) v62 += 1000000;
+        else v62 += 10 + switch(m62.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v71 > v72) {
+            if (v72 > v70) {
+                v82 = v70;
+                d82 = d70;
+            }
+            else {
+                v82 = v72;
+                d82 = d72;
+            }
+        }
+        else {
             if (v71 > v70) {
-                if (v70 > v82) {
-                    if (v82 > v69) {
-                        v81 = v69 + p81;
-                        d81 = d69;
-                    }
-                    else {
-                        v81 = v82 + p81;
-                        d81 = d82;
-                    }
+                v82 = v70;
+                d82 = d70;
+            }
+            else {
+                v82 = v71;
+                d82 = d71;
+            }
+        }
+        if (m82 == null || !m82.isPassable()) v82 += 1000000;
+        else v82 += 10 + switch(m82.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v49 > v48) {
+            if (v48 > v38) {
+                v37 = v38;
+                d37 = d38;
+            }
+            else {
+                v37 = v48;
+                d37 = d48;
+            }
+        }
+        else {
+            if (v49 > v38) {
+                v37 = v38;
+                d37 = d38;
+            }
+            else {
+                v37 = v49;
+                d37 = d49;
+            }
+        }
+        if (m37 == null || !m37.isPassable()) v37 += 1000000;
+        else v37 += 10 + switch(m37.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v49 > v50) {
+            if (v50 > v38) {
+                v39 = v38;
+                d39 = d38;
+            }
+            else {
+                v39 = v50;
+                d39 = d50;
+            }
+        }
+        else {
+            if (v49 > v38) {
+                v39 = v38;
+                d39 = d38;
+            }
+            else {
+                v39 = v49;
+                d39 = d49;
+            }
+        }
+        if (m39 == null || !m39.isPassable()) v39 += 1000000;
+        else v39 += 10 + switch(m39.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v59 > v48) {
+            if (v48 > v58) {
+                if (v58 > v37) {
+                    v47 = v37;
+                    d47 = d37;
                 }
                 else {
-                    if (v70 > v69) {
-                        v81 = v69 + p81;
-                        d81 = d69;
-                    }
-                    else {
-                        v81 = v70 + p81;
-                        d81 = d70;
-                    }
+                    v47 = v58;
+                    d47 = d58;
                 }
             }
             else {
-                if (v71 > v82) {
-                    if (v82 > v69) {
-                        v81 = v69 + p81;
-                        d81 = d69;
-                    }
-                    else {
-                        v81 = v82 + p81;
-                        d81 = d82;
-                    }
+                if (v48 > v37) {
+                    v47 = v37;
+                    d47 = d37;
                 }
                 else {
-                    if (v71 > v69) {
-                        v81 = v69 + p81;
-                        d81 = d69;
-                    }
-                    else {
-                        v81 = v71 + p81;
-                        d81 = d71;
-                    }
+                    v47 = v48;
+                    d47 = d48;
                 }
             }
         }
-        if (m83 != null && m83.isPassable()){
-            p83 = 10 + switch(m83.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v71 > v72) {
-                if (v72 > v82) {
-                    if (v82 > v73) {
-                        v83 = v73 + p83;
-                        d83 = d73;
-                    }
-                    else {
-                        v83 = v82 + p83;
-                        d83 = d82;
-                    }
+        else {
+            if (v59 > v58) {
+                if (v58 > v37) {
+                    v47 = v37;
+                    d47 = d37;
                 }
                 else {
-                    if (v72 > v73) {
-                        v83 = v73 + p83;
-                        d83 = d73;
-                    }
-                    else {
-                        v83 = v72 + p83;
-                        d83 = d72;
-                    }
+                    v47 = v58;
+                    d47 = d58;
                 }
             }
             else {
-                if (v71 > v82) {
-                    if (v82 > v73) {
-                        v83 = v73 + p83;
-                        d83 = d73;
-                    }
-                    else {
-                        v83 = v82 + p83;
-                        d83 = d82;
-                    }
+                if (v59 > v37) {
+                    v47 = v37;
+                    d47 = d37;
                 }
                 else {
-                    if (v71 > v73) {
-                        v83 = v73 + p83;
-                        d83 = d73;
-                    }
-                    else {
-                        v83 = v71 + p83;
-                        d83 = d71;
-                    }
+                    v47 = v59;
+                    d47 = d59;
                 }
             }
         }
-        if (m36 != null && m36.isPassable()){
-            p36 = 10 + switch(m36.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v48 > v37) {
-                if (v37 > v47) {
-                    v36 = v47 + p36;
-                    d36 = d47;
+        if (m47 == null || !m47.isPassable()) v47 += 1000000;
+        else v47 += 10 + switch(m47.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v61 > v50) {
+            if (v50 > v62) {
+                if (v62 > v39) {
+                    v51 = v39;
+                    d51 = d39;
                 }
                 else {
-                    v36 = v37 + p36;
-                    d36 = d37;
+                    v51 = v62;
+                    d51 = d62;
                 }
             }
             else {
-                if (v48 > v47) {
-                    v36 = v47 + p36;
-                    d36 = d47;
+                if (v50 > v39) {
+                    v51 = v39;
+                    d51 = d39;
                 }
                 else {
-                    v36 = v48 + p36;
-                    d36 = d48;
+                    v51 = v50;
+                    d51 = d50;
                 }
             }
         }
-        if (m40 != null && m40.isPassable()){
-            p40 = 10 + switch(m40.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v50 > v39) {
-                if (v39 > v51) {
-                    v40 = v51 + p40;
-                    d40 = d51;
+        else {
+            if (v61 > v62) {
+                if (v62 > v39) {
+                    v51 = v39;
+                    d51 = d39;
                 }
                 else {
-                    v40 = v39 + p40;
-                    d40 = d39;
+                    v51 = v62;
+                    d51 = d62;
                 }
             }
             else {
-                if (v50 > v51) {
-                    v40 = v51 + p40;
-                    d40 = d51;
+                if (v61 > v39) {
+                    v51 = v39;
+                    d51 = d39;
                 }
                 else {
-                    v40 = v50 + p40;
-                    d40 = d50;
+                    v51 = v61;
+                    d51 = d61;
                 }
             }
         }
-        if (m80 != null && m80.isPassable()){
-            p80 = 10 + switch(m80.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v70 > v81) {
-                if (v81 > v69) {
-                    v80 = v69 + p80;
-                    d80 = d69;
+        if (m51 == null || !m51.isPassable()) v51 += 1000000;
+        else v51 += 10 + switch(m51.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v59 > v70) {
+            if (v70 > v58) {
+                v69 = v58;
+                d69 = d58;
+            }
+            else {
+                v69 = v70;
+                d69 = d70;
+            }
+        }
+        else {
+            if (v59 > v58) {
+                v69 = v58;
+                d69 = d58;
+            }
+            else {
+                v69 = v59;
+                d69 = d59;
+            }
+        }
+        if (m69 == null || !m69.isPassable()) v69 += 1000000;
+        else v69 += 10 + switch(m69.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v61 > v72) {
+            if (v72 > v62) {
+                v73 = v62;
+                d73 = d62;
+            }
+            else {
+                v73 = v72;
+                d73 = d72;
+            }
+        }
+        else {
+            if (v61 > v62) {
+                v73 = v62;
+                d73 = d62;
+            }
+            else {
+                v73 = v61;
+                d73 = d61;
+            }
+        }
+        if (m73 == null || !m73.isPassable()) v73 += 1000000;
+        else v73 += 10 + switch(m73.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v71 > v70) {
+            if (v70 > v82) {
+                if (v82 > v69) {
+                    v81 = v69;
+                    d81 = d69;
                 }
                 else {
-                    v80 = v81 + p80;
-                    d80 = d81;
+                    v81 = v82;
+                    d81 = d82;
                 }
             }
             else {
                 if (v70 > v69) {
-                    v80 = v69 + p80;
-                    d80 = d69;
+                    v81 = v69;
+                    d81 = d69;
                 }
                 else {
-                    v80 = v70 + p80;
-                    d80 = d70;
+                    v81 = v70;
+                    d81 = d70;
                 }
             }
         }
-        if (m84 != null && m84.isPassable()){
-            p84 = 10 + switch(m84.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v72 > v73) {
-                if (v73 > v83) {
-                    v84 = v83 + p84;
-                    d84 = d83;
+        else {
+            if (v71 > v82) {
+                if (v82 > v69) {
+                    v81 = v69;
+                    d81 = d69;
                 }
                 else {
-                    v84 = v73 + p84;
-                    d84 = d73;
+                    v81 = v82;
+                    d81 = d82;
                 }
             }
             else {
-                if (v72 > v83) {
-                    v84 = v83 + p84;
-                    d84 = d83;
+                if (v71 > v69) {
+                    v81 = v69;
+                    d81 = d69;
                 }
                 else {
-                    v84 = v72 + p84;
-                    d84 = d72;
+                    v81 = v71;
+                    d81 = d71;
                 }
             }
         }
-        if (m27 != null && m27.isPassable()){
-            p27 = 10 + switch(m27.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v38 > v37) {
-                if (v37 > v39) {
-                    v27 = v39 + p27;
-                    d27 = d39;
+        if (m81 == null || !m81.isPassable()) v81 += 1000000;
+        else v81 += 10 + switch(m81.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v71 > v72) {
+            if (v72 > v82) {
+                if (v82 > v73) {
+                    v83 = v73;
+                    d83 = d73;
                 }
                 else {
-                    v27 = v37 + p27;
-                    d27 = d37;
+                    v83 = v82;
+                    d83 = d82;
                 }
             }
             else {
-                if (v38 > v39) {
-                    v27 = v39 + p27;
-                    d27 = d39;
+                if (v72 > v73) {
+                    v83 = v73;
+                    d83 = d73;
                 }
                 else {
-                    v27 = v38 + p27;
-                    d27 = d38;
+                    v83 = v72;
+                    d83 = d72;
                 }
             }
         }
-        if (m57 != null && m57.isPassable()){
-            p57 = 10 + switch(m57.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v58 > v47) {
-                if (v47 > v69) {
-                    v57 = v69 + p57;
-                    d57 = d69;
+        else {
+            if (v71 > v82) {
+                if (v82 > v73) {
+                    v83 = v73;
+                    d83 = d73;
                 }
                 else {
-                    v57 = v47 + p57;
-                    d57 = d47;
+                    v83 = v82;
+                    d83 = d82;
                 }
             }
             else {
-                if (v58 > v69) {
-                    v57 = v69 + p57;
-                    d57 = d69;
+                if (v71 > v73) {
+                    v83 = v73;
+                    d83 = d73;
                 }
                 else {
-                    v57 = v58 + p57;
-                    d57 = d58;
+                    v83 = v71;
+                    d83 = d71;
                 }
             }
         }
-        if (m63 != null && m63.isPassable()){
-            p63 = 10 + switch(m63.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v62 > v51) {
-                if (v51 > v73) {
-                    v63 = v73 + p63;
-                    d63 = d73;
-                }
-                else {
-                    v63 = v51 + p63;
-                    d63 = d51;
-                }
+        if (m83 == null || !m83.isPassable()) v83 += 1000000;
+        else v83 += 10 + switch(m83.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v48 > v37) {
+            if (v37 > v47) {
+                v36 = v47;
+                d36 = d47;
             }
             else {
-                if (v62 > v73) {
-                    v63 = v73 + p63;
-                    d63 = d73;
-                }
-                else {
-                    v63 = v62 + p63;
-                    d63 = d62;
-                }
+                v36 = v37;
+                d36 = d37;
             }
         }
-        if (m93 != null && m93.isPassable()){
-            p93 = 10 + switch(m93.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v82 > v83) {
-                if (v83 > v81) {
-                    v93 = v81 + p93;
-                    d93 = d81;
-                }
-                else {
-                    v93 = v83 + p93;
-                    d93 = d83;
-                }
+        else {
+            if (v48 > v47) {
+                v36 = v47;
+                d36 = d47;
             }
             else {
-                if (v82 > v81) {
-                    v93 = v81 + p93;
-                    d93 = d81;
-                }
-                else {
-                    v93 = v82 + p93;
-                    d93 = d82;
-                }
+                v36 = v48;
+                d36 = d48;
             }
         }
-        if (m26 != null && m26.isPassable()){
-            p26 = 10 + switch(m26.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v38 > v37) {
-                if (v37 > v36) {
-                    if (v36 > v27) {
-                        v26 = v27 + p26;
-                        d26 = d27;
-                    }
-                    else {
-                        v26 = v36 + p26;
-                        d26 = d36;
-                    }
-                }
-                else {
-                    if (v37 > v27) {
-                        v26 = v27 + p26;
-                        d26 = d27;
-                    }
-                    else {
-                        v26 = v37 + p26;
-                        d26 = d37;
-                    }
-                }
+        if (m36 == null || !m36.isPassable()) v36 += 1000000;
+        else v36 += 10 + switch(m36.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v50 > v39) {
+            if (v39 > v51) {
+                v40 = v51;
+                d40 = d51;
             }
             else {
-                if (v38 > v36) {
-                    if (v36 > v27) {
-                        v26 = v27 + p26;
-                        d26 = d27;
-                    }
-                    else {
-                        v26 = v36 + p26;
-                        d26 = d36;
-                    }
-                }
-                else {
-                    if (v38 > v27) {
-                        v26 = v27 + p26;
-                        d26 = d27;
-                    }
-                    else {
-                        v26 = v38 + p26;
-                        d26 = d38;
-                    }
-                }
+                v40 = v39;
+                d40 = d39;
             }
         }
-        if (m28 != null && m28.isPassable()){
-            p28 = 10 + switch(m28.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v50 > v51) {
+                v40 = v51;
+                d40 = d51;
+            }
+            else {
+                v40 = v50;
+                d40 = d50;
+            }
+        }
+        if (m40 == null || !m40.isPassable()) v40 += 1000000;
+        else v40 += 10 + switch(m40.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v70 > v81) {
+            if (v81 > v69) {
+                v80 = v69;
+                d80 = d69;
+            }
+            else {
+                v80 = v81;
+                d80 = d81;
+            }
+        }
+        else {
+            if (v70 > v69) {
+                v80 = v69;
+                d80 = d69;
+            }
+            else {
+                v80 = v70;
+                d80 = d70;
+            }
+        }
+        if (m80 == null || !m80.isPassable()) v80 += 1000000;
+        else v80 += 10 + switch(m80.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v72 > v73) {
+            if (v73 > v83) {
+                v84 = v83;
+                d84 = d83;
+            }
+            else {
+                v84 = v73;
+                d84 = d73;
+            }
+        }
+        else {
+            if (v72 > v83) {
+                v84 = v83;
+                d84 = d83;
+            }
+            else {
+                v84 = v72;
+                d84 = d72;
+            }
+        }
+        if (m84 == null || !m84.isPassable()) v84 += 1000000;
+        else v84 += 10 + switch(m84.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v38 > v37) {
+            if (v37 > v39) {
+                v27 = v39;
+                d27 = d39;
+            }
+            else {
+                v27 = v37;
+                d27 = d37;
+            }
+        }
+        else {
             if (v38 > v39) {
-                if (v39 > v40) {
-                    if (v40 > v27) {
-                        v28 = v27 + p28;
-                        d28 = d27;
-                    }
-                    else {
-                        v28 = v40 + p28;
-                        d28 = d40;
-                    }
-                }
-                else {
-                    if (v39 > v27) {
-                        v28 = v27 + p28;
-                        d28 = d27;
-                    }
-                    else {
-                        v28 = v39 + p28;
-                        d28 = d39;
-                    }
-                }
+                v27 = v39;
+                d27 = d39;
             }
             else {
-                if (v38 > v40) {
-                    if (v40 > v27) {
-                        v28 = v27 + p28;
-                        d28 = d27;
-                    }
-                    else {
-                        v28 = v40 + p28;
-                        d28 = d40;
-                    }
-                }
-                else {
-                    if (v38 > v27) {
-                        v28 = v27 + p28;
-                        d28 = d27;
-                    }
-                    else {
-                        v28 = v38 + p28;
-                        d28 = d38;
-                    }
-                }
+                v27 = v38;
+                d27 = d38;
             }
         }
-        if (m46 != null && m46.isPassable()){
-            p46 = 10 + switch(m46.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v58 > v47) {
-                if (v47 > v36) {
-                    if (v36 > v57) {
-                        v46 = v57 + p46;
-                        d46 = d57;
-                    }
-                    else {
-                        v46 = v36 + p46;
-                        d46 = d36;
-                    }
-                }
-                else {
-                    if (v47 > v57) {
-                        v46 = v57 + p46;
-                        d46 = d57;
-                    }
-                    else {
-                        v46 = v47 + p46;
-                        d46 = d47;
-                    }
-                }
+        if (m27 == null || !m27.isPassable()) v27 += 1000000;
+        else v27 += 10 + switch(m27.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v58 > v47) {
+            if (v47 > v69) {
+                v57 = v69;
+                d57 = d69;
             }
             else {
-                if (v58 > v36) {
-                    if (v36 > v57) {
-                        v46 = v57 + p46;
-                        d46 = d57;
-                    }
-                    else {
-                        v46 = v36 + p46;
-                        d46 = d36;
-                    }
-                }
-                else {
-                    if (v58 > v57) {
-                        v46 = v57 + p46;
-                        d46 = d57;
-                    }
-                    else {
-                        v46 = v58 + p46;
-                        d46 = d58;
-                    }
-                }
+                v57 = v47;
+                d57 = d47;
             }
         }
-        if (m52 != null && m52.isPassable()){
-            p52 = 10 + switch(m52.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v62 > v51) {
-                if (v51 > v40) {
-                    if (v40 > v63) {
-                        v52 = v63 + p52;
-                        d52 = d63;
-                    }
-                    else {
-                        v52 = v40 + p52;
-                        d52 = d40;
-                    }
-                }
-                else {
-                    if (v51 > v63) {
-                        v52 = v63 + p52;
-                        d52 = d63;
-                    }
-                    else {
-                        v52 = v51 + p52;
-                        d52 = d51;
-                    }
-                }
-            }
-            else {
-                if (v62 > v40) {
-                    if (v40 > v63) {
-                        v52 = v63 + p52;
-                        d52 = d63;
-                    }
-                    else {
-                        v52 = v40 + p52;
-                        d52 = d40;
-                    }
-                }
-                else {
-                    if (v62 > v63) {
-                        v52 = v63 + p52;
-                        d52 = d63;
-                    }
-                    else {
-                        v52 = v62 + p52;
-                        d52 = d62;
-                    }
-                }
-            }
-        }
-        if (m68 != null && m68.isPassable()){
-            p68 = 10 + switch(m68.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
             if (v58 > v69) {
-                if (v69 > v80) {
-                    if (v80 > v57) {
-                        v68 = v57 + p68;
-                        d68 = d57;
-                    }
-                    else {
-                        v68 = v80 + p68;
-                        d68 = d80;
-                    }
-                }
-                else {
-                    if (v69 > v57) {
-                        v68 = v57 + p68;
-                        d68 = d57;
-                    }
-                    else {
-                        v68 = v69 + p68;
-                        d68 = d69;
-                    }
-                }
+                v57 = v69;
+                d57 = d69;
             }
             else {
-                if (v58 > v80) {
-                    if (v80 > v57) {
-                        v68 = v57 + p68;
-                        d68 = d57;
-                    }
-                    else {
-                        v68 = v80 + p68;
-                        d68 = d80;
-                    }
-                }
-                else {
-                    if (v58 > v57) {
-                        v68 = v57 + p68;
-                        d68 = d57;
-                    }
-                    else {
-                        v68 = v58 + p68;
-                        d68 = d58;
-                    }
-                }
+                v57 = v58;
+                d57 = d58;
             }
         }
-        if (m74 != null && m74.isPassable()){
-            p74 = 10 + switch(m74.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        if (m57 == null || !m57.isPassable()) v57 += 1000000;
+        else v57 += 10 + switch(m57.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v62 > v51) {
+            if (v51 > v73) {
+                v63 = v73;
+                d63 = d73;
+            }
+            else {
+                v63 = v51;
+                d63 = d51;
+            }
+        }
+        else {
             if (v62 > v73) {
-                if (v73 > v84) {
-                    if (v84 > v63) {
-                        v74 = v63 + p74;
-                        d74 = d63;
-                    }
-                    else {
-                        v74 = v84 + p74;
-                        d74 = d84;
-                    }
-                }
-                else {
-                    if (v73 > v63) {
-                        v74 = v63 + p74;
-                        d74 = d63;
-                    }
-                    else {
-                        v74 = v73 + p74;
-                        d74 = d73;
-                    }
-                }
+                v63 = v73;
+                d63 = d73;
             }
             else {
-                if (v62 > v84) {
-                    if (v84 > v63) {
-                        v74 = v63 + p74;
-                        d74 = d63;
-                    }
-                    else {
-                        v74 = v84 + p74;
-                        d74 = d84;
-                    }
-                }
-                else {
-                    if (v62 > v63) {
-                        v74 = v63 + p74;
-                        d74 = d63;
-                    }
-                    else {
-                        v74 = v62 + p74;
-                        d74 = d62;
-                    }
-                }
+                v63 = v62;
+                d63 = d62;
             }
         }
-        if (m92 != null && m92.isPassable()){
-            p92 = 10 + switch(m92.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        if (m63 == null || !m63.isPassable()) v63 += 1000000;
+        else v63 += 10 + switch(m63.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v82 > v83) {
+            if (v83 > v81) {
+                v93 = v81;
+                d93 = d81;
+            }
+            else {
+                v93 = v83;
+                d93 = d83;
+            }
+        }
+        else {
             if (v82 > v81) {
-                if (v81 > v80) {
-                    if (v80 > v93) {
-                        v92 = v93 + p92;
-                        d92 = d93;
-                    }
-                    else {
-                        v92 = v80 + p92;
-                        d92 = d80;
-                    }
-                }
-                else {
-                    if (v81 > v93) {
-                        v92 = v93 + p92;
-                        d92 = d93;
-                    }
-                    else {
-                        v92 = v81 + p92;
-                        d92 = d81;
-                    }
-                }
+                v93 = v81;
+                d93 = d81;
             }
             else {
-                if (v82 > v80) {
-                    if (v80 > v93) {
-                        v92 = v93 + p92;
-                        d92 = d93;
-                    }
-                    else {
-                        v92 = v80 + p92;
-                        d92 = d80;
-                    }
-                }
-                else {
-                    if (v82 > v93) {
-                        v92 = v93 + p92;
-                        d92 = d93;
-                    }
-                    else {
-                        v92 = v82 + p92;
-                        d92 = d82;
-                    }
-                }
+                v93 = v82;
+                d93 = d82;
             }
         }
-        if (m94 != null && m94.isPassable()){
-            p94 = 10 + switch(m94.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v82 > v83) {
-                if (v83 > v84) {
-                    if (v84 > v93) {
-                        v94 = v93 + p94;
-                        d94 = d93;
-                    }
-                    else {
-                        v94 = v84 + p94;
-                        d94 = d84;
-                    }
-                }
-                else {
-                    if (v83 > v93) {
-                        v94 = v93 + p94;
-                        d94 = d93;
-                    }
-                    else {
-                        v94 = v83 + p94;
-                        d94 = d83;
-                    }
-                }
-            }
-            else {
-                if (v82 > v84) {
-                    if (v84 > v93) {
-                        v94 = v93 + p94;
-                        d94 = d93;
-                    }
-                    else {
-                        v94 = v84 + p94;
-                        d94 = d84;
-                    }
-                }
-                else {
-                    if (v82 > v93) {
-                        v94 = v93 + p94;
-                        d94 = d93;
-                    }
-                    else {
-                        v94 = v82 + p94;
-                        d94 = d82;
-                    }
-                }
-            }
-        }
-        if (m25 != null && m25.isPassable()){
-            p25 = 10 + switch(m25.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        if (m93 == null || !m93.isPassable()) v93 += 1000000;
+        else v93 += 10 + switch(m93.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v38 > v37) {
             if (v37 > v36) {
-                if (v36 > v26) {
-                    v25 = v26 + p25;
-                    d25 = d26;
+                if (v36 > v27) {
+                    v26 = v27;
+                    d26 = d27;
                 }
                 else {
-                    v25 = v36 + p25;
-                    d25 = d36;
+                    v26 = v36;
+                    d26 = d36;
                 }
             }
             else {
-                if (v37 > v26) {
-                    v25 = v26 + p25;
-                    d25 = d26;
+                if (v37 > v27) {
+                    v26 = v27;
+                    d26 = d27;
                 }
                 else {
-                    v25 = v37 + p25;
-                    d25 = d37;
+                    v26 = v37;
+                    d26 = d37;
                 }
             }
         }
-        if (m29 != null && m29.isPassable()){
-            p29 = 10 + switch(m29.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v38 > v36) {
+                if (v36 > v27) {
+                    v26 = v27;
+                    d26 = d27;
+                }
+                else {
+                    v26 = v36;
+                    d26 = d36;
+                }
+            }
+            else {
+                if (v38 > v27) {
+                    v26 = v27;
+                    d26 = d27;
+                }
+                else {
+                    v26 = v38;
+                    d26 = d38;
+                }
+            }
+        }
+        if (m26 == null || !m26.isPassable()) v26 += 1000000;
+        else v26 += 10 + switch(m26.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v38 > v39) {
             if (v39 > v40) {
-                if (v40 > v28) {
-                    v29 = v28 + p29;
-                    d29 = d28;
+                if (v40 > v27) {
+                    v28 = v27;
+                    d28 = d27;
                 }
                 else {
-                    v29 = v40 + p29;
-                    d29 = d40;
+                    v28 = v40;
+                    d28 = d40;
                 }
             }
             else {
-                if (v39 > v28) {
-                    v29 = v28 + p29;
-                    d29 = d28;
+                if (v39 > v27) {
+                    v28 = v27;
+                    d28 = d27;
                 }
                 else {
-                    v29 = v39 + p29;
-                    d29 = d39;
+                    v28 = v39;
+                    d28 = d39;
                 }
             }
         }
-        if (m35 != null && m35.isPassable()){
-            p35 = 10 + switch(m35.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v38 > v40) {
+                if (v40 > v27) {
+                    v28 = v27;
+                    d28 = d27;
+                }
+                else {
+                    v28 = v40;
+                    d28 = d40;
+                }
+            }
+            else {
+                if (v38 > v27) {
+                    v28 = v27;
+                    d28 = d27;
+                }
+                else {
+                    v28 = v38;
+                    d28 = d38;
+                }
+            }
+        }
+        if (m28 == null || !m28.isPassable()) v28 += 1000000;
+        else v28 += 10 + switch(m28.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v58 > v47) {
             if (v47 > v36) {
-                if (v36 > v46) {
-                    if (v46 > v25) {
-                        v35 = v25 + p35;
-                        d35 = d25;
-                    }
-                    else {
-                        v35 = v46 + p35;
-                        d35 = d46;
-                    }
+                if (v36 > v57) {
+                    v46 = v57;
+                    d46 = d57;
                 }
                 else {
-                    if (v36 > v25) {
-                        v35 = v25 + p35;
-                        d35 = d25;
-                    }
-                    else {
-                        v35 = v36 + p35;
-                        d35 = d36;
-                    }
+                    v46 = v36;
+                    d46 = d36;
                 }
             }
             else {
-                if (v47 > v46) {
-                    if (v46 > v25) {
-                        v35 = v25 + p35;
-                        d35 = d25;
-                    }
-                    else {
-                        v35 = v46 + p35;
-                        d35 = d46;
-                    }
+                if (v47 > v57) {
+                    v46 = v57;
+                    d46 = d57;
                 }
                 else {
-                    if (v47 > v25) {
-                        v35 = v25 + p35;
-                        d35 = d25;
-                    }
-                    else {
-                        v35 = v47 + p35;
-                        d35 = d47;
-                    }
+                    v46 = v47;
+                    d46 = d47;
                 }
             }
         }
-        if (m41 != null && m41.isPassable()){
-            p41 = 10 + switch(m41.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v58 > v36) {
+                if (v36 > v57) {
+                    v46 = v57;
+                    d46 = d57;
+                }
+                else {
+                    v46 = v36;
+                    d46 = d36;
+                }
+            }
+            else {
+                if (v58 > v57) {
+                    v46 = v57;
+                    d46 = d57;
+                }
+                else {
+                    v46 = v58;
+                    d46 = d58;
+                }
+            }
+        }
+        if (m46 == null || !m46.isPassable()) v46 += 1000000;
+        else v46 += 10 + switch(m46.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v62 > v51) {
             if (v51 > v40) {
-                if (v40 > v52) {
-                    if (v52 > v29) {
-                        v41 = v29 + p41;
-                        d41 = d29;
-                    }
-                    else {
-                        v41 = v52 + p41;
-                        d41 = d52;
-                    }
+                if (v40 > v63) {
+                    v52 = v63;
+                    d52 = d63;
                 }
                 else {
-                    if (v40 > v29) {
-                        v41 = v29 + p41;
-                        d41 = d29;
-                    }
-                    else {
-                        v41 = v40 + p41;
-                        d41 = d40;
-                    }
+                    v52 = v40;
+                    d52 = d40;
                 }
             }
             else {
-                if (v51 > v52) {
-                    if (v52 > v29) {
-                        v41 = v29 + p41;
-                        d41 = d29;
-                    }
-                    else {
-                        v41 = v52 + p41;
-                        d41 = d52;
-                    }
+                if (v51 > v63) {
+                    v52 = v63;
+                    d52 = d63;
                 }
                 else {
-                    if (v51 > v29) {
-                        v41 = v29 + p41;
-                        d41 = d29;
-                    }
-                    else {
-                        v41 = v51 + p41;
-                        d41 = d51;
-                    }
+                    v52 = v51;
+                    d52 = d51;
                 }
             }
         }
-        if (m79 != null && m79.isPassable()){
-            p79 = 10 + switch(m79.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v62 > v40) {
+                if (v40 > v63) {
+                    v52 = v63;
+                    d52 = d63;
+                }
+                else {
+                    v52 = v40;
+                    d52 = d40;
+                }
+            }
+            else {
+                if (v62 > v63) {
+                    v52 = v63;
+                    d52 = d63;
+                }
+                else {
+                    v52 = v62;
+                    d52 = d62;
+                }
+            }
+        }
+        if (m52 == null || !m52.isPassable()) v52 += 1000000;
+        else v52 += 10 + switch(m52.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v58 > v69) {
             if (v69 > v80) {
-                if (v80 > v68) {
-                    v79 = v68 + p79;
-                    d79 = d68;
+                if (v80 > v57) {
+                    v68 = v57;
+                    d68 = d57;
                 }
                 else {
-                    v79 = v80 + p79;
-                    d79 = d80;
+                    v68 = v80;
+                    d68 = d80;
                 }
             }
             else {
-                if (v69 > v68) {
-                    v79 = v68 + p79;
-                    d79 = d68;
+                if (v69 > v57) {
+                    v68 = v57;
+                    d68 = d57;
                 }
                 else {
-                    v79 = v69 + p79;
-                    d79 = d69;
+                    v68 = v69;
+                    d68 = d69;
                 }
             }
         }
-        if (m85 != null && m85.isPassable()){
-            p85 = 10 + switch(m85.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v58 > v80) {
+                if (v80 > v57) {
+                    v68 = v57;
+                    d68 = d57;
+                }
+                else {
+                    v68 = v80;
+                    d68 = d80;
+                }
+            }
+            else {
+                if (v58 > v57) {
+                    v68 = v57;
+                    d68 = d57;
+                }
+                else {
+                    v68 = v58;
+                    d68 = d58;
+                }
+            }
+        }
+        if (m68 == null || !m68.isPassable()) v68 += 1000000;
+        else v68 += 10 + switch(m68.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v62 > v73) {
             if (v73 > v84) {
-                if (v84 > v74) {
-                    v85 = v74 + p85;
-                    d85 = d74;
+                if (v84 > v63) {
+                    v74 = v63;
+                    d74 = d63;
                 }
                 else {
-                    v85 = v84 + p85;
-                    d85 = d84;
+                    v74 = v84;
+                    d74 = d84;
                 }
             }
             else {
-                if (v73 > v74) {
-                    v85 = v74 + p85;
-                    d85 = d74;
+                if (v73 > v63) {
+                    v74 = v63;
+                    d74 = d63;
                 }
                 else {
-                    v85 = v73 + p85;
-                    d85 = d73;
+                    v74 = v73;
+                    d74 = d73;
                 }
             }
         }
-        if (m91 != null && m91.isPassable()){
-            p91 = 10 + switch(m91.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v62 > v84) {
+                if (v84 > v63) {
+                    v74 = v63;
+                    d74 = d63;
+                }
+                else {
+                    v74 = v84;
+                    d74 = d84;
+                }
+            }
+            else {
+                if (v62 > v63) {
+                    v74 = v63;
+                    d74 = d63;
+                }
+                else {
+                    v74 = v62;
+                    d74 = d62;
+                }
+            }
+        }
+        if (m74 == null || !m74.isPassable()) v74 += 1000000;
+        else v74 += 10 + switch(m74.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v82 > v81) {
             if (v81 > v80) {
-                if (v80 > v92) {
-                    if (v92 > v79) {
-                        v91 = v79 + p91;
-                        d91 = d79;
-                    }
-                    else {
-                        v91 = v92 + p91;
-                        d91 = d92;
-                    }
+                if (v80 > v93) {
+                    v92 = v93;
+                    d92 = d93;
                 }
                 else {
-                    if (v80 > v79) {
-                        v91 = v79 + p91;
-                        d91 = d79;
-                    }
-                    else {
-                        v91 = v80 + p91;
-                        d91 = d80;
-                    }
+                    v92 = v80;
+                    d92 = d80;
                 }
             }
             else {
-                if (v81 > v92) {
-                    if (v92 > v79) {
-                        v91 = v79 + p91;
-                        d91 = d79;
-                    }
-                    else {
-                        v91 = v92 + p91;
-                        d91 = d92;
-                    }
+                if (v81 > v93) {
+                    v92 = v93;
+                    d92 = d93;
                 }
                 else {
-                    if (v81 > v79) {
-                        v91 = v79 + p91;
-                        d91 = d79;
-                    }
-                    else {
-                        v91 = v81 + p91;
-                        d91 = d81;
-                    }
+                    v92 = v81;
+                    d92 = d81;
                 }
             }
         }
-        if (m95 != null && m95.isPassable()){
-            p95 = 10 + switch(m95.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v82 > v80) {
+                if (v80 > v93) {
+                    v92 = v93;
+                    d92 = d93;
+                }
+                else {
+                    v92 = v80;
+                    d92 = d80;
+                }
+            }
+            else {
+                if (v82 > v93) {
+                    v92 = v93;
+                    d92 = d93;
+                }
+                else {
+                    v92 = v82;
+                    d92 = d82;
+                }
+            }
+        }
+        if (m92 == null || !m92.isPassable()) v92 += 1000000;
+        else v92 += 10 + switch(m92.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v82 > v83) {
             if (v83 > v84) {
-                if (v84 > v94) {
-                    if (v94 > v85) {
-                        v95 = v85 + p95;
-                        d95 = d85;
-                    }
-                    else {
-                        v95 = v94 + p95;
-                        d95 = d94;
-                    }
+                if (v84 > v93) {
+                    v94 = v93;
+                    d94 = d93;
                 }
                 else {
-                    if (v84 > v85) {
-                        v95 = v85 + p95;
-                        d95 = d85;
-                    }
-                    else {
-                        v95 = v84 + p95;
-                        d95 = d84;
-                    }
+                    v94 = v84;
+                    d94 = d84;
                 }
             }
             else {
-                if (v83 > v94) {
-                    if (v94 > v85) {
-                        v95 = v85 + p95;
-                        d95 = d85;
-                    }
-                    else {
-                        v95 = v94 + p95;
-                        d95 = d94;
-                    }
+                if (v83 > v93) {
+                    v94 = v93;
+                    d94 = d93;
                 }
                 else {
-                    if (v83 > v85) {
-                        v95 = v85 + p95;
-                        d95 = d85;
-                    }
-                    else {
-                        v95 = v83 + p95;
-                        d95 = d83;
-                    }
+                    v94 = v83;
+                    d94 = d83;
                 }
             }
         }
-        if (m16 != null && m16.isPassable()){
-            p16 = 10 + switch(m16.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v27 > v26) {
-                if (v26 > v28) {
-                    v16 = v28 + p16;
-                    d16 = d28;
+        else {
+            if (v82 > v84) {
+                if (v84 > v93) {
+                    v94 = v93;
+                    d94 = d93;
                 }
                 else {
-                    v16 = v26 + p16;
-                    d16 = d26;
+                    v94 = v84;
+                    d94 = d84;
                 }
             }
             else {
-                if (v27 > v28) {
-                    v16 = v28 + p16;
-                    d16 = d28;
+                if (v82 > v93) {
+                    v94 = v93;
+                    d94 = d93;
                 }
                 else {
-                    v16 = v27 + p16;
-                    d16 = d27;
+                    v94 = v82;
+                    d94 = d82;
                 }
             }
         }
-        if (m56 != null && m56.isPassable()){
-            p56 = 10 + switch(m56.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v57 > v46) {
-                if (v46 > v68) {
-                    v56 = v68 + p56;
-                    d56 = d68;
+        if (m94 == null || !m94.isPassable()) v94 += 1000000;
+        else v94 += 10 + switch(m94.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v37 > v36) {
+            if (v36 > v26) {
+                v25 = v26;
+                d25 = d26;
+            }
+            else {
+                v25 = v36;
+                d25 = d36;
+            }
+        }
+        else {
+            if (v37 > v26) {
+                v25 = v26;
+                d25 = d26;
+            }
+            else {
+                v25 = v37;
+                d25 = d37;
+            }
+        }
+        if (m25 == null || !m25.isPassable()) v25 += 1000000;
+        else v25 += 10 + switch(m25.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v39 > v40) {
+            if (v40 > v28) {
+                v29 = v28;
+                d29 = d28;
+            }
+            else {
+                v29 = v40;
+                d29 = d40;
+            }
+        }
+        else {
+            if (v39 > v28) {
+                v29 = v28;
+                d29 = d28;
+            }
+            else {
+                v29 = v39;
+                d29 = d39;
+            }
+        }
+        if (m29 == null || !m29.isPassable()) v29 += 1000000;
+        else v29 += 10 + switch(m29.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v47 > v36) {
+            if (v36 > v46) {
+                if (v46 > v25) {
+                    v35 = v25;
+                    d35 = d25;
                 }
                 else {
-                    v56 = v46 + p56;
-                    d56 = d46;
+                    v35 = v46;
+                    d35 = d46;
                 }
             }
             else {
-                if (v57 > v68) {
-                    v56 = v68 + p56;
-                    d56 = d68;
+                if (v36 > v25) {
+                    v35 = v25;
+                    d35 = d25;
                 }
                 else {
-                    v56 = v57 + p56;
-                    d56 = d57;
+                    v35 = v36;
+                    d35 = d36;
                 }
             }
         }
-        if (m64 != null && m64.isPassable()){
-            p64 = 10 + switch(m64.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v63 > v52) {
-                if (v52 > v74) {
-                    v64 = v74 + p64;
-                    d64 = d74;
+        else {
+            if (v47 > v46) {
+                if (v46 > v25) {
+                    v35 = v25;
+                    d35 = d25;
                 }
                 else {
-                    v64 = v52 + p64;
-                    d64 = d52;
+                    v35 = v46;
+                    d35 = d46;
                 }
             }
             else {
-                if (v63 > v74) {
-                    v64 = v74 + p64;
-                    d64 = d74;
+                if (v47 > v25) {
+                    v35 = v25;
+                    d35 = d25;
                 }
                 else {
-                    v64 = v63 + p64;
-                    d64 = d63;
+                    v35 = v47;
+                    d35 = d47;
                 }
             }
         }
-        if (m104 != null && m104.isPassable()){
-            p104 = 10 + switch(m104.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v93 > v94) {
-                if (v94 > v92) {
-                    v104 = v92 + p104;
-                    d104 = d92;
+        if (m35 == null || !m35.isPassable()) v35 += 1000000;
+        else v35 += 10 + switch(m35.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v51 > v40) {
+            if (v40 > v52) {
+                if (v52 > v29) {
+                    v41 = v29;
+                    d41 = d29;
                 }
                 else {
-                    v104 = v94 + p104;
-                    d104 = d94;
+                    v41 = v52;
+                    d41 = d52;
                 }
             }
             else {
-                if (v93 > v92) {
-                    v104 = v92 + p104;
-                    d104 = d92;
+                if (v40 > v29) {
+                    v41 = v29;
+                    d41 = d29;
                 }
                 else {
-                    v104 = v93 + p104;
-                    d104 = d93;
+                    v41 = v40;
+                    d41 = d40;
                 }
             }
         }
-        if (m15 != null && m15.isPassable()){
-            p15 = 10 + switch(m15.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v27 > v26) {
-                if (v26 > v25) {
-                    if (v25 > v16) {
-                        v15 = v16 + p15;
-                        d15 = d16;
-                    }
-                    else {
-                        v15 = v25 + p15;
-                        d15 = d25;
-                    }
+        else {
+            if (v51 > v52) {
+                if (v52 > v29) {
+                    v41 = v29;
+                    d41 = d29;
                 }
                 else {
-                    if (v26 > v16) {
-                        v15 = v16 + p15;
-                        d15 = d16;
-                    }
-                    else {
-                        v15 = v26 + p15;
-                        d15 = d26;
-                    }
+                    v41 = v52;
+                    d41 = d52;
                 }
             }
             else {
-                if (v27 > v25) {
-                    if (v25 > v16) {
-                        v15 = v16 + p15;
-                        d15 = d16;
-                    }
-                    else {
-                        v15 = v25 + p15;
-                        d15 = d25;
-                    }
+                if (v51 > v29) {
+                    v41 = v29;
+                    d41 = d29;
                 }
                 else {
-                    if (v27 > v16) {
-                        v15 = v16 + p15;
-                        d15 = d16;
-                    }
-                    else {
-                        v15 = v27 + p15;
-                        d15 = d27;
-                    }
+                    v41 = v51;
+                    d41 = d51;
                 }
             }
         }
-        if (m17 != null && m17.isPassable()){
-            p17 = 10 + switch(m17.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v27 > v28) {
-                if (v28 > v29) {
-                    if (v29 > v16) {
-                        v17 = v16 + p17;
-                        d17 = d16;
-                    }
-                    else {
-                        v17 = v29 + p17;
-                        d17 = d29;
-                    }
-                }
-                else {
-                    if (v28 > v16) {
-                        v17 = v16 + p17;
-                        d17 = d16;
-                    }
-                    else {
-                        v17 = v28 + p17;
-                        d17 = d28;
-                    }
-                }
+        if (m41 == null || !m41.isPassable()) v41 += 1000000;
+        else v41 += 10 + switch(m41.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v69 > v80) {
+            if (v80 > v68) {
+                v79 = v68;
+                d79 = d68;
             }
             else {
-                if (v27 > v29) {
-                    if (v29 > v16) {
-                        v17 = v16 + p17;
-                        d17 = d16;
-                    }
-                    else {
-                        v17 = v29 + p17;
-                        d17 = d29;
-                    }
-                }
-                else {
-                    if (v27 > v16) {
-                        v17 = v16 + p17;
-                        d17 = d16;
-                    }
-                    else {
-                        v17 = v27 + p17;
-                        d17 = d27;
-                    }
-                }
+                v79 = v80;
+                d79 = d80;
             }
         }
-        if (m45 != null && m45.isPassable()){
-            p45 = 10 + switch(m45.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v57 > v46) {
-                if (v46 > v35) {
-                    if (v35 > v56) {
-                        v45 = v56 + p45;
-                        d45 = d56;
-                    }
-                    else {
-                        v45 = v35 + p45;
-                        d45 = d35;
-                    }
-                }
-                else {
-                    if (v46 > v56) {
-                        v45 = v56 + p45;
-                        d45 = d56;
-                    }
-                    else {
-                        v45 = v46 + p45;
-                        d45 = d46;
-                    }
-                }
+        else {
+            if (v69 > v68) {
+                v79 = v68;
+                d79 = d68;
             }
             else {
-                if (v57 > v35) {
-                    if (v35 > v56) {
-                        v45 = v56 + p45;
-                        d45 = d56;
-                    }
-                    else {
-                        v45 = v35 + p45;
-                        d45 = d35;
-                    }
-                }
-                else {
-                    if (v57 > v56) {
-                        v45 = v56 + p45;
-                        d45 = d56;
-                    }
-                    else {
-                        v45 = v57 + p45;
-                        d45 = d57;
-                    }
-                }
+                v79 = v69;
+                d79 = d69;
             }
         }
-        if (m53 != null && m53.isPassable()){
-            p53 = 10 + switch(m53.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v63 > v52) {
-                if (v52 > v41) {
-                    if (v41 > v64) {
-                        v53 = v64 + p53;
-                        d53 = d64;
-                    }
-                    else {
-                        v53 = v41 + p53;
-                        d53 = d41;
-                    }
-                }
-                else {
-                    if (v52 > v64) {
-                        v53 = v64 + p53;
-                        d53 = d64;
-                    }
-                    else {
-                        v53 = v52 + p53;
-                        d53 = d52;
-                    }
-                }
+        if (m79 == null || !m79.isPassable()) v79 += 1000000;
+        else v79 += 10 + switch(m79.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v73 > v84) {
+            if (v84 > v74) {
+                v85 = v74;
+                d85 = d74;
             }
             else {
-                if (v63 > v41) {
-                    if (v41 > v64) {
-                        v53 = v64 + p53;
-                        d53 = d64;
-                    }
-                    else {
-                        v53 = v41 + p53;
-                        d53 = d41;
-                    }
-                }
-                else {
-                    if (v63 > v64) {
-                        v53 = v64 + p53;
-                        d53 = d64;
-                    }
-                    else {
-                        v53 = v63 + p53;
-                        d53 = d63;
-                    }
-                }
+                v85 = v84;
+                d85 = d84;
             }
         }
-        if (m67 != null && m67.isPassable()){
-            p67 = 10 + switch(m67.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v57 > v68) {
-                if (v68 > v79) {
-                    if (v79 > v56) {
-                        v67 = v56 + p67;
-                        d67 = d56;
-                    }
-                    else {
-                        v67 = v79 + p67;
-                        d67 = d79;
-                    }
-                }
-                else {
-                    if (v68 > v56) {
-                        v67 = v56 + p67;
-                        d67 = d56;
-                    }
-                    else {
-                        v67 = v68 + p67;
-                        d67 = d68;
-                    }
-                }
+        else {
+            if (v73 > v74) {
+                v85 = v74;
+                d85 = d74;
             }
             else {
-                if (v57 > v79) {
-                    if (v79 > v56) {
-                        v67 = v56 + p67;
-                        d67 = d56;
-                    }
-                    else {
-                        v67 = v79 + p67;
-                        d67 = d79;
-                    }
-                }
-                else {
-                    if (v57 > v56) {
-                        v67 = v56 + p67;
-                        d67 = d56;
-                    }
-                    else {
-                        v67 = v57 + p67;
-                        d67 = d57;
-                    }
-                }
+                v85 = v73;
+                d85 = d73;
             }
         }
-        if (m75 != null && m75.isPassable()){
-            p75 = 10 + switch(m75.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v63 > v74) {
-                if (v74 > v85) {
-                    if (v85 > v64) {
-                        v75 = v64 + p75;
-                        d75 = d64;
-                    }
-                    else {
-                        v75 = v85 + p75;
-                        d75 = d85;
-                    }
+        if (m85 == null || !m85.isPassable()) v85 += 1000000;
+        else v85 += 10 + switch(m85.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v81 > v80) {
+            if (v80 > v92) {
+                if (v92 > v79) {
+                    v91 = v79;
+                    d91 = d79;
                 }
                 else {
-                    if (v74 > v64) {
-                        v75 = v64 + p75;
-                        d75 = d64;
-                    }
-                    else {
-                        v75 = v74 + p75;
-                        d75 = d74;
-                    }
-                }
-            }
-            else {
-                if (v63 > v85) {
-                    if (v85 > v64) {
-                        v75 = v64 + p75;
-                        d75 = d64;
-                    }
-                    else {
-                        v75 = v85 + p75;
-                        d75 = d85;
-                    }
-                }
-                else {
-                    if (v63 > v64) {
-                        v75 = v64 + p75;
-                        d75 = d64;
-                    }
-                    else {
-                        v75 = v63 + p75;
-                        d75 = d63;
-                    }
-                }
-            }
-        }
-        if (m103 != null && m103.isPassable()){
-            p103 = 10 + switch(m103.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v93 > v92) {
-                if (v92 > v91) {
-                    if (v91 > v104) {
-                        v103 = v104 + p103;
-                        d103 = d104;
-                    }
-                    else {
-                        v103 = v91 + p103;
-                        d103 = d91;
-                    }
-                }
-                else {
-                    if (v92 > v104) {
-                        v103 = v104 + p103;
-                        d103 = d104;
-                    }
-                    else {
-                        v103 = v92 + p103;
-                        d103 = d92;
-                    }
-                }
-            }
-            else {
-                if (v93 > v91) {
-                    if (v91 > v104) {
-                        v103 = v104 + p103;
-                        d103 = d104;
-                    }
-                    else {
-                        v103 = v91 + p103;
-                        d103 = d91;
-                    }
-                }
-                else {
-                    if (v93 > v104) {
-                        v103 = v104 + p103;
-                        d103 = d104;
-                    }
-                    else {
-                        v103 = v93 + p103;
-                        d103 = d93;
-                    }
-                }
-            }
-        }
-        if (m105 != null && m105.isPassable()){
-            p105 = 10 + switch(m105.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v93 > v94) {
-                if (v94 > v95) {
-                    if (v95 > v104) {
-                        v105 = v104 + p105;
-                        d105 = d104;
-                    }
-                    else {
-                        v105 = v95 + p105;
-                        d105 = d95;
-                    }
-                }
-                else {
-                    if (v94 > v104) {
-                        v105 = v104 + p105;
-                        d105 = d104;
-                    }
-                    else {
-                        v105 = v94 + p105;
-                        d105 = d94;
-                    }
-                }
-            }
-            else {
-                if (v93 > v95) {
-                    if (v95 > v104) {
-                        v105 = v104 + p105;
-                        d105 = d104;
-                    }
-                    else {
-                        v105 = v95 + p105;
-                        d105 = d95;
-                    }
-                }
-                else {
-                    if (v93 > v104) {
-                        v105 = v104 + p105;
-                        d105 = d104;
-                    }
-                    else {
-                        v105 = v93 + p105;
-                        d105 = d93;
-                    }
-                }
-            }
-        }
-        if (m24 != null && m24.isPassable()){
-            p24 = 10 + switch(m24.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v36 > v25) {
-                if (v25 > v35) {
-                    v24 = v35 + p24;
-                    d24 = d35;
-                }
-                else {
-                    v24 = v25 + p24;
-                    d24 = d25;
-                }
-            }
-            else {
-                if (v36 > v35) {
-                    v24 = v35 + p24;
-                    d24 = d35;
-                }
-                else {
-                    v24 = v36 + p24;
-                    d24 = d36;
-                }
-            }
-        }
-        if (m30 != null && m30.isPassable()){
-            p30 = 10 + switch(m30.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v40 > v29) {
-                if (v29 > v41) {
-                    v30 = v41 + p30;
-                    d30 = d41;
-                }
-                else {
-                    v30 = v29 + p30;
-                    d30 = d29;
-                }
-            }
-            else {
-                if (v40 > v41) {
-                    v30 = v41 + p30;
-                    d30 = d41;
-                }
-                else {
-                    v30 = v40 + p30;
-                    d30 = d40;
-                }
-            }
-        }
-        if (m90 != null && m90.isPassable()){
-            p90 = 10 + switch(m90.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v80 > v91) {
-                if (v91 > v79) {
-                    v90 = v79 + p90;
-                    d90 = d79;
-                }
-                else {
-                    v90 = v91 + p90;
-                    d90 = d91;
+                    v91 = v92;
+                    d91 = d92;
                 }
             }
             else {
                 if (v80 > v79) {
-                    v90 = v79 + p90;
-                    d90 = d79;
+                    v91 = v79;
+                    d91 = d79;
                 }
                 else {
-                    v90 = v80 + p90;
-                    d90 = d80;
+                    v91 = v80;
+                    d91 = d80;
                 }
             }
         }
-        if (m96 != null && m96.isPassable()){
-            p96 = 10 + switch(m96.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v84 > v85) {
-                if (v85 > v95) {
-                    v96 = v95 + p96;
-                    d96 = d95;
+        else {
+            if (v81 > v92) {
+                if (v92 > v79) {
+                    v91 = v79;
+                    d91 = d79;
                 }
                 else {
-                    v96 = v85 + p96;
-                    d96 = d85;
+                    v91 = v92;
+                    d91 = d92;
                 }
             }
             else {
-                if (v84 > v95) {
-                    v96 = v95 + p96;
-                    d96 = d95;
+                if (v81 > v79) {
+                    v91 = v79;
+                    d91 = d79;
                 }
                 else {
-                    v96 = v84 + p96;
-                    d96 = d84;
+                    v91 = v81;
+                    d91 = d81;
                 }
             }
         }
-        if (m14 != null && m14.isPassable()){
-            p14 = 10 + switch(m14.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        if (m91 == null || !m91.isPassable()) v91 += 1000000;
+        else v91 += 10 + switch(m91.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v83 > v84) {
+            if (v84 > v94) {
+                if (v94 > v85) {
+                    v95 = v85;
+                    d95 = d85;
+                }
+                else {
+                    v95 = v94;
+                    d95 = d94;
+                }
+            }
+            else {
+                if (v84 > v85) {
+                    v95 = v85;
+                    d95 = d85;
+                }
+                else {
+                    v95 = v84;
+                    d95 = d84;
+                }
+            }
+        }
+        else {
+            if (v83 > v94) {
+                if (v94 > v85) {
+                    v95 = v85;
+                    d95 = d85;
+                }
+                else {
+                    v95 = v94;
+                    d95 = d94;
+                }
+            }
+            else {
+                if (v83 > v85) {
+                    v95 = v85;
+                    d95 = d85;
+                }
+                else {
+                    v95 = v83;
+                    d95 = d83;
+                }
+            }
+        }
+        if (m95 == null || !m95.isPassable()) v95 += 1000000;
+        else v95 += 10 + switch(m95.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v27 > v26) {
+            if (v26 > v28) {
+                v16 = v28;
+                d16 = d28;
+            }
+            else {
+                v16 = v26;
+                d16 = d26;
+            }
+        }
+        else {
+            if (v27 > v28) {
+                v16 = v28;
+                d16 = d28;
+            }
+            else {
+                v16 = v27;
+                d16 = d27;
+            }
+        }
+        if (m16 == null || !m16.isPassable()) v16 += 1000000;
+        else v16 += 10 + switch(m16.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v57 > v46) {
+            if (v46 > v68) {
+                v56 = v68;
+                d56 = d68;
+            }
+            else {
+                v56 = v46;
+                d56 = d46;
+            }
+        }
+        else {
+            if (v57 > v68) {
+                v56 = v68;
+                d56 = d68;
+            }
+            else {
+                v56 = v57;
+                d56 = d57;
+            }
+        }
+        if (m56 == null || !m56.isPassable()) v56 += 1000000;
+        else v56 += 10 + switch(m56.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v63 > v52) {
+            if (v52 > v74) {
+                v64 = v74;
+                d64 = d74;
+            }
+            else {
+                v64 = v52;
+                d64 = d52;
+            }
+        }
+        else {
+            if (v63 > v74) {
+                v64 = v74;
+                d64 = d74;
+            }
+            else {
+                v64 = v63;
+                d64 = d63;
+            }
+        }
+        if (m64 == null || !m64.isPassable()) v64 += 1000000;
+        else v64 += 10 + switch(m64.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v93 > v94) {
+            if (v94 > v92) {
+                v104 = v92;
+                d104 = d92;
+            }
+            else {
+                v104 = v94;
+                d104 = d94;
+            }
+        }
+        else {
+            if (v93 > v92) {
+                v104 = v92;
+                d104 = d92;
+            }
+            else {
+                v104 = v93;
+                d104 = d93;
+            }
+        }
+        if (m104 == null || !m104.isPassable()) v104 += 1000000;
+        else v104 += 10 + switch(m104.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v27 > v26) {
             if (v26 > v25) {
-                if (v25 > v15) {
-                    if (v15 > v24) {
-                        v14 = v24 + p14;
-                        d14 = d24;
-                    }
-                    else {
-                        v14 = v15 + p14;
-                        d14 = d15;
-                    }
+                if (v25 > v16) {
+                    v15 = v16;
+                    d15 = d16;
                 }
                 else {
-                    if (v25 > v24) {
-                        v14 = v24 + p14;
-                        d14 = d24;
-                    }
-                    else {
-                        v14 = v25 + p14;
-                        d14 = d25;
-                    }
+                    v15 = v25;
+                    d15 = d25;
                 }
             }
             else {
-                if (v26 > v15) {
-                    if (v15 > v24) {
-                        v14 = v24 + p14;
-                        d14 = d24;
-                    }
-                    else {
-                        v14 = v15 + p14;
-                        d14 = d15;
-                    }
+                if (v26 > v16) {
+                    v15 = v16;
+                    d15 = d16;
                 }
                 else {
-                    if (v26 > v24) {
-                        v14 = v24 + p14;
-                        d14 = d24;
-                    }
-                    else {
-                        v14 = v26 + p14;
-                        d14 = d26;
-                    }
+                    v15 = v26;
+                    d15 = d26;
                 }
             }
         }
-        if (m18 != null && m18.isPassable()){
-            p18 = 10 + switch(m18.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v27 > v25) {
+                if (v25 > v16) {
+                    v15 = v16;
+                    d15 = d16;
+                }
+                else {
+                    v15 = v25;
+                    d15 = d25;
+                }
+            }
+            else {
+                if (v27 > v16) {
+                    v15 = v16;
+                    d15 = d16;
+                }
+                else {
+                    v15 = v27;
+                    d15 = d27;
+                }
+            }
+        }
+        if (m15 == null || !m15.isPassable()) v15 += 1000000;
+        else v15 += 10 + switch(m15.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v27 > v28) {
             if (v28 > v29) {
-                if (v29 > v17) {
-                    if (v17 > v30) {
-                        v18 = v30 + p18;
-                        d18 = d30;
-                    }
-                    else {
-                        v18 = v17 + p18;
-                        d18 = d17;
-                    }
+                if (v29 > v16) {
+                    v17 = v16;
+                    d17 = d16;
                 }
                 else {
-                    if (v29 > v30) {
-                        v18 = v30 + p18;
-                        d18 = d30;
-                    }
-                    else {
-                        v18 = v29 + p18;
-                        d18 = d29;
-                    }
+                    v17 = v29;
+                    d17 = d29;
                 }
             }
             else {
-                if (v28 > v17) {
-                    if (v17 > v30) {
-                        v18 = v30 + p18;
-                        d18 = d30;
-                    }
-                    else {
-                        v18 = v17 + p18;
-                        d18 = d17;
-                    }
+                if (v28 > v16) {
+                    v17 = v16;
+                    d17 = d16;
                 }
                 else {
-                    if (v28 > v30) {
-                        v18 = v30 + p18;
-                        d18 = d30;
-                    }
-                    else {
-                        v18 = v28 + p18;
-                        d18 = d28;
-                    }
+                    v17 = v28;
+                    d17 = d28;
                 }
             }
         }
-        if (m34 != null && m34.isPassable()){
-            p34 = 10 + switch(m34.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v27 > v29) {
+                if (v29 > v16) {
+                    v17 = v16;
+                    d17 = d16;
+                }
+                else {
+                    v17 = v29;
+                    d17 = d29;
+                }
+            }
+            else {
+                if (v27 > v16) {
+                    v17 = v16;
+                    d17 = d16;
+                }
+                else {
+                    v17 = v27;
+                    d17 = d27;
+                }
+            }
+        }
+        if (m17 == null || !m17.isPassable()) v17 += 1000000;
+        else v17 += 10 + switch(m17.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v57 > v46) {
             if (v46 > v35) {
-                if (v35 > v45) {
-                    if (v45 > v24) {
-                        v34 = v24 + p34;
-                        d34 = d24;
-                    }
-                    else {
-                        v34 = v45 + p34;
-                        d34 = d45;
-                    }
+                if (v35 > v56) {
+                    v45 = v56;
+                    d45 = d56;
                 }
                 else {
-                    if (v35 > v24) {
-                        v34 = v24 + p34;
-                        d34 = d24;
-                    }
-                    else {
-                        v34 = v35 + p34;
-                        d34 = d35;
-                    }
+                    v45 = v35;
+                    d45 = d35;
                 }
             }
             else {
-                if (v46 > v45) {
-                    if (v45 > v24) {
-                        v34 = v24 + p34;
-                        d34 = d24;
-                    }
-                    else {
-                        v34 = v45 + p34;
-                        d34 = d45;
-                    }
+                if (v46 > v56) {
+                    v45 = v56;
+                    d45 = d56;
                 }
                 else {
-                    if (v46 > v24) {
-                        v34 = v24 + p34;
-                        d34 = d24;
-                    }
-                    else {
-                        v34 = v46 + p34;
-                        d34 = d46;
-                    }
+                    v45 = v46;
+                    d45 = d46;
                 }
             }
         }
-        if (m42 != null && m42.isPassable()){
-            p42 = 10 + switch(m42.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v57 > v35) {
+                if (v35 > v56) {
+                    v45 = v56;
+                    d45 = d56;
+                }
+                else {
+                    v45 = v35;
+                    d45 = d35;
+                }
+            }
+            else {
+                if (v57 > v56) {
+                    v45 = v56;
+                    d45 = d56;
+                }
+                else {
+                    v45 = v57;
+                    d45 = d57;
+                }
+            }
+        }
+        if (m45 == null || !m45.isPassable()) v45 += 1000000;
+        else v45 += 10 + switch(m45.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v63 > v52) {
             if (v52 > v41) {
-                if (v41 > v53) {
-                    if (v53 > v30) {
-                        v42 = v30 + p42;
-                        d42 = d30;
-                    }
-                    else {
-                        v42 = v53 + p42;
-                        d42 = d53;
-                    }
+                if (v41 > v64) {
+                    v53 = v64;
+                    d53 = d64;
                 }
                 else {
-                    if (v41 > v30) {
-                        v42 = v30 + p42;
-                        d42 = d30;
-                    }
-                    else {
-                        v42 = v41 + p42;
-                        d42 = d41;
-                    }
+                    v53 = v41;
+                    d53 = d41;
                 }
             }
             else {
-                if (v52 > v53) {
-                    if (v53 > v30) {
-                        v42 = v30 + p42;
-                        d42 = d30;
-                    }
-                    else {
-                        v42 = v53 + p42;
-                        d42 = d53;
-                    }
+                if (v52 > v64) {
+                    v53 = v64;
+                    d53 = d64;
                 }
                 else {
-                    if (v52 > v30) {
-                        v42 = v30 + p42;
-                        d42 = d30;
-                    }
-                    else {
-                        v42 = v52 + p42;
-                        d42 = d52;
-                    }
+                    v53 = v52;
+                    d53 = d52;
                 }
             }
         }
-        if (m78 != null && m78.isPassable()){
-            p78 = 10 + switch(m78.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v63 > v41) {
+                if (v41 > v64) {
+                    v53 = v64;
+                    d53 = d64;
+                }
+                else {
+                    v53 = v41;
+                    d53 = d41;
+                }
+            }
+            else {
+                if (v63 > v64) {
+                    v53 = v64;
+                    d53 = d64;
+                }
+                else {
+                    v53 = v63;
+                    d53 = d63;
+                }
+            }
+        }
+        if (m53 == null || !m53.isPassable()) v53 += 1000000;
+        else v53 += 10 + switch(m53.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v57 > v68) {
             if (v68 > v79) {
-                if (v79 > v67) {
-                    if (v67 > v90) {
-                        v78 = v90 + p78;
-                        d78 = d90;
-                    }
-                    else {
-                        v78 = v67 + p78;
-                        d78 = d67;
-                    }
+                if (v79 > v56) {
+                    v67 = v56;
+                    d67 = d56;
                 }
                 else {
-                    if (v79 > v90) {
-                        v78 = v90 + p78;
-                        d78 = d90;
-                    }
-                    else {
-                        v78 = v79 + p78;
-                        d78 = d79;
-                    }
+                    v67 = v79;
+                    d67 = d79;
                 }
             }
             else {
-                if (v68 > v67) {
-                    if (v67 > v90) {
-                        v78 = v90 + p78;
-                        d78 = d90;
-                    }
-                    else {
-                        v78 = v67 + p78;
-                        d78 = d67;
-                    }
+                if (v68 > v56) {
+                    v67 = v56;
+                    d67 = d56;
                 }
                 else {
-                    if (v68 > v90) {
-                        v78 = v90 + p78;
-                        d78 = d90;
-                    }
-                    else {
-                        v78 = v68 + p78;
-                        d78 = d68;
-                    }
+                    v67 = v68;
+                    d67 = d68;
                 }
             }
         }
-        if (m86 != null && m86.isPassable()){
-            p86 = 10 + switch(m86.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v57 > v79) {
+                if (v79 > v56) {
+                    v67 = v56;
+                    d67 = d56;
+                }
+                else {
+                    v67 = v79;
+                    d67 = d79;
+                }
+            }
+            else {
+                if (v57 > v56) {
+                    v67 = v56;
+                    d67 = d56;
+                }
+                else {
+                    v67 = v57;
+                    d67 = d57;
+                }
+            }
+        }
+        if (m67 == null || !m67.isPassable()) v67 += 1000000;
+        else v67 += 10 + switch(m67.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v63 > v74) {
             if (v74 > v85) {
-                if (v85 > v75) {
-                    if (v75 > v96) {
-                        v86 = v96 + p86;
-                        d86 = d96;
-                    }
-                    else {
-                        v86 = v75 + p86;
-                        d86 = d75;
-                    }
+                if (v85 > v64) {
+                    v75 = v64;
+                    d75 = d64;
                 }
                 else {
-                    if (v85 > v96) {
-                        v86 = v96 + p86;
-                        d86 = d96;
-                    }
-                    else {
-                        v86 = v85 + p86;
-                        d86 = d85;
-                    }
+                    v75 = v85;
+                    d75 = d85;
                 }
             }
             else {
-                if (v74 > v75) {
-                    if (v75 > v96) {
-                        v86 = v96 + p86;
-                        d86 = d96;
-                    }
-                    else {
-                        v86 = v75 + p86;
-                        d86 = d75;
-                    }
+                if (v74 > v64) {
+                    v75 = v64;
+                    d75 = d64;
                 }
                 else {
-                    if (v74 > v96) {
-                        v86 = v96 + p86;
-                        d86 = d96;
-                    }
-                    else {
-                        v86 = v74 + p86;
-                        d86 = d74;
-                    }
+                    v75 = v74;
+                    d75 = d74;
                 }
             }
         }
-        if (m102 != null && m102.isPassable()){
-            p102 = 10 + switch(m102.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v63 > v85) {
+                if (v85 > v64) {
+                    v75 = v64;
+                    d75 = d64;
+                }
+                else {
+                    v75 = v85;
+                    d75 = d85;
+                }
+            }
+            else {
+                if (v63 > v64) {
+                    v75 = v64;
+                    d75 = d64;
+                }
+                else {
+                    v75 = v63;
+                    d75 = d63;
+                }
+            }
+        }
+        if (m75 == null || !m75.isPassable()) v75 += 1000000;
+        else v75 += 10 + switch(m75.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v93 > v92) {
             if (v92 > v91) {
-                if (v91 > v103) {
-                    if (v103 > v90) {
-                        v102 = v90 + p102;
-                        d102 = d90;
-                    }
-                    else {
-                        v102 = v103 + p102;
-                        d102 = d103;
-                    }
+                if (v91 > v104) {
+                    v103 = v104;
+                    d103 = d104;
                 }
                 else {
-                    if (v91 > v90) {
-                        v102 = v90 + p102;
-                        d102 = d90;
-                    }
-                    else {
-                        v102 = v91 + p102;
-                        d102 = d91;
-                    }
+                    v103 = v91;
+                    d103 = d91;
                 }
             }
             else {
-                if (v92 > v103) {
-                    if (v103 > v90) {
-                        v102 = v90 + p102;
-                        d102 = d90;
-                    }
-                    else {
-                        v102 = v103 + p102;
-                        d102 = d103;
-                    }
+                if (v92 > v104) {
+                    v103 = v104;
+                    d103 = d104;
                 }
                 else {
-                    if (v92 > v90) {
-                        v102 = v90 + p102;
-                        d102 = d90;
-                    }
-                    else {
-                        v102 = v92 + p102;
-                        d102 = d92;
-                    }
+                    v103 = v92;
+                    d103 = d92;
                 }
             }
         }
-        if (m106 != null && m106.isPassable()){
-            p106 = 10 + switch(m106.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v93 > v91) {
+                if (v91 > v104) {
+                    v103 = v104;
+                    d103 = d104;
+                }
+                else {
+                    v103 = v91;
+                    d103 = d91;
+                }
+            }
+            else {
+                if (v93 > v104) {
+                    v103 = v104;
+                    d103 = d104;
+                }
+                else {
+                    v103 = v93;
+                    d103 = d93;
+                }
+            }
+        }
+        if (m103 == null || !m103.isPassable()) v103 += 1000000;
+        else v103 += 10 + switch(m103.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v93 > v94) {
             if (v94 > v95) {
-                if (v95 > v105) {
-                    if (v105 > v96) {
-                        v106 = v96 + p106;
-                        d106 = d96;
-                    }
-                    else {
-                        v106 = v105 + p106;
-                        d106 = d105;
-                    }
+                if (v95 > v104) {
+                    v105 = v104;
+                    d105 = d104;
                 }
                 else {
-                    if (v95 > v96) {
-                        v106 = v96 + p106;
-                        d106 = d96;
-                    }
-                    else {
-                        v106 = v95 + p106;
-                        d106 = d95;
-                    }
+                    v105 = v95;
+                    d105 = d95;
                 }
             }
             else {
-                if (v94 > v105) {
-                    if (v105 > v96) {
-                        v106 = v96 + p106;
-                        d106 = d96;
-                    }
-                    else {
-                        v106 = v105 + p106;
-                        d106 = d105;
-                    }
+                if (v94 > v104) {
+                    v105 = v104;
+                    d105 = d104;
                 }
                 else {
-                    if (v94 > v96) {
-                        v106 = v96 + p106;
-                        d106 = d96;
-                    }
-                    else {
-                        v106 = v94 + p106;
-                        d106 = d94;
-                    }
+                    v105 = v94;
+                    d105 = d94;
                 }
             }
         }
+        else {
+            if (v93 > v95) {
+                if (v95 > v104) {
+                    v105 = v104;
+                    d105 = d104;
+                }
+                else {
+                    v105 = v95;
+                    d105 = d95;
+                }
+            }
+            else {
+                if (v93 > v104) {
+                    v105 = v104;
+                    d105 = d104;
+                }
+                else {
+                    v105 = v93;
+                    d105 = d93;
+                }
+            }
+        }
+        if (m105 == null || !m105.isPassable()) v105 += 1000000;
+        else v105 += 10 + switch(m105.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v36 > v25) {
+            if (v25 > v35) {
+                v24 = v35;
+                d24 = d35;
+            }
+            else {
+                v24 = v25;
+                d24 = d25;
+            }
+        }
+        else {
+            if (v36 > v35) {
+                v24 = v35;
+                d24 = d35;
+            }
+            else {
+                v24 = v36;
+                d24 = d36;
+            }
+        }
+        if (m24 == null || !m24.isPassable()) v24 += 1000000;
+        else v24 += 10 + switch(m24.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v40 > v29) {
+            if (v29 > v41) {
+                v30 = v41;
+                d30 = d41;
+            }
+            else {
+                v30 = v29;
+                d30 = d29;
+            }
+        }
+        else {
+            if (v40 > v41) {
+                v30 = v41;
+                d30 = d41;
+            }
+            else {
+                v30 = v40;
+                d30 = d40;
+            }
+        }
+        if (m30 == null || !m30.isPassable()) v30 += 1000000;
+        else v30 += 10 + switch(m30.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v80 > v91) {
+            if (v91 > v79) {
+                v90 = v79;
+                d90 = d79;
+            }
+            else {
+                v90 = v91;
+                d90 = d91;
+            }
+        }
+        else {
+            if (v80 > v79) {
+                v90 = v79;
+                d90 = d79;
+            }
+            else {
+                v90 = v80;
+                d90 = d80;
+            }
+        }
+        if (m90 == null || !m90.isPassable()) v90 += 1000000;
+        else v90 += 10 + switch(m90.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v84 > v85) {
+            if (v85 > v95) {
+                v96 = v95;
+                d96 = d95;
+            }
+            else {
+                v96 = v85;
+                d96 = d85;
+            }
+        }
+        else {
+            if (v84 > v95) {
+                v96 = v95;
+                d96 = d95;
+            }
+            else {
+                v96 = v84;
+                d96 = d84;
+            }
+        }
+        if (m96 == null || !m96.isPassable()) v96 += 1000000;
+        else v96 += 10 + switch(m96.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v26 > v25) {
+            if (v25 > v15) {
+                if (v15 > v24) {
+                    v14 = v24;
+                    d14 = d24;
+                }
+                else {
+                    v14 = v15;
+                    d14 = d15;
+                }
+            }
+            else {
+                if (v25 > v24) {
+                    v14 = v24;
+                    d14 = d24;
+                }
+                else {
+                    v14 = v25;
+                    d14 = d25;
+                }
+            }
+        }
+        else {
+            if (v26 > v15) {
+                if (v15 > v24) {
+                    v14 = v24;
+                    d14 = d24;
+                }
+                else {
+                    v14 = v15;
+                    d14 = d15;
+                }
+            }
+            else {
+                if (v26 > v24) {
+                    v14 = v24;
+                    d14 = d24;
+                }
+                else {
+                    v14 = v26;
+                    d14 = d26;
+                }
+            }
+        }
+        if (m14 == null || !m14.isPassable()) v14 += 1000000;
+        else v14 += 10 + switch(m14.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v28 > v29) {
+            if (v29 > v17) {
+                if (v17 > v30) {
+                    v18 = v30;
+                    d18 = d30;
+                }
+                else {
+                    v18 = v17;
+                    d18 = d17;
+                }
+            }
+            else {
+                if (v29 > v30) {
+                    v18 = v30;
+                    d18 = d30;
+                }
+                else {
+                    v18 = v29;
+                    d18 = d29;
+                }
+            }
+        }
+        else {
+            if (v28 > v17) {
+                if (v17 > v30) {
+                    v18 = v30;
+                    d18 = d30;
+                }
+                else {
+                    v18 = v17;
+                    d18 = d17;
+                }
+            }
+            else {
+                if (v28 > v30) {
+                    v18 = v30;
+                    d18 = d30;
+                }
+                else {
+                    v18 = v28;
+                    d18 = d28;
+                }
+            }
+        }
+        if (m18 == null || !m18.isPassable()) v18 += 1000000;
+        else v18 += 10 + switch(m18.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v46 > v35) {
+            if (v35 > v45) {
+                if (v45 > v24) {
+                    v34 = v24;
+                    d34 = d24;
+                }
+                else {
+                    v34 = v45;
+                    d34 = d45;
+                }
+            }
+            else {
+                if (v35 > v24) {
+                    v34 = v24;
+                    d34 = d24;
+                }
+                else {
+                    v34 = v35;
+                    d34 = d35;
+                }
+            }
+        }
+        else {
+            if (v46 > v45) {
+                if (v45 > v24) {
+                    v34 = v24;
+                    d34 = d24;
+                }
+                else {
+                    v34 = v45;
+                    d34 = d45;
+                }
+            }
+            else {
+                if (v46 > v24) {
+                    v34 = v24;
+                    d34 = d24;
+                }
+                else {
+                    v34 = v46;
+                    d34 = d46;
+                }
+            }
+        }
+        if (m34 == null || !m34.isPassable()) v34 += 1000000;
+        else v34 += 10 + switch(m34.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v52 > v41) {
+            if (v41 > v53) {
+                if (v53 > v30) {
+                    v42 = v30;
+                    d42 = d30;
+                }
+                else {
+                    v42 = v53;
+                    d42 = d53;
+                }
+            }
+            else {
+                if (v41 > v30) {
+                    v42 = v30;
+                    d42 = d30;
+                }
+                else {
+                    v42 = v41;
+                    d42 = d41;
+                }
+            }
+        }
+        else {
+            if (v52 > v53) {
+                if (v53 > v30) {
+                    v42 = v30;
+                    d42 = d30;
+                }
+                else {
+                    v42 = v53;
+                    d42 = d53;
+                }
+            }
+            else {
+                if (v52 > v30) {
+                    v42 = v30;
+                    d42 = d30;
+                }
+                else {
+                    v42 = v52;
+                    d42 = d52;
+                }
+            }
+        }
+        if (m42 == null || !m42.isPassable()) v42 += 1000000;
+        else v42 += 10 + switch(m42.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v68 > v79) {
+            if (v79 > v67) {
+                if (v67 > v90) {
+                    v78 = v90;
+                    d78 = d90;
+                }
+                else {
+                    v78 = v67;
+                    d78 = d67;
+                }
+            }
+            else {
+                if (v79 > v90) {
+                    v78 = v90;
+                    d78 = d90;
+                }
+                else {
+                    v78 = v79;
+                    d78 = d79;
+                }
+            }
+        }
+        else {
+            if (v68 > v67) {
+                if (v67 > v90) {
+                    v78 = v90;
+                    d78 = d90;
+                }
+                else {
+                    v78 = v67;
+                    d78 = d67;
+                }
+            }
+            else {
+                if (v68 > v90) {
+                    v78 = v90;
+                    d78 = d90;
+                }
+                else {
+                    v78 = v68;
+                    d78 = d68;
+                }
+            }
+        }
+        if (m78 == null || !m78.isPassable()) v78 += 1000000;
+        else v78 += 10 + switch(m78.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v74 > v85) {
+            if (v85 > v75) {
+                if (v75 > v96) {
+                    v86 = v96;
+                    d86 = d96;
+                }
+                else {
+                    v86 = v75;
+                    d86 = d75;
+                }
+            }
+            else {
+                if (v85 > v96) {
+                    v86 = v96;
+                    d86 = d96;
+                }
+                else {
+                    v86 = v85;
+                    d86 = d85;
+                }
+            }
+        }
+        else {
+            if (v74 > v75) {
+                if (v75 > v96) {
+                    v86 = v96;
+                    d86 = d96;
+                }
+                else {
+                    v86 = v75;
+                    d86 = d75;
+                }
+            }
+            else {
+                if (v74 > v96) {
+                    v86 = v96;
+                    d86 = d96;
+                }
+                else {
+                    v86 = v74;
+                    d86 = d74;
+                }
+            }
+        }
+        if (m86 == null || !m86.isPassable()) v86 += 1000000;
+        else v86 += 10 + switch(m86.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v92 > v91) {
+            if (v91 > v103) {
+                if (v103 > v90) {
+                    v102 = v90;
+                    d102 = d90;
+                }
+                else {
+                    v102 = v103;
+                    d102 = d103;
+                }
+            }
+            else {
+                if (v91 > v90) {
+                    v102 = v90;
+                    d102 = d90;
+                }
+                else {
+                    v102 = v91;
+                    d102 = d91;
+                }
+            }
+        }
+        else {
+            if (v92 > v103) {
+                if (v103 > v90) {
+                    v102 = v90;
+                    d102 = d90;
+                }
+                else {
+                    v102 = v103;
+                    d102 = d103;
+                }
+            }
+            else {
+                if (v92 > v90) {
+                    v102 = v90;
+                    d102 = d90;
+                }
+                else {
+                    v102 = v92;
+                    d102 = d92;
+                }
+            }
+        }
+        if (m102 == null || !m102.isPassable()) v102 += 1000000;
+        else v102 += 10 + switch(m102.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v94 > v95) {
+            if (v95 > v105) {
+                if (v105 > v96) {
+                    v106 = v96;
+                    d106 = d96;
+                }
+                else {
+                    v106 = v105;
+                    d106 = d105;
+                }
+            }
+            else {
+                if (v95 > v96) {
+                    v106 = v96;
+                    d106 = d96;
+                }
+                else {
+                    v106 = v95;
+                    d106 = d95;
+                }
+            }
+        }
+        else {
+            if (v94 > v105) {
+                if (v105 > v96) {
+                    v106 = v96;
+                    d106 = d96;
+                }
+                else {
+                    v106 = v105;
+                    d106 = d105;
+                }
+            }
+            else {
+                if (v94 > v96) {
+                    v106 = v96;
+                    d106 = d96;
+                }
+                else {
+                    v106 = v94;
+                    d106 = d94;
+                }
+            }
+        }
+        if (m106 == null || !m106.isPassable()) v106 += 1000000;
+        else v106 += 10 + switch(m106.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
     }
 
     static void computeDistsTower() throws GameActionException {
-        if (m49 != null && m49.isPassable()){
-            p49 = 10 + switch(m49.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p49 += 5*Util.getPaintLost(Direction.WEST);
-            v49 = v60 + p49;
-            d49 = Direction.WEST;
+        v49 = v60;
+        d49 = Direction.WEST;
+        if (m49 == null || !m49.isPassable()) v49 += 1000000;
+        else v49 += 10 + switch(m49.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v49) {
+            v59 = v49;
+            d59 = d49;
         }
-        if (m59 != null && m59.isPassable()){
-            p59 = 10 + switch(m59.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p59 += 5*Util.getPaintLost(Direction.SOUTH);
-            if (v60 > v49) {
-                v59 = v49 + p59;
-                d59 = d49;
+        else {
+            v59 = v60;
+            d59 = Direction.SOUTH;
+        }
+        if (m59 == null || !m59.isPassable()) v59 += 1000000;
+        else v59 += 10 + switch(m59.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v49) {
+            v61 = v49;
+            d61 = d49;
+        }
+        else {
+            v61 = v60;
+            d61 = Direction.NORTH;
+        }
+        if (m61 == null || !m61.isPassable()) v61 += 1000000;
+        else v61 += 10 + switch(m61.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v61) {
+            if (v61 > v59) {
+                v71 = v59;
+                d71 = d59;
             }
             else {
-                v59 = v60 + p59;
-                d59 = Direction.SOUTH;
+                v71 = v61;
+                d71 = d61;
             }
         }
-        if (m61 != null && m61.isPassable()){
-            p61 = 10 + switch(m61.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p61 += 5*Util.getPaintLost(Direction.NORTH);
-            if (v60 > v49) {
-                v61 = v49 + p61;
-                d61 = d49;
+        else {
+            if (v60 > v59) {
+                v71 = v59;
+                d71 = d59;
             }
             else {
-                v61 = v60 + p61;
-                d61 = Direction.NORTH;
+                v71 = v60;
+                d71 = Direction.EAST;
             }
         }
-        if (m71 != null && m71.isPassable()){
-            p71 = 10 + switch(m71.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p71 += 5*Util.getPaintLost(Direction.EAST);
+        if (m71 == null || !m71.isPassable()) v71 += 1000000;
+        else v71 += 10 + switch(m71.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v49) {
+            if (v49 > v59) {
+                v48 = v59;
+                d48 = d59;
+            }
+            else {
+                v48 = v49;
+                d48 = d49;
+            }
+        }
+        else {
+            if (v60 > v59) {
+                v48 = v59;
+                d48 = d59;
+            }
+            else {
+                v48 = v60;
+                d48 = Direction.SOUTHWEST;
+            }
+        }
+        if (m48 == null || !m48.isPassable()) v48 += 1000000;
+        else v48 += 10 + switch(m48.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v49) {
+            if (v49 > v61) {
+                v50 = v61;
+                d50 = d61;
+            }
+            else {
+                v50 = v49;
+                d50 = d49;
+            }
+        }
+        else {
             if (v60 > v61) {
-                if (v61 > v59) {
-                    v71 = v59 + p71;
-                    d71 = d59;
-                }
-                else {
-                    v71 = v61 + p71;
-                    d71 = d61;
-                }
+                v50 = v61;
+                d50 = d61;
             }
             else {
-                if (v60 > v59) {
-                    v71 = v59 + p71;
-                    d71 = d59;
-                }
-                else {
-                    v71 = v60 + p71;
-                    d71 = Direction.EAST;
-                }
+                v50 = v60;
+                d50 = Direction.NORTHWEST;
             }
         }
-        if (m48 != null && m48.isPassable()){
-            p48 = 10 + switch(m48.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p48 += 5*Util.getPaintLost(Direction.SOUTHWEST);
-            if (v60 > v49) {
-                if (v49 > v59) {
-                    v48 = v59 + p48;
-                    d48 = d59;
-                }
-                else {
-                    v48 = v49 + p48;
-                    d48 = d49;
-                }
+        if (m50 == null || !m50.isPassable()) v50 += 1000000;
+        else v50 += 10 + switch(m50.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v71) {
+            if (v71 > v59) {
+                v70 = v59;
+                d70 = d59;
             }
             else {
-                if (v60 > v59) {
-                    v48 = v59 + p48;
-                    d48 = d59;
-                }
-                else {
-                    v48 = v60 + p48;
-                    d48 = Direction.SOUTHWEST;
-                }
+                v70 = v71;
+                d70 = d71;
             }
         }
-        if (m50 != null && m50.isPassable()){
-            p50 = 10 + switch(m50.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p50 += 5*Util.getPaintLost(Direction.NORTHWEST);
-            if (v60 > v49) {
-                if (v49 > v61) {
-                    v50 = v61 + p50;
-                    d50 = d61;
-                }
-                else {
-                    v50 = v49 + p50;
-                    d50 = d49;
-                }
+        else {
+            if (v60 > v59) {
+                v70 = v59;
+                d70 = d59;
             }
             else {
-                if (v60 > v61) {
-                    v50 = v61 + p50;
-                    d50 = d61;
-                }
-                else {
-                    v50 = v60 + p50;
-                    d50 = Direction.NORTHWEST;
-                }
+                v70 = v60;
+                d70 = Direction.SOUTHEAST;
             }
         }
-        if (m70 != null && m70.isPassable()){
-            p70 = 10 + switch(m70.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p70 += 5*Util.getPaintLost(Direction.SOUTHEAST);
+        if (m70 == null || !m70.isPassable()) v70 += 1000000;
+        else v70 += 10 + switch(m70.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v60 > v61) {
+            if (v61 > v71) {
+                v72 = v71;
+                d72 = d71;
+            }
+            else {
+                v72 = v61;
+                d72 = d61;
+            }
+        }
+        else {
             if (v60 > v71) {
-                if (v71 > v59) {
-                    v70 = v59 + p70;
-                    d70 = d59;
-                }
-                else {
-                    v70 = v71 + p70;
-                    d70 = d71;
-                }
+                v72 = v71;
+                d72 = d71;
             }
             else {
-                if (v60 > v59) {
-                    v70 = v59 + p70;
-                    d70 = d59;
-                }
-                else {
-                    v70 = v60 + p70;
-                    d70 = Direction.SOUTHEAST;
-                }
+                v72 = v60;
+                d72 = Direction.NORTHEAST;
             }
         }
-        if (m72 != null && m72.isPassable()){
-            p72 = 10 + switch(m72.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            p72 += 5*Util.getPaintLost(Direction.NORTHEAST);
-            if (v60 > v61) {
-                if (v61 > v71) {
-                    v72 = v71 + p72;
-                    d72 = d71;
-                }
-                else {
-                    v72 = v61 + p72;
-                    d72 = d61;
-                }
+        if (m72 == null || !m72.isPassable()) v72 += 1000000;
+        else v72 += 10 + switch(m72.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v49 > v48) {
+            if (v48 > v50) {
+                v38 = v50;
+                d38 = d50;
             }
             else {
-                if (v60 > v71) {
-                    v72 = v71 + p72;
-                    d72 = d71;
-                }
-                else {
-                    v72 = v60 + p72;
-                    d72 = Direction.NORTHEAST;
-                }
+                v38 = v48;
+                d38 = d48;
             }
         }
-        if (m38 != null && m38.isPassable()){
-            p38 = 10 + switch(m38.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v49 > v48) {
-                if (v48 > v50) {
-                    v38 = v50 + p38;
-                    d38 = d50;
-                }
-                else {
-                    v38 = v48 + p38;
-                    d38 = d48;
-                }
-            }
-            else {
-                if (v49 > v50) {
-                    v38 = v50 + p38;
-                    d38 = d50;
-                }
-                else {
-                    v38 = v49 + p38;
-                    d38 = d49;
-                }
-            }
-        }
-        if (m58 != null && m58.isPassable()){
-            p58 = 10 + switch(m58.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v59 > v48) {
-                if (v48 > v70) {
-                    v58 = v70 + p58;
-                    d58 = d70;
-                }
-                else {
-                    v58 = v48 + p58;
-                    d58 = d48;
-                }
-            }
-            else {
-                if (v59 > v70) {
-                    v58 = v70 + p58;
-                    d58 = d70;
-                }
-                else {
-                    v58 = v59 + p58;
-                    d58 = d59;
-                }
-            }
-        }
-        if (m62 != null && m62.isPassable()){
-            p62 = 10 + switch(m62.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v61 > v50) {
-                if (v50 > v72) {
-                    v62 = v72 + p62;
-                    d62 = d72;
-                }
-                else {
-                    v62 = v50 + p62;
-                    d62 = d50;
-                }
-            }
-            else {
-                if (v61 > v72) {
-                    v62 = v72 + p62;
-                    d62 = d72;
-                }
-                else {
-                    v62 = v61 + p62;
-                    d62 = d61;
-                }
-            }
-        }
-        if (m82 != null && m82.isPassable()){
-            p82 = 10 + switch(m82.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v71 > v72) {
-                if (v72 > v70) {
-                    v82 = v70 + p82;
-                    d82 = d70;
-                }
-                else {
-                    v82 = v72 + p82;
-                    d82 = d72;
-                }
-            }
-            else {
-                if (v71 > v70) {
-                    v82 = v70 + p82;
-                    d82 = d70;
-                }
-                else {
-                    v82 = v71 + p82;
-                    d82 = d71;
-                }
-            }
-        }
-        if (m37 != null && m37.isPassable()){
-            p37 = 10 + switch(m37.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v49 > v48) {
-                if (v48 > v38) {
-                    v37 = v38 + p37;
-                    d37 = d38;
-                }
-                else {
-                    v37 = v48 + p37;
-                    d37 = d48;
-                }
-            }
-            else {
-                if (v49 > v38) {
-                    v37 = v38 + p37;
-                    d37 = d38;
-                }
-                else {
-                    v37 = v49 + p37;
-                    d37 = d49;
-                }
-            }
-        }
-        if (m39 != null && m39.isPassable()){
-            p39 = 10 + switch(m39.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
             if (v49 > v50) {
-                if (v50 > v38) {
-                    v39 = v38 + p39;
-                    d39 = d38;
-                }
-                else {
-                    v39 = v50 + p39;
-                    d39 = d50;
-                }
+                v38 = v50;
+                d38 = d50;
             }
             else {
-                if (v49 > v38) {
-                    v39 = v38 + p39;
-                    d39 = d38;
-                }
-                else {
-                    v39 = v49 + p39;
-                    d39 = d49;
-                }
+                v38 = v49;
+                d38 = d49;
             }
         }
-        if (m47 != null && m47.isPassable()){
-            p47 = 10 + switch(m47.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v59 > v48) {
-                if (v48 > v58) {
-                    if (v58 > v37) {
-                        v47 = v37 + p47;
-                        d47 = d37;
-                    }
-                    else {
-                        v47 = v58 + p47;
-                        d47 = d58;
-                    }
-                }
-                else {
-                    if (v48 > v37) {
-                        v47 = v37 + p47;
-                        d47 = d37;
-                    }
-                    else {
-                        v47 = v48 + p47;
-                        d47 = d48;
-                    }
-                }
+        if (m38 == null || !m38.isPassable()) v38 += 1000000;
+        else v38 += 10 + switch(m38.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v59 > v48) {
+            if (v48 > v70) {
+                v58 = v70;
+                d58 = d70;
             }
             else {
-                if (v59 > v58) {
-                    if (v58 > v37) {
-                        v47 = v37 + p47;
-                        d47 = d37;
-                    }
-                    else {
-                        v47 = v58 + p47;
-                        d47 = d58;
-                    }
-                }
-                else {
-                    if (v59 > v37) {
-                        v47 = v37 + p47;
-                        d47 = d37;
-                    }
-                    else {
-                        v47 = v59 + p47;
-                        d47 = d59;
-                    }
-                }
+                v58 = v48;
+                d58 = d48;
             }
         }
-        if (m51 != null && m51.isPassable()){
-            p51 = 10 + switch(m51.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v61 > v50) {
-                if (v50 > v62) {
-                    if (v62 > v39) {
-                        v51 = v39 + p51;
-                        d51 = d39;
-                    }
-                    else {
-                        v51 = v62 + p51;
-                        d51 = d62;
-                    }
-                }
-                else {
-                    if (v50 > v39) {
-                        v51 = v39 + p51;
-                        d51 = d39;
-                    }
-                    else {
-                        v51 = v50 + p51;
-                        d51 = d50;
-                    }
-                }
-            }
-            else {
-                if (v61 > v62) {
-                    if (v62 > v39) {
-                        v51 = v39 + p51;
-                        d51 = d39;
-                    }
-                    else {
-                        v51 = v62 + p51;
-                        d51 = d62;
-                    }
-                }
-                else {
-                    if (v61 > v39) {
-                        v51 = v39 + p51;
-                        d51 = d39;
-                    }
-                    else {
-                        v51 = v61 + p51;
-                        d51 = d61;
-                    }
-                }
-            }
-        }
-        if (m69 != null && m69.isPassable()){
-            p69 = 10 + switch(m69.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
             if (v59 > v70) {
-                if (v70 > v58) {
-                    v69 = v58 + p69;
-                    d69 = d58;
-                }
-                else {
-                    v69 = v70 + p69;
-                    d69 = d70;
-                }
+                v58 = v70;
+                d58 = d70;
             }
             else {
-                if (v59 > v58) {
-                    v69 = v58 + p69;
-                    d69 = d58;
-                }
-                else {
-                    v69 = v59 + p69;
-                    d69 = d59;
-                }
+                v58 = v59;
+                d58 = d59;
             }
         }
-        if (m73 != null && m73.isPassable()){
-            p73 = 10 + switch(m73.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        if (m58 == null || !m58.isPassable()) v58 += 1000000;
+        else v58 += 10 + switch(m58.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v61 > v50) {
+            if (v50 > v72) {
+                v62 = v72;
+                d62 = d72;
+            }
+            else {
+                v62 = v50;
+                d62 = d50;
+            }
+        }
+        else {
             if (v61 > v72) {
-                if (v72 > v62) {
-                    v73 = v62 + p73;
-                    d73 = d62;
-                }
-                else {
-                    v73 = v72 + p73;
-                    d73 = d72;
-                }
+                v62 = v72;
+                d62 = d72;
             }
             else {
-                if (v61 > v62) {
-                    v73 = v62 + p73;
-                    d73 = d62;
-                }
-                else {
-                    v73 = v61 + p73;
-                    d73 = d61;
-                }
+                v62 = v61;
+                d62 = d61;
             }
         }
-        if (m81 != null && m81.isPassable()){
-            p81 = 10 + switch(m81.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        if (m62 == null || !m62.isPassable()) v62 += 1000000;
+        else v62 += 10 + switch(m62.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v71 > v72) {
+            if (v72 > v70) {
+                v82 = v70;
+                d82 = d70;
+            }
+            else {
+                v82 = v72;
+                d82 = d72;
+            }
+        }
+        else {
             if (v71 > v70) {
-                if (v70 > v82) {
-                    if (v82 > v69) {
-                        v81 = v69 + p81;
-                        d81 = d69;
-                    }
-                    else {
-                        v81 = v82 + p81;
-                        d81 = d82;
-                    }
+                v82 = v70;
+                d82 = d70;
+            }
+            else {
+                v82 = v71;
+                d82 = d71;
+            }
+        }
+        if (m82 == null || !m82.isPassable()) v82 += 1000000;
+        else v82 += 10 + switch(m82.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v49 > v48) {
+            if (v48 > v38) {
+                v37 = v38;
+                d37 = d38;
+            }
+            else {
+                v37 = v48;
+                d37 = d48;
+            }
+        }
+        else {
+            if (v49 > v38) {
+                v37 = v38;
+                d37 = d38;
+            }
+            else {
+                v37 = v49;
+                d37 = d49;
+            }
+        }
+        if (m37 == null || !m37.isPassable()) v37 += 1000000;
+        else v37 += 10 + switch(m37.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v49 > v50) {
+            if (v50 > v38) {
+                v39 = v38;
+                d39 = d38;
+            }
+            else {
+                v39 = v50;
+                d39 = d50;
+            }
+        }
+        else {
+            if (v49 > v38) {
+                v39 = v38;
+                d39 = d38;
+            }
+            else {
+                v39 = v49;
+                d39 = d49;
+            }
+        }
+        if (m39 == null || !m39.isPassable()) v39 += 1000000;
+        else v39 += 10 + switch(m39.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v59 > v48) {
+            if (v48 > v58) {
+                if (v58 > v37) {
+                    v47 = v37;
+                    d47 = d37;
                 }
                 else {
-                    if (v70 > v69) {
-                        v81 = v69 + p81;
-                        d81 = d69;
-                    }
-                    else {
-                        v81 = v70 + p81;
-                        d81 = d70;
-                    }
+                    v47 = v58;
+                    d47 = d58;
                 }
             }
             else {
-                if (v71 > v82) {
-                    if (v82 > v69) {
-                        v81 = v69 + p81;
-                        d81 = d69;
-                    }
-                    else {
-                        v81 = v82 + p81;
-                        d81 = d82;
-                    }
+                if (v48 > v37) {
+                    v47 = v37;
+                    d47 = d37;
                 }
                 else {
-                    if (v71 > v69) {
-                        v81 = v69 + p81;
-                        d81 = d69;
-                    }
-                    else {
-                        v81 = v71 + p81;
-                        d81 = d71;
-                    }
+                    v47 = v48;
+                    d47 = d48;
                 }
             }
         }
-        if (m83 != null && m83.isPassable()){
-            p83 = 10 + switch(m83.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v71 > v72) {
-                if (v72 > v82) {
-                    if (v82 > v73) {
-                        v83 = v73 + p83;
-                        d83 = d73;
-                    }
-                    else {
-                        v83 = v82 + p83;
-                        d83 = d82;
-                    }
+        else {
+            if (v59 > v58) {
+                if (v58 > v37) {
+                    v47 = v37;
+                    d47 = d37;
                 }
                 else {
-                    if (v72 > v73) {
-                        v83 = v73 + p83;
-                        d83 = d73;
-                    }
-                    else {
-                        v83 = v72 + p83;
-                        d83 = d72;
-                    }
+                    v47 = v58;
+                    d47 = d58;
                 }
             }
             else {
-                if (v71 > v82) {
-                    if (v82 > v73) {
-                        v83 = v73 + p83;
-                        d83 = d73;
-                    }
-                    else {
-                        v83 = v82 + p83;
-                        d83 = d82;
-                    }
+                if (v59 > v37) {
+                    v47 = v37;
+                    d47 = d37;
                 }
                 else {
-                    if (v71 > v73) {
-                        v83 = v73 + p83;
-                        d83 = d73;
-                    }
-                    else {
-                        v83 = v71 + p83;
-                        d83 = d71;
-                    }
+                    v47 = v59;
+                    d47 = d59;
                 }
             }
         }
-        if (m36 != null && m36.isPassable()){
-            p36 = 10 + switch(m36.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v48 > v37) {
-                if (v37 > v47) {
-                    v36 = v47 + p36;
-                    d36 = d47;
+        if (m47 == null || !m47.isPassable()) v47 += 1000000;
+        else v47 += 10 + switch(m47.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v61 > v50) {
+            if (v50 > v62) {
+                if (v62 > v39) {
+                    v51 = v39;
+                    d51 = d39;
                 }
                 else {
-                    v36 = v37 + p36;
-                    d36 = d37;
+                    v51 = v62;
+                    d51 = d62;
                 }
             }
             else {
-                if (v48 > v47) {
-                    v36 = v47 + p36;
-                    d36 = d47;
+                if (v50 > v39) {
+                    v51 = v39;
+                    d51 = d39;
                 }
                 else {
-                    v36 = v48 + p36;
-                    d36 = d48;
+                    v51 = v50;
+                    d51 = d50;
                 }
             }
         }
-        if (m40 != null && m40.isPassable()){
-            p40 = 10 + switch(m40.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v50 > v39) {
-                if (v39 > v51) {
-                    v40 = v51 + p40;
-                    d40 = d51;
+        else {
+            if (v61 > v62) {
+                if (v62 > v39) {
+                    v51 = v39;
+                    d51 = d39;
                 }
                 else {
-                    v40 = v39 + p40;
-                    d40 = d39;
+                    v51 = v62;
+                    d51 = d62;
                 }
             }
             else {
-                if (v50 > v51) {
-                    v40 = v51 + p40;
-                    d40 = d51;
+                if (v61 > v39) {
+                    v51 = v39;
+                    d51 = d39;
                 }
                 else {
-                    v40 = v50 + p40;
-                    d40 = d50;
+                    v51 = v61;
+                    d51 = d61;
                 }
             }
         }
-        if (m80 != null && m80.isPassable()){
-            p80 = 10 + switch(m80.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v70 > v81) {
-                if (v81 > v69) {
-                    v80 = v69 + p80;
-                    d80 = d69;
+        if (m51 == null || !m51.isPassable()) v51 += 1000000;
+        else v51 += 10 + switch(m51.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v59 > v70) {
+            if (v70 > v58) {
+                v69 = v58;
+                d69 = d58;
+            }
+            else {
+                v69 = v70;
+                d69 = d70;
+            }
+        }
+        else {
+            if (v59 > v58) {
+                v69 = v58;
+                d69 = d58;
+            }
+            else {
+                v69 = v59;
+                d69 = d59;
+            }
+        }
+        if (m69 == null || !m69.isPassable()) v69 += 1000000;
+        else v69 += 10 + switch(m69.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v61 > v72) {
+            if (v72 > v62) {
+                v73 = v62;
+                d73 = d62;
+            }
+            else {
+                v73 = v72;
+                d73 = d72;
+            }
+        }
+        else {
+            if (v61 > v62) {
+                v73 = v62;
+                d73 = d62;
+            }
+            else {
+                v73 = v61;
+                d73 = d61;
+            }
+        }
+        if (m73 == null || !m73.isPassable()) v73 += 1000000;
+        else v73 += 10 + switch(m73.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v71 > v70) {
+            if (v70 > v82) {
+                if (v82 > v69) {
+                    v81 = v69;
+                    d81 = d69;
                 }
                 else {
-                    v80 = v81 + p80;
-                    d80 = d81;
+                    v81 = v82;
+                    d81 = d82;
                 }
             }
             else {
                 if (v70 > v69) {
-                    v80 = v69 + p80;
-                    d80 = d69;
+                    v81 = v69;
+                    d81 = d69;
                 }
                 else {
-                    v80 = v70 + p80;
-                    d80 = d70;
+                    v81 = v70;
+                    d81 = d70;
                 }
             }
         }
-        if (m84 != null && m84.isPassable()){
-            p84 = 10 + switch(m84.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v72 > v73) {
-                if (v73 > v83) {
-                    v84 = v83 + p84;
-                    d84 = d83;
+        else {
+            if (v71 > v82) {
+                if (v82 > v69) {
+                    v81 = v69;
+                    d81 = d69;
                 }
                 else {
-                    v84 = v73 + p84;
-                    d84 = d73;
+                    v81 = v82;
+                    d81 = d82;
                 }
             }
             else {
-                if (v72 > v83) {
-                    v84 = v83 + p84;
-                    d84 = d83;
+                if (v71 > v69) {
+                    v81 = v69;
+                    d81 = d69;
                 }
                 else {
-                    v84 = v72 + p84;
-                    d84 = d72;
+                    v81 = v71;
+                    d81 = d71;
                 }
             }
         }
-        if (m27 != null && m27.isPassable()){
-            p27 = 10 + switch(m27.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v38 > v37) {
-                if (v37 > v39) {
-                    v27 = v39 + p27;
-                    d27 = d39;
+        if (m81 == null || !m81.isPassable()) v81 += 1000000;
+        else v81 += 10 + switch(m81.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v71 > v72) {
+            if (v72 > v82) {
+                if (v82 > v73) {
+                    v83 = v73;
+                    d83 = d73;
                 }
                 else {
-                    v27 = v37 + p27;
-                    d27 = d37;
+                    v83 = v82;
+                    d83 = d82;
                 }
             }
             else {
-                if (v38 > v39) {
-                    v27 = v39 + p27;
-                    d27 = d39;
+                if (v72 > v73) {
+                    v83 = v73;
+                    d83 = d73;
                 }
                 else {
-                    v27 = v38 + p27;
-                    d27 = d38;
+                    v83 = v72;
+                    d83 = d72;
                 }
             }
         }
-        if (m57 != null && m57.isPassable()){
-            p57 = 10 + switch(m57.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v58 > v47) {
-                if (v47 > v69) {
-                    v57 = v69 + p57;
-                    d57 = d69;
+        else {
+            if (v71 > v82) {
+                if (v82 > v73) {
+                    v83 = v73;
+                    d83 = d73;
                 }
                 else {
-                    v57 = v47 + p57;
-                    d57 = d47;
+                    v83 = v82;
+                    d83 = d82;
                 }
             }
             else {
-                if (v58 > v69) {
-                    v57 = v69 + p57;
-                    d57 = d69;
+                if (v71 > v73) {
+                    v83 = v73;
+                    d83 = d73;
                 }
                 else {
-                    v57 = v58 + p57;
-                    d57 = d58;
+                    v83 = v71;
+                    d83 = d71;
                 }
             }
         }
-        if (m63 != null && m63.isPassable()){
-            p63 = 10 + switch(m63.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v62 > v51) {
-                if (v51 > v73) {
-                    v63 = v73 + p63;
-                    d63 = d73;
-                }
-                else {
-                    v63 = v51 + p63;
-                    d63 = d51;
-                }
+        if (m83 == null || !m83.isPassable()) v83 += 1000000;
+        else v83 += 10 + switch(m83.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v48 > v37) {
+            if (v37 > v47) {
+                v36 = v47;
+                d36 = d47;
             }
             else {
-                if (v62 > v73) {
-                    v63 = v73 + p63;
-                    d63 = d73;
-                }
-                else {
-                    v63 = v62 + p63;
-                    d63 = d62;
-                }
+                v36 = v37;
+                d36 = d37;
             }
         }
-        if (m93 != null && m93.isPassable()){
-            p93 = 10 + switch(m93.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v82 > v83) {
-                if (v83 > v81) {
-                    v93 = v81 + p93;
-                    d93 = d81;
-                }
-                else {
-                    v93 = v83 + p93;
-                    d93 = d83;
-                }
+        else {
+            if (v48 > v47) {
+                v36 = v47;
+                d36 = d47;
             }
             else {
-                if (v82 > v81) {
-                    v93 = v81 + p93;
-                    d93 = d81;
-                }
-                else {
-                    v93 = v82 + p93;
-                    d93 = d82;
-                }
+                v36 = v48;
+                d36 = d48;
             }
         }
-        if (m26 != null && m26.isPassable()){
-            p26 = 10 + switch(m26.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v38 > v37) {
-                if (v37 > v36) {
-                    if (v36 > v27) {
-                        v26 = v27 + p26;
-                        d26 = d27;
-                    }
-                    else {
-                        v26 = v36 + p26;
-                        d26 = d36;
-                    }
-                }
-                else {
-                    if (v37 > v27) {
-                        v26 = v27 + p26;
-                        d26 = d27;
-                    }
-                    else {
-                        v26 = v37 + p26;
-                        d26 = d37;
-                    }
-                }
+        if (m36 == null || !m36.isPassable()) v36 += 1000000;
+        else v36 += 10 + switch(m36.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v50 > v39) {
+            if (v39 > v51) {
+                v40 = v51;
+                d40 = d51;
             }
             else {
-                if (v38 > v36) {
-                    if (v36 > v27) {
-                        v26 = v27 + p26;
-                        d26 = d27;
-                    }
-                    else {
-                        v26 = v36 + p26;
-                        d26 = d36;
-                    }
-                }
-                else {
-                    if (v38 > v27) {
-                        v26 = v27 + p26;
-                        d26 = d27;
-                    }
-                    else {
-                        v26 = v38 + p26;
-                        d26 = d38;
-                    }
-                }
+                v40 = v39;
+                d40 = d39;
             }
         }
-        if (m28 != null && m28.isPassable()){
-            p28 = 10 + switch(m28.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v50 > v51) {
+                v40 = v51;
+                d40 = d51;
+            }
+            else {
+                v40 = v50;
+                d40 = d50;
+            }
+        }
+        if (m40 == null || !m40.isPassable()) v40 += 1000000;
+        else v40 += 10 + switch(m40.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v70 > v81) {
+            if (v81 > v69) {
+                v80 = v69;
+                d80 = d69;
+            }
+            else {
+                v80 = v81;
+                d80 = d81;
+            }
+        }
+        else {
+            if (v70 > v69) {
+                v80 = v69;
+                d80 = d69;
+            }
+            else {
+                v80 = v70;
+                d80 = d70;
+            }
+        }
+        if (m80 == null || !m80.isPassable()) v80 += 1000000;
+        else v80 += 10 + switch(m80.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v72 > v73) {
+            if (v73 > v83) {
+                v84 = v83;
+                d84 = d83;
+            }
+            else {
+                v84 = v73;
+                d84 = d73;
+            }
+        }
+        else {
+            if (v72 > v83) {
+                v84 = v83;
+                d84 = d83;
+            }
+            else {
+                v84 = v72;
+                d84 = d72;
+            }
+        }
+        if (m84 == null || !m84.isPassable()) v84 += 1000000;
+        else v84 += 10 + switch(m84.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v38 > v37) {
+            if (v37 > v39) {
+                v27 = v39;
+                d27 = d39;
+            }
+            else {
+                v27 = v37;
+                d27 = d37;
+            }
+        }
+        else {
             if (v38 > v39) {
-                if (v39 > v40) {
-                    if (v40 > v27) {
-                        v28 = v27 + p28;
-                        d28 = d27;
-                    }
-                    else {
-                        v28 = v40 + p28;
-                        d28 = d40;
-                    }
-                }
-                else {
-                    if (v39 > v27) {
-                        v28 = v27 + p28;
-                        d28 = d27;
-                    }
-                    else {
-                        v28 = v39 + p28;
-                        d28 = d39;
-                    }
-                }
+                v27 = v39;
+                d27 = d39;
             }
             else {
-                if (v38 > v40) {
-                    if (v40 > v27) {
-                        v28 = v27 + p28;
-                        d28 = d27;
-                    }
-                    else {
-                        v28 = v40 + p28;
-                        d28 = d40;
-                    }
-                }
-                else {
-                    if (v38 > v27) {
-                        v28 = v27 + p28;
-                        d28 = d27;
-                    }
-                    else {
-                        v28 = v38 + p28;
-                        d28 = d38;
-                    }
-                }
+                v27 = v38;
+                d27 = d38;
             }
         }
-        if (m46 != null && m46.isPassable()){
-            p46 = 10 + switch(m46.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v58 > v47) {
-                if (v47 > v36) {
-                    if (v36 > v57) {
-                        v46 = v57 + p46;
-                        d46 = d57;
-                    }
-                    else {
-                        v46 = v36 + p46;
-                        d46 = d36;
-                    }
-                }
-                else {
-                    if (v47 > v57) {
-                        v46 = v57 + p46;
-                        d46 = d57;
-                    }
-                    else {
-                        v46 = v47 + p46;
-                        d46 = d47;
-                    }
-                }
+        if (m27 == null || !m27.isPassable()) v27 += 1000000;
+        else v27 += 10 + switch(m27.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v58 > v47) {
+            if (v47 > v69) {
+                v57 = v69;
+                d57 = d69;
             }
             else {
-                if (v58 > v36) {
-                    if (v36 > v57) {
-                        v46 = v57 + p46;
-                        d46 = d57;
-                    }
-                    else {
-                        v46 = v36 + p46;
-                        d46 = d36;
-                    }
-                }
-                else {
-                    if (v58 > v57) {
-                        v46 = v57 + p46;
-                        d46 = d57;
-                    }
-                    else {
-                        v46 = v58 + p46;
-                        d46 = d58;
-                    }
-                }
+                v57 = v47;
+                d57 = d47;
             }
         }
-        if (m52 != null && m52.isPassable()){
-            p52 = 10 + switch(m52.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v62 > v51) {
-                if (v51 > v40) {
-                    if (v40 > v63) {
-                        v52 = v63 + p52;
-                        d52 = d63;
-                    }
-                    else {
-                        v52 = v40 + p52;
-                        d52 = d40;
-                    }
-                }
-                else {
-                    if (v51 > v63) {
-                        v52 = v63 + p52;
-                        d52 = d63;
-                    }
-                    else {
-                        v52 = v51 + p52;
-                        d52 = d51;
-                    }
-                }
-            }
-            else {
-                if (v62 > v40) {
-                    if (v40 > v63) {
-                        v52 = v63 + p52;
-                        d52 = d63;
-                    }
-                    else {
-                        v52 = v40 + p52;
-                        d52 = d40;
-                    }
-                }
-                else {
-                    if (v62 > v63) {
-                        v52 = v63 + p52;
-                        d52 = d63;
-                    }
-                    else {
-                        v52 = v62 + p52;
-                        d52 = d62;
-                    }
-                }
-            }
-        }
-        if (m68 != null && m68.isPassable()){
-            p68 = 10 + switch(m68.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
             if (v58 > v69) {
-                if (v69 > v80) {
-                    if (v80 > v57) {
-                        v68 = v57 + p68;
-                        d68 = d57;
-                    }
-                    else {
-                        v68 = v80 + p68;
-                        d68 = d80;
-                    }
-                }
-                else {
-                    if (v69 > v57) {
-                        v68 = v57 + p68;
-                        d68 = d57;
-                    }
-                    else {
-                        v68 = v69 + p68;
-                        d68 = d69;
-                    }
-                }
+                v57 = v69;
+                d57 = d69;
             }
             else {
-                if (v58 > v80) {
-                    if (v80 > v57) {
-                        v68 = v57 + p68;
-                        d68 = d57;
-                    }
-                    else {
-                        v68 = v80 + p68;
-                        d68 = d80;
-                    }
-                }
-                else {
-                    if (v58 > v57) {
-                        v68 = v57 + p68;
-                        d68 = d57;
-                    }
-                    else {
-                        v68 = v58 + p68;
-                        d68 = d58;
-                    }
-                }
+                v57 = v58;
+                d57 = d58;
             }
         }
-        if (m74 != null && m74.isPassable()){
-            p74 = 10 + switch(m74.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        if (m57 == null || !m57.isPassable()) v57 += 1000000;
+        else v57 += 10 + switch(m57.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v62 > v51) {
+            if (v51 > v73) {
+                v63 = v73;
+                d63 = d73;
+            }
+            else {
+                v63 = v51;
+                d63 = d51;
+            }
+        }
+        else {
             if (v62 > v73) {
-                if (v73 > v84) {
-                    if (v84 > v63) {
-                        v74 = v63 + p74;
-                        d74 = d63;
-                    }
-                    else {
-                        v74 = v84 + p74;
-                        d74 = d84;
-                    }
-                }
-                else {
-                    if (v73 > v63) {
-                        v74 = v63 + p74;
-                        d74 = d63;
-                    }
-                    else {
-                        v74 = v73 + p74;
-                        d74 = d73;
-                    }
-                }
+                v63 = v73;
+                d63 = d73;
             }
             else {
-                if (v62 > v84) {
-                    if (v84 > v63) {
-                        v74 = v63 + p74;
-                        d74 = d63;
-                    }
-                    else {
-                        v74 = v84 + p74;
-                        d74 = d84;
-                    }
-                }
-                else {
-                    if (v62 > v63) {
-                        v74 = v63 + p74;
-                        d74 = d63;
-                    }
-                    else {
-                        v74 = v62 + p74;
-                        d74 = d62;
-                    }
-                }
+                v63 = v62;
+                d63 = d62;
             }
         }
-        if (m92 != null && m92.isPassable()){
-            p92 = 10 + switch(m92.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        if (m63 == null || !m63.isPassable()) v63 += 1000000;
+        else v63 += 10 + switch(m63.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v82 > v83) {
+            if (v83 > v81) {
+                v93 = v81;
+                d93 = d81;
+            }
+            else {
+                v93 = v83;
+                d93 = d83;
+            }
+        }
+        else {
             if (v82 > v81) {
-                if (v81 > v80) {
-                    if (v80 > v93) {
-                        v92 = v93 + p92;
-                        d92 = d93;
-                    }
-                    else {
-                        v92 = v80 + p92;
-                        d92 = d80;
-                    }
-                }
-                else {
-                    if (v81 > v93) {
-                        v92 = v93 + p92;
-                        d92 = d93;
-                    }
-                    else {
-                        v92 = v81 + p92;
-                        d92 = d81;
-                    }
-                }
+                v93 = v81;
+                d93 = d81;
             }
             else {
-                if (v82 > v80) {
-                    if (v80 > v93) {
-                        v92 = v93 + p92;
-                        d92 = d93;
-                    }
-                    else {
-                        v92 = v80 + p92;
-                        d92 = d80;
-                    }
-                }
-                else {
-                    if (v82 > v93) {
-                        v92 = v93 + p92;
-                        d92 = d93;
-                    }
-                    else {
-                        v92 = v82 + p92;
-                        d92 = d82;
-                    }
-                }
+                v93 = v82;
+                d93 = d82;
             }
         }
-        if (m94 != null && m94.isPassable()){
-            p94 = 10 + switch(m94.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v82 > v83) {
-                if (v83 > v84) {
-                    if (v84 > v93) {
-                        v94 = v93 + p94;
-                        d94 = d93;
-                    }
-                    else {
-                        v94 = v84 + p94;
-                        d94 = d84;
-                    }
-                }
-                else {
-                    if (v83 > v93) {
-                        v94 = v93 + p94;
-                        d94 = d93;
-                    }
-                    else {
-                        v94 = v83 + p94;
-                        d94 = d83;
-                    }
-                }
-            }
-            else {
-                if (v82 > v84) {
-                    if (v84 > v93) {
-                        v94 = v93 + p94;
-                        d94 = d93;
-                    }
-                    else {
-                        v94 = v84 + p94;
-                        d94 = d84;
-                    }
-                }
-                else {
-                    if (v82 > v93) {
-                        v94 = v93 + p94;
-                        d94 = d93;
-                    }
-                    else {
-                        v94 = v82 + p94;
-                        d94 = d82;
-                    }
-                }
-            }
-        }
-        if (m25 != null && m25.isPassable()){
-            p25 = 10 + switch(m25.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        if (m93 == null || !m93.isPassable()) v93 += 1000000;
+        else v93 += 10 + switch(m93.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v38 > v37) {
             if (v37 > v36) {
-                if (v36 > v26) {
-                    v25 = v26 + p25;
-                    d25 = d26;
+                if (v36 > v27) {
+                    v26 = v27;
+                    d26 = d27;
                 }
                 else {
-                    v25 = v36 + p25;
-                    d25 = d36;
+                    v26 = v36;
+                    d26 = d36;
                 }
             }
             else {
-                if (v37 > v26) {
-                    v25 = v26 + p25;
-                    d25 = d26;
+                if (v37 > v27) {
+                    v26 = v27;
+                    d26 = d27;
                 }
                 else {
-                    v25 = v37 + p25;
-                    d25 = d37;
+                    v26 = v37;
+                    d26 = d37;
                 }
             }
         }
-        if (m29 != null && m29.isPassable()){
-            p29 = 10 + switch(m29.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v38 > v36) {
+                if (v36 > v27) {
+                    v26 = v27;
+                    d26 = d27;
+                }
+                else {
+                    v26 = v36;
+                    d26 = d36;
+                }
+            }
+            else {
+                if (v38 > v27) {
+                    v26 = v27;
+                    d26 = d27;
+                }
+                else {
+                    v26 = v38;
+                    d26 = d38;
+                }
+            }
+        }
+        if (m26 == null || !m26.isPassable()) v26 += 1000000;
+        else v26 += 10 + switch(m26.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v38 > v39) {
             if (v39 > v40) {
-                if (v40 > v28) {
-                    v29 = v28 + p29;
-                    d29 = d28;
+                if (v40 > v27) {
+                    v28 = v27;
+                    d28 = d27;
                 }
                 else {
-                    v29 = v40 + p29;
-                    d29 = d40;
+                    v28 = v40;
+                    d28 = d40;
                 }
             }
             else {
-                if (v39 > v28) {
-                    v29 = v28 + p29;
-                    d29 = d28;
+                if (v39 > v27) {
+                    v28 = v27;
+                    d28 = d27;
                 }
                 else {
-                    v29 = v39 + p29;
-                    d29 = d39;
+                    v28 = v39;
+                    d28 = d39;
                 }
             }
         }
-        if (m35 != null && m35.isPassable()){
-            p35 = 10 + switch(m35.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v38 > v40) {
+                if (v40 > v27) {
+                    v28 = v27;
+                    d28 = d27;
+                }
+                else {
+                    v28 = v40;
+                    d28 = d40;
+                }
+            }
+            else {
+                if (v38 > v27) {
+                    v28 = v27;
+                    d28 = d27;
+                }
+                else {
+                    v28 = v38;
+                    d28 = d38;
+                }
+            }
+        }
+        if (m28 == null || !m28.isPassable()) v28 += 1000000;
+        else v28 += 10 + switch(m28.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v58 > v47) {
             if (v47 > v36) {
-                if (v36 > v46) {
-                    if (v46 > v25) {
-                        v35 = v25 + p35;
-                        d35 = d25;
-                    }
-                    else {
-                        v35 = v46 + p35;
-                        d35 = d46;
-                    }
+                if (v36 > v57) {
+                    v46 = v57;
+                    d46 = d57;
                 }
                 else {
-                    if (v36 > v25) {
-                        v35 = v25 + p35;
-                        d35 = d25;
-                    }
-                    else {
-                        v35 = v36 + p35;
-                        d35 = d36;
-                    }
+                    v46 = v36;
+                    d46 = d36;
                 }
             }
             else {
-                if (v47 > v46) {
-                    if (v46 > v25) {
-                        v35 = v25 + p35;
-                        d35 = d25;
-                    }
-                    else {
-                        v35 = v46 + p35;
-                        d35 = d46;
-                    }
+                if (v47 > v57) {
+                    v46 = v57;
+                    d46 = d57;
                 }
                 else {
-                    if (v47 > v25) {
-                        v35 = v25 + p35;
-                        d35 = d25;
-                    }
-                    else {
-                        v35 = v47 + p35;
-                        d35 = d47;
-                    }
+                    v46 = v47;
+                    d46 = d47;
                 }
             }
         }
-        if (m41 != null && m41.isPassable()){
-            p41 = 10 + switch(m41.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v58 > v36) {
+                if (v36 > v57) {
+                    v46 = v57;
+                    d46 = d57;
+                }
+                else {
+                    v46 = v36;
+                    d46 = d36;
+                }
+            }
+            else {
+                if (v58 > v57) {
+                    v46 = v57;
+                    d46 = d57;
+                }
+                else {
+                    v46 = v58;
+                    d46 = d58;
+                }
+            }
+        }
+        if (m46 == null || !m46.isPassable()) v46 += 1000000;
+        else v46 += 10 + switch(m46.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v62 > v51) {
             if (v51 > v40) {
-                if (v40 > v52) {
-                    if (v52 > v29) {
-                        v41 = v29 + p41;
-                        d41 = d29;
-                    }
-                    else {
-                        v41 = v52 + p41;
-                        d41 = d52;
-                    }
+                if (v40 > v63) {
+                    v52 = v63;
+                    d52 = d63;
                 }
                 else {
-                    if (v40 > v29) {
-                        v41 = v29 + p41;
-                        d41 = d29;
-                    }
-                    else {
-                        v41 = v40 + p41;
-                        d41 = d40;
-                    }
+                    v52 = v40;
+                    d52 = d40;
                 }
             }
             else {
-                if (v51 > v52) {
-                    if (v52 > v29) {
-                        v41 = v29 + p41;
-                        d41 = d29;
-                    }
-                    else {
-                        v41 = v52 + p41;
-                        d41 = d52;
-                    }
+                if (v51 > v63) {
+                    v52 = v63;
+                    d52 = d63;
                 }
                 else {
-                    if (v51 > v29) {
-                        v41 = v29 + p41;
-                        d41 = d29;
-                    }
-                    else {
-                        v41 = v51 + p41;
-                        d41 = d51;
-                    }
+                    v52 = v51;
+                    d52 = d51;
                 }
             }
         }
-        if (m79 != null && m79.isPassable()){
-            p79 = 10 + switch(m79.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v62 > v40) {
+                if (v40 > v63) {
+                    v52 = v63;
+                    d52 = d63;
+                }
+                else {
+                    v52 = v40;
+                    d52 = d40;
+                }
+            }
+            else {
+                if (v62 > v63) {
+                    v52 = v63;
+                    d52 = d63;
+                }
+                else {
+                    v52 = v62;
+                    d52 = d62;
+                }
+            }
+        }
+        if (m52 == null || !m52.isPassable()) v52 += 1000000;
+        else v52 += 10 + switch(m52.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v58 > v69) {
             if (v69 > v80) {
-                if (v80 > v68) {
-                    v79 = v68 + p79;
-                    d79 = d68;
+                if (v80 > v57) {
+                    v68 = v57;
+                    d68 = d57;
                 }
                 else {
-                    v79 = v80 + p79;
-                    d79 = d80;
+                    v68 = v80;
+                    d68 = d80;
                 }
             }
             else {
-                if (v69 > v68) {
-                    v79 = v68 + p79;
-                    d79 = d68;
+                if (v69 > v57) {
+                    v68 = v57;
+                    d68 = d57;
                 }
                 else {
-                    v79 = v69 + p79;
-                    d79 = d69;
+                    v68 = v69;
+                    d68 = d69;
                 }
             }
         }
-        if (m85 != null && m85.isPassable()){
-            p85 = 10 + switch(m85.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v58 > v80) {
+                if (v80 > v57) {
+                    v68 = v57;
+                    d68 = d57;
+                }
+                else {
+                    v68 = v80;
+                    d68 = d80;
+                }
+            }
+            else {
+                if (v58 > v57) {
+                    v68 = v57;
+                    d68 = d57;
+                }
+                else {
+                    v68 = v58;
+                    d68 = d58;
+                }
+            }
+        }
+        if (m68 == null || !m68.isPassable()) v68 += 1000000;
+        else v68 += 10 + switch(m68.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v62 > v73) {
             if (v73 > v84) {
-                if (v84 > v74) {
-                    v85 = v74 + p85;
-                    d85 = d74;
+                if (v84 > v63) {
+                    v74 = v63;
+                    d74 = d63;
                 }
                 else {
-                    v85 = v84 + p85;
-                    d85 = d84;
+                    v74 = v84;
+                    d74 = d84;
                 }
             }
             else {
-                if (v73 > v74) {
-                    v85 = v74 + p85;
-                    d85 = d74;
+                if (v73 > v63) {
+                    v74 = v63;
+                    d74 = d63;
                 }
                 else {
-                    v85 = v73 + p85;
-                    d85 = d73;
+                    v74 = v73;
+                    d74 = d73;
                 }
             }
         }
-        if (m91 != null && m91.isPassable()){
-            p91 = 10 + switch(m91.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v62 > v84) {
+                if (v84 > v63) {
+                    v74 = v63;
+                    d74 = d63;
+                }
+                else {
+                    v74 = v84;
+                    d74 = d84;
+                }
+            }
+            else {
+                if (v62 > v63) {
+                    v74 = v63;
+                    d74 = d63;
+                }
+                else {
+                    v74 = v62;
+                    d74 = d62;
+                }
+            }
+        }
+        if (m74 == null || !m74.isPassable()) v74 += 1000000;
+        else v74 += 10 + switch(m74.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v82 > v81) {
             if (v81 > v80) {
-                if (v80 > v92) {
-                    if (v92 > v79) {
-                        v91 = v79 + p91;
-                        d91 = d79;
-                    }
-                    else {
-                        v91 = v92 + p91;
-                        d91 = d92;
-                    }
+                if (v80 > v93) {
+                    v92 = v93;
+                    d92 = d93;
                 }
                 else {
-                    if (v80 > v79) {
-                        v91 = v79 + p91;
-                        d91 = d79;
-                    }
-                    else {
-                        v91 = v80 + p91;
-                        d91 = d80;
-                    }
+                    v92 = v80;
+                    d92 = d80;
                 }
             }
             else {
-                if (v81 > v92) {
-                    if (v92 > v79) {
-                        v91 = v79 + p91;
-                        d91 = d79;
-                    }
-                    else {
-                        v91 = v92 + p91;
-                        d91 = d92;
-                    }
+                if (v81 > v93) {
+                    v92 = v93;
+                    d92 = d93;
                 }
                 else {
-                    if (v81 > v79) {
-                        v91 = v79 + p91;
-                        d91 = d79;
-                    }
-                    else {
-                        v91 = v81 + p91;
-                        d91 = d81;
-                    }
+                    v92 = v81;
+                    d92 = d81;
                 }
             }
         }
-        if (m95 != null && m95.isPassable()){
-            p95 = 10 + switch(m95.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v82 > v80) {
+                if (v80 > v93) {
+                    v92 = v93;
+                    d92 = d93;
+                }
+                else {
+                    v92 = v80;
+                    d92 = d80;
+                }
+            }
+            else {
+                if (v82 > v93) {
+                    v92 = v93;
+                    d92 = d93;
+                }
+                else {
+                    v92 = v82;
+                    d92 = d82;
+                }
+            }
+        }
+        if (m92 == null || !m92.isPassable()) v92 += 1000000;
+        else v92 += 10 + switch(m92.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v82 > v83) {
             if (v83 > v84) {
-                if (v84 > v94) {
-                    if (v94 > v85) {
-                        v95 = v85 + p95;
-                        d95 = d85;
-                    }
-                    else {
-                        v95 = v94 + p95;
-                        d95 = d94;
-                    }
+                if (v84 > v93) {
+                    v94 = v93;
+                    d94 = d93;
                 }
                 else {
-                    if (v84 > v85) {
-                        v95 = v85 + p95;
-                        d95 = d85;
-                    }
-                    else {
-                        v95 = v84 + p95;
-                        d95 = d84;
-                    }
+                    v94 = v84;
+                    d94 = d84;
                 }
             }
             else {
-                if (v83 > v94) {
-                    if (v94 > v85) {
-                        v95 = v85 + p95;
-                        d95 = d85;
-                    }
-                    else {
-                        v95 = v94 + p95;
-                        d95 = d94;
-                    }
+                if (v83 > v93) {
+                    v94 = v93;
+                    d94 = d93;
                 }
                 else {
-                    if (v83 > v85) {
-                        v95 = v85 + p95;
-                        d95 = d85;
-                    }
-                    else {
-                        v95 = v83 + p95;
-                        d95 = d83;
-                    }
+                    v94 = v83;
+                    d94 = d83;
                 }
             }
         }
-        if (m16 != null && m16.isPassable()){
-            p16 = 10 + switch(m16.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v27 > v26) {
-                if (v26 > v28) {
-                    v16 = v28 + p16;
-                    d16 = d28;
+        else {
+            if (v82 > v84) {
+                if (v84 > v93) {
+                    v94 = v93;
+                    d94 = d93;
                 }
                 else {
-                    v16 = v26 + p16;
-                    d16 = d26;
+                    v94 = v84;
+                    d94 = d84;
                 }
             }
             else {
-                if (v27 > v28) {
-                    v16 = v28 + p16;
-                    d16 = d28;
+                if (v82 > v93) {
+                    v94 = v93;
+                    d94 = d93;
                 }
                 else {
-                    v16 = v27 + p16;
-                    d16 = d27;
+                    v94 = v82;
+                    d94 = d82;
                 }
             }
         }
-        if (m56 != null && m56.isPassable()){
-            p56 = 10 + switch(m56.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v57 > v46) {
-                if (v46 > v68) {
-                    v56 = v68 + p56;
-                    d56 = d68;
+        if (m94 == null || !m94.isPassable()) v94 += 1000000;
+        else v94 += 10 + switch(m94.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v37 > v36) {
+            if (v36 > v26) {
+                v25 = v26;
+                d25 = d26;
+            }
+            else {
+                v25 = v36;
+                d25 = d36;
+            }
+        }
+        else {
+            if (v37 > v26) {
+                v25 = v26;
+                d25 = d26;
+            }
+            else {
+                v25 = v37;
+                d25 = d37;
+            }
+        }
+        if (m25 == null || !m25.isPassable()) v25 += 1000000;
+        else v25 += 10 + switch(m25.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v39 > v40) {
+            if (v40 > v28) {
+                v29 = v28;
+                d29 = d28;
+            }
+            else {
+                v29 = v40;
+                d29 = d40;
+            }
+        }
+        else {
+            if (v39 > v28) {
+                v29 = v28;
+                d29 = d28;
+            }
+            else {
+                v29 = v39;
+                d29 = d39;
+            }
+        }
+        if (m29 == null || !m29.isPassable()) v29 += 1000000;
+        else v29 += 10 + switch(m29.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v47 > v36) {
+            if (v36 > v46) {
+                if (v46 > v25) {
+                    v35 = v25;
+                    d35 = d25;
                 }
                 else {
-                    v56 = v46 + p56;
-                    d56 = d46;
+                    v35 = v46;
+                    d35 = d46;
                 }
             }
             else {
-                if (v57 > v68) {
-                    v56 = v68 + p56;
-                    d56 = d68;
+                if (v36 > v25) {
+                    v35 = v25;
+                    d35 = d25;
                 }
                 else {
-                    v56 = v57 + p56;
-                    d56 = d57;
+                    v35 = v36;
+                    d35 = d36;
                 }
             }
         }
-        if (m64 != null && m64.isPassable()){
-            p64 = 10 + switch(m64.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v63 > v52) {
-                if (v52 > v74) {
-                    v64 = v74 + p64;
-                    d64 = d74;
+        else {
+            if (v47 > v46) {
+                if (v46 > v25) {
+                    v35 = v25;
+                    d35 = d25;
                 }
                 else {
-                    v64 = v52 + p64;
-                    d64 = d52;
+                    v35 = v46;
+                    d35 = d46;
                 }
             }
             else {
-                if (v63 > v74) {
-                    v64 = v74 + p64;
-                    d64 = d74;
+                if (v47 > v25) {
+                    v35 = v25;
+                    d35 = d25;
                 }
                 else {
-                    v64 = v63 + p64;
-                    d64 = d63;
+                    v35 = v47;
+                    d35 = d47;
                 }
             }
         }
-        if (m104 != null && m104.isPassable()){
-            p104 = 10 + switch(m104.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v93 > v94) {
-                if (v94 > v92) {
-                    v104 = v92 + p104;
-                    d104 = d92;
+        if (m35 == null || !m35.isPassable()) v35 += 1000000;
+        else v35 += 10 + switch(m35.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v51 > v40) {
+            if (v40 > v52) {
+                if (v52 > v29) {
+                    v41 = v29;
+                    d41 = d29;
                 }
                 else {
-                    v104 = v94 + p104;
-                    d104 = d94;
+                    v41 = v52;
+                    d41 = d52;
                 }
             }
             else {
-                if (v93 > v92) {
-                    v104 = v92 + p104;
-                    d104 = d92;
+                if (v40 > v29) {
+                    v41 = v29;
+                    d41 = d29;
                 }
                 else {
-                    v104 = v93 + p104;
-                    d104 = d93;
+                    v41 = v40;
+                    d41 = d40;
                 }
             }
         }
-        if (m15 != null && m15.isPassable()){
-            p15 = 10 + switch(m15.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v27 > v26) {
-                if (v26 > v25) {
-                    if (v25 > v16) {
-                        v15 = v16 + p15;
-                        d15 = d16;
-                    }
-                    else {
-                        v15 = v25 + p15;
-                        d15 = d25;
-                    }
+        else {
+            if (v51 > v52) {
+                if (v52 > v29) {
+                    v41 = v29;
+                    d41 = d29;
                 }
                 else {
-                    if (v26 > v16) {
-                        v15 = v16 + p15;
-                        d15 = d16;
-                    }
-                    else {
-                        v15 = v26 + p15;
-                        d15 = d26;
-                    }
+                    v41 = v52;
+                    d41 = d52;
                 }
             }
             else {
-                if (v27 > v25) {
-                    if (v25 > v16) {
-                        v15 = v16 + p15;
-                        d15 = d16;
-                    }
-                    else {
-                        v15 = v25 + p15;
-                        d15 = d25;
-                    }
+                if (v51 > v29) {
+                    v41 = v29;
+                    d41 = d29;
                 }
                 else {
-                    if (v27 > v16) {
-                        v15 = v16 + p15;
-                        d15 = d16;
-                    }
-                    else {
-                        v15 = v27 + p15;
-                        d15 = d27;
-                    }
+                    v41 = v51;
+                    d41 = d51;
                 }
             }
         }
-        if (m17 != null && m17.isPassable()){
-            p17 = 10 + switch(m17.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v27 > v28) {
-                if (v28 > v29) {
-                    if (v29 > v16) {
-                        v17 = v16 + p17;
-                        d17 = d16;
-                    }
-                    else {
-                        v17 = v29 + p17;
-                        d17 = d29;
-                    }
-                }
-                else {
-                    if (v28 > v16) {
-                        v17 = v16 + p17;
-                        d17 = d16;
-                    }
-                    else {
-                        v17 = v28 + p17;
-                        d17 = d28;
-                    }
-                }
+        if (m41 == null || !m41.isPassable()) v41 += 1000000;
+        else v41 += 10 + switch(m41.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v69 > v80) {
+            if (v80 > v68) {
+                v79 = v68;
+                d79 = d68;
             }
             else {
-                if (v27 > v29) {
-                    if (v29 > v16) {
-                        v17 = v16 + p17;
-                        d17 = d16;
-                    }
-                    else {
-                        v17 = v29 + p17;
-                        d17 = d29;
-                    }
-                }
-                else {
-                    if (v27 > v16) {
-                        v17 = v16 + p17;
-                        d17 = d16;
-                    }
-                    else {
-                        v17 = v27 + p17;
-                        d17 = d27;
-                    }
-                }
+                v79 = v80;
+                d79 = d80;
             }
         }
-        if (m45 != null && m45.isPassable()){
-            p45 = 10 + switch(m45.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v57 > v46) {
-                if (v46 > v35) {
-                    if (v35 > v56) {
-                        v45 = v56 + p45;
-                        d45 = d56;
-                    }
-                    else {
-                        v45 = v35 + p45;
-                        d45 = d35;
-                    }
-                }
-                else {
-                    if (v46 > v56) {
-                        v45 = v56 + p45;
-                        d45 = d56;
-                    }
-                    else {
-                        v45 = v46 + p45;
-                        d45 = d46;
-                    }
-                }
+        else {
+            if (v69 > v68) {
+                v79 = v68;
+                d79 = d68;
             }
             else {
-                if (v57 > v35) {
-                    if (v35 > v56) {
-                        v45 = v56 + p45;
-                        d45 = d56;
-                    }
-                    else {
-                        v45 = v35 + p45;
-                        d45 = d35;
-                    }
-                }
-                else {
-                    if (v57 > v56) {
-                        v45 = v56 + p45;
-                        d45 = d56;
-                    }
-                    else {
-                        v45 = v57 + p45;
-                        d45 = d57;
-                    }
-                }
+                v79 = v69;
+                d79 = d69;
             }
         }
-        if (m53 != null && m53.isPassable()){
-            p53 = 10 + switch(m53.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v63 > v52) {
-                if (v52 > v41) {
-                    if (v41 > v64) {
-                        v53 = v64 + p53;
-                        d53 = d64;
-                    }
-                    else {
-                        v53 = v41 + p53;
-                        d53 = d41;
-                    }
-                }
-                else {
-                    if (v52 > v64) {
-                        v53 = v64 + p53;
-                        d53 = d64;
-                    }
-                    else {
-                        v53 = v52 + p53;
-                        d53 = d52;
-                    }
-                }
+        if (m79 == null || !m79.isPassable()) v79 += 1000000;
+        else v79 += 10 + switch(m79.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v73 > v84) {
+            if (v84 > v74) {
+                v85 = v74;
+                d85 = d74;
             }
             else {
-                if (v63 > v41) {
-                    if (v41 > v64) {
-                        v53 = v64 + p53;
-                        d53 = d64;
-                    }
-                    else {
-                        v53 = v41 + p53;
-                        d53 = d41;
-                    }
-                }
-                else {
-                    if (v63 > v64) {
-                        v53 = v64 + p53;
-                        d53 = d64;
-                    }
-                    else {
-                        v53 = v63 + p53;
-                        d53 = d63;
-                    }
-                }
+                v85 = v84;
+                d85 = d84;
             }
         }
-        if (m67 != null && m67.isPassable()){
-            p67 = 10 + switch(m67.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v57 > v68) {
-                if (v68 > v79) {
-                    if (v79 > v56) {
-                        v67 = v56 + p67;
-                        d67 = d56;
-                    }
-                    else {
-                        v67 = v79 + p67;
-                        d67 = d79;
-                    }
-                }
-                else {
-                    if (v68 > v56) {
-                        v67 = v56 + p67;
-                        d67 = d56;
-                    }
-                    else {
-                        v67 = v68 + p67;
-                        d67 = d68;
-                    }
-                }
+        else {
+            if (v73 > v74) {
+                v85 = v74;
+                d85 = d74;
             }
             else {
-                if (v57 > v79) {
-                    if (v79 > v56) {
-                        v67 = v56 + p67;
-                        d67 = d56;
-                    }
-                    else {
-                        v67 = v79 + p67;
-                        d67 = d79;
-                    }
-                }
-                else {
-                    if (v57 > v56) {
-                        v67 = v56 + p67;
-                        d67 = d56;
-                    }
-                    else {
-                        v67 = v57 + p67;
-                        d67 = d57;
-                    }
-                }
+                v85 = v73;
+                d85 = d73;
             }
         }
-        if (m75 != null && m75.isPassable()){
-            p75 = 10 + switch(m75.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v63 > v74) {
-                if (v74 > v85) {
-                    if (v85 > v64) {
-                        v75 = v64 + p75;
-                        d75 = d64;
-                    }
-                    else {
-                        v75 = v85 + p75;
-                        d75 = d85;
-                    }
+        if (m85 == null || !m85.isPassable()) v85 += 1000000;
+        else v85 += 10 + switch(m85.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v81 > v80) {
+            if (v80 > v92) {
+                if (v92 > v79) {
+                    v91 = v79;
+                    d91 = d79;
                 }
                 else {
-                    if (v74 > v64) {
-                        v75 = v64 + p75;
-                        d75 = d64;
-                    }
-                    else {
-                        v75 = v74 + p75;
-                        d75 = d74;
-                    }
-                }
-            }
-            else {
-                if (v63 > v85) {
-                    if (v85 > v64) {
-                        v75 = v64 + p75;
-                        d75 = d64;
-                    }
-                    else {
-                        v75 = v85 + p75;
-                        d75 = d85;
-                    }
-                }
-                else {
-                    if (v63 > v64) {
-                        v75 = v64 + p75;
-                        d75 = d64;
-                    }
-                    else {
-                        v75 = v63 + p75;
-                        d75 = d63;
-                    }
-                }
-            }
-        }
-        if (m103 != null && m103.isPassable()){
-            p103 = 10 + switch(m103.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v93 > v92) {
-                if (v92 > v91) {
-                    if (v91 > v104) {
-                        v103 = v104 + p103;
-                        d103 = d104;
-                    }
-                    else {
-                        v103 = v91 + p103;
-                        d103 = d91;
-                    }
-                }
-                else {
-                    if (v92 > v104) {
-                        v103 = v104 + p103;
-                        d103 = d104;
-                    }
-                    else {
-                        v103 = v92 + p103;
-                        d103 = d92;
-                    }
-                }
-            }
-            else {
-                if (v93 > v91) {
-                    if (v91 > v104) {
-                        v103 = v104 + p103;
-                        d103 = d104;
-                    }
-                    else {
-                        v103 = v91 + p103;
-                        d103 = d91;
-                    }
-                }
-                else {
-                    if (v93 > v104) {
-                        v103 = v104 + p103;
-                        d103 = d104;
-                    }
-                    else {
-                        v103 = v93 + p103;
-                        d103 = d93;
-                    }
-                }
-            }
-        }
-        if (m105 != null && m105.isPassable()){
-            p105 = 10 + switch(m105.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v93 > v94) {
-                if (v94 > v95) {
-                    if (v95 > v104) {
-                        v105 = v104 + p105;
-                        d105 = d104;
-                    }
-                    else {
-                        v105 = v95 + p105;
-                        d105 = d95;
-                    }
-                }
-                else {
-                    if (v94 > v104) {
-                        v105 = v104 + p105;
-                        d105 = d104;
-                    }
-                    else {
-                        v105 = v94 + p105;
-                        d105 = d94;
-                    }
-                }
-            }
-            else {
-                if (v93 > v95) {
-                    if (v95 > v104) {
-                        v105 = v104 + p105;
-                        d105 = d104;
-                    }
-                    else {
-                        v105 = v95 + p105;
-                        d105 = d95;
-                    }
-                }
-                else {
-                    if (v93 > v104) {
-                        v105 = v104 + p105;
-                        d105 = d104;
-                    }
-                    else {
-                        v105 = v93 + p105;
-                        d105 = d93;
-                    }
-                }
-            }
-        }
-        if (m24 != null && m24.isPassable()){
-            p24 = 10 + switch(m24.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v36 > v25) {
-                if (v25 > v35) {
-                    v24 = v35 + p24;
-                    d24 = d35;
-                }
-                else {
-                    v24 = v25 + p24;
-                    d24 = d25;
-                }
-            }
-            else {
-                if (v36 > v35) {
-                    v24 = v35 + p24;
-                    d24 = d35;
-                }
-                else {
-                    v24 = v36 + p24;
-                    d24 = d36;
-                }
-            }
-        }
-        if (m30 != null && m30.isPassable()){
-            p30 = 10 + switch(m30.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v40 > v29) {
-                if (v29 > v41) {
-                    v30 = v41 + p30;
-                    d30 = d41;
-                }
-                else {
-                    v30 = v29 + p30;
-                    d30 = d29;
-                }
-            }
-            else {
-                if (v40 > v41) {
-                    v30 = v41 + p30;
-                    d30 = d41;
-                }
-                else {
-                    v30 = v40 + p30;
-                    d30 = d40;
-                }
-            }
-        }
-        if (m90 != null && m90.isPassable()){
-            p90 = 10 + switch(m90.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v80 > v91) {
-                if (v91 > v79) {
-                    v90 = v79 + p90;
-                    d90 = d79;
-                }
-                else {
-                    v90 = v91 + p90;
-                    d90 = d91;
+                    v91 = v92;
+                    d91 = d92;
                 }
             }
             else {
                 if (v80 > v79) {
-                    v90 = v79 + p90;
-                    d90 = d79;
+                    v91 = v79;
+                    d91 = d79;
                 }
                 else {
-                    v90 = v80 + p90;
-                    d90 = d80;
+                    v91 = v80;
+                    d91 = d80;
                 }
             }
         }
-        if (m96 != null && m96.isPassable()){
-            p96 = 10 + switch(m96.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
-            if (v84 > v85) {
-                if (v85 > v95) {
-                    v96 = v95 + p96;
-                    d96 = d95;
+        else {
+            if (v81 > v92) {
+                if (v92 > v79) {
+                    v91 = v79;
+                    d91 = d79;
                 }
                 else {
-                    v96 = v85 + p96;
-                    d96 = d85;
+                    v91 = v92;
+                    d91 = d92;
                 }
             }
             else {
-                if (v84 > v95) {
-                    v96 = v95 + p96;
-                    d96 = d95;
+                if (v81 > v79) {
+                    v91 = v79;
+                    d91 = d79;
                 }
                 else {
-                    v96 = v84 + p96;
-                    d96 = d84;
+                    v91 = v81;
+                    d91 = d81;
                 }
             }
         }
-        if (m14 != null && m14.isPassable()){
-            p14 = 10 + switch(m14.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        if (m91 == null || !m91.isPassable()) v91 += 1000000;
+        else v91 += 10 + switch(m91.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v83 > v84) {
+            if (v84 > v94) {
+                if (v94 > v85) {
+                    v95 = v85;
+                    d95 = d85;
+                }
+                else {
+                    v95 = v94;
+                    d95 = d94;
+                }
+            }
+            else {
+                if (v84 > v85) {
+                    v95 = v85;
+                    d95 = d85;
+                }
+                else {
+                    v95 = v84;
+                    d95 = d84;
+                }
+            }
+        }
+        else {
+            if (v83 > v94) {
+                if (v94 > v85) {
+                    v95 = v85;
+                    d95 = d85;
+                }
+                else {
+                    v95 = v94;
+                    d95 = d94;
+                }
+            }
+            else {
+                if (v83 > v85) {
+                    v95 = v85;
+                    d95 = d85;
+                }
+                else {
+                    v95 = v83;
+                    d95 = d83;
+                }
+            }
+        }
+        if (m95 == null || !m95.isPassable()) v95 += 1000000;
+        else v95 += 10 + switch(m95.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v27 > v26) {
+            if (v26 > v28) {
+                v16 = v28;
+                d16 = d28;
+            }
+            else {
+                v16 = v26;
+                d16 = d26;
+            }
+        }
+        else {
+            if (v27 > v28) {
+                v16 = v28;
+                d16 = d28;
+            }
+            else {
+                v16 = v27;
+                d16 = d27;
+            }
+        }
+        if (m16 == null || !m16.isPassable()) v16 += 1000000;
+        else v16 += 10 + switch(m16.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v57 > v46) {
+            if (v46 > v68) {
+                v56 = v68;
+                d56 = d68;
+            }
+            else {
+                v56 = v46;
+                d56 = d46;
+            }
+        }
+        else {
+            if (v57 > v68) {
+                v56 = v68;
+                d56 = d68;
+            }
+            else {
+                v56 = v57;
+                d56 = d57;
+            }
+        }
+        if (m56 == null || !m56.isPassable()) v56 += 1000000;
+        else v56 += 10 + switch(m56.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v63 > v52) {
+            if (v52 > v74) {
+                v64 = v74;
+                d64 = d74;
+            }
+            else {
+                v64 = v52;
+                d64 = d52;
+            }
+        }
+        else {
+            if (v63 > v74) {
+                v64 = v74;
+                d64 = d74;
+            }
+            else {
+                v64 = v63;
+                d64 = d63;
+            }
+        }
+        if (m64 == null || !m64.isPassable()) v64 += 1000000;
+        else v64 += 10 + switch(m64.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v93 > v94) {
+            if (v94 > v92) {
+                v104 = v92;
+                d104 = d92;
+            }
+            else {
+                v104 = v94;
+                d104 = d94;
+            }
+        }
+        else {
+            if (v93 > v92) {
+                v104 = v92;
+                d104 = d92;
+            }
+            else {
+                v104 = v93;
+                d104 = d93;
+            }
+        }
+        if (m104 == null || !m104.isPassable()) v104 += 1000000;
+        else v104 += 10 + switch(m104.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v27 > v26) {
             if (v26 > v25) {
-                if (v25 > v15) {
-                    if (v15 > v24) {
-                        v14 = v24 + p14;
-                        d14 = d24;
-                    }
-                    else {
-                        v14 = v15 + p14;
-                        d14 = d15;
-                    }
+                if (v25 > v16) {
+                    v15 = v16;
+                    d15 = d16;
                 }
                 else {
-                    if (v25 > v24) {
-                        v14 = v24 + p14;
-                        d14 = d24;
-                    }
-                    else {
-                        v14 = v25 + p14;
-                        d14 = d25;
-                    }
+                    v15 = v25;
+                    d15 = d25;
                 }
             }
             else {
-                if (v26 > v15) {
-                    if (v15 > v24) {
-                        v14 = v24 + p14;
-                        d14 = d24;
-                    }
-                    else {
-                        v14 = v15 + p14;
-                        d14 = d15;
-                    }
+                if (v26 > v16) {
+                    v15 = v16;
+                    d15 = d16;
                 }
                 else {
-                    if (v26 > v24) {
-                        v14 = v24 + p14;
-                        d14 = d24;
-                    }
-                    else {
-                        v14 = v26 + p14;
-                        d14 = d26;
-                    }
+                    v15 = v26;
+                    d15 = d26;
                 }
             }
         }
-        if (m18 != null && m18.isPassable()){
-            p18 = 10 + switch(m18.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v27 > v25) {
+                if (v25 > v16) {
+                    v15 = v16;
+                    d15 = d16;
+                }
+                else {
+                    v15 = v25;
+                    d15 = d25;
+                }
+            }
+            else {
+                if (v27 > v16) {
+                    v15 = v16;
+                    d15 = d16;
+                }
+                else {
+                    v15 = v27;
+                    d15 = d27;
+                }
+            }
+        }
+        if (m15 == null || !m15.isPassable()) v15 += 1000000;
+        else v15 += 10 + switch(m15.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v27 > v28) {
             if (v28 > v29) {
-                if (v29 > v17) {
-                    if (v17 > v30) {
-                        v18 = v30 + p18;
-                        d18 = d30;
-                    }
-                    else {
-                        v18 = v17 + p18;
-                        d18 = d17;
-                    }
+                if (v29 > v16) {
+                    v17 = v16;
+                    d17 = d16;
                 }
                 else {
-                    if (v29 > v30) {
-                        v18 = v30 + p18;
-                        d18 = d30;
-                    }
-                    else {
-                        v18 = v29 + p18;
-                        d18 = d29;
-                    }
+                    v17 = v29;
+                    d17 = d29;
                 }
             }
             else {
-                if (v28 > v17) {
-                    if (v17 > v30) {
-                        v18 = v30 + p18;
-                        d18 = d30;
-                    }
-                    else {
-                        v18 = v17 + p18;
-                        d18 = d17;
-                    }
+                if (v28 > v16) {
+                    v17 = v16;
+                    d17 = d16;
                 }
                 else {
-                    if (v28 > v30) {
-                        v18 = v30 + p18;
-                        d18 = d30;
-                    }
-                    else {
-                        v18 = v28 + p18;
-                        d18 = d28;
-                    }
+                    v17 = v28;
+                    d17 = d28;
                 }
             }
         }
-        if (m34 != null && m34.isPassable()){
-            p34 = 10 + switch(m34.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v27 > v29) {
+                if (v29 > v16) {
+                    v17 = v16;
+                    d17 = d16;
+                }
+                else {
+                    v17 = v29;
+                    d17 = d29;
+                }
+            }
+            else {
+                if (v27 > v16) {
+                    v17 = v16;
+                    d17 = d16;
+                }
+                else {
+                    v17 = v27;
+                    d17 = d27;
+                }
+            }
+        }
+        if (m17 == null || !m17.isPassable()) v17 += 1000000;
+        else v17 += 10 + switch(m17.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v57 > v46) {
             if (v46 > v35) {
-                if (v35 > v45) {
-                    if (v45 > v24) {
-                        v34 = v24 + p34;
-                        d34 = d24;
-                    }
-                    else {
-                        v34 = v45 + p34;
-                        d34 = d45;
-                    }
+                if (v35 > v56) {
+                    v45 = v56;
+                    d45 = d56;
                 }
                 else {
-                    if (v35 > v24) {
-                        v34 = v24 + p34;
-                        d34 = d24;
-                    }
-                    else {
-                        v34 = v35 + p34;
-                        d34 = d35;
-                    }
+                    v45 = v35;
+                    d45 = d35;
                 }
             }
             else {
-                if (v46 > v45) {
-                    if (v45 > v24) {
-                        v34 = v24 + p34;
-                        d34 = d24;
-                    }
-                    else {
-                        v34 = v45 + p34;
-                        d34 = d45;
-                    }
+                if (v46 > v56) {
+                    v45 = v56;
+                    d45 = d56;
                 }
                 else {
-                    if (v46 > v24) {
-                        v34 = v24 + p34;
-                        d34 = d24;
-                    }
-                    else {
-                        v34 = v46 + p34;
-                        d34 = d46;
-                    }
+                    v45 = v46;
+                    d45 = d46;
                 }
             }
         }
-        if (m42 != null && m42.isPassable()){
-            p42 = 10 + switch(m42.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v57 > v35) {
+                if (v35 > v56) {
+                    v45 = v56;
+                    d45 = d56;
+                }
+                else {
+                    v45 = v35;
+                    d45 = d35;
+                }
+            }
+            else {
+                if (v57 > v56) {
+                    v45 = v56;
+                    d45 = d56;
+                }
+                else {
+                    v45 = v57;
+                    d45 = d57;
+                }
+            }
+        }
+        if (m45 == null || !m45.isPassable()) v45 += 1000000;
+        else v45 += 10 + switch(m45.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v63 > v52) {
             if (v52 > v41) {
-                if (v41 > v53) {
-                    if (v53 > v30) {
-                        v42 = v30 + p42;
-                        d42 = d30;
-                    }
-                    else {
-                        v42 = v53 + p42;
-                        d42 = d53;
-                    }
+                if (v41 > v64) {
+                    v53 = v64;
+                    d53 = d64;
                 }
                 else {
-                    if (v41 > v30) {
-                        v42 = v30 + p42;
-                        d42 = d30;
-                    }
-                    else {
-                        v42 = v41 + p42;
-                        d42 = d41;
-                    }
+                    v53 = v41;
+                    d53 = d41;
                 }
             }
             else {
-                if (v52 > v53) {
-                    if (v53 > v30) {
-                        v42 = v30 + p42;
-                        d42 = d30;
-                    }
-                    else {
-                        v42 = v53 + p42;
-                        d42 = d53;
-                    }
+                if (v52 > v64) {
+                    v53 = v64;
+                    d53 = d64;
                 }
                 else {
-                    if (v52 > v30) {
-                        v42 = v30 + p42;
-                        d42 = d30;
-                    }
-                    else {
-                        v42 = v52 + p42;
-                        d42 = d52;
-                    }
+                    v53 = v52;
+                    d53 = d52;
                 }
             }
         }
-        if (m78 != null && m78.isPassable()){
-            p78 = 10 + switch(m78.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v63 > v41) {
+                if (v41 > v64) {
+                    v53 = v64;
+                    d53 = d64;
+                }
+                else {
+                    v53 = v41;
+                    d53 = d41;
+                }
+            }
+            else {
+                if (v63 > v64) {
+                    v53 = v64;
+                    d53 = d64;
+                }
+                else {
+                    v53 = v63;
+                    d53 = d63;
+                }
+            }
+        }
+        if (m53 == null || !m53.isPassable()) v53 += 1000000;
+        else v53 += 10 + switch(m53.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v57 > v68) {
             if (v68 > v79) {
-                if (v79 > v67) {
-                    if (v67 > v90) {
-                        v78 = v90 + p78;
-                        d78 = d90;
-                    }
-                    else {
-                        v78 = v67 + p78;
-                        d78 = d67;
-                    }
+                if (v79 > v56) {
+                    v67 = v56;
+                    d67 = d56;
                 }
                 else {
-                    if (v79 > v90) {
-                        v78 = v90 + p78;
-                        d78 = d90;
-                    }
-                    else {
-                        v78 = v79 + p78;
-                        d78 = d79;
-                    }
+                    v67 = v79;
+                    d67 = d79;
                 }
             }
             else {
-                if (v68 > v67) {
-                    if (v67 > v90) {
-                        v78 = v90 + p78;
-                        d78 = d90;
-                    }
-                    else {
-                        v78 = v67 + p78;
-                        d78 = d67;
-                    }
+                if (v68 > v56) {
+                    v67 = v56;
+                    d67 = d56;
                 }
                 else {
-                    if (v68 > v90) {
-                        v78 = v90 + p78;
-                        d78 = d90;
-                    }
-                    else {
-                        v78 = v68 + p78;
-                        d78 = d68;
-                    }
+                    v67 = v68;
+                    d67 = d68;
                 }
             }
         }
-        if (m86 != null && m86.isPassable()){
-            p86 = 10 + switch(m86.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v57 > v79) {
+                if (v79 > v56) {
+                    v67 = v56;
+                    d67 = d56;
+                }
+                else {
+                    v67 = v79;
+                    d67 = d79;
+                }
+            }
+            else {
+                if (v57 > v56) {
+                    v67 = v56;
+                    d67 = d56;
+                }
+                else {
+                    v67 = v57;
+                    d67 = d57;
+                }
+            }
+        }
+        if (m67 == null || !m67.isPassable()) v67 += 1000000;
+        else v67 += 10 + switch(m67.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v63 > v74) {
             if (v74 > v85) {
-                if (v85 > v75) {
-                    if (v75 > v96) {
-                        v86 = v96 + p86;
-                        d86 = d96;
-                    }
-                    else {
-                        v86 = v75 + p86;
-                        d86 = d75;
-                    }
+                if (v85 > v64) {
+                    v75 = v64;
+                    d75 = d64;
                 }
                 else {
-                    if (v85 > v96) {
-                        v86 = v96 + p86;
-                        d86 = d96;
-                    }
-                    else {
-                        v86 = v85 + p86;
-                        d86 = d85;
-                    }
+                    v75 = v85;
+                    d75 = d85;
                 }
             }
             else {
-                if (v74 > v75) {
-                    if (v75 > v96) {
-                        v86 = v96 + p86;
-                        d86 = d96;
-                    }
-                    else {
-                        v86 = v75 + p86;
-                        d86 = d75;
-                    }
+                if (v74 > v64) {
+                    v75 = v64;
+                    d75 = d64;
                 }
                 else {
-                    if (v74 > v96) {
-                        v86 = v96 + p86;
-                        d86 = d96;
-                    }
-                    else {
-                        v86 = v74 + p86;
-                        d86 = d74;
-                    }
+                    v75 = v74;
+                    d75 = d74;
                 }
             }
         }
-        if (m102 != null && m102.isPassable()){
-            p102 = 10 + switch(m102.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v63 > v85) {
+                if (v85 > v64) {
+                    v75 = v64;
+                    d75 = d64;
+                }
+                else {
+                    v75 = v85;
+                    d75 = d85;
+                }
+            }
+            else {
+                if (v63 > v64) {
+                    v75 = v64;
+                    d75 = d64;
+                }
+                else {
+                    v75 = v63;
+                    d75 = d63;
+                }
+            }
+        }
+        if (m75 == null || !m75.isPassable()) v75 += 1000000;
+        else v75 += 10 + switch(m75.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v93 > v92) {
             if (v92 > v91) {
-                if (v91 > v103) {
-                    if (v103 > v90) {
-                        v102 = v90 + p102;
-                        d102 = d90;
-                    }
-                    else {
-                        v102 = v103 + p102;
-                        d102 = d103;
-                    }
+                if (v91 > v104) {
+                    v103 = v104;
+                    d103 = d104;
                 }
                 else {
-                    if (v91 > v90) {
-                        v102 = v90 + p102;
-                        d102 = d90;
-                    }
-                    else {
-                        v102 = v91 + p102;
-                        d102 = d91;
-                    }
+                    v103 = v91;
+                    d103 = d91;
                 }
             }
             else {
-                if (v92 > v103) {
-                    if (v103 > v90) {
-                        v102 = v90 + p102;
-                        d102 = d90;
-                    }
-                    else {
-                        v102 = v103 + p102;
-                        d102 = d103;
-                    }
+                if (v92 > v104) {
+                    v103 = v104;
+                    d103 = d104;
                 }
                 else {
-                    if (v92 > v90) {
-                        v102 = v90 + p102;
-                        d102 = d90;
-                    }
-                    else {
-                        v102 = v92 + p102;
-                        d102 = d92;
-                    }
+                    v103 = v92;
+                    d103 = d92;
                 }
             }
         }
-        if (m106 != null && m106.isPassable()){
-            p106 = 10 + switch(m106.getPaint()){
-                case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
-                case EMPTY -> 5;
-                default -> 0;
-            };
+        else {
+            if (v93 > v91) {
+                if (v91 > v104) {
+                    v103 = v104;
+                    d103 = d104;
+                }
+                else {
+                    v103 = v91;
+                    d103 = d91;
+                }
+            }
+            else {
+                if (v93 > v104) {
+                    v103 = v104;
+                    d103 = d104;
+                }
+                else {
+                    v103 = v93;
+                    d103 = d93;
+                }
+            }
+        }
+        if (m103 == null || !m103.isPassable()) v103 += 1000000;
+        else v103 += 10 + switch(m103.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v93 > v94) {
             if (v94 > v95) {
-                if (v95 > v105) {
-                    if (v105 > v96) {
-                        v106 = v96 + p106;
-                        d106 = d96;
-                    }
-                    else {
-                        v106 = v105 + p106;
-                        d106 = d105;
-                    }
+                if (v95 > v104) {
+                    v105 = v104;
+                    d105 = d104;
                 }
                 else {
-                    if (v95 > v96) {
-                        v106 = v96 + p106;
-                        d106 = d96;
-                    }
-                    else {
-                        v106 = v95 + p106;
-                        d106 = d95;
-                    }
+                    v105 = v95;
+                    d105 = d95;
                 }
             }
             else {
-                if (v94 > v105) {
-                    if (v105 > v96) {
-                        v106 = v96 + p106;
-                        d106 = d96;
-                    }
-                    else {
-                        v106 = v105 + p106;
-                        d106 = d105;
-                    }
+                if (v94 > v104) {
+                    v105 = v104;
+                    d105 = d104;
                 }
                 else {
-                    if (v94 > v96) {
-                        v106 = v96 + p106;
-                        d106 = d96;
-                    }
-                    else {
-                        v106 = v94 + p106;
-                        d106 = d94;
-                    }
+                    v105 = v94;
+                    d105 = d94;
                 }
             }
         }
+        else {
+            if (v93 > v95) {
+                if (v95 > v104) {
+                    v105 = v104;
+                    d105 = d104;
+                }
+                else {
+                    v105 = v95;
+                    d105 = d95;
+                }
+            }
+            else {
+                if (v93 > v104) {
+                    v105 = v104;
+                    d105 = d104;
+                }
+                else {
+                    v105 = v93;
+                    d105 = d93;
+                }
+            }
+        }
+        if (m105 == null || !m105.isPassable()) v105 += 1000000;
+        else v105 += 10 + switch(m105.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v36 > v25) {
+            if (v25 > v35) {
+                v24 = v35;
+                d24 = d35;
+            }
+            else {
+                v24 = v25;
+                d24 = d25;
+            }
+        }
+        else {
+            if (v36 > v35) {
+                v24 = v35;
+                d24 = d35;
+            }
+            else {
+                v24 = v36;
+                d24 = d36;
+            }
+        }
+        if (m24 == null || !m24.isPassable()) v24 += 1000000;
+        else v24 += 10 + switch(m24.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v40 > v29) {
+            if (v29 > v41) {
+                v30 = v41;
+                d30 = d41;
+            }
+            else {
+                v30 = v29;
+                d30 = d29;
+            }
+        }
+        else {
+            if (v40 > v41) {
+                v30 = v41;
+                d30 = d41;
+            }
+            else {
+                v30 = v40;
+                d30 = d40;
+            }
+        }
+        if (m30 == null || !m30.isPassable()) v30 += 1000000;
+        else v30 += 10 + switch(m30.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v80 > v91) {
+            if (v91 > v79) {
+                v90 = v79;
+                d90 = d79;
+            }
+            else {
+                v90 = v91;
+                d90 = d91;
+            }
+        }
+        else {
+            if (v80 > v79) {
+                v90 = v79;
+                d90 = d79;
+            }
+            else {
+                v90 = v80;
+                d90 = d80;
+            }
+        }
+        if (m90 == null || !m90.isPassable()) v90 += 1000000;
+        else v90 += 10 + switch(m90.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v84 > v85) {
+            if (v85 > v95) {
+                v96 = v95;
+                d96 = d95;
+            }
+            else {
+                v96 = v85;
+                d96 = d85;
+            }
+        }
+        else {
+            if (v84 > v95) {
+                v96 = v95;
+                d96 = d95;
+            }
+            else {
+                v96 = v84;
+                d96 = d84;
+            }
+        }
+        if (m96 == null || !m96.isPassable()) v96 += 1000000;
+        else v96 += 10 + switch(m96.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v26 > v25) {
+            if (v25 > v15) {
+                if (v15 > v24) {
+                    v14 = v24;
+                    d14 = d24;
+                }
+                else {
+                    v14 = v15;
+                    d14 = d15;
+                }
+            }
+            else {
+                if (v25 > v24) {
+                    v14 = v24;
+                    d14 = d24;
+                }
+                else {
+                    v14 = v25;
+                    d14 = d25;
+                }
+            }
+        }
+        else {
+            if (v26 > v15) {
+                if (v15 > v24) {
+                    v14 = v24;
+                    d14 = d24;
+                }
+                else {
+                    v14 = v15;
+                    d14 = d15;
+                }
+            }
+            else {
+                if (v26 > v24) {
+                    v14 = v24;
+                    d14 = d24;
+                }
+                else {
+                    v14 = v26;
+                    d14 = d26;
+                }
+            }
+        }
+        if (m14 == null || !m14.isPassable()) v14 += 1000000;
+        else v14 += 10 + switch(m14.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v28 > v29) {
+            if (v29 > v17) {
+                if (v17 > v30) {
+                    v18 = v30;
+                    d18 = d30;
+                }
+                else {
+                    v18 = v17;
+                    d18 = d17;
+                }
+            }
+            else {
+                if (v29 > v30) {
+                    v18 = v30;
+                    d18 = d30;
+                }
+                else {
+                    v18 = v29;
+                    d18 = d29;
+                }
+            }
+        }
+        else {
+            if (v28 > v17) {
+                if (v17 > v30) {
+                    v18 = v30;
+                    d18 = d30;
+                }
+                else {
+                    v18 = v17;
+                    d18 = d17;
+                }
+            }
+            else {
+                if (v28 > v30) {
+                    v18 = v30;
+                    d18 = d30;
+                }
+                else {
+                    v18 = v28;
+                    d18 = d28;
+                }
+            }
+        }
+        if (m18 == null || !m18.isPassable()) v18 += 1000000;
+        else v18 += 10 + switch(m18.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v46 > v35) {
+            if (v35 > v45) {
+                if (v45 > v24) {
+                    v34 = v24;
+                    d34 = d24;
+                }
+                else {
+                    v34 = v45;
+                    d34 = d45;
+                }
+            }
+            else {
+                if (v35 > v24) {
+                    v34 = v24;
+                    d34 = d24;
+                }
+                else {
+                    v34 = v35;
+                    d34 = d35;
+                }
+            }
+        }
+        else {
+            if (v46 > v45) {
+                if (v45 > v24) {
+                    v34 = v24;
+                    d34 = d24;
+                }
+                else {
+                    v34 = v45;
+                    d34 = d45;
+                }
+            }
+            else {
+                if (v46 > v24) {
+                    v34 = v24;
+                    d34 = d24;
+                }
+                else {
+                    v34 = v46;
+                    d34 = d46;
+                }
+            }
+        }
+        if (m34 == null || !m34.isPassable()) v34 += 1000000;
+        else v34 += 10 + switch(m34.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v52 > v41) {
+            if (v41 > v53) {
+                if (v53 > v30) {
+                    v42 = v30;
+                    d42 = d30;
+                }
+                else {
+                    v42 = v53;
+                    d42 = d53;
+                }
+            }
+            else {
+                if (v41 > v30) {
+                    v42 = v30;
+                    d42 = d30;
+                }
+                else {
+                    v42 = v41;
+                    d42 = d41;
+                }
+            }
+        }
+        else {
+            if (v52 > v53) {
+                if (v53 > v30) {
+                    v42 = v30;
+                    d42 = d30;
+                }
+                else {
+                    v42 = v53;
+                    d42 = d53;
+                }
+            }
+            else {
+                if (v52 > v30) {
+                    v42 = v30;
+                    d42 = d30;
+                }
+                else {
+                    v42 = v52;
+                    d42 = d52;
+                }
+            }
+        }
+        if (m42 == null || !m42.isPassable()) v42 += 1000000;
+        else v42 += 10 + switch(m42.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v68 > v79) {
+            if (v79 > v67) {
+                if (v67 > v90) {
+                    v78 = v90;
+                    d78 = d90;
+                }
+                else {
+                    v78 = v67;
+                    d78 = d67;
+                }
+            }
+            else {
+                if (v79 > v90) {
+                    v78 = v90;
+                    d78 = d90;
+                }
+                else {
+                    v78 = v79;
+                    d78 = d79;
+                }
+            }
+        }
+        else {
+            if (v68 > v67) {
+                if (v67 > v90) {
+                    v78 = v90;
+                    d78 = d90;
+                }
+                else {
+                    v78 = v67;
+                    d78 = d67;
+                }
+            }
+            else {
+                if (v68 > v90) {
+                    v78 = v90;
+                    d78 = d90;
+                }
+                else {
+                    v78 = v68;
+                    d78 = d68;
+                }
+            }
+        }
+        if (m78 == null || !m78.isPassable()) v78 += 1000000;
+        else v78 += 10 + switch(m78.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v74 > v85) {
+            if (v85 > v75) {
+                if (v75 > v96) {
+                    v86 = v96;
+                    d86 = d96;
+                }
+                else {
+                    v86 = v75;
+                    d86 = d75;
+                }
+            }
+            else {
+                if (v85 > v96) {
+                    v86 = v96;
+                    d86 = d96;
+                }
+                else {
+                    v86 = v85;
+                    d86 = d85;
+                }
+            }
+        }
+        else {
+            if (v74 > v75) {
+                if (v75 > v96) {
+                    v86 = v96;
+                    d86 = d96;
+                }
+                else {
+                    v86 = v75;
+                    d86 = d75;
+                }
+            }
+            else {
+                if (v74 > v96) {
+                    v86 = v96;
+                    d86 = d96;
+                }
+                else {
+                    v86 = v74;
+                    d86 = d74;
+                }
+            }
+        }
+        if (m86 == null || !m86.isPassable()) v86 += 1000000;
+        else v86 += 10 + switch(m86.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v92 > v91) {
+            if (v91 > v103) {
+                if (v103 > v90) {
+                    v102 = v90;
+                    d102 = d90;
+                }
+                else {
+                    v102 = v103;
+                    d102 = d103;
+                }
+            }
+            else {
+                if (v91 > v90) {
+                    v102 = v90;
+                    d102 = d90;
+                }
+                else {
+                    v102 = v91;
+                    d102 = d91;
+                }
+            }
+        }
+        else {
+            if (v92 > v103) {
+                if (v103 > v90) {
+                    v102 = v90;
+                    d102 = d90;
+                }
+                else {
+                    v102 = v103;
+                    d102 = d103;
+                }
+            }
+            else {
+                if (v92 > v90) {
+                    v102 = v90;
+                    d102 = d90;
+                }
+                else {
+                    v102 = v92;
+                    d102 = d92;
+                }
+            }
+        }
+        if (m102 == null || !m102.isPassable()) v102 += 1000000;
+        else v102 += 10 + switch(m102.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
+        if (v94 > v95) {
+            if (v95 > v105) {
+                if (v105 > v96) {
+                    v106 = v96;
+                    d106 = d96;
+                }
+                else {
+                    v106 = v105;
+                    d106 = d105;
+                }
+            }
+            else {
+                if (v95 > v96) {
+                    v106 = v96;
+                    d106 = d96;
+                }
+                else {
+                    v106 = v95;
+                    d106 = d95;
+                }
+            }
+        }
+        else {
+            if (v94 > v105) {
+                if (v105 > v96) {
+                    v106 = v96;
+                    d106 = d96;
+                }
+                else {
+                    v106 = v105;
+                    d106 = d105;
+                }
+            }
+            else {
+                if (v94 > v96) {
+                    v106 = v96;
+                    d106 = d96;
+                }
+                else {
+                    v106 = v94;
+                    d106 = d94;
+                }
+            }
+        }
+        if (m106 == null || !m106.isPassable()) v106 += 1000000;
+        else v106 += 10 + switch(m106.getPaint()){
+            case ENEMY_PRIMARY, ENEMY_SECONDARY -> 10;
+            case EMPTY -> 5;
+            default -> 0;
+        };
     }
 
     static Direction getBestDirection(MapLocation target){
+        if (rc.getLocation().distanceSquaredTo(target) <= 20 && computeDistance(target) > Constants.DIST_INF) return null;
+        if (rc.getLocation().distanceSquaredTo(target) <= 2) return MovementManager.canMove(rc.getLocation().directionTo(target)) ? rc.getLocation().directionTo(target) : null;
         int dx = target.x - l60.x;
         int dy = target.y - l60.y;
         switch(dx){
@@ -6030,165 +5675,229 @@ public class VisionManager {
         double bestEstimation = 0;
         double initialDist = Math.sqrt(l60.distanceSquaredTo(target));
 
-        double dist14 = (initialDist - Math.sqrt(l14.distanceSquaredTo(target)))/v14;
-        if (dist14 > bestEstimation) {
-            bestEstimation = dist14;
-            ans = d14;
+        if (v14 < Constants.DIST_INF){
+            double dist14 = (initialDist - Math.sqrt(l14.distanceSquaredTo(target)))/v14;
+            if (dist14 > bestEstimation) {
+                bestEstimation = dist14;
+                ans = d14;
+            }
         }
-        double dist15 = (initialDist - Math.sqrt(l15.distanceSquaredTo(target)))/v15;
-        if (dist15 > bestEstimation) {
-            bestEstimation = dist15;
-            ans = d15;
+        if (v15 < Constants.DIST_INF){
+            double dist15 = (initialDist - Math.sqrt(l15.distanceSquaredTo(target)))/v15;
+            if (dist15 > bestEstimation) {
+                bestEstimation = dist15;
+                ans = d15;
+            }
         }
-        double dist16 = (initialDist - Math.sqrt(l16.distanceSquaredTo(target)))/v16;
-        if (dist16 > bestEstimation) {
-            bestEstimation = dist16;
-            ans = d16;
+        if (v16 < Constants.DIST_INF){
+            double dist16 = (initialDist - Math.sqrt(l16.distanceSquaredTo(target)))/v16;
+            if (dist16 > bestEstimation) {
+                bestEstimation = dist16;
+                ans = d16;
+            }
         }
-        double dist17 = (initialDist - Math.sqrt(l17.distanceSquaredTo(target)))/v17;
-        if (dist17 > bestEstimation) {
-            bestEstimation = dist17;
-            ans = d17;
+        if (v17 < Constants.DIST_INF){
+            double dist17 = (initialDist - Math.sqrt(l17.distanceSquaredTo(target)))/v17;
+            if (dist17 > bestEstimation) {
+                bestEstimation = dist17;
+                ans = d17;
+            }
         }
-        double dist18 = (initialDist - Math.sqrt(l18.distanceSquaredTo(target)))/v18;
-        if (dist18 > bestEstimation) {
-            bestEstimation = dist18;
-            ans = d18;
+        if (v18 < Constants.DIST_INF){
+            double dist18 = (initialDist - Math.sqrt(l18.distanceSquaredTo(target)))/v18;
+            if (dist18 > bestEstimation) {
+                bestEstimation = dist18;
+                ans = d18;
+            }
         }
-        double dist24 = (initialDist - Math.sqrt(l24.distanceSquaredTo(target)))/v24;
-        if (dist24 > bestEstimation) {
-            bestEstimation = dist24;
-            ans = d24;
+        if (v24 < Constants.DIST_INF){
+            double dist24 = (initialDist - Math.sqrt(l24.distanceSquaredTo(target)))/v24;
+            if (dist24 > bestEstimation) {
+                bestEstimation = dist24;
+                ans = d24;
+            }
         }
-        double dist25 = (initialDist - Math.sqrt(l25.distanceSquaredTo(target)))/v25;
-        if (dist25 > bestEstimation) {
-            bestEstimation = dist25;
-            ans = d25;
+        if (v25 < Constants.DIST_INF){
+            double dist25 = (initialDist - Math.sqrt(l25.distanceSquaredTo(target)))/v25;
+            if (dist25 > bestEstimation) {
+                bestEstimation = dist25;
+                ans = d25;
+            }
         }
-        double dist29 = (initialDist - Math.sqrt(l29.distanceSquaredTo(target)))/v29;
-        if (dist29 > bestEstimation) {
-            bestEstimation = dist29;
-            ans = d29;
+        if (v29 < Constants.DIST_INF){
+            double dist29 = (initialDist - Math.sqrt(l29.distanceSquaredTo(target)))/v29;
+            if (dist29 > bestEstimation) {
+                bestEstimation = dist29;
+                ans = d29;
+            }
         }
-        double dist30 = (initialDist - Math.sqrt(l30.distanceSquaredTo(target)))/v30;
-        if (dist30 > bestEstimation) {
-            bestEstimation = dist30;
-            ans = d30;
+        if (v30 < Constants.DIST_INF){
+            double dist30 = (initialDist - Math.sqrt(l30.distanceSquaredTo(target)))/v30;
+            if (dist30 > bestEstimation) {
+                bestEstimation = dist30;
+                ans = d30;
+            }
         }
-        double dist34 = (initialDist - Math.sqrt(l34.distanceSquaredTo(target)))/v34;
-        if (dist34 > bestEstimation) {
-            bestEstimation = dist34;
-            ans = d34;
+        if (v34 < Constants.DIST_INF){
+            double dist34 = (initialDist - Math.sqrt(l34.distanceSquaredTo(target)))/v34;
+            if (dist34 > bestEstimation) {
+                bestEstimation = dist34;
+                ans = d34;
+            }
         }
-        double dist35 = (initialDist - Math.sqrt(l35.distanceSquaredTo(target)))/v35;
-        if (dist35 > bestEstimation) {
-            bestEstimation = dist35;
-            ans = d35;
+        if (v35 < Constants.DIST_INF){
+            double dist35 = (initialDist - Math.sqrt(l35.distanceSquaredTo(target)))/v35;
+            if (dist35 > bestEstimation) {
+                bestEstimation = dist35;
+                ans = d35;
+            }
         }
-        double dist41 = (initialDist - Math.sqrt(l41.distanceSquaredTo(target)))/v41;
-        if (dist41 > bestEstimation) {
-            bestEstimation = dist41;
-            ans = d41;
+        if (v41 < Constants.DIST_INF){
+            double dist41 = (initialDist - Math.sqrt(l41.distanceSquaredTo(target)))/v41;
+            if (dist41 > bestEstimation) {
+                bestEstimation = dist41;
+                ans = d41;
+            }
         }
-        double dist42 = (initialDist - Math.sqrt(l42.distanceSquaredTo(target)))/v42;
-        if (dist42 > bestEstimation) {
-            bestEstimation = dist42;
-            ans = d42;
+        if (v42 < Constants.DIST_INF){
+            double dist42 = (initialDist - Math.sqrt(l42.distanceSquaredTo(target)))/v42;
+            if (dist42 > bestEstimation) {
+                bestEstimation = dist42;
+                ans = d42;
+            }
         }
-        double dist45 = (initialDist - Math.sqrt(l45.distanceSquaredTo(target)))/v45;
-        if (dist45 > bestEstimation) {
-            bestEstimation = dist45;
-            ans = d45;
+        if (v45 < Constants.DIST_INF){
+            double dist45 = (initialDist - Math.sqrt(l45.distanceSquaredTo(target)))/v45;
+            if (dist45 > bestEstimation) {
+                bestEstimation = dist45;
+                ans = d45;
+            }
         }
-        double dist53 = (initialDist - Math.sqrt(l53.distanceSquaredTo(target)))/v53;
-        if (dist53 > bestEstimation) {
-            bestEstimation = dist53;
-            ans = d53;
+        if (v53 < Constants.DIST_INF){
+            double dist53 = (initialDist - Math.sqrt(l53.distanceSquaredTo(target)))/v53;
+            if (dist53 > bestEstimation) {
+                bestEstimation = dist53;
+                ans = d53;
+            }
         }
-        double dist56 = (initialDist - Math.sqrt(l56.distanceSquaredTo(target)))/v56;
-        if (dist56 > bestEstimation) {
-            bestEstimation = dist56;
-            ans = d56;
+        if (v56 < Constants.DIST_INF){
+            double dist56 = (initialDist - Math.sqrt(l56.distanceSquaredTo(target)))/v56;
+            if (dist56 > bestEstimation) {
+                bestEstimation = dist56;
+                ans = d56;
+            }
         }
-        double dist64 = (initialDist - Math.sqrt(l64.distanceSquaredTo(target)))/v64;
-        if (dist64 > bestEstimation) {
-            bestEstimation = dist64;
-            ans = d64;
+        if (v64 < Constants.DIST_INF){
+            double dist64 = (initialDist - Math.sqrt(l64.distanceSquaredTo(target)))/v64;
+            if (dist64 > bestEstimation) {
+                bestEstimation = dist64;
+                ans = d64;
+            }
         }
-        double dist67 = (initialDist - Math.sqrt(l67.distanceSquaredTo(target)))/v67;
-        if (dist67 > bestEstimation) {
-            bestEstimation = dist67;
-            ans = d67;
+        if (v67 < Constants.DIST_INF){
+            double dist67 = (initialDist - Math.sqrt(l67.distanceSquaredTo(target)))/v67;
+            if (dist67 > bestEstimation) {
+                bestEstimation = dist67;
+                ans = d67;
+            }
         }
-        double dist75 = (initialDist - Math.sqrt(l75.distanceSquaredTo(target)))/v75;
-        if (dist75 > bestEstimation) {
-            bestEstimation = dist75;
-            ans = d75;
+        if (v75 < Constants.DIST_INF){
+            double dist75 = (initialDist - Math.sqrt(l75.distanceSquaredTo(target)))/v75;
+            if (dist75 > bestEstimation) {
+                bestEstimation = dist75;
+                ans = d75;
+            }
         }
-        double dist78 = (initialDist - Math.sqrt(l78.distanceSquaredTo(target)))/v78;
-        if (dist78 > bestEstimation) {
-            bestEstimation = dist78;
-            ans = d78;
+        if (v78 < Constants.DIST_INF){
+            double dist78 = (initialDist - Math.sqrt(l78.distanceSquaredTo(target)))/v78;
+            if (dist78 > bestEstimation) {
+                bestEstimation = dist78;
+                ans = d78;
+            }
         }
-        double dist79 = (initialDist - Math.sqrt(l79.distanceSquaredTo(target)))/v79;
-        if (dist79 > bestEstimation) {
-            bestEstimation = dist79;
-            ans = d79;
+        if (v79 < Constants.DIST_INF){
+            double dist79 = (initialDist - Math.sqrt(l79.distanceSquaredTo(target)))/v79;
+            if (dist79 > bestEstimation) {
+                bestEstimation = dist79;
+                ans = d79;
+            }
         }
-        double dist85 = (initialDist - Math.sqrt(l85.distanceSquaredTo(target)))/v85;
-        if (dist85 > bestEstimation) {
-            bestEstimation = dist85;
-            ans = d85;
+        if (v85 < Constants.DIST_INF){
+            double dist85 = (initialDist - Math.sqrt(l85.distanceSquaredTo(target)))/v85;
+            if (dist85 > bestEstimation) {
+                bestEstimation = dist85;
+                ans = d85;
+            }
         }
-        double dist86 = (initialDist - Math.sqrt(l86.distanceSquaredTo(target)))/v86;
-        if (dist86 > bestEstimation) {
-            bestEstimation = dist86;
-            ans = d86;
+        if (v86 < Constants.DIST_INF){
+            double dist86 = (initialDist - Math.sqrt(l86.distanceSquaredTo(target)))/v86;
+            if (dist86 > bestEstimation) {
+                bestEstimation = dist86;
+                ans = d86;
+            }
         }
-        double dist90 = (initialDist - Math.sqrt(l90.distanceSquaredTo(target)))/v90;
-        if (dist90 > bestEstimation) {
-            bestEstimation = dist90;
-            ans = d90;
+        if (v90 < Constants.DIST_INF){
+            double dist90 = (initialDist - Math.sqrt(l90.distanceSquaredTo(target)))/v90;
+            if (dist90 > bestEstimation) {
+                bestEstimation = dist90;
+                ans = d90;
+            }
         }
-        double dist91 = (initialDist - Math.sqrt(l91.distanceSquaredTo(target)))/v91;
-        if (dist91 > bestEstimation) {
-            bestEstimation = dist91;
-            ans = d91;
+        if (v91 < Constants.DIST_INF){
+            double dist91 = (initialDist - Math.sqrt(l91.distanceSquaredTo(target)))/v91;
+            if (dist91 > bestEstimation) {
+                bestEstimation = dist91;
+                ans = d91;
+            }
         }
-        double dist95 = (initialDist - Math.sqrt(l95.distanceSquaredTo(target)))/v95;
-        if (dist95 > bestEstimation) {
-            bestEstimation = dist95;
-            ans = d95;
+        if (v95 < Constants.DIST_INF){
+            double dist95 = (initialDist - Math.sqrt(l95.distanceSquaredTo(target)))/v95;
+            if (dist95 > bestEstimation) {
+                bestEstimation = dist95;
+                ans = d95;
+            }
         }
-        double dist96 = (initialDist - Math.sqrt(l96.distanceSquaredTo(target)))/v96;
-        if (dist96 > bestEstimation) {
-            bestEstimation = dist96;
-            ans = d96;
+        if (v96 < Constants.DIST_INF){
+            double dist96 = (initialDist - Math.sqrt(l96.distanceSquaredTo(target)))/v96;
+            if (dist96 > bestEstimation) {
+                bestEstimation = dist96;
+                ans = d96;
+            }
         }
-        double dist102 = (initialDist - Math.sqrt(l102.distanceSquaredTo(target)))/v102;
-        if (dist102 > bestEstimation) {
-            bestEstimation = dist102;
-            ans = d102;
+        if (v102 < Constants.DIST_INF){
+            double dist102 = (initialDist - Math.sqrt(l102.distanceSquaredTo(target)))/v102;
+            if (dist102 > bestEstimation) {
+                bestEstimation = dist102;
+                ans = d102;
+            }
         }
-        double dist103 = (initialDist - Math.sqrt(l103.distanceSquaredTo(target)))/v103;
-        if (dist103 > bestEstimation) {
-            bestEstimation = dist103;
-            ans = d103;
+        if (v103 < Constants.DIST_INF){
+            double dist103 = (initialDist - Math.sqrt(l103.distanceSquaredTo(target)))/v103;
+            if (dist103 > bestEstimation) {
+                bestEstimation = dist103;
+                ans = d103;
+            }
         }
-        double dist104 = (initialDist - Math.sqrt(l104.distanceSquaredTo(target)))/v104;
-        if (dist104 > bestEstimation) {
-            bestEstimation = dist104;
-            ans = d104;
+        if (v104 < Constants.DIST_INF){
+            double dist104 = (initialDist - Math.sqrt(l104.distanceSquaredTo(target)))/v104;
+            if (dist104 > bestEstimation) {
+                bestEstimation = dist104;
+                ans = d104;
+            }
         }
-        double dist105 = (initialDist - Math.sqrt(l105.distanceSquaredTo(target)))/v105;
-        if (dist105 > bestEstimation) {
-            bestEstimation = dist105;
-            ans = d105;
+        if (v105 < Constants.DIST_INF){
+            double dist105 = (initialDist - Math.sqrt(l105.distanceSquaredTo(target)))/v105;
+            if (dist105 > bestEstimation) {
+                bestEstimation = dist105;
+                ans = d105;
+            }
         }
-        double dist106 = (initialDist - Math.sqrt(l106.distanceSquaredTo(target)))/v106;
-        if (dist106 > bestEstimation) {
-            bestEstimation = dist106;
-            ans = d106;
+        if (v106 < Constants.DIST_INF){
+            double dist106 = (initialDist - Math.sqrt(l106.distanceSquaredTo(target)))/v106;
+            if (dist106 > bestEstimation) {
+                bestEstimation = dist106;
+                ans = d106;
+            }
         }
         return ans;
     }
@@ -6199,107 +5908,107 @@ public class VisionManager {
         switch(dx){
             case -4:
                 switch(dy){
-                    case -2: return v14;
-                    case -1: return v15;
-                    case 0: return v16;
-                    case 1: return v17;
-                    case 2: return v18;
+                    case -2: return v14 - ((m14 == null || !m14.isPassable()) ? 1000000: 0);
+                    case -1: return v15 - ((m15 == null || !m15.isPassable()) ? 1000000: 0);
+                    case 0: return v16 - ((m16 == null || !m16.isPassable()) ? 1000000: 0);
+                    case 1: return v17 - ((m17 == null || !m17.isPassable()) ? 1000000: 0);
+                    case 2: return v18 - ((m18 == null || !m18.isPassable()) ? 1000000: 0);
                 }
                 break;
             case -3:
                 switch(dy){
-                    case -3: return v24;
-                    case -2: return v25;
-                    case -1: return v26;
-                    case 0: return v27;
-                    case 1: return v28;
-                    case 2: return v29;
-                    case 3: return v30;
+                    case -3: return v24 - ((m24 == null || !m24.isPassable()) ? 1000000: 0);
+                    case -2: return v25 - ((m25 == null || !m25.isPassable()) ? 1000000: 0);
+                    case -1: return v26 - ((m26 == null || !m26.isPassable()) ? 1000000: 0);
+                    case 0: return v27 - ((m27 == null || !m27.isPassable()) ? 1000000: 0);
+                    case 1: return v28 - ((m28 == null || !m28.isPassable()) ? 1000000: 0);
+                    case 2: return v29 - ((m29 == null || !m29.isPassable()) ? 1000000: 0);
+                    case 3: return v30 - ((m30 == null || !m30.isPassable()) ? 1000000: 0);
                 }
                 break;
             case -2:
                 switch(dy){
-                    case -4: return v34;
-                    case -3: return v35;
-                    case -2: return v36;
-                    case -1: return v37;
-                    case 0: return v38;
-                    case 1: return v39;
-                    case 2: return v40;
-                    case 3: return v41;
-                    case 4: return v42;
+                    case -4: return v34 - ((m34 == null || !m34.isPassable()) ? 1000000: 0);
+                    case -3: return v35 - ((m35 == null || !m35.isPassable()) ? 1000000: 0);
+                    case -2: return v36 - ((m36 == null || !m36.isPassable()) ? 1000000: 0);
+                    case -1: return v37 - ((m37 == null || !m37.isPassable()) ? 1000000: 0);
+                    case 0: return v38 - ((m38 == null || !m38.isPassable()) ? 1000000: 0);
+                    case 1: return v39 - ((m39 == null || !m39.isPassable()) ? 1000000: 0);
+                    case 2: return v40 - ((m40 == null || !m40.isPassable()) ? 1000000: 0);
+                    case 3: return v41 - ((m41 == null || !m41.isPassable()) ? 1000000: 0);
+                    case 4: return v42 - ((m42 == null || !m42.isPassable()) ? 1000000: 0);
                 }
                 break;
             case -1:
                 switch(dy){
-                    case -4: return v45;
-                    case -3: return v46;
-                    case -2: return v47;
-                    case -1: return v48;
-                    case 0: return v49;
-                    case 1: return v50;
-                    case 2: return v51;
-                    case 3: return v52;
-                    case 4: return v53;
+                    case -4: return v45 - ((m45 == null || !m45.isPassable()) ? 1000000: 0);
+                    case -3: return v46 - ((m46 == null || !m46.isPassable()) ? 1000000: 0);
+                    case -2: return v47 - ((m47 == null || !m47.isPassable()) ? 1000000: 0);
+                    case -1: return v48 - ((m48 == null || !m48.isPassable()) ? 1000000: 0);
+                    case 0: return v49 - ((m49 == null || !m49.isPassable()) ? 1000000: 0);
+                    case 1: return v50 - ((m50 == null || !m50.isPassable()) ? 1000000: 0);
+                    case 2: return v51 - ((m51 == null || !m51.isPassable()) ? 1000000: 0);
+                    case 3: return v52 - ((m52 == null || !m52.isPassable()) ? 1000000: 0);
+                    case 4: return v53 - ((m53 == null || !m53.isPassable()) ? 1000000: 0);
                 }
                 break;
             case 0:
                 switch(dy){
-                    case -4: return v56;
-                    case -3: return v57;
-                    case -2: return v58;
-                    case -1: return v59;
-                    case 0: return v60;
-                    case 1: return v61;
-                    case 2: return v62;
-                    case 3: return v63;
-                    case 4: return v64;
+                    case -4: return v56 - ((m56 == null || !m56.isPassable()) ? 1000000: 0);
+                    case -3: return v57 - ((m57 == null || !m57.isPassable()) ? 1000000: 0);
+                    case -2: return v58 - ((m58 == null || !m58.isPassable()) ? 1000000: 0);
+                    case -1: return v59 - ((m59 == null || !m59.isPassable()) ? 1000000: 0);
+                    case 0: return v60 - ((m60 == null || !m60.isPassable()) ? 1000000: 0);
+                    case 1: return v61 - ((m61 == null || !m61.isPassable()) ? 1000000: 0);
+                    case 2: return v62 - ((m62 == null || !m62.isPassable()) ? 1000000: 0);
+                    case 3: return v63 - ((m63 == null || !m63.isPassable()) ? 1000000: 0);
+                    case 4: return v64 - ((m64 == null || !m64.isPassable()) ? 1000000: 0);
                 }
                 break;
             case 1:
                 switch(dy){
-                    case -4: return v67;
-                    case -3: return v68;
-                    case -2: return v69;
-                    case -1: return v70;
-                    case 0: return v71;
-                    case 1: return v72;
-                    case 2: return v73;
-                    case 3: return v74;
-                    case 4: return v75;
+                    case -4: return v67 - ((m67 == null || !m67.isPassable()) ? 1000000: 0);
+                    case -3: return v68 - ((m68 == null || !m68.isPassable()) ? 1000000: 0);
+                    case -2: return v69 - ((m69 == null || !m69.isPassable()) ? 1000000: 0);
+                    case -1: return v70 - ((m70 == null || !m70.isPassable()) ? 1000000: 0);
+                    case 0: return v71 - ((m71 == null || !m71.isPassable()) ? 1000000: 0);
+                    case 1: return v72 - ((m72 == null || !m72.isPassable()) ? 1000000: 0);
+                    case 2: return v73 - ((m73 == null || !m73.isPassable()) ? 1000000: 0);
+                    case 3: return v74 - ((m74 == null || !m74.isPassable()) ? 1000000: 0);
+                    case 4: return v75 - ((m75 == null || !m75.isPassable()) ? 1000000: 0);
                 }
                 break;
             case 2:
                 switch(dy){
-                    case -4: return v78;
-                    case -3: return v79;
-                    case -2: return v80;
-                    case -1: return v81;
-                    case 0: return v82;
-                    case 1: return v83;
-                    case 2: return v84;
-                    case 3: return v85;
-                    case 4: return v86;
+                    case -4: return v78 - ((m78 == null || !m78.isPassable()) ? 1000000: 0);
+                    case -3: return v79 - ((m79 == null || !m79.isPassable()) ? 1000000: 0);
+                    case -2: return v80 - ((m80 == null || !m80.isPassable()) ? 1000000: 0);
+                    case -1: return v81 - ((m81 == null || !m81.isPassable()) ? 1000000: 0);
+                    case 0: return v82 - ((m82 == null || !m82.isPassable()) ? 1000000: 0);
+                    case 1: return v83 - ((m83 == null || !m83.isPassable()) ? 1000000: 0);
+                    case 2: return v84 - ((m84 == null || !m84.isPassable()) ? 1000000: 0);
+                    case 3: return v85 - ((m85 == null || !m85.isPassable()) ? 1000000: 0);
+                    case 4: return v86 - ((m86 == null || !m86.isPassable()) ? 1000000: 0);
                 }
                 break;
             case 3:
                 switch(dy){
-                    case -3: return v90;
-                    case -2: return v91;
-                    case -1: return v92;
-                    case 0: return v93;
-                    case 1: return v94;
-                    case 2: return v95;
-                    case 3: return v96;
+                    case -3: return v90 - ((m90 == null || !m90.isPassable()) ? 1000000: 0);
+                    case -2: return v91 - ((m91 == null || !m91.isPassable()) ? 1000000: 0);
+                    case -1: return v92 - ((m92 == null || !m92.isPassable()) ? 1000000: 0);
+                    case 0: return v93 - ((m93 == null || !m93.isPassable()) ? 1000000: 0);
+                    case 1: return v94 - ((m94 == null || !m94.isPassable()) ? 1000000: 0);
+                    case 2: return v95 - ((m95 == null || !m95.isPassable()) ? 1000000: 0);
+                    case 3: return v96 - ((m96 == null || !m96.isPassable()) ? 1000000: 0);
                 }
                 break;
             case 4:
                 switch(dy){
-                    case -2: return v102;
-                    case -1: return v103;
-                    case 0: return v104;
-                    case 1: return v105;
-                    case 2: return v106;
+                    case -2: return v102 - ((m102 == null || !m102.isPassable()) ? 1000000: 0);
+                    case -1: return v103 - ((m103 == null || !m103.isPassable()) ? 1000000: 0);
+                    case 0: return v104 - ((m104 == null || !m104.isPassable()) ? 1000000: 0);
+                    case 1: return v105 - ((m105 == null || !m105.isPassable()) ? 1000000: 0);
+                    case 2: return v106 - ((m106 == null || !m106.isPassable()) ? 1000000: 0);
                 }
                 break;
         }
@@ -6322,10 +6031,6 @@ public class VisionManager {
     static MapLocation bestSpot9;
     static MapLocation bestSpot10;
     static MapLocation bestSpot11;
-    static MapLocation bestSpot12;
-    static MapLocation bestSpot13;
-    static MapLocation bestSpot14;
-    static MapLocation bestSpot15;
 
 
     static void scanRSPs () throws GameActionException {
@@ -6419,7 +6124,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 2056;
                         bestSpot3 = l106;
@@ -6438,7 +6143,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 514;
                         bestSpot1 = l102;
@@ -6457,7 +6162,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 40;
                         bestSpot3 = l86;
@@ -6476,7 +6181,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l78;
@@ -6495,7 +6200,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 20;
                         bestSpot2 = l42;
@@ -6514,7 +6219,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l34;
@@ -6533,7 +6238,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 1028;
                         bestSpot2 = l18;
@@ -6552,7 +6257,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 257;
                         bestSpot0 = l14;
@@ -6571,7 +6276,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l96;
@@ -6589,7 +6294,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l90;
@@ -6607,7 +6312,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l30;
@@ -6625,7 +6330,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l24;
@@ -6643,7 +6348,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 2056;
                         bestSpot3 = l105;
@@ -6662,7 +6367,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 514;
                         bestSpot1 = l103;
@@ -6681,7 +6386,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 40;
                         bestSpot3 = l75;
@@ -6700,7 +6405,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l67;
@@ -6719,7 +6424,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 20;
                         bestSpot2 = l53;
@@ -6738,7 +6443,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l45;
@@ -6757,7 +6462,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 1028;
                         bestSpot2 = l17;
@@ -6776,7 +6481,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 257;
                         bestSpot0 = l15;
@@ -6795,7 +6500,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 2570;
                         bestSpot1 = l104;
@@ -6816,7 +6521,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 60;
                         bestSpot2 = l64;
@@ -6837,7 +6542,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 195;
                         bestSpot0 = l56;
@@ -6858,7 +6563,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 1285;
                         bestSpot0 = l16;
@@ -6879,7 +6584,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l95;
@@ -6897,7 +6602,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l91;
@@ -6915,7 +6620,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l85;
@@ -6933,7 +6638,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l79;
@@ -6951,7 +6656,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l41;
@@ -6969,7 +6674,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l35;
@@ -6987,7 +6692,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l29;
@@ -7005,7 +6710,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l25;
@@ -7023,7 +6728,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l94;
@@ -7041,7 +6746,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l92;
@@ -7059,7 +6764,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l74;
@@ -7077,7 +6782,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l68;
@@ -7095,7 +6800,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l52;
@@ -7113,7 +6818,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l46;
@@ -7131,7 +6836,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l28;
@@ -7149,7 +6854,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l26;
@@ -7167,7 +6872,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l93;
@@ -7186,7 +6891,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l63;
@@ -7205,7 +6910,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l57;
@@ -7224,7 +6929,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l27;
@@ -7243,7 +6948,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l84;
@@ -7261,7 +6966,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l80;
@@ -7279,7 +6984,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l40;
@@ -7297,7 +7002,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l36;
@@ -7315,7 +7020,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l83;
@@ -7333,7 +7038,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l81;
@@ -7351,7 +7056,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l73;
@@ -7369,7 +7074,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l69;
@@ -7387,7 +7092,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l51;
@@ -7405,7 +7110,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l47;
@@ -7423,7 +7128,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l39;
@@ -7441,7 +7146,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l37;
@@ -7459,7 +7164,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l82;
@@ -7478,7 +7183,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l62;
@@ -7497,7 +7202,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l58;
@@ -7516,7 +7221,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l38;
@@ -7535,7 +7240,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l72;
@@ -7553,7 +7258,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l70;
@@ -7571,7 +7276,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l50;
@@ -7589,7 +7294,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l48;
@@ -7607,7 +7312,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l71;
@@ -7626,7 +7331,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l61;
@@ -7645,7 +7350,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l59;
@@ -7664,7 +7369,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l49;
@@ -7683,7 +7388,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 15;
                         bestSpot0 = l60;
@@ -7699,7 +7404,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2048) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2048) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2048) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2048) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot11) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot11;
                 bestCenter = center;
             }
@@ -7708,7 +7413,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1024) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1024) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1024) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1024) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot10) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot10;
                 bestCenter = center;
             }
@@ -7717,7 +7422,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot9) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -7726,7 +7431,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -7735,7 +7440,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -7744,7 +7449,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -7753,7 +7458,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -7762,7 +7467,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -7771,7 +7476,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -7780,7 +7485,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -7789,7 +7494,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -7798,7 +7503,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -7832,7 +7537,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l106;
@@ -7851,7 +7556,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 520;
                         bestSpot3 = l102;
@@ -7870,7 +7575,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l86;
@@ -7888,7 +7593,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l78;
@@ -7906,7 +7611,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l42;
@@ -7924,7 +7629,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l34;
@@ -7942,7 +7647,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l18;
@@ -7961,7 +7666,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 260;
                         bestSpot2 = l14;
@@ -7980,7 +7685,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l96;
@@ -7999,7 +7704,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l90;
@@ -8017,7 +7722,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l30;
@@ -8036,7 +7741,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l24;
@@ -8054,7 +7759,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l105;
@@ -8073,7 +7778,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 650;
                         bestSpot1 = l103;
@@ -8094,7 +7799,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l75;
@@ -8112,7 +7817,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l67;
@@ -8130,7 +7835,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l53;
@@ -8148,7 +7853,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l45;
@@ -8166,7 +7871,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l17;
@@ -8185,7 +7890,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 325;
                         bestSpot0 = l15;
@@ -8206,7 +7911,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l104;
@@ -8225,7 +7930,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 48;
                         bestSpot4 = l64;
@@ -8244,7 +7949,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l56;
@@ -8263,7 +7968,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l16;
@@ -8282,7 +7987,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l95;
@@ -8300,7 +8005,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l91;
@@ -8318,7 +8023,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l85;
@@ -8337,7 +8042,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l79;
@@ -8355,7 +8060,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l41;
@@ -8374,7 +8079,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l35;
@@ -8392,7 +8097,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l29;
@@ -8410,7 +8115,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l25;
@@ -8428,7 +8133,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l94;
@@ -8446,7 +8151,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l92;
@@ -8465,7 +8170,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l74;
@@ -8484,7 +8189,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l68;
@@ -8502,7 +8207,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l52;
@@ -8521,7 +8226,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l46;
@@ -8539,7 +8244,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l28;
@@ -8557,7 +8262,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l26;
@@ -8576,7 +8281,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l93;
@@ -8594,7 +8299,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 51;
                         bestSpot0 = l63;
@@ -8615,7 +8320,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l57;
@@ -8634,7 +8339,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l27;
@@ -8652,7 +8357,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l84;
@@ -8670,7 +8375,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l80;
@@ -8688,7 +8393,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l40;
@@ -8706,7 +8411,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l36;
@@ -8724,7 +8429,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l83;
@@ -8742,7 +8447,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l81;
@@ -8761,7 +8466,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l73;
@@ -8779,7 +8484,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l69;
@@ -8797,7 +8502,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l51;
@@ -8815,7 +8520,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l47;
@@ -8833,7 +8538,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l39;
@@ -8851,7 +8556,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l37;
@@ -8870,7 +8575,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l82;
@@ -8888,7 +8593,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l62;
@@ -8907,7 +8612,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l58;
@@ -8926,7 +8631,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l38;
@@ -8944,7 +8649,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l72;
@@ -8962,7 +8667,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l70;
@@ -8981,7 +8686,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l50;
@@ -8999,7 +8704,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l48;
@@ -9018,7 +8723,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l71;
@@ -9036,7 +8741,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l61;
@@ -9055,7 +8760,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 15;
                         bestSpot0 = l59;
@@ -9076,7 +8781,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l49;
@@ -9094,7 +8799,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l60;
@@ -9108,7 +8813,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot9) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -9117,7 +8822,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -9126,7 +8831,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -9135,7 +8840,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -9144,7 +8849,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -9153,7 +8858,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -9162,7 +8867,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -9171,7 +8876,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -9180,7 +8885,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -9189,7 +8894,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -9225,7 +8930,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 2210;
                         bestSpot1 = l106;
@@ -9246,7 +8951,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 650;
                         bestSpot1 = l102;
@@ -9267,7 +8972,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l86;
@@ -9285,7 +8990,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l78;
@@ -9303,7 +9008,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l42;
@@ -9321,7 +9026,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l34;
@@ -9339,7 +9044,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 1105;
                         bestSpot0 = l18;
@@ -9360,7 +9065,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 325;
                         bestSpot0 = l14;
@@ -9381,7 +9086,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l96;
@@ -9399,7 +9104,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l90;
@@ -9417,7 +9122,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l30;
@@ -9435,7 +9140,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l24;
@@ -9453,7 +9158,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l105;
@@ -9472,7 +9177,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l103;
@@ -9491,7 +9196,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l75;
@@ -9509,7 +9214,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l67;
@@ -9527,7 +9232,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l53;
@@ -9545,7 +9250,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l45;
@@ -9563,7 +9268,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l17;
@@ -9582,7 +9287,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l15;
@@ -9601,7 +9306,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l104;
@@ -9620,7 +9325,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 48;
                         bestSpot4 = l64;
@@ -9639,7 +9344,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l56;
@@ -9658,7 +9363,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l16;
@@ -9677,7 +9382,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l95;
@@ -9696,7 +9401,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l91;
@@ -9715,7 +9420,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l85;
@@ -9733,7 +9438,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l79;
@@ -9751,7 +9456,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l41;
@@ -9769,7 +9474,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l35;
@@ -9787,7 +9492,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l29;
@@ -9806,7 +9511,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l25;
@@ -9825,7 +9530,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l94;
@@ -9843,7 +9548,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l92;
@@ -9861,7 +9566,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l74;
@@ -9879,7 +9584,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l68;
@@ -9897,7 +9602,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l52;
@@ -9915,7 +9620,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l46;
@@ -9933,7 +9638,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l28;
@@ -9951,7 +9656,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l26;
@@ -9969,7 +9674,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l93;
@@ -9987,7 +9692,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 48;
                         bestSpot4 = l63;
@@ -10006,7 +9711,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l57;
@@ -10025,7 +9730,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l27;
@@ -10043,7 +9748,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l84;
@@ -10062,7 +9767,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l80;
@@ -10081,7 +9786,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l40;
@@ -10100,7 +9805,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l36;
@@ -10119,7 +9824,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l83;
@@ -10137,7 +9842,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l81;
@@ -10155,7 +9860,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l73;
@@ -10174,7 +9879,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l69;
@@ -10193,7 +9898,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l51;
@@ -10212,7 +9917,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l47;
@@ -10231,7 +9936,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l39;
@@ -10249,7 +9954,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l37;
@@ -10267,7 +9972,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l82;
@@ -10285,7 +9990,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 51;
                         bestSpot0 = l62;
@@ -10306,7 +10011,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 15;
                         bestSpot0 = l58;
@@ -10327,7 +10032,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l38;
@@ -10345,7 +10050,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l72;
@@ -10363,7 +10068,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l70;
@@ -10381,7 +10086,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l50;
@@ -10399,7 +10104,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l48;
@@ -10417,7 +10122,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l71;
@@ -10435,7 +10140,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l61;
@@ -10454,7 +10159,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l59;
@@ -10473,7 +10178,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l49;
@@ -10491,7 +10196,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l60;
@@ -10505,7 +10210,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2048) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2048) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2048) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2048) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot11) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot11;
                 bestCenter = center;
             }
@@ -10514,7 +10219,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1024) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1024) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1024) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1024) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot10) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot10;
                 bestCenter = center;
             }
@@ -10523,7 +10228,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot9) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -10532,7 +10237,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -10541,7 +10246,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -10550,7 +10255,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -10559,7 +10264,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -10568,7 +10273,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -10577,7 +10282,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -10586,7 +10291,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -10595,7 +10300,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -10604,7 +10309,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -10638,7 +10343,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 520;
                         bestSpot3 = l106;
@@ -10657,7 +10362,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l102;
@@ -10676,7 +10381,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l86;
@@ -10694,7 +10399,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l78;
@@ -10712,7 +10417,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l42;
@@ -10730,7 +10435,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l34;
@@ -10748,7 +10453,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 260;
                         bestSpot2 = l18;
@@ -10767,7 +10472,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l14;
@@ -10786,7 +10491,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l96;
@@ -10804,7 +10509,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l90;
@@ -10823,7 +10528,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l30;
@@ -10841,7 +10546,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l24;
@@ -10860,7 +10565,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 650;
                         bestSpot1 = l105;
@@ -10881,7 +10586,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l103;
@@ -10900,7 +10605,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l75;
@@ -10918,7 +10623,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l67;
@@ -10936,7 +10641,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l53;
@@ -10954,7 +10659,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l45;
@@ -10972,7 +10677,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 325;
                         bestSpot0 = l17;
@@ -10993,7 +10698,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l15;
@@ -11012,7 +10717,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l104;
@@ -11031,7 +10736,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l64;
@@ -11050,7 +10755,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 48;
                         bestSpot4 = l56;
@@ -11069,7 +10774,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l16;
@@ -11088,7 +10793,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l95;
@@ -11106,7 +10811,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l91;
@@ -11124,7 +10829,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l85;
@@ -11142,7 +10847,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l79;
@@ -11161,7 +10866,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l41;
@@ -11179,7 +10884,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l35;
@@ -11198,7 +10903,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l29;
@@ -11216,7 +10921,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l25;
@@ -11234,7 +10939,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l94;
@@ -11253,7 +10958,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l92;
@@ -11271,7 +10976,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l74;
@@ -11289,7 +10994,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l68;
@@ -11308,7 +11013,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l52;
@@ -11326,7 +11031,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l46;
@@ -11345,7 +11050,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l28;
@@ -11364,7 +11069,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l26;
@@ -11382,7 +11087,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l93;
@@ -11400,7 +11105,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l63;
@@ -11419,7 +11124,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 51;
                         bestSpot0 = l57;
@@ -11440,7 +11145,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l27;
@@ -11458,7 +11163,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l84;
@@ -11476,7 +11181,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l80;
@@ -11494,7 +11199,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l40;
@@ -11512,7 +11217,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l36;
@@ -11530,7 +11235,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l83;
@@ -11549,7 +11254,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l81;
@@ -11567,7 +11272,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l73;
@@ -11585,7 +11290,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l69;
@@ -11603,7 +11308,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l51;
@@ -11621,7 +11326,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l47;
@@ -11639,7 +11344,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l39;
@@ -11658,7 +11363,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l37;
@@ -11676,7 +11381,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l82;
@@ -11694,7 +11399,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l62;
@@ -11713,7 +11418,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l58;
@@ -11732,7 +11437,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l38;
@@ -11750,7 +11455,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l72;
@@ -11769,7 +11474,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l70;
@@ -11787,7 +11492,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l50;
@@ -11806,7 +11511,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l48;
@@ -11824,7 +11529,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l71;
@@ -11842,7 +11547,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 15;
                         bestSpot0 = l61;
@@ -11863,7 +11568,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l59;
@@ -11882,7 +11587,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l49;
@@ -11900,7 +11605,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l60;
@@ -11914,7 +11619,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot9) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -11923,7 +11628,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -11932,7 +11637,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -11941,7 +11646,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -11950,7 +11655,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -11959,7 +11664,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -11968,7 +11673,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -11977,7 +11682,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -11986,7 +11691,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -11995,7 +11700,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -12029,7 +11734,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l106;
@@ -12047,7 +11752,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l102;
@@ -12065,7 +11770,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l86;
@@ -12084,7 +11789,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l78;
@@ -12103,7 +11808,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 520;
                         bestSpot3 = l42;
@@ -12122,7 +11827,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 260;
                         bestSpot2 = l34;
@@ -12141,7 +11846,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l18;
@@ -12159,7 +11864,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l14;
@@ -12177,7 +11882,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l96;
@@ -12196,7 +11901,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l90;
@@ -12215,7 +11920,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l30;
@@ -12233,7 +11938,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l24;
@@ -12251,7 +11956,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l105;
@@ -12269,7 +11974,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l103;
@@ -12287,7 +11992,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l75;
@@ -12306,7 +12011,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l67;
@@ -12325,7 +12030,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 650;
                         bestSpot1 = l53;
@@ -12346,7 +12051,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 325;
                         bestSpot0 = l45;
@@ -12367,7 +12072,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l17;
@@ -12385,7 +12090,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l15;
@@ -12403,7 +12108,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 48;
                         bestSpot4 = l104;
@@ -12422,7 +12127,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l64;
@@ -12441,7 +12146,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l56;
@@ -12460,7 +12165,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l16;
@@ -12479,7 +12184,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l95;
@@ -12498,7 +12203,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l91;
@@ -12517,7 +12222,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l85;
@@ -12535,7 +12240,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l79;
@@ -12553,7 +12258,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l41;
@@ -12571,7 +12276,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l35;
@@ -12589,7 +12294,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l29;
@@ -12607,7 +12312,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l25;
@@ -12625,7 +12330,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l94;
@@ -12644,7 +12349,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l92;
@@ -12663,7 +12368,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l74;
@@ -12681,7 +12386,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l68;
@@ -12699,7 +12404,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l52;
@@ -12718,7 +12423,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l46;
@@ -12737,7 +12442,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l28;
@@ -12755,7 +12460,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l26;
@@ -12773,7 +12478,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 51;
                         bestSpot0 = l93;
@@ -12794,7 +12499,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l63;
@@ -12812,7 +12517,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l57;
@@ -12830,7 +12535,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l27;
@@ -12849,7 +12554,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l84;
@@ -12867,7 +12572,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l80;
@@ -12885,7 +12590,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l40;
@@ -12903,7 +12608,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l36;
@@ -12921,7 +12626,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l83;
@@ -12939,7 +12644,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l81;
@@ -12957,7 +12662,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l73;
@@ -12975,7 +12680,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l69;
@@ -12993,7 +12698,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l51;
@@ -13012,7 +12717,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l47;
@@ -13031,7 +12736,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l39;
@@ -13049,7 +12754,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l37;
@@ -13067,7 +12772,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l82;
@@ -13086,7 +12791,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l62;
@@ -13104,7 +12809,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l58;
@@ -13122,7 +12827,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l38;
@@ -13141,7 +12846,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l72;
@@ -13159,7 +12864,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l70;
@@ -13177,7 +12882,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l50;
@@ -13196,7 +12901,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l48;
@@ -13215,7 +12920,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l71;
@@ -13234,7 +12939,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l61;
@@ -13252,7 +12957,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l59;
@@ -13270,7 +12975,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 15;
                         bestSpot0 = l49;
@@ -13291,7 +12996,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l60;
@@ -13305,7 +13010,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot9) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -13314,7 +13019,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -13323,7 +13028,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -13332,7 +13037,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -13341,7 +13046,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -13350,7 +13055,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -13359,7 +13064,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -13368,7 +13073,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -13377,7 +13082,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -13386,7 +13091,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -13419,7 +13124,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l106;
@@ -13437,7 +13142,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l102;
@@ -13455,7 +13160,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l86;
@@ -13473,7 +13178,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l78;
@@ -13491,7 +13196,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 128;
                         bestSpot7 = l42;
@@ -13509,7 +13214,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l34;
@@ -13527,7 +13232,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l18;
@@ -13545,7 +13250,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l14;
@@ -13563,7 +13268,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 305;
                         bestSpot0 = l96;
@@ -13584,7 +13289,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l90;
@@ -13603,7 +13308,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 132;
                         bestSpot2 = l30;
@@ -13622,7 +13327,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l24;
@@ -13640,7 +13345,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l105;
@@ -13658,7 +13363,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 80;
                         bestSpot4 = l103;
@@ -13677,7 +13382,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l75;
@@ -13695,7 +13400,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l67;
@@ -13713,7 +13418,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 160;
                         bestSpot5 = l53;
@@ -13732,7 +13437,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l45;
@@ -13751,7 +13456,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l17;
@@ -13769,7 +13474,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l15;
@@ -13788,7 +13493,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l104;
@@ -13806,7 +13511,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l64;
@@ -13824,7 +13529,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l56;
@@ -13842,7 +13547,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l16;
@@ -13860,7 +13565,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l95;
@@ -13879,7 +13584,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l91;
@@ -13898,7 +13603,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l85;
@@ -13917,7 +13622,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l79;
@@ -13935,7 +13640,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 132;
                         bestSpot2 = l41;
@@ -13954,7 +13659,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l35;
@@ -13972,7 +13677,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l29;
@@ -13990,7 +13695,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l25;
@@ -14008,7 +13713,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l94;
@@ -14027,7 +13732,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 83;
                         bestSpot0 = l92;
@@ -14048,7 +13753,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l74;
@@ -14067,7 +13772,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l68;
@@ -14085,7 +13790,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 165;
                         bestSpot0 = l52;
@@ -14106,7 +13811,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l46;
@@ -14125,7 +13830,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l28;
@@ -14143,7 +13848,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l26;
@@ -14162,7 +13867,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l93;
@@ -14181,7 +13886,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l63;
@@ -14200,7 +13905,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l57;
@@ -14218,7 +13923,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l27;
@@ -14236,7 +13941,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l84;
@@ -14254,7 +13959,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l80;
@@ -14272,7 +13977,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l40;
@@ -14290,7 +13995,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l36;
@@ -14308,7 +14013,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l83;
@@ -14326,7 +14031,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l81;
@@ -14345,7 +14050,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l73;
@@ -14363,7 +14068,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l69;
@@ -14381,7 +14086,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l51;
@@ -14400,7 +14105,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l47;
@@ -14419,7 +14124,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l39;
@@ -14437,7 +14142,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l37;
@@ -14456,7 +14161,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l82;
@@ -14474,7 +14179,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l62;
@@ -14492,7 +14197,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l58;
@@ -14510,7 +14215,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l38;
@@ -14528,7 +14233,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l72;
@@ -14546,7 +14251,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l70;
@@ -14565,7 +14270,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l50;
@@ -14584,7 +14289,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 15;
                         bestSpot0 = l48;
@@ -14605,7 +14310,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l71;
@@ -14623,7 +14328,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l61;
@@ -14641,7 +14346,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l59;
@@ -14660,7 +14365,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l49;
@@ -14679,7 +14384,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l60;
@@ -14692,7 +14397,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -14701,7 +14406,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -14710,7 +14415,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -14719,7 +14424,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -14728,7 +14433,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -14737,7 +14442,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -14746,7 +14451,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -14755,7 +14460,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -14764,7 +14469,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -14797,7 +14502,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 288;
                         bestSpot5 = l106;
@@ -14816,7 +14521,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 160;
                         bestSpot5 = l102;
@@ -14835,7 +14540,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l86;
@@ -14853,7 +14558,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l78;
@@ -14871,7 +14576,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l42;
@@ -14889,7 +14594,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l34;
@@ -14907,7 +14612,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l18;
@@ -14926,7 +14631,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 18;
                         bestSpot1 = l14;
@@ -14945,7 +14650,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 264;
                         bestSpot3 = l96;
@@ -14964,7 +14669,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 132;
                         bestSpot2 = l90;
@@ -14983,7 +14688,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l30;
@@ -15001,7 +14706,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l24;
@@ -15019,7 +14724,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l105;
@@ -15037,7 +14742,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l103;
@@ -15055,7 +14760,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l75;
@@ -15073,7 +14778,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l67;
@@ -15091,7 +14796,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 72;
                         bestSpot3 = l53;
@@ -15110,7 +14815,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 20;
                         bestSpot2 = l45;
@@ -15129,7 +14834,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l17;
@@ -15147,7 +14852,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l15;
@@ -15165,7 +14870,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l104;
@@ -15183,7 +14888,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l64;
@@ -15201,7 +14906,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l56;
@@ -15219,7 +14924,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l16;
@@ -15237,7 +14942,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 297;
                         bestSpot0 = l95;
@@ -15258,7 +14963,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 165;
                         bestSpot0 = l91;
@@ -15279,7 +14984,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l85;
@@ -15297,7 +15002,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l79;
@@ -15315,7 +15020,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l41;
@@ -15333,7 +15038,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l35;
@@ -15351,7 +15056,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l29;
@@ -15370,7 +15075,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 18;
                         bestSpot1 = l25;
@@ -15389,7 +15094,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l94;
@@ -15408,7 +15113,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l92;
@@ -15427,7 +15132,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l74;
@@ -15445,7 +15150,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l68;
@@ -15463,7 +15168,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 72;
                         bestSpot3 = l52;
@@ -15482,7 +15187,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 20;
                         bestSpot2 = l46;
@@ -15501,7 +15206,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l28;
@@ -15519,7 +15224,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l26;
@@ -15537,7 +15242,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l93;
@@ -15556,7 +15261,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l63;
@@ -15574,7 +15279,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l57;
@@ -15592,7 +15297,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l27;
@@ -15610,7 +15315,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l84;
@@ -15629,7 +15334,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l80;
@@ -15648,7 +15353,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l40;
@@ -15667,7 +15372,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 18;
                         bestSpot1 = l36;
@@ -15686,7 +15391,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l83;
@@ -15704,7 +15409,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l81;
@@ -15722,7 +15427,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l73;
@@ -15741,7 +15446,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l69;
@@ -15760,7 +15465,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 75;
                         bestSpot0 = l51;
@@ -15781,7 +15486,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 23;
                         bestSpot0 = l47;
@@ -15802,7 +15507,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l39;
@@ -15820,7 +15525,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l37;
@@ -15838,7 +15543,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l82;
@@ -15856,7 +15561,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l62;
@@ -15875,7 +15580,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l58;
@@ -15894,7 +15599,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l38;
@@ -15912,7 +15617,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l72;
@@ -15930,7 +15635,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l70;
@@ -15948,7 +15653,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l50;
@@ -15967,7 +15672,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l48;
@@ -15986,7 +15691,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l71;
@@ -16004,7 +15709,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l61;
@@ -16022,7 +15727,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l59;
@@ -16040,7 +15745,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l49;
@@ -16059,7 +15764,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l60;
@@ -16072,7 +15777,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -16081,7 +15786,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -16090,7 +15795,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -16099,7 +15804,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -16108,7 +15813,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -16117,7 +15822,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -16126,7 +15831,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -16135,7 +15840,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -16144,7 +15849,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -16177,7 +15882,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 128;
                         bestSpot7 = l106;
@@ -16195,7 +15900,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l102;
@@ -16213,7 +15918,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l86;
@@ -16231,7 +15936,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l78;
@@ -16249,7 +15954,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l42;
@@ -16267,7 +15972,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l34;
@@ -16285,7 +15990,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l18;
@@ -16303,7 +16008,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l14;
@@ -16321,7 +16026,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 132;
                         bestSpot2 = l96;
@@ -16340,7 +16045,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 305;
                         bestSpot0 = l90;
@@ -16361,7 +16066,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l30;
@@ -16379,7 +16084,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l24;
@@ -16398,7 +16103,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 160;
                         bestSpot5 = l105;
@@ -16417,7 +16122,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l103;
@@ -16435,7 +16140,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l75;
@@ -16453,7 +16158,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l67;
@@ -16471,7 +16176,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l53;
@@ -16490,7 +16195,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 80;
                         bestSpot4 = l45;
@@ -16509,7 +16214,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l17;
@@ -16528,7 +16233,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l15;
@@ -16546,7 +16251,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l104;
@@ -16564,7 +16269,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l64;
@@ -16582,7 +16287,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l56;
@@ -16600,7 +16305,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l16;
@@ -16618,7 +16323,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 132;
                         bestSpot2 = l95;
@@ -16637,7 +16342,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l91;
@@ -16656,7 +16361,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l85;
@@ -16674,7 +16379,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l79;
@@ -16693,7 +16398,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l41;
@@ -16711,7 +16416,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l35;
@@ -16730,7 +16435,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l29;
@@ -16748,7 +16453,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l25;
@@ -16766,7 +16471,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 165;
                         bestSpot0 = l94;
@@ -16787,7 +16492,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l92;
@@ -16806,7 +16511,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l74;
@@ -16824,7 +16529,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l68;
@@ -16843,7 +16548,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l52;
@@ -16862,7 +16567,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 83;
                         bestSpot0 = l46;
@@ -16883,7 +16588,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l28;
@@ -16902,7 +16607,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l26;
@@ -16920,7 +16625,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l93;
@@ -16939,7 +16644,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l63;
@@ -16957,7 +16662,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l57;
@@ -16976,7 +16681,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l27;
@@ -16994,7 +16699,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l84;
@@ -17012,7 +16717,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l80;
@@ -17030,7 +16735,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l40;
@@ -17048,7 +16753,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l36;
@@ -17066,7 +16771,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l83;
@@ -17085,7 +16790,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l81;
@@ -17103,7 +16808,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l73;
@@ -17121,7 +16826,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l69;
@@ -17139,7 +16844,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l51;
@@ -17158,7 +16863,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l47;
@@ -17177,7 +16882,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l39;
@@ -17196,7 +16901,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l37;
@@ -17214,7 +16919,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l82;
@@ -17232,7 +16937,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l62;
@@ -17250,7 +16955,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l58;
@@ -17268,7 +16973,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l38;
@@ -17286,7 +16991,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l72;
@@ -17305,7 +17010,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l70;
@@ -17323,7 +17028,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 15;
                         bestSpot0 = l50;
@@ -17344,7 +17049,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l48;
@@ -17363,7 +17068,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l71;
@@ -17381,7 +17086,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l61;
@@ -17400,7 +17105,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l59;
@@ -17418,7 +17123,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l49;
@@ -17437,7 +17142,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l60;
@@ -17450,7 +17155,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -17459,7 +17164,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -17468,7 +17173,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -17477,7 +17182,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -17486,7 +17191,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -17495,7 +17200,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -17504,7 +17209,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -17513,7 +17218,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -17522,7 +17227,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -17558,7 +17263,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l106;
@@ -17576,7 +17281,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l102;
@@ -17594,7 +17299,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 610;
                         bestSpot1 = l86;
@@ -17615,7 +17320,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 2185;
                         bestSpot0 = l78;
@@ -17636,7 +17341,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 338;
                         bestSpot1 = l42;
@@ -17657,7 +17362,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 1157;
                         bestSpot0 = l34;
@@ -17678,7 +17383,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l18;
@@ -17696,7 +17401,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l14;
@@ -17714,7 +17419,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l96;
@@ -17732,7 +17437,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l90;
@@ -17750,7 +17455,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l30;
@@ -17768,7 +17473,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l24;
@@ -17786,7 +17491,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l105;
@@ -17804,7 +17509,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l103;
@@ -17822,7 +17527,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l75;
@@ -17841,7 +17546,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 129;
                         bestSpot0 = l67;
@@ -17860,7 +17565,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l53;
@@ -17879,7 +17584,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 129;
                         bestSpot0 = l45;
@@ -17898,7 +17603,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l17;
@@ -17916,7 +17621,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l15;
@@ -17934,7 +17639,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 40;
                         bestSpot3 = l104;
@@ -17953,7 +17658,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l64;
@@ -17972,7 +17677,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 129;
                         bestSpot0 = l56;
@@ -17991,7 +17696,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 20;
                         bestSpot2 = l16;
@@ -18010,7 +17715,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l95;
@@ -18028,7 +17733,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l91;
@@ -18046,7 +17751,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l85;
@@ -18065,7 +17770,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l79;
@@ -18084,7 +17789,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 18;
                         bestSpot1 = l41;
@@ -18103,7 +17808,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l35;
@@ -18122,7 +17827,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l29;
@@ -18140,7 +17845,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l25;
@@ -18158,7 +17863,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l94;
@@ -18176,7 +17881,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l92;
@@ -18194,7 +17899,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l74;
@@ -18212,7 +17917,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l68;
@@ -18230,7 +17935,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l52;
@@ -18248,7 +17953,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l46;
@@ -18266,7 +17971,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l28;
@@ -18284,7 +17989,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l26;
@@ -18302,7 +18007,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 40;
                         bestSpot3 = l93;
@@ -18321,7 +18026,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l63;
@@ -18339,7 +18044,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l57;
@@ -18357,7 +18062,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 20;
                         bestSpot2 = l27;
@@ -18376,7 +18081,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l84;
@@ -18395,7 +18100,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l80;
@@ -18414,7 +18119,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 18;
                         bestSpot1 = l40;
@@ -18433,7 +18138,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l36;
@@ -18452,7 +18157,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l83;
@@ -18471,7 +18176,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l81;
@@ -18490,7 +18195,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l73;
@@ -18508,7 +18213,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l69;
@@ -18526,7 +18231,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l51;
@@ -18544,7 +18249,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l47;
@@ -18562,7 +18267,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 18;
                         bestSpot1 = l39;
@@ -18581,7 +18286,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l37;
@@ -18600,7 +18305,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 43;
                         bestSpot0 = l82;
@@ -18621,7 +18326,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l62;
@@ -18639,7 +18344,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l58;
@@ -18657,7 +18362,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 23;
                         bestSpot0 = l38;
@@ -18678,7 +18383,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l72;
@@ -18696,7 +18401,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l70;
@@ -18714,7 +18419,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l50;
@@ -18732,7 +18437,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l48;
@@ -18750,7 +18455,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l71;
@@ -18769,7 +18474,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l61;
@@ -18787,7 +18492,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l59;
@@ -18805,7 +18510,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l49;
@@ -18824,7 +18529,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l60;
@@ -18838,7 +18543,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2048) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2048) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2048) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2048) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot11) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot11;
                 bestCenter = center;
             }
@@ -18847,7 +18552,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1024) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1024) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1024) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1024) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot10) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot10;
                 bestCenter = center;
             }
@@ -18856,7 +18561,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot9) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -18865,7 +18570,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -18874,7 +18579,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -18883,7 +18588,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -18892,7 +18597,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -18901,7 +18606,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -18910,7 +18615,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -18919,7 +18624,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -18928,7 +18633,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -18937,7 +18642,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -18970,7 +18675,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l106;
@@ -18988,7 +18693,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l102;
@@ -19006,7 +18711,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 272;
                         bestSpot4 = l86;
@@ -19025,7 +18730,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l78;
@@ -19044,7 +18749,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 144;
                         bestSpot4 = l42;
@@ -19063,7 +18768,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l34;
@@ -19082,7 +18787,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l18;
@@ -19100,7 +18805,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l14;
@@ -19118,7 +18823,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 264;
                         bestSpot3 = l96;
@@ -19137,7 +18842,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l90;
@@ -19155,7 +18860,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 132;
                         bestSpot2 = l30;
@@ -19174,7 +18879,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l24;
@@ -19192,7 +18897,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l105;
@@ -19210,7 +18915,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 72;
                         bestSpot3 = l103;
@@ -19229,7 +18934,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l75;
@@ -19247,7 +18952,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l67;
@@ -19265,7 +18970,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l53;
@@ -19283,7 +18988,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l45;
@@ -19301,7 +19006,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l17;
@@ -19319,7 +19024,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 36;
                         bestSpot2 = l15;
@@ -19338,7 +19043,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l104;
@@ -19356,7 +19061,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l64;
@@ -19374,7 +19079,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l56;
@@ -19392,7 +19097,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l16;
@@ -19410,7 +19115,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l95;
@@ -19428,7 +19133,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l91;
@@ -19446,7 +19151,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 281;
                         bestSpot0 = l85;
@@ -19467,7 +19172,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l79;
@@ -19486,7 +19191,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 149;
                         bestSpot0 = l41;
@@ -19507,7 +19212,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l35;
@@ -19526,7 +19231,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l29;
@@ -19544,7 +19249,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l25;
@@ -19562,7 +19267,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l94;
@@ -19580,7 +19285,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 72;
                         bestSpot3 = l92;
@@ -19599,7 +19304,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l74;
@@ -19618,7 +19323,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l68;
@@ -19636,7 +19341,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l52;
@@ -19655,7 +19360,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l46;
@@ -19673,7 +19378,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l28;
@@ -19691,7 +19396,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 36;
                         bestSpot2 = l26;
@@ -19710,7 +19415,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l93;
@@ -19728,7 +19433,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l63;
@@ -19747,7 +19452,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l57;
@@ -19765,7 +19470,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l27;
@@ -19783,7 +19488,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l84;
@@ -19802,7 +19507,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l80;
@@ -19821,7 +19526,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l40;
@@ -19840,7 +19545,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l36;
@@ -19859,7 +19564,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l83;
@@ -19878,7 +19583,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 75;
                         bestSpot0 = l81;
@@ -19899,7 +19604,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l73;
@@ -19917,7 +19622,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l69;
@@ -19935,7 +19640,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l51;
@@ -19953,7 +19658,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l47;
@@ -19971,7 +19676,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l39;
@@ -19990,7 +19695,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 39;
                         bestSpot0 = l37;
@@ -20011,7 +19716,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l82;
@@ -20030,7 +19735,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l62;
@@ -20048,7 +19753,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l58;
@@ -20066,7 +19771,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l38;
@@ -20085,7 +19790,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l72;
@@ -20103,7 +19808,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l70;
@@ -20122,7 +19827,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l50;
@@ -20140,7 +19845,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l48;
@@ -20159,7 +19864,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l71;
@@ -20177,7 +19882,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l61;
@@ -20195,7 +19900,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l59;
@@ -20214,7 +19919,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l49;
@@ -20232,7 +19937,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l60;
@@ -20245,7 +19950,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -20254,7 +19959,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -20263,7 +19968,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -20272,7 +19977,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -20281,7 +19986,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -20290,7 +19995,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -20299,7 +20004,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -20308,7 +20013,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -20317,7 +20022,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -20350,7 +20055,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 68;
                         bestSpot2 = l106;
@@ -20369,7 +20074,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 260;
                         bestSpot2 = l102;
@@ -20388,7 +20093,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 72;
                         bestSpot3 = l86;
@@ -20407,7 +20112,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 272;
                         bestSpot4 = l78;
@@ -20426,7 +20131,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 40;
                         bestSpot3 = l42;
@@ -20445,7 +20150,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 144;
                         bestSpot4 = l34;
@@ -20464,7 +20169,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l18;
@@ -20483,7 +20188,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l14;
@@ -20502,7 +20207,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l96;
@@ -20520,7 +20225,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 256;
                         bestSpot8 = l90;
@@ -20538,7 +20243,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l30;
@@ -20556,7 +20261,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 128;
                         bestSpot7 = l24;
@@ -20574,7 +20279,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l105;
@@ -20592,7 +20297,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l103;
@@ -20610,7 +20315,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l75;
@@ -20628,7 +20333,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l67;
@@ -20646,7 +20351,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l53;
@@ -20664,7 +20369,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l45;
@@ -20682,7 +20387,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l17;
@@ -20700,7 +20405,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l15;
@@ -20718,7 +20423,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l104;
@@ -20736,7 +20441,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l64;
@@ -20754,7 +20459,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l56;
@@ -20772,7 +20477,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l16;
@@ -20790,7 +20495,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 68;
                         bestSpot2 = l95;
@@ -20809,7 +20514,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 260;
                         bestSpot2 = l91;
@@ -20828,7 +20533,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 72;
                         bestSpot3 = l85;
@@ -20847,7 +20552,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 272;
                         bestSpot4 = l79;
@@ -20866,7 +20571,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 40;
                         bestSpot3 = l41;
@@ -20885,7 +20590,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 144;
                         bestSpot4 = l35;
@@ -20904,7 +20609,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l29;
@@ -20923,7 +20628,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l25;
@@ -20942,7 +20647,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l94;
@@ -20960,7 +20665,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l92;
@@ -20978,7 +20683,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l74;
@@ -20996,7 +20701,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l68;
@@ -21014,7 +20719,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l52;
@@ -21032,7 +20737,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l46;
@@ -21050,7 +20755,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l28;
@@ -21068,7 +20773,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l26;
@@ -21086,7 +20791,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l93;
@@ -21104,7 +20809,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l63;
@@ -21122,7 +20827,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l57;
@@ -21140,7 +20845,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l27;
@@ -21158,7 +20863,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 77;
                         bestSpot0 = l84;
@@ -21179,7 +20884,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 277;
                         bestSpot0 = l80;
@@ -21200,7 +20905,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 43;
                         bestSpot0 = l40;
@@ -21221,7 +20926,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 147;
                         bestSpot0 = l36;
@@ -21242,7 +20947,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l83;
@@ -21261,7 +20966,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l81;
@@ -21280,7 +20985,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l73;
@@ -21299,7 +21004,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l69;
@@ -21318,7 +21023,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l51;
@@ -21337,7 +21042,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l47;
@@ -21356,7 +21061,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l39;
@@ -21375,7 +21080,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l37;
@@ -21394,7 +21099,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l82;
@@ -21413,7 +21118,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l62;
@@ -21432,7 +21137,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l58;
@@ -21451,7 +21156,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l38;
@@ -21470,7 +21175,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l72;
@@ -21488,7 +21193,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l70;
@@ -21506,7 +21211,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l50;
@@ -21524,7 +21229,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l48;
@@ -21542,7 +21247,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l71;
@@ -21560,7 +21265,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l61;
@@ -21578,7 +21283,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l59;
@@ -21596,7 +21301,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l49;
@@ -21614,7 +21319,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l60;
@@ -21627,7 +21332,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -21636,7 +21341,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -21645,7 +21350,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -21654,7 +21359,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -21663,7 +21368,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -21672,7 +21377,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -21681,7 +21386,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -21690,7 +21395,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -21699,7 +21404,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -21732,7 +21437,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l106;
@@ -21750,7 +21455,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l102;
@@ -21768,7 +21473,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l86;
@@ -21787,7 +21492,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 320;
                         bestSpot6 = l78;
@@ -21806,7 +21511,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 18;
                         bestSpot1 = l42;
@@ -21825,7 +21530,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 192;
                         bestSpot6 = l34;
@@ -21844,7 +21549,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l18;
@@ -21862,7 +21567,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l14;
@@ -21880,7 +21585,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l96;
@@ -21898,7 +21603,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 264;
                         bestSpot3 = l90;
@@ -21917,7 +21622,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l30;
@@ -21935,7 +21640,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 132;
                         bestSpot2 = l24;
@@ -21954,7 +21659,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 40;
                         bestSpot3 = l105;
@@ -21973,7 +21678,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l103;
@@ -21991,7 +21696,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l75;
@@ -22009,7 +21714,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l67;
@@ -22027,7 +21732,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l53;
@@ -22045,7 +21750,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l45;
@@ -22063,7 +21768,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 20;
                         bestSpot2 = l17;
@@ -22082,7 +21787,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l15;
@@ -22100,7 +21805,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l104;
@@ -22118,7 +21823,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l64;
@@ -22136,7 +21841,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l56;
@@ -22154,7 +21859,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l16;
@@ -22172,7 +21877,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l95;
@@ -22190,7 +21895,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l91;
@@ -22208,7 +21913,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l85;
@@ -22227,7 +21932,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 329;
                         bestSpot0 = l79;
@@ -22248,7 +21953,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 18;
                         bestSpot1 = l41;
@@ -22267,7 +21972,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 197;
                         bestSpot0 = l35;
@@ -22288,7 +21993,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l29;
@@ -22306,7 +22011,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l25;
@@ -22324,7 +22029,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 40;
                         bestSpot3 = l94;
@@ -22343,7 +22048,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l92;
@@ -22361,7 +22066,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l74;
@@ -22379,7 +22084,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l68;
@@ -22398,7 +22103,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l52;
@@ -22416,7 +22121,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l46;
@@ -22435,7 +22140,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 20;
                         bestSpot2 = l28;
@@ -22454,7 +22159,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l26;
@@ -22472,7 +22177,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l93;
@@ -22490,7 +22195,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l63;
@@ -22508,7 +22213,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l57;
@@ -22527,7 +22232,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l27;
@@ -22545,7 +22250,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l84;
@@ -22564,7 +22269,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l80;
@@ -22583,7 +22288,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 18;
                         bestSpot1 = l40;
@@ -22602,7 +22307,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l36;
@@ -22621,7 +22326,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 43;
                         bestSpot0 = l83;
@@ -22642,7 +22347,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l81;
@@ -22661,7 +22366,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l73;
@@ -22679,7 +22384,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l69;
@@ -22697,7 +22402,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l51;
@@ -22715,7 +22420,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l47;
@@ -22733,7 +22438,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 23;
                         bestSpot0 = l39;
@@ -22754,7 +22459,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l37;
@@ -22773,7 +22478,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l82;
@@ -22792,7 +22497,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l62;
@@ -22810,7 +22515,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l58;
@@ -22828,7 +22533,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l38;
@@ -22847,7 +22552,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l72;
@@ -22866,7 +22571,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l70;
@@ -22884,7 +22589,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l50;
@@ -22903,7 +22608,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l48;
@@ -22921,7 +22626,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l71;
@@ -22939,7 +22644,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l61;
@@ -22958,7 +22663,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l59;
@@ -22976,7 +22681,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l49;
@@ -22994,7 +22699,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l60;
@@ -23007,7 +22712,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -23016,7 +22721,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -23025,7 +22730,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -23034,7 +22739,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -23043,7 +22748,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -23052,7 +22757,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -23061,7 +22766,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -23070,7 +22775,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -23079,7 +22784,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -23113,7 +22818,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l106;
@@ -23131,7 +22836,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l102;
@@ -23149,7 +22854,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 260;
                         bestSpot2 = l86;
@@ -23168,7 +22873,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 520;
                         bestSpot3 = l78;
@@ -23187,7 +22892,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l42;
@@ -23206,7 +22911,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l34;
@@ -23225,7 +22930,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l18;
@@ -23243,7 +22948,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l14;
@@ -23261,7 +22966,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l96;
@@ -23279,7 +22984,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l90;
@@ -23297,7 +23002,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l30;
@@ -23316,7 +23021,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l24;
@@ -23335,7 +23040,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l105;
@@ -23353,7 +23058,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l103;
@@ -23371,7 +23076,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 325;
                         bestSpot0 = l75;
@@ -23392,7 +23097,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 650;
                         bestSpot1 = l67;
@@ -23413,7 +23118,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l53;
@@ -23432,7 +23137,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l45;
@@ -23451,7 +23156,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l17;
@@ -23469,7 +23174,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l15;
@@ -23487,7 +23192,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l104;
@@ -23506,7 +23211,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l64;
@@ -23525,7 +23230,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l56;
@@ -23544,7 +23249,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 48;
                         bestSpot4 = l16;
@@ -23563,7 +23268,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l95;
@@ -23581,7 +23286,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l91;
@@ -23599,7 +23304,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l85;
@@ -23617,7 +23322,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l79;
@@ -23635,7 +23340,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l41;
@@ -23653,7 +23358,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l35;
@@ -23671,7 +23376,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l29;
@@ -23690,7 +23395,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l25;
@@ -23709,7 +23414,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l94;
@@ -23727,7 +23432,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l92;
@@ -23745,7 +23450,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l74;
@@ -23764,7 +23469,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l68;
@@ -23783,7 +23488,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l52;
@@ -23801,7 +23506,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l46;
@@ -23819,7 +23524,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l28;
@@ -23838,7 +23543,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l26;
@@ -23857,7 +23562,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l93;
@@ -23876,7 +23581,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l63;
@@ -23894,7 +23599,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l57;
@@ -23912,7 +23617,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 51;
                         bestSpot0 = l27;
@@ -23933,7 +23638,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l84;
@@ -23951,7 +23656,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l80;
@@ -23969,7 +23674,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l40;
@@ -23987,7 +23692,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l36;
@@ -24005,7 +23710,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l83;
@@ -24023,7 +23728,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l81;
@@ -24041,7 +23746,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l73;
@@ -24060,7 +23765,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l69;
@@ -24079,7 +23784,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l51;
@@ -24097,7 +23802,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l47;
@@ -24115,7 +23820,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l39;
@@ -24133,7 +23838,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l37;
@@ -24151,7 +23856,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l82;
@@ -24170,7 +23875,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l62;
@@ -24188,7 +23893,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l58;
@@ -24206,7 +23911,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l38;
@@ -24225,7 +23930,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l72;
@@ -24244,7 +23949,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l70;
@@ -24263,7 +23968,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l50;
@@ -24281,7 +23986,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l48;
@@ -24299,7 +24004,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 15;
                         bestSpot0 = l71;
@@ -24320,7 +24025,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l61;
@@ -24338,7 +24043,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l59;
@@ -24356,7 +24061,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l49;
@@ -24375,7 +24080,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l60;
@@ -24389,7 +24094,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 512) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 512) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 512) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot9) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot9;
                 bestCenter = center;
             }
@@ -24398,7 +24103,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -24407,7 +24112,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -24416,7 +24121,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -24425,7 +24130,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -24434,7 +24139,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -24443,7 +24148,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -24452,7 +24157,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -24461,7 +24166,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -24470,7 +24175,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -24503,7 +24208,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l106;
@@ -24521,7 +24226,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l102;
@@ -24539,7 +24244,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l86;
@@ -24557,7 +24262,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l78;
@@ -24575,7 +24280,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l42;
@@ -24593,7 +24298,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l34;
@@ -24611,7 +24316,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l18;
@@ -24629,7 +24334,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 128;
                         bestSpot7 = l14;
@@ -24647,7 +24352,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 68;
                         bestSpot2 = l96;
@@ -24666,7 +24371,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l90;
@@ -24684,7 +24389,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 305;
                         bestSpot0 = l30;
@@ -24705,7 +24410,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l24;
@@ -24724,7 +24429,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l105;
@@ -24742,7 +24447,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l103;
@@ -24761,7 +24466,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 80;
                         bestSpot4 = l75;
@@ -24780,7 +24485,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l67;
@@ -24799,7 +24504,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l53;
@@ -24817,7 +24522,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l45;
@@ -24835,7 +24540,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l17;
@@ -24853,7 +24558,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 160;
                         bestSpot5 = l15;
@@ -24872,7 +24577,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l104;
@@ -24890,7 +24595,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l64;
@@ -24908,7 +24613,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l56;
@@ -24926,7 +24631,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l16;
@@ -24944,7 +24649,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l95;
@@ -24962,7 +24667,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l91;
@@ -24980,7 +24685,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 68;
                         bestSpot2 = l85;
@@ -24999,7 +24704,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l79;
@@ -25017,7 +24722,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l41;
@@ -25036,7 +24741,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l35;
@@ -25054,7 +24759,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l29;
@@ -25073,7 +24778,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 130;
                         bestSpot1 = l25;
@@ -25092,7 +24797,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l94;
@@ -25110,7 +24815,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l92;
@@ -25129,7 +24834,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 85;
                         bestSpot0 = l74;
@@ -25150,7 +24855,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l68;
@@ -25169,7 +24874,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l52;
@@ -25188,7 +24893,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l46;
@@ -25206,7 +24911,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l28;
@@ -25225,7 +24930,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 163;
                         bestSpot0 = l26;
@@ -25246,7 +24951,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l93;
@@ -25264,7 +24969,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l63;
@@ -25283,7 +24988,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l57;
@@ -25301,7 +25006,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l27;
@@ -25320,7 +25025,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l84;
@@ -25338,7 +25043,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l80;
@@ -25356,7 +25061,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l40;
@@ -25374,7 +25079,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l36;
@@ -25392,7 +25097,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l83;
@@ -25410,7 +25115,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l81;
@@ -25429,7 +25134,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l73;
@@ -25448,7 +25153,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l69;
@@ -25467,7 +25172,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l51;
@@ -25485,7 +25190,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l47;
@@ -25503,7 +25208,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l39;
@@ -25521,7 +25226,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l37;
@@ -25540,7 +25245,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l82;
@@ -25558,7 +25263,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l62;
@@ -25576,7 +25281,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l58;
@@ -25594,7 +25299,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l38;
@@ -25612,7 +25317,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l72;
@@ -25631,7 +25336,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 15;
                         bestSpot0 = l70;
@@ -25652,7 +25357,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l50;
@@ -25670,7 +25375,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l48;
@@ -25689,7 +25394,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l71;
@@ -25708,7 +25413,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l61;
@@ -25726,7 +25431,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l59;
@@ -25745,7 +25450,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l49;
@@ -25763,7 +25468,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l60;
@@ -25776,7 +25481,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -25785,7 +25490,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -25794,7 +25499,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -25803,7 +25508,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -25812,7 +25517,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -25821,7 +25526,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -25830,7 +25535,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -25839,7 +25544,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -25848,7 +25553,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -25881,7 +25586,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 18;
                         bestSpot1 = l106;
@@ -25900,7 +25605,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l102;
@@ -25919,7 +25624,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l86;
@@ -25937,7 +25642,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l78;
@@ -25955,7 +25660,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l42;
@@ -25973,7 +25678,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l34;
@@ -25991,7 +25696,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 192;
                         bestSpot6 = l18;
@@ -26010,7 +25715,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 320;
                         bestSpot6 = l14;
@@ -26029,7 +25734,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l96;
@@ -26047,7 +25752,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l90;
@@ -26065,7 +25770,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 132;
                         bestSpot2 = l30;
@@ -26084,7 +25789,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 264;
                         bestSpot3 = l24;
@@ -26103,7 +25808,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l105;
@@ -26121,7 +25826,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l103;
@@ -26139,7 +25844,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 20;
                         bestSpot2 = l75;
@@ -26158,7 +25863,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 40;
                         bestSpot3 = l67;
@@ -26177,7 +25882,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l53;
@@ -26195,7 +25900,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l45;
@@ -26213,7 +25918,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l17;
@@ -26231,7 +25936,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l15;
@@ -26249,7 +25954,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l104;
@@ -26267,7 +25972,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l64;
@@ -26285,7 +25990,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l56;
@@ -26303,7 +26008,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l16;
@@ -26321,7 +26026,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 18;
                         bestSpot1 = l95;
@@ -26340,7 +26045,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l91;
@@ -26359,7 +26064,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l85;
@@ -26377,7 +26082,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l79;
@@ -26395,7 +26100,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l41;
@@ -26413,7 +26118,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l35;
@@ -26431,7 +26136,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 197;
                         bestSpot0 = l29;
@@ -26452,7 +26157,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 329;
                         bestSpot0 = l25;
@@ -26473,7 +26178,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l94;
@@ -26491,7 +26196,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l92;
@@ -26509,7 +26214,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 20;
                         bestSpot2 = l74;
@@ -26528,7 +26233,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 40;
                         bestSpot3 = l68;
@@ -26547,7 +26252,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l52;
@@ -26565,7 +26270,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l46;
@@ -26583,7 +26288,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l28;
@@ -26602,7 +26307,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l26;
@@ -26621,7 +26326,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l93;
@@ -26639,7 +26344,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l63;
@@ -26657,7 +26362,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l57;
@@ -26675,7 +26380,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 65;
                         bestSpot0 = l27;
@@ -26694,7 +26399,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 18;
                         bestSpot1 = l84;
@@ -26713,7 +26418,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 34;
                         bestSpot1 = l80;
@@ -26732,7 +26437,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l40;
@@ -26751,7 +26456,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l36;
@@ -26770,7 +26475,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l83;
@@ -26788,7 +26493,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l81;
@@ -26806,7 +26511,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 23;
                         bestSpot0 = l73;
@@ -26827,7 +26532,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 43;
                         bestSpot0 = l69;
@@ -26848,7 +26553,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l51;
@@ -26867,7 +26572,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l47;
@@ -26886,7 +26591,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l39;
@@ -26904,7 +26609,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l37;
@@ -26922,7 +26627,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l82;
@@ -26940,7 +26645,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l62;
@@ -26959,7 +26664,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 9;
                         bestSpot0 = l58;
@@ -26978,7 +26683,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l38;
@@ -26996,7 +26701,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l72;
@@ -27015,7 +26720,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l70;
@@ -27034,7 +26739,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l50;
@@ -27052,7 +26757,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l48;
@@ -27070,7 +26775,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l71;
@@ -27089,7 +26794,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l61;
@@ -27107,7 +26812,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l59;
@@ -27125,7 +26830,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l49;
@@ -27143,7 +26848,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l60;
@@ -27156,7 +26861,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -27165,7 +26870,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -27174,7 +26879,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -27183,7 +26888,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -27192,7 +26897,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -27201,7 +26906,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -27210,7 +26915,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -27219,7 +26924,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -27228,7 +26933,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }
@@ -27261,7 +26966,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l106;
+                        if (v106 < Constants.DIST_INF) emptyLoc = l106;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l106;
@@ -27279,7 +26984,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l102;
+                        if (v102 < Constants.DIST_INF) emptyLoc = l102;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l102;
@@ -27297,7 +27002,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l86;
+                        if (v86 < Constants.DIST_INF) emptyLoc = l86;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l86;
@@ -27315,7 +27020,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l78;
+                        if (v78 < Constants.DIST_INF) emptyLoc = l78;
                     default:
                         targetCenters |= 128;
                         bestSpot7 = l78;
@@ -27333,7 +27038,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l42;
+                        if (v42 < Constants.DIST_INF) emptyLoc = l42;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l42;
@@ -27351,7 +27056,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l34;
+                        if (v34 < Constants.DIST_INF) emptyLoc = l34;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l34;
@@ -27369,7 +27074,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l18;
+                        if (v18 < Constants.DIST_INF) emptyLoc = l18;
                     default:
                         targetCenters |= 64;
                         bestSpot6 = l18;
@@ -27387,7 +27092,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l14;
+                        if (v14 < Constants.DIST_INF) emptyLoc = l14;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l14;
@@ -27405,7 +27110,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l96;
+                        if (v96 < Constants.DIST_INF) emptyLoc = l96;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l96;
@@ -27423,7 +27128,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l90;
+                        if (v90 < Constants.DIST_INF) emptyLoc = l90;
                     default:
                         targetCenters |= 132;
                         bestSpot2 = l90;
@@ -27442,7 +27147,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l30;
+                        if (v30 < Constants.DIST_INF) emptyLoc = l30;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l30;
@@ -27461,7 +27166,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l24;
+                        if (v24 < Constants.DIST_INF) emptyLoc = l24;
                     default:
                         targetCenters |= 305;
                         bestSpot0 = l24;
@@ -27482,7 +27187,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l105;
+                        if (v105 < Constants.DIST_INF) emptyLoc = l105;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l105;
@@ -27501,7 +27206,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l103;
+                        if (v103 < Constants.DIST_INF) emptyLoc = l103;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l103;
@@ -27519,7 +27224,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l75;
+                        if (v75 < Constants.DIST_INF) emptyLoc = l75;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l75;
@@ -27538,7 +27243,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l67;
+                        if (v67 < Constants.DIST_INF) emptyLoc = l67;
                     default:
                         targetCenters |= 144;
                         bestSpot4 = l67;
@@ -27557,7 +27262,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l53;
+                        if (v53 < Constants.DIST_INF) emptyLoc = l53;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l53;
@@ -27575,7 +27280,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l45;
+                        if (v45 < Constants.DIST_INF) emptyLoc = l45;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l45;
@@ -27593,7 +27298,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l17;
+                        if (v17 < Constants.DIST_INF) emptyLoc = l17;
                     default:
                         targetCenters |= 96;
                         bestSpot5 = l17;
@@ -27612,7 +27317,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l15;
+                        if (v15 < Constants.DIST_INF) emptyLoc = l15;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l15;
@@ -27630,7 +27335,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l104;
+                        if (v104 < Constants.DIST_INF) emptyLoc = l104;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l104;
@@ -27648,7 +27353,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l64;
+                        if (v64 < Constants.DIST_INF) emptyLoc = l64;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l64;
@@ -27666,7 +27371,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l56;
+                        if (v56 < Constants.DIST_INF) emptyLoc = l56;
                     default:
                         targetCenters |= 16;
                         bestSpot4 = l56;
@@ -27684,7 +27389,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l16;
+                        if (v16 < Constants.DIST_INF) emptyLoc = l16;
                     default:
                         targetCenters |= 32;
                         bestSpot5 = l16;
@@ -27702,7 +27407,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l95;
+                        if (v95 < Constants.DIST_INF) emptyLoc = l95;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l95;
@@ -27720,7 +27425,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l91;
+                        if (v91 < Constants.DIST_INF) emptyLoc = l91;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l91;
@@ -27738,7 +27443,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l85;
+                        if (v85 < Constants.DIST_INF) emptyLoc = l85;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l85;
@@ -27756,7 +27461,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l79;
+                        if (v79 < Constants.DIST_INF) emptyLoc = l79;
                     default:
                         targetCenters |= 132;
                         bestSpot2 = l79;
@@ -27775,7 +27480,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l41;
+                        if (v41 < Constants.DIST_INF) emptyLoc = l41;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l41;
@@ -27793,7 +27498,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l35;
+                        if (v35 < Constants.DIST_INF) emptyLoc = l35;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l35;
@@ -27812,7 +27517,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l29;
+                        if (v29 < Constants.DIST_INF) emptyLoc = l29;
                     default:
                         targetCenters |= 66;
                         bestSpot1 = l29;
@@ -27831,7 +27536,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l25;
+                        if (v25 < Constants.DIST_INF) emptyLoc = l25;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l25;
@@ -27850,7 +27555,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l94;
+                        if (v94 < Constants.DIST_INF) emptyLoc = l94;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l94;
@@ -27869,7 +27574,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l92;
+                        if (v92 < Constants.DIST_INF) emptyLoc = l92;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l92;
@@ -27887,7 +27592,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l74;
+                        if (v74 < Constants.DIST_INF) emptyLoc = l74;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l74;
@@ -27906,7 +27611,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l68;
+                        if (v68 < Constants.DIST_INF) emptyLoc = l68;
                     default:
                         targetCenters |= 149;
                         bestSpot0 = l68;
@@ -27927,7 +27632,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l52;
+                        if (v52 < Constants.DIST_INF) emptyLoc = l52;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l52;
@@ -27945,7 +27650,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l46;
+                        if (v46 < Constants.DIST_INF) emptyLoc = l46;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l46;
@@ -27964,7 +27669,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l28;
+                        if (v28 < Constants.DIST_INF) emptyLoc = l28;
                     default:
                         targetCenters |= 99;
                         bestSpot0 = l28;
@@ -27985,7 +27690,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l26;
+                        if (v26 < Constants.DIST_INF) emptyLoc = l26;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l26;
@@ -28004,7 +27709,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l93;
+                        if (v93 < Constants.DIST_INF) emptyLoc = l93;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l93;
@@ -28022,7 +27727,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l63;
+                        if (v63 < Constants.DIST_INF) emptyLoc = l63;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l63;
@@ -28040,7 +27745,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l57;
+                        if (v57 < Constants.DIST_INF) emptyLoc = l57;
                     default:
                         targetCenters |= 17;
                         bestSpot0 = l57;
@@ -28059,7 +27764,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l27;
+                        if (v27 < Constants.DIST_INF) emptyLoc = l27;
                     default:
                         targetCenters |= 33;
                         bestSpot0 = l27;
@@ -28078,7 +27783,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l84;
+                        if (v84 < Constants.DIST_INF) emptyLoc = l84;
                     default:
                         targetCenters |= 8;
                         bestSpot3 = l84;
@@ -28096,7 +27801,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l80;
+                        if (v80 < Constants.DIST_INF) emptyLoc = l80;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l80;
@@ -28114,7 +27819,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l40;
+                        if (v40 < Constants.DIST_INF) emptyLoc = l40;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l40;
@@ -28132,7 +27837,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l36;
+                        if (v36 < Constants.DIST_INF) emptyLoc = l36;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l36;
@@ -28150,7 +27855,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l83;
+                        if (v83 < Constants.DIST_INF) emptyLoc = l83;
                     default:
                         targetCenters |= 12;
                         bestSpot2 = l83;
@@ -28169,7 +27874,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l81;
+                        if (v81 < Constants.DIST_INF) emptyLoc = l81;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l81;
@@ -28187,7 +27892,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l73;
+                        if (v73 < Constants.DIST_INF) emptyLoc = l73;
                     default:
                         targetCenters |= 10;
                         bestSpot1 = l73;
@@ -28206,7 +27911,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l69;
+                        if (v69 < Constants.DIST_INF) emptyLoc = l69;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l69;
@@ -28225,7 +27930,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l51;
+                        if (v51 < Constants.DIST_INF) emptyLoc = l51;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l51;
@@ -28243,7 +27948,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l47;
+                        if (v47 < Constants.DIST_INF) emptyLoc = l47;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l47;
@@ -28261,7 +27966,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l39;
+                        if (v39 < Constants.DIST_INF) emptyLoc = l39;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l39;
@@ -28280,7 +27985,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l37;
+                        if (v37 < Constants.DIST_INF) emptyLoc = l37;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l37;
@@ -28298,7 +28003,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l82;
+                        if (v82 < Constants.DIST_INF) emptyLoc = l82;
                     default:
                         targetCenters |= 4;
                         bestSpot2 = l82;
@@ -28316,7 +28021,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l62;
+                        if (v62 < Constants.DIST_INF) emptyLoc = l62;
                     default:
                         targetCenters |= 2;
                         bestSpot1 = l62;
@@ -28334,7 +28039,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l58;
+                        if (v58 < Constants.DIST_INF) emptyLoc = l58;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l58;
@@ -28352,7 +28057,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l38;
+                        if (v38 < Constants.DIST_INF) emptyLoc = l38;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l38;
@@ -28370,7 +28075,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l72;
+                        if (v72 < Constants.DIST_INF) emptyLoc = l72;
                     default:
                         targetCenters |= 15;
                         bestSpot0 = l72;
@@ -28391,7 +28096,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l70;
+                        if (v70 < Constants.DIST_INF) emptyLoc = l70;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l70;
@@ -28410,7 +28115,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l50;
+                        if (v50 < Constants.DIST_INF) emptyLoc = l50;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l50;
@@ -28429,7 +28134,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l48;
+                        if (v48 < Constants.DIST_INF) emptyLoc = l48;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l48;
@@ -28447,7 +28152,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l71;
+                        if (v71 < Constants.DIST_INF) emptyLoc = l71;
                     default:
                         targetCenters |= 5;
                         bestSpot0 = l71;
@@ -28466,7 +28171,7 @@ public class VisionManager {
                     case ALLY_SECONDARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l61;
+                        if (v61 < Constants.DIST_INF) emptyLoc = l61;
                     default:
                         targetCenters |= 3;
                         bestSpot0 = l61;
@@ -28485,7 +28190,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l59;
+                        if (v59 < Constants.DIST_INF) emptyLoc = l59;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l59;
@@ -28503,7 +28208,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l49;
+                        if (v49 < Constants.DIST_INF) emptyLoc = l49;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l49;
@@ -28521,7 +28226,7 @@ public class VisionManager {
                     case ALLY_PRIMARY:
                         break;
                     case EMPTY:
-                        emptyLoc = l60;
+                        if (v60 < Constants.DIST_INF) emptyLoc = l60;
                     default:
                         targetCenters |= 1;
                         bestSpot0 = l60;
@@ -28534,7 +28239,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 256) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 256) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 256) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot8) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot8;
                 bestCenter = center;
             }
@@ -28543,7 +28248,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 128) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 128) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 128) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot7) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot7;
                 bestCenter = center;
             }
@@ -28552,7 +28257,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 64) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 64) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 64) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot6) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot6;
                 bestCenter = center;
             }
@@ -28561,7 +28266,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 32) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 32) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 32) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot5) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot5;
                 bestCenter = center;
             }
@@ -28570,7 +28275,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 16) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 16) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 16) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot4) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot4;
                 bestCenter = center;
             }
@@ -28579,7 +28284,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 8) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 8) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 8) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot3) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot3;
                 bestCenter = center;
             }
@@ -28588,7 +28293,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 4) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 4) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 4) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot2) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot2;
                 bestCenter = center;
             }
@@ -28597,7 +28302,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 2) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 2) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 2) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot1) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot1;
                 bestCenter = center;
             }
@@ -28606,7 +28311,7 @@ public class VisionManager {
         if (Map.canBeCenter(center)){
             if ((obstructedCenters & 1) > 0) Map.markObstructed(center);
             else if ((unavailableCenters & 1) > 0) Map.markCenterNearRuins(center);
-            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center)){
+            else if ((targetCenters & 1) > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot0) < Constants.DIST_INF){
                 bestSRPSpot = bestSpot0;
                 bestCenter = center;
             }

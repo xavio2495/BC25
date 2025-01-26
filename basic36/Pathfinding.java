@@ -46,7 +46,7 @@ public class Pathfinding {
             update(target);
 
             if (!bugNav.isUsingBugnav() && turnsGreedy <= 0){
-                VisionManager.computeDistsUnit();
+                //VisionManager.computeDistsUnit();
 
                 //System.err.println("Using bfs");
                 Direction dir = VisionManager.getBestDirection(target);

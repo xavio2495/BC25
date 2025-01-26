@@ -13,7 +13,13 @@ public class Splasher extends Unit {
     }
 
     void startTurn() throws GameActionException {
+        if (shouldRecover()) recovering = true;
+        if (rc.getPaint() >= UnitType.SPLASHER.paintCapacity - Constants.MIN_TRANSFER_PAINT) recovering = false;
+
+        hasMicro = MicroManagerSplasher.doMicro();
+
         super.startTurn();
+
         TowerManager.updateAll();
     }
 
@@ -33,8 +39,7 @@ public class Splasher extends Unit {
     }
 
     void move() throws GameActionException {
-        if (!rc.isMovementReady()) return;
-        if (MicroManagerSplasher.doMicro()) return;
+        if (hasMicro || !rc.isMovementReady()) return;
         MapLocation target = getTarget();
         pathfinding.moveTo(target);
     }
