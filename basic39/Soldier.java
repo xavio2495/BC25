@@ -1,8 +1,11 @@
-package basic36;
+package basic39;
 
 import battlecode.common.*;
 
 public class Soldier extends Unit {
+
+    static MapLocation[] enemyTowers;
+    static int enemyTowersSize;
 
     boolean recovering = false;
     Soldier(RobotController rc) throws GameActionException {
@@ -12,13 +15,14 @@ public class Soldier extends Unit {
     }
 
     void startTurn() throws GameActionException {
+        MicroManagerSoldier.initiateMicro();
+        analyzeEnemies();
         attackTowers();
+        MicroManagerSoldier.canAttack = rc.isActionReady() && rc.getPaint() > UnitType.SOLDIER.attackCost;
         completePatterns();
         tryWithdraw();
         if (shouldRecover()) recovering = true;
         if (rc.getPaint() >= UnitType.SOLDIER.paintCapacity - Constants.MIN_TRANSFER_PAINT) recovering = false;
-
-
         hasMicro = MicroManagerSoldier.doMicro();
 
         super.startTurn();
@@ -116,18 +120,32 @@ public class Soldier extends Unit {
 
     void attackTowers() throws GameActionException {
         if (!rc.isActionReady()) return;
-        RobotInfo[] robots = rc.senseNearbyRobots(rc.getType().actionRadiusSquared, rc.getTeam().opponent());
+        for (int i = 0; i < enemyTowersSize; ++i){
+            if (rc.canAttack(enemyTowers[i])) rc.attack(enemyTowers[i]);
+        }
+        /*RobotInfo[] robots = rc.senseNearbyRobots(rc.getType().actionRadiusSquared, rc.getTeam().opponent());
         for (RobotInfo r : robots){
             if (!r.getType().isTowerType()) continue;
             if (rc.canAttack(r.getLocation())) rc.attack(r.getLocation());
-        }
+        }*/
     }
 
     MapLocation getClosestEnemyTower() throws GameActionException {
-        RobotInfo[] robots = rc.senseNearbyRobots(GameConstants.VISION_RADIUS_SQUARED, rc.getTeam().opponent());
+        //RobotInfo[] robots = rc.senseNearbyRobots(GameConstants.VISION_RADIUS_SQUARED, rc.getTeam().opponent());
         MapLocation bestLoc = null;
         int bestDist = 0;
-        for (RobotInfo r : robots){
+
+        for (int i = 0; i < enemyTowersSize; ++i){
+            MapLocation loc = enemyTowers[i];
+            int dist = VisionManager.computeDistance(loc);
+            if (dist > Constants.DIST_INF) continue;
+            if (bestLoc == null || dist < bestDist){
+                bestLoc = loc;
+                bestDist = dist;
+            }
+        }
+
+        /*for (RobotInfo r : robots){
             if (!r.getType().isTowerType()) continue;
             int dist = VisionManager.computeDistance(r.getLocation());
             if (dist > Constants.DIST_INF) continue;
@@ -135,12 +153,12 @@ public class Soldier extends Unit {
                 bestLoc = r.getLocation();
                 bestDist = dist;
             }
-        }
+        }*/
         return bestLoc;
     }
 
     boolean shouldRecover(){
-        if (rc.getRoundNum() > Constants.MIN_ROUNDS_NO_RECOVERY && rc.getNumberTowers() > Constants.MIN_TOWERS_NO_RECOVERY) return false;
+        if (Util.noHealSoldiers()) return false;
         return (rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER);
     }
 
@@ -257,4 +275,28 @@ public class Soldier extends Unit {
         return false;
     }
 
+    void analyzeEnemies() throws GameActionException {
+        RobotInfo[] enemies = rc.senseNearbyRobots(GameConstants.VISION_RADIUS_SQUARED, rc.getTeam().opponent());
+        enemyTowers = new MapLocation[10];
+        enemyTowersSize = 0;
+        for (RobotInfo r : enemies){
+            switch(r.getType()){
+                case LEVEL_ONE_PAINT_TOWER:
+                case LEVEL_TWO_PAINT_TOWER:
+                case LEVEL_THREE_PAINT_TOWER:
+                case LEVEL_ONE_MONEY_TOWER:
+                case LEVEL_TWO_MONEY_TOWER:
+                case LEVEL_THREE_MONEY_TOWER:
+                case LEVEL_ONE_DEFENSE_TOWER:
+                case LEVEL_TWO_DEFENSE_TOWER:
+                case LEVEL_THREE_DEFENSE_TOWER:
+                    enemyTowers[enemyTowersSize++] = r.getLocation();
+                    MicroManagerSoldier.updateTower(r);
+                    break;
+                case MOPPER:
+                    MicroManagerSoldier.updateMopper(r);
+                    break;
+            }
+        }
+    }
 }

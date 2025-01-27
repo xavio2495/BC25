@@ -13,7 +13,7 @@ public class Main {
 
     static final int PAINT_CODE = 5147;
 
-    static final String packname = "basic36";
+    static final String packname = "basic39";
 
 
     static final int MAP_SIZE = 5;
@@ -265,7 +265,7 @@ public class Main {
 
                 if (tower || currentLoc.getDistToOrigin() > DIST_SENSE) {
                     write("if (" + currentLoc.getMapVar() + " == null || !" + currentLoc.getMapVar() + ".isPassable()) " + currentLoc.getValueVar() + " += " + infinity + ";");
-                    write("else " + currentLoc.getValueVar() + " += 10 + switch(" + currentLoc.getMapVar() + ".getPaint()){");
+                    write("else " + currentLoc.getValueVar() + " += 10 + " + currentLoc.getPassVar() + " + switch(" + currentLoc.getMapVar() + ".getPaint()){");
                     ++tabs;
                     write("case ENEMY_PRIMARY, ENEMY_SECONDARY -> " + PENALTY_ENEMY + ";");
                     write("case EMPTY -> " + PENALTY_NEUTRAL+ ";");
@@ -275,7 +275,7 @@ public class Main {
                 }
                 else {
                     write("if (!MovementManager.canMove(Direction." + new Location(0,0).directionTo(currentLoc.loc).name() + ")) " + currentLoc.getValueVar() + " += " + infinity + ";");
-                    write("else " + currentLoc.getValueVar() + " += 10 + " + PENALTY_NEUTRAL + "*Util.getPaintLost(Direction." + new Location(0,0).directionTo(currentLoc.loc).name() + ") +  switch(" + currentLoc.getMapVar() + ".getPaint()){");
+                    write("else " + currentLoc.getValueVar() + " += 10 + " + currentLoc.getPassVar() + " + " +  PENALTY_NEUTRAL + "*Util.getPaintLost(Direction." + new Location(0,0).directionTo(currentLoc.loc).name() + ") +  switch(" + currentLoc.getMapVar() + ".getPaint()){");
                     ++tabs;
                     write("case ENEMY_PRIMARY, ENEMY_SECONDARY -> " + PENALTY_ENEMY + ";");
                     write("case EMPTY -> " + PENALTY_NEUTRAL+ ";");
@@ -301,7 +301,7 @@ public class Main {
                     write("static MapLocation " + c.getLocVar() + ";");
                     write("static int " + c.getValueVar() + ";");
                     write("static Direction " + c.getDirVar() + ";");
-                    //write("static int " + c.getPassVar() + ";");
+                    write("static int " + c.getPassVar() + ";");
                     write("static MapInfo " + c.getMapVar() + ";");
                     write("");
                 }
@@ -359,6 +359,7 @@ public class Main {
                 write(getCustomLocation(newLoc).getLocVar() + " = " + getCustomLocation(loc).getLocVar() + ".add(Direction." + dirPath[VISION_RANGE_SQ][i].name() + ");");
                 //write(getCustomLocation(newLoc).getValueVar() + " = " + infinity + ";");
                 //write(getCustomLocation(newLoc).getDirVar() + " = " + "null;");
+                write(getCustomLocation(newLoc).getPassVar() + " = 0;");
                 write("if (" + "rc.onTheMap(" + getCustomLocation(newLoc).getLocVar() + ")) " + getCustomLocation(newLoc).getMapVar() + " =  rc.senseMapInfo(" + getCustomLocation(newLoc).getLocVar() + ");");
                 write("else " + getCustomLocation(newLoc).getMapVar() + " =  null;");
                 loc = newLoc;
@@ -682,6 +683,56 @@ public class Main {
             }
         }
 
+        void printTowers(int towerRange){
+            write("static void addTower" + towerRange + "(int dx, int dy){");
+            ++tabs;
+            write("switch(dx){");
+            ++tabs;
+
+            int maxX = (int) Math.sqrt(VISION_RANGE_SQ);
+
+            for (int i = -maxX; i <= maxX; ++i){
+                write("case " + i + ":");
+                ++tabs;
+
+                int maxY = (int) Math.sqrt(VISION_RANGE_SQ - i*i);
+
+                write("switch(dy){");
+                ++tabs;
+
+
+                for (int j = -maxY; j <= maxY; ++j){
+
+                    write("case " + j + ":");
+                    ++tabs;
+
+                    for (int ii = 0; ii < visited.length; ++ii){
+                        for (int jj = 0; jj < visited[ii].length; ++jj){
+                            if (visited[ii][jj].getDistToOrigin() > VISION_RANGE_SQ) continue;
+                            if (visited[ii][jj].getDistTo(new CustomLocation(i,j)) > towerRange) continue;
+                            write(visited[ii][jj].getPassVar() + " += " + infinity + ";");
+                        }
+                    }
+
+                    --tabs;
+                }
+
+                write("}");
+                --tabs;
+
+
+                write("break;");
+                --tabs;
+            }
+
+            --tabs;
+            write("}");
+
+
+            --tabs;
+            write("}");
+        }
+
         void run(){
             try {
                 writer = new PrintWriter(filename, "UTF-8");
@@ -746,8 +797,18 @@ public class Main {
 
             printDistances(); //printDistances
 
+            write("");
 
             printResourcePatternAnalysis();
+
+
+            write("");
+
+            printTowers(9);
+
+            write("");
+
+            printTowers(16);
 
             --tabs;
             write("}");

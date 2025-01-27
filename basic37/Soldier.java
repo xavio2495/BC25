@@ -1,4 +1,4 @@
-package basic36;
+package basic37;
 
 import battlecode.common.*;
 
@@ -17,14 +17,13 @@ public class Soldier extends Unit {
         tryWithdraw();
         if (shouldRecover()) recovering = true;
         if (rc.getPaint() >= UnitType.SOLDIER.paintCapacity - Constants.MIN_TRANSFER_PAINT) recovering = false;
-
-
         hasMicro = MicroManagerSoldier.doMicro();
 
         super.startTurn();
 
         if (rc.getRoundNum() > creationTurn) VisionManager.scanRSPs(); //MAX 4200 bytecode
         updateClosestRuin();
+        TowerManager.readMessages();
     }
 
     void endTurn() throws GameActionException {
