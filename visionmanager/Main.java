@@ -544,6 +544,7 @@ public class Main {
             write("static MapLocation myLoc;");
             write("static MapLocation emptyLoc;");
             write("static MapLocation bestCenter;");
+            write("static boolean flag;");
             for (int i = 0; i < 16; ++i){
                 write("static MapLocation bestSpot" + i + ";");
             }
@@ -562,6 +563,7 @@ public class Main {
             write("emptyLoc = null;");
             write("bestSRPSpot = null;");
             write("bestCenter = null;");
+            write("flag = true;");
 
             write("");
 

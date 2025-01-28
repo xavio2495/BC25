@@ -1,6 +1,5 @@
-package basic38;
+package basic42;
 
-import basic42.Soldier;
 import battlecode.common.*;
 
 public class MicroManagerSoldier {
@@ -16,21 +15,26 @@ public class MicroManagerSoldier {
 
     static MicroInfo[] microInfos;
     static MicroInfo bestMicro;
-    //static boolean roundNice;
+    static boolean roundNice;
     static boolean turretSeen;
     static int moppers;
 
-    static void initiateMicro() throws GameActionException {
+    static boolean doMicro() throws GameActionException {
         rc = MyRobot.rc;
+        if (!rc.isMovementReady()) return false;
 
         myRange = rc.getType().actionRadiusSquared;
 
         turretSeen = false;
         moppers = 0;
         int myPaint = rc.getPaint();
-        //roundNice = true; // rc.getRoundNum()%2 == 0;
+        roundNice = true; // rc.getRoundNum()%2 == 0;
 
-        canAttack = rc.isActionReady() && rc.getPaint() > UnitType.SOLDIER.attackCost;
+        /*int frac = (200*myPaint) / rc.getType().paintCapacity;
+        extraCd = 100 - frac;
+        if (extraCd < 0) extraCd = 0;*/
+
+        canAttack = rc.isActionReady() && rc.getPaint() > 10;
 
         myPaint -= 15;
         if (myPaint <= 0) myPaint = 1;
@@ -53,41 +57,48 @@ public class MicroManagerSoldier {
         microInfos[6] = new MicroInfo(Direction.WEST);
         microInfos[7] = new MicroInfo(Direction.NORTHWEST);
         microInfos[8] = new MicroInfo(Direction.CENTER);
-    }
 
-    static void updateMopper(RobotInfo r){
-        unit = r;
-        unitLoc = r.getLocation();
-        microInfos[0].updateMopper();
-        microInfos[1].updateMopper();
-        microInfos[2].updateMopper();
-        microInfos[3].updateMopper();
-        microInfos[4].updateMopper();
-        microInfos[5].updateMopper();
-        microInfos[6].updateMopper();
-        microInfos[7].updateMopper();
-        microInfos[8].updateMopper();
-    }
+        RobotInfo[] units = rc.senseNearbyRobots(GameConstants.VISION_RADIUS_SQUARED, rc.getTeam().opponent());
+        for (RobotInfo r : units) {
+            //if (r.getTeam() != rc.getTeam()) {
+            switch (r.getType()) {
+                case SPLASHER:
+                case SOLDIER:
+                    break;
+                case MOPPER:
+                    unit = r;
+                    unitLoc = r.getLocation();
+                    //++moppers;
+                    microInfos[0].updateMopper();
+                    microInfos[1].updateMopper();
+                    microInfos[2].updateMopper();
+                    microInfos[3].updateMopper();
+                    microInfos[4].updateMopper();
+                    microInfos[5].updateMopper();
+                    microInfos[6].updateMopper();
+                    microInfos[7].updateMopper();
+                    microInfos[8].updateMopper();
+                    break;
+                default:
+                    unit = r;
+                    turretSeen = true;
+                    unitLoc = r.getLocation();
+                    microInfos[0].updateTower();
+                    microInfos[1].updateTower();
+                    microInfos[2].updateTower();
+                    microInfos[3].updateTower();
+                    microInfos[4].updateTower();
+                    microInfos[5].updateTower();
+                    microInfos[6].updateTower();
+                    microInfos[7].updateTower();
+                    microInfos[8].updateTower();
+            }
+        }
 
-    static void updateTower(RobotInfo r){
-        unit = r;
-        turretSeen = true;
-        unitLoc = r.getLocation();
-        microInfos[0].updateTower();
-        microInfos[1].updateTower();
-        microInfos[2].updateTower();
-        microInfos[3].updateTower();
-        microInfos[4].updateTower();
-        microInfos[5].updateTower();
-        microInfos[6].updateTower();
-        microInfos[7].updateTower();
-        microInfos[8].updateTower();
-    }
-
-    static boolean doMicro() throws GameActionException {
-        RobotInfo[] units = rc.senseNearbyRobots(8, rc.getTeam());
+        units = rc.senseNearbyRobots(8, rc.getTeam());
         for (RobotInfo r : units) {
                 unit = r;
+                //if (r.getType() == UnitType.MOPPER) --moppers;
                 unitLoc = r.getLocation();
                 microInfos[0].updateAlly();
                 microInfos[1].updateAlly();
@@ -137,6 +148,7 @@ public class MicroManagerSoldier {
 
     static RobotInfo unit;
     static MapLocation unitLoc;
+    static boolean mopper;
 
     static class MicroInfo{
 
@@ -200,7 +212,7 @@ public class MicroManagerSoldier {
             if (!M.isAccessible) return true;
 
 
-            if (canAttack && canMoveNextTurn){
+            if (canAttack && canMoveNextTurn && roundNice){
                 if (inAttackRange && !M.inAttackRange) return true;
                 if (M.inAttackRange && !inAttackRange) return false;
             }
