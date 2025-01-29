@@ -1,4 +1,4 @@
-package basic38;
+package basic43;
 
 import battlecode.common.*;
 
@@ -29,7 +29,7 @@ public class MicroManagerSoldier {
         int myPaint = rc.getPaint();
         //roundNice = true; // rc.getRoundNum()%2 == 0;
 
-        canAttack = rc.isActionReady() && rc.getPaint() > UnitType.SOLDIER.attackCost;
+        canAttack = rc.isActionReady() && rc.getPaint() >= UnitType.SOLDIER.attackCost;
 
         myPaint -= 15;
         if (myPaint <= 0) myPaint = 1;
@@ -86,17 +86,17 @@ public class MicroManagerSoldier {
     static boolean doMicro() throws GameActionException {
         RobotInfo[] units = rc.senseNearbyRobots(8, rc.getTeam());
         for (RobotInfo r : units) {
-                unit = r;
-                unitLoc = r.getLocation();
-                microInfos[0].updateAlly();
-                microInfos[1].updateAlly();
-                microInfos[2].updateAlly();
-                microInfos[3].updateAlly();
-                microInfos[4].updateAlly();
-                microInfos[5].updateAlly();
-                microInfos[6].updateAlly();
-                microInfos[7].updateAlly();
-                microInfos[8].updateAlly();
+            unit = r;
+            unitLoc = r.getLocation();
+            microInfos[0].updateAlly();
+            microInfos[1].updateAlly();
+            microInfos[2].updateAlly();
+            microInfos[3].updateAlly();
+            microInfos[4].updateAlly();
+            microInfos[5].updateAlly();
+            microInfos[6].updateAlly();
+            microInfos[7].updateAlly();
+            microInfos[8].updateAlly();
         }
 
 
@@ -136,6 +136,7 @@ public class MicroManagerSoldier {
 
     static RobotInfo unit;
     static MapLocation unitLoc;
+    static boolean mopper;
 
     static class MicroInfo{
 
