@@ -112,7 +112,7 @@ public class Explore {
             if (rc.canSenseLocation(loc) && !rc.onTheMap(loc)) {
                 return true;
             }*/
-            
+
         } catch (Exception e){
             e.printStackTrace();
         }

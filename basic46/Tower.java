@@ -120,7 +120,7 @@ public class Tower extends MyRobot {
         double dAns = -1;
         for (Direction dir : directions){
             if (!rc.canBuildRobot(UnitType.SOLDIER, rc.getLocation().add(dir))) continue;
-            double ndAns = dists[dir.ordinal()]/(2*(dirCount[dir.ordinal()])+1);
+            double ndAns = dists[dir.ordinal()]/((dirCount[dir.ordinal()])+1);
             if (ndAns > dAns){
                 dAns = ndAns;
                 ans = dir;
@@ -246,9 +246,9 @@ public class Tower extends MyRobot {
         int ord = dir.ordinal();
         int or1 = dir.rotateLeft().ordinal();
         int or2 = dir.rotateRight().ordinal();
-        dirCount[ord] += 2;
-        dirCount[or1]++;
-        dirCount[or2]++;
+        dirCount[ord]++;
+        //dirCount[or1]++;
+        //dirCount[or2]++;
     }
 
     UnitType getNextSpawn() {
