@@ -1,7 +1,5 @@
 package visionmanager;
 
-import gnu.trove.impl.hash.TCustomObjectHash;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
@@ -17,7 +15,7 @@ public class Main {
 
     static final int FULL_PAINT_CODE = 28873275;
 
-    static final String packname = "basic45";
+    static final String packname = "basic46";
 
 
     static final int MAP_SIZE = 5;
@@ -657,24 +655,26 @@ public class Main {
                     write("if (" + loc.getMapVar() + " != null){");
                     ++tabs;
                     //if (!loc.isFlagCompatible() && z != 10) {
+                    //}
+                    if (loc.getDistToOrigin() > 8 || z == 10) write("if (!"  + loc.getMapVar() + ".isPassable()) obstructedCenters |= " + codes + ";");
+                    else write("if (!"  + loc.getMapVar() + ".isPassable()) {obstructedCenters |= " + codes + "; flag = false;}");
+                    write("else {");
+                    ++tabs;
                     write("switch(" + loc.getMapVar() + ".getMark()){");
                     ++tabs;
-                    write("case ALLY_PRIMARY, ALLY_SECONDARY:");
+                    write("case ALLY_PRIMARY:");
                     ++tabs;
                     write("flags[flagSize++] = " + loc.getLocVar() + ";");
                     if (!loc.isFlagCompatible() && z != 10) write("flag = false;");
                     //for (int ai = 0; ai < alocs.length; ++ai){
-                        //CustomLocation l = alocs[ai];
-                        //if (l.getDistTo(loc) <= 8) write("flagAttackPaint" + ai + " = PaintType." + getPaintType(l.loc.x - loc.loc.x, l.loc.y - loc.loc.y) + ";");
+                    //CustomLocation l = alocs[ai];
+                    //if (l.getDistTo(loc) <= 8) write("flagAttackPaint" + ai + " = PaintType." + getPaintType(l.loc.x - loc.loc.x, l.loc.y - loc.loc.y) + ";");
                     //}
                     //write("closestFlag = " + loc.getLocVar() + ";");
                     --tabs;
                     --tabs;
                     write("}");
-                    //}
-                    if (loc.getDistToOrigin() > 8 || z == 10) write("if (!"  + loc.getMapVar() + ".isPassable()) obstructedCenters |= " + codes + ";");
-                    else write("if (!"  + loc.getMapVar() + ".isPassable()) {obstructedCenters |= " + codes + "; flag = false;}");
-                    write("else if (Map.isNearRuin("  + loc.getLocVar() + ") && !maxT) unavailableCenters |= " + codes + ";");
+                    write("if (Map.isNearRuin("  + loc.getLocVar() + ") && !maxT) unavailableCenters |= " + codes + ";");
                     write("else{");
                     ++tabs;
                     write("switch(" + loc.getMapVar() + ".getPaint()){");
@@ -699,6 +699,8 @@ public class Main {
                         if (((codes >>> i) & 1)!= 0) write("bestSpot" + i + " = " + loc.getLocVar() + ";");
                     }
                     --tabs;
+                    --tabs;
+                    write("}");
                     --tabs;
                     write("}");
                     --tabs;
