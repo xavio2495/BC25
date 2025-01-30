@@ -95,28 +95,8 @@ public class Explore {
 
 
     boolean movingOutOfMap(Direction dir){
-        try {
-            /*MapLocation loc = rc.getLocation().add(dir);
-            if (!rc.onTheMap(loc)) {
-                return true;
-            }
-            loc = loc.add(dir);
-            if (!rc.onTheMap(loc)) {
-                return true;
-            }
-            loc = loc.add(dir);
-            if (!rc.onTheMap(loc)) {
-                return true;
-            }
-            loc = loc.add(dir);
-            if (rc.canSenseLocation(loc) && !rc.onTheMap(loc)) {
-                return true;
-            }*/
-
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-        return false;
+        MapLocation loc = rc.getLocation().translate(dir.dx*4, dir.dy*4);
+        return (loc.x < 0 || loc.y < 0 || loc.x >= MyRobot.W || loc.y >= MyRobot.H);
     }
 
 

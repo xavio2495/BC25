@@ -33,6 +33,7 @@ public abstract class Unit extends MyRobot {
         TowerManager.reportPaintTowerUnit();
         removeMarks();
         Pathfinding.bugNav.run();
+        rc.setIndicatorString(explore.exploreDir.name());
     }
 
     static void updateClosestRuin() throws GameActionException {
