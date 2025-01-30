@@ -158,9 +158,8 @@ public class Soldier extends Unit {
     }
 
     boolean shouldSRP(){
-        /*int size = (int) (1.5*Math.sqrt(MyRobot.W*MyRobot.H));
-        return rc.getRoundNum() > size;*/
-        return true;
+        int size = (int) (1.5*Math.sqrt(MyRobot.W*MyRobot.H));
+        return rc.getRoundNum() > size - 10;
     }
 
     MapLocation getTarget() throws GameActionException{

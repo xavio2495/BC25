@@ -10,10 +10,10 @@ public class Constants {
     static int MIN_CHIPS_DESTRUCTION_DEFENSE = 7500;
 
 
-    static int MIN_CHIPS_REVERT_PAINT = 1400;
+    static int MIN_CHIPS_REVERT_PAINT = 1500;
 
-    static int MIN_CHIPS_PAINT_TOWER = 2000;
-    static int MIN_CHIPS_PAINT_TOWER_LATE = 1600;
+    static int MIN_CHIPS_PAINT_TOWER = 3000;
+    static int MIN_CHIPS_PAINT_TOWER_LATE = 3000;
     static int PAINT_TOWER_LATE_RD = 80;
 
     static int MIN_CHIPS_REVERT_MONEY = 2500;
