@@ -1,5 +1,7 @@
 package visionmanager;
 
+import gnu.trove.impl.hash.TCustomObjectHash;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
@@ -13,7 +15,9 @@ public class Main {
 
     static final int PAINT_CODE = 5147;
 
-    static final String packname = "basic39";
+    static final int FULL_PAINT_CODE = 28873275;
+
+    static final String packname = "basic45";
 
 
     static final int MAP_SIZE = 5;
@@ -107,6 +111,31 @@ public class Main {
         boolean in(){
             return getDistToOrigin() <= VISION_RANGE_SQ;
         }
+
+        boolean isFlagCompatible(){
+            for (int i = -2; i <= 2; ++i){
+                for (int j = -2; j <= 2; ++j){
+                    int newDx = loc.x + i, newDy = loc.y + j;
+                    if (newDx*newDx + newDy*newDy > 8) continue;
+                    int myDx = i+2, myDy = j+2;
+                    int myCode = myDx*5 + myDy;
+                    int myBit = ((FULL_PAINT_CODE >>> myCode)&1);
+                    int theirDx = newDx+2, theirDy = newDy+2;
+                    int theirCode = theirDx*5 + theirDy;
+                    int theirBit = ((FULL_PAINT_CODE >>> theirCode)&1);
+                    if (myBit != theirBit) return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    static String getPaintType (int dx, int dy){
+        int c = (dx+2)*5 + dy+2;
+        int bit = ((FULL_PAINT_CODE >>> c) & 1);
+        if (bit > 0) return "ALLY_SECONDARY";
+        return "ALLY_PRIMARY";
+
     }
 
     static class BFSSimulator{
@@ -545,9 +574,16 @@ public class Main {
             write("static MapLocation emptyLoc;");
             write("static MapLocation bestCenter;");
             write("static boolean flag;");
+            //write("static MapLocation closestFlag;");
             for (int i = 0; i < 16; ++i){
                 write("static MapLocation bestSpot" + i + ";");
             }
+
+            for (int i = 0; i < 13; ++i){
+                write("static PaintType flagAttackPaint" + i + ";");
+            }
+            write("static MapLocation[] flags = new MapLocation[20];");
+            write("static int flagSize;");
 
             write("");
             write("");
@@ -564,6 +600,11 @@ public class Main {
             write("bestSRPSpot = null;");
             write("bestCenter = null;");
             write("flag = true;");
+            for (int i = 0; i < 13; ++i){
+                write("flagAttackPaint" + i + " = null;");
+            }
+            write("flagSize = 0;");
+            //write("closestFlag = null;");
 
             write("");
 
@@ -593,6 +634,9 @@ public class Main {
 
 
             CustomLocation[] locs = getSortedLocs();
+            //CustomLocation[] alocs = new CustomLocation[13];
+            //int alocsSize = 0;
+            //for (CustomLocation l : locs) if (l.getDistToOrigin() <= 4) alocs[alocsSize++] = l;
             for (int z = 0; z < 16; ++z){
                 int dx = z/4, dy = z%4;
                 CustomLocation[] centerLocs = createCenterLocs(z);
@@ -601,6 +645,7 @@ public class Main {
                 write("int obstructedCenters = 0;");
                 write("int unavailableCenters = 0;");
                 write("int targetCenters = 0;");
+                if (z == 10) write("flag = false;");
                 for (int i = 0; i < centerLocs.length; ++i){
                     write("bestSpot" + i + " = null;");
                 }
@@ -611,7 +656,24 @@ public class Main {
                     int codes = getCentersCode(loc, centerLocs);
                     write("if (" + loc.getMapVar() + " != null){");
                     ++tabs;
-                    write("if (!"  + loc.getMapVar() + ".isPassable()) obstructedCenters |= " + codes + ";");
+                    //if (!loc.isFlagCompatible() && z != 10) {
+                    write("switch(" + loc.getMapVar() + ".getMark()){");
+                    ++tabs;
+                    write("case ALLY_PRIMARY, ALLY_SECONDARY:");
+                    ++tabs;
+                    write("flags[flagSize++] = " + loc.getLocVar() + ";");
+                    if (!loc.isFlagCompatible() && z != 10) write("flag = false;");
+                    //for (int ai = 0; ai < alocs.length; ++ai){
+                        //CustomLocation l = alocs[ai];
+                        //if (l.getDistTo(loc) <= 8) write("flagAttackPaint" + ai + " = PaintType." + getPaintType(l.loc.x - loc.loc.x, l.loc.y - loc.loc.y) + ";");
+                    //}
+                    //write("closestFlag = " + loc.getLocVar() + ";");
+                    --tabs;
+                    --tabs;
+                    write("}");
+                    //}
+                    if (loc.getDistToOrigin() > 8 || z == 10) write("if (!"  + loc.getMapVar() + ".isPassable()) obstructedCenters |= " + codes + ";");
+                    else write("if (!"  + loc.getMapVar() + ".isPassable()) {obstructedCenters |= " + codes + "; flag = false;}");
                     write("else if (Map.isNearRuin("  + loc.getLocVar() + ") && !maxT) unavailableCenters |= " + codes + ";");
                     write("else{");
                     ++tabs;
@@ -655,21 +717,37 @@ public class Main {
                     ++tabs;
                     //write("rc.setIndicatorDot(center, 0, 200, 0);");
                     write("if ((obstructedCenters & " + (1 << i) + ") > 0) Map.markObstructed(center);");
-                    write("else if ((unavailableCenters & " + (1 << i) + ") > 0) Map.markCenterNearRuins(center);");
-                    write("else if ((targetCenters & " + (1 << i) + ") > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot" + i + ") < Constants.DIST_INF){");
-                    ++tabs;
-                    write("bestSRPSpot = bestSpot" + i +";");
-                    write("bestCenter = center;");
-                    --tabs;
-                    write("}");
-                    --tabs;
-                    write("}");
+                    if (!centerLocs[i].isFlagCompatible() && z != 10){
+                        write("else{");
+                        ++tabs;
+                        write ("if (Map.notObstructed(center)) flag = false;");
+
+                        write("if ((unavailableCenters & " + (1 << i) + ") > 0) Map.markCenterNearRuins(center);");
+                        write("else if ((targetCenters & " + (1 << i) + ") > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot" + i + ") < Constants.DIST_INF){");
+                        ++tabs;
+                        write("bestSRPSpot = bestSpot" + i +";");
+                        write("bestCenter = center;");
+                        --tabs;
+                        write("}");
+                        --tabs;
+                        write("}");
+
+                        --tabs;
+                        write("}");
+                    }
+                    else {
+                        write("else if ((unavailableCenters & " + (1 << i) + ") > 0) Map.markCenterNearRuins(center);");
+                        write("else if ((targetCenters & " + (1 << i) + ") > 0 && Map.canBeCenterNoCheck(center) && computeDistance(bestSpot" + i + ") < Constants.DIST_INF){");
+                        ++tabs;
+                        write("bestSRPSpot = bestSpot" + i +";");
+                        write("bestCenter = center;");
+                        --tabs;
+                        write("}");
+                        --tabs;
+                        write("}");
+                    }
                 }
-
                 //write("return bestSpot;");
-
-
-
                 --tabs;
                 write("}");
                 write("");
@@ -677,6 +755,8 @@ public class Main {
                 write("");
             }
 
+            write ("");
+            write ("");
         }
 
         void resetAll(){
@@ -685,13 +765,115 @@ public class Main {
             }
         }
 
-        void printTowers(int towerRange){
-            write("static void addTower" + towerRange + "(int dx, int dy){");
+        void writeGetPaint(){
+            CustomLocation[] locs = getSortedLocs();
+            CustomLocation[] alocs = new CustomLocation[13];
+            int alocsSize = 0;
+            for (CustomLocation l : locs) if (l.getDistToOrigin() <= 4) alocs[alocsSize++] = l;
+            write ("static PaintType getFlagPaint(MapLocation loc){");
             ++tabs;
+            write("int dx = loc.x - rc.getLocation().x, dy = loc.y - rc.getLocation().y;");
             write("switch(dx){");
             ++tabs;
 
-            int maxX = (int) Math.sqrt(VISION_RANGE_SQ);
+            int maxX = 2;
+
+            for (int i = -maxX; i <= maxX; ++i){
+                write("case " + i + ":");
+                ++tabs;
+
+                int maxY = (int) Math.sqrt(4.1 - i*i);
+
+                write("switch(dy){");
+                ++tabs;
+
+
+                for (int j = -maxY; j <= maxY; ++j){
+
+                    write("case " + j + ":");
+                    ++tabs;
+                    for (int ai = 0; ai < alocs.length; ++ai){
+                        CustomLocation l = alocs[ai];
+                        if (l.loc.x == i && l.loc.y == j) write("return flagAttackPaint" + ai + ";");
+                    }
+                    //write("break;");
+                    --tabs;
+                }
+
+                write("}");
+                --tabs;
+
+
+                write("break;");
+                --tabs;
+            }
+
+            --tabs;
+            write("}");
+            write("return null;");
+            --tabs;
+            write("}");
+        }
+
+        void writeAddingNewFlags(){
+
+            write("static void addNewFlags(Direction dir) throws GameActionException {");
+            ++tabs;
+
+            write("MapLocation loc;");
+            write("myLoc = rc.getLocation();");
+            //write("if (dir == Direction.CENTER) return;");
+
+            CustomLocation[] cLocs = getSortedLocs();
+
+            write("switch(dir){");
+            ++tabs;
+            for (Direction dir : Direction.values()){
+                if (dir != Direction.ZERO){
+                    write ("case " + dir.name() + ":");
+                    ++tabs;
+                    for (CustomLocation l : cLocs){
+                        if (l.getDistToOrigin() > VISION_RANGE_SQ) continue;
+                        Location loc = l.loc.add(dir);
+                        CustomLocation newLoc = getCustomLocation(loc);
+                        if (newLoc.getDistToOrigin() > VISION_RANGE_SQ){
+                            write("loc = myLoc.translate(" + l.loc.x + "," + l.loc.y + ");");
+                            write ("if (rc.canSenseLocation(loc) && rc.senseMapInfo(loc).getMark() != PaintType.EMPTY) flags[flagSize++] = loc;");
+                        }
+                    }
+                    write("break;");
+
+                    --tabs;
+                }
+            }
+            --tabs;
+            write("}");
+
+
+            --tabs;
+            write("}");
+
+
+        }
+
+
+        void writeFlagPaintChecker(){
+            write("static MapLocation bestFlagLoc;");
+
+            write("static void flagPaintCheck(int i) throws GameActionException {");
+            ++tabs;
+
+            write("MapLocation loc = flags[i];");
+
+            write("bestFlagLoc = null;");
+
+
+            write("int dx = loc.x - rc.getLocation().x, dy = loc.y - rc.getLocation().y;");
+
+            write("switch(dx){");
+            ++tabs;
+
+            int maxX = (int)Math.sqrt(VISION_RANGE_SQ);
 
             for (int i = -maxX; i <= maxX; ++i){
                 write("case " + i + ":");
@@ -708,14 +890,113 @@ public class Main {
                     write("case " + j + ":");
                     ++tabs;
 
-                    for (int ii = 0; ii < visited.length; ++ii){
-                        for (int jj = 0; jj < visited[ii].length; ++jj){
-                            if (visited[ii][jj].getDistToOrigin() > VISION_RANGE_SQ) continue;
-                            if (visited[ii][jj].getDistTo(new CustomLocation(i,j)) > towerRange) continue;
-                            write(visited[ii][jj].getPassVar() + " += " + infinity + ";");
+                    write("checkFlag" + ((i+4)*10 + j+4) + "();");
+                    write("break;");
+                    --tabs;
+                }
+
+                write("}");
+                --tabs;
+
+
+                write("break;");
+                --tabs;
+            }
+
+            --tabs;
+            write("}");
+
+
+            write("if (!Map.canBeFlagCenter(loc)) bestFlagLoc = null;");
+
+            --tabs;
+            write("}");
+            write("");
+
+            for (int i = -maxX; i <= maxX; ++i){
+                int maxY = (int) Math.sqrt(VISION_RANGE_SQ - i*i);
+                for (int j = -maxY; j <= maxY; ++j){
+                    write("static void checkFlag" + ((i+4)*10 + j+4) + "() throws GameActionException {");
+                    ++tabs;
+                    for (int ii = -2; ii <= 2; ++ii){
+                        for (int jj = -2; jj <= 2; ++jj){
+                            int dx = i + ii, dy = j + jj;
+                            if (dx*dx + dy*dy <= VISION_RANGE_SQ){
+                                CustomLocation cl = getCustomLocation(dx, dy);
+                                write("if (Map.isNearRuin(" + cl.getLocVar() + ")) {Map.markCenterNearRuins(" + getCustomLocation(i,j).getLocVar() + "); return;}");
+                                write("switch(rc.senseMapInfo(" + cl.getLocVar() + ").getPaint()){");
+                                ++tabs;
+                                write("case ENEMY_PRIMARY, ENEMY_SECONDARY:");
+                                ++tabs;
+                                write("Map.markCenterNearRuins(" + getCustomLocation(i,j).getLocVar() + ");");
+                                write("return;");
+                                --tabs;
+                                write("case " + getPaintType(ii,jj) + ":");
+                                ++tabs;
+                                write("break;");
+                                --tabs;
+                                write("default:");
+                                ++tabs;
+                                write("bestFlagLoc = " + cl.getLocVar() + ";");
+
+                                --tabs;
+                                --tabs;
+                                write("}");
+                            }
                         }
                     }
+                    --tabs;
+                    write("}");
+                }
+            }
+        }
 
+        void writeFillFlagPaint(){
+
+            CustomLocation[] locs = getSortedLocs();
+            CustomLocation[] alocs = new CustomLocation[13];
+            int alocsSize = 0;
+            for (CustomLocation l : locs) if (l.getDistToOrigin() <= 4) alocs[alocsSize++] = l;
+
+            write("static void fillFlagPaint(){");
+            ++tabs;
+            write("for (int i = 0; i < flagSize; ++i){");
+            ++tabs;
+
+            write("myLoc = rc.getLocation();");
+            write("MapLocation loc = flags[i];");
+
+
+            write("int dx = loc.x - rc.getLocation().x, dy = loc.y - rc.getLocation().y;");
+
+            write("switch(dx){");
+            ++tabs;
+
+            int maxX = (int)Math.sqrt(VISION_RANGE_SQ);
+
+            for (int i = -maxX; i <= maxX; ++i){
+                write("case " + i + ":");
+                ++tabs;
+
+                int maxY = (int) Math.sqrt(VISION_RANGE_SQ - i*i);
+
+                write("switch(dy){");
+                ++tabs;
+
+
+                for (int j = -maxY; j <= maxY; ++j){
+
+                    write("case " + j + ":");
+                    ++tabs;
+
+                    for (int ai = 0; ai < alocs.length; ++ai){
+                        CustomLocation aloc = alocs[ai];
+                        int dx = aloc.loc.x - i, dy = aloc.loc.y - j;
+                        if (dx*dx+dy*dy > 8) continue;
+                        write("flagAttackPaint" + ai + " = PaintType." + getPaintType(dx, dy) + ";");
+                    }
+
+                    write("break;");
                     --tabs;
                 }
 
@@ -733,7 +1014,72 @@ public class Main {
 
             --tabs;
             write("}");
+            --tabs;
+            write("}");
+
         }
+
+        void writeCheckSRPCenters(){
+            write("static void checkSRPCenters() throws GameActionException {");
+            ++tabs;
+            write("myLoc = rc.getLocation();");
+            write("switch(myLoc.x%4){");
+            ++tabs;
+
+            for (int i = 0; i < 4; ++i){
+                write("case " + i + ":");
+                ++tabs;
+
+                write("switch(myLoc.y%4){");
+                ++tabs;
+
+
+                for (int j = 0; j < 4; ++j){
+
+                    write("case " + j + ":");
+                    ++tabs;
+
+                    for (int ii = -2; ii <= 2; ++ii){
+                        for (int jj = -2; jj <= 2; ++jj){
+                            if ((i + ii + 4)%4 == 2 && (j + jj + 4)%4 == 2){
+                                write("if (rc.canCompleteResourcePattern(myLoc.translate(" + ii + "," + jj + "))) rc.completeResourcePattern(myLoc.translate(" + ii + "," + jj + "));");
+                            }
+                        }
+                    }
+
+
+
+                    write("break;");
+                    --tabs;
+                }
+
+                write("}");
+                --tabs;
+
+
+                write("break;");
+                --tabs;
+            }
+
+            --tabs;
+            write("}");
+
+            write("for (int i = 0; i < flagSize; ++i){");
+            ++tabs;
+            write("MapLocation loc = flags[i];");
+            write("if (rc.canCompleteResourcePattern(loc)) rc.completeResourcePattern(loc);");
+            --tabs;
+            write("}");
+
+
+            --tabs;
+            write("}");
+
+        }
+
+
+
+
 
         void run(){
             try {
@@ -803,14 +1149,35 @@ public class Main {
 
             printResourcePatternAnalysis();
 
+            write("");
+
+            writeGetPaint();
+
 
             write("");
 
-            printTowers(9);
+            writeAddingNewFlags();
 
             write("");
 
-            printTowers(16);
+            writeFlagPaintChecker();
+
+            write("");
+
+            writeFillFlagPaint();
+
+            write("");
+
+            writeCheckSRPCenters();
+
+            write("");
+
+
+            //printTowers(9);
+
+            //write("");
+
+            //printTowers(16);
 
             --tabs;
             write("}");
