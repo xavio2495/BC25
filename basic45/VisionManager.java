@@ -1,5 +1,15 @@
 package basic45;
 import battlecode.common.*;
+
+
+/** This 50k-line class is the pinnacle of engineering. It computes a bunch of different stuff about visible SRPs. It includes
+ *  - Which tiles of the form (2,2) mod 4 can be centers of SRPs
+ *  - If my current position can be the center of an 'irregular' SRP (i.e., not (2,2) mod 4) without sabotaging other patterns (including other irregular patterns).
+ *  - Which color should I paint each of the tiles that I can attack as a Soldier.
+ *  - What is the real distance from my position to all other visible positions.
+ *  - The best direction to go to each other visible position (and also an estimation for non-visible/reachable within vision ones).
+ *  And all of this in < 5000 bytecode! =o
+ */
 public class VisionManager {
 
     static RobotController rc;

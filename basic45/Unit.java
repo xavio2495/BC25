@@ -2,6 +2,9 @@ package basic45;
 
 import battlecode.common.*;
 
+/**
+ * Class with a bunch of generic unit methods.
+ */
 public abstract class Unit extends MyRobot {
 
     static Explore explore;
@@ -15,7 +18,6 @@ public abstract class Unit extends MyRobot {
     static boolean hasMicro = false;
 
     static boolean suicide = false;
-
     Unit(RobotController rc) throws GameActionException {
         super(rc);
         explore = new Explore();

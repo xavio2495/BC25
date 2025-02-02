@@ -2,6 +2,10 @@ package basic45;
 
 import battlecode.common.*;
 
+
+/**
+ * Class that stores info related to towers.
+ */
 public class TowerManager {
 
     static final int PAINT = 0;
@@ -223,8 +227,5 @@ public class TowerManager {
             }
         }
     }
-
-
-
 
 }

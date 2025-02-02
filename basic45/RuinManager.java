@@ -2,6 +2,13 @@ package basic45;
 
 import battlecode.common.*;
 
+/**
+ * Some codegen'd class that computes a bunch of properties for each visible ruin (e.g., what type of pattern matches with whatever is drawn,
+ * if there are enemy/ally painted tiles nearby, and if I can see the whole 5x5 area.
+ * In order to find matching patterns we encode primary color with two bits [01] and secondary color with [10]. We also encode empty/unseen as [00] and enemy as [11]. Given the
+ * code A of a given tower pattern T and the code B of whatever is drawn, these match if and only if (A | B) == A.
+ */
+
 public class RuinManager {
 
     static int getType(int typeCode) {

@@ -2,6 +2,10 @@ package basic45;
 
 import battlecode.common.*;
 
+/**Out implementation of BugNav. There's nothing really sophisticated here, it is just an enhanced version of the AI Coliseum sample code
+ * that tries to account for collisions with other units. It is not very successful with that, though :)
+ */
+
 public class BugNav {
 
     RobotController rc;
@@ -29,20 +33,15 @@ public class BugNav {
     int bugPathIndex = 0;
 
     Boolean rotateRight = null; //if I should rotate right or left
-    //Boolean rotateRightAux = null;
     MapLocation lastObstacleFound = null; //latest obstacle I've found in my way
 
-    MapLocation lastCurrent = null;
     int minDistToTarget = Constants.INF; //minimum distance I've been to the enemy while going around an obstacle
     MapLocation minLocationToTarget = null;
     MapLocation prevTarget = null; //previous target
-    Direction[] dirs = Direction.values();
-    //HashSet<Integer> states = new HashSet<>();
 
     int[][] states;
 
     MapLocation myLoc;
-    //boolean[] canMoveArray;
     int round;
 
     int turnsMovingToObstacle = 0;
@@ -59,17 +58,6 @@ public class BugNav {
         round = rc.getRoundNum();
     }
 
-    void debugMovement(){
-        try{
-            for (Direction dir : dirs){
-                MapLocation newLoc = myLoc.add(dir);
-                //if (rc.canSenseLocation(newLoc) && MovementManager.canMove(dir)) rc.setIndicatorDot(newLoc, 0, 0, 255);
-            }
-        } catch (Throwable t){
-            t.printStackTrace();
-        }
-    }
-
     void moveTo(MapLocation target){
 
         //No target? ==> bye!
@@ -77,14 +65,12 @@ public class BugNav {
         if (target == null) target = rc.getLocation();
 
         update();
-        //if (target == null) return;
 
 
         //different target? ==> previous data does not help!
         if (prevTarget == null){
             resetPathfinding();
             rotateRight = null;
-            //rotateRightAux = null;
         }
 
 
@@ -93,7 +79,6 @@ public class BugNav {
             if (distTargets > 0) {
                 if (distTargets >= MIN_DIST_RESET){
                     rotateRight = null;
-                    //rotateRightAux = null;
                     resetPathfinding();
                 }
                 else{
@@ -212,8 +197,7 @@ public class BugNav {
         return false;
     }
 
-    //TODO: check remaining cases
-    //TODO: move obstacle if can move to obstacle lol
+
     void checkRotate(Direction dir) throws GameActionException {
         if (rotateRight != null) return;
         Direction dirLeft = dir;

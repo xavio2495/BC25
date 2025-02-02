@@ -2,11 +2,12 @@ package basic45;
 
 import battlecode.common.*;
 
+/**
+ * Class that computes the best micro option for soldiers. At a high level it only activates whenever it is closer to a tower (yup, it ignores moppers otherwise),
+ * and tries to get into range only whenever it can attack and move back on the next turn. Same structure as the mopper micro.
+ */
 public class MicroManagerSoldier {
 
-    static Direction[] directions = Direction.values();
-
-    //static int extraCd = 0; // in cds
     static boolean canAttack;
     static boolean canMoveNextTurn;
     static RobotController rc;
@@ -29,10 +30,6 @@ public class MicroManagerSoldier {
         moppers = 0;
         int myPaint = rc.getPaint();
         roundNice = true; // rc.getRoundNum()%2 == 0;
-
-        /*int frac = (200*myPaint) / rc.getType().paintCapacity;
-        extraCd = 100 - frac;
-        if (extraCd < 0) extraCd = 0;*/
 
         canAttack = rc.isActionReady() && rc.getPaint() > 10;
 
@@ -60,7 +57,6 @@ public class MicroManagerSoldier {
 
         RobotInfo[] units = rc.senseNearbyRobots(GameConstants.VISION_RADIUS_SQUARED, rc.getTeam().opponent());
         for (RobotInfo r : units) {
-            //if (r.getTeam() != rc.getTeam()) {
             switch (r.getType()) {
                 case SPLASHER:
                 case SOLDIER:
@@ -68,7 +64,6 @@ public class MicroManagerSoldier {
                 case MOPPER:
                     unit = r;
                     unitLoc = r.getLocation();
-                    //++moppers;
                     microInfos[0].updateMopper();
                     microInfos[1].updateMopper();
                     microInfos[2].updateMopper();
@@ -155,12 +150,9 @@ public class MicroManagerSoldier {
         int towersInRange = 0;
         int moppersInRange8 = 0;
         int moppersInRange13 = 0;
-        //int moppersInMoveRange = 0;
-        //int allyMoppers = 0;
         Direction dir;
         MapLocation loc;
         PaintType p = PaintType.EMPTY;
-        //int closestDistMopper = Constants.INF;
         int adjAllies = 0;
         boolean isAccessible = true;
         int closestDistEnemy = Constants.INF;
@@ -189,7 +181,6 @@ public class MicroManagerSoldier {
             int dist = unitLoc.distanceSquaredTo(loc);
             if (dist <= 8) ++moppersInRange8;
             else if (dist <= 13) ++moppersInRange13;
-            //if (dist < closestDistMopper) closestDistMopper = dist;
         }
 
         void updateAlly(){

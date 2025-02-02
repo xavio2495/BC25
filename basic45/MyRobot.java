@@ -2,6 +2,7 @@ package basic45;
 
 import battlecode.common.*;
 
+/**Generic unit abstract class*/
 public abstract class MyRobot {
 
     static final Direction[] directions = {

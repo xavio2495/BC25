@@ -2,6 +2,12 @@ package basic45;
 
 import battlecode.common.*;
 
+/**
+ * Our tower code. It chooses which units to build, where to build them and if it should upgrade or not. At a high level, we follow a cyclic pattern for choosing the next unit's type,
+ * and we build some moppers if we find nearby enemy soldiers. We also try to distribute the built units along the directions that we find more 'juicy' (i.e., the ones that are the farthest away
+ * from the edges) since they use the spawn direction as their first exploring direction.
+ */
+
 public class Tower extends MyRobot {
 
     UnitType[] spawnPlan;
@@ -23,6 +29,9 @@ public class Tower extends MyRobot {
     int[] splasherDirCount = new int[8];
     double[] dists = new double[8];
 
+    /**
+     * We follow this list until the end or until some threshold depending on the number of towers on the map.
+     */
     static final UnitType[] spawnPlanInitialPaint = {
             UnitType.SOLDIER,
             UnitType.SOLDIER,
@@ -31,25 +40,29 @@ public class Tower extends MyRobot {
             UnitType.SOLDIER,
             UnitType.SOLDIER
     };
-    static final UnitType[] spawnPlanInitialMoney = {
-            UnitType.SOLDIER,
-            UnitType.SOLDIER,
-            UnitType.SOLDIER,
-            UnitType.SOLDIER,
-            UnitType.SOLDIER,
-            UnitType.SOLDIER
-    };
+
+    /**
+     * Cyclic plan for early game
+     */
     static UnitType[] spawnPlanEarly = {
             UnitType.SOLDIER,
             UnitType.MOPPER,
             UnitType.SPLASHER,
     };
+
+    /**
+     * Cyclic plan for mid game
+     */
     static UnitType[] spawnPlanMid = {
             UnitType.SOLDIER,
             UnitType.MOPPER,
             UnitType.SPLASHER,
             UnitType.MOPPER,
     };
+
+    /**
+     * Cyclic plan for very late game
+     */
     static UnitType[] spawnPlanLate = {
             UnitType.SOLDIER,
             UnitType.SPLASHER,
@@ -195,12 +208,6 @@ public class Tower extends MyRobot {
         for (int x : paintIncrease) if (ans < x) ans = x;
         return ans;
     }
-
-    /*boolean shouldSpawnSoldier(){
-        if (creationTurn < 5 && soldiersSpawned == 0) return true;
-        if (Util.towerMax()) return true;
-        return rc.getChips() >= UnitType.LEVEL_ONE_PAINT_TOWER.moneyCost + UnitType.SOLDIER.moneyCost;
-    }*/
 
     void spawnDefense(MapLocation target) throws GameActionException {
         MapLocation[] locs = rc.getAllLocationsWithinRadiusSquared(rc.getLocation(), GameConstants.BUILD_ROBOT_RADIUS_SQUARED);

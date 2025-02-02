@@ -2,6 +2,10 @@ package basic45;
 
 import battlecode.common.*;
 
+/**
+ * Some codegen'd file that computes the best mopper mops.
+ */
+
 public class MopperAttackManager {
     static RobotController rc;
     public static void calc() throws GameActionException {

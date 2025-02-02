@@ -2,28 +2,27 @@ package basic45;
 
 import battlecode.common.*;
 
+/**
+ * Class that encodes a lot of stuff about the map tiles on an int[][].
+ */
+
 public class Map {
 
-    static int[][] map;
-
-    //static long[] map2;
 
     static RobotController rc;
 
     /*
-     Bit 0 -> Not Wall / Wall
-     Bit 1 -> Not Ruin / Ruin
-     Bit 2 -> Not Enemy / Enemy
-     Bit 3 -> Not Ally / Ally
-     Bit 4 -> Obstructed
-     Bit 5-9 -> RuinType
-     Bit 10-20 -> Round Enemy Paint OR pointer towards tower
-     Bit 21 -> 31 Round Nearby Ruins
+     Bit 0 -> Ruin ?
+     Bit 1 -> Ally Tower ?
+     Bit 2 -> Enemy Tower?
+     Bit 3 -> Obstructed? (i.e., I will never be able to do a SRP centered here)
+     Bit 4-9 -> RuinType (encodes type of pattern, if there is enemy/ally paint around and if I can see the whole 5x5 area).
+     Bit 10-20 -> Round I saw Enemy Paint (if possible center of SRP) OR pointer towards tower (if in 5x5 around tower)
+     Bit 21 -> 31 -> Round I saw Nearby Ruins (if possible center of SRP)
      */
+    static int[][] map;
 
 
-    //static final int NEARBY_TILES_WITH_ENEMY_PAINT = 16;
-    //static final int NT_C = 0xFFFFFFFF - NEARBY_TILES_WITH_ENEMY_PAINT;
     static final int ENEMY_TOWER = 4;
     static final int ENEMY_TOWER_C = ~ENEMY_TOWER;
     static final int ALLY_TOWER = 2;
@@ -31,7 +30,6 @@ public class Map {
     static final int OBSTRUCTED = 8;
     static final int RUIN = 1;
     static final int NO_PAINT = (1 << 9);
-    //static final int WALL = 1;
     static int RUIN_TYPE_TYPE_SHIFT = 4;
     static int RUIN_TYPE_C = 0xFFFFFC0F;
 
@@ -131,11 +129,6 @@ public class Map {
     static int getPattern(MapLocation loc){
         return  ((map[loc.x][loc.y] >>> RUIN_TYPE_TYPE_SHIFT) & 0x1F);
     }
-
-    /*static boolean enemyPainted(MapLocation loc){
-        int c = map[loc.x][loc.y];
-        return ((c >>> ROUND_ENEMY_PAINT_SHIFT) & 0x7FF) <= MyRobot.rc.getRoundNum();
-    }*/
 
     static boolean invalidTarget(MapLocation loc){
         int c = map[loc.x][loc.y];

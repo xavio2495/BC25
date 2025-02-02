@@ -2,13 +2,16 @@ package basic45;
 
 import battlecode.common.*;
 
+
+/**
+ * Main class used to explore the map. At a high level the getExplore3Target (there were two other versions before!) samples a random direction
+ * and attempts to follow it until the edge of the map. Then it chooses another direction prioritizing those that are not immediately adjacent.
+ */
 public class Explore {
 
     RobotController rc;
     MapLocation explore3Target;
     Direction exploreDir = null; //TODO
-    double angle = 0;
-    double exploreDist = 100;
 
     static final Direction[] directions = Direction.values();
 
@@ -39,21 +42,7 @@ public class Explore {
         return explore3Target;
     }
 
-    boolean eastCloser(){
-        return  MyRobot.W - rc.getLocation().x <= rc.getLocation().x;
-    }
-
-    boolean northCloser(){
-        return  MyRobot.H - rc.getLocation().y <= rc.getLocation().y;
-    }
-
     void assignExplore3Dir(Direction dir){
-        /*exploreDir = dir;
-        angle = Math.atan2(exploreDir.dy, exploreDir.dx);
-        double x = rc.getLocation().x, y = rc.getLocation().y;
-        x += Math.cos(angle)*exploreDist;
-        y += Math.sin(angle)*exploreDist;
-        explore3Target = new MapLocation((int)x, (int)y);*/
         exploreDir = dir;
         int diffX = Constants.INF, diffY = Constants.INF;
         if (dir.dx > 0) diffX = MyRobot.W - rc.getLocation().x - 1;
@@ -84,7 +73,6 @@ public class Explore {
             d = d.rotateLeft();
             if (!movingOutOfMap(d)) possibleDirs[cont++] = d;
             d = d.rotateLeft();
-            //if (!movingOutOfMap(d)) possibleDirs[cont++] = d;
             d = d.rotateLeft();
             if (!movingOutOfMap(d)) possibleDirs[cont++] = d;
         }
@@ -96,6 +84,10 @@ public class Explore {
     }
 
 
+    /**
+     * Now that I see this, it can probably be done much better, but this was copied from an older code
+     * in which we didn't know the size of the map.
+     */
     boolean movingOutOfMap(Direction dir){
         try {
             MapLocation loc = rc.getLocation().add(dir);

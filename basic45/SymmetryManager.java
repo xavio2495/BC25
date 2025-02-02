@@ -2,6 +2,10 @@ package basic45;
 
 import battlecode.common.*;
 
+/**
+ * Class used to compute / keep track of the symmetry. Only used for the first soldiers spawned from a paint tower.
+ */
+
 public class SymmetryManager {
 
     static final int H = 1, V = 2, R = 4;

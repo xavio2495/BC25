@@ -1,6 +1,11 @@
 package basic45;
 
 import battlecode.common.*;
+
+/**
+ * canMove/move wrapper. Mainly used to avoid getting into tower range and to update some map info after moving in some cases.
+ */
+
 public class MovementManager {
 
     static boolean canMove(Direction dir){

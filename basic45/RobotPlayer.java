@@ -4,6 +4,9 @@ import battlecode.common.Clock;
 import battlecode.common.GameActionException;
 import battlecode.common.RobotController;
 
+/**
+ * We just redirect each unit type to its own class.
+ */
 public class RobotPlayer {
 
     @SuppressWarnings("unused")
@@ -19,11 +22,9 @@ public class RobotPlayer {
         boolean tower = rc.getType().isTowerType();
 
         while (true) {
-            //if (!tower && rc.getPaint() == 0) rc.disintegrate();
             myRobot.startTurn();
             myRobot.runTurn();
             myRobot.endTurn();
-            //if (!tower && rc.getPaint() == 0) rc.disintegrate();
             Clock.yield();
         }
     }

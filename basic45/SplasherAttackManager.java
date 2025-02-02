@@ -3,6 +3,10 @@ package basic45;
 
 import battlecode.common.*;
 
+/**
+ * Generated class that computes the value of several possible splasher attacks.
+ */
+
 public class SplasherAttackManager {
     static RobotController rc;
     public static void calc() throws GameActionException {

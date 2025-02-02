@@ -2,6 +2,9 @@ package basic45;
 
 import battlecode.common.*;
 
+/**
+ * Class with a bunch of generic methods.
+ */
 public class Util {
 
     static boolean towerMax(){
@@ -16,11 +19,4 @@ public class Util {
             default -> 0;
         };
     }
-
-    /*static int getActualDistanceRuin(MapLocation loc){
-        int d = MyRobot.rc.getLocation().distanceSquaredTo(loc);
-        if (d <= 8) return 2;
-        MapLocation l = loc.add(loc.directionTo(MyRobot.rc.getLocation()));
-        return VisionManager.computeDistance(l);
-    }*/
 }

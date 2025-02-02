@@ -9,13 +9,13 @@ import battlecode.common.RobotController;
 import battlecode.common.RobotInfo;
 import battlecode.common.UnitType;
 
+/**
+ * Class that implements the splasher micro. It only activates if there are moppers or a nice attacking spot nearby. Same structure as the mopper micro.
+ */
 public class MicroManagerSplasher {
 
-    static Direction[] directions = Direction.values();
 
-    //static int extraCd = 0; // in cds
     static boolean canAttack;
-    //static boolean canMoveNextTurn;
     static RobotController rc;
 
     static int myRange;
@@ -24,7 +24,6 @@ public class MicroManagerSplasher {
 
     static boolean doMicro() throws GameActionException {
         rc = MyRobot.rc;
-        //if (!rc.isMovementReady()) return false;
 
         myRange = rc.getType().actionRadiusSquared;
         canAttack = rc.isActionReady() && rc.getPaint() > UnitType.SPLASHER.attackCost;
@@ -39,8 +38,6 @@ public class MicroManagerSplasher {
         microInfos[6] = new MicroInfo(Direction.WEST);
         microInfos[7] = new MicroInfo(Direction.NORTHWEST);
         microInfos[8] = new MicroInfo(Direction.CENTER);
-
-        //boolean enemyNearby = false;
 
         RobotInfo[] units = rc.senseNearbyRobots(GameConstants.VISION_RADIUS_SQUARED, rc.getTeam().opponent());
         for (RobotInfo r : units) {
@@ -93,8 +90,6 @@ public class MicroManagerSplasher {
             microInfos[8].updateAlly();
         }
 
-        //if (!enemyNearby) return false;
-
 
         SplasherAttackManager.calc();
 
@@ -113,7 +108,6 @@ public class MicroManagerSplasher {
 
         int score;
 
-        // get best move+attack
         MicroInfo maBest = null;
         int maBestScore = -2147483648;
         score = microInfos[0].score(); if(score > maBestScore) { maBestScore = score; maBest = microInfos[0]; }

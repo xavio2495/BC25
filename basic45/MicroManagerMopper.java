@@ -2,13 +2,14 @@ package basic45;
 
 import battlecode.common.*;
 
+/**
+ * Class that implements the Mopper Micro. Intuitively, it only activates if it is on top of enemy paint or if there are enemy units nearby.
+ * It computes the amount of paint it wins/loses for every possible move+attack or attack+move combination and chooses the best. It computes it
+ * as a zero-sum game.
+ */
 public class MicroManagerMopper {
 
-    static Direction[] directions = Direction.values();
-
-    //static int extraCd = 0; // in cds
     static boolean canAttack;
-    //static boolean canMoveNextTurn;
     static RobotController rc;
 
     static int myRange;
@@ -21,7 +22,6 @@ public class MicroManagerMopper {
 
     static boolean doMicro() throws GameActionException {
         rc = MyRobot.rc;
-        //if (!rc.isMovementReady()) return false;
 
         myRange = rc.getType().actionRadiusSquared;
         canAttack = rc.isActionReady();
@@ -39,16 +39,15 @@ public class MicroManagerMopper {
         microInfos[Direction.NORTHWEST.ordinal()] = new MicroInfo(Direction.NORTHWEST);
         microInfos[Direction.CENTER.ordinal()] = new MicroInfo(Direction.CENTER);
 
-        //boolean enemyNearby = false;
         shouldFlee = false;
 
+        /*Storing enemy info on all possible tiles that I can move */
         RobotInfo[] units = rc.senseNearbyRobots(GameConstants.VISION_RADIUS_SQUARED, rc.getTeam().opponent());
         for (RobotInfo r : units) {
             switch (r.getType()) {
                 case SPLASHER:
                 case SOLDIER:
                     if (rc.getLocation().distanceSquaredTo(r.getLocation()) <= 8) {
-                        //enemyNearby = true;
                         hasPaint = r.getPaintAmount() > 0;
                         unit = r;
                         unitLoc = r.getLocation();
@@ -84,7 +83,6 @@ public class MicroManagerMopper {
                     unit = r;
                     unitLoc = r.getLocation();
                     hasPaint = true;
-                    //rc.setIndicatorDot(unitLoc, 0, 200, 0);
                     microInfos[0].updateTower();
                     microInfos[1].updateTower();
                     microInfos[2].updateTower();
@@ -97,6 +95,7 @@ public class MicroManagerMopper {
             }
         }
 
+        /*Same but with allies*/
         units = rc.senseNearbyRobots(8, rc.getTeam());
         for (RobotInfo r : units) {
             unit = r;
@@ -112,10 +111,11 @@ public class MicroManagerMopper {
             microInfos[8].updateAlly();
         }
 
-        //if (!enemyNearby) return false;
-
+        /*Computing the paint I make the opponent lose by mopping and inserting it into the MicroInfo array*/
         MopperAttackManager.calc();
 
+
+        /*Checking if the micro should activate or if I should just do normal pathfinding*/
         boolean shouldMicro = microInfos[8].p.isEnemy() && goodPaintNearby;
 
         if (microInfos[0].shouldMicro()) shouldMicro = true;
@@ -130,6 +130,7 @@ public class MicroManagerMopper {
 
         if (!shouldMicro) return false;
 
+        /*Computing the best move+attack combination*/
         MicroInfo bestMicro = microInfos[8];
         if (microInfos[0].isBetterThan(bestMicro)) bestMicro = microInfos[0];
         if (microInfos[1].isBetterThan(bestMicro)) bestMicro = microInfos[1];
@@ -140,6 +141,7 @@ public class MicroManagerMopper {
         if (microInfos[6].isBetterThan(bestMicro)) bestMicro = microInfos[6];
         if (microInfos[7].isBetterThan(bestMicro)) bestMicro = microInfos[7];
 
+        /*Computing the best attack+move combination*/
         int minPaint = microInfos[8].paintLost();
         Direction moveDir = Direction.CENTER;
         int x = microInfos[0].paintLost();
@@ -182,24 +184,19 @@ public class MicroManagerMopper {
             minPaint = x;
             moveDir = microInfos[7].dir;
         }
+
+        /*If attack+move is better, do that*/
         if (minPaint - microInfos[8].getAtk() < bestMicro.paintDiff()){
             attack(microInfos[8]);
             if (rc.canMove(moveDir))rc.move(moveDir);
             return true;
         }
+        /*Otherwise move+attack*/
         else if (bestMicro.dir == Direction.CENTER || rc.canMove(bestMicro.dir)) {
             if (bestMicro.dir != Direction.CENTER) rc.move(bestMicro.dir);
             attack(bestMicro);
             return true;
         }
-
-        /*if (bestMicro.dir == Direction.CENTER) return true;
-
-        if (rc.canMove(bestMicro.dir)){
-            rc.move(bestMicro.dir);
-        }*/
-
-
         return true;
     }
 
@@ -253,7 +250,6 @@ public class MicroManagerMopper {
             if (!isAccessible) return;
             int dist = unitLoc.distanceSquaredTo(loc);
             if (dist <= unit.getType().actionRadiusSquared){
-                //rc.setIndicatorDot(loc, 0,0,200);
                 ++towersInRange;
             }
         }
@@ -266,11 +262,9 @@ public class MicroManagerMopper {
         void updateMopper(){
             if (!isAccessible) return;
             int dist = unitLoc.distanceSquaredTo(loc);
-            //if (dist <= UnitType.MOPPER.actionRadiusSquared) ++moppersInRange;
             if (dist <= 8) ++moppersInRange;
             if (dist < closestDistMopper) closestDistMopper = dist;
             if (dist <= myRange && hasPaint) inAttackRange = true;
-            if (dist < closestDistEnemy) closestDistEnemy = dist;
         }
 
         void updateAlly(){
@@ -287,8 +281,6 @@ public class MicroManagerMopper {
 
         int getAtk(){
             if (!canAttack){
-                //if (shouldFlee || !inAttackRange) return 0;
-                //return (GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + GameConstants.MOPPER_ATTACK_PAINT_ADDITION) / 3;
                 return 0;
             }
             int x = inAttackRange ? GameConstants.MOPPER_ATTACK_PAINT_DEPLETION + GameConstants.MOPPER_ATTACK_PAINT_ADDITION : 0;

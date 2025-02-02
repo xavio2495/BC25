@@ -4,6 +4,9 @@ import battlecode.common.MapLocation;
 import battlecode.common.RobotController;
 import battlecode.common.UnitType;
 
+/**
+ * Splasher code. It literally moves random (except when micro-ing / recovering) and attacks whenever it can cover enough of enemy painted tiles.
+ */
 public class Splasher extends Unit {
 
     boolean recovering;
@@ -30,7 +33,6 @@ public class Splasher extends Unit {
     }
 
     void runTurn() throws GameActionException {
-        //tryWithdraw();
         if (shouldRecover())
             recovering = true;
         if (rc.getPaint() >= UnitType.SPLASHER.paintCapacity - Constants.MIN_TRANSFER_PAINT)
@@ -45,12 +47,15 @@ public class Splasher extends Unit {
         pathfinding.moveTo(target);
     }
 
+    /**
+     * We literally move random lmao
+     */
     MapLocation getTarget() throws GameActionException {
         MapLocation tg = null;
         if (recovering && !suicide && TowerManager.closestPaintTower != null){
             tg = getRecoveryLoc();
             if (tg != null) return tg;
         }
-        return explore.getExplore3Target();
+        return explore.getExplore3Target(); // <--
     }
 }

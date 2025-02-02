@@ -2,6 +2,10 @@ package basic45;
 
 import battlecode.common.*;
 
+/**
+ * Soldier code. It is probably our most complex non-generated class.
+ */
+
 public class Soldier extends Unit {
 
     static MapLocation symTarget;
@@ -11,21 +15,34 @@ public class Soldier extends Unit {
         super(rc);
         Map.initialize();
         Map.fill();
+        /**
+         * We kinda move to the symmetric position of we were spawned very early on by a paint tower.
+         */
         if (TowerManager.closestPaintTower != null && rc.getLocation().distanceSquaredTo(TowerManager.closestPaintTower) <= GameConstants.BUILD_ROBOT_RADIUS_SQUARED && rc.getRoundNum() < Constants.RUSH_TURNS){
             SymmetryManager.setBase(TowerManager.closestPaintTower);
         }
     }
 
     void startTurn() throws GameActionException {
+        //Try attacking enemy towers
         attackTowers();
+        //Try completing patterns
         completePatterns();
+        //Try withdrawint paint from adjacent towers
         tryWithdraw();
+        //Should I recover?
         if (shouldRecover()) recovering = true;
         if (rc.getPaint() >= UnitType.SOLDIER.paintCapacity - Constants.MIN_TRANSFER_PAINT) recovering = false;
         hasMicro = MicroManagerSoldier.doMicro();
 
+        //Compute a bunch of vision stuff (e.g., distance to nearby tiles)
         super.startTurn();
 
+        /*
+        Compute a bunch of stuff related to SRPs. Most importantly it checks which positions (2,2) mod 4 can possibly be centers of SRPs.
+        It also computes if my current location can be the center of a SRP that doesn't sabotage other SRPs. For instance, if all nearby (2,2) centers are obstructed
+        it is likely that I might be able to do one here freely. This consumes a bunch of bytecode, so only do this from the second turn on (first turn there is a lot of init.)
+         */
         if (rc.getRoundNum() > creationTurn) VisionManager.scanRSPs(); //MAX 4200 bytecode
         if (VisionManager.flag && rc.senseMapInfo(rc.getLocation()).getMark() != null){
             MapLocation myLoc = rc.getLocation();
@@ -36,6 +53,7 @@ public class Soldier extends Unit {
                 }
             }
         }
+        //Check closest ruins to
         updateClosestRuin();
         TowerManager.readMessages();
         symTarget = SymmetryManager.getTarget();
@@ -51,72 +69,6 @@ public class Soldier extends Unit {
         paint();
         tryWithdraw();
         completePatterns();
-    }
-
-    void paintNearby() throws GameActionException {
-        if (rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER) return;
-        if (!rc.isActionReady()) return;
-        if (symTarget != null) return;
-
-        MapLocation myLoc = rc.getLocation();
-        VisionManager.fillFlagPaint();
-
-        if (rc.senseMapInfo(myLoc).getPaint() == PaintType.EMPTY){
-            if (rc.canAttack(myLoc)){
-                PaintType targetPaint = VisionManager.getFlagPaint(rc.getLocation());
-                if (targetPaint == null) {
-                    int x = myLoc.x % 4, y = myLoc.y % 4;
-                    int z = x * 4 + y;
-                    targetPaint = ((5147 >>> z) & 1) > 0 ? PaintType.ALLY_SECONDARY : PaintType.ALLY_PRIMARY;
-                }
-                rc.attack(myLoc, targetPaint == PaintType.ALLY_SECONDARY);
-                return;
-            }
-        }
-
-        if (rc.getRoundNum() > creationTurn) {
-            //tryPaint(myLoc);
-            if (VisionManager.bestSRPSpot != null && rc.getLocation().distanceSquaredTo(VisionManager.bestSRPSpot) <= 4) tryPaint(VisionManager.bestSRPSpot);
-            if (tryPaint(myLoc.translate(1, 0))) return;
-            if (tryPaint(myLoc.translate(0, 1))) return;
-            if (tryPaint(myLoc.translate(-1, 0))) return;
-            if (tryPaint(myLoc.translate(0, -1))) return;
-            if (tryPaint(myLoc.translate(1, 1))) return;
-            if (tryPaint(myLoc.translate(1, -1))) return;
-            if (tryPaint(myLoc.translate(-1, -1))) return;
-            if (tryPaint(myLoc.translate(-1, 1))) return;
-            if (tryPaint(myLoc.translate(2, 0))) return;
-            if (tryPaint(myLoc.translate(0, 2))) return;
-            if (tryPaint(myLoc.translate(-2, 0))) return;
-            if (tryPaint(myLoc.translate(0, -2))) return;
-        }
-    }
-
-    boolean tryPaint(MapLocation loc) throws GameActionException {
-        if (!rc.canSenseLocation(loc)) return false;
-        MapInfo m = rc.senseMapInfo(loc);
-        if (!Util.towerMax() && Map.isNearRuin(m.getMapLocation())) return false;
-        PaintType targetPaint = VisionManager.getFlagPaint(loc);
-        if (targetPaint != null) {
-            if (m.getPaint().isEnemy() || m.getPaint() == targetPaint) return false;
-            if (rc.canAttack(m.getMapLocation())) {
-                rc.attack(m.getMapLocation(), targetPaint == PaintType.ALLY_SECONDARY);
-                return true;
-            }
-            return false;
-        }
-
-
-        if (m.isWall() || m.hasRuin() || !shouldPaint(loc)) return false;
-        int x = m.getMapLocation().x%4, y = m.getMapLocation().y%4;
-        int z = x*4 + y;
-        targetPaint = ((5147 >>> z)&1) > 0 ? PaintType.ALLY_SECONDARY : PaintType.ALLY_PRIMARY;
-        if (m.getPaint().isEnemy() || m.getPaint() == targetPaint) return false;
-        if (rc.canAttack(m.getMapLocation())){
-            rc.attack(m.getMapLocation(), targetPaint == PaintType.ALLY_SECONDARY);
-            return true;
-        }
-        return false;
     }
 
     void attackTowers() throws GameActionException {
@@ -157,15 +109,20 @@ public class Soldier extends Unit {
 
     MapLocation getTarget() throws GameActionException{
         MapLocation tg = null;
+        //Recovering target.
         if (recovering && !suicide && TowerManager.closestPaintTower != null){
             tg = getRecoveryLoc();
             if (tg != null) return tg;
         }
+        //Closest Enemy Tower target
         tg = getClosestEnemyTower();
         if (tg != null) return tg;
         if (closestRuin != null && !Util.towerMax()) return closestRuin;
+
+        //Go to symmetric if target not found (only for rushers!)
         if (symTarget != null) return symTarget;
 
+        //Go to the best SRP center you found
         if (rc.getRoundNum() > creationTurn){
             tg = VisionManager.bestSRPSpot;
             if (tg != null){
@@ -177,9 +134,12 @@ public class Soldier extends Unit {
             if (tg != null) return tg;
         }
 
+        //After round 200 also start painting empty tiles
         if (rc.getRoundNum() > 200){
             if (VisionManager.emptyLoc != null) return VisionManager.emptyLoc;
         }
+
+        //No target found??? ==> Explore!
         return explore.getExplore3Target();
     }
 
@@ -193,11 +153,17 @@ public class Soldier extends Unit {
 
 
     void paint() throws GameActionException {
+        //Try attack towers
         attackTowers();
+
+        //If there is a ruin with enemy paint but not ours, try to sabotage it!
         if (closestRuin != null && Map.hasEnemyPaint(closestRuin) && rc.canSenseLocation(closestRuin)){
             RuinManager.drawPatternEnhanced(closestRuin, TowerManager.getNextBuild());
             return;
         }
+
+        //Otherwise construct money or paint tower depending on the number of chips and the pattern already being drawn. We only revert from
+        //paint to money if we are really low on chips and from money to paint if we have too many.
         else if (closestRuin != null && rc.getLocation().distanceSquaredTo(closestRuin) <= 8 && !Util.towerMax()) {
             int code = RuinManager.getType(Map.getPattern(closestRuin));
             int x = TowerManager.getNextBuild(code);
@@ -206,12 +172,88 @@ public class Soldier extends Unit {
                 case RuinManager.MONEY -> UnitType.LEVEL_ONE_MONEY_TOWER;
                 default -> UnitType.LEVEL_ONE_DEFENSE_TOWER;
             };
+            //Try completing the pattern.
             if (rc.canCompleteTowerPattern(t, closestRuin)) {
                 rc.completeTowerPattern(t, closestRuin);
             }
             RuinManager.drawPatternEnhanced(closestRuin, x);
         }
+        //Paint nearby SRPs.
         paintNearby();
+    }
+
+    void paintNearby() throws GameActionException {
+        if (rc.getPaint() < Constants.CRITICAL_PAINT_SOLDIER) return;
+
+        if (!rc.isActionReady()) return;
+
+        if (symTarget != null) return; //no srps if 'rushing'
+
+        if (rc.getRoundNum() <= creationTurn) return; //We didn't compute the SRPs at this round. Better not to screw it.
+
+        MapLocation myLoc = rc.getLocation();
+
+        //Compute which colors should I paint depending on nearby marks.
+        VisionManager.fillFlagPaint();
+
+        //Prioritize my own tile.
+        if (rc.senseMapInfo(myLoc).getPaint() == PaintType.EMPTY){
+            if (rc.canAttack(myLoc)){
+                PaintType targetPaint = VisionManager.getFlagPaint(rc.getLocation());
+                if (targetPaint == null) {
+                    int x = myLoc.x % 4, y = myLoc.y % 4;
+                    int z = x * 4 + y;
+                    targetPaint = ((5147 >>> z) & 1) > 0 ? PaintType.ALLY_SECONDARY : PaintType.ALLY_PRIMARY;
+                }
+                rc.attack(myLoc, targetPaint == PaintType.ALLY_SECONDARY);
+                return;
+            }
+        }
+
+        //Only paint at distance at most 4 in order to avoid sabotaging nearby ruins/other SRPs.
+        if (VisionManager.bestSRPSpot != null && rc.getLocation().distanceSquaredTo(VisionManager.bestSRPSpot) <= 4) tryPaint(VisionManager.bestSRPSpot);
+        if (tryPaint(myLoc.translate(1, 0))) return;
+        if (tryPaint(myLoc.translate(0, 1))) return;
+        if (tryPaint(myLoc.translate(-1, 0))) return;
+        if (tryPaint(myLoc.translate(0, -1))) return;
+        if (tryPaint(myLoc.translate(1, 1))) return;
+        if (tryPaint(myLoc.translate(1, -1))) return;
+        if (tryPaint(myLoc.translate(-1, -1))) return;
+        if (tryPaint(myLoc.translate(-1, 1))) return;
+        if (tryPaint(myLoc.translate(2, 0))) return;
+        if (tryPaint(myLoc.translate(0, 2))) return;
+        if (tryPaint(myLoc.translate(-2, 0))) return;
+        if (tryPaint(myLoc.translate(0, -2))) return;
+    }
+
+    /**
+     * We only paint if we are sure that we can complete the SRP (e.g., not obstructed or with enemy paint) and if we are not sabotaging nearby ruin patterns.
+     */
+    boolean tryPaint(MapLocation loc) throws GameActionException {
+        if (!rc.canSenseLocation(loc)) return false;
+        MapInfo m = rc.senseMapInfo(loc);
+        if (!Util.towerMax() && Map.isNearRuin(m.getMapLocation())) return false;
+        PaintType targetPaint = VisionManager.getFlagPaint(loc);
+        if (targetPaint != null) {
+            if (m.getPaint().isEnemy() || m.getPaint() == targetPaint) return false;
+            if (rc.canAttack(m.getMapLocation())) {
+                rc.attack(m.getMapLocation(), targetPaint == PaintType.ALLY_SECONDARY);
+                return true;
+            }
+            return false;
+        }
+
+
+        if (m.isWall() || m.hasRuin() || !shouldPaint(loc)) return false;
+        int x = m.getMapLocation().x%4, y = m.getMapLocation().y%4;
+        int z = x*4 + y;
+        targetPaint = ((5147 >>> z)&1) > 0 ? PaintType.ALLY_SECONDARY : PaintType.ALLY_PRIMARY;
+        if (m.getPaint().isEnemy() || m.getPaint() == targetPaint) return false;
+        if (rc.canAttack(m.getMapLocation())){
+            rc.attack(m.getMapLocation(), targetPaint == PaintType.ALLY_SECONDARY);
+            return true;
+        }
+        return false;
     }
 
     static boolean shouldPaint (MapLocation loc) throws GameActionException {
